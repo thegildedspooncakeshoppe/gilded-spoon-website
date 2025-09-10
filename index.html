@@ -426,6 +426,9 @@
     </section>
 
     <footer class="bg-black/20 text-center py-8">
+        <div class="mb-4">
+             <a href="policies.html" class="text-brand-gray hover:text-white hover:underline transition">Shipping & Return Policies</a>
+        </div>
         <p class="text-brand-light">The Gilded Spoon Cake Shoppe by Flour Shoppe Studios</p>
         <p class="text-brand-gray">&copy; 2024 The Gilded Spoon Cake Shoppe. All Rights Reserved.</p>
         <p class="mt-4 text-xs text-brand-gray/50 max-w-md mx-auto px-4">Products are prepared in a home kitchen that handles allergens including wheat, dairy, eggs, soy, and nuts.</p>
@@ -494,7 +497,6 @@
                 'At-Home Decorating Kit': 'kit-order-btn',
                 'Cake Flavor Flight': 'flight-order-btn'
             };
-            // The product name for pucks is just 'pucks' in some places, but 'Cake Pucks' here. Let's normalize.
             const normalizedProductType = productType === 'pucks' ? 'Cake Pucks' : productType;
             const button = document.getElementById(buttonIdMap[normalizedProductType]);
 
@@ -562,20 +564,20 @@
             
             const squareLinks = {
                 pucks: {
-                    'Single': 'https://square.link/u/M2teRJAM',
-                    '3-Pack': 'https://square.link/u/bKl3qUP5',
-                    '6-Pack': 'https://square.link/u/k3QTMvuF'
+                    'Single': 'https://square.link/u/bKl3qUP5',
+                    '3-Pack': 'https://square.link/u/QLp8a2md',
+                    '6-Pack': 'https://square.link/u/vLq33LdE'
                 },
                 slice: {
-                    default: 'https://square.link/u/5H3GxUxI',
+                    default: 'https://square.link/u/zWb5B1aF'
                 },
                 flight: {
-                    'no-fusion': 'https://square.link/u/oKOviXV3',
-                    'fusion': 'https://square.link/u/oKOviXV3'
+                    'no-fusion': 'https://square.link/u/fN7yG4gG',
+                    'fusion': 'https://square.link/u/H6I2p8pH'
                 },
                 kit: {
-                    'Single Layer Cake': 'https://square.link/u/0FurV9yX',
-                    '3-pack Cake Pucks': 'https://square.link/u/BAHXZ4en'
+                    'Single Layer Cake': 'https://square.link/u/J9o1k7iI',
+                    '3-pack Cake Pucks': 'https://square.link/u/K0p2l8jJ'
                 }
             };
 
@@ -591,7 +593,7 @@
             } else if (productName === 'flight') {
                 const fusionChoice = form.elements['fusion-slice'].value;
                 finalLink = squareLinks.flight[fusionChoice];
-            } else if (productName === 'kit') {
+            } else if (productType === 'kit') {
                 const kitCanvas = form.elements['kit-canvas'].value;
                 finalLink = squareLinks.kit[kitCanvas];
             }
