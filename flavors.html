@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flavor Calendar | The Gilded Spoon Cake Shoppe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-dark': '#1C161E',
+                        'brand-light': '#F4F1ED',
+                        'brand-gold': '#D4AF37',
+                        'brand-gold-hover': '#E2C76A',
+                        'brand-gray': '#A09DA6',
+                        'brand-card': '#2A232F',
+                    },
+                    fontFamily: {
+                        'serif': ['"Playfair Display"', 'serif'],
+                        'sans': ['"Inter"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #1C161E;
+            color: #F4F1ED;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
+</head>
+<body class="font-sans">
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 bg-brand-dark/80 backdrop-blur-lg shadow-lg z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html#home" class="text-2xl font-serif font-bold text-white text-center leading-none">
+                The Gilded Spoon
+                <span class="block text-xs font-sans font-light not-italic tracking-[0.3em]">CAKE SHOPPE</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8 font-medium">
+                <a href="index.html#products" class="text-brand-gray hover:text-white transition">Collections</a>
+                <a href="flavors.html" class="text-brand-gold hover:text-white transition">Flavors</a>
+                <a href="index.html#workshops" class="text-brand-gray hover:text-white transition">Book & Create</a>
+                <a href="index.html#contact" class="text-brand-gray hover:text-white transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="text-center py-20 bg-brand-dark">
+        <div class="max-w-4xl mx-auto px-4">
+            <h1 class="font-serif text-5xl md:text-6xl font-bold text-white leading-tight">Flavor Calendar</h1>
+            <p class="text-lg text-brand-gray mt-4 max-w-2xl mx-auto">Explore our curated selection of signature and seasonal flavors, crafted with the finest ingredients and artistic passion.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-8">
+            
+            <!-- Signature Flavors Section -->
+            <section id="signature-flavors">
+                <h2 class="font-serif text-4xl font-semibold text-center mb-4 text-white">Our Signature Flavors</h2>
+                <p class="text-center text-brand-gray mb-12">Available year-round, these are our timeless classics and most-loved creations.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Flavor Card -->
+                    <div class="bg-brand-card rounded-2xl shadow-xl p-8">
+                        <h3 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Gilded Vanilla Bean</h3>
+                        <p class="text-brand-light">A timeless classic. Delicate vanilla bean cake layered with a silky, rich vanilla buttercream. Simple, elegant, and profoundly delicious.</p>
+                    </div>
+                     <!-- Flavor Card -->
+                    <div class="bg-brand-card rounded-2xl shadow-xl p-8">
+                        <h3 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Midnight Chocolate</h3>
+                        <p class="text-brand-light">An intense and decadent experience. Layers of rich, dark chocolate cake are paired with a whipped chocolate ganache for the ultimate chocolate lover.</p>
+                    </div>
+                     <!-- Flavor Card -->
+                    <div class="bg-brand-card rounded-2xl shadow-xl p-8">
+                        <h3 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Salted Caramel Crème</h3>
+                        <p class="text-brand-light">A perfect balance of sweet and salty. Our signature vanilla cake filled with house-made salted caramel and frosted with a light caramel crème.</p>
+                    </div>
+                     <!-- Flavor Card -->
+                    <div class="bg-brand-card rounded-2xl shadow-xl p-8">
+                        <h3 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Red Velvet Royale</h3>
+                        <p class="text-brand-light">Our take on a Southern classic. A moist, vibrant red velvet cake with a hint of cocoa, paired with a luxurious cream cheese frosting.</p>
+                    </div>
+                     <!-- Flavor Card -->
+                    <div class="bg-brand-card rounded-2xl shadow-xl p-8">
+                        <h3 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Lemon & Elderflower</h3>
+                        <p class="text-brand-light">A bright and floral delight. Zesty lemon cake infused with delicate elderflower syrup, finished with a light lemon buttercream.</p>
+                    </div>
+                     <!-- Flavor Card -->
+                    <div class="bg-brand-card rounded-2xl shadow-xl p-8">
+                        <h3 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Almond Amaretto</h3>
+                        <p class="text-brand-light">A sophisticated and nutty flavor. Tender almond cake soaked in Amaretto syrup, layered with a delicate almond-infused buttercream.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Seasonal Flavors Section -->
+            <section id="seasonal-flavors" class="mt-24">
+                <h2 class="font-serif text-4xl font-semibold text-center mb-4 text-white">September's Seasonal Selections</h2>
+                <p class="text-center text-brand-gray mb-12">A taste of early autumn, crafted with the best ingredients the season has to offer.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                     <!-- Flavor Card -->
+                    <div class="bg-brand-card rounded-2xl shadow-xl p-8">
+                        <h3 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Spiced Apple Crumble</h3>
+                        <p class="text-brand-light">Warm apple spice cake with a cinnamon-oat crumble filling, frosted with a smooth brown sugar buttercream. A cozy, comforting classic.</p>
+                    </div>
+                     <!-- Flavor Card -->
+                    <div class="bg-brand-card rounded-2xl shadow-xl p-8">
+                        <h3 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Pumpkin Chai Latte</h3>
+                        <p class="text-brand-light">The essence of fall in a cake. Aromatic chai-spiced pumpkin cake layered with a creamy, espresso-infused buttercream.</p>
+                    </div>
+                     <!-- Flavor Card -->
+                    <div class="bg-brand-card rounded-2xl shadow-xl p-8">
+                        <h3 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Brown Butter Pecan</h3>
+                        <p class="text-brand-light">A rich and nutty delight. Brown butter cake studded with toasted pecans, complemented by a maple-infused cream cheese frosting.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black/20 text-center py-8 mt-16">
+        <p class="text-brand-light">The Gilded Spoon Cake Shoppe by Flour Shoppe Studios</p>
+        <p class="text-brand-gray">&copy; 2024 The Gilded Spoon Cake Shoppe. All Rights Reserved.</p>
+        <p class="mt-4 text-xs text-brand-gray/50 max-w-md mx-auto px-4">Products are prepared in a home kitchen that handles allergens including wheat, dairy, eggs, soy, and nuts.</p>
+    </footer>
+
+</body>
+</html>
+
