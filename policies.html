@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helpful Information | The Gilded Spoon Cake Shoppe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-dark': '#1C161E',
+                        'brand-light': '#F4F1ED',
+                        'brand-gold': '#D4AF37',
+                        'brand-gold-hover': '#E2C76A',
+                        'brand-gray': '#A09DA6',
+                        'brand-card': '#2A232F',
+                    },
+                    fontFamily: {
+                        'serif': ['"Playfair Display"', 'serif'],
+                        'sans': ['"Inter"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #1C161E;
+            color: #F4F1ED;
+            font-family: 'Inter', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+    </style>
+</head>
+<body class="font-sans">
+
+    <!-- Navigation Bar -->
+    <nav class="sticky top-0 bg-brand-dark/80 backdrop-blur-lg shadow-lg z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html#home" class="text-2xl font-serif font-bold text-white text-center leading-none">
+                The Gilded Spoon
+                <span class="block text-xs font-sans font-light not-italic tracking-[0.3em]">CAKE SHOPPE</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8 font-medium">
+                <a href="index.html#products" class="text-brand-gray hover:text-white transition">Collections</a>
+                <a href="flavors.html" class="text-brand-gray hover:text-white transition">Flavors</a>
+                <a href="index.html#workshops" class="text-brand-gray hover:text-white transition">Book & Create</a>
+                <a href="index.html#contact" class="text-brand-gray hover:text-white transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header Section -->
+    <header class="text-center py-20 bg-brand-dark">
+        <div class="max-w-4xl mx-auto px-4">
+            <h1 class="font-serif text-5xl md:text-6xl font-bold text-white leading-tight">Helpful Information</h1>
+            <p class="text-lg text-brand-gray mt-4 max-w-2xl mx-auto">Details on our shipping, returns, and order policies.</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-8 text-brand-light space-y-16">
+            
+            <!-- Shipping Policy Section -->
+            <section id="shipping-policy">
+                <h2 class="font-serif text-4xl font-semibold mb-6 border-b-2 border-brand-gold/20 pb-4">Gilded Spoon Shoppe Shipping Policy</h2>
+                <div class="space-y-6 text-brand-gray leading-relaxed">
+                    <div>
+                        <h3 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Important: Texas Cottage Food Law Restrictions</h3>
+                        <p>As a Texas cottage food production operation, we are required by state law to personally deliver all food products directly to the consumer. This means we cannot use third-party shipping carriers like UPS, FedEx, or the United States Postal Service to mail our products.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Local Delivery Only</h3>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li><strong class="text-brand-light">Service Area:</strong> We are only able to fulfill orders for customers within the Dallas Fort Worth area within a 50 mile radius of McKinney TX.</li>
+                            <li><strong class="text-brand-light">Delivery Schedule:</strong> Deliveries are typically made between 1 PM and 5 PM on Thursday. You will receive a notification with a delivery window once your order is confirmed.</li>
+                            <li><strong class="text-brand-light">Delivery Fee:</strong> A flat rate delivery fee of $30 will be applied to all orders. Free delivery may be offered for orders over $100 in value.</li>
+                        </ul>
+                    </div>
+                     <div>
+                        <h3 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Order Fulfillment and Pickup</h3>
+                        <p>We will coordinate a pickup time with you after your order is placed.</p>
+                    </div>
+                     <div>
+                        <h3 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Packaging</h3>
+                        <p>All of our baked goods are carefully packaged to ensure freshness and prevent contamination during transport. Our products are exempt from being packaged if they are too large or bulky for conventional packaging (e.g., a multi-tiered wedding cake). In such cases, all required labeling information will be provided on your receipt or invoice.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Returns Policy Section -->
+            <section id="returns-policy">
+                <h2 class="font-serif text-4xl font-semibold mb-6 border-b-2 border-brand-gold/20 pb-4">Gilded Spoon Shoppe Returns & Refunds Policy</h2>
+                <div class="space-y-6 text-brand-gray leading-relaxed">
+                    <div>
+                        <h3 class="font-serif text-2xl font-bold mb-3 text-brand-gold">All Sales Are Final</h3>
+                        <p>Due to the perishable and custom nature of our products, all sales from The Gilded Spoon are considered final. We do not accept returns or offer refunds for food items.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Our Commitment to Quality</h3>
+                        <p>We take immense pride in the quality and freshness of our baked goods. Each item is made to order with the highest standards of food safety and sanitation. We strive for 100% customer satisfaction.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Damaged or Incorrect Orders</h3>
+                        <p>In the unlikely event that your order is damaged during delivery or if you receive an incorrect item, please contact us immediately at <a href="mailto:contact@thegildedspoonshoppe.com" class="text-brand-gold hover:underline">contact@thegildedspoonshoppe.com</a> with photos of the product. We will review the issue and, at our discretion, may offer a replacement of the damaged or incorrect item. Claims for damaged or incorrect orders must be made within 24 hours of delivery.</p>
+                    </div>
+                     <div>
+                        <h3 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Cancellations</h3>
+                        <p>Because we begin preparing ingredients for your order shortly after it is placed, we can only accommodate cancellation requests made within 24 hours of the order being placed. To request a cancellation, please email us at <a href="mailto:contact@thegildedspoonshoppe.com" class="text-brand-gold hover:underline">contact@thegildedspoonshoppe.com</a>.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black/20 text-center py-8 mt-16">
+        <div class="mb-4">
+             <a href="policies.html" class="text-brand-gray hover:text-white hover:underline transition">Shipping & Return Policies</a>
+        </div>
+        <p class="text-brand-light">The Gilded Spoon Cake Shoppe by Flour Shoppe Studios</p>
+        <p class="text-brand-gray">&copy; 2024 The Gilded Spoon Cake Shoppe. All Rights Reserved.</p>
+        <p class="mt-4 text-xs text-brand-gray/50 max-w-md mx-auto px-4">Products are prepared in a home kitchen that handles allergens including wheat, dairy, eggs, soy, and nuts.</p>
+    </footer>
+
+</body>
+</html>
