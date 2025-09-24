@@ -399,7 +399,7 @@
                 id: 'mithas',
                 name: 'Mithas & Mahal',
                 description: 'Inspired by the cherished flavors of our founder\'s South Asian heritage and the nostalgic warmth of a grandmother\'s kitchen, each miniature cake is a unique masterpiece, transforming traditional Indian desserts into elegant, modern cake creations.',
-                image: 'https://imgur.com/qA0x03I.jpeg',
+                image: 'https://imgur.com/Ukt0N5x.jpeg',
                 price: '$15.00 per slice',
                 customNote: 'Each Mithas & Mahal Cake Flight includes a flight of two slices of your choice.',
                 maxOnlineQuantity: 8,
@@ -418,44 +418,32 @@
             },
             {
                 id: 'flight',
-                name: 'Cake Flavor Flight',
+                name: 'Signature Cake Flavor Flight',
                 description: 'Embark on a culinary journey with a curated selection of three signature and seasonal flavors.',
                 image: 'https://imgur.com/V7FhUqj.jpeg',
                 price: '$40.00',
                 maxOnlineQuantity: 12,
                 largeOrderNote: 'Max online order is 4 flights. Please inquire for larger quantities.',
                 options: {
-                    type: 'select',
-                    label: 'Add Curated Fusion Flavor Slice',
-                    items: [
-                        { text: 'No, thanks', value: 'no-fusion' },
-                        { text: 'Yes, please (+$5.00)', value: 'fusion' },
-                    ]
+                    type: 'none'
                 },
                 squareLinks: {
-                    'no-fusion': 'https://square.link/u/escrWE54',
-                    'fusion': 'https://square.link/u/escrWE54'
+                    default: 'https://square.link/u/escrWE54'
                 },
             },
             {
                 id: 'kit',
-                name: 'At-Home Decorating Kit',
-                description: 'Find your inner artist with our Edible Canvas kit. Enjoy our most creative workshop from the comfort of your home.',
+                name: 'At-Home Paint by Cake Kits',
+                description: 'Unleash your inner artist with our kit. You supply the cake, and we\'ll provide the instructions and all the supplies you need to create a stunning edible masterpiece, including the edible image.',
                 image: 'https://imgur.com/FX7UFPc.jpeg',
                 price: '$45.00',
                 maxOnlineQuantity: 10,
                 largeOrderNote: 'For orders over 10 kits, please use the large order inquiry.',
                 options: {
-                    type: 'select',
-                    label: 'Choose Your Edible Canvas',
-                    items: [
-                        { text: 'Signature Personal Blank Canvas Cake', value: 'Single Layer Cake' },
-                        { text: 'Signature Cake Pucks (3-pack)', value: '3-pack Cake Pucks' },
-                    ]
+                    type: 'none'
                 },
                 squareLinks: {
-                    'Single Layer Cake': 'https://square.link/u/D099GWCT',
-                    '3-pack Cake Pucks': 'https://square.link/u/83V019Ki'
+                    default: 'https://square.link/u/83V019Ki'
                 },
             },
             {
@@ -684,11 +672,10 @@
             } else if (product.id === 'slice') {
                 finalLink = product.squareLinks.default;
             } else if (product.id === 'flight') {
-                const fusionChoice = form.elements['flight-option'].value;
+                const fusionChoice = form.elements['flight-option'] ? form.elements['flight-option'].value : 'default';
                 finalLink = product.squareLinks[fusionChoice];
             } else if (product.id === 'kit') {
-                const kitCanvas = form.elements['kit-option'].value;
-                finalLink = product.squareLinks[kitCanvas];
+                finalLink = product.squareLinks.default;
             } else if (product.id === 'mithas') {
                 const selectedFlavors = Array.from(document.querySelectorAll('input[name="mithas-flavor"]:checked')).map(cb => cb.value);
                 if (selectedFlavors.length !== 2) {
