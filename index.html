@@ -86,7 +86,7 @@
                 <div id="slice-limit-message" class="hidden p-3 bg-brand-dark rounded-lg text-center">
                     <p class="text-sm text-brand-gray">Please note: There is a maximum of 6 slices per order. For larger quantities, please consider our <a href="#contact" onclick="closeModal('product-modal')" class="text-brand-gold hover:underline">custom cakes</a>!</p>
                 </div>
-                <div>
+                <div id="recipe-options-container" class="hidden">
                     <label for="recipe" class="block text-sm font-medium mb-1 text-brand-gray">Customize Your Recipe</label>
                     <select id="recipe" name="recipe" class="w-full px-3 py-2 bg-brand-dark text-white border border-brand-dark/50 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-gold">
                         <option value="Standard">Standard Recipe</option>
@@ -370,6 +370,7 @@
         const contactModal = document.getElementById('contact-modal');
         const largeOrderModal = document.getElementById('large-order-modal');
         const dynamicOptionsContainer = document.getElementById('dynamic-options-container');
+        const recipeOptionsContainer = document.getElementById('recipe-options-container');
 
         const products = [
             {
@@ -394,32 +395,36 @@
                     '3-Pack': 'https://square.link/u/KMi13npr',
                     '6-Pack': 'https://square.link/u/k3QTMvuF'
                 },
+                availableRecipes: ['Standard']
             },
             {
                 id: 'mithas',
                 name: 'Mithas & Mahal',
+                subtext: 'Mithas means "sweetness" and Mahal means "palace" in Hindi/Gujarati. All flavors in this collection use an eggless recipe',
                 description: 'Inspired by the cherished flavors of our founder\'s South Asian heritage and the nostalgic warmth of a grandmother\'s kitchen, each miniature cake is a unique masterpiece, transforming traditional Indian desserts into elegant, modern cake creations.',
                 image: 'https://imgur.com/Ukt0N5x.jpeg',
-                price: '$15.00 per slice',
-                customNote: 'Each Mithas & Mahal Cake Flight includes a flight of two slices of your choice.',
+                price: '$15.00 per slice / $25.00 per flight',
+                customNote: 'A flight includes two slices from our current collection.',
                 maxOnlineQuantity: 8,
                 largeOrderNote: 'Max online order is 4 flights. For more, please use the large order inquiry.',
                 options: {
-                    type: 'checkbox',
-                    label: 'Choose Your Flavors',
+                    type: 'select',
+                    label: 'Choose your order option',
                     items: [
-                        { text: 'Kaju Katli', value: 'kaju-katli' },
-                        { text: 'Gulab Jamun', value: 'gulab-jamun' },
+                        { text: 'Single Slice - $15.00', value: 'single' },
+                        { text: '2-Slice Flight - $25.00', value: 'flight' },
                     ]
                 },
                 squareLinks: {
-                    default: 'https://square.link/u/gVzN8E2P'
+                    'single': 'https://square.link/u/37R9y6mq',
+                    'flight': 'https://square.link/u/2qgl2nif'
                 },
+                availableRecipes: ['Eggless']
             },
             {
                 id: 'flight',
                 name: 'Signature Cake Flavor Flight',
-                description: 'Embark on a culinary journey with a curated selection of three signature and seasonal flavors.',
+                description: 'Choose from a curated selection of three signature and seasonal flavors.',
                 image: 'https://imgur.com/V7FhUqj.jpeg',
                 price: '$40.00',
                 maxOnlineQuantity: 12,
@@ -430,6 +435,7 @@
                 squareLinks: {
                     default: 'https://square.link/u/escrWE54'
                 },
+                availableRecipes: ['Standard']
             },
             {
                 id: 'kit',
@@ -443,8 +449,9 @@
                     type: 'none'
                 },
                 squareLinks: {
-                    default: 'https://square.link/u/83V019Ki'
+                    default: 'https://square.link/u/D099GWCT'
                 },
+                availableRecipes: ['Standard']
             },
             {
                 id: 'custom',
@@ -453,6 +460,7 @@
                 image: 'https://imgur.com/xtvtDQs.jpeg',
                 price: 'Starting at $125.00',
                 isContactForm: true,
+                availableRecipes: ['Standard', 'Eggless', 'Nut-Free']
             }
         ];
 
@@ -478,6 +486,7 @@
                             <img src="${product.image}" alt="${product.name}" class="w-full h-64 md:h-full object-cover ${isImageOnLeft ? 'order-1 md:order-1' : 'order-1 md:order-2'}">
                             <div class="p-8 flex flex-col justify-center ${isImageOnLeft ? 'order-2 md:order-2' : 'order-2 md:order-1'}">
                                 <h3 class="font-serif text-3xl font-bold mb-4 text-white">${product.name}</h3>
+                                ${product.subtext ? `<p class="text-sm font-light text-brand-gray/80 -mt-2 mb-4 italic">${product.subtext}</p>` : ''}
                                 <p class="text-brand-gray mb-6">${product.description}</p>
                                 ${product.largeOrderNote ? `<p class="text-sm text-brand-gray/80 -mt-4 mb-6">${product.largeOrderNote}</p>` : ''}
                                 ${product.customNote ? `<p class="text-sm text-brand-gray/80 -mt-4 mb-6">${product.customNote}</p>` : ''}
@@ -540,6 +549,14 @@
             
             document.getElementById('product-name').value = product.id;
             
+            // Handle recipe options visibility
+            if (product.availableRecipes && product.availableRecipes.length > 1) {
+                recipeOptionsContainer.classList.remove('hidden');
+                // Optional: populate with available recipes
+            } else {
+                recipeOptionsContainer.classList.add('hidden');
+            }
+
             document.getElementById('slice-limit-message').classList.add('hidden');
             const fulfillmentDiv = document.getElementById('fulfillment-options');
             const deliveryOption = fulfillmentDiv.querySelector('option[value="Delivery"]');
@@ -555,15 +572,12 @@
             renderModalOptions(product);
 
             // Re-setup quantity validation for dynamically added elements
-            if (product.id === 'pucks') {
-                setupQuantityValidation('pucks-option-quantity', 'pucks-quantity-warning', product.maxOnlineQuantity);
-            } else if (product.id === 'slice') {
-                setupQuantityValidation('slice-option-quantity', 'slice-quantity-warning', product.maxOnlineQuantity);
-            } else if (product.id === 'flight') {
-                setupQuantityValidation('flight-option-quantity', 'flight-quantity-warning', product.maxOnlineQuantity);
-            } else if (product.id === 'kit') {
-                setupQuantityValidation('kit-option-quantity', 'kit-quantity-warning', product.maxOnlineQuantity);
-            } else if (product.id === 'mithas') {
+            const quantityInput = document.getElementById(`${product.id}-quantity`);
+            const quantityWarning = document.getElementById(`${product.id}-quantity-warning`);
+            if (quantityInput && quantityWarning) {
+                setupQuantityValidation(quantityInput.id, quantityWarning.id, product.maxOnlineQuantity);
+            }
+            if (product.id === 'mithas') {
                  setupQuantityValidation('mithas-quantity', 'mithas-quantity-warning', 4);
             }
 
@@ -666,23 +680,13 @@
 
             let finalLink = '';
 
-            if (product.id === 'pucks') {
-                const puckSize = form.elements['pucks-option'].value;
-                finalLink = product.squareLinks[puckSize];
-            } else if (product.id === 'slice') {
-                finalLink = product.squareLinks.default;
-            } else if (product.id === 'flight') {
-                const fusionChoice = form.elements['flight-option'] ? form.elements['flight-option'].value : 'default';
-                finalLink = product.squareLinks[fusionChoice];
-            } else if (product.id === 'kit') {
-                finalLink = product.squareLinks.default;
+            if (product.options.type === 'select' && product.id !== 'mithas') {
+                const selectedValue = form.elements[`${product.id}-option`].value;
+                finalLink = product.squareLinks[selectedValue];
             } else if (product.id === 'mithas') {
-                const selectedFlavors = Array.from(document.querySelectorAll('input[name="mithas-flavor"]:checked')).map(cb => cb.value);
-                if (selectedFlavors.length !== 2) {
-                    document.getElementById('mithas-flavor-warning').classList.remove('hidden');
-                    return;
-                }
-                document.getElementById('mithas-flavor-warning').classList.add('hidden');
+                const selectedValue = form.elements['mithas-option'].value;
+                finalLink = product.squareLinks[selectedValue];
+            } else {
                 finalLink = product.squareLinks.default;
             }
             
