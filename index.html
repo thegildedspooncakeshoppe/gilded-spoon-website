@@ -398,8 +398,8 @@
             {
                 id: 'mithas',
                 name: 'Mithas & Mahal',
-                description: 'Inspired by the cherished flavors of our founder's South Asian heritage and the nostalgic warmth of a grandmother\'s kitchen, each miniature cake is a unique masterpiece, transforming traditional Indian desserts into elegant, modern cake creations.',
-                image: 'https://i.imgur.com/Ukt0N5x.jpeg',
+                description: 'Inspired by the cherished flavors of our founder\'s South Asian heritage and the nostalgic warmth of a grandmother\'s kitchen, each miniature cake is a unique masterpiece, transforming traditional Indian desserts into elegant, modern cake creations.',
+                image: 'https://imgur.com/qA0x03I.jpeg',
                 price: '$15.00 per slice',
                 customNote: 'Each Mithas & Mahal Cake Flight includes a flight of two slices of your choice.',
                 maxOnlineQuantity: 8,
@@ -408,7 +408,7 @@
                     type: 'checkbox',
                     label: 'Choose Your Flavors',
                     items: [
-                        { text: 'Ras Malai', value: 'ras-malai' },
+                        { text: 'Kaju Katli', value: 'kaju-katli' },
                         { text: 'Gulab Jamun', value: 'gulab-jamun' },
                     ]
                 },
@@ -418,7 +418,7 @@
             },
             {
                 id: 'flight',
-                name: 'Signature Cake Flavor Flight',
+                name: 'Cake Flavor Flight',
                 description: 'Embark on a culinary journey with a curated selection of three signature and seasonal flavors.',
                 image: 'https://imgur.com/V7FhUqj.jpeg',
                 price: '$40.00',
@@ -474,58 +474,35 @@
             container.innerHTML = '';
             
             products.forEach(product => {
-                let cardHtml = '';
-                // Handle different card layouts (with image on left vs right)
-                if (['slice', 'kit'].includes(product.id)) {
-                    cardHtml = `
-                        <div class="bg-brand-card rounded-2xl shadow-xl overflow-hidden">
-                            <div class="grid grid-cols-1 md:grid-cols-2">
-                                <div class="p-8 flex flex-col justify-center order-2 md:order-1">
-                                    <h3 class="font-serif text-3xl font-bold mb-4 text-white">${product.name}</h3>
-                                    <p class="text-brand-gray mb-6">${product.description}</p>
-                                    ${product.largeOrderNote ? `<p class="text-sm text-brand-gray/80 -mt-4 mb-6">(Max online order: ${product.maxOnlineQuantity} items. Please inquire for larger quantities.)</p>` : ''}
-                                    <div class="text-xl font-semibold text-brand-gold mb-4">Price: ${product.price}</div>
-                                    ${product.isContactForm ? 
-                                        `<a href="mailto:contact@thegildedspoonshoppe.com?subject=Custom%20Cake%20Inquiry" class="mt-4 text-center w-full bg-transparent border-2 border-brand-gold text-brand-gold font-bold py-3 px-6 rounded-lg hover:bg-brand-gold hover:text-brand-dark transition">Request a Quote</a>` : 
-                                        `<button id="${product.id}-order-btn" onclick="showProductModal('${product.id}')" class="mt-4 w-full bg-brand-gold text-brand-dark font-bold py-3 px-6 rounded-lg hover:bg-brand-gold-hover transition-transform transform hover:scale-105">Order Now</button>`
-                                    }
-                                    ${!product.isContactForm ? `<div class="mt-4 text-center">
-                                        <label class="inline-flex items-center text-sm">
-                                            <input type="checkbox" onchange="toggleLargeOrder('${product.name}', this.checked)" class="form-checkbox text-brand-gold bg-brand-dark border-brand-dark/50 rounded focus:ring-brand-gold">
-                                            <span class="ml-2 text-brand-gray">Request for large order</span>
-                                        </label>
-                                    </div>` : ''}
-                                </div>
-                                <img src="${product.image}" alt="${product.name}" class="w-full h-64 md:h-full object-cover order-1 md:order-2">
+                const isImageOnLeft = ['pucks', 'mithas', 'flight', 'custom'].includes(product.id);
+                const largeOrderToggleHtml = !product.isContactForm ? `
+                    <div class="mt-4 text-center">
+                        <label class="inline-flex items-center text-sm">
+                            <input type="checkbox" onchange="toggleLargeOrder('${product.id}', this.checked)" class="form-checkbox text-brand-gold bg-brand-dark border-brand-dark/50 rounded focus:ring-brand-gold">
+                            <span class="ml-2 text-brand-gray">Request for large order</span>
+                        </label>
+                    </div>
+                ` : '';
+                
+                const cardHtml = `
+                    <div class="bg-brand-card rounded-2xl shadow-xl overflow-hidden">
+                        <div class="grid grid-cols-1 md:grid-cols-2">
+                            <img src="${product.image}" alt="${product.name}" class="w-full h-64 md:h-full object-cover ${isImageOnLeft ? 'order-1 md:order-1' : 'order-1 md:order-2'}">
+                            <div class="p-8 flex flex-col justify-center ${isImageOnLeft ? 'order-2 md:order-2' : 'order-2 md:order-1'}">
+                                <h3 class="font-serif text-3xl font-bold mb-4 text-white">${product.name}</h3>
+                                <p class="text-brand-gray mb-6">${product.description}</p>
+                                ${product.largeOrderNote ? `<p class="text-sm text-brand-gray/80 -mt-4 mb-6">${product.largeOrderNote}</p>` : ''}
+                                ${product.customNote ? `<p class="text-sm text-brand-gray/80 -mt-4 mb-6">${product.customNote}</p>` : ''}
+                                <div class="text-xl font-semibold text-brand-gold mb-4">Price: ${product.price}</div>
+                                ${product.isContactForm ? 
+                                    `<a href="mailto:contact@thegildedspoonshoppe.com?subject=Custom%20Cake%20Inquiry" class="mt-4 text-center w-full bg-transparent border-2 border-brand-gold text-brand-gold font-bold py-3 px-6 rounded-lg hover:bg-brand-gold hover:text-brand-dark transition">Request a Quote</a>` : 
+                                    `<button id="${product.id}-order-btn" onclick="showProductModal('${product.id}')" class="mt-4 w-full bg-brand-gold text-brand-dark font-bold py-3 px-6 rounded-lg hover:bg-brand-gold-hover transition-transform transform hover:scale-105">Order Now</button>`
+                                }
+                                ${largeOrderToggleHtml}
                             </div>
                         </div>
-                    `;
-                } else {
-                    cardHtml = `
-                        <div class="bg-brand-card rounded-2xl shadow-xl overflow-hidden">
-                            <div class="grid grid-cols-1 md:grid-cols-2">
-                                <img src="${product.image}" alt="${product.name}" class="w-full h-64 md:h-full object-cover">
-                                <div class="p-8 flex flex-col justify-center">
-                                    <h3 class="font-serif text-3xl font-bold mb-4 text-white">${product.name}</h3>
-                                    <p class="text-brand-gray mb-6">${product.description}</p>
-                                    ${product.largeOrderNote ? `<p class="text-sm text-brand-gray/80 -mt-4 mb-6">(Max online order: ${product.maxOnlineQuantity} items. Please inquire for larger quantities.)</p>` : ''}
-                                    ${product.customNote ? `<p class="text-sm text-brand-gray/80 -mt-4 mb-6">${product.customNote}</p>` : ''}
-                                    <div class="text-xl font-semibold text-brand-gold mb-4">Price: ${product.price}</div>
-                                    ${product.isContactForm ? 
-                                        `<a href="mailto:contact@thegildedspoonshoppe.com?subject=Custom%20Cake%20Inquiry" class="mt-4 text-center w-full bg-transparent border-2 border-brand-gold text-brand-gold font-bold py-3 px-6 rounded-lg hover:bg-brand-gold hover:text-brand-dark transition">Request a Quote</a>` : 
-                                        `<button id="${product.id}-order-btn" onclick="showProductModal('${product.id}')" class="mt-4 w-full bg-brand-gold text-brand-dark font-bold py-3 px-6 rounded-lg hover:bg-brand-gold-hover transition-transform transform hover:scale-105">Order Now</button>`
-                                    }
-                                    ${!product.isContactForm ? `<div class="mt-4 text-center">
-                                        <label class="inline-flex items-center text-sm">
-                                            <input type="checkbox" onchange="toggleLargeOrder('${product.name}', this.checked)" class="form-checkbox text-brand-gold bg-brand-dark border-brand-dark/50 rounded focus:ring-brand-gold">
-                                            <span class="ml-2 text-brand-gray">Request for large order</span>
-                                        </label>
-                                    </div>` : ''}
-                                </div>
-                            </div>
-                        </div>
-                    `;
-                }
+                    </div>
+                `;
 
                 container.innerHTML += cardHtml;
             });
@@ -591,13 +568,13 @@
 
             // Re-setup quantity validation for dynamically added elements
             if (product.id === 'pucks') {
-                setupQuantityValidation('pucks-quantity', 'pucks-quantity-warning', product.maxOnlineQuantity);
+                setupQuantityValidation('pucks-option-quantity', 'pucks-quantity-warning', product.maxOnlineQuantity);
             } else if (product.id === 'slice') {
-                setupQuantityValidation('slice-quantity', 'slice-quantity-warning', product.maxOnlineQuantity);
+                setupQuantityValidation('slice-option-quantity', 'slice-quantity-warning', product.maxOnlineQuantity);
             } else if (product.id === 'flight') {
-                setupQuantityValidation('flight-quantity', 'flight-quantity-warning', product.maxOnlineQuantity);
+                setupQuantityValidation('flight-option-quantity', 'flight-quantity-warning', product.maxOnlineQuantity);
             } else if (product.id === 'kit') {
-                setupQuantityValidation('kit-quantity', 'kit-quantity-warning', product.maxOnlineQuantity);
+                setupQuantityValidation('kit-option-quantity', 'kit-quantity-warning', product.maxOnlineQuantity);
             } else if (product.id === 'mithas') {
                  setupQuantityValidation('mithas-quantity', 'mithas-quantity-warning', 4);
             }
@@ -625,18 +602,18 @@
             largeOrderModal.style.display = 'block';
         }
 
-        function toggleLargeOrder(productName, isChecked) {
-            const productId = products.find(p => p.name === productName)?.id;
-            if (!productId) return;
+        function toggleLargeOrder(productId, isChecked) {
+            const product = products.find(p => p.id === productId);
+            if (!product) return;
 
-            const button = document.getElementById(`${productId}-order-btn`);
+            const button = document.getElementById(`${product.id}-order-btn`);
 
             if (isChecked) {
                 if (button) {
                     button.disabled = true;
                     button.classList.add('disabled-button');
                 }
-                showLargeOrderModal(productName);
+                showLargeOrderModal(product.name);
             } else {
                 if (button) {
                     button.disabled = false;
@@ -658,8 +635,8 @@
                 document.querySelectorAll('input[onchange*="toggleLargeOrder"]').forEach(checkbox => {
                     if (checkbox.checked) {
                         checkbox.checked = false;
-                        const productTypeWithSpaces = checkbox.getAttribute('onchange').match(/'([^']+)'/)[1];
-                        toggleLargeOrder(productTypeWithSpaces, false);
+                        const productId = checkbox.getAttribute('onchange').match(/'([^']+)'/)[1];
+                        toggleLargeOrder(productId, false);
                     }
                 });
             }
