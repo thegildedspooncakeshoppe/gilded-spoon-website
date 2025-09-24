@@ -67,35 +67,9 @@
         <h3 id="modal-title" class="font-serif text-3xl font-bold text-center mb-2 text-white">Order Flavor</h3>
         <p class="text-center text-brand-gray mb-6">Choose how you'd like to enjoy this flavor.</p>
         <form id="flavor-order-form">
-            <input type="hidden" id="selected-flavor-name">
-            <div class="space-y-4">
-                <div class="space-y-3">
-                    <label class="block text-sm font-medium text-brand-gray">Select Format</label>
-                    <div class="p-3 bg-brand-dark rounded-lg has-[:checked]:ring-2 has-[:checked]:ring-brand-gold">
-                        <label class="flex items-center space-x-3 cursor-pointer">
-                            <input type="radio" name="product-format" value="slice" class="form-radio text-brand-gold bg-brand-dark border-brand-dark/50 focus:ring-brand-gold" checked>
-                            <span class="text-brand-light">Artisan Cake Slice - $8.00</span>
-                        </label>
-                    </div>
-                    <div class="p-3 bg-brand-dark rounded-lg has-[:checked]:ring-2 has-[:checked]:ring-brand-gold">
-                        <label class="flex items-center space-x-3 cursor-pointer">
-                            <input type="radio" name="product-format" value="puck-single" class="form-radio text-brand-gold bg-brand-dark border-brand-dark/50 focus:ring-brand-gold">
-                            <span class="text-brand-light">Cake Puck (Single) - $5.00</span>
-                        </label>
-                    </div>
-                    <div class="p-3 bg-brand-dark rounded-lg has-[:checked]:ring-2 has-[:checked]:ring-brand-gold">
-                        <label class="flex items-center space-x-3 cursor-pointer">
-                            <input type="radio" name="product-format" value="puck-3pack" class="form-radio text-brand-gold bg-brand-dark border-brand-dark/50 focus:ring-brand-gold">
-                            <span class="text-brand-light">Cake Puck (3-Pack) - $15.00</span>
-                        </label>
-                    </div>
-                    <div class="p-3 bg-brand-dark rounded-lg has-[:checked]:ring-2 has-[:checked]:ring-brand-gold">
-                        <label class="flex items-center space-x-3 cursor-pointer">
-                            <input type="radio" name="product-format" value="puck-6pack" class="form-radio text-brand-gold bg-brand-dark border-brand-dark/50 focus:ring-brand-gold">
-                            <span class="text-brand-light">Cake Puck (6-Pack) - $27.00</span>
-                        </label>
-                    </div>
-                </div>
+            <input type="hidden" id="selected-flavor-id">
+            <div id="modal-options-container" class="space-y-4">
+                <!-- Options will be dynamically populated here -->
             </div>
             <div class="flex justify-between items-center mt-8">
                 <button type="button" onclick="closeModal()" class="text-brand-gray hover:text-white transition">Cancel</button>
@@ -136,59 +110,7 @@
             <section id="weekly-flavors">
                 <h2 class="font-serif text-4xl font-semibold text-center mb-4 text-white">This Week's Curated Flavors</h2>
                 <p class="text-center text-brand-gray mb-12">These are the flavors currently available to order as Artisan Slices and Cake Pucks.</p>
-
-                <div class="space-y-12">
-                    <!-- Flavor 1 -->
-                    <div class="bg-brand-card rounded-2xl shadow-xl p-8 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-                        <div class="md:col-span-2">
-                            <h3 class="font-serif text-3xl font-bold text-white">White Berry Almond</h3>
-                            <p class="text-brand-light mt-2">A delicate almond cake infused with notes of vanilla bean and nutmeg, perfectly complemented by a sweet and unique pineberry buttercream.</p>
-                        </div>
-                        <div class="text-center">
-                            <button onclick="showFlavorOrderModal('White Berry Almond')" class="w-full bg-brand-gold text-brand-dark font-bold py-3 px-6 rounded-lg hover:bg-brand-gold-hover transition">Order This Flavor</button>
-                        </div>
-                    </div>
-                    <!-- Flavor 2 -->
-                    <div class="bg-brand-card rounded-2xl shadow-xl p-8 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-                        <div class="md:col-span-2">
-                            <h3 class="font-serif text-3xl font-bold text-white">Chocolate Ganache & Salted Caramel</h3>
-                            <p class="text-brand-light mt-2">A rich cocoa cake layered with decadent bittersweet chocolate ganache and finished with a ribbon of house-made sea salt caramel.</p>
-                        </div>
-                        <div class="text-center">
-                            <button onclick="showFlavorOrderModal('Chocolate Ganache & Salted Caramel')" class="w-full bg-brand-gold text-brand-dark font-bold py-3 px-6 rounded-lg hover:bg-brand-gold-hover transition">Order This Flavor</button>
-                        </div>
-                    </div>
-                    <!-- Flavor 3 -->
-                    <div class="bg-brand-card rounded-2xl shadow-xl p-8 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-                        <div class="md:col-span-2">
-                            <h3 class="font-serif text-3xl font-bold text-white">Pumpkin Chai Cake</h3>
-                            <p class="text-brand-light mt-2">A wonderfully moist pumpkin cake warmed with aromatic chai spices and frosted with a smooth, delightful maple cream.</p>
-                        </div>
-                        <div class="text-center">
-                            <button onclick="showFlavorOrderModal('Pumpkin Chai Cake')" class="w-full bg-brand-gold text-brand-dark font-bold py-3 px-6 rounded-lg hover:bg-brand-gold-hover transition">Order This Flavor</button>
-                        </div>
-                    </div>
-                    <!-- Flavor 4 -->
-                    <div class="bg-brand-card rounded-2xl shadow-xl p-8 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-                        <div class="md:col-span-2">
-                            <h3 class="font-serif text-3xl font-bold text-white">Apple Cider With Caramel Crunch</h3>
-                            <p class="text-brand-light mt-2">A tender apple cake featuring a bright cider caramel, spiced with cinnamon and topped with a satisfying crumble for textural delight.</p>
-                        </div>
-                        <div class="text-center">
-                            <button onclick="showFlavorOrderModal('Apple Cider With Caramel Crunch')" class="w-full bg-brand-gold text-brand-dark font-bold py-3 px-6 rounded-lg hover:bg-brand-gold-hover transition">Order This Flavor</button>
-                        </div>
-                    </div>
-                    <!-- Flavor 5 -->
-                    <div class="bg-brand-card rounded-2xl shadow-xl p-8 grid grid-cols-1 md:grid-cols-3 gap-8 items-center">
-                        <div class="md:col-span-2">
-                            <h3 class="font-serif text-3xl font-bold text-white">Buttered Pecan Spice</h3>
-                            <p class="text-brand-light mt-2">A comforting buttered pecan cake elevated with a unique blend of warm spices and a hint of aromatic long pepper for a surprising finish.</p>
-                        </div>
-                        <div class="text-center">
-                            <button onclick="showFlavorOrderModal('Buttered Pecan Spice')" class="w-full bg-brand-gold text-brand-dark font-bold py-3 px-6 rounded-lg hover:bg-brand-gold-hover transition">Order This Flavor</button>
-                        </div>
-                    </div>
-                </div>
+                <div id="weekly-flavors-container" class="space-y-12"></div>
             </section>
 
             <!-- Full Flavor Library Section -->
@@ -196,75 +118,7 @@
                 <h2 class="font-serif text-4xl font-semibold text-center mb-4 text-white">Our Full Flavor Library</h2>
                 <p class="text-center text-brand-gray mb-12">The following flavors are available for custom cake orders. Flavors marked with a gold badge are also available this week. <a href="index.html#contact" class="text-brand-gold hover:underline">Contact us</a> to start your inquiry.</p>
                 
-                <!-- Autumn Collection -->
-                <div class="mb-16">
-                    <h3 class="font-serif text-3xl font-semibold text-white mb-8 border-b-2 border-brand-gold/30 pb-4">Autumn Collection</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div class="bg-brand-card/70 rounded-2xl shadow-lg p-8"><h4 class="flex items-center font-serif text-2xl font-bold mb-3 text-brand-gold">White Berry Almond <span class="ml-3 text-xs font-medium bg-brand-gold/20 text-brand-gold border border-brand-gold/50 py-1 px-3 rounded-md whitespace-nowrap">Available This Week</span></h4><p class="text-brand-light">A delicate almond cake infused with notes of vanilla bean and nutmeg, perfectly complemented by a sweet and unique pineberry buttercream.</p><p class="text-xs text-brand-gray mt-4">CONTAINS: Wheat | Almonds | Eggs | Dairy</p></div>
-                        <div class="bg-brand-card/70 rounded-2xl shadow-lg p-8"><h4 class="flex items-center font-serif text-2xl font-bold mb-3 text-brand-gold">Chocolate Ganache & Salted Caramel <span class="ml-3 text-xs font-medium bg-brand-gold/20 text-brand-gold border border-brand-gold/50 py-1 px-3 rounded-md whitespace-nowrap">Available This Week</span></h4><p class="text-brand-light">A rich cocoa cake layered with decadent bittersweet chocolate ganache and finished with a ribbon of house-made sea salt caramel.</p><p class="text-xs text-brand-gray mt-4">CONTAINS: Wheat | Eggs | Dairy</p></div>
-                        <div class="bg-brand-card/70 rounded-2xl shadow-lg p-8"><h4 class="flex items-center font-serif text-2xl font-bold mb-3 text-brand-gold">Pumpkin Chai Cake <span class="ml-3 text-xs font-medium bg-brand-gold/20 text-brand-gold border border-brand-gold/50 py-1 px-3 rounded-md whitespace-nowrap">Available This Week</span></h4><p class="text-brand-light">A wonderfully moist pumpkin cake warmed with aromatic chai spices and frosted with a smooth, delightful maple cream.</p><p class="text-xs text-brand-gray mt-4">CONTAINS: Wheat | Eggs | Dairy</p></div>
-                        <div class="bg-brand-card/70 rounded-2xl shadow-lg p-8"><h4 class="flex items-center font-serif text-2xl font-bold mb-3 text-brand-gold">Apple Cider With Caramel Crunch <span class="ml-3 text-xs font-medium bg-brand-gold/20 text-brand-gold border border-brand-gold/50 py-1 px-3 rounded-md whitespace-nowrap">Available This Week</span></h4><p class="text-brand-light">A tender apple cake featuring a bright cider caramel, spiced with cinnamon and topped with a satisfying crumble for textural delight.</p><p class="text-xs text-brand-gray mt-4">CONTAINS: Wheat | Eggs | Dairy</p></div>
-                        <div class="bg-brand-card/70 rounded-2xl shadow-lg p-8"><h4 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Pumpkin Spice Mocha Latte</h4><p class="text-brand-light">An inventive cake combining pumpkin spice with rich mocha and coffee notes, finished with a surprising hint of amchoor for a touch of tartness.</p><p class="text-xs text-brand-gray mt-4">CONTAINS: Wheat | Eggs | Dairy</p></div>
-                        <div class="bg-brand-card/70 rounded-2xl shadow-lg p-8"><h4 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Brown Buttered Apple Coconut</h4><p class="text-brand-light">A nutty brown butter and apple cake made uniquely fragrant and flavorful with the addition of coconut and tropical pandan.</p><p class="text-xs text-brand-gray mt-4">CONTAINS: Wheat | Eggs | Dairy | Coconut</p></div>
-                        <div class="bg-brand-card/70 rounded-2xl shadow-lg p-8"><h4 class="flex items-center font-serif text-2xl font-bold mb-3 text-brand-gold">Buttered Pecan Spice <span class="ml-3 text-xs font-medium bg-brand-gold/20 text-brand-gold border border-brand-gold/50 py-1 px-3 rounded-md whitespace-nowrap">Available This Week</span></h4><p class="text-brand-light">A comforting buttered pecan cake elevated with a unique blend of warm spices and a hint of aromatic long pepper for a surprising finish.</p><p class="text-xs text-brand-gray mt-4">CONTAINS: Wheat | Pecans | Eggs | Dairy</p></div>
-                        <div class="bg-brand-card/70 rounded-2xl shadow-lg p-8"><h4 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Blood Orange & Cardamom</h4><p class="text-brand-light">A vibrant blood orange cake beautifully scented with aromatic cardamom, enriched with a luxurious cream and butter frosting.</p><p class="text-xs text-brand-gray mt-4">CONTAINS: Wheat | Eggs | Dairy</p></div>
-                    </div>
-                </div>
-
-                <!-- Winter Collection -->
-                <div class="mb-16">
-                    <h3 class="font-serif text-3xl font-semibold text-white mb-8 border-b-2 border-brand-gold/30 pb-4">Winter Collection</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div class="bg-brand-card/70 rounded-2xl shadow-lg p-8"><h4 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Vanilla Earl Grey & Honeycomb</h4><p class="text-brand-light">Elegant vanilla cake infused with the citrusy notes of bergamot from Earl Grey tea, topped with crunchy, house-made honeycomb.</p><p class="text-xs text-brand-gray mt-4">CONTAINS: Wheat | Eggs | Dairy</p></div>
-                        <div class="bg-brand-card/70 rounded-2xl shadow-lg p-8"><h4 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Strawberry Rose Pistachio</h4><p class="text-brand-light">A romantic blend of sweet strawberry and fragrant rose, with nutty pistachio pieces and a hint of luxurious saffron.</p><p class="text-xs text-brand-gray mt-4">CONTAINS: Wheat | Pistachios | Eggs | Dairy</p></div>
-                        <div class="bg-brand-card/70 rounded-2xl shadow-lg p-8"><h4 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Cranberry Orange & White Chocolate</h4><p class="text-brand-light">A festive cake pairing tart cranberry and bright orange zest with the sweet creaminess of white chocolate.</p><p class="text-xs text-brand-gray mt-4">CONTAINS: Wheat | Eggs | Dairy | Soy</p></div>
-                        <div class="bg-brand-card/70 rounded-2xl shadow-lg p-8"><h4 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Blackberry Merlot & Dark Chocolate</h4><p class="text-brand-light">A sophisticated cake featuring juicy blackberry and rich Merlot wine reduction, paired perfectly with deep dark chocolate.</p><p class="text-xs text-brand-gray mt-4">CONTAINS: Wheat | Eggs | Dairy | Soy</p></div>
-                        <div class="bg-brand-card/70 rounded-2xl shadow-lg p-8"><h4 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Espresso Chocolate Almond</h4><p class="text-brand-light">A bold cake with rich espresso and chocolate notes, nutty almond undertones, and an exotic hint of black cardamom.</p><p class="text-xs text-brand-gray mt-4">CONTAINS: Wheat | Almonds | Eggs | Dairy</p></div>
-                        <div class="bg-brand-card/70 rounded-2xl shadow-lg p-8"><h4 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Black Forest Cherry & Kirsch</h4><p class="text-brand-light">A classic reimagined, with layers of chocolate cake, sweet cherries, and a splash of Kirsch brandy, all enveloped in fresh cream.</p><p class="text-xs text-brand-gray mt-4">CONTAINS: Wheat | Eggs | Dairy</p></div>
-                        <div class="bg-brand-card/70 rounded-2xl shadow-lg p-8"><h4 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Pear & Almond Frangipane</h4><p class="text-brand-light">A delicate cake featuring sweet poached pear and rich, nutty almond frangipane baked into a tender crumb and finished with cream.</p><p class="text-xs text-brand-gray mt-4">CONTAINS: Wheat | Almonds | Eggs | Dairy</p></div>
-                        <div class="bg-brand-card/70 rounded-2xl shadow-lg p-8"><h4 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Salted Caramel Almond</h4><p class="text-brand-light">A delicious combination of salted caramel and almond, with the unique, cherry-like fragrance of Mahleb spice for an intriguing twist.</p><p class="text-xs text-brand-gray mt-4">CONTAINS: Wheat | Almonds | Eggs | Dairy</p></div>
-                    </div>
-                </div>
-
-                 <!-- Spring Collection -->
-                <div class="mb-16">
-                    <h3 class="font-serif text-3xl font-semibold text-white mb-8 border-b-2 border-brand-gold/30 pb-4">Spring Collection</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div class="bg-brand-card/70 rounded-2xl shadow-lg p-8"><h4 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Lemon Raspberry & Hibiscus</h4><p class="text-brand-light">A bright lemon and raspberry cake paired with the sweet creaminess of white chocolate and a floral hint of hibiscus.</p><p class="text-xs text-brand-gray mt-4">CONTAINS: Wheat | Eggs | Dairy | Soy</p></div>
-                        <div class="bg-brand-card/70 rounded-2xl shadow-lg p-8"><h4 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Lemon Raspberry & Finger Limes</h4><p class="text-brand-light">A refreshing lemon and raspberry cake that offers bursts of citrus caviar from Australian finger limes for a unique, tangy pop.</p><p class="text-xs text-brand-gray mt-4">CONTAINS: Wheat | Eggs | Dairy</p></div>
-                        <div class="bg-brand-card/70 rounded-2xl shadow-lg p-8"><h4 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Lavender Honey & Lemon Curd</h4><p class="text-brand-light">A fragrant lavender and honey-infused cake, filled with tangy lemon curd and frosted with a smooth buttercream.</p><p class="text-xs text-brand-gray mt-4">CONTAINS: Wheat | Eggs | Dairy</p></div>
-                        <div class="bg-brand-card/70 rounded-2xl shadow-lg p-8"><h4 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Lemon Olive Oil & Rosemary</h4><p class="text-brand-light">A sophisticated and moist lemon olive oil cake with a subtle, herbaceous note of rosemary for a truly unique flavor profile.</p><p class="text-xs text-brand-gray mt-4">CONTAINS: Wheat | Eggs | Dairy</p></div>
-                        <div class="bg-brand-card/70 rounded-2xl shadow-lg p-8"><h4 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Passion Fruit Carrot Cake</h4><p class="text-brand-light">A tropical twist on a classic, featuring passion fruit in a moist carrot cake spiced with aromatic Grains of Paradise.</p><p class="text-xs text-brand-gray mt-4">CONTAINS: Wheat | Eggs | Dairy</p></div>
-                        <div class="bg-brand-card/70 rounded-2xl shadow-lg p-8"><h4 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Coconut Passionfruit & Lime</h4><p class="text-brand-light">A taste of the tropics with creamy coconut, tangy passionfruit, and a bright zest of lime in a delicious cream cake.</p><p class="text-xs text-brand-gray mt-4">CONTAINS: Wheat | Eggs | Dairy | Coconut</p></div>
-                    </div>
-                </div>
-
-                <!-- Summer Collection -->
-                <div class="mb-16">
-                    <h3 class="font-serif text-3xl font-semibold text-white mb-8 border-b-2 border-brand-gold/30 pb-4">Summer Collection</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div class="bg-brand-card/70 rounded-2xl shadow-lg p-8"><h4 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Peach Basil & Mascarpone</h4><p class="text-brand-light">A light and summery cake with sweet peaches, a surprising hint of fresh basil, and a rich, creamy mascarpone frosting.</p><p class="text-xs text-brand-gray mt-4">CONTAINS: Wheat | Eggs | Dairy</p></div>
-                        <div class="bg-brand-card/70 rounded-2xl shadow-lg p-8"><h4 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Strawberries & Cream</h4><p class="text-brand-light">A quintessential summer treat. Fresh strawberries and vanilla cream are elevated with a delicate hint of fragrant rosewater.</p><p class="text-xs text-brand-gray mt-4">CONTAINS: Wheat | Eggs | Dairy</p></div>
-                        <div class="bg-brand-card/70 rounded-2xl shadow-lg p-8"><h4 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Matcha Yuzu & Vanilla Bean</h4><p class="text-brand-light">Earthy matcha green tea cake is perfectly balanced with the bright, citrusy notes of yuzu and the sweetness of vanilla bean.</p><p class="text-xs text-brand-gray mt-4">CONTAINS: Wheat | Eggs | Dairy</p></div>
-                        <div class="bg-brand-card/70 rounded-2xl shadow-lg p-8"><h4 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Champagne & Elderflower</h4><p class="text-brand-light">A celebratory cake featuring bright notes of champagne, elderflower, lemon, and pear in a tender almond and brioche-style crumb.</p><p class="text-xs text-brand-gray mt-4">CONTAINS: Wheat | Eggs | Dairy | Almonds</p></div>
-                        <div class="bg-brand-card/70 rounded-2xl shadow-lg p-8"><h4 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Hazelnut Mocha Praline</h4><p class="text-brand-light">A decadent combination of nutty hazelnut, rich chocolate mocha, and the sweet crunch of handmade praline.</p><p class="text-xs text-brand-gray mt-4">CONTAINS: Wheat | Hazelnuts | Eggs | Dairy</p></div>
-                        <div class="bg-brand-card/70 rounded-2xl shadow-lg p-8"><h4 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Carrot Cake with Brown Butter</h4><p class="text-brand-light">Our classic carrot cake with warm spices and walnuts, elevated with a nutty and rich brown butter cream cheese frosting.</p><p class="text-xs text-brand-gray mt-4">CONTAINS: Wheat | Eggs | Dairy | Walnuts</p></div>
-                    </div>
-                </div>
-                
-                 <!-- The Mithas & Mahal Collection -->
-                <div class="mb-16">
-                    <h3 class="font-serif text-3xl font-semibold text-white mb-8 border-b-2 border-brand-gold/30 pb-4">Artisan Fusion Collection</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        <div class="bg-brand-card/70 rounded-2xl shadow-lg p-8"><h4 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Gulab Jamun Cake</h4><p class="text-brand-light">An inventive cake inspired by the classic dessert, featuring notes of cardamom, rosewater, saffron, and almond.</p><p class="text-xs text-brand-gray mt-4">CONTAINS: Wheat | Egg | Milk | Soy | Almonds</p></div>
-                        <div class="bg-brand-card/70 rounded-2xl shadow-lg p-8"><h4 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Srikhand Pistachio Cake</h4><p class="text-brand-light">A tribute to the creamy dessert, this cake blends pistachio, saffron, and cardamom with a delightful mousse texture.</p><p class="text-xs text-brand-gray mt-4">CONTAINS: Wheat | Egg | Milk | Soy | Pistachios</p></div>
-                        <div class="bg-brand-card/70 rounded-2xl shadow-lg p-8"><h4 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Rasgulla Rosewater Cake</h4><p class="text-brand-light">A light and airy cake delicately flavored with rosewater and whipped cream, featuring soft Rasgulla pieces throughout.</p><p class="text-xs text-brand-gray mt-4">CONTAINS: Wheat | Egg | Milk | Soy</p></div>
-                        <div class="bg-brand-card/70 rounded-2xl shadow-lg p-8"><h4 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Jalebi Crunch Caramel Cake</h4><p class="text-brand-light">A textural delight pairing rich chocolate and salted caramel with the unique, sweet crunch of Jalebi pieces.</p><p class="text-xs text-brand-gray mt-4">CONTAINS: Wheat | Egg | Milk | Soy</p></div>
-                        <div class="bg-brand-card/70 rounded-2xl shadow-lg p-8"><h4 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Kaju Katli Almond Cake</h4><p class="text-brand-light">Inspired by the classic sweet, this almond cake is filled with a rich and creamy cashew fudge (Kaju Katli).</p><p class="text-xs text-brand-gray mt-4">CONTAINS: Wheat | Egg | Milk | Soy | Almonds | Cashews</p></div>
-                         <div class="bg-brand-card/70 rounded-2xl shadow-lg p-8"><h4 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Gajar Halwa Pistachio Cake</h4><p class="text-brand-light">A fusion of fall and tradition, this cake combines spiced gajar halwa with the rich, nutty flavor of pistachios.</p><p class="text-xs text-brand-gray mt-4">CONTAINS: Wheat | Egg | Milk | Soy | Pistachios</p></div>
-                    </div>
-                </div>
-
+                <div id="full-library-container"></div>
             </section>
         </div>
     </main>
@@ -303,11 +157,471 @@
         const overlay = document.getElementById('overlay');
         const modal = document.getElementById('flavor-order-modal');
         const modalTitle = document.getElementById('modal-title');
-        const flavorNameInput = document.getElementById('selected-flavor-name');
+        const flavorIdInput = document.getElementById('selected-flavor-id');
+        const modalOptionsContainer = document.getElementById('modal-options-container');
 
-        function showFlavorOrderModal(flavorName) {
-            modalTitle.textContent = `Order: ${flavorName}`;
-            flavorNameInput.value = flavorName;
+        const flavors = [
+            {
+                id: 'white-berry-almond',
+                name: 'White Berry Almond',
+                collection: 'Autumn Collection',
+                availableWeekly: true,
+                description: 'A delicate almond cake infused with notes of vanilla bean and nutmeg, perfectly complemented by a sweet and unique pineberry buttercream.',
+                contains: 'Wheat | Almonds | Eggs | Dairy',
+                orderOptions: ['slice', 'puck-single', 'puck-3pack', 'puck-6pack'],
+                squareLinks: {
+                    'slice': 'https://square.link/u/RoCg5gJE',
+                    'puck-single': 'https://square.link/u/rHgetHXR',
+                    'puck-3pack': 'https://square.link/u/KMi13npr',
+                    'puck-6pack': 'https://square.link/u/k3QTMvuF'
+                }
+            },
+            {
+                id: 'chocolate-ganache-caramel',
+                name: 'Chocolate Ganache & Salted Caramel',
+                collection: 'Autumn Collection',
+                availableWeekly: true,
+                description: 'A rich cocoa cake layered with decadent bittersweet chocolate ganache and finished with a ribbon of house-made sea salt caramel.',
+                contains: 'Wheat | Eggs | Dairy',
+                orderOptions: ['slice', 'puck-single', 'puck-3pack', 'puck-6pack'],
+                squareLinks: {
+                    'slice': 'https://square.link/u/RoCg5gJE',
+                    'puck-single': 'https://square.link/u/rHgetHXR',
+                    'puck-3pack': 'https://square.link/u/KMi13npr',
+                    'puck-6pack': 'https://square.link/u/k3QTMvuF'
+                }
+            },
+            {
+                id: 'pumpkin-chai-cake',
+                name: 'Pumpkin Chai Cake',
+                collection: 'Autumn Collection',
+                availableWeekly: true,
+                description: 'A wonderfully moist pumpkin cake warmed with aromatic chai spices and frosted with a smooth, delightful maple cream.',
+                contains: 'Wheat | Eggs | Dairy',
+                orderOptions: ['slice', 'puck-single', 'puck-3pack', 'puck-6pack'],
+                squareLinks: {
+                    'slice': 'https://square.link/u/RoCg5gJE',
+                    'puck-single': 'https://square.link/u/rHgetHXR',
+                    'puck-3pack': 'https://square.link/u/KMi13npr',
+                    'puck-6pack': 'https://square.link/u/k3QTMvuF'
+                }
+            },
+            {
+                id: 'apple-cider-caramel',
+                name: 'Apple Cider With Caramel Crunch',
+                collection: 'Autumn Collection',
+                availableWeekly: true,
+                description: 'A tender apple cake featuring a bright cider caramel, spiced with cinnamon and topped with a satisfying crumble for textural delight.',
+                contains: 'Wheat | Eggs | Dairy',
+                orderOptions: ['slice', 'puck-single', 'puck-3pack', 'puck-6pack'],
+                squareLinks: {
+                    'slice': 'https://square.link/u/RoCg5gJE',
+                    'puck-single': 'https://square.link/u/rHgetHXR',
+                    'puck-3pack': 'https://square.link/u/KMi13npr',
+                    'puck-6pack': 'https://square.link/u/k3QTMvuF'
+                }
+            },
+            {
+                id: 'pumpkin-spice-mocha',
+                name: 'Pumpkin Spice Mocha Latte',
+                collection: 'Autumn Collection',
+                availableWeekly: false,
+                description: 'An inventive cake combining pumpkin spice with rich mocha and coffee notes, finished with a surprising hint of amchoor for a touch of tartness.',
+                contains: 'Wheat | Eggs | Dairy',
+                orderOptions: []
+            },
+            {
+                id: 'brown-buttered-apple',
+                name: 'Brown Buttered Apple Coconut',
+                collection: 'Autumn Collection',
+                availableWeekly: false,
+                description: 'A nutty brown butter and apple cake made uniquely fragrant and flavorful with the addition of coconut and tropical pandan.',
+                contains: 'Wheat | Eggs | Dairy | Coconut',
+                orderOptions: []
+            },
+            {
+                id: 'buttered-pecan-spice',
+                name: 'Buttered Pecan Spice',
+                collection: 'Autumn Collection',
+                availableWeekly: true,
+                description: 'A comforting buttered pecan cake elevated with a unique blend of warm spices and a hint of aromatic long pepper for a surprising finish.',
+                contains: 'Wheat | Pecans | Eggs | Dairy',
+                orderOptions: ['slice', 'puck-single', 'puck-3pack', 'puck-6pack'],
+                squareLinks: {
+                    'slice': 'https://square.link/u/RoCg5gJE',
+                    'puck-single': 'https://square.link/u/rHgetHXR',
+                    'puck-3pack': 'https://square.link/u/KMi13npr',
+                    'puck-6pack': 'https://square.link/u/k3QTMvuF'
+                }
+            },
+            {
+                id: 'blood-orange-cardamom',
+                name: 'Blood Orange & Cardamom',
+                collection: 'Autumn Collection',
+                availableWeekly: false,
+                description: 'A vibrant blood orange cake beautifully scented with aromatic cardamom, enriched with a luxurious cream and butter frosting.',
+                contains: 'Wheat | Eggs | Dairy',
+                orderOptions: []
+            },
+            {
+                id: 'vanilla-earl-grey',
+                name: 'Vanilla Earl Grey & Honeycomb',
+                collection: 'Winter Collection',
+                availableWeekly: false,
+                description: 'Elegant vanilla cake infused with the citrusy notes of bergamot from Earl Grey tea, topped with crunchy, house-made honeycomb.',
+                contains: 'Wheat | Eggs | Dairy',
+                orderOptions: []
+            },
+            {
+                id: 'strawberry-rose',
+                name: 'Strawberry Rose Pistachio',
+                collection: 'Winter Collection',
+                availableWeekly: false,
+                description: 'A romantic blend of sweet strawberry and fragrant rose, with nutty pistachio pieces and a hint of luxurious saffron.',
+                contains: 'Wheat | Pistachios | Eggs | Dairy',
+                orderOptions: []
+            },
+            {
+                id: 'cranberry-orange',
+                name: 'Cranberry Orange & White Chocolate',
+                collection: 'Winter Collection',
+                availableWeekly: false,
+                description: 'A festive cake pairing tart cranberry and bright orange zest with the sweet creaminess of white chocolate.',
+                contains: 'Wheat | Eggs | Dairy | Soy',
+                orderOptions: []
+            },
+            {
+                id: 'blackberry-merlot',
+                name: 'Blackberry Merlot & Dark Chocolate',
+                collection: 'Winter Collection',
+                availableWeekly: false,
+                description: 'A sophisticated cake featuring juicy blackberry and rich Merlot wine reduction, paired perfectly with deep dark chocolate.',
+                contains: 'Wheat | Eggs | Dairy | Soy',
+                orderOptions: []
+            },
+            {
+                id: 'espresso-chocolate-almond',
+                name: 'Espresso Chocolate Almond',
+                collection: 'Winter Collection',
+                availableWeekly: false,
+                description: 'A bold cake with rich espresso and chocolate notes, nutty almond undertones, and an exotic hint of black cardamom.',
+                contains: 'Wheat | Almonds | Eggs | Dairy',
+                orderOptions: []
+            },
+            {
+                id: 'black-forest-cherry',
+                name: 'Black Forest Cherry & Kirsch',
+                collection: 'Winter Collection',
+                availableWeekly: false,
+                description: 'A classic reimagined, with layers of chocolate cake, sweet cherries, and a splash of Kirsch brandy, all enveloped in fresh cream.',
+                contains: 'Wheat | Eggs | Dairy',
+                orderOptions: []
+            },
+            {
+                id: 'pear-almond',
+                name: 'Pear & Almond Frangipane',
+                collection: 'Winter Collection',
+                availableWeekly: false,
+                description: 'A delicate cake featuring sweet poached pear and rich, nutty almond frangipane baked into a tender crumb and finished with cream.',
+                contains: 'Wheat | Almonds | Eggs | Dairy',
+                orderOptions: []
+            },
+            {
+                id: 'salted-caramel-almond',
+                name: 'Salted Caramel Almond',
+                collection: 'Winter Collection',
+                availableWeekly: false,
+                description: 'A delicious combination of salted caramel and almond, with the unique, cherry-like fragrance of Mahleb spice for an intriguing twist.',
+                contains: 'Wheat | Almonds | Eggs | Dairy',
+                orderOptions: []
+            },
+            {
+                id: 'lemon-raspberry-hibiscus',
+                name: 'Lemon Raspberry & Hibiscus',
+                collection: 'Spring Collection',
+                availableWeekly: false,
+                description: 'A bright lemon and raspberry cake paired with the sweet creaminess of white chocolate and a floral hint of hibiscus.',
+                contains: 'Wheat | Eggs | Dairy | Soy',
+                orderOptions: []
+            },
+            {
+                id: 'lemon-raspberry-limes',
+                name: 'Lemon Raspberry & Finger Limes',
+                collection: 'Spring Collection',
+                availableWeekly: false,
+                description: 'A refreshing lemon and raspberry cake that offers bursts of citrus caviar from Australian finger limes for a unique, tangy pop.',
+                contains: 'Wheat | Eggs | Dairy',
+                orderOptions: []
+            },
+            {
+                id: 'lavender-honey',
+                name: 'Lavender Honey & Lemon Curd',
+                collection: 'Spring Collection',
+                availableWeekly: false,
+                description: 'A fragrant lavender and honey-infused cake, filled with tangy lemon curd and frosted with a smooth buttercream.',
+                contains: 'Wheat | Eggs | Dairy',
+                orderOptions: []
+            },
+            {
+                id: 'lemon-olive-oil',
+                name: 'Lemon Olive Oil & Rosemary',
+                collection: 'Spring Collection',
+                availableWeekly: false,
+                description: 'A sophisticated and moist lemon olive oil cake with a subtle, herbaceous note of rosemary for a truly unique flavor profile.',
+                contains: 'Wheat | Eggs | Dairy',
+                orderOptions: []
+            },
+            {
+                id: 'passion-fruit-carrot',
+                name: 'Passion Fruit Carrot Cake',
+                collection: 'Spring Collection',
+                availableWeekly: false,
+                description: 'A tropical twist on a classic, featuring passion fruit in a moist carrot cake spiced with aromatic Grains of Paradise.',
+                contains: 'Wheat | Eggs | Dairy',
+                orderOptions: []
+            },
+            {
+                id: 'coconut-passionfruit',
+                name: 'Coconut Passionfruit & Lime',
+                collection: 'Spring Collection',
+                availableWeekly: false,
+                description: 'A taste of the tropics with creamy coconut, tangy passionfruit, and a bright zest of lime in a delicious cream cake.',
+                contains: 'Wheat | Eggs | Dairy | Coconut',
+                orderOptions: []
+            },
+            {
+                id: 'peach-basil',
+                name: 'Peach Basil & Mascarpone',
+                collection: 'Summer Collection',
+                availableWeekly: false,
+                description: 'A light and summery cake with sweet peaches, a surprising hint of fresh basil, and a rich, creamy mascarpone frosting.',
+                contains: 'Wheat | Eggs | Dairy',
+                orderOptions: []
+            },
+            {
+                id: 'strawberries-cream',
+                name: 'Strawberries & Cream',
+                collection: 'Summer Collection',
+                availableWeekly: false,
+                description: 'A quintessential summer treat. Fresh strawberries and vanilla cream are elevated with a delicate hint of fragrant rosewater.',
+                contains: 'Wheat | Eggs | Dairy',
+                orderOptions: []
+            },
+            {
+                id: 'matcha-yuzu',
+                name: 'Matcha Yuzu & Vanilla Bean',
+                collection: 'Summer Collection',
+                availableWeekly: false,
+                description: 'Earthy matcha green tea cake is perfectly balanced with the bright, citrusy notes of yuzu and the sweetness of vanilla bean.',
+                contains: 'Wheat | Eggs | Dairy',
+                orderOptions: []
+            },
+            {
+                id: 'champagne-elderflower',
+                name: 'Champagne & Elderflower',
+                collection: 'Summer Collection',
+                availableWeekly: false,
+                description: 'A celebratory cake featuring bright notes of champagne, elderflower, lemon, and pear in a tender almond and brioche-style crumb.',
+                contains: 'Wheat | Eggs | Dairy | Almonds',
+                orderOptions: []
+            },
+            {
+                id: 'hazelnut-mocha',
+                name: 'Hazelnut Mocha Praline',
+                collection: 'Summer Collection',
+                availableWeekly: false,
+                description: 'A decadent combination of nutty hazelnut, rich chocolate mocha, and the sweet crunch of handmade praline.',
+                contains: 'Wheat | Hazelnuts | Eggs | Dairy',
+                orderOptions: []
+            },
+            {
+                id: 'carrot-cake-brown-butter',
+                name: 'Carrot Cake with Brown Butter',
+                collection: 'Summer Collection',
+                availableWeekly: false,
+                description: 'Our classic carrot cake with warm spices and walnuts, elevated with a nutty and rich brown butter cream cheese frosting.',
+                contains: 'Wheat | Eggs | Dairy | Walnuts',
+                orderOptions: []
+            },
+            {
+                id: 'gulab-jamun',
+                name: 'Gulab Jamun Cake',
+                collection: 'Mithas & Mahal Collection',
+                availableWeekly: false,
+                description: 'An inventive cake inspired by the classic dessert, featuring notes of cardamom, rosewater, saffron, and almond.',
+                contains: 'Wheat | Milk | Soy | Almonds (Eggless)',
+                orderOptions: ['mithas-slice', 'mithas-flight'],
+                squareLinks: {
+                    'mithas-slice': 'https://square.link/u/37R9y6mq',
+                    'mithas-flight': 'https://square.link/u/2qgl2nif'
+                }
+            },
+            {
+                id: 'ras-malai',
+                name: 'Ras Malai Cake',
+                collection: 'Mithas & Mahal Collection',
+                availableWeekly: false,
+                description: 'A light and airy cardamom cake soaked in a saffron-infused cream, topped with chopped pistachios.',
+                contains: 'Wheat | Milk | Soy | Pistachios (Eggless)',
+                orderOptions: ['mithas-slice', 'mithas-flight'],
+                squareLinks: {
+                    'mithas-slice': 'https://square.link/u/37R9y6mq',
+                    'mithas-flight': 'https://square.link/u/2qgl2nif'
+                }
+            },
+            {
+                id: 'srikhand-pistachio',
+                name: 'Srikhand Pistachio Cake',
+                collection: 'Mithas & Mahal Collection',
+                availableWeekly: false,
+                description: 'A tribute to the creamy dessert, this cake blends pistachio, saffron, and cardamom with a delightful mousse texture.',
+                contains: 'Wheat | Egg | Milk | Soy | Pistachios',
+                orderOptions: ['mithas-slice', 'mithas-flight'],
+                squareLinks: {
+                    'mithas-slice': 'https://square.link/u/37R9y6mq',
+                    'mithas-flight': 'https://square.link/u/2qgl2nif'
+                }
+            },
+            {
+                id: 'rasgulla-rosewater',
+                name: 'Rasgulla Rosewater Cake',
+                collection: 'Mithas & Mahal Collection',
+                availableWeekly: false,
+                description: 'A light and airy cake delicately flavored with rosewater and whipped cream, featuring soft Rasgulla pieces throughout.',
+                contains: 'Wheat | Egg | Milk | Soy',
+                orderOptions: ['mithas-slice', 'mithas-flight'],
+                squareLinks: {
+                    'mithas-slice': 'https://square.link/u/37R9y6mq',
+                    'mithas-flight': 'https://square.link/u/2qgl2nif'
+                }
+            },
+            {
+                id: 'jalebi-crunch',
+                name: 'Jalebi Crunch Caramel Cake',
+                collection: 'Mithas & Mahal Collection',
+                availableWeekly: false,
+                description: 'A textural delight pairing rich chocolate and salted caramel with the unique, sweet crunch of Jalebi pieces.',
+                contains: 'Wheat | Egg | Milk | Soy',
+                orderOptions: ['mithas-slice', 'mithas-flight'],
+                squareLinks: {
+                    'mithas-slice': 'https://square.link/u/37R9y6mq',
+                    'mithas-flight': 'https://square.link/u/2qgl2nif'
+                }
+            },
+            {
+                id: 'kaju-katli',
+                name: 'Kaju Katli Almond Cake',
+                collection: 'Mithas & Mahal Collection',
+                availableWeekly: true,
+                description: 'Inspired by the classic sweet, this almond cake is filled with a rich and creamy cashew fudge (Kaju Katli).',
+                contains: 'Wheat | Egg | Milk | Soy | Almonds | Cashews',
+                orderOptions: ['mithas-slice', 'mithas-flight'],
+                squareLinks: {
+                    'mithas-slice': 'https://square.link/u/37R9y6mq',
+                    'mithas-flight': 'https://square.link/u/2qgl2nif'
+                }
+            },
+            {
+                id: 'gajar-halwa',
+                name: 'Gajar Halwa Pistachio Cake',
+                collection: 'Mithas & Mahal Collection',
+                availableWeekly: false,
+                description: 'A fusion of fall and tradition, this cake combines spiced gajar halwa with the rich, nutty flavor of pistachios.',
+                contains: 'Wheat | Egg | Milk | Soy | Pistachios',
+                orderOptions: ['mithas-slice', 'mithas-flight'],
+                squareLinks: {
+                    'mithas-slice': 'https://square.link/u/37R9y6mq',
+                    'mithas-flight': 'https://square.link/u/2qgl2nif'
+                }
+            },
+        ];
+
+        function renderFlavors() {
+            const weeklyContainer = document.getElementById('weekly-flavors-container');
+            const fullLibraryContainer = document.getElementById('full-library-container');
+
+            const collections = [...new Set(flavors.map(f => f.collection))];
+            
+            weeklyContainer.innerHTML = '';
+            flavors.filter(f => f.availableWeekly).forEach(flavor => {
+                weeklyContainer.innerHTML += createFlavorCard(flavor, true);
+            });
+
+            fullLibraryContainer.innerHTML = '';
+            collections.forEach(collectionName => {
+                const collectionFlavors = flavors.filter(f => f.collection === collectionName);
+                const collectionHtml = `
+                    <div class="mb-16">
+                        <h3 class="font-serif text-3xl font-semibold text-white mb-8 border-b-2 border-brand-gold/30 pb-4">${collectionName}</h3>
+                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                            ${collectionFlavors.map(f => createFlavorCard(f, false)).join('')}
+                        </div>
+                    </div>
+                `;
+                fullLibraryContainer.innerHTML += collectionHtml;
+            });
+        }
+
+        function createFlavorCard(flavor, isWeekly) {
+            const weeklyBadge = flavor.availableWeekly ? `<span class="ml-3 text-xs font-medium bg-brand-gold/20 text-brand-gold border border-brand-gold/50 py-1 px-3 rounded-md whitespace-nowrap">Available This Week</span>` : '';
+            const orderButton = isWeekly ? 
+                `<div class="text-center md:col-span-1">
+                    <button onclick="showFlavorOrderModal('${flavor.id}')" class="w-full bg-brand-gold text-brand-dark font-bold py-3 px-6 rounded-lg hover:bg-brand-gold-hover transition">Order This Flavor</button>
+                </div>` : 
+                '';
+            
+            const cardClass = isWeekly ? 'p-8 grid grid-cols-1 md:grid-cols-3 gap-8 items-center' : 'p-8';
+            const textSpan = isWeekly ? 'md:col-span-2' : '';
+            
+            return `
+                <div class="bg-brand-card/70 rounded-2xl shadow-lg ${cardClass}">
+                    <div class="${textSpan}">
+                        <h4 class="flex items-center font-serif text-2xl font-bold mb-3 text-brand-gold">${flavor.name} ${weeklyBadge}</h4>
+                        <p class="text-brand-light">${flavor.description}</p>
+                        <p class="text-xs text-brand-gray mt-4">CONTAINS: ${flavor.contains}</p>
+                    </div>
+                    ${orderButton}
+                </div>
+            `;
+        }
+
+        function showFlavorOrderModal(flavorId) {
+            const flavor = flavors.find(f => f.id === flavorId);
+            if (!flavor) return;
+
+            modalTitle.textContent = `Order: ${flavor.name}`;
+            flavorIdInput.value = flavor.id;
+            
+            modalOptionsContainer.innerHTML = '';
+            
+            const orderOptions = {
+                'slice': { text: 'Artisan Cake Slice - $8.00', value: 'slice' },
+                'puck-single': { text: 'Cake Puck (Single) - $5.00', value: 'puck-single' },
+                'puck-3pack': { text: 'Cake Puck (3-Pack) - $15.00', value: 'puck-3pack' },
+                'puck-6pack': { text: 'Cake Puck (6-Pack) - $27.00', value: 'puck-6pack' },
+                'mithas-slice': { text: 'Single Slice - $15.00', value: 'mithas-slice' },
+                'mithas-flight': { text: '2-Slice Flight - $25.00', value: 'mithas-flight' }
+            };
+
+            const optionsHtml = flavor.orderOptions.map((option, index) => {
+                const details = orderOptions[option];
+                return `
+                    <div class="p-3 bg-brand-dark rounded-lg has-[:checked]:ring-2 has-[:checked]:ring-brand-gold">
+                        <label class="flex items-center space-x-3 cursor-pointer">
+                            <input type="radio" name="product-format" value="${details.value}" class="form-radio text-brand-gold bg-brand-dark border-brand-dark/50 focus:ring-brand-gold" ${index === 0 ? 'checked' : ''}>
+                            <span class="text-brand-light">${details.text}</span>
+                        </label>
+                    </div>
+                `;
+            }).join('');
+
+            modalOptionsContainer.innerHTML = `
+                <div class="space-y-3">
+                    <label class="block text-sm font-medium text-brand-gray">Select Format</label>
+                    ${optionsHtml}
+                </div>
+            `;
+
             overlay.style.display = 'block';
             modal.style.display = 'block';
         }
@@ -323,42 +637,25 @@
         document.getElementById('flavor-order-form').addEventListener('submit', function(event) {
             event.preventDefault();
             
-            const squareLinks = {
-                pucks: {
-                    'Single': 'https://square.link/u/rHgetHXR',
-                    '3-Pack': 'https://square.link/u/KMi13npr',
-                    '6-Pack': 'https://square.link/u/k3QTMvuF'
-                },
-                slice: {
-                    default: 'https://square.link/u/RoCg5gJE'
-                }
-            };
-
+            const selectedFlavorId = document.getElementById('selected-flavor-id').value;
             const selectedFormat = this.elements['product-format'].value;
+            const flavor = flavors.find(f => f.id === selectedFlavorId);
+
             let finalLink = '';
-
-            if (selectedFormat === 'slice') {
-                finalLink = squareLinks.slice.default;
-            } else if (selectedFormat === 'puck-single') {
-                finalLink = squareLinks.pucks['Single'];
-            } else if (selectedFormat === 'puck-3pack') {
-                finalLink = squareLinks.pucks['3-Pack'];
-            } else if (selectedFormat === 'puck-6pack') {
-                finalLink = squareLinks.pucks['6-Pack'];
+            if (flavor && flavor.squareLinks && flavor.squareLinks[selectedFormat]) {
+                finalLink = flavor.squareLinks[selectedFormat];
             }
-
+            
             if (finalLink) {
-                // The Square checkout page will have the flavor options. This directs them to the correct product.
                 alert("Redirecting to our secure payment page to complete your order...");
                 window.location.href = finalLink;
             } else {
                 alert("Sorry, an error occurred. Please contact us to complete your order.");
-                console.error('Could not find a Square link for format:', selectedFormat);
+                console.error('Could not find a Square link for flavor:', selectedFlavorId, 'and format:', selectedFormat);
             }
         });
-    </script>
 
+        window.onload = renderFlavors;
+    </script>
 </body>
 </html>
-
-
