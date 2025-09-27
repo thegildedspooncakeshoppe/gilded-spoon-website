@@ -25,6 +25,7 @@
                         'sans': ['"Inter"', 'sans-serif'],
                     }
                 }
+                
             }
         }
     </script>
@@ -38,17 +39,34 @@
 <body class="font-sans">
 
     <nav class="sticky top-0 bg-brand-dark/80 backdrop-blur-lg shadow-lg z-50">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#home" class="text-2xl font-serif font-bold text-white text-center leading-none">
-                The Gilded Spoon
-                <span class="block text-xs font-sans font-light not-italic tracking-[0.3em]">CAKE SHOPPE</span>
-            </a>
-            <div class="hidden md:flex items-center space-x-8 font-medium">
-                <a href="#products" class="text-brand-gray hover:text-white transition">Collections</a>
-                <a href="flavors.html" class="text-brand-gray hover:text-white transition">Flavors</a>
-                <a href="events.html" class="text-brand-gold hover:text-white transition font-bold">Corporate & Private Events</a>
-                <a href="#our-story" class="text-brand-gray hover:text-white transition">Our Story</a>
-                <a href="#contact" class="text-brand-gray hover:text-white transition">Contact</a>
+        <div class="max-w-6xl mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-serif font-bold text-white text-center leading-none">
+                    The Gilded Spoon
+                    <span class="block text-xs font-sans font-light not-italic tracking-[0.3em]">CAKE SHOPPE</span>
+                </a>
+
+                <div class="hidden md:flex items-center space-x-8 font-medium">
+                    <a href="#products" class="text-brand-gray hover:text-white transition">Collections</a>
+                    <a href="flavors.html" class="text-brand-gray hover:text-white transition">Flavors</a>
+                    <a href="events.html" class="text-brand-gold hover:text-white transition font-bold">Corporate & Private Events</a>
+                    <a href="#our-story" class="text-brand-gray hover:text-white transition">Our Story</a>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="hamburger-button" class="text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden mt-4">
+                <a href="#products" class="block py-2 px-4 text-sm text-brand-light hover:bg-brand-card rounded">Collections</a>
+                <a href="flavors.html" class="block py-2 px-4 text-sm text-brand-light hover:bg-brand-card rounded">Flavors</a>
+                <a href="events.html" class="block py-2 px-4 text-sm text-brand-gold hover:bg-brand-card rounded font-bold">Corporate & Private Events</a>
+                <a href="#our-story" class="block py-2 px-4 text-sm text-brand-light hover:bg-brand-card rounded">Our Story</a>
             </div>
         </div>
     </nav>
@@ -172,6 +190,7 @@
     </footer>
 
     <script>
+        // --- Product Rendering ---
         const products = [
              {
                 id: 'pucks',
@@ -223,7 +242,7 @@
                 description: 'Your vision, beautifully baked. Perfect for celebrations, our custom cakes are designed to be the centerpiece your occasion deserves.',
                 image: 'https://imgur.com/xtvtDQs.jpeg',
                 price: 'Starting at $125.00',
-                isContactForm: true, // This product will link to the events page
+                isContactForm: true,
                 buttonText: 'Inquire About Custom Cakes',
                 directLink: 'events.html'
             }
@@ -262,6 +281,14 @@
         
         // Initial render of product cards when the page loads
         window.onload = renderProductCards;
+
+        // --- Mobile Menu Toggle ---
+        const hamburgerButton = document.getElementById('hamburger-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        hamburgerButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
     </script>
 </body>
 </html>
