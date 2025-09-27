@@ -36,15 +36,32 @@
 <body class="font-sans">
 
     <nav class="sticky top-0 bg-brand-dark/80 backdrop-blur-lg shadow-lg z-50">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-serif font-bold text-white text-center leading-none">
-                The Gilded Spoon
-                <span class="block text-xs font-sans font-light not-italic tracking-[0.3em]">CAKE SHOPPE</span>
-            </a>
-            <div class="hidden md:flex items-center space-x-8 font-medium">
-                <a href="index.html#products" class="text-brand-gray hover:text-white transition">Collections</a>
-                <a href="flavors.html" class="text-brand-gray hover:text-white transition">Flavors</a>
-                <a href="mailto:contact@thegildedspoonshoppe.com?subject=Corporate%2FPrivate%20Event%20Inquiry&body=Hello!%0D%0A%0D%0AI'm%20interested%20in%20booking%20a%20corporate%2Fprivate%20event%20and%20would%20like%20more%20information.%0D%0A%0D%0AEvent%20Type%20(e.g.,%20Team%20Building,%20Client%20Appreciation,%20Birthday):%0D%0AEstimated%20Number%20of%20Guests:%0D%0APotential%20Date(s):%0D%0A%0D%0AThank%20you," class="bg-brand-gold text-brand-dark font-bold py-2 px-4 rounded-lg">Inquire Now</a>
+        <div class="max-w-6xl mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-serif font-bold text-white text-center leading-none">
+                    The Gilded Spoon
+                    <span class="block text-xs font-sans font-light not-italic tracking-[0.3em]">CAKE SHOPPE</span>
+                </a>
+
+                <div class="hidden md:flex items-center space-x-8 font-medium">
+                    <a href="index.html#products" class="text-brand-gray hover:text-white transition">Collections</a>
+                    <a href="flavors.html" class="text-brand-gray hover:text-white transition">Flavors</a>
+                    <a href="mailto:contact@thegildedspoonshoppe.com?subject=Corporate%2FPrivate%20Event%20Inquiry&body=Hello!%0D%0A%0D%0AI'm%20interested%20in%20booking%20a%20corporate%2Fprivate%20event%20and%20would%20like%20more%20information.%0D%0A%0D%0AEvent%20Type%20(e.g.,%20Team%20Building,%20Client%20Appreciation,%20Birthday):%0D%0AEstimated%20Number%20of%20Guests:%0D%0APotential%20Date(s):%0D%0A%0D%0AThank%20you," class="bg-brand-gold text-brand-dark font-bold py-2 px-4 rounded-lg">Inquire Now</a>
+                </div>
+
+                <div class="md:hidden">
+                    <button id="hamburger-button" class="text-white focus:outline-none">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <div id="mobile-menu" class="hidden md:hidden mt-4">
+                <a href="index.html#products" class="block py-2 px-4 text-sm text-brand-light hover:bg-brand-card rounded">Collections</a>
+                <a href="flavors.html" class="block py-2 px-4 text-sm text-brand-light hover:bg-brand-card rounded">Flavors</a>
+                <a href="mailto:contact@thegildedspoonshoppe.com?subject=Corporate%2FPrivate%20Event%20Inquiry&body=Hello!%0D%0A%0D%0AI'm%20interested%20in%20booking%20a%20corporate%2Fprivate%20event%20and%20would%20like%20more%20information.%0D%0A%0D%0AEvent%20Type%20(e.g.,%20Team%20Building,%20Client%20Appreciation,%20Birthday):%0D%0AEstimated%20Number%20of%20Guests:%0D%0APotential%20Date(s):%0D%0A%0D%0AThank%20you," class="block py-2 px-4 text-sm text-brand-gold hover:bg-brand-card rounded font-bold">Inquire Now</a>
             </div>
         </div>
     </nav>
@@ -58,14 +75,15 @@
     </header>
 
     <section class="py-12 bg-brand-dark">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-        <h3 class="text-sm font-bold tracking-[0.3em] text-brand-gray uppercase">TRUSTED BY COMPANIES AND CLIENTS ACROSS DFW</h3>
-        <div class="flex flex-wrap justify-center items-center gap-x-8 md:gap-x-12 mt-6 opacity-80">
-            <p class="font-serif text-2xl text-brand-light my-2">Motorola Solutions</p>
-            <p class="font-serif text-2xl text-brand-light my-2">Embrace Texas</p>
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h3 class="text-sm font-bold tracking-[0.3em] text-brand-gray uppercase">TRUSTED BY COMPANIES AND CLIENTS ACROSS DFW</h3>
+            <div class="flex flex-wrap justify-center items-center gap-x-8 md:gap-x-12 mt-6 opacity-80">
+                <p class="font-serif text-2xl text-brand-light my-2">Motorola Solutions</p>
+                <p class="font-serif text-2xl text-brand-light my-2">Embrace Texas</p>
+                <p class="font-serif text-2xl text-brand-light my-2">[Client Name 3]</p>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <section class="py-20">
         <div class="max-w-6xl mx-auto px-4 sm:px-8 grid md:grid-cols-2 gap-12 items-center">
@@ -201,5 +219,14 @@
         </div>
     </footer>
 
+    <script>
+        // Mobile Menu Toggle
+        const hamburgerButton = document.getElementById('hamburger-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        hamburgerButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
