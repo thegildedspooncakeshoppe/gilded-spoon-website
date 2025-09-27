@@ -164,7 +164,6 @@
         const modalOptionsContainer = document.getElementById('modal-options-container');
 
         const flavors = [
-            // AUTUMN COLLECTION
             {
                 id: 'white-berry-almond',
                 name: 'White Berry Almond',
@@ -173,7 +172,7 @@
                 description: 'A delicate almond cake infused with notes of vanilla bean and nutmeg, perfectly complemented by a sweet and unique pineberry buttercream.',
                 contains: 'Wheat | Almonds | Eggs | Dairy',
                 orderOptions: ['slice', 'puck-single', 'puck-3pack', 'puck-6pack'],
-                squareLinks: { 'slice': '#', 'puck-single': '#', 'puck-3pack': '#', 'puck-6pack': '#' }
+                squareLinks: { 'slice': 'https://square.link/u/RoCg5gJE', 'puck-single': 'https://square.link/u/rHgetHXR', 'puck-3pack': 'https://square.link/u/KMi13npr', 'puck-6pack': 'https://square.link/u/k3QTMvuF' }
             },
             {
                 id: 'chocolate-ganache-caramel',
@@ -183,7 +182,7 @@
                 description: 'A rich cocoa cake layered with decadent bittersweet chocolate ganache and finished with a ribbon of house-made sea salt caramel.',
                 contains: 'Wheat | Eggs | Dairy',
                 orderOptions: ['slice', 'puck-single', 'puck-3pack', 'puck-6pack'],
-                squareLinks: { 'slice': '#', 'puck-single': '#', 'puck-3pack': '#', 'puck-6pack': '#' }
+                squareLinks: { 'slice': 'https://square.link/u/RoCg5gJE', 'puck-single': 'https://square.link/u/rHgetHXR', 'puck-3pack': 'https://square.link/u/KMi13npr', 'puck-6pack': 'https://square.link/u/k3QTMvuF' }
             },
             {
                 id: 'pumpkin-chai-cake',
@@ -193,15 +192,34 @@
                 description: 'A wonderfully moist pumpkin cake warmed with aromatic chai spices and frosted with a smooth, delightful maple cream.',
                 contains: 'Wheat | Eggs | Dairy',
                 orderOptions: ['slice', 'puck-single', 'puck-3pack', 'puck-6pack'],
-                squareLinks: { 'slice': '#', 'puck-single': '#', 'puck-3pack': '#', 'puck-6pack': '#' }
+                squareLinks: { 'slice': 'https://square.link/u/RoCg5gJE', 'puck-single': 'https://square.link/u/rHgetHXR', 'puck-3pack': 'https://square.link/u/KMi13npr', 'puck-6pack': 'https://square.link/u/k3QTMvuF' }
             },
             {
                 id: 'apple-cider-caramel',
                 name: 'Apple Cider With Caramel Crunch',
                 collection: 'Autumn Collection',
-                availableWeekly: false,
+                availableWeekly: true,
                 description: 'A tender apple cake featuring a bright cider caramel, spiced with cinnamon and topped with a satisfying crumble for textural delight.',
                 contains: 'Wheat | Eggs | Dairy',
+                orderOptions: ['slice', 'puck-single', 'puck-3pack', 'puck-6pack'],
+                squareLinks: { 'slice': 'https://square.link/u/RoCg5gJE', 'puck-single': 'https://square.link/u/rHgetHXR', 'puck-3pack': 'https://square.link/u/KMi13npr', 'puck-6pack': 'https://square.link/u/k3QTMvuF' }
+            },
+            {
+                id: 'pumpkin-spice-mocha',
+                name: 'Pumpkin Spice Mocha Latte',
+                collection: 'Autumn Collection',
+                availableWeekly: false,
+                description: 'An inventive cake combining pumpkin spice with rich mocha and coffee notes, finished with a surprising hint of amchoor for a touch of tartness.',
+                contains: 'Wheat | Eggs | Dairy',
+                orderOptions: []
+            },
+            {
+                id: 'brown-buttered-apple',
+                name: 'Brown Buttered Apple Coconut',
+                collection: 'Autumn Collection',
+                availableWeekly: false,
+                description: 'A nutty brown butter and apple cake made uniquely fragrant and flavorful with the addition of coconut and tropical pandan.',
+                contains: 'Wheat | Eggs | Dairy | Coconut',
                 orderOptions: []
             },
             {
@@ -212,18 +230,196 @@
                 description: 'A comforting buttered pecan cake elevated with a unique blend of warm spices and a hint of aromatic long pepper for a surprising finish.',
                 contains: 'Wheat | Pecans | Eggs | Dairy',
                 orderOptions: ['slice', 'puck-single', 'puck-3pack', 'puck-6pack'],
-                squareLinks: { 'slice': '#', 'puck-single': '#', 'puck-3pack': '#', 'puck-6pack': '#' }
+                squareLinks: { 'slice': 'https://square.link/u/RoCg5gJE', 'puck-single': 'https://square.link/u/rHgetHXR', 'puck-3pack': 'https://square.link/u/KMi13npr', 'puck-6pack': 'https://square.link/u/k3QTMvuF' }
             },
-            // MITHAS & MAHAL COLLECTION
             {
-                id: 'kaju-katli',
-                name: 'Kaju Katli Almond Cake',
-                collection: 'Mithas & Mahal Collection',
-                availableWeekly: true,
-                description: 'Inspired by the classic sweet, this almond cake is filled with a rich and creamy cashew fudge (Kaju Katli).',
-                contains: 'Wheat | Egg | Milk | Soy | Almonds | Cashews',
-                orderOptions: ['mithas-slice', 'mithas-flight'],
-                squareLinks: { 'mithas-slice': '#', 'mithas-flight': '#' }
+                id: 'blood-orange-cardamom',
+                name: 'Blood Orange & Cardamom',
+                collection: 'Autumn Collection',
+                availableWeekly: false,
+                description: 'A vibrant blood orange cake beautifully scented with aromatic cardamom, enriched with a luxurious cream and butter frosting.',
+                contains: 'Wheat | Eggs | Dairy',
+                orderOptions: []
+            },
+            {
+                id: 'vanilla-earl-grey',
+                name: 'Vanilla Earl Grey & Honeycomb',
+                collection: 'Winter Collection',
+                availableWeekly: false,
+                description: 'Elegant vanilla cake infused with the citrusy notes of bergamot from Earl Grey tea, topped with crunchy, house-made honeycomb.',
+                contains: 'Wheat | Eggs | Dairy',
+                orderOptions: []
+            },
+            {
+                id: 'strawberry-rose',
+                name: 'Strawberry Rose Pistachio',
+                collection: 'Winter Collection',
+                availableWeekly: false,
+                description: 'A romantic blend of sweet strawberry and fragrant rose, with nutty pistachio pieces and a hint of luxurious saffron.',
+                contains: 'Wheat | Pistachios | Eggs | Dairy',
+                orderOptions: []
+            },
+            {
+                id: 'cranberry-orange',
+                name: 'Cranberry Orange & White Chocolate',
+                collection: 'Winter Collection',
+                availableWeekly: false,
+                description: 'A festive cake pairing tart cranberry and bright orange zest with the sweet creaminess of white chocolate.',
+                contains: 'Wheat | Eggs | Dairy | Soy',
+                orderOptions: []
+            },
+            {
+                id: 'blackberry-merlot',
+                name: 'Blackberry Merlot & Dark Chocolate',
+                collection: 'Winter Collection',
+                availableWeekly: false,
+                description: 'A sophisticated cake featuring juicy blackberry and rich Merlot wine reduction, paired perfectly with deep dark chocolate.',
+                contains: 'Wheat | Eggs | Dairy | Soy',
+                orderOptions: []
+            },
+            {
+                id: 'espresso-chocolate-almond',
+                name: 'Espresso Chocolate Almond',
+                collection: 'Winter Collection',
+                availableWeekly: false,
+                description: 'A bold cake with rich espresso and chocolate notes, nutty almond undertones, and an exotic hint of black cardamom.',
+                contains: 'Wheat | Almonds | Eggs | Dairy',
+                orderOptions: []
+            },
+            {
+                id: 'black-forest-cherry',
+                name: 'Black Forest Cherry & Kirsch',
+                collection: 'Winter Collection',
+                availableWeekly: false,
+                description: 'A classic reimagined, with layers of chocolate cake, sweet cherries, and a splash of Kirsch brandy, all enveloped in fresh cream.',
+                contains: 'Wheat | Eggs | Dairy',
+                orderOptions: []
+            },
+            {
+                id: 'pear-almond',
+                name: 'Pear & Almond Frangipane',
+                collection: 'Winter Collection',
+                availableWeekly: false,
+                description: 'A delicate cake featuring sweet poached pear and rich, nutty almond frangipane baked into a tender crumb and finished with cream.',
+                contains: 'Wheat | Almonds | Eggs | Dairy',
+                orderOptions: []
+            },
+            {
+                id: 'salted-caramel-almond',
+                name: 'Salted Caramel Almond',
+                collection: 'Winter Collection',
+                availableWeekly: false,
+                description: 'A delicious combination of salted caramel and almond, with the unique, cherry-like fragrance of Mahleb spice for an intriguing twist.',
+                contains: 'Wheat | Almonds | Eggs | Dairy',
+                orderOptions: []
+            },
+            {
+                id: 'lemon-raspberry-hibiscus',
+                name: 'Lemon Raspberry & Hibiscus',
+                collection: 'Spring Collection',
+                availableWeekly: false,
+                description: 'A bright lemon and raspberry cake paired with the sweet creaminess of white chocolate and a floral hint of hibiscus.',
+                contains: 'Wheat | Eggs | Dairy | Soy',
+                orderOptions: []
+            },
+            {
+                id: 'lemon-raspberry-limes',
+                name: 'Lemon Raspberry & Finger Limes',
+                collection: 'Spring Collection',
+                availableWeekly: false,
+                description: 'A refreshing lemon and raspberry cake that offers bursts of citrus caviar from Australian finger limes for a unique, tangy pop.',
+                contains: 'Wheat | Eggs | Dairy',
+                orderOptions: []
+            },
+            {
+                id: 'lavender-honey',
+                name: 'Lavender Honey & Lemon Curd',
+                collection: 'Spring Collection',
+                availableWeekly: false,
+                description: 'A fragrant lavender and honey-infused cake, filled with tangy lemon curd and frosted with a smooth buttercream.',
+                contains: 'Wheat | Eggs | Dairy',
+                orderOptions: []
+            },
+            {
+                id: 'lemon-olive-oil',
+                name: 'Lemon Olive Oil & Rosemary',
+                collection: 'Spring Collection',
+                availableWeekly: false,
+                description: 'A sophisticated and moist lemon olive oil cake with a subtle, herbaceous note of rosemary for a truly unique flavor profile.',
+                contains: 'Wheat | Eggs | Dairy',
+                orderOptions: []
+            },
+            {
+                id: 'passion-fruit-carrot',
+                name: 'Passion Fruit Carrot Cake',
+                collection: 'Spring Collection',
+                availableWeekly: false,
+                description: 'A tropical twist on a classic, featuring passion fruit in a moist carrot cake spiced with aromatic Grains of Paradise.',
+                contains: 'Wheat | Eggs | Dairy',
+                orderOptions: []
+            },
+            {
+                id: 'coconut-passionfruit',
+                name: 'Coconut Passionfruit & Lime',
+                collection: 'Spring Collection',
+                availableWeekly: false,
+                description: 'A taste of the tropics with creamy coconut, tangy passionfruit, and a bright zest of lime in a delicious cream cake.',
+                contains: 'Wheat | Eggs | Dairy | Coconut',
+                orderOptions: []
+            },
+            {
+                id: 'peach-basil',
+                name: 'Peach Basil & Mascarpone',
+                collection: 'Summer Collection',
+                availableWeekly: false,
+                description: 'A light and summery cake with sweet peaches, a surprising hint of fresh basil, and a rich, creamy mascarpone frosting.',
+                contains: 'Wheat | Eggs | Dairy',
+                orderOptions: []
+            },
+            {
+                id: 'strawberries-cream',
+                name: 'Strawberries & Cream',
+                collection: 'Summer Collection',
+                availableWeekly: false,
+                description: 'A quintessential summer treat. Fresh strawberries and vanilla cream are elevated with a delicate hint of fragrant rosewater.',
+                contains: 'Wheat | Eggs | Dairy',
+                orderOptions: []
+            },
+            {
+                id: 'matcha-yuzu',
+                name: 'Matcha Yuzu & Vanilla Bean',
+                collection: 'Summer Collection',
+                availableWeekly: false,
+                description: 'Earthy matcha green tea cake is perfectly balanced with the bright, citrusy notes of yuzu and the sweetness of vanilla bean.',
+                contains: 'Wheat | Eggs | Dairy',
+                orderOptions: []
+            },
+            {
+                id: 'champagne-elderflower',
+                name: 'Champagne & Elderflower',
+                collection: 'Summer Collection',
+                availableWeekly: false,
+                description: 'A celebratory cake featuring bright notes of champagne, elderflower, lemon, and pear in a tender almond and brioche-style crumb.',
+                contains: 'Wheat | Eggs | Dairy | Almonds',
+                orderOptions: []
+            },
+            {
+                id: 'hazelnut-mocha',
+                name: 'Hazelnut Mocha Praline',
+                collection: 'Summer Collection',
+                availableWeekly: false,
+                description: 'A decadent combination of nutty hazelnut, rich chocolate mocha, and the sweet crunch of handmade praline.',
+                contains: 'Wheat | Hazelnuts | Eggs | Dairy',
+                orderOptions: []
+            },
+            {
+                id: 'carrot-cake-brown-butter',
+                name: 'Carrot Cake with Brown Butter',
+                collection: 'Summer Collection',
+                availableWeekly: false,
+                description: 'Our classic carrot cake with warm spices and walnuts, elevated with a nutty and rich brown butter cream cheese frosting.',
+                contains: 'Wheat | Eggs | Dairy | Walnuts',
+                orderOptions: []
             },
             {
                 id: 'gulab-jamun',
@@ -232,7 +428,8 @@
                 availableWeekly: false,
                 description: 'An inventive cake inspired by the classic dessert, featuring notes of cardamom, rosewater, saffron, and almond.',
                 contains: 'Wheat | Milk | Soy | Almonds (Eggless)',
-                orderOptions: []
+                orderOptions: ['mithas-slice', 'mithas-flight'],
+                squareLinks: { 'mithas-slice': 'https://square.link/u/37R9y6mq', 'mithas-flight': 'https://square.link/u/2qgl2nif' }
             },
             {
                 id: 'ras-malai',
@@ -241,9 +438,59 @@
                 availableWeekly: false,
                 description: 'A light and airy cardamom cake soaked in a saffron-infused cream, topped with chopped pistachios.',
                 contains: 'Wheat | Milk | Soy | Pistachios (Eggless)',
-                orderOptions: []
+                orderOptions: ['mithas-slice', 'mithas-flight'],
+                squareLinks: { 'mithas-slice': 'https://square.link/u/37R9y6mq', 'mithas-flight': 'https://square.link/u/2qgl2nif' }
             },
-            // Other Collections can be added here following the same structure
+            {
+                id: 'srikhand-pistachio',
+                name: 'Srikhand Pistachio Cake',
+                collection: 'Mithas & Mahal Collection',
+                availableWeekly: false,
+                description: 'A tribute to the creamy dessert, this cake blends pistachio, saffron, and cardamom with a delightful mousse texture.',
+                contains: 'Wheat | Egg | Milk | Soy | Pistachios',
+                orderOptions: ['mithas-slice', 'mithas-flight'],
+                squareLinks: { 'mithas-slice': 'https://square.link/u/37R9y6mq', 'mithas-flight': 'https://square.link/u/2qgl2nif' }
+            },
+            {
+                id: 'rasgulla-rosewater',
+                name: 'Rasgulla Rosewater Cake',
+                collection: 'Mithas & Mahal Collection',
+                availableWeekly: false,
+                description: 'A light and airy cake delicately flavored with rosewater and whipped cream, featuring soft Rasgulla pieces throughout.',
+                contains: 'Wheat | Egg | Milk | Soy',
+                orderOptions: ['mithas-slice', 'mithas-flight'],
+                squareLinks: { 'mithas-slice': 'https://square.link/u/37R9y6mq', 'mithas-flight': 'https://square.link/u/2qgl2nif' }
+            },
+            {
+                id: 'jalebi-crunch',
+                name: 'Jalebi Crunch Caramel Cake',
+                collection: 'Mithas & Mahal Collection',
+                availableWeekly: false,
+                description: 'A textural delight pairing rich chocolate and salted caramel with the unique, sweet crunch of Jalebi pieces.',
+                contains: 'Wheat | Egg | Milk | Soy',
+                orderOptions: ['mithas-slice', 'mithas-flight'],
+                squareLinks: { 'mithas-slice': 'https://square.link/u/37R9y6mq', 'mithas-flight': 'https://square.link/u/2qgl2nif' }
+            },
+            {
+                id: 'kaju-katli',
+                name: 'Kaju Katli Almond Cake',
+                collection: 'Mithas & Mahal Collection',
+                availableWeekly: true,
+                description: 'Inspired by the classic sweet, this almond cake is filled with a rich and creamy cashew fudge (Kaju Katli).',
+                contains: 'Wheat | Egg | Milk | Soy | Almonds | Cashews',
+                orderOptions: ['mithas-slice', 'mithas-flight'],
+                squareLinks: { 'mithas-slice': 'https://square.link/u/37R9y6mq', 'mithas-flight': 'https://square.link/u/2qgl2nif' }
+            },
+            {
+                id: 'gajar-halwa',
+                name: 'Gajar Halwa Pistachio Cake',
+                collection: 'Mithas & Mahal Collection',
+                availableWeekly: false,
+                description: 'A fusion of fall and tradition, this cake combines spiced gajar halwa with the rich, nutty flavor of pistachios.',
+                contains: 'Wheat | Egg | Milk | Soy | Pistachios',
+                orderOptions: ['mithas-slice', 'mithas-flight'],
+                squareLinks: { 'mithas-slice': 'https://square.link/u/37R9y6mq', 'mithas-flight': 'https://square.link/u/2qgl2nif' }
+            },
         ];
 
         function renderFlavors() {
