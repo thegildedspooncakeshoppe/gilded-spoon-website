@@ -32,8 +32,8 @@
         body { background-color: #1C161E; color: #F4F1ED; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
         .tab-button { transition: all 0.3s ease; }
         .tab-button.active { color: #D4AF37; border-color: #D4AF37; }
-        .tab-content { display: none; }
-        .tab-content.active { display: grid; }
+        .collection-section { display: none; }
+        .collection-section.active { display: block; }
         .modal { display: none; position: fixed; z-index: 1000; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 90%; max-width: 480px; }
         .overlay { display: none; position: fixed; z-index: 999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); }
     </style>
@@ -99,21 +99,21 @@
                     <div class="bg-brand-card p-8 rounded-2xl text-center flex flex-col">
                         <h3 class="font-serif text-3xl text-brand-gold mb-4">The Signatures</h3>
                         <p class="text-brand-gray text-sm mb-4">Our most-loved, permanent collection classics.</p>
-                        <div id="signature-list" class="space-y-3 text-brand-light font-serif text-lg flex-grow">
+                        <div id="signature-list" class="space-y-3 text-brand-light font-serif flex-grow">
                             </div>
-                        <button data-scroll-to-tab="signature-collection" class="mt-6 inline-block border-2 border-brand-gold text-brand-gold font-bold py-2 px-6 rounded-lg hover:bg-brand-gold hover:text-brand-dark transition">View All Signatures</button>
+                         <button data-scroll-to-tab="signature-collection" class="mt-6 inline-block border-2 border-brand-gold text-brand-gold font-bold py-2 px-6 rounded-lg hover:bg-brand-gold hover:text-brand-dark transition">View All Signatures</button>
                     </div>
                     <div class="bg-brand-card p-8 rounded-2xl text-center flex flex-col border-2 border-brand-gold/50">
                         <h3 class="font-serif text-3xl text-white mb-4">Available Now</h3>
                         <p class="text-brand-gray text-sm mb-4">These select flavors are available for immediate online order.</p>
-                        <div id="seasonal-list" class="space-y-3 text-brand-light font-serif text-lg flex-grow">
+                        <div id="seasonal-list" class="space-y-3 text-brand-light font-serif flex-grow">
                             </div>
                         <a href="[YOUR SQUARE ORDERING LINK HERE]" target="_blank" class="mt-6 inline-block bg-brand-gold text-brand-dark font-bold py-2 px-6 rounded-lg hover:bg-brand-gold-hover transition">Order Online</a>
                     </div>
                      <div class="bg-brand-card p-8 rounded-2xl text-center flex flex-col">
                         <h3 class="font-serif text-3xl text-brand-gold mb-4">Mithas & Mahal</h3>
-                         <p class="text-brand-gray text-sm mb-4">A tribute to my mother’s kitchen, this collection reimagines traditional Indian sweets.</p>
-                        <div id="mithas-mahal-list" class="space-y-3 text-brand-light font-serif text-lg flex-grow">
+                         <p class="text-brand-gray text-sm mb-4">A tribute to my mother’s kitchen, reimagining traditional Indian sweets.</p>
+                        <div id="mithas-mahal-list" class="space-y-3 text-brand-light font-serif flex-grow">
                             </div>
                          <button data-scroll-to-tab="mithas-&-mahal-collection" class="mt-6 inline-block border-2 border-brand-gold text-brand-gold font-bold py-2 px-6 rounded-lg hover:bg-brand-gold hover:text-brand-dark transition">View the Collection</button>
                     </div>
@@ -131,7 +131,7 @@
                 <div id="tab-buttons" class="flex flex-wrap justify-center gap-x-6 gap-y-3 border-b border-brand-gray/20 mb-12">
                     </div>
 
-                <div id="tab-content-panels">
+                <div id="collections-container" class="space-y-12">
                     </div>
             </section>
 
@@ -245,29 +245,21 @@
             const seasonalList = document.getElementById('seasonal-list');
             const mithasList = document.getElementById('mithas-mahal-list');
             const tabButtonsContainer = document.getElementById('tab-buttons');
-            const tabContentPanelsContainer = document.getElementById('tab-content-panels');
+            const collectionsContainer = document.getElementById('collections-container');
 
             // --- Populate Featured Section ---
             const signatureFlavors = flavors.filter(f => f.isSignature);
             const seasonalFlavorsAvailable = flavors.filter(f => f.availableWeekly);
             const mithasSpotlight = flavors.filter(f => f.collection === 'Mithas & Mahal Collection' && f.availableWeekly);
 
-            const createFeaturedButton = (flavor) => {
-                return `<button onclick="showFlavorModal('${flavor.id}')" class="font-serif text-sm text-brand-light border border-brand-gray/20 rounded-lg py-2 px-3 w-full text-center hover:bg-brand-gray/10 hover:border-brand-gray/40 transition">${flavor.name}</button>`;
-            };
+            const createFeaturedButton = (flavor) => `<button onclick="showFlavorModal('${flavor.id}')" class="font-serif text-sm text-brand-light border border-brand-gray/20 rounded-lg py-2 px-3 w-full text-center hover:bg-brand-gray/10 hover:border-brand-gray/40 transition">${flavor.name}</button>`;
 
-            if(signatureList) {
-                signatureList.innerHTML = signatureFlavors.map(createFeaturedButton).join('');
-            }
-            if(seasonalList) {
-                seasonalList.innerHTML = seasonalFlavorsAvailable.map(createFeaturedButton).join('');
-            }
-            if(mithasList) {
-                mithasList.innerHTML = mithasSpotlight.map(createFeaturedButton).join('');
-            }
+            if(signatureList) signatureList.innerHTML = signatureFlavors.map(createFeaturedButton).join('');
+            if(seasonalList) seasonalList.innerHTML = seasonalFlavorsAvailable.map(createFeaturedButton).join('');
+            if(mithasList) mithasList.innerHTML = mithasSpotlight.map(createFeaturedButton).join('');
             
             // --- Populate Full Library with Tabs ---
-            const collectionOrder = ['Signature Collection', 'Autumn Collection', 'Winter Collection', 'Spring Collection', 'Summer Collection', 'Mithas & Mahal Collection'];
+            const collectionOrder = ['View All', 'Signature Collection', 'Autumn Collection', 'Winter Collection', 'Spring Collection', 'Summer Collection', 'Mithas & Mahal Collection'];
 
             collectionOrder.forEach((collectionName) => {
                 const collectionId = collectionName.replace(/[\s&]+/g, '-').toLowerCase();
@@ -276,52 +268,64 @@
                 button.textContent = collectionName.replace(' Collection', '');
                 button.className = 'tab-button font-serif text-lg text-brand-gray border-b-2 border-transparent pb-2 hover:text-brand-gold';
                 button.dataset.tabTarget = collectionId;
-                if (collectionName === 'Autumn Collection') {
+                if (collectionName === 'View All') {
                     button.classList.add('active');
                 }
                 tabButtonsContainer.appendChild(button);
-
-                const panel = document.createElement('div');
-                panel.id = collectionId;
-                panel.className = 'tab-content grid md:grid-cols-2 gap-x-8 gap-y-6';
-                if (collectionName === 'Autumn Collection') {
-                    panel.classList.add('active');
-                }
-
-                const collectionFlavors = flavors.filter(f => f.collection === collectionName);
-                panel.innerHTML = collectionFlavors.map(f => {
-                    const orderButton = f.availableWeekly ? `<a href="[YOUR SQUARE ORDERING LINK HERE]" target="_blank" class="text-xs bg-brand-gold text-brand-dark font-semibold py-1 px-3 rounded-full hover:bg-brand-gold-hover transition">Order Now</a>` : '';
-                    return `
-                        <div class="border-b border-brand-gray/10 pb-3 flex justify-between items-start gap-4">
-                            <div>
-                                <h4 class="font-serif text-xl text-white">${f.name}</h4>
-                                <p class="text-brand-gray text-sm">${f.description}</p>
-                            </div>
-                            <div class="flex-shrink-0 mt-1">
-                                ${orderButton}
-                            </div>
-                        </div>
-                    `;
-                }).join('');
-                tabContentPanelsContainer.appendChild(panel);
             });
 
+            collectionOrder.slice(1).forEach(collectionName => {
+                const collectionId = collectionName.replace(/[\s&]+/g, '-').toLowerCase();
+                const collectionFlavors = flavors.filter(f => f.collection === collectionName);
+
+                const section = document.createElement('section');
+                section.id = collectionId;
+                section.className = 'collection-section active'; // Active by default for View All
+                section.innerHTML = `
+                    <div class="text-center mb-12">
+                        <h3 class="font-serif text-3xl font-semibold text-white">${collectionName}</h3>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-x-8 gap-y-6">
+                        ${collectionFlavors.map(f => {
+                            const orderButton = f.availableWeekly ? `<a href="[YOUR SQUARE ORDERING LINK HERE]" target="_blank" class="text-xs bg-brand-gold text-brand-dark font-semibold py-1 px-3 rounded-full hover:bg-brand-gold-hover transition">Order Now</a>` : '';
+                            return `
+                                <div class="border-b border-brand-gray/10 pb-3 flex justify-between items-start gap-4">
+                                    <div>
+                                        <h4 class="font-serif text-xl text-white">${f.name}</h4>
+                                        <p class="text-brand-gray text-sm">${f.description}</p>
+                                    </div>
+                                    <div class="flex-shrink-0 mt-1">
+                                        ${orderButton}
+                                    </div>
+                                </div>`;
+                        }).join('')}
+                    </div>
+                `;
+                collectionsContainer.appendChild(section);
+            });
+
+            // Tab switching logic
             const tabs = document.querySelectorAll('.tab-button');
-            const panels = document.querySelectorAll('.tab-content');
+            const sections = document.querySelectorAll('.collection-section');
             tabs.forEach(tab => {
                 tab.addEventListener('click', () => {
                     tabs.forEach(t => t.classList.remove('active'));
-                    panels.forEach(p => p.classList.remove('active'));
-
                     tab.classList.add('active');
-                    const targetPanel = document.getElementById(tab.dataset.tabTarget);
-                    if (targetPanel) {
-                        targetPanel.classList.add('active');
+
+                    const target = tab.dataset.tabTarget;
+                    if (target === 'view-all') {
+                        sections.forEach(s => s.classList.add('active'));
+                    } else {
+                        sections.forEach(s => s.classList.remove('active'));
+                        const targetPanel = document.getElementById(target);
+                        if (targetPanel) {
+                            targetPanel.classList.add('active');
+                        }
                     }
                 });
             });
             
-            // --- Add scroll-to-tab functionality for featured links ---
+            // Scroll-to-tab functionality
             const scrollLinks = document.querySelectorAll('[data-scroll-to-tab]');
             scrollLinks.forEach(link => {
                 link.addEventListener('click', (e) => {
@@ -329,21 +333,19 @@
                     const tabId = link.dataset.scrollToTab;
                     const correspondingTab = document.querySelector(`.tab-button[data-tab-target="${tabId}"]`);
                     if(correspondingTab) {
-                        correspondingTab.click(); // Simulate a click to switch tabs
-                        const librarySection = document.getElementById('full-library');
-                        librarySection.scrollIntoView({ behavior: 'smooth' });
+                        correspondingTab.click();
+                        document.getElementById('full-library').scrollIntoView({ behavior: 'smooth' });
                     }
                 });
             });
         }
 
-        // --- Mobile Menu ---
+        // --- Event Listeners ---
+        document.addEventListener('DOMContentLoaded', renderPageContent);
+        overlay.addEventListener('click', closeModal);
         const hamburgerButton = document.getElementById('hamburger-button');
         const mobileMenu = document.getElementById('mobile-menu');
         hamburgerButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
-
-        // Run all render functions when the page loads
-        document.addEventListener('DOMContentLoaded', renderPageContent);
 </script>
 </body>
 </html>
