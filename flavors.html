@@ -83,7 +83,7 @@
     <header class="text-center py-16 bg-brand-card">
         <div class="max-w-4xl mx-auto px-4">
             <h1 class="font-serif text-5xl font-bold text-white leading-tight">Our Flavor Library</h1>
-            <p class="text-lg text-brand-light font-light mt-3 max-w-2xl mx-auto">An artisanal collection of timeless classics, seasonal delights, and culturally rich creations.</p>
+            <p class="text-lg text-brand-light font-light mt-3 max-w-2xl mx-auto">Welcome to our gallery of taste. Each flavor is a story, meticulously developed to evoke a memory, a season, or a sense of wonder. Explore our creations below.</p>
         </div>
     </header>
 
@@ -112,7 +112,7 @@
                     </div>
                      <div class="bg-brand-card p-8 rounded-2xl text-center flex flex-col">
                         <h3 class="font-serif text-3xl text-brand-gold mb-4">Mithas & Mahal</h3>
-                         <p class="text-brand-gray text-sm mb-4">A tribute to my mother’s kitchen, reimagining traditional Indian sweets.</p>
+                         <p class="text-brand-gray text-sm mb-4">A tribute to my mother’s kitchen, where fragrant spices and cherished memories are baked into every layer.</p>
                         <div id="mithas-mahal-list" class="space-y-3 text-brand-light font-serif flex-grow">
                             </div>
                          <button data-scroll-to-tab="mithas-&-mahal-collection" class="mt-6 inline-block border-2 border-brand-gold text-brand-gold font-bold py-2 px-6 rounded-lg hover:bg-brand-gold hover:text-brand-dark transition">View the Collection</button>
@@ -125,7 +125,7 @@
             <section id="full-library">
                 <div class="text-center mb-12">
                     <h2 class="font-serif text-4xl font-semibold text-white">The Full Flavor Library</h2>
-                    <p class="text-brand-gray mt-2">All flavors below are available for custom cake orders. <a href="events.html" class="text-brand-gold hover:underline">Inquire here.</a></p>
+                    <p class="text-brand-gray mt-2">All flavors below are available for custom cake orders, featuring unique spices and exotic fruits we've sourced from around the world. <a href="events.html" class="text-brand-gold hover:underline">Inquire here.</a></p>
                 </div>
                 
                 <div id="tab-buttons" class="flex flex-wrap justify-center gap-x-6 gap-y-3 border-b border-brand-gray/20 mb-12">
@@ -171,17 +171,17 @@
         </footer>
     
 <script>
-    // --- DATA (VERIFIED COMPLETE: 35 FLAVORS) ---
+        // --- DATA ---
         const flavors = [
             // Signature Collection
             { id: 'white-berry-almond', name: 'White Berry Almond', collection: 'Signature Collection', isSignature: true, availableWeekly: true, description: 'A delicate almond cake with vanilla and nutmeg, complemented by a unique pineberry buttercream.', contains: 'Wheat | Almonds | Eggs | Dairy' },
             { id: 'chocolate-ganache-caramel', name: 'Chocolate Ganache & Salted Caramel', collection: 'Signature Collection', isSignature: true, availableWeekly: true, description: 'Rich cocoa cake layered with decadent chocolate ganache and house-made sea salt caramel.', contains: 'Wheat | Eggs | Dairy' },
             { id: 'strawberry-rose', name: 'Strawberry Rose Pistachio', collection: 'Signature Collection', isSignature: true, availableWeekly: false, description: 'A romantic blend of sweet strawberry and fragrant rose, with nutty pistachio pieces and a hint of luxurious saffron.', contains: 'Wheat | Pistachios | Eggs | Dairy' },
             { id: 'vanilla-earl-grey', name: 'Vanilla Earl Grey & Honeycomb', collection: 'Signature Collection', availableWeekly: false, description: 'Elegant vanilla cake infused with bergamot from Earl Grey tea, topped with crunchy, house-made honeycomb.', contains: 'Wheat | Eggs | Dairy' },
-            { id: 'black-forest-cherry', name: 'Black Forest Cherry & Kirsch', collection: 'Signature Collection', availableWeekly: false, description: 'A classic reimagined, with layers of chocolate cake, sweet cherries, and a splash of Kirsch brandy.', contains: 'Wheat | Eggs | Dairy' },
+            { id: 'black-forest-cherry', name: 'Black Forest Cherry & Kirsch', collection: 'Winter Collection', availableWeekly: false, description: 'A classic reimagined, with layers of chocolate cake, sweet cherries, and a splash of Kirsch brandy.', contains: 'Wheat | Eggs | Dairy' },
             { id: 'carrot-cake-brown-butter', name: 'Carrot Cake with Brown Butter', collection: 'Signature Collection', availableWeekly: false, description: 'Our classic carrot cake with warm spices and walnuts, elevated with a nutty brown butter cream cheese frosting.', contains: 'Wheat | Eggs | Dairy | Walnuts' },
-            { id: 'hazelnut-mocha', name: 'Hazelnut Mocha Praline', collection: 'Signature Collection', availableWeekly: false, description: 'A decadent combination of nutty hazelnut, rich chocolate mocha, and the sweet crunch of handmade praline.', contains: 'Wheat | Hazelnuts | Eggs | Dairy' },
-            { id: 'salted-caramel-almond', name: 'Salted Caramel Almond', collection: 'Signature Collection', availableWeekly: false, description: 'A delicious combination of salted caramel and almond, with the unique, cherry-like fragrance of Mahleb spice.', contains: 'Wheat | Almonds | Eggs | Dairy' },
+            { id: 'hazelnut-mocha', name: 'Hazelnut Mocha Praline', collection: 'Winter Collection', availableWeekly: false, description: 'A decadent combination of nutty hazelnut, rich chocolate mocha, and the sweet crunch of handmade praline.', contains: 'Wheat | Hazelnuts | Eggs | Dairy' },
+            { id: 'salted-caramel-almond', name: 'Salted Caramel Almond', collection: 'Winter Collection', availableWeekly: false, description: 'A delicious combination of salted caramel and almond, with the unique, cherry-like fragrance of Mahleb spice.', contains: 'Wheat | Almonds | Eggs | Dairy' },
 
             // Autumn Collection
             { id: 'pumpkin-chai-cake', name: 'Pumpkin Chai Cake', collection: 'Autumn Collection', availableWeekly: true, description: 'A wonderfully moist pumpkin cake warmed with aromatic chai spices and frosted with a smooth, delightful maple cream.', contains: 'Wheat | Eggs | Dairy' },
@@ -220,7 +220,8 @@
             { id: 'kaju-katli', name: 'Kaju Katli Almond Cake', collection: 'Mithas & Mahal Collection', availableWeekly: true, description: 'Inspired by the classic sweet, this almond cake is filled with a rich and creamy cashew fudge (Kaju Katli).', contains: 'Wheat | Egg | Milk | Soy | Almonds | Cashews' },
             { id: 'gajar-halwa', name: 'Gajar Halwa Pistachio Cake', collection: 'Mithas & Mahal Collection', availableWeekly: false, description: 'A fusion of fall and tradition, this cake combines spiced gajar halwa with the rich, nutty flavor of pistachios.', contains: 'Wheat | Egg | Milk | Soy | Pistachios' }
         ];
-    const overlay = document.getElementById('overlay');
+
+        const overlay = document.getElementById('overlay');
         const modal = document.getElementById('flavor-detail-modal');
 
         function showFlavorModal(flavorId) {
@@ -284,7 +285,7 @@
                                             <div class="flex-shrink-0 mt-1">${orderButton}</div>
                                         </div>
                                         <p class="text-brand-gray text-sm mt-1">${f.description}</p>
-                                        <p class="text-xs text-brand-gray mt-2">CONTAINS: ${f.contains}</p>
+                                        <p class="text-xs text-brand-gray/70 mt-2">CONTAINS: ${f.contains}</p>
                                     </div>`;
                             }).join('')}
                         </div>
