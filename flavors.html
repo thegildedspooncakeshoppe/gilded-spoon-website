@@ -260,49 +260,36 @@
             
             // --- Populate Full Library with Tabs ---
             const collectionOrder = ['View All', 'Signature Collection', 'Autumn Collection', 'Winter Collection', 'Spring Collection', 'Summer Collection', 'Mithas & Mahal Collection'];
+            
+            tabButtonsContainer.innerHTML = collectionOrder.map(name => {
+                const id = name.replace(/[\s&]+/g, '-').toLowerCase();
+                return `<button data-tab-target="${id}" class="tab-button font-serif text-lg text-brand-gray border-b-2 border-transparent pb-2 hover:text-brand-gold ${name === 'View All' ? 'active' : ''}">${name.replace(' Collection', '')}</button>`;
+            }).join('');
 
-            collectionOrder.forEach((collectionName) => {
-                const collectionId = collectionName.replace(/[\s&]+/g, '-').toLowerCase();
-                
-                const button = document.createElement('button');
-                button.textContent = collectionName.replace(' Collection', '');
-                button.className = 'tab-button font-serif text-lg text-brand-gray border-b-2 border-transparent pb-2 hover:text-brand-gold';
-                button.dataset.tabTarget = collectionId;
-                if (collectionName === 'View All') {
-                    button.classList.add('active');
-                }
-                tabButtonsContainer.appendChild(button);
-            });
-
-            collectionOrder.slice(1).forEach(collectionName => {
+            collectionsContainer.innerHTML = collectionOrder.slice(1).map(collectionName => {
                 const collectionId = collectionName.replace(/[\s&]+/g, '-').toLowerCase();
                 const collectionFlavors = flavors.filter(f => f.collection === collectionName);
-
-                const section = document.createElement('section');
-                section.id = collectionId;
-                section.className = 'collection-section active'; // Active by default for View All
-                section.innerHTML = `
-                    <div class="text-center mb-12">
-                        <h3 class="font-serif text-3xl font-semibold text-white">${collectionName}</h3>
-                    </div>
-                    <div class="grid md:grid-cols-2 gap-x-8 gap-y-6">
-                        ${collectionFlavors.map(f => {
-                            const orderButton = f.availableWeekly ? `<a href="[YOUR SQUARE ORDERING LINK HERE]" target="_blank" class="text-xs bg-brand-gold text-brand-dark font-semibold py-1 px-3 rounded-full hover:bg-brand-gold-hover transition">Order Now</a>` : '';
-                            return `
-                                <div class="border-b border-brand-gray/10 pb-3 flex justify-between items-start gap-4">
-                                    <div>
-                                        <h4 class="font-serif text-xl text-white">${f.name}</h4>
-                                        <p class="text-brand-gray text-sm">${f.description}</p>
-                                    </div>
-                                    <div class="flex-shrink-0 mt-1">
-                                        ${orderButton}
-                                    </div>
-                                </div>`;
-                        }).join('')}
-                    </div>
-                `;
-                collectionsContainer.appendChild(section);
-            });
+                return `
+                    <section id="${collectionId}" class="collection-section active">
+                        <div class="text-center mb-12">
+                            <h3 class="font-serif text-3xl font-semibold text-white">${collectionName}</h3>
+                        </div>
+                        <div class="grid md:grid-cols-2 gap-x-8 gap-y-6">
+                            ${collectionFlavors.map(f => {
+                                const orderButton = f.availableWeekly ? `<a href="[YOUR SQUARE ORDERING LINK HERE]" target="_blank" class="text-xs bg-brand-gold text-brand-dark font-semibold py-1 px-3 rounded-full hover:bg-brand-gold-hover transition">Order Now</a>` : '';
+                                return `
+                                    <div class="border-b border-brand-gray/10 pb-3">
+                                        <div class="flex justify-between items-start gap-4">
+                                            <h4 class="font-serif text-xl text-white">${f.name}</h4>
+                                            <div class="flex-shrink-0 mt-1">${orderButton}</div>
+                                        </div>
+                                        <p class="text-brand-gray text-sm mt-1">${f.description}</p>
+                                        <p class="text-xs text-brand-gray mt-2">CONTAINS: ${f.contains}</p>
+                                    </div>`;
+                            }).join('')}
+                        </div>
+                    </section>`;
+            }).join('');
 
             // Tab switching logic
             const tabs = document.querySelectorAll('.tab-button');
@@ -318,9 +305,7 @@
                     } else {
                         sections.forEach(s => s.classList.remove('active'));
                         const targetPanel = document.getElementById(target);
-                        if (targetPanel) {
-                            targetPanel.classList.add('active');
-                        }
+                        if (targetPanel) targetPanel.classList.add('active');
                     }
                 });
             });
