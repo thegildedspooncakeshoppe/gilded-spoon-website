@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Corporate & Private Events | The Gilded Spoon Cake Shoppe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-dark': '#1C161E',
+                        'brand-light': '#F4F1ED',
+                        'brand-gold': '#D4AF37',
+                        'brand-gold-hover': '#E2C76A',
+                        'brand-gray': '#A09DA6',
+                        'brand-card': '#2A232F',
+                    },
+                    fontFamily: {
+                        'serif': ['"Playfair Display"', 'serif'],
+                        'sans': ['"Inter"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #1C161E; color: #F4F1ED; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        .events-header-bg { background-image: linear-gradient(rgba(28, 22, 30, 0.9), rgba(28, 22, 30, 0.9)), url('https://imgur.com/FX7UFPc.jpeg'); background-size: cover; background-position: center; }
+    </style>
+</head>
+<body class="font-sans">
+
+    <nav class="sticky top-0 bg-brand-dark/80 backdrop-blur-lg shadow-lg z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-serif font-bold text-white text-center leading-none">
+                The Gilded Spoon
+                <span class="block text-xs font-sans font-light not-italic tracking-[0.3em]">CAKE SHOPPE</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8 font-medium">
+                <a href="index.html#products" class="text-brand-gray hover:text-white transition">Collections</a>
+                <a href="flavors.html" class="text-brand-gray hover:text-white transition">Flavors</a>
+                <a href="#contact" class="bg-brand-gold text-brand-dark font-bold py-2 px-4 rounded-lg">Inquire Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="text-center py-24 md:py-32 events-header-bg">
+        <div class="max-w-4xl mx-auto px-4">
+            <h1 class="font-serif text-5xl md:text-6xl font-bold text-white leading-tight">Create an Event They'll Never Forget</h1>
+            <p class="text-xl md:text-2xl text-brand-light font-light mt-4 max-w-2xl mx-auto">Our bespoke 'Paint-by-Cake' ateliers are the perfect ingredient for engaging, memorable, and impactful corporate and private events in the McKinney and greater DFW area.</p>
+            <a href="#contact" class="mt-8 inline-block bg-brand-gold text-brand-dark font-bold py-3 px-8 rounded-lg hover:bg-brand-gold-hover transition-transform transform hover:scale-105">Plan Your Event</a>
+        </div>
+    </header>
+
+    <section class="py-12 bg-brand-dark">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h3 class="text-sm font-bold tracking-[0.3em] text-brand-gray uppercase">TRUSTED BY COMPANIES AND CLIENTS ACROSS DFW</h3>
+            <div class="flex justify-center items-center space-x-8 md:space-x-12 mt-6 grayscale opacity-60">
+                <p class="font-serif text-2xl">[Client Logo 1]</p>
+                <p class="font-serif text-2xl">[Client Logo 2]</p>
+                <p class="font-serif text-2xl">[Client Logo 3]</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-8 grid md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="font-serif text-4xl font-semibold text-white mb-6">The 'Paint-by-Cake' Atelier Experience</h2>
+                <div class="text-brand-gray space-y-4">
+                    <p>Forget trust falls and boring presentations. Our signature atelier is a sophisticated, hands-on workshop where every guest becomes an artist. We provide a beautifully prepared cake as a canvas, along with edible paints, brushes, and professional guidance.</p>
+                    <p>The result is not just a stunning, delicious dessert, but a shared experience that sparks creativity, encourages conversation, and leaves a lasting impression. It's the perfect activity for team-building, client entertainment, or celebrating a special milestone.</p>
+                    <ul class="mt-4 space-y-2">
+                        <li class="flex items-center"><span class="text-brand-gold mr-3">&#10003;</span> Fully scalable for any group size.</li>
+                        <li class="flex items-center"><span class="text-brand-gold mr-3">&#10003;</span> Mobile setup: We come to your office, home, or event venue.</li>
+                        <li class="flex items-center"><span class="text-brand-gold mr-3">&#10003;</span> All materials and expert instruction included.</li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <div class="grid grid-cols-2 gap-4">
+                    <img src="https://placehold.co/400x300/2A232F/F4F1ED?text=Event+Photo" alt="People decorating cakes at an event" class="rounded-lg shadow-lg">
+                    <img src="https://placehold.co/400x500/2A232F/F4F1ED?text=Event+Photo" alt="Close up of a decorated cake" class="rounded-lg shadow-lg row-span-2">
+                    <img src="https://placehold.co/400x300/2A232F/F4F1ED?text=Event+Photo" alt="A finished cake masterpiece" class="rounded-lg shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="pricing" class="py-20 bg-brand-dark">
+        <div class="max-w-5xl mx-auto px-4 sm:px-8 text-center">
+            <h2 class="font-serif text-4xl font-semibold text-white mb-12">Investment & Enhancements</h2>
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                
+                <div class="bg-brand-card p-8 rounded-lg border border-brand-gray/20 text-left">
+                    <h3 class="font-serif text-2xl text-white">Paint-by-Cake Atelier</h3>
+                    <p class="font-serif text-4xl text-brand-gold my-4">Starting at $75<span class="text-lg text-brand-gray"> / person</span></p>
+                    <p class="text-brand-gray text-sm mb-4"><em>10-person minimum or equivalent event fee applies. Travel fees may apply for locations outside McKinney.</em></p>
+                    <ul class="space-y-2 text-brand-light">
+                        <li class="flex"><span class="text-brand-gold mr-3">&#10003;</span> 2-hour guided workshop experience</li>
+                        <li class="flex"><span class="text-brand-gold mr-3">&#10003;</span> Individual cake canvas for each guest</li>
+                        <li class="flex"><span class="text-brand-gold mr-3">&#10003;</span> All edible art supplies and tools</li>
+                        <li class="flex"><span class="text-brand-gold mr-3">&#10003;</span> Professional instruction and facilitation</li>
+                        <li class="flex"><span class="text-brand-gold mr-3">&#10003;</span> Elegant packaging for guests to take home</li>
+                    </ul>
+                </div>
+
+                <div class="bg-brand-card p-8 rounded-lg border border-brand-gray/20 text-left">
+                    <h3 class="font-serif text-2xl text-white">Enhance Your Atelier</h3>
+                    <p class="font-sans text-brand-gray mb-4">Elevate your event with a unique sensory experience.</p>
+                    <div class="bg-brand-dark p-6 rounded-md">
+                        <p class="font-bold text-brand-gold">FEATURED ADD-ON</p>
+                        <h4 class="font-serif text-xl text-white mt-1">The Flavor Personality Profile</h4>
+                        <p class="font-serif text-3xl text-brand-gold my-3">+ $20<span class="text-lg text-brand-gray"> / person</span></p>
+                        <p class="text-brand-gray">Begin your event with a journey of self-discovery through taste. This guided tasting features a premium flight of our core flavors, designed to spark conversation and help guests find the flavor that tells their story. It's the perfect icebreaker and a truly memorable start to your creative session.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section class="py-20 bg-brand-card">
+        <div class="max-w-5xl mx-auto px-4 sm:px-8 text-center">
+            <h2 class="font-serif text-4xl font-semibold text-white mb-12">Our Simple Planning Process</h2>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                <div>
+                    <div class="mx-auto w-16 h-16 rounded-full bg-brand-gold text-brand-dark flex items-center justify-center font-serif text-3xl font-bold mb-4">1</div>
+                    <h3 class="font-serif text-2xl text-white mb-2">Inquire & Envision</h3>
+                    <p class="text-brand-gray">Fill out our quick inquiry form with your event details, group size, and desired date. We'll get back to you within 24 hours to schedule a brief consultation.</p>
+                </div>
+                <div>
+                    <div class="mx-auto w-16 h-16 rounded-full bg-brand-gold text-brand-dark flex items-center justify-center font-serif text-3xl font-bold mb-4">2</div>
+                    <h3 class="font-serif text-2xl text-white mb-2">Customize Your Atelier</h3>
+                    <p class="text-brand-gray">We'll collaborate to create the perfect experience, tailoring the cake design, flavor profile, and logistics to match your event's theme and goals.</p>
+                </div>
+                <div>
+                    <div class="mx-auto w-16 h-16 rounded-full bg-brand-gold text-brand-dark flex items-center justify-center font-serif text-3xl font-bold mb-4">3</div>
+                    <h3 class="font-serif text-2xl text-white mb-2">Create & Celebrate</h3>
+                    <p class="text-brand-gray">Our team arrives with everything needed for a seamless, engaging, and delicious event. You and your guests just show up and unleash your creativity!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-8 text-center">
+             <h2 class="font-serif text-4xl font-semibold text-white mb-4">Create an Impact with 'Sweet Giving'</h2>
+             <p class="text-brand-gray text-lg mb-6">Integrate social responsibility into your event, effortlessly. When you book a corporate atelier, you can opt into our 'Sweet Giving' program. Your event will sponsor a complimentary 'Paint-by-Cake' workshop for children at one of our local non-profit partners, sharing the joy of creativity with our community.</p>
+             <a href="#contact" class="text-brand-gold hover:underline">Ask how to include this in your event proposal &rarr;</a>
+        </div>
+    </section>
+
+    <section class="py-20 bg-brand-dark">
+        <div class="max-w-4xl mx-auto px-4 sm:px-8 text-center">
+            <h2 class="font-serif text-4xl font-semibold text-white mb-12">What Our Clients Are Saying</h2>
+            <div class="space-y-10">
+                <div class="bg-brand-card p-8 rounded-lg">
+                    <p class="font-serif text-2xl italic text-brand-light">"[This was the most unique and engaging team-building event we've ever done. Our team is still talking about it! The Gilded Spoon team was professional, fun, and made everything effortless.]"</p>
+                    <p class="mt-4 font-bold text-brand-gold text-lg">&mdash; [Client Name], <span class="text-brand-gray font-normal">[Client Company/Event Type]</span></p>
+                </div>
+                <div class="bg-brand-card p-8 rounded-lg">
+                    <p class="font-serif text-2xl italic text-brand-light">"[We wanted a special way to thank our top clients, and this was perfect. It was sophisticated, fun, and so much better than another boring dinner. Highly recommend!]"</p>
+                    <p class="mt-4 font-bold text-brand-gold text-lg">&mdash; [Client Name], <span class="text-brand-gray font-normal">[Client Company/Event Type]</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-20">
+        <div class="max-w-3xl mx-auto px-4 sm:px-8 text-center">
+            <h2 class="font-serif text-4xl sm:text-5xl font-semibold mb-6 text-white">Ready to Plan an Unforgettable Event?</h2>
+            <p class="text-lg text-brand-gray mb-8">Let's create a bespoke 'Paint-by-Cake' experience for your team, clients, or guests. Reach out today for a custom proposal.</p>
+            <a href="mailto:contact@thegildedspoonshoppe.com?subject=Corporate/Private Event Inquiry" class="inline-block bg-brand-gold text-brand-dark font-bold py-3 px-8 rounded-lg hover:bg-brand-gold-hover transition-transform transform hover:scale-105">Send an Email Inquiry</a>
+        </div>
+    </section>
+
+
+    <footer class="bg-black/20 text-center py-12">
+        </footer>
+
+</body>
+</html>
