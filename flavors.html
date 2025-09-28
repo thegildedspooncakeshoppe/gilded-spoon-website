@@ -111,7 +111,7 @@
                         <a href="https://the-gilded-spoon.square.site/s/shop" target="_blank" class="mt-6 inline-block bg-brand-gold text-brand-dark font-bold py-2 px-6 rounded-lg hover:bg-brand-gold-hover transition">Order Online</a>
                     </div>
                      <div class="bg-brand-card p-8 rounded-2xl text-center flex flex-col">
-                        <h3 class="font-serif text-3xl text-brand-gold mb-4">Mithas & Mahal</h3>
+                        <h3 class="font-serif text-3xl text-brand-gold mb-4">Curated Mithai Dabba</h3>
                          <p class="text-brand-gray text-sm mb-4">A tribute to my mother’s kitchen, where fragrant spices and cherished memories are baked into every layer.</p>
                         <div id="mithas-mahal-list" class="space-y-3 text-brand-light font-serif flex-grow">
                             </div>
@@ -279,7 +279,7 @@
             if(mithasList) mithasList.innerHTML = mithasSpotlight.map(createFeaturedButton).join('');
             
             // --- Populate Full Library with Tabs ---
-            const collectionOrder = ['View All', 'Signature Collection', 'Autumn Collection', 'Winter Collection', 'Spring Collection', 'Summer Collection', 'Mithas & Mahal Collection'];
+            const collectionOrder = ['View All', 'Signature Collection', 'Autumn Collection', 'Winter Collection', 'Spring Collection', 'Summer Collection', 'Curated Mithai Dabba'];
             
             tabButtonsContainer.innerHTML = collectionOrder.map(name => {
                 const id = name.replace(/[\s&]+/g, '-').toLowerCase();
