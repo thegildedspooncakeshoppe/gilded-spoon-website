@@ -39,14 +39,12 @@
 
     <div id="overlay" class="overlay"></div>
 
-    <!-- Product Order Modal -->
     <div id="product-modal" class="modal bg-brand-card rounded-2xl shadow-2xl p-8">
         <h3 id="modal-title" class="font-serif text-3xl font-bold text-center mb-4 text-white">Customize Your Order</h3>
         <form id="product-form">
             <input type="hidden" id="product-id-input">
             <div id="modal-options-container" class="space-y-4">
-                <!-- JS will populate this -->
-            </div>
+                </div>
             <div class="flex justify-between items-center mt-8">
                 <button type="button" onclick="closeModal()" class="text-brand-gray hover:text-white transition">Cancel</button>
                 <button type="submit" class="bg-brand-gold text-brand-dark font-bold py-2 px-6 rounded-lg hover:bg-brand-gold-hover transition-transform transform hover:scale-105">Proceed to Payment</button>
@@ -96,9 +94,8 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-8">
             <h2 class="font-serif text-4xl md:text-5xl font-semibold text-center mb-8 text-white">Our Indulgent Collections</h2>
             <p class="max-w-3xl mx-auto text-center text-brand-gray mb-16">From individual treats to creative kits, each item is crafted with artistry and the finest ingredients. For custom orders, please see our <a href="events.html" class="text-brand-gold hover:underline">Events Page</a>.</p>
-            <div id="products-container" class="grid grid-cols-1 gap-12">
-                <!-- Products will be dynamically generated here -->
-            </div>
+            <div id="products-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                </div>
         </div>
     </section>
 
@@ -185,11 +182,11 @@
         {
             id: 'pucks',
             name: 'Curated Cake Pucks',
-            subtext: 'Expertly crafted using only the finest high-quality ingredients. For custom dietary needs, please contact us directly.',
-            description: 'Our signature treat. A miniature 2" cake with a delicate chocolate or candy coated shell, adorned with signature decoration.',
+            subtext: 'Expertly crafted with the finest ingredients.',
+            description: 'Our signature treat. A miniature 2" cake with a delicate chocolate or candy coated shell.',
             image: 'https://imgur.com/9tV4SFa.jpeg',
             price: '$5.00 - $27.00',
-            largeOrderNote: 'For orders over 2 dozen (24), please use the large order inquiry on the product page.',
+            maxQuantity: 24,
             options: [
                 { text: 'Single - $5.00', value: 'puck-single', link: 'https://square.link/u/rHgetHXR' },
                 { text: '3-Pack - $14.00', value: 'puck-3pack', link: 'https://square.link/u/KMi13npr' },
@@ -198,24 +195,24 @@
         },
         {
             id: 'mithas',
-            name: 'Mithas & Mahal Cake Collection',
-            subtext: '"Mithas & Mahal" signifies "sweetness" and "palace." This eggless collection is a perfect marriage of South Asian flavors and signature elegance.',
-            description: 'Inspired by the cherished flavors of my South Asian heritage, each flavor transforms traditional Indian desserts into elegant, modern cake creations.',
+            name: 'Mithas & Mahal Cake Flight',
+            subtext: 'An eggless collection marrying South Asian flavors and signature elegance.',
+            description: 'Inspired by my South Asian heritage, each flavor transforms a traditional dessert into an elegant, modern cake.',
             image: 'https://imgur.com/akOT2O1.jpeg',
-            price: '$15.00 per flight',
-            customNote: 'A flight includes two slices from our current collection.',
+            price: '$25.00 per flight',
+            maxQuantity: 4,
             options: [
-                { text: '2-Slice Flight - $15.00', value: 'mithas-flight', link: 'https://square.link/u/2qgl2nif' }
+                { text: '2-Slice Flight - $25.00', value: 'mithas-flight', link: 'https://square.link/u/2qgl2nif' }
             ]
         },
         {
             id: 'flight',
             name: 'Signature Cake Flavor Flight',
-            subtext: 'Expertly crafted using only the finest high-quality ingredients. For custom dietary needs, please contact us directly.',
-            description: 'Embark on a culinary journey with three curated slices from our signature and seasonal collection. Try them all!',
+            subtext: 'Expertly crafted with the finest ingredients.',
+            description: 'Embark on a culinary journey with three curated slices from our signature and seasonal collection.',
             image: 'https://imgur.com/V7FhUqj.jpeg',
             price: '$22.00',
-            largeOrderNote: 'Max online order is 4 flights. Please inquire for larger quantities.',
+            maxQuantity: 4,
             options: [
                 { text: 'Signature Flight - $22.00', value: 'flight', link: 'https://square.link/u/escrWE54' }
             ]
@@ -223,11 +220,11 @@
         {
             id: 'kit',
             name: 'At-Home Paint by Cake Kits',
-            subtext: 'For custom dietary needs, such as natural food coloring or allergen-free ingredients, please contact us directly.',
+            subtext: 'For custom dietary needs, please contact us directly.',
             description: 'Discover your inner artist. We provide everything you need to transform your own cake into a work of art.',
             image: 'https://imgur.com/FX7UFPc.jpeg',
             price: '$45.00',
-            largeOrderNote: 'For orders over 10 kits, please use the large order inquiry.',
+            maxQuantity: 10,
             options: [
                  { text: 'Paint by Cake Kit - $45.00', value: 'kit', link: 'https://square.link/u/D099GWCT' }
             ]
@@ -235,7 +232,8 @@
         {
             id: 'custom',
             name: 'Custom Cakes',
-            description: 'Your vision, beautifully baked. Perfect for celebrations, our custom cakes are designed to be the centerpiece your occasion deserves.',
+            subtext: 'Your vision, beautifully baked.',
+            description: 'Perfect for celebrations, our custom cakes are designed to be the centerpiece your occasion deserves.',
             image: 'https://imgur.com/xtvtDQs.jpeg',
             price: 'Starting at $125.00',
             isContactForm: true,
@@ -279,22 +277,23 @@
         if (!container) return;
 
         container.innerHTML = products.map(product => {
-            const isImageOnLeft = ['pucks', 'flight', 'custom'].includes(product.id);
             const buttonHtml = product.isContactForm ?
-                `<a href="${product.contactLink}" class="mt-4 text-center w-full bg-transparent border-2 border-brand-gold text-brand-gold font-bold py-3 px-6 rounded-lg hover:bg-brand-gold hover:text-brand-dark transition">Request a Quote</a>` :
-                `<button onclick="showProductModal('${product.id}')" class="mt-4 w-full bg-brand-gold text-brand-dark font-bold py-3 px-6 rounded-lg hover:bg-brand-gold-hover transition-transform transform hover:scale-105">Order Now</button>`;
+                `<a href="${product.contactLink}" class="mt-4 text-center w-full bg-transparent border-2 border-brand-gold text-brand-gold font-bold py-2 px-4 rounded-lg hover:bg-brand-gold hover:text-brand-dark transition">Request a Quote</a>` :
+                `<button onclick="showProductModal('${product.id}')" class="mt-auto w-full bg-brand-gold text-brand-dark font-bold py-2 px-4 rounded-lg hover:bg-brand-gold-hover transition">Order Now</button>`;
+
+            const largeOrderNoteHtml = product.maxQuantity ? 
+                `<p class="text-xs text-brand-gray mt-4">For orders over ${product.maxQuantity}, please <a href="mailto:contact@thegildedspoonshoppe.com?subject=Large%20Order%20Inquiry:%20${encodeURIComponent(product.name)}" class="text-brand-gold hover:underline">send an inquiry</a>.</p>` : '';
 
             return `
-                <div class="bg-brand-card rounded-2xl shadow-xl overflow-hidden">
-                    <div class="grid grid-cols-1 md:grid-cols-2">
-                        <img src="${product.image}" alt="${product.name}" class="w-full h-64 md:h-full object-cover ${isImageOnLeft ? 'order-1 md:order-1' : 'order-1 md:order-2'}">
-                        <div class="p-8 flex flex-col justify-center ${isImageOnLeft ? 'order-2 md:order-2' : 'order-2 md:order-1'}">
-                            <h3 class="font-serif text-3xl font-bold mb-4 text-white">${product.name}</h3>
-                            ${product.subtext ? `<p class="text-sm font-light text-brand-gray/80 -mt-2 mb-4 italic">${product.subtext}</p>` : ''}
-                            <p class="text-brand-gray mb-6">${product.description}</p>
-                            ${product.largeOrderNote ? `<p class="text-sm text-brand-gray/80 -mt-4 mb-6">${product.largeOrderNote}</p>` : ''}
-                            ${product.customNote ? `<p class="text-sm text-brand-gray/80 -mt-4 mb-6">${product.customNote}</p>` : ''}
-                            <div class="text-xl font-semibold text-brand-gold mb-4">${product.price}</div>
+                <div class="bg-brand-card rounded-2xl shadow-xl flex flex-col">
+                    <img src="${product.image}" alt="${product.name}" class="w-full h-48 object-cover rounded-t-2xl">
+                    <div class="p-6 flex flex-col flex-grow">
+                        <h3 class="font-serif text-2xl font-bold text-white">${product.name}</h3>
+                        <p class="text-sm text-brand-gray/80 mt-1 italic">${product.subtext}</p>
+                        <p class="text-brand-gray my-4 text-sm flex-grow">${product.description}</p>
+                        <div class="text-lg font-semibold text-brand-gold mt-auto">${product.price}</div>
+                        ${largeOrderNoteHtml}
+                        <div class="mt-4">
                             ${buttonHtml}
                         </div>
                     </div>
