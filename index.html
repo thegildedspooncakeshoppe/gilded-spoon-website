@@ -39,12 +39,14 @@
 
     <div id="overlay" class="overlay"></div>
 
+    <!-- Product Order Modal -->
     <div id="product-modal" class="modal bg-brand-card rounded-2xl shadow-2xl p-8">
         <h3 id="modal-title" class="font-serif text-3xl font-bold text-center mb-4 text-white">Customize Your Order</h3>
         <form id="product-form">
             <input type="hidden" id="product-id-input">
             <div id="modal-options-container" class="space-y-4">
-                </div>
+                <!-- JS will populate this -->
+            </div>
             <div class="flex justify-between items-center mt-8">
                 <button type="button" onclick="closeModal()" class="text-brand-gray hover:text-white transition">Cancel</button>
                 <button type="submit" class="bg-brand-gold text-brand-dark font-bold py-2 px-6 rounded-lg hover:bg-brand-gold-hover transition-transform transform hover:scale-105">Proceed to Payment</button>
@@ -54,7 +56,7 @@
 
     <nav class="sticky top-0 bg-brand-dark/80 backdrop-blur-lg shadow-lg z-50">
         <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="#home" class="text-2xl font-serif font-bold text-white text-center leading-none">
+            <a href="index.html" class="text-2xl font-serif font-bold text-white text-center leading-none">
                 The Gilded Spoon
                 <span class="block text-xs font-sans font-light not-italic tracking-[0.3em]">CAKE SHOPPE</span>
             </a>
@@ -95,7 +97,8 @@
             <h2 class="font-serif text-4xl md:text-5xl font-semibold text-center mb-8 text-white">Our Indulgent Collections</h2>
             <p class="max-w-3xl mx-auto text-center text-brand-gray mb-16">From individual treats to creative kits, each item is crafted with artistry and the finest ingredients. For custom orders, please see our <a href="events.html" class="text-brand-gold hover:underline">Events Page</a>.</p>
             <div id="products-container" class="grid grid-cols-1 gap-12">
-                </div>
+                <!-- Products will be dynamically generated here -->
+            </div>
         </div>
     </section>
 
@@ -131,11 +134,11 @@
                 <div class="order-2 md:order-1">
                     <h2 class="font-serif text-4xl md:text-5xl font-semibold mb-6 text-white">Our Story</h2>
                     <div class="text-brand-gray space-y-4">
-                        <p>The Gilded Spoon Cake Shoppe is the sweet realization of a lifelong dream... [rest of your story text]</p>
-                        <p>We are an Atelier, a workshop where classic technique meets modern artistry... [rest of your story text]</p>
+                        <p>The Gilded Spoon Cake Shoppe is the sweet realization of a lifelong dream. Founded by a passionate baker with a background in art and design, our shoppe is built on the belief that a cake should be as memorable for its beauty as it is for its taste. It’s more than just dessert; it’s an experience.</p>
+                        <p>We are an Atelier, a workshop where classic technique meets modern artistry. We pour our hearts into every creation, using only the finest ingredients to craft flavors that are both familiar and surprising. From our signature Cake Pucks to our bespoke celebration cakes, each item is a piece of edible art, designed to bring a little more joy and wonder into your life.</p>
                         <div class="mt-8 pt-6 border-t border-brand-gray/20">
                             <h3 class="font-serif text-3xl font-semibold mb-4 text-white">Our Mission: Creating Art with Purpose</h3>
-                            <p>The Gilded Spoon is built on the belief that creativity is a universal language... Through our <strong class="text-brand-light">'Sweet Giving'</strong> program... [rest of your mission text]</p>
+                            <p>The Gilded Spoon is built on the belief that creativity is a universal language. It’s a core part of our mission to expand our radius of influence by using our art to create a positive impact. Through our <strong class="text-brand-light">'Sweet Giving'</strong> program, we partner with corporate clients to sponsor 'Paint-by-Cake' workshops for local children's charities and non-profits, giving voice to those who may not have access to creative outlets. When you book with us, you're not just creating a memory; you're helping us share the joy of artistry with our community.</p>
                         </div>
                     </div>
                 </div>
@@ -147,10 +150,34 @@
     </section>
 
     <section id="contact" class="py-20 bg-brand-dark">
-        </section>
+        <div class="max-w-3xl mx-auto px-4 sm:px-8 text-center">
+            <h2 class="font-serif text-4xl sm:text-5xl font-semibold mb-8 text-white">Let's Connect!</h2>
+            <p class="text-lg text-brand-gray mb-8">For custom cakes, private workshops, or any other questions, please reach out. We'd love to help bring your sweet vision to life.</p>
+            <p class="text-brand-gray mb-8">You can email us directly at <a href="mailto:contact@thegildedspoonshoppe.com" class="text-brand-gold hover:underline">contact@thegildedspoonshoppe.com</a> for any questions.</p>
+            <a href="mailto:contact@thegildedspoonshoppe.com" class="inline-block bg-brand-gold text-brand-dark font-bold py-3 px-8 rounded-lg hover:bg-brand-gold-hover transition-transform transform hover:scale-105">Send an Email Inquiry</a>
+        </div>
+    </section>
 
     <footer class="bg-black/20 text-center py-12">
-        </footer>
+        <div class="max-w-6xl mx-auto px-4 sm:px-8">
+            <div class="flex justify-center space-x-6 mb-6">
+                 <a href="https://www.instagram.com/flour.shoppe.studios/" aria-label="Instagram" class="text-brand-gray hover:text-white transition">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg>
+                </a>
+                <a href="https://www.facebook.com/thegildedspoonshoppe" aria-label="Facebook" class="text-brand-gray hover:text-white transition">
+                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.494v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.323-1.325z"/></svg>
+                </a>
+            </div>
+            <div class="mb-6">
+                <a href="policies.html" class="text-brand-gray hover:text-white hover:underline transition">Shipping & Return Policies</a>
+            </div>
+            <div class="border-t border-brand-gray/20 pt-8">
+                <p class="text-brand-light">The Gilded Spoon Cake Shoppe by Flour Shoppe Studios</p>
+                <p class="text-brand-gray text-sm">&copy; 2025 The Gilded Spoon Cake Shoppe. All Rights Reserved.</p>
+                <p class="mt-4 text-xs text-brand-gray/50 max-w-md mx-auto px-4">Products are prepared in a home kitchen that handles allergens including wheat, dairy, eggs, soy, and nuts.</p>
+            </div>
+        </div>
+    </footer>
 
 <script>
     // --- DATA ---
@@ -158,9 +185,11 @@
         {
             id: 'pucks',
             name: 'Curated Cake Pucks',
+            subtext: 'Expertly crafted using only the finest high-quality ingredients. For custom dietary needs, please contact us directly.',
             description: 'Our signature treat. A miniature 2" cake with a delicate chocolate or candy coated shell, adorned with signature decoration.',
             image: 'https://imgur.com/9tV4SFa.jpeg',
             price: '$5.00 - $27.00',
+            largeOrderNote: 'For orders over 2 dozen (24), please use the large order inquiry on the product page.',
             options: [
                 { text: 'Single - $5.00', value: 'puck-single', link: 'https://square.link/u/rHgetHXR' },
                 { text: '3-Pack - $14.00', value: 'puck-3pack', link: 'https://square.link/u/KMi13npr' },
@@ -169,20 +198,24 @@
         },
         {
             id: 'mithas',
-            name: 'Mithas & Mahal Cake Flight',
-            description: 'Inspired by South Asian heritage, this eggless collection marries traditional desserts with modern elegance.',
+            name: 'Mithas & Mahal Cake Collection',
+            subtext: '"Mithas & Mahal" signifies "sweetness" and "palace." This eggless collection is a perfect marriage of South Asian flavors and signature elegance.',
+            description: 'Inspired by the cherished flavors of my South Asian heritage, each flavor transforms traditional Indian desserts into elegant, modern cake creations.',
             image: 'https://imgur.com/akOT2O1.jpeg',
             price: '$15.00 per flight',
+            customNote: 'A flight includes two slices from our current collection.',
             options: [
-                { text: '2-Slice Flight - $25.00', value: 'mithas-flight', link: 'https://square.link/u/2qgl2nif' }
+                { text: '2-Slice Flight - $15.00', value: 'mithas-flight', link: 'https://square.link/u/2qgl2nif' }
             ]
         },
         {
             id: 'flight',
             name: 'Signature Cake Flavor Flight',
+            subtext: 'Expertly crafted using only the finest high-quality ingredients. For custom dietary needs, please contact us directly.',
             description: 'Embark on a culinary journey with three curated slices from our signature and seasonal collection. Try them all!',
             image: 'https://imgur.com/V7FhUqj.jpeg',
             price: '$22.00',
+            largeOrderNote: 'Max online order is 4 flights. Please inquire for larger quantities.',
             options: [
                 { text: 'Signature Flight - $22.00', value: 'flight', link: 'https://square.link/u/escrWE54' }
             ]
@@ -190,9 +223,11 @@
         {
             id: 'kit',
             name: 'At-Home Paint by Cake Kits',
+            subtext: 'For custom dietary needs, such as natural food coloring or allergen-free ingredients, please contact us directly.',
             description: 'Discover your inner artist. We provide everything you need to transform your own cake into a work of art.',
             image: 'https://imgur.com/FX7UFPc.jpeg',
             price: '$45.00',
+            largeOrderNote: 'For orders over 10 kits, please use the large order inquiry.',
             options: [
                  { text: 'Paint by Cake Kit - $45.00', value: 'kit', link: 'https://square.link/u/D099GWCT' }
             ]
@@ -255,7 +290,10 @@
                         <img src="${product.image}" alt="${product.name}" class="w-full h-64 md:h-full object-cover ${isImageOnLeft ? 'order-1 md:order-1' : 'order-1 md:order-2'}">
                         <div class="p-8 flex flex-col justify-center ${isImageOnLeft ? 'order-2 md:order-2' : 'order-2 md:order-1'}">
                             <h3 class="font-serif text-3xl font-bold mb-4 text-white">${product.name}</h3>
+                            ${product.subtext ? `<p class="text-sm font-light text-brand-gray/80 -mt-2 mb-4 italic">${product.subtext}</p>` : ''}
                             <p class="text-brand-gray mb-6">${product.description}</p>
+                            ${product.largeOrderNote ? `<p class="text-sm text-brand-gray/80 -mt-4 mb-6">${product.largeOrderNote}</p>` : ''}
+                            ${product.customNote ? `<p class="text-sm text-brand-gray/80 -mt-4 mb-6">${product.customNote}</p>` : ''}
                             <div class="text-xl font-semibold text-brand-gold mb-4">${product.price}</div>
                             ${buttonHtml}
                         </div>
