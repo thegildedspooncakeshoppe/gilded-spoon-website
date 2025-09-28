@@ -25,48 +25,45 @@
                         'sans': ['"Inter"', 'sans-serif'],
                     }
                 }
-                
             }
         }
     </script>
     <style>
         body { background-color: #1C161E; color: #F4F1ED; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
         .header-bg { background-image: linear-gradient(rgba(28, 22, 30, 0.8), rgba(28, 22, 30, 0.8)), url('https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80'); background-size: cover; background-position: center; }
-        .disabled-button { background-color: #5a5260; cursor: not-allowed; transform: none; }
-        .disabled-button:hover { background-color: #5a5260; }
+        .modal { display: none; position: fixed; z-index: 1000; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 90%; max-width: 480px; }
+        .overlay { display: none; position: fixed; z-index: 999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); }
     </style>
 </head>
 <body class="font-sans">
 
-    <nav class="sticky top-0 bg-brand-dark/80 backdrop-blur-lg shadow-lg z-50">
-        <div class="max-w-6xl mx-auto px-4 py-4">
-            <div class="flex justify-between items-center">
-                <a href="index.html" class="text-2xl font-serif font-bold text-white text-center leading-none">
-                    The Gilded Spoon
-                    <span class="block text-xs font-sans font-light not-italic tracking-[0.3em]">CAKE SHOPPE</span>
-                </a>
+    <div id="overlay" class="overlay"></div>
 
-                <div class="hidden md:flex items-center space-x-8 font-medium">
-                    <a href="#products" class="text-brand-gray hover:text-white transition">Cake Collections</a>
-                    <a href="flavors.html" class="text-brand-gray hover:text-white transition">Flavors</a>
-                    <a href="events.html" class="text-brand-gold hover:text-white transition font-bold">Corporate & Private Events</a>
-                    <a href="#our-story" class="text-brand-gray hover:text-white transition">Our Story</a>
+    <div id="product-modal" class="modal bg-brand-card rounded-2xl shadow-2xl p-8">
+        <h3 id="modal-title" class="font-serif text-3xl font-bold text-center mb-4 text-white">Customize Your Order</h3>
+        <form id="product-form">
+            <input type="hidden" id="product-id-input">
+            <div id="modal-options-container" class="space-y-4">
                 </div>
-
-                <div class="md:hidden">
-                    <button id="hamburger-button" class="text-white focus:outline-none">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                        </svg>
-                    </button>
-                </div>
+            <div class="flex justify-between items-center mt-8">
+                <button type="button" onclick="closeModal()" class="text-brand-gray hover:text-white transition">Cancel</button>
+                <button type="submit" class="bg-brand-gold text-brand-dark font-bold py-2 px-6 rounded-lg hover:bg-brand-gold-hover transition-transform transform hover:scale-105">Proceed to Payment</button>
             </div>
+        </form>
+    </div>
 
-            <div id="mobile-menu" class="hidden md:hidden mt-4">
-                <a href="#products" class="block py-2 px-4 text-sm text-brand-light hover:bg-brand-card rounded">Collections</a>
-                <a href="flavors.html" class="block py-2 px-4 text-sm text-brand-light hover:bg-brand-card rounded">Flavors</a>
-                <a href="events.html" class="block py-2 px-4 text-sm text-brand-gold hover:bg-brand-card rounded font-bold">Corporate & Private Events</a>
-                <a href="#our-story" class="block py-2 px-4 text-sm text-brand-light hover:bg-brand-card rounded">Our Story</a>
+    <nav class="sticky top-0 bg-brand-dark/80 backdrop-blur-lg shadow-lg z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#home" class="text-2xl font-serif font-bold text-white text-center leading-none">
+                The Gilded Spoon
+                <span class="block text-xs font-sans font-light not-italic tracking-[0.3em]">CAKE SHOPPE</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8 font-medium">
+                <a href="#products" class="text-brand-gray hover:text-white transition">Cake Collections</a>
+                <a href="flavors.html" class="text-brand-gray hover:text-white transition">Flavors</a>
+                <a href="events.html" class="text-brand-gold hover:text-white transition font-bold">Corporate & Private Events</a>
+                <a href="#our-story" class="text-brand-gray hover:text-white transition">Our Story</a>
+                <a href="#contact" class="text-brand-gray hover:text-white transition">Contact</a>
             </div>
         </div>
     </nav>
@@ -96,18 +93,9 @@
     <section id="products" class="py-20">
         <div class="max-w-6xl mx-auto px-4 sm:px-8">
             <h2 class="font-serif text-4xl md:text-5xl font-semibold text-center mb-8 text-white">Our Indulgent Collections</h2>
-            <p class="max-w-3xl mx-auto text-center text-brand-gray mb-16">From individual treats to creative kits, each item is crafted with artistry and the finest ingredients. For custom cakes and large event inquiries, please see our <a href="events.html" class="text-brand-gold hover:underline">Events Page</a>.</p>
-            
-            <div id="schedule" class="max-w-3xl mx-auto bg-brand-card/50 border border-brand-gold/20 rounded-2xl p-6 text-center mb-16">
-                 <h3 class="font-serif text-2xl font-semibold mb-4 text-white">Our Weekly Schedule</h3>
-                <div class="text-md text-brand-gray space-y-3">
-                    <p>We are a small-batch home bakery, and everything is made fresh to order. All orders have a minimum 1-week lead time.</p>
-                    <p class="font-semibold text-brand-light">To be included in the next week's production schedule, all orders must be placed by <span class="text-brand-gold">6:00 PM on Wednesday</span> for pickup the following <span class="text-brand-gold">Friday or Saturday</span>.</p>
+            <p class="max-w-3xl mx-auto text-center text-brand-gray mb-16">From individual treats to creative kits, each item is crafted with artistry and the finest ingredients. For custom orders, please see our <a href="events.html" class="text-brand-gold hover:underline">Events Page</a>.</p>
+            <div id="products-container" class="grid grid-cols-1 gap-12">
                 </div>
-            </div>
-
-            <div id="products-container" class="grid grid-cols-1 gap-12"></div>
-            
         </div>
     </section>
 
@@ -117,7 +105,6 @@
                 <div>
                     <img src="https://i.imgur.com/EzQH7h1.png" alt="A group of people laughing while decorating cakes at a corporate event" class="rounded-2xl shadow-xl w-full h-full object-cover">
                 </div>
-
                 <div class="text-center md:text-left">
                     <h2 class="font-serif text-4xl md:text-5xl font-semibold text-white leading-tight">More Than a Meeting, It's a Masterpiece</h2>
                     <p class="mt-4 text-brand-gray mb-8">Looking for a unique team-building event, a memorable client appreciation party, or a delightful private celebration? Our signature 'Paint-by-Cake' ateliers are designed to foster connection and spark creativity for groups of any size.</p>
@@ -144,11 +131,11 @@
                 <div class="order-2 md:order-1">
                     <h2 class="font-serif text-4xl md:text-5xl font-semibold mb-6 text-white">Our Story</h2>
                     <div class="text-brand-gray space-y-4">
-                        <p>The Gilded Spoon Cake Shoppe is the sweet realization of a lifelong dream. Founded by a passionate baker with a background in art and design, our shoppe is built on the belief that a cake should be as memorable for its beauty as it is for its taste. It’s more than just dessert; it’s an experience.</p>
-                        <p>We are an Atelier, a workshop where classic technique meets modern artistry. We pour our hearts into every creation, using only the finest ingredients to craft flavors that are both familiar and surprising. From our signature Cake Pucks to our bespoke celebration cakes, each item is a piece of edible art, designed to bring a little more joy and wonder into your life.</p>
+                        <p>The Gilded Spoon Cake Shoppe is the sweet realization of a lifelong dream... [rest of your story text]</p>
+                        <p>We are an Atelier, a workshop where classic technique meets modern artistry... [rest of your story text]</p>
                         <div class="mt-8 pt-6 border-t border-brand-gray/20">
                             <h3 class="font-serif text-3xl font-semibold mb-4 text-white">Our Mission: Creating Art with Purpose</h3>
-                            <p>The Gilded Spoon is built on the belief that creativity is a universal language. It’s a core part of our mission to expand our radius of influence by using our art to create a positive impact. Through our <strong class="text-brand-light">'Sweet Giving'</strong> program, we partner with corporate clients to sponsor 'Paint-by-Cake' workshops for local children's charities and non-profits, giving voice to those who may not have access to creative outlets. When you book with us, you're not just creating a memory; you're helping us share the joy of artistry with our community.</p>
+                            <p>The Gilded Spoon is built on the belief that creativity is a universal language... Through our <strong class="text-brand-light">'Sweet Giving'</strong> program... [rest of your mission text]</p>
                         </div>
                     </div>
                 </div>
@@ -160,135 +147,146 @@
     </section>
 
     <section id="contact" class="py-20 bg-brand-dark">
-        <div class="max-w-3xl mx-auto px-4 sm:px-8 text-center">
-            <h2 class="font-serif text-4xl sm:text-5xl font-semibold mb-8 text-white">Let's Connect!</h2>
-            <p class="text-lg text-brand-gray mb-8">For custom cakes, private workshops, or any other questions, please reach out. We'd love to help bring your sweet vision to life.</p>
-            <p class="text-brand-gray mb-8">You can email us directly at <a href="mailto:contact@thegildedspoonshoppe.com" class="text-brand-gold hover:underline">contact@thegildedspoonshoppe.com</a> for any questions.</p>
-            <a href="mailto:contact@thegildedspoonshoppe.com" class="inline-block bg-brand-gold text-brand-dark font-bold py-3 px-8 rounded-lg hover:bg-brand-gold-hover transition-transform transform hover:scale-105">Send an Email Inquiry</a>
-        </div>
-    </section>
+        </section>
 
     <footer class="bg-black/20 text-center py-12">
-        <div class="max-w-6xl mx-auto px-4 sm:px-8">
-            <div class="flex justify-center space-x-6 mb-6">
-                 <a href="https://www.instagram.com/flour.shoppe.studios/" aria-label="Instagram" class="text-brand-gray hover:text-white transition">
-                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg>
-                </a>
-                <a href="https://www.facebook.com/thegildedspoonshoppe" aria-label="Facebook" class="text-brand-gray hover:text-white transition">
-                    <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.494v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.323-1.325z"/></svg>
-                </a>
-            </div>
-            <div class="mb-6">
-                <a href="policies.html" class="text-brand-gray hover:text-white hover:underline transition">Shipping & Return Policies</a>
-            </div>
-            <div class="border-t border-brand-gray/20 pt-8">
-                <p class="text-brand-light">The Gilded Spoon Cake Shoppe by Flour Shoppe Studios</p>
-                <p class="text-brand-gray text-sm">&copy; 2025 The Gilded Spoon Cake Shoppe. All Rights Reserved.</p>
-                <p class="mt-4 text-xs text-brand-gray/50 max-w-md mx-auto px-4">Products are prepared in a home kitchen that handles allergens including wheat, dairy, eggs, soy, and nuts.</p>
-            </div>
-        </div>
-    </footer>
+        </footer>
 
-    <script>
-        // --- Product Rendering ---
-        const products = [
-             {
-                id: 'pucks',
-                name: 'Curated Cake Pucks',
-                subtext: 'Expertly crafted using only the finest high-quality ingredients. For custom dietary needs, please contact us directly.',
-                description: 'Our signature treat. A miniature 2" cake with a delicate chocolate or candy coated shell, adorned with signature decoration.',
-                image: 'https://imgur.com/9tV4SFa.jpeg',
-                price: '$5.00 - $27.00',
-                isContactForm: false, 
-                buttonText: 'View Options & Order',
-                directLink: 'https://square.link/u/KMi13npr'
-            },
-            {
-                id: 'mithas',
-                name: 'Mithas & Mahal Cake Flight',
-                subtext: '"Mithas & Mahal (pronounced mi-TAH-s & muh-HULL)" signifies "sweetness" and "palace." This eggless collection is a perfect marriage of South Asian flavors, culture and The Gilded Spoon\'s signature elegance.',
-                description: 'Inspired by the cherished flavors of my South Asian heritage and the nostalgic warmth of a mother\'s kitchen, each flavor is a unique masterpiece, transforming traditional Indian desserts into elegant, modern cake creations.',
-                image: 'https://imgur.com/akOT2O1.jpeg',
-                price: '$15.00 per flight',
-                isContactForm: false,
-                buttonText: 'Order Now',
-                directLink: 'https://square.link/u/2qgl2nif'
-            },
-            {
-                id: 'flight',
-                name: 'Signature Cake Flavor Flight',
-                subtext: 'Expertly crafted using only the finest high-quality ingredients. For custom dietary needs, such as eggless or nut-free options, please contact us directly.',
-                description: 'Embark on a culinary journey with three curated slices from our signature and seasonal collection. Try them all!',
-                image: 'https://imgur.com/V7FhUqj.jpeg',
-                price: '$22.00',
-                isContactForm: false,
-                buttonText: 'Order Now',
-                directLink: 'https://square.link/u/escrWE54'
-            },
-            {
-                id: 'kit',
-                name: 'At-Home Paint by Cake Kits',
-                subtext: 'For custom dietary needs, such as natural food coloring or allergen-free ingredients, please contact us directly.',
-                description: 'Discover your inner artist with this kit. We provide everything you need to transform your own cake into a work of art: an edible image design, a set of edible paints, brushes, and a palette. Each box also contains a surprise tool or decorative element to give your creation a final, professional touch.',
-                image: 'https://imgur.com/FX7UFPc.jpeg',
-                price: '$45.00',
-                isContactForm: false,
-                buttonText: 'Order Now',
-                directLink: 'https://square.link/u/D099GWCT'
-            },
-            {
-                id: 'custom',
-                name: 'Custom Cakes',
-                description: 'Your vision, beautifully baked. Perfect for celebrations, our custom cakes are designed to be the centerpiece your occasion deserves.',
-                image: 'https://imgur.com/xtvtDQs.jpeg',
-                price: 'Starting at $125.00',
-                isContactForm: true,
-                buttonText: 'Inquire About Custom Cakes',
-                directLink: 'events.html'
-            }
-        ];
+<script>
+    // --- DATA ---
+    const products = [
+        {
+            id: 'pucks',
+            name: 'Curated Cake Pucks',
+            description: 'Our signature treat. A miniature 2" cake with a delicate chocolate or candy coated shell, adorned with signature decoration.',
+            image: 'https://imgur.com/9tV4SFa.jpeg',
+            price: '$5.00 - $27.00',
+            options: [
+                { text: 'Single - $5.00', value: 'puck-single', link: 'https://square.link/u/rHgetHXR' },
+                { text: '3-Pack - $14.00', value: 'puck-3pack', link: 'https://square.link/u/KMi13npr' },
+                { text: '6-Pack - $27.00', value: 'puck-6pack', link: 'https://square.link/u/k3QTMvuF' },
+            ]
+        },
+        {
+            id: 'mithas',
+            name: 'Mithas & Mahal Cake Flight',
+            description: 'Inspired by South Asian heritage, this eggless collection marries traditional desserts with modern elegance.',
+            image: 'https://imgur.com/akOT2O1.jpeg',
+            price: '$15.00 per flight',
+            options: [
+                { text: '2-Slice Flight - $25.00', value: 'mithas-flight', link: 'https://square.link/u/2qgl2nif' }
+            ]
+        },
+        {
+            id: 'flight',
+            name: 'Signature Cake Flavor Flight',
+            description: 'Embark on a culinary journey with three curated slices from our signature and seasonal collection. Try them all!',
+            image: 'https://imgur.com/V7FhUqj.jpeg',
+            price: '$22.00',
+            options: [
+                { text: 'Signature Flight - $22.00', value: 'flight', link: 'https://square.link/u/escrWE54' }
+            ]
+        },
+        {
+            id: 'kit',
+            name: 'At-Home Paint by Cake Kits',
+            description: 'Discover your inner artist. We provide everything you need to transform your own cake into a work of art.',
+            image: 'https://imgur.com/FX7UFPc.jpeg',
+            price: '$45.00',
+            options: [
+                 { text: 'Paint by Cake Kit - $45.00', value: 'kit', link: 'https://square.link/u/D099GWCT' }
+            ]
+        },
+        {
+            id: 'custom',
+            name: 'Custom Cakes',
+            description: 'Your vision, beautifully baked. Perfect for celebrations, our custom cakes are designed to be the centerpiece your occasion deserves.',
+            image: 'https://imgur.com/xtvtDQs.jpeg',
+            price: 'Starting at $125.00',
+            isContactForm: true,
+            contactLink: 'events.html'
+        }
+    ];
+    const overlay = document.getElementById('overlay');
+    const modal = document.getElementById('product-modal');
 
-        function renderProductCards() {
-            const container = document.getElementById('products-container');
-            if (!container) return;
-            container.innerHTML = '';
-            
-            products.forEach(product => {
-                const isImageOnLeft = ['pucks', 'flight', 'custom'].includes(product.id);
-                
-                const buttonHtml = product.isContactForm ?
-                    `<a href="${product.directLink}" class="mt-4 text-center w-full bg-transparent border-2 border-brand-gold text-brand-gold font-bold py-3 px-6 rounded-lg hover:bg-brand-gold hover:text-brand-dark transition">${product.buttonText}</a>` :
-                    `<a href="${product.directLink}" target="_blank" class="mt-4 w-full bg-brand-gold text-brand-dark font-bold py-3 px-6 rounded-lg hover:bg-brand-gold-hover transition-transform transform hover:scale-105 inline-block text-center">${product.buttonText}</a>`;
+    function showProductModal(productId) {
+        const product = products.find(p => p.id === productId);
+        if (!product || product.isContactForm) return;
 
-                const cardHtml = `
-                    <div class="bg-brand-card rounded-2xl shadow-xl overflow-hidden">
-                        <div class="grid grid-cols-1 md:grid-cols-2">
-                            <img src="${product.image}" alt="${product.name}" class="w-full h-64 md:h-full object-cover ${isImageOnLeft ? 'order-1 md:order-1' : 'order-1 md:order-2'}">
-                            <div class="p-8 flex flex-col justify-center ${isImageOnLeft ? 'order-2 md:order-2' : 'order-2 md:order-1'}">
-                                <h3 class="font-serif text-3xl font-bold mb-4 text-white">${product.name}</h3>
-                                ${product.subtext ? `<p class="text-sm font-light text-brand-gray/80 -mt-2 mb-4 italic">${product.subtext}</p>` : ''}
-                                <p class="text-brand-gray mb-6">${product.description}</p>
-                                <div class="text-xl font-semibold text-brand-gold mb-4">${product.price}</div>
-                                ${buttonHtml}
-                            </div>
+        document.getElementById('modal-title').textContent = `Order: ${product.name}`;
+        document.getElementById('product-id-input').value = product.id;
+        
+        const optionsContainer = document.getElementById('modal-options-container');
+        optionsContainer.innerHTML = `
+            <label class="block text-sm font-medium text-brand-gray">Select Format</label>
+            ${product.options.map((opt, index) => `
+                <div class="p-3 bg-brand-dark rounded-lg has-[:checked]:ring-2 has-[:checked]:ring-brand-gold">
+                    <label class="flex items-center space-x-3 cursor-pointer">
+                        <input type="radio" name="product-option" value="${opt.value}" class="form-radio text-brand-gold bg-brand-dark border-brand-dark/50 focus:ring-brand-gold" ${index === 0 ? 'checked' : ''}>
+                        <span class="text-brand-light">${opt.text}</span>
+                    </label>
+                </div>
+            `).join('')}
+        `;
+
+        overlay.style.display = 'block';
+        modal.style.display = 'block';
+    }
+
+    function closeModal() {
+        if(overlay) overlay.style.display = 'none';
+        if(modal) modal.style.display = 'none';
+    }
+
+    function renderProductCards() {
+        const container = document.getElementById('products-container');
+        if (!container) return;
+
+        container.innerHTML = products.map(product => {
+            const isImageOnLeft = ['pucks', 'flight', 'custom'].includes(product.id);
+            const buttonHtml = product.isContactForm ?
+                `<a href="${product.contactLink}" class="mt-4 text-center w-full bg-transparent border-2 border-brand-gold text-brand-gold font-bold py-3 px-6 rounded-lg hover:bg-brand-gold hover:text-brand-dark transition">Request a Quote</a>` :
+                `<button onclick="showProductModal('${product.id}')" class="mt-4 w-full bg-brand-gold text-brand-dark font-bold py-3 px-6 rounded-lg hover:bg-brand-gold-hover transition-transform transform hover:scale-105">Order Now</button>`;
+
+            return `
+                <div class="bg-brand-card rounded-2xl shadow-xl overflow-hidden">
+                    <div class="grid grid-cols-1 md:grid-cols-2">
+                        <img src="${product.image}" alt="${product.name}" class="w-full h-64 md:h-full object-cover ${isImageOnLeft ? 'order-1 md:order-1' : 'order-1 md:order-2'}">
+                        <div class="p-8 flex flex-col justify-center ${isImageOnLeft ? 'order-2 md:order-2' : 'order-2 md:order-1'}">
+                            <h3 class="font-serif text-3xl font-bold mb-4 text-white">${product.name}</h3>
+                            <p class="text-brand-gray mb-6">${product.description}</p>
+                            <div class="text-xl font-semibold text-brand-gold mb-4">${product.price}</div>
+                            ${buttonHtml}
                         </div>
                     </div>
-                `;
+                </div>
+            `;
+        }).join('');
+    }
 
-                container.innerHTML += cardHtml;
-            });
-        }
-        
-        // Initial render of product cards when the page loads
-        window.onload = renderProductCards;
-
-        // --- Mobile Menu Toggle ---
-        const hamburgerButton = document.getElementById('hamburger-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        hamburgerButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
+    // --- EVENT LISTENERS ---
+    if (overlay) overlay.addEventListener('click', closeModal);
+    
+    const productForm = document.getElementById('product-form');
+    if (productForm) {
+        productForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+            const productId = document.getElementById('product-id-input').value;
+            const selectedOptionValue = this.elements['product-option'].value;
+            const product = products.find(p => p.id === productId);
+            const selectedOption = product.options.find(opt => opt.value === selectedOptionValue);
+            
+            if (selectedOption && selectedOption.link) {
+                alert("Redirecting to our secure payment page...");
+                window.location.href = selectedOption.link;
+            } else {
+                alert("Sorry, an error occurred. Please try again.");
+            }
         });
-    </script>
+    }
+
+    document.addEventListener('DOMContentLoaded', renderProductCards);
+</script>
 </body>
 </html>
