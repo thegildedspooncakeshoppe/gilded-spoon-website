@@ -34,7 +34,7 @@
     </script>
     <style>
         body { background-color: #0A2342; color: #F4F1ED; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-        .header-bg { background-image: linear-gradient(rgba(10, 35, 66, 0.8), rgba(10, 35, 66, 0.8)), url('https://i.imgur.com/Z3QNyz1.png'); background-size: cover; background-position: center; }
+        .header-bg { background-image: linear-gradient(rgba(10, 35, 66, 0.8), rgba(10, 35, 66, 0.8)), url('https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1500&q=80'); background-size: cover; background-position: center; }
         .modal { display: none; position: fixed; z-index: 1000; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 90%; max-width: 480px; }
         .overlay { display: none; position: fixed; z-index: 999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); }
     </style>
@@ -56,7 +56,7 @@
         </form>
     </div>
 
-    <nav class="sticky top-0 bg-brand-navy/80 backdrop-blur-lg shadow-lg z-50">
+     <nav class="sticky top-0 bg-brand-navy/80 backdrop-blur-lg shadow-lg z-50">
         <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
             <a href="index.html" class="text-2xl font-serif font-bold text-brand-gold text-center leading-none">
                 The Gilded Spoon
@@ -70,6 +70,19 @@
                 <a href="#our-story" class="text-brand-light hover:text-brand-gold transition">Our Story</a>
                 <a href="mailto:contact@thegildedspoonshoppe.com?subject=Website%20Inquiry&body=Hello%20Gilded%20Spoon%20Team,%0D%0A%0D%0AI'd%20like%20to%20inquire%20about..." class="text-brand-light hover:text-brand-gold transition">Contact</a>
             </div>
+            <div class="md:hidden">
+                <button id="hamburger-button" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden mt-4 px-4">
+            <a href="#products" class="block py-2 px-4 text-sm text-brand-light hover:bg-brand-card rounded">Cake Collection</a>
+            <a href="flavors.html" class="block py-2 px-4 text-sm text-brand-light hover:bg-brand-card rounded">Flavor Library</a>
+            <a href="events.html" class="block py-2 px-4 text-sm text-brand-light hover:bg-brand-card rounded">Private Events</a>
+            <a href="partnerships.html" class="block py-2 px-4 text-sm text-brand-light hover:bg-brand-card rounded">Partnerships</a>
+            <a href="#our-story" class="block py-2 px-4 text-sm text-brand-light hover:bg-brand-card rounded">Our Story</a>
+            <a href="mailto:contact@thegildedspoonshoppe.com?subject=Website%20Inquiry&body=Hello%20Gilded%20Spoon%20Team,%0D%0A%0D%0AI'd%20like%20to%20inquire%20about..." class="block py-2 px-4 text-sm text-brand-light hover:bg-brand-card rounded">Contact</a>
         </div>
     </nav>
 
