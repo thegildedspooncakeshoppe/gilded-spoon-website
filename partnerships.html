@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner With Us - The Gilded Spoon Cake Shoppe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Playfair+Display:wght@400;600;700&family=Parisienne&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --color-primary: #0A2342; /* Navy */
+            --color-secondary: #004D40; /* Dark Teal / Forest Green */
+            --color-accent: #D4AF37;   /* Gold */
+            --color-background: #FAF6F0; /* Cream */
+            --color-card-bg: #F4E8E8; /* Blush */
+            --color-text-body: #3D3D3D; /* Soft Black */
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Lato', sans-serif;
+            --font-script: 'Parisienne', cursive;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: var(--font-body);
+            color: var(--color-text-body);
+            background-color: var(--color-background);
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            color: var(--color-primary);
+        }
+        .script-font {
+            font-family: var(--font-script);
+        }
+        .brand-text {
+             color: var(--color-secondary);
+        }
+        .accent-bg {
+            background-color: var(--color-accent);
+        }
+        /* Nav Styles */
+        nav {
+            background-color: var(--color-primary);
+            color: var(--color-background);
+        }
+        nav a {
+            transition: color 0.3s ease;
+        }
+        nav a:hover {
+            color: var(--color-accent);
+        }
+        /* Video Section Style */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+            border-radius: 0.5rem;
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        /* Card Hover Effect */
+        .partner-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .partner-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+        }
+        /* Modal Styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed;
+            z-index: 50;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.6);
+            animation: fadeIn 0.3s ease-in-out;
+        }
+        .modal-content {
+            background-color: var(--color-background);
+            margin: 10% auto;
+            padding: 2.5rem;
+            border-top: 8px solid var(--color-accent);
+            width: 90%;
+            max-width: 600px;
+            border-radius: 0.5rem;
+            position: relative;
+            animation: slideIn 0.4s ease-in-out;
+        }
+        .close-button {
+            color: #aaa;
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        .close-button:hover,
+        .close-button:focus {
+            color: var(--color-text-body);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body class="w-full">
+
+    <!-- Navigation Menu -->
+    <nav class="sticky top-0 z-40 shadow-md">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="flex justify-between items-center h-16">
+                <div class="text-2xl font-bold tracking-wider" style="font-family: var(--font-heading);">The Gilded Spoon</div>
+                <div class="flex space-x-8 text-lg font-semibold">
+                    <a href="https://thegildedspoonshoppe.com">Home</a>
+                    <a href="#partners">Partnerships</a>
+                    <a href="#contact">Inquire Now</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="w-full max-w-5xl mx-auto p-6 md:p-12">
+        <!-- Introduction -->
+        <section class="text-center pt-16 mb-16">
+            <h1 class="text-4xl md:text-6xl font-bold">Partner With Us</h1>
+            <p class="script-font text-2xl brand-text mt-2">Let's create something sweet together.</p>
+            <p class="mt-6 max-w-3xl mx-auto text-lg">
+                At The Gilded Spoon, we believe in the power of connection—whether it's between team members, a brand and its audience, or a business and its community. We offer unique, turn-key partnership opportunities designed to deliver memorable experiences and meaningful impact. Explore how we can work together.
+            </p>
+        </section>
+
+        <!-- Video Section -->
+        <section class="mb-20">
+            <div class="bg-white p-8 rounded-lg shadow-lg">
+                <h2 class="text-center text-3xl md:text-4xl font-bold mb-6">A Taste of the Experience</h2>
+                <div class="video-container shadow-inner">
+                    <!-- Replace this iframe with your own video embed code from YouTube or Vimeo -->
+                    <iframe src="https://www.youtube.com/embed/fKa-i6w-tG8?si=lVfU9XvCg2dFjRzY&autoplay=1&mute=1&loop=1&playlist=fKa-i6w-tG8&controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Partnership Grid -->
+        <section id="partners" class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+
+            <!-- Corporate Partners -->
+            <div class="partner-card bg-white p-8 rounded-lg shadow-lg flex flex-col items-center text-center">
+                <div class="accent-bg p-4 rounded-full">
+                    <svg class="h-8 w-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.07a2.25 2.25 0 01-2.25 2.25H5.97a2.25 2.25 0 01-2.25-2.25v-4.07a2.25 2.25 0 012.25-2.25h1.5a2.25 2.25 0 012.25 2.25v.075a2.25 2.25 0 01-2.25 2.25h-1.5m11.25-8.25v-1.5a2.25 2.25 0 00-2.25-2.25H5.97a2.25 2.25 0 00-2.25 2.25v1.5m11.25 0h-1.5a2.25 2.25 0 00-2.25 2.25v.075a2.25 2.25 0 002.25 2.25h1.5m-11.25 0h-1.5a2.25 2.25 0 00-2.25 2.25v.075a2.25 2.25 0 002.25 2.25h1.5" />
+                    </svg>
+                </div>
+                <h2 class="text-3xl font-bold mt-6">Corporate Partners</h2>
+                <p class="mt-4 flex-grow">Elevate your team-building and corporate social responsibility with a premium, mindful experience that delivers measurable impact in employee morale and community engagement.</p>
+                <button class="learn-more-btn mt-6 font-bold py-2 px-6 rounded-full text-white accent-bg hover:opacity-90 transition-opacity" data-partner-type="corporate">Learn More</button>
+            </div>
+
+            <!-- Community & Healthcare -->
+            <div class="partner-card bg-white p-8 rounded-lg shadow-lg flex flex-col items-center text-center">
+                <div class="accent-bg p-4 rounded-full">
+                    <svg class="h-8 w-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+                    </svg>
+                </div>
+                <h2 class="text-3xl font-bold mt-6">Community & Healthcare</h2>
+                <p class="mt-4 flex-grow">Become an official beneficiary of our "Sweet Giving" initiative. We partner with non-profits and hospitals to provide fully-funded, therapeutic art workshops for your community.</p>
+                <button class="learn-more-btn mt-6 font-bold py-2 px-6 rounded-full text-white accent-bg hover:opacity-90 transition-opacity" data-partner-type="community">Learn More</button>
+            </div>
+
+            <!-- Event Planners -->
+            <div class="partner-card bg-white p-8 rounded-lg shadow-lg flex flex-col items-center text-center">
+                <div class="accent-bg p-4 rounded-full">
+                    <svg class="h-8 w-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" />
+                    </svg>
+                </div>
+                <h2 class="text-3xl font-bold mt-6">Event Planners</h2>
+                <p class="mt-4 flex-grow">Offer your clients something truly unique. Our luxury, turn-key atelier is the perfect addition to bridal showers, birthdays, and rehearsal dinners. Make your job easier and delight your clients.</p>
+                <button class="learn-more-btn mt-6 font-bold py-2 px-6 rounded-full text-white accent-bg hover:opacity-90 transition-opacity" data-partner-type="planner">Learn More</button>
+            </div>
+
+            <!-- Influencers -->
+            <div class="partner-card bg-white p-8 rounded-lg shadow-lg flex flex-col items-center text-center">
+                <div class="accent-bg p-4 rounded-full">
+                    <svg class="h-8 w-8 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                         <path stroke-linecap="round" stroke-linejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.175C2.811 7.58 2 8.62 2 9.773V12l10 5 10-5v-2.227c0-1.152-.811-2.193-1.925-2.368a48.108 48.108 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.776 48.776 0 00-5.232 0 2.192 2.192 0 00-1.736 1.039l-.821 1.316z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008v-.008z" />
+                    </svg>
+                </div>
+                <h2 class="text-3xl font-bold mt-6">Influencers & Media</h2>
+                <p class="mt-4 flex-grow">Create stunning, authentic content with a story to tell. We partner with influencers through a value-exchange model, offering a luxury experience for you and your audience.</p>
+                <button class="learn-more-btn mt-6 font-bold py-2 px-6 rounded-full text-white accent-bg hover:opacity-90 transition-opacity" data-partner-type="influencer">Learn More</button>
+            </div>
+
+        </section>
+
+        <!-- CTA -->
+        <section id="contact" class="text-center mt-20 py-12" style="background-color: var(--color-card-bg); border-radius: 0.5rem;">
+             <p class="script-font text-2xl brand-text">Let's start a conversation</p>
+            <h2 class="text-4xl font-bold">Ready to Collaborate?</h2>
+            <p class="mt-4 max-w-2xl mx-auto text-lg">We'd love to hear your ideas. Reach out to our partnerships team to start designing a unique experience together.</p>
+            <a href="mailto:letspartner@thegildedspoonshoppe.com" class="mt-8 inline-block font-bold text-lg py-3 px-8 rounded-full text-white accent-bg hover:opacity-90 transition-opacity">Contact Us</a>
+            <p class="mt-4 text-sm brand-text">letspartner@thegildedspoonshoppe.com</p>
+        </section>
+
+    </main>
+
+    <footer class="text-center py-6 mt-12 border-t" style="border-color: var(--color-card-bg);">
+        <p>&copy; 2025 The Gilded Spoon Shoppe. All Rights Reserved.</p>
+    </footer>
+
+    <!-- The Modal -->
+    <div id="partnershipModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2 id="modalTitle" class="text-3xl font-bold mb-4"></h2>
+            <div id="modalBody" class="text-lg space-y-4"></div>
+            <!-- New Contact Button in Modal -->
+            <a href="#contact" id="modalContactBtn" class="mt-8 inline-block font-bold text-base py-2 px-6 rounded-full text-white accent-bg hover:opacity-90 transition-opacity">Start a Conversation</a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('partnershipModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalBody = document.getElementById('modalBody');
+            const modalContactBtn = document.getElementById('modalContactBtn');
+            const closeButton = document.querySelector('.close-button');
+            const learnMoreButtons = document.querySelectorAll('.learn-more-btn');
+
+            const modalContent = {
+                corporate: {
+                    title: 'Benefits for Corporate Partners',
+                    body: `
+                        <p>Elevate your team beyond trust falls and happy hours. Our Atelier is a sophisticated experience designed to foster authentic connection and creativity.</p>
+                        <ul class="list-disc list-inside space-y-2 mt-4">
+                            <li><strong>Boost Morale & Reduce Stress:</strong> A mindful, low-pressure activity that allows your team to relax and engage.</li>
+                            <li><strong>Turn-Key CSR:</strong> The Community Package automatically funds a workshop for a local child, providing you with a powerful story of community impact.</li>
+                            <li><strong>Measurable Impact:</strong> Receive a personalized Impact Report to showcase your company's social responsibility in annual reports and internal communications.</li>
+                        </ul>
+                        <p class="mt-4 font-bold">Ready to build your team and your community?</p>
+                    `
+                },
+                community: {
+                    title: 'A Partnership for Our Community',
+                    body: `
+                        <p>As a designated partner of our "Sweet Giving" initiative, you gain access to a new stream of high-quality arts programming at no cost to your organization.</p>
+                         <ul class="list-disc list-inside space-y-2 mt-4">
+                            <li><strong>Zero Cost, All Benefit:</strong> All workshops are fully funded by our corporate partners. There is no financial obligation for you.</li>
+                            <li><strong>Low Burden on Your Staff:</strong> We are a turn-key partner. Our team, led by a retired Nurse (LVN), handles all logistics, materials, and facilitation.</li>
+                            <li><strong>Leverage Our Network:</strong> By joining our roster, we can actively seek corporate funding on your behalf, raising your visibility in the corporate community.</li>
+                        </ul>
+                        <p class="mt-4 font-bold">Ready to bring a new, creative experience to the people you serve?</p>
+                    `
+                },
+                planner: {
+                    title: 'An Unforgettable Client Experience',
+                    body: `
+                        <p>Differentiate your services by offering a unique, luxury experience that your competitors aren't. We make you look brilliant with zero extra effort.</p>
+                         <ul class="list-disc list-inside space-y-2 mt-4">
+                            <li><strong>Delight Your Clients:</strong> The Atelier is a sophisticated, memorable, and highly photogenic activity perfect for bridal showers, milestone birthdays, and rehearsal dinners.</li>
+                            <li><strong>Flawless Execution:</strong> We are a professional, all-inclusive partner. We handle everything from setup to cleanup, ensuring a seamless experience.</li>
+                            <li><strong>Preferred Partner Benefits:</strong> We value our planner partnerships and offer a commission on booked events, as well as a complimentary tasting experience for you and your team.</li>
+                        </ul>
+                         <p class="mt-4 font-bold">Ready to offer the most unique and personal events in DFW?</p>
+                    `
+                },
+                influencer: {
+                    title: 'Create Beautiful, Authentic Content',
+                    body: `
+                        <p>We believe in authentic partnerships, not paid ads. We offer a true value exchange that benefits you, your audience, and our community.</p>
+                         <ul class="list-disc list-inside space-y-2 mt-4">
+                            <li><strong>A Story-Rich Experience:</strong> Our Atelier is more than a product; it's a personal journey of self-expression, resulting in stunning and unique content.</li>
+                            <li><strong>Value for Your Audience:</strong> Through affiliate codes or giveaways, you can offer your followers a genuine benefit and a chance to experience something new.</li>
+                            <li><strong>A Deeper Narrative:</strong> Every event we do has a social impact story built in, adding a layer of purpose and authenticity to our collaboration.</li>
+                        </ul>
+                        <p class="mt-4 font-bold">Ready to create content that's as meaningful as it is beautiful?</p>
+                    `
+                }
+            };
+
+            const closeModal = () => {
+                modal.style.display = 'none';
+            }
+
+            learnMoreButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const partnerType = button.dataset.partnerType;
+                    const content = modalContent[partnerType];
+                    
+                    if (content) {
+                        modalTitle.textContent = content.title;
+                        modalBody.innerHTML = content.body;
+                        modal.style.display = 'block';
+                    }
+                });
+            });
+
+            closeButton.onclick = closeModal;
+            modalContactBtn.onclick = closeModal;
+
+            window.onclick = (event) => {
+                if (event.target == modal) {
+                    closeModal();
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
+
