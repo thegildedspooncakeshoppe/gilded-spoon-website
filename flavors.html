@@ -19,6 +19,7 @@
                         'brand-gold-hover': '#E2C76A',
                         'brand-gray': '#A09DA6',
                         'brand-card': '#2A232F',
+                        'brand-navy': '#0A2342',
                     },
                     fontFamily: {
                         'serif': ['"Playfair Display"', 'serif'],
@@ -29,15 +30,13 @@
         }
     </script>
     <style>
-        body { background-color: #1C161E; color: #F4F1ED; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        body { background-color: #0A2342; color: #F4F1ED; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
         .tab-button { transition: all 0.3s ease; }
         .tab-button.active { color: #D4AF37; border-color: #D4AF37; }
         .collection-section { display: none; }
         .collection-section.active { display: block; }
         .modal { display: none; position: fixed; z-index: 1000; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 90%; max-width: 480px; }
         .overlay { display: none; position: fixed; z-index: 999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); }
-        .footer-link:hover {
-            color: var(--color-accent)
     </style>
 </head>
 <body class="font-sans">
@@ -53,38 +52,36 @@
         </div>
     </div>
 
-
-    <nav class="sticky top-0 bg-brand-dark/80 backdrop-blur-lg shadow-lg z-50">
-        <div class="max-w-6xl mx-auto px-4 py-4">
-            <div class="flex justify-between items-center">
-                <a href="index.html" class="text-2xl font-serif font-bold text-brand-gold text-center leading-none">
-                    The Gilded Spoon
-                    <span class="block text-xs font-sans font-light not-italic tracking-[0.3em]">CAKE SHOPPE</span>
-                </a>
-                <div class="hidden md:flex items-center space-x-8 font-medium">
-                    <a href="index.html" class="text-brand-white hover:text-brand-gold transition">Home</a>
-                    <a href="index.html#products" class="text-brand-white hover:text-brand-gold transition">Cake Collection</a>
-                    <a href="events.html" class="text-brand-white hover:text-brand-gold transition">Private Events</a>
-                    <a href="mailto:contact@thegildedspoonshoppe.com" class="text-brand-white hover:text-brand-gold transition">Contact</a>
-
-            
-                </div>
-                <div class="md:hidden">
-                    <button id="hamburger-button" class="text-white focus:outline-none">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                    </button>
-                </div>
+    <nav class="sticky top-0 bg-brand-navy/80 backdrop-blur-lg shadow-lg z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-serif font-bold text-brand-gold text-center leading-none">
+                The Gilded Spoon
+                <span class="block text-xs font-sans font-light not-italic tracking-[0.3em]">CAKE SHOPPE</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8 font-medium">
+                <a href="index.html#products" class="text-brand-light hover:text-brand-gold transition">Cake Collection</a>
+                <a href="flavors.html" class="text-brand-gold hover:text-brand-gold transition">Flavor Library</a>
+                <a href="events.html" class="text-brand-light hover:text-brand-gold transition">Private Events</a>
+                <a href="partnerships.html" class="text-brand-light hover:text-brand-gold transition">Partnerships</a>
+                <a href="index.html#our-story" class="text-brand-light hover:text-brand-gold transition">Our Story</a>
+                <a href="mailto:contact@thegildedspoonshoppe.com" class="text-brand-light hover:text-brand-gold transition">Contact</a>
             </div>
-            <div id="mobile-menu" class="hidden md:hidden mt-4">
-                <a href="index.html" class="block py-2 px-4 text-sm text-brand-light hover:bg-brand-card rounded">Home</a>
-                <a href="index.html#products" class="block py-2 px-4 text-sm text-brand-light hover:bg-brand-card rounded">Cake Collection</a>
-                <a href="events.html" class="block py-2 px-4 text-sm text-brand-light hover:bg-brand-card rounded">Private Events</a>
-                <a href="mailto:contact@thegildedspoonshoppe.com" class="block py-2 px-4 text-sm text-brand-light hover:bg-brand-card rounded">Contact</a>
+             <div class="md:hidden">
+                <button id="hamburger-button" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
             </div>
-        </div> 
+        </div>
+         <div id="mobile-menu" class="hidden md:hidden mt-4">
+            <a href="index.html" class="block py-2 px-4 text-sm text-brand-light hover:bg-brand-card rounded">Home</a>
+            <a href="index.html#products" class="block py-2 px-4 text-sm text-brand-light hover:bg-brand-card rounded">Cake Collection</a>
+            <a href="events.html" class="block py-2 px-4 text-sm text-brand-light hover:bg-brand-card rounded">Private Events</a>
+             <a href="partnerships.html" class="block py-2 px-4 text-sm text-brand-light hover:bg-brand-card rounded">Partnerships</a>
+            <a href="mailto:contact@thegildedspoonshoppe.com" class="block py-2 px-4 text-sm text-brand-light hover:bg-brand-card rounded">Contact</a>
+        </div>
     </nav>
 
-    <header class="text-center py-16 bg-brand-card">
+    <header class="text-center py-16 bg-brand-card/50 border-b border-brand-gold/20">
         <div class="max-w-4xl mx-auto px-4">
             <h1 class="font-serif text-5xl font-bold text-white leading-tight">Our Flavor Library</h1>
             <p class="text-lg text-brand-light font-light mt-3 max-w-2xl mx-auto">Welcome to our gallery of taste. Each flavor is a story, meticulously developed to evoke a memory, a season, or a sense of wonder. Explore our creations below.</p>
@@ -96,32 +93,32 @@
 
             <section class="mb-16">
                  <div class="text-center mb-12">
-                    <h2 class="font-serif text-4xl font-semibold text-white">Featured Flavors</h2>
-                    <p class="text-brand-gray mt-2 max-w-2xl mx-auto">A curated glimpse into our world of flavor—from our permanent classics to fleeting seasonal joys.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <div class="bg-brand-card p-8 rounded-2xl text-center flex flex-col">
-                        <h3 class="font-serif text-3xl text-brand-gold mb-4">The Signatures</h3>
-                        <p class="text-brand-gray text-sm mb-4">Our most-loved, permanent collection classics.</p>
-                        <div id="signature-list" class="space-y-3 text-brand-light font-serif flex-grow">
-                            </div>
+                     <h2 class="font-serif text-4xl font-semibold text-white">Featured Flavors</h2>
+                     <p class="text-brand-gray mt-2 max-w-2xl mx-auto">A curated glimpse into our world of flavor—from our permanent classics to fleeting seasonal joys.</p>
+                 </div>
+                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                     <div class="bg-brand-card/50 border border-brand-gold/20 p-8 rounded-2xl text-center flex flex-col">
+                         <h3 class="font-serif text-3xl text-brand-gold mb-4">The Signatures</h3>
+                         <p class="text-brand-gray text-sm mb-4">Our most-loved, permanent collection classics.</p>
+                         <div id="signature-list" class="space-y-3 text-brand-light font-serif flex-grow">
+                         </div>
                          <button data-scroll-to-tab="signature-collection" class="mt-6 inline-block border-2 border-brand-gold text-brand-gold font-bold py-2 px-6 rounded-lg hover:bg-brand-gold hover:text-brand-dark transition">View All Signatures</button>
-                    </div>
-                    <div class="bg-brand-card p-8 rounded-2xl text-center flex flex-col border-2 border-brand-gold/50">
-                        <h3 class="font-serif text-3xl text-white mb-4">Available Now</h3>
-                        <p class="text-brand-gray text-sm mb-4">These select flavors are available for immediate online order.</p>
-                        <div id="seasonal-list" class="space-y-3 text-brand-light font-serif flex-grow">
-                            </div>
-                        <a href="https://the-gilded-spoon.square.site/s/shop" target="_blank" class="mt-6 inline-block bg-brand-gold text-brand-dark font-bold py-2 px-6 rounded-lg hover:bg-brand-gold-hover transition">Order Online</a>
-                    </div>
-                     <div class="bg-brand-card p-8 rounded-2xl text-center flex flex-col">
-                        <h3 class="font-serif text-3xl text-brand-gold mb-4">Curated Mithai Dabba</h3>
-                         <p class="text-brand-gray text-sm mb-4">A tribute to my mother’s kitchen, where fragrant spices and cherished memories are baked into every layer.</p>
-                        <div id="mithas-mahal-list" class="space-y-3 text-brand-light font-serif flex-grow">
-                            </div>
-                         <button data-scroll-to-tab="mithas-mahal-collection" class="mt-6 inline-block border-2 border-brand-gold text-brand-gold font-bold py-2 px-6 rounded-lg hover:bg-brand-gold hover:text-brand-dark transition">View the Collection</button>
-                    </div>
-                </div>
+                     </div>
+                     <div class="bg-brand-card/50 border border-brand-gold/20 p-8 rounded-2xl text-center flex flex-col">
+                         <h3 class="font-serif text-3xl text-white mb-4">Available Now</h3>
+                         <p class="text-brand-gray text-sm mb-4">These select flavors are available for immediate online order.</p>
+                         <div id="seasonal-list" class="space-y-3 text-brand-light font-serif flex-grow">
+                         </div>
+                         <a href="https://the-gilded-spoon.square.site/s/shop" target="_blank" class="mt-6 inline-block bg-brand-gold text-brand-dark font-bold py-2 px-6 rounded-lg hover:bg-brand-gold-hover transition">Order Online</a>
+                     </div>
+                      <div class="bg-brand-card/50 border border-brand-gold/20 p-8 rounded-2xl text-center flex flex-col">
+                         <h3 class="font-serif text-3xl text-brand-gold mb-4">Curated Mithai Dabba</h3>
+                          <p class="text-brand-gray text-sm mb-4">A tribute to my mother’s kitchen, where fragrant spices and cherished memories are baked into every layer.</p>
+                         <div id="mithas-mahal-list" class="space-y-3 text-brand-light font-serif flex-grow">
+                         </div>
+                         <button data-scroll-to-tab="curated-mithai-dabba" class="mt-6 inline-block border-2 border-brand-gold text-brand-gold font-bold py-2 px-6 rounded-lg hover:bg-brand-gold hover:text-brand-dark transition">View the Collection</button>
+                     </div>
+                 </div>
             </section>
             
             <hr class="my-16 border-brand-gray/20">
@@ -133,254 +130,247 @@
                 </div>
                 
                 <div id="tab-buttons" class="flex flex-wrap justify-center gap-x-6 gap-y-3 border-b border-brand-gray/20 mb-12">
-                    </div>
+                </div>
 
                 <div id="collections-container" class="space-y-12">
-                    </div>
+                </div>
             </section>
 
             <hr class="my-16 border-brand-gray/20">
 
             <section id="notes">
                  <div class="text-center bg-brand-card/50 border border-brand-gold/20 rounded-2xl p-10">
-                    <h2 class="font-serif text-4xl font-semibold text-white mb-8">From the Atelier</h2>
-                    <p class="text-brand-light text-lg mb-10 max-w-3xl mx-auto leading-relaxed">Beyond the oven, there's a world of creativity and tradition that shapes every cake we make. Here's a glimpse into the artistry and thoughtful details that define The Gilded Spoon.</p>
-                    <div class="grid md:grid-cols-2 gap-10 text-left">
-                        <div>
-                            <h3 class="font-serif text-2xl text-brand-gold mb-4">Perfect Pairings</h3>
-                            <p class="text-brand-light mb-4">Great cake is even better with the right companion. Here are a few of our favorite suggestions:</p>
-                            <ul class="space-y-3 text-brand-light">
-                                <li><strong class="font-semibold">For Fruity & Floral Cakes:</strong> Try a crisp, dry Prosecco or a sparkling Rosé. A non-alcoholic elderflower pressé or iced hibiscus tea is also a wonderful match.</li>
-                                <li><strong class="font-semibold">For Rich & Chocolatey Cakes:</strong> A bold coffee or a smooth cold brew cuts through the richness beautifully. For an evening treat, a Cabernet Sauvignon or a stout can be a decadent pairing.</li>
-                                <li><strong class="font-semibold">For Spiced & Nutty Cakes:</strong> A warm cup of chai, a spiced apple cider, or a smooth bourbon complement these flavors perfectly.</li>
-                            </ul>
-                        </div>
-                        <div>
-                            <h3 class="font-serif text-2xl text-brand-gold mb-4">Fun Facts & Ingredients</h3>
-                             <p class="text-brand-light mb-4">Every flavor tells a story. Discover some intriguing details about our ingredients and the history that inspires our creations:</p>
-                            <ul class="space-y-3 text-brand-light">
-                                <li><strong class="font-semibold">Ancient Origins:</strong> The tradition of birthday candles dates back to Ancient Greece, where cakes were lit to glow like the moon in honor of the goddess Artemis.</li>
-                                <li><strong class="font-semibold">The True Red Velvet:</strong> The iconic red hue of Red Velvet cake originally came from a natural chemical reaction between acidic cocoa powder and buttermilk, not food dye!</li>
-                                <li><strong class="font-semibold">Beyond the Ordinary:</strong> We meticulously source unique spices like Mahleb (from cherry stones) and Grains of Paradise (a peppery, citrusy spice) to create layers of complexity.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+                     <h2 class="font-serif text-4xl font-semibold text-white mb-8">From the Atelier</h2>
+                     <p class="text-brand-light text-lg mb-10 max-w-3xl mx-auto leading-relaxed">Beyond the oven, there's a world of creativity and tradition that shapes every cake we make. Here's a glimpse into the artistry and thoughtful details that define The Gilded Spoon.</p>
+                     <div class="grid md:grid-cols-2 gap-10 text-left">
+                         <div>
+                             <h3 class="font-serif text-2xl text-brand-gold mb-4">Perfect Pairings</h3>
+                             <p class="text-brand-light mb-4">Great cake is even better with the right companion. Here are a few of our favorite suggestions:</p>
+                             <ul class="space-y-3 text-brand-light">
+                                 <li><strong class="font-semibold">For Fruity & Floral Cakes:</strong> Try a crisp, dry Prosecco or a sparkling Rosé. A non-alcoholic elderflower pressé or iced hibiscus tea is also a wonderful match.</li>
+                                 <li><strong class="font-semibold">For Rich & Chocolatey Cakes:</strong> A bold coffee or a smooth cold brew cuts through the richness beautifully. For an evening treat, a Cabernet Sauvignon or a stout can be a decadent pairing.</li>
+                                 <li><strong class="font-semibold">For Spiced & Nutty Cakes:</strong> A warm cup of chai, a spiced apple cider, or a smooth bourbon complement these flavors perfectly.</li>
+                             </ul>
+                         </div>
+                         <div>
+                             <h3 class="font-serif text-2xl text-brand-gold mb-4">Fun Facts & Ingredients</h3>
+                              <p class="text-brand-light mb-4">Every flavor tells a story. Discover some intriguing details about our ingredients and the history that inspires our creations:</p>
+                             <ul class="space-y-3 text-brand-light">
+                                 <li><strong class="font-semibold">Ancient Origins:</strong> The tradition of birthday candles dates back to Ancient Greece, where cakes were lit to glow like the moon in honor of the goddess Artemis.</li>
+                                 <li><strong class="font-semibold">The True Red Velvet:</strong> The iconic red hue of Red Velvet cake originally came from a natural chemical reaction between acidic cocoa powder and buttermilk, not food dye!</li>
+                                 <li><strong class="font-semibold">Beyond the Ordinary:</strong> We meticulously source unique spices like Mahleb (from cherry stones) and Grains of Paradise (a peppery, citrusy spice) to create layers of complexity.</li>
+                             </ul>
+                         </div>
+                     </div>
+                 </div>
             </section>
 
         </div>
     </main>
-
- <!-- This is the start of the footer component. You can now save this whole file as .html to preview it correctly. -->
-    <footer style="background-color: var(--color-primary); color: var(--color-background);">
+    
+    <footer class="bg-brand-navy text-brand-light">
         <div class="max-w-6xl mx-auto px-6 py-8">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-                
                 <!-- Column 1: Brand Info -->
                 <div>
-                    <h3 class="text-xl font-bold mb-2" style="font-family: var(--font-heading);">The Gilded Spoon</h3>
+                    <h3 class="text-xl font-serif font-bold mb-2">The Gilded Spoon</h3>
                     <p class="text-sm uppercase tracking-widest mb-4">CAKE SHOPPE</p>
                 </div>
-    
                 <!-- Column 2: Quick Links -->
                 <div>
-                    <h3 class="text-lg font-bold mb-3" style="font-family: var(--font-heading);">Quick Links</h3>
-                    <ul class="space-y-1 text-sm">
-                        <li><a href="index.html" class="footer-link hover:underline transition-colors duration-300">Home</a></li>
-                        <li><a href="our-story.html" class="footer-link hover:underline transition-colors duration-300">Our Story</a></li>
-                        <li><a href="flavors.html" class="footer-link hover:underline transition-colors duration-300">Flavor Library</a></li>
-                        <li><a href="mailto:Contact@thegildedspoonshoppe.com?subject=Website%20Inquiry&body=Hello%20Gilded%20Spoon%20Team%2C%0D%0A%0D%0AI'd%20like%20to%20inquire%20about..." class="footer-link hover:underline transition-colors duration-300">Contact Us</a></li>
-                        <li><a href="policies.html" class="footer-link hover:underline transition-colors duration-300">Shipping & Return Policies</a></li>
+                    <h3 class="text-lg font-serif font-bold mb-3">Quick Links</h3>
+                    <ul class="space-y-1 text-sm text-brand-gray">
+                        <li><a href="index.html" class="hover:text-brand-gold hover:underline transition-colors duration-300">Home</a></li>
+                        <li><a href="our-story.html" class="hover:text-brand-gold hover:underline transition-colors duration-300">Our Story</a></li>
+                        <li><a href="flavors.html" class="hover:text-brand-gold hover:underline transition-colors duration-300">Flavor Library</a></li>
+                        <li><a href="mailto:Contact@thegildedspoonshoppe.com?subject=Website%20Inquiry" class="hover:text-brand-gold hover:underline transition-colors duration-300">Contact Us</a></li>
+                        <li><a href="policies.html" class="hover:text-brand-gold hover:underline transition-colors duration-300">Shipping & Return Policies</a></li>
                     </ul>
                 </div>
-    
                 <!-- Column 3: Connect -->
                 <div>
-                    <h3 class="text-lg font-bold mb-3" style="font-family: var(--font-heading);">Connect With Us</h3>
+                    <h3 class="text-lg font-serif font-bold mb-3">Connect With Us</h3>
                      <div class="flex justify-center space-x-6">
-                        <a href="https://www.instagram.com/flour.shoppe.studios/" aria-label="Instagram" class="hover:opacity-75 transition-opacity">
-                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg>
+                        <a href="https://www.instagram.com/flour.shoppe.studios/" aria-label="Instagram" class="text-brand-gray hover:text-brand-gold transition-opacity">
+                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg>
                         </a>
-                        <a href="https://www.facebook.com/thegildedspoonshoppe" aria-label="Facebook" class="hover:opacity-75 transition-opacity">
-                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.494v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.323-1.325z"/></svg>
+                        <a href="https://www.facebook.com/thegildedspoonshoppe" aria-label="Facebook" class="text-brand-gray hover:text-brand-gold transition-opacity">
+                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.494v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.323-1.325z"/></svg>
                         </a>
                     </div>
                 </div>
-    
             </div>
-    
             <!-- Bottom Bar -->
-            <div class="mt-6 border-t pt-6 text-center" style="border-color: rgba(250, 246, 240, 0.2);">
-                <p class="text-sm mb-2" style="color: var(--color-background-muted, #ccc);">The Gilded Spoon Cake Shoppe by Flour Shoppe Studios</p>
-                <p class="text-sm" style="color: var(--color-background-muted, #ccc);">&copy; 2025 The Gilded Spoon Cake Shoppe. All Rights Reserved.</p>
-                <p class="mt-4 text-xs max-w-md mx-auto px-4" style="color: rgba(250, 246, 240, 0.5);">Products are prepared in a home kitchen that handles allergens including wheat, dairy, eggs, soy, and nuts.</p>
+            <div class="mt-6 border-t border-brand-gray/20 pt-6 text-center">
+                <p class="text-sm mb-2 text-brand-gray">The Gilded Spoon Cake Shoppe by Flour Shoppe Studios</p>
+                <p class="text-sm text-brand-gray">&copy; 2025 The Gilded Spoon Cake Shoppe. All Rights Reserved.</p>
+                <p class="mt-4 text-xs max-w-md mx-auto px-4 text-brand-gray/50">Products are prepared in a home kitchen that handles allergens including wheat, dairy, eggs, soy, and nuts.</p>
             </div>
         </div>
     </footer>
-       
     
 <script>
-        // --- DATA ---
-        const flavors = [
-            // Signature Collection
-            { id: 'white-berry-almond', name: 'White Berry Almond', collection: 'Signature Collection', isSignature: true, availableWeekly: true, description: 'A delicate almond cake with vanilla and nutmeg, complemented by a unique pineberry buttercream.', contains: 'Wheat | Almonds | Eggs | Dairy' },
-            { id: 'chocolate-ganache-caramel', name: 'Chocolate Ganache & Salted Caramel', collection: 'Signature Collection', isSignature: true, availableWeekly: true, description: 'Rich cocoa cake layered with decadent chocolate ganache and house-made sea salt caramel.', contains: 'Wheat | Eggs | Dairy' },
-            { id: 'strawberry-rose', name: 'Strawberry Rose Pistachio', collection: 'Signature Collection', isSignature: true, availableWeekly: false, description: 'A romantic blend of sweet strawberry and fragrant rose, with nutty pistachio pieces and a hint of luxurious saffron.', contains: 'Wheat | Pistachios | Eggs | Dairy' },
-            { id: 'vanilla-earl-grey', name: 'Vanilla Earl Grey & Honeycomb', collection: 'Signature Collection', availableWeekly: false, description: 'Elegant vanilla cake infused with bergamot from Earl Grey tea, topped with crunchy, house-made honeycomb.', contains: 'Wheat | Eggs | Dairy' },
-            { id: 'carrot-cake-brown-butter', name: 'Carrot Cake with Brown Butter', collection: 'Signature Collection', availableWeekly: false, description: 'Our classic carrot cake with warm spices and walnuts, elevated with a nutty brown butter cream cheese frosting.', contains: 'Wheat | Eggs | Dairy | Walnuts' },
+    // --- DATA ---
+    const flavors = [
+        // Signature Collection
+        { id: 'white-berry-almond', name: 'White Berry Almond', collection: 'Signature Collection', isSignature: true, availableWeekly: true, description: 'A delicate almond cake with vanilla and nutmeg, complemented by a unique pineberry buttercream.', contains: 'Wheat | Almonds | Eggs | Dairy' },
+        { id: 'chocolate-ganache-caramel', name: 'Chocolate Ganache & Salted Caramel', collection: 'Signature Collection', isSignature: true, availableWeekly: true, description: 'Rich cocoa cake layered with decadent chocolate ganache and house-made sea salt caramel.', contains: 'Wheat | Eggs | Dairy' },
+        { id: 'strawberry-rose', name: 'Strawberry Rose Pistachio', collection: 'Signature Collection', isSignature: true, availableWeekly: false, description: 'A romantic blend of sweet strawberry and fragrant rose, with nutty pistachio pieces and a hint of luxurious saffron.', contains: 'Wheat | Pistachios | Eggs | Dairy' },
+        { id: 'vanilla-earl-grey', name: 'Vanilla Earl Grey & Honeycomb', collection: 'Signature Collection', availableWeekly: false, description: 'Elegant vanilla cake infused with bergamot from Earl Grey tea, topped with crunchy, house-made honeycomb.', contains: 'Wheat | Eggs | Dairy' },
+        { id: 'carrot-cake-brown-butter', name: 'Carrot Cake with Brown Butter', collection: 'Signature Collection', availableWeekly: false, description: 'Our classic carrot cake with warm spices and walnuts, elevated with a nutty brown butter cream cheese frosting.', contains: 'Wheat | Eggs | Dairy | Walnuts' },
 
-            // Autumn Collection
-            { id: 'pumpkin-chai-cake', name: 'Pumpkin Chai Cake', collection: 'Autumn Collection', availableWeekly: true, description: 'A wonderfully moist pumpkin cake warmed with aromatic chai spices and frosted with a smooth, delightful maple cream.', contains: 'Wheat | Eggs | Dairy' },
-            { id: 'apple-cider-caramel', name: 'Apple Cider With Caramel Crunch', collection: 'Autumn Collection', availableWeekly: true, description: 'A tender apple cake featuring a bright cider caramel, spiced with cinnamon and topped with a satisfying crumble.', contains: 'Wheat | Eggs | Dairy' },
-            { id: 'pumpkin-spice-mocha', name: 'Pumpkin Spice Mocha Latte', collection: 'Autumn Collection', availableWeekly: false, description: 'An inventive cake combining pumpkin spice with rich mocha and coffee notes, with a surprising hint of amchoor.', contains: 'Wheat | Eggs | Dairy' },
-            { id: 'brown-buttered-apple', name: 'Brown Buttered Apple Coconut', collection: 'Autumn Collection', availableWeekly: false, description: 'A nutty brown butter and apple cake made uniquely fragrant with the addition of coconut and tropical pandan.', contains: 'Wheat | Eggs | Dairy | Coconut' },
-            { id: 'buttered-pecan-spice', name: 'Buttered Pecan Spice', collection: 'Autumn Collection', availableWeekly: true, description: 'A comforting buttered pecan cake elevated with warm spices and a hint of aromatic long pepper.', contains: 'Wheat | Pecans | Eggs | Dairy' },
-            { id: 'blood-orange-cardamom', name: 'Blood Orange & Cardamom', collection: 'Autumn Collection', availableWeekly: false, description: 'A vibrant blood orange cake beautifully scented with aromatic cardamom, enriched with a luxurious cream frosting.', contains: 'Wheat | Eggs | Dairy' },
-            
-            // Winter Collection
-            { id: 'cranberry-orange', name: 'Cranberry Orange & White Chocolate', collection: 'Winter Collection', availableWeekly: false, description: 'A festive cake pairing tart cranberry and bright orange zest with the sweet creaminess of white chocolate.', contains: 'Wheat | Eggs | Dairy | Soy' },
-            { id: 'blackberry-merlot', name: 'Blackberry Merlot & Dark Chocolate', collection: 'Winter Collection', availableWeekly: false, description: 'A sophisticated cake featuring juicy blackberry and rich Merlot wine reduction, paired perfectly with deep dark chocolate.', contains: 'Wheat | Eggs | Dairy | Soy' },
-            { id: 'espresso-chocolate-almond', name: 'Espresso Chocolate Almond', collection: 'Winter Collection', availableWeekly: false, description: 'A bold cake with rich espresso and chocolate notes, nutty almond undertones, and an exotic hint of black cardamom.', contains: 'Wheat | Almonds | Eggs | Dairy' },
-            { id: 'pear-almond', name: 'Pear & Almond Frangipane', collection: 'Winter Collection', availableWeekly: false, description: 'A delicate cake featuring sweet poached pear and rich, nutty almond frangipane baked into a tender crumb.', contains: 'Wheat | Almonds | Eggs | Dairy' },
-            { id: 'black-forest-cherry', name: 'Black Forest Cherry & Kirsch', collection: 'Winter Collection', availableWeekly: false, description: 'A classic reimagined, with layers of chocolate cake, sweet cherries, and a splash of Kirsch brandy.', contains: 'Wheat | Eggs | Dairy' },
-            { id: 'hazelnut-mocha', name: 'Hazelnut Mocha Praline', collection: 'Winter Collection', availableWeekly: false, description: 'A decadent combination of nutty hazelnut, rich chocolate mocha, and the sweet crunch of handmade praline.', contains: 'Wheat | Hazelnuts | Eggs | Dairy' },
-            { id: 'salted-caramel-almond', name: 'Salted Caramel Almond', collection: 'Winter Collection', availableWeekly: false, description: 'A delicious combination of salted caramel and almond, with the unique, cherry-like fragrance of Mahleb spice.', contains: 'Wheat | Almonds | Eggs | Dairy' },
+        // Autumn Collection
+        { id: 'pumpkin-chai-cake', name: 'Pumpkin Chai Cake', collection: 'Autumn Collection', availableWeekly: true, description: 'A wonderfully moist pumpkin cake warmed with aromatic chai spices and frosted with a smooth, delightful maple cream.', contains: 'Wheat | Eggs | Dairy' },
+        { id: 'apple-cider-caramel', name: 'Apple Cider With Caramel Crunch', collection: 'Autumn Collection', availableWeekly: true, description: 'A tender apple cake featuring a bright cider caramel, spiced with cinnamon and topped with a satisfying crumble.', contains: 'Wheat | Eggs | Dairy' },
+        { id: 'pumpkin-spice-mocha', name: 'Pumpkin Spice Mocha Latte', collection: 'Autumn Collection', availableWeekly: false, description: 'An inventive cake combining pumpkin spice with rich mocha and coffee notes, with a surprising hint of amchoor.', contains: 'Wheat | Eggs | Dairy' },
+        { id: 'brown-buttered-apple', name: 'Brown Buttered Apple Coconut', collection: 'Autumn Collection', availableWeekly: false, description: 'A nutty brown butter and apple cake made uniquely fragrant with the addition of coconut and tropical pandan.', contains: 'Wheat | Eggs | Dairy | Coconut' },
+        { id: 'buttered-pecan-spice', name: 'Buttered Pecan Spice', collection: 'Autumn Collection', availableWeekly: true, description: 'A comforting buttered pecan cake elevated with warm spices and a hint of aromatic long pepper.', contains: 'Wheat | Pecans | Eggs | Dairy' },
+        { id: 'blood-orange-cardamom', name: 'Blood Orange & Cardamom', collection: 'Autumn Collection', availableWeekly: false, description: 'A vibrant blood orange cake beautifully scented with aromatic cardamom, enriched with a luxurious cream frosting.', contains: 'Wheat | Eggs | Dairy' },
+        
+        // Winter Collection
+        { id: 'cranberry-orange', name: 'Cranberry Orange & White Chocolate', collection: 'Winter Collection', availableWeekly: false, description: 'A festive cake pairing tart cranberry and bright orange zest with the sweet creaminess of white chocolate.', contains: 'Wheat | Eggs | Dairy | Soy' },
+        { id: 'blackberry-merlot', name: 'Blackberry Merlot & Dark Chocolate', collection: 'Winter Collection', availableWeekly: false, description: 'A sophisticated cake featuring juicy blackberry and rich Merlot wine reduction, paired perfectly with deep dark chocolate.', contains: 'Wheat | Eggs | Dairy | Soy' },
+        { id: 'espresso-chocolate-almond', name: 'Espresso Chocolate Almond', collection: 'Winter Collection', availableWeekly: false, description: 'A bold cake with rich espresso and chocolate notes, nutty almond undertones, and an exotic hint of black cardamom.', contains: 'Wheat | Almonds | Eggs | Dairy' },
+        { id: 'pear-almond', name: 'Pear & Almond Frangipane', collection: 'Winter Collection', availableWeekly: false, description: 'A delicate cake featuring sweet poached pear and rich, nutty almond frangipane baked into a tender crumb.', contains: 'Wheat | Almonds | Eggs | Dairy' },
+        { id: 'black-forest-cherry', name: 'Black Forest Cherry & Kirsch', collection: 'Winter Collection', availableWeekly: false, description: 'A classic reimagined, with layers of chocolate cake, sweet cherries, and a splash of Kirsch brandy.', contains: 'Wheat | Eggs | Dairy' },
+        { id: 'hazelnut-mocha', name: 'Hazelnut Mocha Praline', collection: 'Winter Collection', availableWeekly: false, description: 'A decadent combination of nutty hazelnut, rich chocolate mocha, and the sweet crunch of handmade praline.', contains: 'Wheat | Hazelnuts | Eggs | Dairy' },
+        { id: 'salted-caramel-almond', name: 'Salted Caramel Almond', collection: 'Winter Collection', availableWeekly: false, description: 'A delicious combination of salted caramel and almond, with the unique, cherry-like fragrance of Mahleb spice.', contains: 'Wheat | Almonds | Eggs | Dairy' },
 
-            // Spring Collection
-            { id: 'lemon-raspberry-hibiscus', name: 'Lemon Raspberry & Hibiscus', collection: 'Spring Collection', availableWeekly: false, description: 'A bright lemon and raspberry cake paired with white chocolate and a floral hint of hibiscus.', contains: 'Wheat | Eggs | Dairy | Soy' },
-            { id: 'lemon-raspberry-limes', name: 'Lemon Raspberry & Finger Limes', collection: 'Spring Collection', availableWeekly: false, description: 'A refreshing lemon and raspberry cake that offers bursts of citrus caviar from Australian finger limes.', contains: 'Wheat | Eggs | Dairy' },
-            { id: 'lavender-honey', name: 'Lavender Honey & Lemon Curd', collection: 'Spring Collection', availableWeekly: false, description: 'A fragrant lavender and honey-infused cake, filled with tangy lemon curd and frosted with a smooth buttercream.', contains: 'Wheat | Eggs | Dairy' },
-            { id: 'lemon-olive-oil', name: 'Lemon Olive Oil & Rosemary', collection: 'Spring Collection', availableWeekly: false, description: 'A sophisticated and moist lemon olive oil cake with a subtle, herbaceous note of rosemary.', contains: 'Wheat | Eggs | Dairy' },
-            { id: 'passion-fruit-carrot', name: 'Passion Fruit Carrot Cake', collection: 'Spring Collection', availableWeekly: false, description: 'A tropical twist on a classic, featuring passion fruit in a moist carrot cake spiced with aromatic Grains of Paradise.', contains: 'Wheat | Eggs | Dairy' },
-            { id: 'coconut-passionfruit', name: 'Coconut Passionfruit & Lime', collection: 'Spring Collection', availableWeekly: false, description: 'A taste of the tropics with creamy coconut, tangy passionfruit, and a bright zest of lime.', contains: 'Wheat | Eggs | Dairy | Coconut' },
+        // Spring Collection
+        { id: 'lemon-raspberry-hibiscus', name: 'Lemon Raspberry & Hibiscus', collection: 'Spring Collection', availableWeekly: false, description: 'A bright lemon and raspberry cake paired with white chocolate and a floral hint of hibiscus.', contains: 'Wheat | Eggs | Dairy | Soy' },
+        { id: 'lemon-raspberry-limes', name: 'Lemon Raspberry & Finger Limes', collection: 'Spring Collection', availableWeekly: false, description: 'A refreshing lemon and raspberry cake that offers bursts of citrus caviar from Australian finger limes.', contains: 'Wheat | Eggs | Dairy' },
+        { id: 'lavender-honey', name: 'Lavender Honey & Lemon Curd', collection: 'Spring Collection', availableWeekly: false, description: 'A fragrant lavender and honey-infused cake, filled with tangy lemon curd and frosted with a smooth buttercream.', contains: 'Wheat | Eggs | Dairy' },
+        { id: 'lemon-olive-oil', name: 'Lemon Olive Oil & Rosemary', collection: 'Spring Collection', availableWeekly: false, description: 'A sophisticated and moist lemon olive oil cake with a subtle, herbaceous note of rosemary.', contains: 'Wheat | Eggs | Dairy' },
+        { id: 'passion-fruit-carrot', name: 'Passion Fruit Carrot Cake', collection: 'Spring Collection', availableWeekly: false, description: 'A tropical twist on a classic, featuring passion fruit in a moist carrot cake spiced with aromatic Grains of Paradise.', contains: 'Wheat | Eggs | Dairy' },
+        { id: 'coconut-passionfruit', name: 'Coconut Passionfruit & Lime', collection: 'Spring Collection', availableWeekly: false, description: 'A taste of the tropics with creamy coconut, tangy passionfruit, and a bright zest of lime.', contains: 'Wheat | Eggs | Dairy | Coconut' },
 
-            // Summer Collection
-            { id: 'peach-basil', name: 'Peach Basil & Mascarpone', collection: 'Summer Collection', availableWeekly: false, description: 'A light and summery cake with sweet peaches, a surprising hint of fresh basil, and a rich, creamy mascarpone frosting.', contains: 'Wheat | Eggs | Dairy' },
-            { id: 'strawberries-cream', name: 'Strawberries & Cream', collection: 'Summer Collection', availableWeekly: false, description: 'A quintessential summer treat. Fresh strawberries and vanilla cream are elevated with a delicate hint of fragrant rosewater.', contains: 'Wheat | Eggs | Dairy' },
-            { id: 'matcha-yuzu', name: 'Matcha Yuzu & Vanilla Bean', collection: 'Summer Collection', availableWeekly: false, description: 'Earthy matcha green tea cake is perfectly balanced with the bright, citrusy notes of yuzu and the sweetness of vanilla bean.', contains: 'Wheat | Eggs | Dairy' },
-            { id: 'champagne-elderflower', name: 'Champagne & Elderflower', collection: 'Summer Collection', availableWeekly: false, description: 'A celebratory cake featuring bright notes of champagne, elderflower, lemon, and pear in a tender almond crumb.', contains: 'Wheat | Eggs | Dairy | Almonds' },
-            
-            // Curated Mithai Dabba
-            { id: 'gulab-jamun', name: 'Gulab Jamun Cake', collection: 'Curated Mithai Dabba', availableWeekly: false, description: 'Inspired by the classic dessert, featuring notes of cardamom, rosewater, saffron, and almond.', contains: 'Wheat | Milk | Soy | Almonds (Eggless)' },
-            { id: 'ras-malai', name: 'Ras Malai Cake', collection: 'Curated Mithai Dabba', availableWeekly: false, description: 'A light cardamom cake soaked in a saffron-infused cream, topped with chopped pistachios.', contains: 'Wheat | Milk | Soy | Pistachios (Eggless)' },
-            { id: 'srikhand-pistachio', name: 'Srikhand Pistachio Cake', collection: 'Curated Mithai Dabba', availableWeekly: false, description: 'A tribute to the creamy dessert, this cake blends pistachio, saffron, and cardamom with a delightful mousse texture.', contains: 'Wheat | Egg | Milk | Soy | Pistachios' },
-            { id: 'rasgulla-rosewater', name: 'Rasgulla Rosewater Cake', collection: 'Curated Mithai Dabba', availableWeekly: false, description: 'A light cake delicately flavored with rosewater and whipped cream, featuring soft Rasgulla pieces throughout.', contains: 'Wheat | Egg | Milk | Soy' },
-            { id: 'jalebi-crunch', name: 'Jalebi Crunch Caramel Cake', collection: 'Curated Mithai Dabba', availableWeekly: false, description: 'A textural delight pairing rich chocolate and salted caramel with the unique, sweet crunch of Jalebi pieces.', contains: 'Wheat | Egg | Milk | Soy' },
-            { id: 'kaju-katli', name: 'Kaju Katli Almond Cake', collection: 'Curated Mithai Dabba', availableWeekly: true, description: 'Inspired by the classic sweet, this almond cake is filled with a rich and creamy cashew fudge (Kaju Katli).', contains: 'Wheat | Egg | Milk | Soy | Almonds | Cashews' },
-            { id: 'gajar-halwa', name: 'Gajar Halwa Pistachio Cake', collection: 'Curated Mithai Dabba', availableWeekly: false, description: 'A fusion of fall and tradition, this cake combines spiced gajar halwa with the rich, nutty flavor of pistachios.', contains: 'Wheat | Egg | Milk | Soy | Pistachios' }
-        ];
+        // Summer Collection
+        { id: 'peach-basil', name: 'Peach Basil & Mascarpone', collection: 'Summer Collection', availableWeekly: false, description: 'A light and summery cake with sweet peaches, a surprising hint of fresh basil, and a rich, creamy mascarpone frosting.', contains: 'Wheat | Eggs | Dairy' },
+        { id: 'strawberries-cream', name: 'Strawberries & Cream', collection: 'Summer Collection', availableWeekly: false, description: 'A quintessential summer treat. Fresh strawberries and vanilla cream are elevated with a delicate hint of fragrant rosewater.', contains: 'Wheat | Eggs | Dairy' },
+        { id: 'matcha-yuzu', name: 'Matcha Yuzu & Vanilla Bean', collection: 'Summer Collection', availableWeekly: false, description: 'Earthy matcha green tea cake is perfectly balanced with the bright, citrusy notes of yuzu and the sweetness of vanilla bean.', contains: 'Wheat | Eggs | Dairy' },
+        { id: 'champagne-elderflower', name: 'Champagne & Elderflower', collection: 'Summer Collection', availableWeekly: false, description: 'A celebratory cake featuring bright notes of champagne, elderflower, lemon, and pear in a tender almond crumb.', contains: 'Wheat | Eggs | Dairy | Almonds' },
+        
+        // Curated Mithai Dabba
+        { id: 'gulab-jamun', name: 'Gulab Jamun Cake', collection: 'Curated Mithai Dabba', availableWeekly: false, description: 'Inspired by the classic dessert, featuring notes of cardamom, rosewater, saffron, and almond.', contains: 'Wheat | Milk | Soy | Almonds (Eggless)' },
+        { id: 'ras-malai', name: 'Ras Malai Cake', collection: 'Curated Mithai Dabba', availableWeekly: false, description: 'A light cardamom cake soaked in a saffron-infused cream, topped with chopped pistachios.', contains: 'Wheat | Milk | Soy | Pistachios (Eggless)' },
+        { id: 'srikhand-pistachio', name: 'Srikhand Pistachio Cake', collection: 'Curated Mithai Dabba', availableWeekly: false, description: 'A tribute to the creamy dessert, this cake blends pistachio, saffron, and cardamom with a delightful mousse texture.', contains: 'Wheat | Egg | Milk | Soy | Pistachios' },
+        { id: 'rasgulla-rosewater', name: 'Rasgulla Rosewater Cake', collection: 'Curated Mithai Dabba', availableWeekly: false, description: 'A light cake delicately flavored with rosewater and whipped cream, featuring soft Rasgulla pieces throughout.', contains: 'Wheat | Egg | Milk | Soy' },
+        { id: 'jalebi-crunch', name: 'Jalebi Crunch Caramel Cake', collection: 'Curated Mithai Dabba', availableWeekly: false, description: 'A textural delight pairing rich chocolate and salted caramel with the unique, sweet crunch of Jalebi pieces.', contains: 'Wheat | Egg | Milk | Soy' },
+        { id: 'kaju-katli', name: 'Kaju Katli Almond Cake', collection: 'Curated Mithai Dabba', availableWeekly: true, description: 'Inspired by the classic sweet, this almond cake is filled with a rich and creamy cashew fudge (Kaju Katli).', contains: 'Wheat | Egg | Milk | Soy | Almonds | Cashews' },
+        { id: 'gajar-halwa', name: 'Gajar Halwa Pistachio Cake', collection: 'Curated Mithai Dabba', availableWeekly: false, description: 'A fusion of fall and tradition, this cake combines spiced gajar halwa with the rich, nutty flavor of pistachios.', contains: 'Wheat | Egg | Milk | Soy | Pistachios' }
+    ];
 
-        const overlay = document.getElementById('overlay');
-        const modal = document.getElementById('flavor-detail-modal');
+    const overlay = document.getElementById('overlay');
+    const modal = document.getElementById('flavor-detail-modal');
 
-        function showFlavorModal(flavorId) {
-            const flavor = flavors.find(f => f.id === flavorId);
-            if (!flavor) return;
+    function showFlavorModal(flavorId) {
+        const flavor = flavors.find(f => f.id === flavorId);
+        if (!flavor) return;
 
-            document.getElementById('modal-flavor-name').textContent = flavor.name;
-            document.getElementById('modal-flavor-description').textContent = flavor.description;
-            document.getElementById('modal-flavor-contains').textContent = `CONTAINS: ${flavor.contains}`;
-            
-            overlay.style.display = 'block';
-            modal.style.display = 'block';
-        }
+        document.getElementById('modal-flavor-name').textContent = flavor.name;
+        document.getElementById('modal-flavor-description').textContent = flavor.description;
+        document.getElementById('modal-flavor-contains').textContent = `CONTAINS: ${flavor.contains}`;
+        
+        overlay.style.display = 'block';
+        modal.style.display = 'block';
+    }
 
-        function closeModal() {
-            overlay.style.display = 'none';
-            modal.style.display = 'none';
-        }
+    function closeModal() {
+        overlay.style.display = 'none';
+        modal.style.display = 'none';
+    }
 
-        function renderPageContent() {
-            const signatureList = document.getElementById('signature-list');
-            const seasonalList = document.getElementById('seasonal-list');
-            const mithasList = document.getElementById('mithas-mahal-list');
-            const tabButtonsContainer = document.getElementById('tab-buttons');
-            const collectionsContainer = document.getElementById('collections-container');
+    function renderPageContent() {
+        const signatureList = document.getElementById('signature-list');
+        const seasonalList = document.getElementById('seasonal-list');
+        const mithasList = document.getElementById('mithas-mahal-list');
+        const tabButtonsContainer = document.getElementById('tab-buttons');
+        const collectionsContainer = document.getElementById('collections-container');
 
-            // --- Populate Featured Section ---
-            const signatureFlavors = flavors.filter(f => f.isSignature);
-            const seasonalFlavorsAvailable = flavors.filter(f => f.availableWeekly);
-            const mithasSpotlight = flavors.filter(f => f.collection === 'Curated Mithai Dabba' && f.availableWeekly);
+        // --- Populate Featured Section ---
+        const signatureFlavors = flavors.filter(f => f.isSignature);
+        const seasonalFlavorsAvailable = flavors.filter(f => f.availableWeekly);
+        const mithasSpotlight = flavors.filter(f => f.collection === 'Curated Mithai Dabba' && f.availableWeekly);
 
-            const createFeaturedButton = (flavor) => `<button onclick="showFlavorModal('${flavor.id}')" class="font-serif text-sm text-brand-light border border-brand-gray/20 rounded-lg py-2 px-3 w-full text-center hover:bg-brand-gray/10 hover:border-brand-gray/40 transition">${flavor.name}</button>`;
+        const createFeaturedButton = (flavor) => `<button onclick="showFlavorModal('${flavor.id}')" class="font-serif text-sm text-brand-light border border-brand-gray/20 rounded-lg py-2 px-3 w-full text-center hover:bg-brand-gray/10 hover:border-brand-gray/40 transition">${flavor.name}</button>`;
 
-            if(signatureList) signatureList.innerHTML = signatureFlavors.map(createFeaturedButton).join('');
-            if(seasonalList) seasonalList.innerHTML = seasonalFlavorsAvailable.map(createFeaturedButton).join('');
-            if(mithasList) mithasList.innerHTML = mithasSpotlight.map(createFeaturedButton).join('');
-            
-            // --- Populate Full Library with Tabs ---
-            const collectionOrder = ['View All', 'Signature Collection', 'Autumn Collection', 'Winter Collection', 'Spring Collection', 'Summer Collection', 'Curated Mithai Dabba'];
-            
-            tabButtonsContainer.innerHTML = collectionOrder.map(name => {
-                const id = name.replace(/[\s&]+/g, '-').toLowerCase();
-                return `<button data-tab-target="${id}" class="tab-button font-serif text-lg text-brand-gray border-b-2 border-transparent pb-2 hover:text-brand-gold ${name === 'View All' ? 'active' : ''}">${name.replace(' Collection', '')}</button>`;
-            }).join('');
+        if(signatureList) signatureList.innerHTML = signatureFlavors.map(createFeaturedButton).join('');
+        if(seasonalList) seasonalList.innerHTML = seasonalFlavorsAvailable.map(createFeaturedButton).join('');
+        if(mithasList) mithasList.innerHTML = mithasSpotlight.map(createFeaturedButton).join('');
+        
+        // --- Populate Full Library with Tabs ---
+        const collectionOrder = ['View All', 'Signature Collection', 'Autumn Collection', 'Winter Collection', 'Spring Collection', 'Summer Collection', 'Curated Mithai Dabba'];
+        
+        tabButtonsContainer.innerHTML = collectionOrder.map(name => {
+            const id = name.replace(/[\s&]+/g, '-').toLowerCase();
+            return `<button data-tab-target="${id}" class="tab-button font-serif text-lg text-brand-gray border-b-2 border-transparent pb-2 hover:text-brand-gold ${name === 'View All' ? 'active' : ''}">${name.replace(' Collection', '')}</button>`;
+        }).join('');
 
-            collectionsContainer.innerHTML = collectionOrder.slice(1).map(collectionName => {
-                const collectionId = collectionName.replace(/[\s&]+/g, '-').toLowerCase();
-                const collectionFlavors = flavors.filter(f => f.collection === collectionName);
-                return `
-                    <section id="${collectionId}" class="collection-section active">
-                        <div class="text-center mb-12">
-                            <h3 class="font-serif text-3xl font-semibold text-white">${collectionName}</h3>
-                        </div>
-                        <div class="grid md:grid-cols-2 gap-x-8 gap-y-6">
-                            ${collectionFlavors.map(f => {
-                                const orderButton = f.availableWeekly ? `<a href="https://the-gilded-spoon.square.site/s/shop" target="_blank" class="text-xs bg-brand-gold text-brand-dark font-semibold py-1 px-3 rounded-full hover:bg-brand-gold-hover transition">Order Now</a>` : '';
-                                return `
-                                    <div class="border-b border-brand-gray/10 pb-3">
-                                        <div class="flex justify-between items-start gap-4">
-                                            <h4 class="font-serif text-xl text-white">${f.name}</h4>
-                                            <div class="flex-shrink-0 mt-1">${orderButton}</div>
-                                        </div>
-                                        <p class="text-brand-gray text-sm mt-1">${f.description}</p>
-                                        <p class="text-xs text-brand-gray/70 mt-2">CONTAINS: ${f.contains}</p>
-                                    </div>`;
-                            }).join('')}
-                        </div>
-                    </section>`;
-            }).join('');
+        collectionsContainer.innerHTML = collectionOrder.slice(1).map(collectionName => {
+            const collectionId = collectionName.replace(/[\s&]+/g, '-').toLowerCase();
+            const collectionFlavors = flavors.filter(f => f.collection === collectionName);
+            return `
+                <section id="${collectionId}" class="collection-section active">
+                    <div class="text-center mb-12">
+                        <h3 class="font-serif text-3xl font-semibold text-white">${collectionName}</h3>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-x-8 gap-y-6">
+                        ${collectionFlavors.map(f => {
+                            const orderButton = f.availableWeekly ? `<a href="https://the-gilded-spoon.square.site/s/shop" target="_blank" class="text-xs bg-brand-gold text-brand-dark font-semibold py-1 px-3 rounded-full hover:bg-brand-gold-hover transition">Order Now</a>` : '';
+                            return `
+                                <div class="border-b border-brand-gray/10 pb-3">
+                                    <div class="flex justify-between items-start gap-4">
+                                        <h4 class="font-serif text-xl text-white">${f.name}</h4>
+                                        <div class="flex-shrink-0 mt-1">${orderButton}</div>
+                                    </div>
+                                    <p class="text-brand-gray text-sm mt-1">${f.description}</p>
+                                    <p class="text-xs text-brand-gray/70 mt-2">CONTAINS: ${f.contains}</p>
+                                </div>`;
+                        }).join('')}
+                    </div>
+                </section>`;
+        }).join('');
 
-            // Tab switching logic
-            const tabs = document.querySelectorAll('.tab-button');
-            const sections = document.querySelectorAll('.collection-section');
-            tabs.forEach(tab => {
-                tab.addEventListener('click', () => {
-                    tabs.forEach(t => t.classList.remove('active'));
-                    tab.classList.add('active');
+        // Tab switching logic
+        const tabs = document.querySelectorAll('.tab-button');
+        const sections = document.querySelectorAll('.collection-section');
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                tabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
 
-                    const target = tab.dataset.tabTarget;
-                    if (target === 'view-all') {
-                        sections.forEach(s => s.classList.add('active'));
-                    } else {
-                        sections.forEach(s => s.classList.remove('active'));
-                        const targetPanel = document.getElementById(target);
-                        if (targetPanel) targetPanel.classList.add('active');
-                    }
-                });
+                const target = tab.dataset.tabTarget;
+                if (target === 'view-all') {
+                    sections.forEach(s => s.classList.add('active'));
+                } else {
+                    sections.forEach(s => s.classList.remove('active'));
+                    const targetPanel = document.getElementById(target);
+                    if (targetPanel) targetPanel.classList.add('active');
+                }
             });
-            
-            // Scroll-to-tab functionality
-            const scrollLinks = document.querySelectorAll('[data-scroll-to-tab]');
-            scrollLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const tabId = link.dataset.scrollToTab;
-                    const correspondingTab = document.querySelector(`.tab-button[data-tab-target="${tabId}"]`);
-                    if(correspondingTab) {
-                        correspondingTab.click();
-                        document.getElementById('full-library').scrollIntoView({ behavior: 'smooth' });
-                    }
-                });
+        });
+        
+        // Scroll-to-tab functionality
+        const scrollLinks = document.querySelectorAll('[data-scroll-to-tab]');
+        scrollLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                const tabId = link.dataset.scrollToTab;
+                const correspondingTab = document.querySelector(`.tab-button[data-tab-target="${tabId}"]`);
+                if(correspondingTab) {
+                    correspondingTab.click();
+                    document.getElementById('full-library').scrollIntoView({ behavior: 'smooth' });
+                }
             });
-        }
+        });
+    }
 
-        // --- Event Listeners ---
-        document.addEventListener('DOMContentLoaded', renderPageContent);
-        overlay.addEventListener('click', closeModal);
-        const hamburgerButton = document.getElementById('hamburger-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        hamburgerButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+    // --- Event Listeners ---
+    document.addEventListener('DOMContentLoaded', renderPageContent);
+    overlay.addEventListener('click', closeModal);
+    const hamburgerButton = document.getElementById('hamburger-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburgerButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
 </script>
 </body>
 </html>
