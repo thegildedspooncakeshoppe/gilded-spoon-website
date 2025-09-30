@@ -6,7 +6,7 @@
     <title>The Gilded Spoon Cake Shoppe</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Libre+Baskerville:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;700&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -24,6 +24,9 @@
                     fontFamily: {
                         'serif': ['"Playfair Display"', 'serif'],
                         'sans': ['"Inter"', 'sans-serif'],
+                        'cursive': ['"Great Vibes"', 'cursive'],
+                        'baskerville': ['"Libre Baskerville"', 'serif'],
+                        'cinzel': ['"Cinzel"', 'serif'],
                     }
                 }
             }
@@ -70,13 +73,17 @@
         </div>
     </nav>
 
-    <header id="home" class="text-center py-24 md:py-40 header-bg">
+    <header id="home" class="text-center py-24 md:py-32 header-bg">
         <div class="max-w-4xl mx-auto px-4">
-            <h1 class="font-serif text-5xl md:text-7xl font-bold text-white leading-tight">The Gilded Spoon</h1>
+            <div class="relative inline-block">
+                <span class="block font-cinzel text-white text-xl tracking-widest -mb-4">THE</span>
+                <h1 class="font-cursive text-7xl md:text-9xl font-normal text-white leading-tight">Gilded Spoon</h1>
+            </div>
             <h2 class="font-sans text-lg md:text-xl text-brand-light font-light not-italic tracking-[0.4em] mt-2">CAKE SHOPPE</h2>
-            <div class="text-xl md:text-2xl text-brand-light font-light mt-6">
-                <p>ATELIER SAVOIR FAIRE</p>
-                <p>Where Craftsmanship meets Confection</p>.
+            <div class="mt-8 text-brand-light">
+                <p class="font-baskerville text-xl md:text-2xl font-bold uppercase tracking-wider">ATELIER SAVOIR FAIRE</p>
+                <hr class="w-48 mx-auto my-4 border-brand-gold">
+                <p class="font-sans text-xs uppercase" style="letter-spacing: 0.36em;">THE ART OF TIMELESS CONFECTIONS</p>
             </div>
             <div class="mt-8">
                 <a href="flavors.html" class="inline-block bg-brand-gold text-brand-dark font-bold py-3 px-8 rounded-lg hover:bg-brand-gold-hover transition-transform transform hover:scale-105">View This Month's Flavors</a>
@@ -85,8 +92,8 @@
     </header>
 
     <section class="py-12 mx-4 sm:mx-8 -mt-20 relative">
-        <div class="max-w-3xl mx-auto px-8 bg-brand-card/50 border border-brand-gold rounded-2xl p-10 text-center">
-            <p class="font-serif text-2xl md:text-lg font-light text-brand-light leading-snug italic">
+        <div class="max-w-3xl mx-auto px-8 bg-brand-card/50 border border-brand-gold/20 rounded-2xl p-10 text-center">
+            <p class="font-serif text-2xl md:text-3xl font-light text-brand-light leading-snug italic">
                 “At The Gilded Spoon, every bite tells a story. We believe dessert should feel like poetry on a plate — full of wonder, crafted with care.”
             </p>
         </div>
@@ -375,4 +382,5 @@
 </script>
 </body>
 </html>
+
 
