@@ -390,6 +390,14 @@
     }
 
     document.addEventListener('DOMContentLoaded', renderProductCards);
+    
+     // Mobile Menu Toggle
+    const hamburgerButton = document.getElementById('hamburger-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    hamburgerButton.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
 </script>
 </body>
 </html>
