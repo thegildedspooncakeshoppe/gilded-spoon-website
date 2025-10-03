@@ -311,7 +311,7 @@
                     </div>
                     <div class="grid md:grid-cols-2 gap-x-8 gap-y-6">
                         ${collectionFlavors.map(f => {
-                            const orderButton = f.availableWeekly ? `<a href="https://the-gilded-spoon.square.site/s/shop" target="_blank" class="text-xs bg-brand-gold text-brand-dark font-semibold py-1 px-3 rounded-full hover:bg-brand-gold-hover transition">Order Now</a>` : '';
+                        const orderButton = f.availableWeekly ? `<div class="text-right"><span class="inline-block bg-brand-gold text-brand-dark text-xs font-bold uppercase px-2 py-1 rounded-full mb-2">Featured This Week</span><br><a href="index.html#products" class="text-sm text-brand-gold hover:underline font-semibold">Find in Our Collections &rarr;</a></div>` : '';
                             return `
                                 <div class="border-b border-brand-gray/10 pb-3">
                                     <div class="flex justify-between items-start gap-4">
