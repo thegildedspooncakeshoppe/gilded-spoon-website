@@ -206,7 +206,7 @@
             description: 'Our signature treat. A miniature 2" cake with a delicate chocolate shell, available exclusively in boxes of three, six, or twelve.',
             image: 'https://imgur.com/9tV4SFa.jpeg',
             price: '$21.00 - $78.00',
-            maxQuantity: 24,
+            hasLargeOrderNote: true ,
             options: [
                 { text: '3-Pack - $21.00', value: 'puck-3pack', link: 'https://square.link/u/KMi13npr' },
                 { text: '6-Pack - $40.00', value: 'puck-6pack', link: 'https://square.link/u/k3QTMvuF' },
@@ -220,7 +220,7 @@
             description: 'Inspired by my South Asian heritage, each flavor transforms a traditional dessert into an elegant, modern cake.',
             image: 'https://imgur.com/akOT2O1.jpeg',
             price: '$15.00 per flight',
-            maxQuantity: 4,
+            hasLargeOrderNote: true,
             options: [
                 { text: 'Tasting Duo - $15.00', value: 'mithas-flight', link: 'https://square.link/u/2qgl2nif' }
             ]
@@ -232,7 +232,7 @@
             description: 'A delightful board featuring three curated slices from our current seasonal collection. Perfect for sharing.',
             image: 'https://imgur.com/V7FhUqj.jpeg',
             price: '$22.00',
-            maxQuantity: 4,
+            hasLargeOrderNote: true,
             options: [
                 { text: 'Cake Bites & Board - $22.00', value: 'flight', link: 'https://square.link/u/escrWE54' }
             ]
@@ -244,7 +244,7 @@
             description: 'Discover your inner artist. We provide everything you need to transform your own cake into a work of art.',
             image: 'https://imgur.com/FX7UFPc.jpeg',
             price: '$45.00',
-            maxQuantity: 10,
+            hasLargeOrderNote: true,
             options: [
                  { text: 'Paint by Cake Kit - $45.00', value: 'kit', link: 'https://square.link/u/D099GWCT' }
             ]
@@ -311,9 +311,8 @@
                 `<a href="${product.contactLink}" class="mt-4 text-center w-full bg-transparent border-2 border-brand-gold text-brand-gold font-bold py-2 px-4 rounded-lg hover:bg-brand-gold hover:text-brand-dark transition">Learn More & Inquire</a>` :
                 `<button onclick="showProductModal('${product.id}')" class="mt-auto w-full bg-brand-gold text-brand-dark font-bold py-2 px-4 rounded-lg hover:bg-brand-gold-hover transition">Order Now</button>`;
 
-            const largeOrderNoteHtml = product.maxQuantity ? 
-                `<p class="text-xs text-brand-gray mt-4">For orders over ${product.maxQuantity}, please <a href="mailto:contact@thegildedspoonshoppe.com?subject=Large%20Order%20Inquiry:%20${encodeURIComponent(product.name)}" class="text-brand-gold hover:underline">send an inquiry</a>.</p>` : '';
-
+            const largeOrderNoteHtml = product.hasLargeOrderNote ?
+            `<p class="text-xs text-brand-gray mt-4">For large orders or to inquire about custom catering, please <a href="mailto:contact@thegildedspoonshoppe.com?subject=Large%20Order%20Inquiry:%20${encodeURIComponent(product.name)}" class="text-brand-gold hover:underline">send an inquiry</a>.</p>` : '';
             return `
                 <div class="bg-brand-card/50 border border-brand-gold/20 rounded-2xl shadow-xl flex flex-col">
                     <img src="${product.image}" alt="${product.name}" class="w-full h-48 object-cover rounded-t-2xl">
