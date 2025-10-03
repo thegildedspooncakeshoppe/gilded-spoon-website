@@ -312,8 +312,9 @@
                 `<a href="${product.contactLink}" class="mt-4 text-center w-full bg-transparent border-2 border-brand-gold text-brand-gold font-bold py-2 px-4 rounded-lg hover:bg-brand-gold hover:text-brand-dark transition">Learn More & Inquire</a>` :
                 `<button onclick="showProductModal('${product.id}')" class="mt-auto w-full bg-brand-gold text-brand-dark font-bold py-2 px-4 rounded-lg hover:bg-brand-gold-hover transition">Order Now</button>`;
 
-            const largeOrderNoteHtml = product.hasLargeOrderNote ?
-            `<p class="text-xs text-brand-gray mt-4">For large orders or to inquire about custom catering, please <a href="mailto:contact@thegildedspoonshoppe.com?subject=Large%20Order%20Inquiry:%20${encodeURIComponent(product.name)}" class="text-brand-gold hover:underline">send an inquiry</a>.</p>` : '';
+// This is the new, updated line for your renderProductCards() function
+const largeOrderNoteHtml = product.hasLargeOrderNote ?
+    `<p class="text-xs text-brand-gray mt-4">For large orders or to inquire about custom catering, please <a href="mailto:contact@thegildedspoonshoppe.com?subject=Large%20Order%20Inquiry:%20${encodeURIComponent(product.name)}&body=Hello!%20I'd%20like%20to%20inquire%20about%20a%20large%2Fcatering%20order%20for%20${encodeURIComponent(product.name)}.%0D%0A%0D%0A-%20Name%3A%0D%0A-%20Phone%20Number%3A%0D%0A-%20Desired%20Pickup%20Date%3A%0D%0A-%20Quantity%20Needed%3A%0D%0A-%20Any%20questions%20or%20custom%20requests%3F%3A%0D%0A%0D%0AThank%20you!" class="text-brand-gold hover:underline">Send an Inquiry</p>` : '';            
             return `
                 <div class="bg-brand-card/50 border border-brand-gold/20 rounded-2xl shadow-xl flex flex-col">
                     <img src="${product.image}" alt="${product.name}" class="w-full h-48 object-cover rounded-t-2xl">
