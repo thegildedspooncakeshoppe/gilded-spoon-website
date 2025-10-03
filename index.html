@@ -140,7 +140,7 @@
                         <p>We are an Atelier, a workshop where classic technique meets modern artistry. We pour our hearts into every creation, using only the finest ingredients to craft flavors that are both familiar and surprising. From our signature Cake Pucks to our bespoke celebration cakes, each item is a piece of edible art, designed to bring a little more joy and wonder into your life.</p>
                         <div class="mt-8 pt-6 border-t border-brand-gray/20">
                             <h3 class="font-serif text-3xl font-semibold mb-4 text-white">Our Mission: Creating Art with Purpose</h3>
-                        <p>The Gilded Spoon is built on the belief that creativity is a universal language. As we grow, our goal is to launch the 'Sweet Giving Initiative', a program dedicated to providing fully-funded creative workshops for children in our local non-profit community. Every event booked with us is a step toward making that vision a reality.</p>                       
+                            <p>The Gilded Spoon is built on the belief that creativity is a universal language. As we grow, our goal is to launch the 'Sweet Giving Initiative', a program dedicated to providing fully-funded creative workshops for children in our local non-profit community. Every event booked with us is a step toward making that vision a reality.</p>                            
                         </div>
                     </div>
                 </div>
@@ -258,7 +258,6 @@
             price: 'Starting at $125.00',
             isContactForm: true,
             contactLink: "mailto:contact@thegildedspoonshoppe.com?subject=Custom%20Celebration%20Cake%20Inquiry&body=Hello!%0D%0A%0D%0AI'm%20excited%20to%20inquire%20about%20a%20custom%20celebration%20cake.%20Please%20see%20my%20event%20details%20below%3A%0D%0A%0D%0A-%20Name%3A%0D%0A-%20Phone%20Number%3A%0D%0A-%20Type%20of%20Event%20(e.g.%2C%20Birthday%2C%20Wedding%2C%20Shower)%3A%0D%0A-%20Event%20Date%3A%0D%0A-%20Event%20Venue%20or%20Pickup%20City%3A%20(McKinney%2C%20TX)%0D%0A-%20Number%20of%20Guests%20to%20Serve%3A%0D%0A-%20Desired%20Flavors%20(visit%20our%20Flavor%20Library%20for%20ideas!)%3A%0D%0A-%20Design%20Details%20(Please%20describe%20the%20theme%2C%20colors%2C%20and%20any%20inspiration.%20Feel%20free%20to%20attach%20photos%20in%20your%20reply!)%3A%0D%0A-%20Estimated%20Budget%20(Optional%2C%20but%20helpful%20for%20guiding%20design%20options)%3A%0D%0A%0D%0AThank%20you!"
-
         },
         {
             id: 'events',
@@ -312,9 +311,8 @@
                 `<a href="${product.contactLink}" class="mt-4 text-center w-full bg-transparent border-2 border-brand-gold text-brand-gold font-bold py-2 px-4 rounded-lg hover:bg-brand-gold hover:text-brand-dark transition">Learn More & Inquire</a>` :
                 `<button onclick="showProductModal('${product.id}')" class="mt-auto w-full bg-brand-gold text-brand-dark font-bold py-2 px-4 rounded-lg hover:bg-brand-gold-hover transition">Order Now</button>`;
 
-// This is the new, updated line for your renderProductCards() function
-const largeOrderNoteHtml = product.hasLargeOrderNote ?
-    `<p class="text-xs text-brand-gray mt-4">For large orders or to inquire about custom catering, please <a href="mailto:contact@thegildedspoonshoppe.com?subject=Large%20Order%20Inquiry:%20${encodeURIComponent(product.name)}&body=Hello!%20I'd%20like%20to%20inquire%20about%20a%20large%2Fcatering%20order%20for%20${encodeURIComponent(product.name)}.%0D%0A%0D%0A-%20Name%3A%0D%0A-%20Phone%20Number%3A%0D%0A-%20Desired%20Pickup%20Date%3A%0D%0A-%20Quantity%20Needed%3A%0D%0A-%20Any%20questions%20or%20custom%20requests%3F%3A%0D%0A%0D%0AThank%20you!" class="text-brand-gold hover:underline">Send an Inquiry</p>` : '';            
+            const largeOrderNoteHtml = product.hasLargeOrderNote ?
+    `<p class="text-xs text-brand-gray mt-4">For large orders or to inquire about custom catering, please <a href="mailto:contact@thegildedspoonshoppe.com?subject=Large%20Order%20Inquiry:%20${encodeURIComponent(product.name)}&body=Hello!%20I'd%20like%20to%20inquire%20about%20a%20large%2Fcatering%20order%20for%20${encodeURIComponent(product.name)}.%0D%0A%0D%0A-%20Name%3A%0D%0A-%20Phone%20Number%3A%0D%0A-%20Desired%20Pickup%20Date%3A%0D%0A-%20Quantity%20Needed%3A%0D%0A-%20Any%20questions%20or%20custom%20requests%3F%3A%0D%0A%0D%0AThank%20you!" class="text-brand-gold hover:underline">send an inquiry</a>.</p>` : '';            
             return `
                 <div class="bg-brand-card/50 border border-brand-gold/20 rounded-2xl shadow-xl flex flex-col">
                     <img src="${product.image}" alt="${product.name}" class="w-full h-48 object-cover rounded-t-2xl">
