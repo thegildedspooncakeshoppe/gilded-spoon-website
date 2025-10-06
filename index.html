@@ -274,14 +274,43 @@
         if(modal) modal.style.display = 'none';
     }
 
-    function renderProductCards() {
-        const container = document.getElementById('products-container');
-        if (!container) return;
-        container.innerHTML = products.map(product => {
-            const buttonHtml = product.isContactForm ? `<a href="${product.contactLink}" class="mt-4 text-center w-full bg-transparent border-2 border-brand-gold text-brand-gold font-bold py-2 px-4 rounded-lg hover:bg-brand-gold hover:text-brand-dark transition">Learn More & Inquire</a>` : `<button onclick="showProductModal('${product.id}')" class="mt-auto w-full bg-brand-gold text-brand-dark font-bold py-2 px-4 rounded-lg hover:bg-brand-gold-hover transition">Order Now</button>`;
-            const largeOrderNoteHtml = product.hasLargeOrderNote ? `<p class="text-xs text-brand-gray mt-4">For large orders or to inquire about custom catering, please <a href="mailto:contact@thegildedspoonshoppe.com?subject=Large%20Order%20Inquiry:%20${encodeURIComponent(product.name)}&body=Hello!%20I'd%20like%20to%20inquire%20about%20a%20large%2Fcatering%20order%20for%20${encodeURIComponent(product.name)}..." class="text-brand-gold hover:underline">send an inquiry</a>.</p>` : '';
-            return `<div class="bg-brand-card/50 border border-brand-gold/20 rounded-2xl shadow-xl flex flex-col"><img src="${product.image}" alt="${product.name}" class="w-full h-48 object-cover rounded-t-2xl"><div class="p-6 flex flex-col flex-grow"><h3 class="font-serif text-2xl font-bold text-white">${product.name}</h3><p class="text-sm text-brand-gray/80 mt-1 italic">${product.subtext}</p><p class="text-brand-gray my-4 text-sm flex-grow">${product.description}</p><div class="text-lg font-semibold text-brand-gold mt-auto">${product.price}</div>${largeOrderNoteHtml}<div class="mt-4">${buttonHtml}</div></div></div>`;
-        }).join('');
+    // REPLACE your existing renderProductCards function with this one
+
+function renderProductCards() {
+    const container = document.getElementById('products-container');
+    if (!container) return;
+
+    // We change the grid to have 6 columns on large screens to allow for this layout
+    container.className = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8";
+
+    container.innerHTML = products.map((product, index) => {
+        const buttonHtml = product.isContactForm ?
+            `<a href="${product.contactLink}" class="mt-4 text-center w-full bg-transparent border-2 border-brand-gold text-brand-gold font-bold py-2 px-4 rounded-lg hover:bg-brand-gold hover:text-brand-dark transition">Learn More & Inquire</a>` :
+            `<button onclick="showProductModal('${product.id}')" class="mt-auto w-full bg-brand-gold text-brand-dark font-bold py-2 px-4 rounded-lg hover:bg-brand-gold-hover transition">Order Now</button>`;
+
+        const largeOrderNoteHtml = product.hasLargeOrderNote ?
+        `<p class="text-xs text-brand-gray mt-4">For large orders or to inquire about custom catering, please <a href="mailto:contact@thegildedspoonshoppe.com?subject=Large%20Order%20Inquiry:%20${encodeURIComponent(product.name)}&body=Hello!%20I'd%20like%20to%20inquire%20about%20a%20large%2Fcatering%20order%20for%20${encodeURIComponent(product.name)}..." class="text-brand-gold hover:underline">send an inquiry</a>.</p>` : '';
+        
+        // This is the magic: the first two cards get a wider span
+        const columnSpanClass = index < 2 ? 'lg:col-span-3' : 'lg:col-span-2';
+
+        return `
+            <div class="${columnSpanClass} bg-brand-card/50 border border-brand-gold/20 rounded-2xl shadow-xl flex flex-col">
+                <img src="${product.image}" alt="${product.name}" class="w-full h-48 object-cover rounded-t-2xl">
+                <div class="p-6 flex flex-col flex-grow">
+                    <h3 class="font-serif text-2xl font-bold text-white">${product.name}</h3>
+                    <p class="text-sm text-brand-gray/80 mt-1 italic">${product.subtext}</p>
+                    <p class="text-brand-gray my-4 text-sm flex-grow">${product.description}</p>
+                    <div class="text-lg font-semibold text-brand-gold mt-auto">${product.price}</div>
+                    ${largeOrderNoteHtml}
+                    <div class="mt-4">
+                        ${buttonHtml}
+                    </div>
+                </div>
+            </div>
+        `;
+    }).join('');
+}
     }
 
     // --- EVENT LISTENERS (RESTORED) ---
