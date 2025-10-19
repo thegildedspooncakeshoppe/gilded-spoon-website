@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A portfolio gallery of bespoke cakes from The Gilded Spoon Cake Shoppe.">
+    <title>Cake Portfolio - The Gilded Spoon Cake Shoppe</title>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Libre+Baskerville:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;700&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-dark': '#1C161E',
+                        'brand-light': '#F4F1ED',
+                        'brand-gold': '#D4AF37',
+                        'brand-gold-hover': '#E2C76A',
+                        'brand-gray': '#A09DA6',
+                        'brand-card': '#2A232F',
+                        'brand-navy': '#0A2342',
+                    },
+                    fontFamily: {
+                        'serif': ['"Playfair Display"', 'serif'],
+                        'sans': ['"Inter"', 'sans-serif'],
+                        'cursive': ['"Great Vibes"', 'cursive'],
+                        'baskerville': ['"Libre Baskerville"', 'serif'],
+                        'cinzel': ['"Cinzel"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { background-color: #0A2342; color: #F4F1ED; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+        
+        /* === NEW STYLES FOR THE FLIPBOOK === */
+
+        /* This container holds the book and centers it */
+        #flipbook-container {
+            width: 90vw;
+            height: 75vh; /* Give it a set height */
+            max-width: 1000px;
+            max-height: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #flipbook {
+            width: 100%;
+            height: 100%;
+        }
+
+        /* This styles every page */
+        #flipbook .page {
+            /* Use your brand-light (cream) color */
+            background-color: #F4F1ED; 
+            /* Use your brand-gold for the border */
+            border: 1px solid #D4AF37; 
+            box-sizing: border-box;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* This makes your cake images fill the page */
+        #flipbook .page img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Crops image to fit */
+        }
+        
+        /* Style for the front cover (Page 1) */
+        #flipbook .front-cover {
+            /* Use your brand-dark color */
+            background-color: #1C161E;
+            color: #D4AF37; /* brand-gold */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        #flipbook .front-cover h1 {
+            font-family: "Playfair Display", serif;
+            font-size: 3rem;
+            margin: 0;
+            border-bottom: 2px solid #D4AF37;
+            padding-bottom: 10px;
+        }
+
+        #flipbook .front-cover p {
+            font-family: "Inter", sans-serif;
+            font-size: 1.2rem;
+            color: #F4F1ED; /* brand-light */
+            margin-top: 15px;
+        }
+
+        /* Style for the back cover (Page 20) */
+        #flipbook .back-cover {
+            background-color: #1C161E; /* brand-dark */
+        }
+        
+        /* This is part of the turn.js library, it creates the shadow effect */
+        #flipbook .shadow {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+    </style>
+</head>
+<body class="font-sans">
+
+    <nav class="sticky top-0 bg-brand-navy/80 backdrop-blur-lg shadow-lg z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-serif font-bold text-brand-gold text-center leading-none">
+                The Gilded Spoon
+                <span class="block text-xs font-sans font-light not-italic tracking-[0.3em]">CAKE SHOPPE</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8 font-medium">
+                <a href="index.html#workshops" class="text-brand-light hover:text-brand-gold transition">Workshops</a>
+                <a href="index.html#products" class="text-brand-light hover:text-brand-gold transition">Cake Collection</a>
+                <a href="flavors.html" class="text-brand-light hover:text-brand-gold transition">Flavor Library</a>
+                <a href="events.html" class="text-brand-light hover:text-brand-gold transition">Private Events</a>
+                <a href="index.html#our-story" class="text-brand-light hover:text-brand-gold transition">Our Story</a>
+                <a href="mailto:contact@thegildedspoonshoppe.com?subject=Website%20Inquiry..." class="text-brand-light hover:text-brand-gold transition">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="hamburger-button" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden mt-4 px-4">
+            <a href="index.html#workshops" class="block py-2 px-4 text-sm text-brand-light hover:bg-brand-card rounded">Workshops</a>
+            <a href="index.html#products" class="block py-2 px-4 text-sm text-brand-light hover:bg-brand-card rounded">Cake Collection</a>
+            <a href="flavors.html" class="block py-2 px-4 text-sm text-brand-light hover:bg-brand-card rounded">Flavor Library</a>
+            <a href="events.html" class="block py-2 px-4 text-sm text-brand-light hover:bg-brand-card rounded">Private Events</a>
+            <a href="index.html#our-story" class="block py-2 px-4 text-sm text-brand-light hover:bg-brand-card rounded">Our Story</a>
+            <a href="mailto:contact@thegildedspoonshoppe.com?subject=Website%20Inquiry..." class="block py-2 px-4 text-sm text-brand-light hover:bg-brand-card rounded">Contact</a>
+        </div>
+    </nav>
+
+    <main class="py-16 px-4">
+        <div class="max-w-6xl mx-auto text-center">
+            <h1 class="font-serif text-4xl md:text-5xl font-semibold mb-6 text-white">Our Cake Portfolio</h1>
+            <p class="text-lg text-brand-gray mb-12 max-w-2xl mx-auto">A gallery of our bespoke creations. Click or drag the page corners to flip through our portfolio.</p>
+        </div>
+
+        <div id="flipbook-container">
+            <div id="flipbook">
+                <div class="front-cover">
+                    <div>
+                        <h1>Portfolio</h1>
+                        <p>The Gilded Spoon</p>
+                    </div>
+                </div>
+        
+                <div>
+                    <img src="images/cake1.jpg" alt="Gilded Spoon Cake 1">
+                </div>
+                <div>
+                    <img src="images/cake2.jpg" alt="Gilded Spoon Cake 2">
+                </div>
+                <div>
+                    <img src="images/cake3.jpg" alt="Gilded Spoon Cake 3">
+                </div>
+                <div>
+                    <img src="images/cake4.jpg" alt="Gilded Spoon Cake 4">
+                </div>
+                <div>
+                    <img src="images/cake5.jpg" alt="Gilded Spoon Cake 5">
+                </div>
+                <div>
+                    <img src="images/cake6.jpg" alt="Gilded Spoon Cake 6">
+                </div>
+                <div>
+                    <img src="images/cake7.jpg" alt="Gilded Spoon Cake 7">
+                </div>
+                <div>
+                    <img src="images/cake8.jpg" alt="Gilded Spoon Cake 8">
+                </div>
+                <div>
+                    <img src="images/cake9.jpg" alt="Gilded Spoon Cake 9">
+                </div>
+                <div>
+                    <img src="images/cake10.jpg" alt="Gilded Spoon Cake 10">
+                </div>
+                <div>
+                    <img src="images/cake11.jpg" alt="Gilded Spoon Cake 11">
+                </div>
+                <div>
+                    <img src="images/cake12.jpg" alt="Gilded Spoon Cake 12">
+                </div>
+                <div>
+                    <img src="images/cake13.jpg" alt="Gilded Spoon Cake 13">
+                </div>
+                <div>
+                    <img src="images/cake14.jpg" alt="Gilded Spoon Cake 14">
+                </div>
+                <div>
+                    <img src="images/cake15.jpg" alt="Gilded Spoon Cake 15">
+                </div>
+        
+                <div class="page"></div>
+                <div class="page"></div>
+                <div class="page"></div>
+        
+                <div class="back-cover"></div>
+            </div>
+        </div>
+
+    </main>
+    <footer class="bg-brand-navy text-brand-gray">
+    <div class="max-w-6xl mx-auto px-6 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center items-center">
+            
+            <div>
+                <img src="bignew.png" alt="The Gilded Spoon Cake Shoppe & Atelier Logo" class="w-48 mx-auto">
+            </div>
+            <div>
+                <h3 class="text-lg font-serif font-bold mb-3">Quick Links</h3>
+                <ul class="space-y-1 text-sm text-brand-gray">
+                    <li><a href="index.html" class="hover:text-brand-gold hover:underline transition-colors duration-300">Home</a></li>
+                    <li><a href="index.html#our-story" class="hover:text-brand-gold hover:underline transition-colors duration-300">Our Story</a></li>
+                    <li><a href="flavors.html" class="hover:text-brand-gold hover:underline transition-colors duration-300">Flavor Library</a></li>
+                    <li><a href="mailto:Contact@thegildedspoonshoppe.com?subject=Website%20Inquiry" class="hover:text-brand-gold hover:underline transition-colors duration-300">Contact Us</a></li>
+                    <li><a href="policies.html" class="hover:text-brand-gold hover:underline transition-colors duration-300">Order & Return Policies</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-serif font-bold mb-3">Connect With Us</h3>
+                <div class="flex justify-center space-x-6">
+                    <a href="https://www.instagram.com/flour.shoppe.studios/" aria-label="Instagram" class="text-brand-gray hover:text-brand-gold transition-opacity">
+                        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919 4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/thegildedspoonshoppe" aria-label="Facebook" class="text-brand-gray hover:text-brand-gold transition-opacity">
+                        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.494v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.323-1.325z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mt-6 border-t border-brand-gray/20 pt-6 text-center">
+            <p class="text-sm mb-2 text-brand-gray">The Gilded Spoon Cake Shoppe by Flour Shoppe Studios</p>
+            <p class="text-sm text-brand-gray">&copy; 2025 The Gilded Spoon Cake Shoppe. All Rights Reserved.</p>
+            <p class="mt-4 text-xs max-w-md mx-auto px-4 text-brand-gray/50">Products are prepared in a home kitchen that handles allergens including wheat, dairy, eggs, soy, and nuts.</p>
+        </div>
+    </div>
+    </footer>
+
+
+    <script>
+        const hamburgerButton = document.getElementById('hamburger-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        hamburgerButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+    </script>
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
+
+    <script>
+        // Wait for the document to be fully loaded
+        $(document).ready(function() {
+            
+            var book = $('#flipbook');
+            var container = $('#flipbook-container');
+
+            // Initialize the turn.js flipbook
+            book.turn({
+                width: container.width(),
+                height: container.height(),
+                autoCenter: true,
+                elevation: 50,  // The "lift" of the page when turning
+                gradients: true, // Shows shadows and gradients on the fold
+                when: {
+                    // This ensures the book resizes if the browser window changes
+                    resized: function(e, a, b) {
+                        book.turn('size', container.width(), container.height());
+                    }
+                }
+            });
+        });
+
+        // A slightly more robust way to handle window resizing
+        $(window).on('resize', function() {
+            var book = $('#flipbook');
+            var container = $('#flipbook-container');
+            // Check if the book has been initialized
+            if (book.data().turn) {
+                book.turn('size', container.width(), container.height());
+            }
+        });
+    </script>
+
+</body>
+</html>
