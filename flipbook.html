@@ -32,7 +32,7 @@
                         'serif': ['"Playfair Display"', 'serif'],
                         'sans': ['"Inter"', 'sans-serif'],
                         'cursive': ['"Great Vibes"', 'cursive'],
-                        'baskerville': ['"Libre Baskerville"', 'serif'],
+                        'baskerville': ['"Libre Baskerville"'," serif"],
                         'cinzel': ['"Cinzel"', 'serif'],
                     }
                 }
@@ -43,28 +43,21 @@
     <style>
         body { background-color: #0A2342; color: #F4F1ED; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
         
-        /* === NEW STYLES FOR THE FLIPBOOK === */
-
-        /* This container holds the book and centers it */
+        /* === STYLES FOR THE FLIPBOOK === */
         #flipbook-container {
             width: 90vw;
-            height: 75vh; /* Give it a set height */
+            height: 75vh;
             max-width: 1000px;
             max-height: 700px;
             margin-left: auto;
             margin-right: auto;
         }
-
         #flipbook {
             width: 100%;
             height: 100%;
         }
-
-        /* This styles every page */
         #flipbook .page {
-            /* Use your brand-light (cream) color */
             background-color: #F4F1ED; 
-            /* Use your brand-gold for the border */
             border: 1px solid #D4AF37; 
             box-sizing: border-box;
             overflow: hidden;
@@ -72,26 +65,20 @@
             justify-content: center;
             align-items: center;
         }
-
-        /* This makes your cake images fill the page */
         #flipbook .page img {
             width: 100%;
             height: 100%;
-            object-fit: cover; /* Crops image to fit */
+            object-fit: cover;
         }
-        
-        /* Style for the front cover (Page 1) */
         #flipbook .front-cover {
-            /* Use your brand-dark color */
             background-color: #1C161E;
-            color: #D4AF37; /* brand-gold */
+            color: #D4AF37; 
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
         }
-
         #flipbook .front-cover h1 {
             font-family: "Playfair Display", serif;
             font-size: 3rem;
@@ -99,24 +86,18 @@
             border-bottom: 2px solid #D4AF37;
             padding-bottom: 10px;
         }
-
         #flipbook .front-cover p {
             font-family: "Inter", sans-serif;
             font-size: 1.2rem;
-            color: #F4F1ED; /* brand-light */
+            color: #F4F1ED; 
             margin-top: 15px;
         }
-
-        /* Style for the back cover (Page 20) */
         #flipbook .back-cover {
-            background-color: #1C161E; /* brand-dark */
+            background-color: #1C161E; 
         }
-        
-        /* This is part of the turn.js library, it creates the shadow effect */
         #flipbook .shadow {
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         }
-
     </style>
 </head>
 <body class="font-sans">
@@ -158,66 +139,7 @@
         </div>
 
         <div id="flipbook-container">
-            <div id="flipbook">
-                <div class="front-cover">
-                    <div>
-                        <h1>Portfolio</h1>
-                        <p>The Gilded Spoon</p>
-                    </div>
-                </div>
-        
-                <div>
-                    <img src="images/cake1.jpg" alt="Gilded Spoon Cake 1">
-                </div>
-                <div>
-                    <img src="images/cake2.jpg" alt="Gilded Spoon Cake 2">
-                </div>
-                <div>
-                    <img src="images/cake3.jpg" alt="Gilded Spoon Cake 3">
-                </div>
-                <div>
-                    <img src="images/cake4.jpg" alt="Gilded Spoon Cake 4">
-                </div>
-                <div>
-                    <img src="images/cake5.jpg" alt="Gilded Spoon Cake 5">
-                </div>
-                <div>
-                    <img src="images/cake6.jpg" alt="Gilded Spoon Cake 6">
-                </div>
-                <div>
-                    <img src="images/cake7.jpg" alt="Gilded Spoon Cake 7">
-                </div>
-                <div>
-                    <img src="images/cake8.jpg" alt="Gilded Spoon Cake 8">
-                </div>
-                <div>
-                    <img src="images/cake9.jpg" alt="Gilded Spoon Cake 9">
-                </div>
-                <div>
-                    <img src="images/cake10.jpg" alt="Gilded Spoon Cake 10">
-                </div>
-                <div>
-                    <img src="images/cake11.jpg" alt="Gilded Spoon Cake 11">
-                </div>
-                <div>
-                    <img src="images/cake12.jpg" alt="Gilded Spoon Cake 12">
-                </div>
-                <div>
-                    <img src="images/cake13.jpg" alt="Gilded Spoon Cake 13">
-                </div>
-                <div>
-                    <img src="images/cake14.jpg" alt="Gilded Spoon Cake 14">
-                </div>
-                <div>
-                    <img src="images/cake15.jpg" alt="Gilded Spoon Cake 15">
-                </div>
-        
-                <div class="page"></div>
-                <div class="page"></div>
-                <div class="page"></div>
-        
-                <div class="back-cover"></div>
-            </div>
+            <div id="flipbook"></div>
         </div>
 
     </main>
@@ -269,21 +191,73 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
 
     <script>
-        // Wait for the document to be fully loaded
+        // --- 1. THIS IS THE ONLY PART YOU NEED TO EDIT IN THE FUTURE ---
+        // Just add your new image filenames to this list.
+        const cakeImages = [
+            "cake1.jpg",
+            "cake2.jpg",
+            "cake3.jpg",
+            "cake4.jpg",
+            "cake5.jpg",
+            "cake6.jpg",
+            "cake7.jpg",
+            "cake8.jpg",
+            "cake9.jpg",
+            "cake10.jpg",
+            "cake11.jpg",
+            "cake12.jpg",
+            "cake13.jpg",
+            "cake14.jpg",
+            "cake15.jpg",
+            "cake16.jpg",
+            "cake17.jpg",
+            "cake18.jpg",
+            "cake19.jpg",
+            "cake20.jpg",
+            "cake21.jpg",
+            "cake22.jpg",
+            "cake23.jpg",
+            "cake24.jpg"
+            // Add "cake25.jpg", etc. here
+        ];
+
+        // --- 2. THIS CODE BUILDS THE BOOK (No need to edit) ---
         $(document).ready(function() {
-            
             var book = $('#flipbook');
             var container = $('#flipbook-container');
 
-            // Initialize the turn.js flipbook
+            // --- This part builds the pages ---
+            
+            // 1. Add the front cover
+            book.append(`
+                <div class="front-cover">
+                    <div>
+                        <h1>Portfolio</h1>
+                        <p>The Gilded Spoon</p>
+                    </div>
+                </div>
+            `);
+
+            // 2. Loop through your image list and add a page for each
+            cakeImages.forEach(function(imageUrl, index) {
+                book.append(`
+                    <div class="page">
+                        <img src="images/${imageUrl}" alt="Gilded Spoon Cake ${index + 1}">
+                    </div>
+                `);
+            });
+
+            // 3. Add the back cover
+            book.append('<div class="back-cover"></div>');
+            
+            // --- This part initializes the flipbook (AFTER building it) ---
             book.turn({
                 width: container.width(),
                 height: container.height(),
                 autoCenter: true,
-                elevation: 50,  // The "lift" of the page when turning
-                gradients: true, // Shows shadows and gradients on the fold
+                elevation: 50,
+                gradients: true,
                 when: {
-                    // This ensures the book resizes if the browser window changes
                     resized: function(e, a, b) {
                         book.turn('size', container.width(), container.height());
                     }
@@ -291,11 +265,10 @@
             });
         });
 
-        // A slightly more robust way to handle window resizing
+        // This makes sure the book resizes correctly
         $(window).on('resize', function() {
             var book = $('#flipbook');
             var container = $('#flipbook-container');
-            // Check if the book has been initialized
             if (book.data().turn) {
                 book.turn('size', container.width(), container.height());
             }
