@@ -192,7 +192,6 @@
 
     <script>
         // --- 1. THIS IS THE ONLY PART YOU NEED TO EDIT IN THE FUTURE ---
-        // Just add your new image filenames to this list.
         const cakeImages = [
             "cake1.jpg",
             "cake2.jpg",
@@ -222,7 +221,13 @@
         ];
 
         // --- 2. THIS CODE BUILDS THE BOOK (No need to edit) ---
-        $(document).ready(function() {
+        
+        // =========================================================
+        // === THIS IS THE CRITICAL CHANGE ===
+        // We wait for the *entire window* (all scripts) to load
+        // instead of just the document.
+        // =========================================================
+        $(window).on('load', function() {
             var book = $('#flipbook');
             var container = $('#flipbook-container');
 
@@ -251,6 +256,7 @@
             book.append('<div class="back-cover"></div>');
             
             // --- This part initializes the flipbook (AFTER building it) ---
+            // Now, this command will run *after* turn.min.js is loaded
             book.turn({
                 width: container.width(),
                 height: container.height(),
