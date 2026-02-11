@@ -121,28 +121,29 @@
         }
 
         /* --- SPLIT SECTION (Video/Image + Letter) --- */
+        /* UPDATED CSS HERE */
         .split-section {
             display: flex;
             flex-direction: row;
             max-width: 1000px;
             margin: 0 auto 4rem auto;
-            gap: 3rem;
+            gap: 2rem; /* Reduced gap slightly so they stay connected as image grows */
             align-items: center;
             padding: 0 2rem;
         }
 
         .video-wrapper {
-            flex: 1;
+            /* CHANGED FROM flex: 1; TO flex: 1.3; 
+               This gives the image container more relative width, making the image bigger. */
+            flex: 1.3; 
             border: 10px solid #fff;
             box-shadow: var(--shadow);
             line-height: 0;
             position: relative;
             transform: rotate(-1deg);
-            /* Added bg color so it looks okay while image loads */
             background: #fff; 
         }
 
-        /* NEW CSS added to ensure the image fits the wrapper perfectly */
         .video-wrapper img {
             width: 100%;
             height: auto;
@@ -150,7 +151,7 @@
         }
 
         .letter-wrapper {
-            flex: 1;
+            flex: 1; /* The letter keeps its base size ratio */
             background: #fff;
             padding: 2.5rem;
             box-shadow: var(--shadow);
@@ -158,6 +159,7 @@
             position: relative;
             transform: rotate(1deg);
         }
+        /* END UPDATED CSS */
 
         .letter-wrapper::before {
             content: "";
