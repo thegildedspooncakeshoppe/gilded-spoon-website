@@ -120,7 +120,7 @@
             line-height: 1.4;
         }
 
-        /* --- SPLIT SECTION (Video + Letter) --- */
+        /* --- SPLIT SECTION (Video/Image + Letter) --- */
         .split-section {
             display: flex;
             flex-direction: row;
@@ -138,6 +138,15 @@
             line-height: 0;
             position: relative;
             transform: rotate(-1deg);
+            /* Added bg color so it looks okay while image loads */
+            background: #fff; 
+        }
+
+        /* NEW CSS added to ensure the image fits the wrapper perfectly */
+        .video-wrapper img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
         .letter-wrapper {
@@ -549,9 +558,8 @@
 
     <section class="split-section">
         
-        <div class="media-container">
-   <img src="https://imgur.com/BmnoY7w.png" alt="Cover art for My Edible Autobiography" class="img-responsive">
-</div>
+        <div class="video-wrapper">
+             <img src="https://imgur.com/BmnoY7w.png" alt="Cover art for My Edible Autobiography">
         </div>
 
         <div class="letter-wrapper">
@@ -567,7 +575,6 @@
             </div>
         </div>
     </section>
-
     <section class="inside-section">
         <h2 class="section-title">A Map for Your Senses</h2>
         
