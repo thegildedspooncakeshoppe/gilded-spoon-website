@@ -1,263 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Edible Autobiography | The Gilded Spoon Cake Shoppe</title>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-dark': '#1C161E',
+                        'brand-light': '#F4F1ED',
+                        'brand-gold': '#D4AF37',
+                        'brand-gold-hover': '#E2C76A',
+                        'brand-gray': '#A09DA6',
+                        'brand-card': '#2A232F',
+                        'brand-navy': '#0A2342',
+                        'brand-sage': '#8A9A5B',
+                    },
+                    fontFamily: {
+                        'serif': ['"Playfair Display"', 'serif'],
+                        'sans': ['"Inter"', 'sans-serif'],
+                        'hand': ['"Caveat"', 'cursive'],
+                    }
+                }
+            }
+        }
+    </script>
     <style>
-        /* --- BRAND COLORS --- */
-        :root {
-            --navy: #1A2A40;
-            --gold: #D4AF37;
-            --cream: #F9F7F2;
-            --sage: #8A9A5B; 
-            --text-dark: #2c2c2c;
-            --gray: #6b7280;
-            --shadow: 0 10px 30px rgba(0,0,0,0.08);
-        }
-
-        /* --- GLOBAL STYLES --- */
-        body {
-            font-family: 'Lato', sans-serif;
-            background-color: var(--cream);
-            color: var(--text-dark);
-            margin: 0;
-            padding: 0;
-            line-height: 1.6;
-        }
-
-        h1, h2, h3, h4, h5 {
-            font-family: 'Playfair Display', serif;
-            color: var(--navy);
-            margin-top: 0;
-        }
-
-        a { text-decoration: none; color: inherit; transition: 0.3s; }
-        a:hover { color: var(--gold); }
-
-        /* --- HEADER --- */
-        header {
-            background-color: #fff;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 4px solid var(--gold);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-        }
-
-        /* UPDATED LOGO STYLES */
-        .logo {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            font-size: 1.3rem;
-            color: var(--navy);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: flex;
-            flex-direction: column; /* Stacks title and subtitle */
-            line-height: 1.2;
-        }
-
-        .logo-subtitle {
-            display: block;
-            font-family: 'Lato', sans-serif;
-            font-size: 0.65rem; /* Small text (text-xs) */
-            font-weight: 300;   /* Light font */
-            letter-spacing: 0.3em; /* Wide spacing */
-            color: var(--sage);
-            margin-top: 2px;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-        }
-
-        .nav-links a {
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: bold;
-            color: var(--navy);
-        }
-
-        @media (max-width: 900px) {
-            .nav-links { display: none; } 
-        }
-
-        /* --- HERO SECTION --- */
-        .hero {
-            text-align: center;
-            padding: 5rem 2rem 2rem 2rem;
-            background-image: linear-gradient(rgba(255,255,255,0.95), rgba(255,255,255,0.9)), url('https://www.transparenttextures.com/patterns/cream-paper.png');
-        }
-
-        .hero h1 { 
-            font-size: 3.5rem; 
-            line-height: 1.1; 
-            margin-bottom: 0.5rem; 
-        }
+        body { background-color: #F9F7F2; color: #1C161E; font-family: 'Inter', sans-serif; }
         
-        .hero-tagline { 
-            font-family: 'Caveat', cursive; 
-            font-size: 2rem; 
-            color: var(--sage); 
-            transform: rotate(-2deg); 
-            display: block; 
-            margin-bottom: 1rem; 
-        }
-
-        /* --- HOOK CONTAINER --- */
-        .hook-container {
-            max-width: 800px;
-            margin: 0 auto 3rem auto;
-            text-align: center;
-            padding: 2.5rem;
-            background-color: rgba(138, 154, 91, 0.1); 
-            border-radius: 8px;
-            border: 1px dashed var(--sage);
-        }
-
-        .hook-quote {
-            font-size: 1.4rem;
-            font-style: italic;
-            color: var(--navy);
-            margin-bottom: 1.5rem;
-            font-family: 'Playfair Display', serif;
-            line-height: 1.4;
-        }
-
-        /* --- SPLIT SECTION (Image + Letter) --- */
-        .split-section {
-            display: flex;
-            flex-direction: row;
-            max-width: 1000px;
-            margin: 0 auto 4rem auto;
-            gap: 2rem;
-            align-items: center;
-            padding: 0 2rem;
-        }
-
-        .video-wrapper {
-            /* Keep image larger relative to text */
-            flex: 1.3; 
-            border: 10px solid #fff;
-            box-shadow: var(--shadow);
-            line-height: 0;
-            position: relative;
-            transform: rotate(-1deg);
-            background: #fff; 
-        }
-
-        .video-wrapper img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-
-        .letter-wrapper {
-            flex: 1;
-            background: #fff;
-            padding: 2.5rem;
-            box-shadow: var(--shadow);
-            border: 1px solid #eee;
-            position: relative;
-            transform: rotate(1deg);
-        }
-
-        .letter-wrapper::before {
-            content: "";
-            position: absolute;
-            top: -15px; left: 50%;
-            transform: translateX(-50%) rotate(1deg);
-            width: 140px; height: 35px;
-            background-color: var(--gold);
-            opacity: 0.8;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-
-        .handwritten-text p {
-            font-family: 'Caveat', cursive;
-            font-size: 1.5rem;
-            color: #444;
-            margin-bottom: 1rem;
-        }
-
-        /* --- INSIDE THE JOURNAL (PHOTO STACKS) --- */
-        .inside-section {
-            background-color: #fff;
-            padding: 5rem 2rem;
-            border-top: 1px solid #eee;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 1rem;
-            font-size: 2.5rem;
-            color: var(--navy);
-        }
-
-        .volumes-container {
-            max-width: 1000px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 5rem;
-        }
-
-        .volume-row {
-            display: flex;
-            align-items: center;
-            gap: 3rem;
-        }
-
-        .volume-row.reverse {
-            flex-direction: row-reverse;
-        }
-
-        .vol-text { flex: 1; }
-        .vol-image { flex: 1.2; position: relative; }
-
-        .vol-label {
-            font-size: 0.8rem; 
-            text-transform: uppercase; 
-            color: #888; 
-            letter-spacing: 2px; 
-            font-weight: bold;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        .vol-text h3 { font-size: 1.8rem; margin-bottom: 1rem; color: var(--navy); }
-        .highlight-text { border-left: 4px solid var(--gold); padding-left: 2rem; }
-
-        /* --- PHOTO STACK SYSTEM --- */
-        .photo-stack {
-            position: relative;
-            width: 100%;
-            height: 350px; 
-            margin-top: 1rem;
-            cursor: pointer;
-        }
-
+        /* Custom Photo Stack CSS */
+        .photo-stack { position: relative; width: 100%; height: 300px; cursor: pointer; transition: transform 0.3s; }
+        .photo-stack:hover { transform: scale(1.02); }
         .stack-card {
-            position: absolute;
-            width: 55%; 
-            height: auto;
-            border: 6px solid #fff;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            position: absolute; width: 60%; height: auto;
+            border: 6px solid #fff; box-shadow: 0 4px 15px rgba(0,0,0,0.15);
             transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
-            object-fit: cover;
             background: #fff;
         }
-
         .pos-1 { top: 0px; left: 15%; transform: rotate(-5deg); z-index: 5; }
         .pos-2 { top: 10px; left: 25%; transform: rotate(5deg); z-index: 4; }
         .pos-3 { top: 20px; left: 5%; transform: rotate(-8deg); z-index: 3; }
@@ -269,518 +56,231 @@
         .photo-stack:hover .pos-3 { transform: translateX(-40px) rotate(-10deg); }
         .photo-stack:hover .pos-4 { transform: translateX(60px) rotate(15deg); }
         .photo-stack:hover .pos-5 { transform: translateX(80px) rotate(20deg); }
-        
-        .photo-stack::after {
-            content: "Click to View Gallery";
-            position: absolute;
-            bottom: -30px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 0.8rem;
-            color: var(--gold);
-            opacity: 0;
-            transition: opacity 0.3s;
-            font-weight: bold;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .photo-stack:hover::after { opacity: 1; }
 
-        .gold-stack .stack-card { border: 6px solid var(--gold); }
+        .gold-stack .stack-card { border: 6px solid #D4AF37; }
 
-        /* --- LIGHTBOX --- */
-        .lightbox {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(26, 42, 64, 0.95);
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-        }
-
+        /* Lightbox */
+        .lightbox { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(26, 42, 64, 0.95); justify-content: center; align-items: center; flex-direction: column; }
         .lightbox.active { display: flex; }
-
-        .lightbox-img {
-            max-width: 90%;
-            max-height: 80vh;
-            border: 4px solid #fff;
-            box-shadow: 0 0 20px rgba(0,0,0,0.5);
-        }
-
-        .lightbox-close {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            color: #fff;
-            font-size: 3rem;
-            cursor: pointer;
-            font-family: Arial, sans-serif;
-        }
-
-        .lightbox-nav {
-            margin-top: 1rem;
-            display: flex;
-            gap: 1rem;
-        }
-
-        .lightbox-btn {
-            background: transparent;
-            border: 1px solid #fff;
-            color: #fff;
-            padding: 0.5rem 1rem;
-            cursor: pointer;
-            text-transform: uppercase;
-            font-size: 0.8rem;
-        }
-        .lightbox-btn:hover { background: var(--gold); border-color: var(--gold); color: var(--navy); }
-
-        /* --- AUTHOR --- */
-        .author-section {
-            background-color: var(--navy);
-            color: #fff;
-            padding: 5rem 2rem;
-            text-align: center;
-        }
-
-        .author-container {
-            max-width: 900px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 3rem;
-            text-align: left;
-        }
-
-        .author-img {
-            width: 220px;
-            height: 220px;
-            border-radius: 50%;
-            border: 6px solid var(--gold);
-            object-fit: cover;
-            object-position: top center; 
-            flex-shrink: 0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-
-        .author-bio h3 { color: var(--gold); font-size: 2.2rem; margin-bottom: 1rem; }
-        .author-bio p { font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem; opacity: 0.9; }
-
-        /* --- BUTTONS --- */
-        .btn {
-            padding: 1rem 2.5rem;
-            font-weight: bold;
-            text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border-radius: 50px;
-            display: inline-block;
-            transition: all 0.2s;
-            font-size: 0.9rem;
-            cursor: pointer;
-            min-width: 200px;
-            text-align: center;
-        }
-
-        .btn-story {
-            background-color: var(--gold);
-            color: var(--navy);
-            border: 2px solid var(--gold);
-            font-size: 1.1rem;
-            padding: 1.2rem 3rem;
-            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.4);
-            animation: pulse 2s infinite;
-        }
-        .btn-story:hover { background-color: #fff; transform: translateY(-3px); }
-
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(212, 175, 55, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
-        }
-
-        .btn-amazon { background-color: #FF9900; border: 2px solid #FF9900; color: #fff; }
-        .btn-amazon:hover { background-color: #fff; color: #FF9900; }
-
-        .btn-primary { background-color: var(--navy); color: #fff; border: 2px solid var(--navy); }
-        .btn-primary:hover { background-color: #fff; color: var(--navy); }
-
-        .btn-outline-gold { background: transparent; border: 2px solid var(--gold); color: var(--gold); padding: 0.6rem 1.5rem; min-width: auto; }
-        .btn-outline-gold:hover { background: var(--gold); color: var(--navy); }
-
-        /* --- FOOTER STYLING --- */
-        footer {
-            background-color: #fff; 
-            color: var(--text-dark);
-            padding: 4rem 2rem 2rem 2rem;
-            border-top: 5px solid var(--gold);
-        }
-
-        .footer-container {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            gap: 2rem;
-            text-align: center;
-            align-items: start;
-        }
-
-        .footer-logo-img {
-            width: 180px;
-            margin: 0 auto;
-            display: block;
-        }
-
-        .footer-heading {
-            font-family: 'Playfair Display', serif;
-            font-weight: bold;
-            font-size: 1.2rem;
-            margin-bottom: 1rem;
-            color: var(--navy);
-        }
-
-        .footer-links {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            font-size: 0.9rem;
-            color: var(--gray);
-        }
-
-        .footer-links li { margin-bottom: 0.5rem; }
-        .footer-links a:hover { color: var(--gold); text-decoration: underline; }
-
-        .social-icons {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-        }
-
-        .social-icons a {
-            color: var(--gray);
-            transition: color 0.3s;
-        }
-        .social-icons a:hover { color: var(--gold); }
-        
-        .social-svg { width: 28px; height: 28px; fill: currentColor; }
-
-        .footer-bottom {
-            margin-top: 3rem;
-            padding-top: 1.5rem;
-            border-top: 1px solid #eee;
-            text-align: center;
-            font-size: 0.85rem;
-            color: var(--gray);
-        }
-
-        /* --- BUY SECTION --- */
-        .buy-section {
-            text-align: center; 
-            padding: 5rem 2rem; 
-            background: var(--cream);
-        }
-
-        .buy-buttons-container {
-            display: flex; 
-            justify-content: center; 
-            gap: 1.5rem; 
-            flex-wrap: wrap;
-            margin-top: 2rem;
-        }
-
-        /* --- RESPONSIVE --- */
-        @media (max-width: 768px) {
-            .split-section { flex-direction: column; gap: 2rem; }
-            .volume-row, .volume-row.reverse { flex-direction: column; gap: 1.5rem; border-bottom: 1px solid #eee; padding-bottom: 2rem; }
-            .vol-image { width: 100%; }
-            
-            /* Mobile Stack Adjustments */
-            .photo-stack { height: 280px; margin-bottom: 2rem; }
-            .stack-card { width: 60%; }
-            .pos-1 { left: 5%; }
-            .pos-2 { left: 20%; }
-            .pos-3 { left: 35%; }
-            .pos-4 { display: none; }
-            .pos-5 { display: none; }
-            
-            .author-container { flex-direction: column; text-align: center; }
-            .hero h1 { font-size: 2.8rem; }
-            .hook-container { padding: 1.5rem; }
-            
-            /* Footer Mobile */
-            .footer-grid { grid-template-columns: 1fr; gap: 3rem; }
-        }
+        .lightbox-img { max-width: 90%; max-height: 80vh; border: 4px solid #fff; }
     </style>
 </head>
-<body>
+<body class="font-sans">
 
-    <header>
-        <a href="https://thegildedspoonshoppe.com" class="logo">
-            The Gilded Spoon
-            <span class="logo-subtitle">CAKE SHOPPE & ATELIER</span>
-        </a>
-        
-        <nav class="nav-links">
-            <a href="https://thegildedspoonshoppe.com">Home</a>
-            <a href="https://the-gilded-spoon.square.site/s/shop">The Shoppe</a>
-            <a href="https://thegildedspoonshoppe.com/index.html#workshops">Workshops</a>
-            <a href="https://thegildedspoonshoppe.com/flavor.html">Flavor Library</a>
-            <a href="https://thegildedspoonshoppe.com/events.html">Private Events</a>
-            <a href="https://thegildedspoonshoppe.com/index.html#our-story">Our Story</a>
-            <a href="mailto:dimple@thegildedspoonshoppe.com?subject=Website%20Inquiry">Contact</a>
-        </nav>
+    <nav class="sticky top-0 bg-brand-navy/90 backdrop-blur-lg shadow-lg z-50 border-b border-brand-gold/10">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-serif font-bold text-brand-gold text-center leading-none">
+                The Gilded Spoon
+                <span class="block text-xs font-sans font-light not-italic tracking-[0.3em] text-brand-light">CAKE SHOPPE & ATELIER</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8 font-medium">
+                <a href="book.html" class="text-brand-gold hover:text-white transition">The Shoppe</a>
+                <a href="events.html" class="text-brand-light hover:text-brand-gold transition">Workshops</a>
+                <a href="flipbook.html" class="text-brand-light hover:text-brand-gold transition">Portfolio</a>
+                <a href="flavors.html" class="text-brand-light hover:text-brand-gold transition">Flavors</a>
+                <a href="index.html#about" class="text-brand-light hover:text-brand-gold transition">About</a>
+                <a href="mailto:contact@thegildedspoonshoppe.com" class="text-brand-light hover:text-brand-gold transition">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="hamburger-button" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden mt-4 px-4 pb-4 bg-brand-navy">
+            <a href="book.html" class="block py-2 px-4 text-sm text-brand-gold font-bold">The Shoppe</a>
+            <a href="events.html" class="block py-2 px-4 text-sm text-brand-light">Workshops</a>
+            <a href="flipbook.html" class="block py-2 px-4 text-sm text-brand-light">Portfolio</a>
+            <a href="flavors.html" class="block py-2 px-4 text-sm text-brand-light">Flavors</a>
+            <a href="index.html#about" class="block py-2 px-4 text-sm text-brand-light">Our Story</a>
+            <a href="mailto:contact@thegildedspoonshoppe.com" class="block py-2 px-4 text-sm text-brand-light">Contact</a>
+        </div>
+    </nav>
 
-        <a href="https://a.co/d/0cHWV9hB" class="btn btn-primary" style="padding: 0.6rem 1.5rem; font-size: 0.8rem; min-width: auto;">Buy The Book</a>
-    </header>
-
-    <section class="hero">
-        <span class="hero-tagline">Stop Performing. Start Feeling.</span>
-        <h1>My Edible Autobiography</h1>
-        <p style="font-size: 1.3rem; color: #555; max-width: 600px; margin: 0 auto; line-height: 1.4;">
+    <section class="text-center py-20 px-4 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')]">
+        <span class="font-hand text-3xl md:text-4xl text-brand-sage block transform -rotate-2 mb-4">Stop Performing. Start Feeling.</span>
+        <h1 class="font-serif text-5xl md:text-6xl text-brand-navy mb-4">My Edible Autobiography</h1>
+        <p class="text-lg md:text-xl text-brand-gray max-w-xl mx-auto leading-relaxed">
             A Guided Journal for Telling Your Story Through Cake and Color.<br>
-            <strong style="display:block; margin-top: 10px; color: var(--navy);">No Oven Required.</strong>
+            <strong class="text-brand-navy block mt-2">No Oven Required.</strong>
         </p>
     </section>
 
-    <div class="hook-container">
-        <div class="hook-quote">
-            "For the version of you that needs permission to be messy.<br>
-            And for the version of you that is ready to taste joy again."
+    <section class="max-w-3xl mx-auto mb-12 px-6 text-center">
+        <div class="bg-brand-sage/10 border border-dashed border-brand-sage rounded-xl p-8 md:p-10">
+            <p class="font-serif text-xl md:text-2xl text-brand-navy italic mb-6">
+                "For the version of you that needs permission to be messy.<br>
+                And for the version of you that is ready to taste joy again."
+            </p>
+            <a href="https://a.co/d/0cHWV9hB" target="_blank" class="inline-block bg-brand-gold text-brand-dark font-bold py-3 px-8 rounded-full hover:bg-brand-gold-hover shadow-lg transition-transform transform hover:-translate-y-1">
+                Start Your Story
+            </a>
+            <p class="mt-6 text-sm text-brand-gray">You don't need to be a baker to find peace. You just need a place to put your feelings.</p>
         </div>
-        
-        <a href="https://a.co/d/0cHWV9hB" class="btn btn-story">Start Your Story</a>
-        
-        <p style="margin-top: 2rem; font-size: 1rem; color: #666;">
-            You don't need to be a baker to find peace. You just need a place to put your feelings.
-        </p>
-    </div>
+    </section>
 
-    <section class="split-section">
-        
-        <div class="video-wrapper">
-             <img src="https://imgur.com/Krt8oHW.png" alt="Cover art for My Edible Autobiography">
+    <section class="max-w-5xl mx-auto mb-16 px-6 grid md:grid-cols-2 gap-8 items-center">
+        <div class="relative transform -rotate-1 border-8 border-white shadow-xl bg-white">
+             <img src="https://imgur.com/Krt8oHW.png" alt="Cover art for My Edible Autobiography" class="w-full">
         </div>
-
-        <div class="letter-wrapper">
-            <div class="handwritten-text">
+        <div class="bg-white p-8 md:p-10 shadow-lg border border-gray-100 transform rotate-1 relative">
+            <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 w-32 h-8 bg-brand-gold/80 shadow-sm rotate-1"></div>
+            <div class="font-hand text-2xl text-gray-700 space-y-4">
                 <p>Dear Creative Soul,</p>
                 <p>If you are reading this with a clenched jaw or tight shoulders, take a breath.</p>
                 <p>I know the world feels loud right now. For years, I thought baking was about performance—getting the icing smooth, nailing the chemistry. I used it as armor.</p>
                 <p>But then I realized: <b>The magic isn't in the product. It's in the process.</b></p>
                 <p>I created this journal because you deserve a place to put your feelings that doesn't require you to be "on." This is my permission slip to you.</p>
-                <p>You don't need to turn on the oven to find peace. You just need to pick up a pen.</p>
-                <p>Welcome to your new soft place to land.</p>
-                <p style="color: var(--gold); font-weight: bold; margin-top: 1.5rem;">- Dimple</p>
+                <p class="text-brand-gold font-bold">- Dimple</p>
             </div>
         </div>
     </section>
 
-    <section class="inside-section">
-        <h2 class="section-title">A Map for Your Senses</h2>
-        
-        <p style="text-align: center; max-width: 700px; margin: -1rem auto 4rem auto; color: #555; font-size: 1.1rem; line-height: 1.8;">
-            This is not a textbook, and there are no grades. Think of this journal as a map. 
-            You don’t have to explore every territory at once; start where you are, and let your senses guide the way.
-        </p>
+    <section class="py-12 bg-white border-t border-gray-100">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="font-serif text-4xl text-brand-navy text-center mb-4">A Map for Your Senses</h2>
+            <p class="text-center text-brand-gray max-w-2xl mx-auto mb-16">
+                This is not a textbook, and there are no grades. Think of this journal as a map. Start where you are, and let your senses guide the way.
+            </p>
 
-        <div class="volumes-container">
-            
-            <div class="volume-row">
-                <div class="vol-text">
-                    <span class="vol-label">Volume I</span>
-                    <h3>The Sensory Engine</h3>
-                    <p><strong>The Permission Slip.</strong><br>
-                    Before you design, you must arrive. This section explores the "Why" behind the cake and gives you the freedom to be messy. It teaches you the language of your own senses before you ever pick up a pencil.</p>
+            <div class="space-y-20">
+                <div class="grid md:grid-cols-2 gap-10 items-center">
+                    <div>
+                        <span class="text-xs font-bold tracking-widest text-brand-gray uppercase block mb-2">Volume I</span>
+                        <h3 class="font-serif text-3xl text-brand-navy mb-4">The Sensory Engine</h3>
+                        <p class="text-brand-dark leading-relaxed"><strong>The Permission Slip.</strong> Before you design, you must arrive. This section explores the "Why" behind the cake and gives you the freedom to be messy. It teaches you the language of your own senses before you ever pick up a pencil.</p>
+                    </div>
+                    <div>
+                        <div class="photo-stack" onclick="openLightbox(this)">
+                            <img src="https://imgur.com/gnGLaxA.png" class="stack-card pos-1" alt="Volume I Welcome">
+                            <img src="https://imgur.com/bCdvQ0X.png" class="stack-card pos-2" alt="Volume I Permission">
+                            <img src="https://imgur.com/70o80fn.png" class="stack-card pos-3" alt="Volume I Sensory Engine">
+                        </div>
+                    </div>
                 </div>
-                <div class="vol-image">
-                    <div class="photo-stack" onclick="openLightbox(this)">
-                        <img src="https://imgur.com/gnGLaxA.png" class="stack-card pos-1" alt="Volume I Welcome">
-                        <img src="https://imgur.com/bCdvQ0X.png" class="stack-card pos-2" alt="Volume I Permission">
-                        <img src="https://imgur.com/70o80fn.png" class="stack-card pos-3" alt="Volume I Sensory Engine">
+
+                <div class="grid md:grid-cols-2 gap-10 items-center">
+                    <div class="md:order-2">
+                        <span class="text-xs font-bold tracking-widest text-brand-gray uppercase block mb-2">Volume II</span>
+                        <h3 class="font-serif text-3xl text-brand-navy mb-4">The 5-Layer Framework</h3>
+                        <p class="text-brand-dark leading-relaxed"><strong>The Blueprint.</strong> Don't just bake; design. This is your guide for turning abstract feelings into tangible elements. You'll learn to translate emotion into <strong>Color, Soak, Texture, Placement, and Expression</strong>.</p>
+                    </div>
+                    <div class="md:order-1">
+                        <div class="photo-stack" onclick="openLightbox(this)">
+                             <img src="https://imgur.com/ZjReC0e.png" class="stack-card pos-1" alt="5-Layer Cake Framework">
+                            <img src="https://imgur.com/NoH3Zx3.png" class="stack-card pos-2" alt="Framework Details">
+                            <img src="https://imgur.com/VgxfSJb.png" class="stack-card pos-3" alt="In Practice">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-10 items-center">
+                    <div class="border-l-4 border-brand-gold pl-6">
+                        <span class="text-xs font-bold tracking-widest text-brand-gold uppercase block mb-2">Volume III</span>
+                        <h3 class="font-serif text-3xl text-brand-navy mb-4">The Sensory Rolodex</h3>
+                        <p class="text-brand-dark leading-relaxed"><strong>The Toolbelt.</strong> Located in the center with a distinct gold border, this is your command center. It holds your <strong>Flavor Codex</strong>, <strong>Color Palettes</strong>, and the <strong>Emergency Kit</strong> for when you have zero spoons left.</p>
+                    </div>
+                    <div>
+                        <div class="photo-stack gold-stack" onclick="openLightbox(this)">
+                            <img src="https://imgur.com/wPMg5aK.png" class="stack-card pos-1" alt="Volume III Divider">
+                            <img src="https://imgur.com/Mtp84a7.png" class="stack-card pos-2" alt="Emergency Kit">
+                            <img src="https://imgur.com/tzphOWb.png" class="stack-card pos-3" alt="Anchor & Mood">
+                            <img src="https://imgur.com/aPwp2Va.png" class="stack-card pos-4" alt="Sample Pantry">
+                            <img src="https://imgur.com/7bK2n1v.png" class="stack-card pos-5" alt="Sensory Pantry">
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="volume-row reverse">
-                <div class="vol-text">
-                    <span class="vol-label">Volume II</span>
-                    <h3>The 5-Layer Framework</h3>
-                    <p><strong>The Blueprint. The Vision Board.</strong><br>
-                    Don't just bake; design. This is your guide for turning abstract feelings into tangible elements. You'll learn to translate emotion into <strong>Color, Soak, Texture, Placement, and Expression</strong>.</p>
-                </div>
-                <div class="vol-image">
-                    <div class="photo-stack" onclick="openLightbox(this)">
-                         <img src="https://imgur.com/ZjReC0e.png" class="stack-card pos-1" alt="5-Layer Cake Framework">
-                        <img src="https://imgur.com/NoH3Zx3.png" class="stack-card pos-2" alt="Framework Details">
-                        <img src="https://imgur.com/VgxfSJb.png" class="stack-card pos-3" alt="In Practice">
-                    </div>
-                </div>
+    <section class="py-16 bg-brand-navy text-white">
+        <div class="max-w-4xl mx-auto px-6 grid md:grid-cols-3 gap-8 items-center">
+            <div class="flex justify-center">
+                <img src="https://imgur.com/FWkUS15.png" alt="Dimple Patel McKinney" class="w-48 h-48 md:w-56 md:h-56 object-cover object-top rounded-full border-4 border-brand-gold shadow-2xl">
             </div>
-
-            <div class="volume-row">
-                <div class="vol-text highlight-text">
-                    <span class="vol-label" style="color: var(--gold);">Volume III</span>
-                    <h3>The Sensory Rolodex</h3>
-                    <p><strong>The Toolbelt.</strong><br>
-                    Located in the center with a distinct gold border, this is your command center. It holds your <strong>Flavor Codex</strong>, <strong>Color Palettes</strong>, and the <strong>Emergency Kit</strong> for when you have zero spoons left.</p>
-                </div>
-                <div class="vol-image highlight-image">
-                    <div class="photo-stack gold-stack" onclick="openLightbox(this)">
-                        <img src="https://imgur.com/wPMg5aK.png" class="stack-card pos-1" alt="Volume III Divider">
-                        <img src="https://imgur.com/Mtp84a7.png" class="stack-card pos-2" alt="Emergency Kit">
-                        <img src="https://imgur.com/tzphOWb.png" class="stack-card pos-3" alt="Anchor & Mood">
-                        <img src="https://imgur.com/aPwp2Va.png" class="stack-card pos-4" alt="Sample Pantry">
-                        <img src="https://imgur.com/7bK2n1v.png" class="stack-card pos-5" alt="Sensory Pantry">
-                    </div>
-                </div>
+            <div class="md:col-span-2">
+                <h3 class="font-serif text-3xl text-brand-gold mb-4">Meet Dimple</h3>
+                <p class="text-brand-light leading-relaxed mb-4">
+                    Dimple Patel McKinney is the Founder of <strong>The Gilded Spoon Cake Shoppe & Atelier</strong>, a former Nurse, and a neurodivergent creative.
+                </p>
+                <p class="text-brand-light leading-relaxed mb-6">
+                    After years of treating baking as chemistry, she discovered it was actually "emotional architecture." Now, she invites you to stop performing and start feeling, using cake as a language for emotional regulation.
+                </p>
+                <a href="index.html#about" class="inline-block border border-brand-gold text-brand-gold py-2 px-6 rounded-full hover:bg-brand-gold hover:text-brand-navy transition">Read Full Bio &rarr;</a>
             </div>
+        </div>
+    </section>
 
-            <div class="volume-row reverse">
-                <div class="vol-text">
-                    <span class="vol-label">Volume IV</span>
-                    <h3>A Year in Flavor</h3>
-                    <p><strong>The Journey.</strong><br>
-                    A seasonal journaling section to track your somatic experience through Spring, Summer, Autumn, and Winter. Watch how your palate—and your peace—evolves with the seasons.</p>
-                </div>
-                <div class="vol-image">
-                    <div class="photo-stack" onclick="openLightbox(this)">
-                        <img src="https://imgur.com/6jT7YC7.png" class="stack-card pos-1" alt="Volume IV Title">
-                        <img src="https://imgur.com/C1qBCZ4.png" class="stack-card pos-2" alt="Seasonal Audit">
-                        <img src="https://imgur.com/ufkqK3J.png" class="stack-card pos-3" alt="Sketch Page">
-                        <img src="https://imgur.com/yx0GMsA.png" class="stack-card pos-4" alt="Beautiful Mess">
-                        <img src="https://imgur.com/4sKrLdO.png" class="stack-card pos-5" alt="Reflection">
-                    </div>
-                </div>
-            </div>
-
-            <div class="volume-row">
-                <div class="vol-text">
-                    <span class="vol-label">Volume V</span>
-                    <h3>The Gilded Archives</h3>
-                    <p><strong>The Legacy.</strong><br>
-                    A permanent library to preserve your own recipes, memories, and adjustments. Because the cake gets eaten, but the story you write should last forever.</p>
-                </div>
-                <div class="vol-image">
-                    <div class="photo-stack" onclick="openLightbox(this)">
-                        <img src="https://imgur.com/tJLstmt.png" class="stack-card pos-1" alt="Divider">    
-                        <img src="https://imgur.com/jhYeiNC.png" class="stack-card pos-2" alt="Library">
-                        <img src="https://imgur.com/uB3JbDk.png" class="stack-card pos-3" alt="Sentiment Map">
-                        <img src="https://imgur.com/yNg9QNw.png" class="stack-card pos-4" alt="Certificate">
-                    </div>
-                </div>
-            </div>
-
+    <section class="py-16 text-center px-4 bg-brand-light">
+        <h2 class="font-serif text-3xl text-brand-navy mb-4">Start Your Story Today</h2>
+        <p class="text-brand-gray mb-8">A vessel for memory. A tool for grounding. A home for your peace of mind.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4">
+            <a href="https://a.co/d/0cHWV9hB" target="_blank" class="bg-[#FF9900] text-white font-bold py-3 px-8 rounded-full hover:bg-white hover:text-[#FF9900] border-2 border-[#FF9900] transition">
+                Available on Amazon &rarr;
+            </a>
+            <a href="#" class="bg-brand-navy text-white font-bold py-3 px-8 rounded-full hover:bg-white hover:text-brand-navy border-2 border-brand-navy transition opacity-75 cursor-not-allowed">
+                Coming Soon to B&N
+            </a>
         </div>
     </section>
 
     <div id="lightbox" class="lightbox">
-        <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+        <span class="absolute top-5 right-8 text-white text-4xl cursor-pointer" onclick="closeLightbox()">&times;</span>
         <img id="lightbox-img" class="lightbox-img" src="" alt="Gallery Image">
-        <div class="lightbox-nav">
-            <button class="lightbox-btn" onclick="prevImage()">Previous</button>
-            <button class="lightbox-btn" onclick="nextImage()">Next</button>
+        <div class="flex gap-4 mt-4">
+            <button class="border border-white text-white py-2 px-4 hover:bg-brand-gold hover:text-brand-navy transition" onclick="prevImage()">Previous</button>
+            <button class="border border-white text-white py-2 px-4 hover:bg-brand-gold hover:text-brand-navy transition" onclick="nextImage()">Next</button>
         </div>
     </div>
 
-    <section class="author-section">
-        <div class="author-container">
-            <img src="https://imgur.com/kuGwDPg.png" alt="Dimple Patel McKinney" class="author-img">
-            
-            <div class="author-bio">
-                <h3>Meet Dimple</h3>
-                <p>
-                    Dimple Patel McKinney is the Founder of <strong>The Gilded Spoon Cake Shoppe & Atelier</strong>, a former Nurse, and a neurodivergent creative.
-                </p>
-                <p>
-                    After years of treating baking as chemistry, she discovered it was actually "emotional architecture." Now, she invites you to stop performing and start feeling, using cake as a language for emotional regulation.
-                </p>
-                <a href="https://thegildedspoonshoppe.com/index.html#our-story" class="btn btn-outline-gold">Read Full Bio &rarr;</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="buy" class="buy-section">
-        <h2>Start Your Story Today</h2>
-        <p>A vessel for memory. A tool for grounding. A home for your peace of mind.</p>
-        
-        <div class="buy-buttons-container">
-            <a href="https://a.co/d/0cHWV9hB" class="btn btn-amazon" target="_blank">
-                Available on Amazon &rarr; 
-            </a>
-            <a href="https://www.canva.com/design/DAHBCoEBL6c/oOS4vKTQUrh2Cpnyy0G5tQ/view?utm_content=DAHBCoEBL6c&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h1e7dd8228b" class="btn btn-primary" target="_blank">
-                Coming Soon to B&N &rarr;
-            </a>
-        </div>
-            </a>
-        </div>
-        
-    </section>
-
-    <footer>
-        <div class="footer-container">
-            <div class="footer-grid">
-                
+    <footer class="bg-brand-dark text-brand-gray border-t border-brand-gold/20">
+        <div class="max-w-6xl mx-auto px-6 py-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center items-center">
                 <div>
-                    <img src="https://imgur.com/rdToI6Q.png" alt="The Gilded Spoon Logo" class="footer-logo-img">
+                    <img src="bignew.png" alt="The Gilded Spoon Logo" class="w-32 mx-auto opacity-90">
                 </div>
-
                 <div>
-                    <h3 class="footer-heading">Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html#workshops">Workshops</a></li>
-                        <li><a href="index.html#products">Cake Collection</a></li>
-                         <li><a href="flavors.html">Flavor Library</a></li>
-                        <li><a href="flipbook.html">Portfolio</a></li> 
-                         <li><a href="index.html#our-story">Our Story</a></li>
-                        <li><a href="mailto:Contact@thegildedspoonshoppe.com?subject=Website%20Inquiry">Contact Us</a></li>
-                        <li><a href="policies.html">Order & Return Policies</a></li>
+                    <h3 class="text-lg font-serif font-bold mb-4 text-brand-light">Explore</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="index.html" class="hover:text-brand-gold">Home</a></li>
+                        <li><a href="events.html" class="hover:text-brand-gold">Workshops</a></li>
+                        <li><a href="flipbook.html" class="hover:text-brand-gold">Portfolio</a></li>
+                        <li><a href="flavors.html" class="hover:text-brand-gold">Flavor Library</a></li>
+                        <li><a href="policies.html" class="hover:text-brand-gold">Policies</a></li>
                     </ul>
                 </div>
-
                 <div>
-                    <h3 class="footer-heading">Connect With Us</h3>
-                    <div class="social-icons">
-                        <a href="https://www.instagram.com/thegildespooncakeshoppe/" aria-label="Instagram">
-                            <svg class="social-svg" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919 4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg>
-                        </a>
-                        <a href="https://www.facebook.com/thegildedspooncakeshoppe" aria-label="Facebook">
-                            <svg class="social-svg" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.494v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.323-1.325z"/></svg>
-                        </a>
+                    <h3 class="text-lg font-serif font-bold mb-4 text-brand-light">Connect</h3>
+                    <div class="flex justify-center space-x-6">
+                        <a href="https://www.instagram.com/thegildedspooncakeshoppe/" class="text-brand-gray hover:text-brand-gold"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919 4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg></a>
+                        <a href="https://www.facebook.com/thegildedspooncakeshoppe" class="text-brand-gray hover:text-brand-gold"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.494v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.323-1.325z"/></svg></a>
                     </div>
                 </div>
-
             </div>
-
-            <div class="footer-bottom">
-                <p>The Gilded Spoon Cake Shoppe by Flour Shoppe Studios</p>
+            <div class="mt-8 pt-8 border-t border-brand-gray/10 text-center text-xs text-brand-gray/50">
                 <p>&copy; 2025 The Gilded Spoon Cake Shoppe. All Rights Reserved.</p>
-                <p style="margin-top: 10px; font-size: 0.75rem; opacity: 0.6;">Disclaimer: This journal is for educational and creative entertainment purposes only. It is not a substitute for professional medical advice.</p>
+                <p class="mt-2">Disclaimer: This journal is for educational and creative entertainment purposes only. It is not a substitute for professional medical advice.</p>
             </div>
         </div>
     </footer>
 
     <script>
+        // Mobile Menu
+        const hamburgerButton = document.getElementById('hamburger-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        hamburgerButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+
+        // Lightbox Logic
         let currentImages = [];
         let currentIndex = 0;
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
 
         function openLightbox(stackElement) {
-            // Get all images from the clicked stack
             const images = stackElement.querySelectorAll('img');
             currentImages = Array.from(images).map(img => img.src);
-            currentIndex = 0; // Start with the first image (the one on top)
-            
+            currentIndex = 0; 
             showImage(currentIndex);
             lightbox.classList.add('active');
         }
@@ -803,7 +303,6 @@
             showImage(currentIndex);
         }
 
-        // Close on clicking outside the image
         lightbox.addEventListener('click', (e) => {
             if (e.target === lightbox) closeLightbox();
         });
