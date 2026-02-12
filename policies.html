@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Helpful Information | The Gilded Spoon Cake Shoppe</title>
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<link rel="manifest" href="/site.webmanifest">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
@@ -34,157 +34,127 @@
         }
     </script>
     <style>
-        body {
-            background-color: #0A2342;
-            color: #F4F1ED;
-            font-family: 'Inter', sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
+        body { background-color: #0A2342; color: #F4F1ED; font-family: 'Inter', sans-serif; }
     </style>
 </head>
 <body class="font-sans">
 
-    <!-- Navigation Bar -->
-    <nav class="sticky top-0 bg-brand-navy/80 backdrop-blur-lg shadow-lg z-50">
-        <div class="max-w-6xl mx-auto px-4 py-4">
-            <div class="flex justify-between items-center">
-                <a href="index.html" class="text-2xl font-serif font-bold text-brand-gold text-center leading-none">
-                    The Gilded Spoon
-                    <span class="block text-xs font-sans font-light not-italic tracking-[0.3em]">CAKE SHOPPE</span>
-                </a>
-                <div class="hidden md:flex items-center space-x-8 font-medium">
-                    <a href="index.html" class="text-brand-light hover:text-brand-gold transition">Home</a>
-                    <a href="flavors.html" class="text-brand-light hover:text-brand-gold transition">Flavor Library</a>
-                    <a href="events.html" class="text-brand-light hover:text-brand-gold transition">Private Events</a>
-                    <a href="partnerships.html" class="text-brand-light hover:text-brand-gold transition">Partnerships</a>
-                    <a href="mailto:contact@thegildedspoonshoppe.com?subject=Website%20Inquiry" class="text-brand-light hover:text-brand-gold transition">Contact</a>
-                </div>
-                <div class="md:hidden">
-                    <button id="hamburger-button" class="text-white focus:outline-none">
-                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-                        </svg>
-                    </button>
-                </div>
+    <nav class="sticky top-0 bg-brand-navy/90 backdrop-blur-lg shadow-lg z-50 border-b border-brand-gold/10">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-serif font-bold text-brand-gold text-center leading-none">
+                The Gilded Spoon
+                <span class="block text-xs font-sans font-light not-italic tracking-[0.3em] text-brand-light">CAKE SHOPPE & ATELIER</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8 font-medium">
+                <a href="book.html" class="text-brand-gold hover:text-white transition">The Shoppe</a>
+                <a href="events.html" class="text-brand-light hover:text-brand-gold transition">Workshops</a>
+                <a href="flipbook.html" class="text-brand-light hover:text-brand-gold transition">Portfolio</a>
+                <a href="flavors.html" class="text-brand-light hover:text-brand-gold transition">Flavors</a>
+                <a href="index.html#about" class="text-brand-light hover:text-brand-gold transition">About</a>
+                <a href="mailto:dimple@thegildedspoonshoppe.com" class="text-brand-light hover:text-brand-gold transition">Contact</a>
             </div>
-            <div id="mobile-menu" class="hidden md:hidden mt-4">
-                <a href="index.html" class="block py-2 px-4 text-sm text-brand-light hover:bg-brand-card rounded">Home</a>
-                <a href="flavors.html" class="block py-2 px-4 text-sm text-brand-light hover:bg-brand-card rounded">Flavor Library</a>
-                <a href="events.html" class="block py-2 px-4 text-sm text-brand-light hover:bg-brand-card rounded">Private Events</a>
-                <a href="partnerships.html" class="block py-2 px-4 text-sm text-brand-light hover:bg-brand-card rounded">Partnerships</a>
-                <a href="mailto:contact@thegildedspoonshoppe.com?subject=Website%20Inquiry" class="block py-2 px-4 text-sm text-brand-light hover:bg-brand-card rounded">Contact</a>
+            <div class="md:hidden">
+                <button id="hamburger-button" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
             </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden mt-4 px-4 pb-4 bg-brand-navy">
+            <a href="book.html" class="block py-2 px-4 text-sm text-brand-gold font-bold">The Shoppe</a>
+            <a href="events.html" class="block py-2 px-4 text-sm text-brand-light">Workshops</a>
+            <a href="flipbook.html" class="block py-2 px-4 text-sm text-brand-light">Portfolio</a>
+            <a href="flavors.html" class="block py-2 px-4 text-sm text-brand-light">Flavors</a>
+            <a href="index.html#about" class="block py-2 px-4 text-sm text-brand-light">Our Story</a>
+            <a href="mailto:dimple@thegildedspoonshoppe.com" class="block py-2 px-4 text-sm text-brand-light">Contact</a>
         </div>
     </nav>
 
-    <!-- Header Section -->
     <header class="text-center py-20 bg-brand-card/50 border-b border-brand-gold/20">
         <div class="max-w-4xl mx-auto px-4">
-            <h1 class="font-serif text-5xl md:text-6xl font-bold text-white leading-tight">Helpful Information</h1>
-            <p class="text-lg text-brand-gray mt-4 max-w-2xl mx-auto">Details on our shipping, returns, and order policies.</p>
+            <h1 class="font-serif text-4xl md:text-5xl font-bold text-white leading-tight">Helpful Information</h1>
+            <p class="text-lg text-brand-gray mt-4 max-w-2xl mx-auto">Details on our fulfillment, delivery, and order policies.</p>
         </div>
     </header>
 
-    <!-- Main Content -->
-    <main class="py-16">
-        <div class="max-w-4xl mx-auto px-4 sm:px-8 text-brand-light space-y-16">
+    <main class="py-12">
+        <div class="max-w-4xl mx-auto px-4 sm:px-8 text-brand-light space-y-12">
             
-            <!-- Fulfillment & Delivery Policy Section -->
             <section id="shipping-policy">
-                <h2 class="font-serif text-4xl font-semibold mb-6 border-b-2 border-brand-gold/20 pb-4 text-white">Order Fulfillment & Delivery Policy</h2>
+                <h2 class="font-serif text-3xl font-semibold mb-6 border-b-2 border-brand-gold/20 pb-4 text-white">Order Fulfillment & Delivery</h2>
                 
-                <div class="space-y-4 bg-brand-card/50 border border-brand-gold/20 rounded-2xl p-6 mb-8 text-center">
+                <div class="space-y-4 bg-brand-card/50 border border-brand-gold/20 rounded-2xl p-6 mb-8 text-center text-sm">
                     <p class="font-bold uppercase tracking-wider text-brand-gold">THIS PRODUCT WAS PRODUCED IN A PRIVATE RESIDENCE THAT IS NOT SUBJECT TO GOVERNMENTAL LICENSING OR INSPECTION.</p>
-                    <p class="font-bold text-brand-light">SAFE HANDLING INSTRUCTIONS: To prevent illness from bacteria, keep this food refrigerated or frozen until the food is prepared for consumption.</p>
+                    <p class="font-bold text-brand-light">SAFE HANDLING: Keep food refrigerated or frozen until prepared for consumption.</p>
                 </div>
 
-                <div class="space-y-6 text-brand-gray leading-relaxed">
+                <div class="space-y-6 text-brand-gray leading-relaxed text-sm md:text-base">
                     <div>
-                        <h3 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Important: Texas Cottage Food Law Restrictions</h3>
-                        <p>As a Texas cottage food production operation, we are required by state law to personally deliver all food products directly to the consumer. This means we cannot use third-party shipping carriers like UPS, FedEx, or the United States Postal Service to mail our products.</p>
+                        <h3 class="font-serif text-xl font-bold mb-2 text-brand-gold">Texas Cottage Food Law</h3>
+                        <p>As a Texas cottage food production operation, we are required by state law to personally deliver all food products directly to the consumer. We cannot use third-party shipping carriers (UPS, FedEx, USPS).</p>
                     </div>
                     <div>
-                        <h3 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Local Delivery Only</h3>
-                        <ul class="list-disc list-inside space-y-2">
-                            <li><strong class="text-brand-light">Service Area:</strong> We are only able to fulfill orders for customers within the Dallas Fort Worth area within a 50 mile radius of McKinney TX.</li>
-                            <li><strong class="text-brand-light">Delivery Schedule:</strong> Deliveries are typically made between 1 PM and 5 PM on Thursday. You will receive a notification with a delivery window once your order is confirmed.</li>
-                            <li><strong class="text-brand-light">Delivery Fee:</strong> A flat rate delivery fee of $25 will be applied to all orders. Free delivery may be offered for orders over $100 in value.</li>
+                        <h3 class="font-serif text-xl font-bold mb-2 text-brand-gold">Local Delivery Only</h3>
+                        <ul class="list-disc list-inside space-y-2 ml-2">
+                            <li><strong class="text-brand-light">Service Area:</strong> Within a 50-mile radius of McKinney, TX.</li>
+                            <li><strong class="text-brand-light">Delivery Schedule:</strong> Typically Thursdays between 1 PM and 5 PM.</li>
+                            <li><strong class="text-brand-light">Delivery Fee:</strong> Flat rate of $25. Free delivery for orders over $100.</li>
                         </ul>
                     </div>
                      <div>
-                        <h3 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Order Fulfillment and Pickup</h3>
-                        <p>We will coordinate a pickup time with you after your order is placed.</p>
-                    </div>
-                     <div>
-                        <h3 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Packaging</h3>
-                        <p>All of our baked goods are carefully packaged to ensure freshness and prevent contamination during transport. Our products are exempt from being packaged if they are too large or bulky for conventional packaging (e.g., a multi-tiered wedding cake). In such cases, all required labeling information will be provided on your receipt or invoice.</p>
+                        <h3 class="font-serif text-xl font-bold mb-2 text-brand-gold">Pickup</h3>
+                        <p>We will coordinate a specific pickup time with you after your order is confirmed.</p>
                     </div>
                 </div>
             </section>
 
-            <!-- Returns Policy Section -->
             <section id="returns-policy">
-                <h2 class="font-serif text-4xl font-semibold mb-6 border-b-2 border-brand-gold/20 pb-4 text-white">Returns & Refunds Policy</h2>
-                <div class="space-y-6 text-brand-gray leading-relaxed">
+                <h2 class="font-serif text-3xl font-semibold mb-6 border-b-2 border-brand-gold/20 pb-4 text-white">Returns & Refunds</h2>
+                <div class="space-y-6 text-brand-gray leading-relaxed text-sm md:text-base">
                     <div>
-                        <h3 class="font-serif text-2xl font-bold mb-3 text-brand-gold">All Sales Are Final</h3>
-                        <p>Due to the perishable and custom nature of our products, all sales from The Gilded Spoon are considered final. We do not accept returns or offer refunds for food items.</p>
+                        <h3 class="font-serif text-xl font-bold mb-2 text-brand-gold">All Sales Are Final</h3>
+                        <p>Due to the perishable and custom nature of our products, all sales are final. We do not accept returns or offer refunds for food items.</p>
                     </div>
                     <div>
-                        <h3 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Our Commitment to Quality</h3>
-                        <p>We take immense pride in the quality and freshness of our baked goods. Each item is made to order with the highest standards of food safety and sanitation. We strive for 100% customer satisfaction.</p>
-                    </div>
-                    <div>
-                        <h3 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Damaged or Incorrect Orders</h3>
-                        <p>In the unlikely event that your order is damaged during delivery or if you receive an incorrect item, please contact us immediately at <a href="mailto:contact@thegildedspoonshoppe.com" class="text-brand-gold hover:underline">contact@thegildedspoonshoppe.com</a> with photos of the product. We will review the issue and, at our discretion, may offer a replacement of the damaged or incorrect item. Claims for damaged or incorrect orders must be made within 24 hours of delivery.</p>
+                        <h3 class="font-serif text-xl font-bold mb-2 text-brand-gold">Damaged or Incorrect Orders</h3>
+                        <p>If your order is damaged during our delivery or if you receive an incorrect item, please contact us immediately at <a href="mailto:dimple@thegildedspoonshoppe.com" class="text-brand-gold hover:underline">contact@thegildedspoonshoppe.com</a> with photos within 24 hours.</p>
                     </div>
                      <div>
-                        <h3 class="font-serif text-2xl font-bold mb-3 text-brand-gold">Cancellations</h3>
-                        <p>Because we begin preparing ingredients for your order shortly after it is placed, we can only accommodate cancellation requests made within 24 hours of the order being placed. To request a cancellation, please email us at <a href="mailto:contact@thegildedspoonshoppe.com" class="text-brand-gold hover:underline">contact@thegildedspoonshoppe.com</a>.</p>
+                        <h3 class="font-serif text-xl font-bold mb-2 text-brand-gold">Cancellations</h3>
+                        <p>We can only accommodate cancellation requests made within 24 hours of placing the order, as we begin ingredient preparation shortly after.</p>
                     </div>
                 </div>
             </section>
         </div>
     </main>
 
-    <!-- Footer -->
-      <footer class="bg-brand-navy text-brand-gray">
-    <div class="max-w-6xl mx-auto px-6 py-8">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center items-center">
-            
-            <div>
-                <img src="bignew.png" alt="The Gilded Spoon Cake Shoppe & Atelier Logo" class="w-48 mx-auto">
-            </div>
-            <div>
-                <h3 class="text-lg font-serif font-bold mb-3">Quick Links</h3>
-                <ul class="space-y-1 text-sm text-brand-gray">
-                    <li><a href="index.html" class="hover:text-brand-gold hover:underline transition-colors duration-300">Home</a></li>
-                    <li><a href="index.html#our-story" class="hover:text-brand-gold hover:underline transition-colors duration-300">Our Story</a></li>
-                    <li><a href="flavors.html" class="hover:text-brand-gold hover:underline transition-colors duration-300">Flavor Library</a></li>
-                    <li><a href="mailto:Contact@thegildedspoonshoppe.com?subject=Website%20Inquiry" class="hover:text-brand-gold hover:underline transition-colors duration-300">Contact Us</a></li>
-                    <li><a href="policies.html" class="hover:text-brand-gold hover:underline transition-colors duration-300">Order & Return Policies</a></li>
-                </ul>
-            </div>
-            <div>
-                <h3 class="text-lg font-serif font-bold mb-3">Connect With Us</h3>
-                <div class="flex justify-center space-x-6">
-                    <a href="https://www.instagram.com/flour.shoppe.studios/" aria-label="Instagram" class="text-brand-gray hover:text-brand-gold transition-opacity">
-                        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919 4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg>
-                    </a>
-                    <a href="https://www.facebook.com/thegildedspoonshoppe" aria-label="Facebook" class="text-brand-gray hover:text-brand-gold transition-opacity">
-                        <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.494v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.323-1.325z"/></svg>
-                    </a>
+    <footer class="bg-brand-dark text-brand-gray border-t border-brand-gold/20 mt-8">
+        <div class="max-w-6xl mx-auto px-6 py-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center items-center">
+                <div>
+                    <img src="bignew.png" alt="The Gilded Spoon Logo" class="w-32 mx-auto opacity-90">
+                </div>
+                <div>
+                    <h3 class="text-lg font-serif font-bold mb-4 text-brand-light">Explore</h3>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="book.html" class="hover:text-brand-gold">The Shoppe (Book)</a></li>
+                        <li><a href="events.html" class="hover:text-brand-gold">Workshops</a></li>
+                        <li><a href="flipbook.html" class="hover:text-brand-gold">Portfolio</a></li>
+                        <li><a href="flavors.html" class="hover:text-brand-gold">Flavor Library</a></li>
+                        <li><a href="policies.html" class="hover:text-brand-gold">Policies</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-lg font-serif font-bold mb-4 text-brand-light">Connect</h3>
+                    <div class="flex justify-center space-x-6">
+                         <a href="https://www.instagram.com/thegildedspooncakeshoppe/" class="text-brand-gray hover:text-brand-gold"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919 4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg></a>  <a href="https://www.facebook.com/thegildedspooncakeshoppe" class="text-brand-gray hover:text-brand-gold"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.494v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.323-1.325z"/></svg></a>
+                    </div>
                 </div>
             </div>
+            <div class="mt-8 pt-8 border-t border-brand-gray/10 text-center text-xs text-brand-gray/50">
+                <p>&copy; 2025 The Gilded Spoon Cake Shoppe. All Rights Reserved.</p>
+            </div>
         </div>
-        <div class="mt-6 border-t border-brand-gray/20 pt-6 text-center">
-            <p class="text-sm mb-2 text-brand-gray">The Gilded Spoon Cake Shoppe by Flour Shoppe Studios</p>
-            <p class="text-sm text-brand-gray">&copy; 2025 The Gilded Spoon Cake Shoppe. All Rights Reserved.</p>
-            <p class="mt-4 text-xs max-w-md mx-auto px-4 text-brand-gray/50">Products are prepared in a home kitchen that handles allergens including wheat, dairy, eggs, soy, and nuts.</p>
-        </div>
-    </div>
-</footer>
+    </footer>
 
     <script>
         // Mobile Menu Toggle
