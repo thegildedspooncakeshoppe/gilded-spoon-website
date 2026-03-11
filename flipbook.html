@@ -1,280 +1,339 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A gallery of bespoke cakes and sensory designs from The Gilded Spoon Shoppe & Atelier.">
-    <title>Atelier Portfolio | The Gilded Spoon Shoppe</title>
-    
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Libre+Baskerville:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;700&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'brand-dark': '#1C161E',
-                        'brand-light': '#F4F1ED',
-                        'brand-gold': '#D4AF37',
-                        'brand-gold-hover': '#E2C76A',
-                        'brand-gray': '#A09DA6',
-                        'brand-card': '#2A232F',
-                        'brand-navy': '#0A2342',
-                    },
-                    fontFamily: {
-                        'serif': ['"Playfair Display"', 'serif'],
-                        'sans': ['"Inter"', 'sans-serif'],
-                        'cursive': ['"Great Vibes"', 'cursive'],
-                        'baskerville': ['"Libre Baskerville"', "serif"],
-                        'cinzel': ['"Cinzel"', 'serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <style>
-        body { 
-            background-color: #0A2342; 
-            color: #F4F1ED; 
-            font-family: 'Inter', sans-serif; 
-            -webkit-font-smoothing: antialiased; 
-            -moz-osx-font-smoothing: grayscale; 
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A selection of bespoke cakes and sensory designs, crafted to give tangible shape to the human story.">
+    <title>Cake Gallery - The Gilded Spoon Shoppe</title>
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Libre+Baskerville:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;700&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-dark': '#1C161E',
+                        'brand-light': '#F4F1ED',
+                        'brand-gold': '#D4AF37',
+                        'brand-gold-hover': '#E2C76A',
+                        'brand-gray': '#A09DA6',
+                        'brand-card': '#2A232F',
+                        'brand-navy': '#0A2342',
+                    },
+                    fontFamily: {
+                        'serif': ['"Playfair Display"', 'serif'],
+                        'sans': ['"Inter"', 'sans-serif'],
+                        'cursive': ['"Great Vibes"', 'cursive'],
+                        'baskerville': ['"Libre Baskerville"', "serif"],
+                        'cinzel': ['"Cinzel"', 'serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body { 
+            background-color: #0A2342; 
+            color: #F4F1ED; 
+            font-family: 'Inter', sans-serif; 
+            -webkit-font-smoothing: antialiased; 
+            -moz-osx-font-smoothing: grayscale; 
+        }
 
-        .bg-texture { background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png'); }
+        /* Lightbox styles */
+        .lightbox-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.95);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease;
+        }
+        .lightbox-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .lightbox-content {
+            position: relative;
+            max-width: 90vw;
+            max-height: 90vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .lightbox-content img {
+            max-width: 100%;
+            max-height: 90vh;
+            object-fit: contain;
+            border: 4px solid #fff;
+            border-radius: 4px;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+        }
+        .lightbox-close, .lightbox-nav {
+            position: absolute;
+            color: white;
+            cursor: pointer;
+            z-index: 1001;
+            transition: color 0.2s ease;
+        }
+        .lightbox-close:hover, .lightbox-nav:hover {
+            color: #D4AF37;
+        }
+        .lightbox-close {
+            top: -40px;
+            right: 0;
+            font-size: 2rem;
+        }
+        .lightbox-nav {
+            font-size: 3rem;
+            padding: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        .lightbox-nav.prev { left: -80px; }
+        .lightbox-nav.next { right: -80px; }
 
-        /* Lightbox styles */
-        .lightbox-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.95);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.3s ease;
-            backdrop-filter: blur(10px);
-        }
-        .lightbox-overlay.active {
-            opacity: 1;
-            visibility: visible;
-        }
-        .lightbox-content {
-            position: relative;
-            max-width: 90vw;
-            max-height: 90vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .lightbox-content img {
-            max-width: 100%;
-            max-height: 85vh;
-            object-fit: contain;
-            border: 4px solid #fff;
-            border-radius: 4px;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
-        }
-        .lightbox-close, .lightbox-nav {
-            position: absolute;
-            color: white;
-            cursor: pointer;
-            z-index: 1001;
-            transition: color 0.2s ease;
-        }
-        .lightbox-close:hover, .lightbox-nav:hover {
-            color: #D4AF37;
-        }
-        .lightbox-close {
-            top: -50px;
-            right: 0;
-            font-size: 2.5rem;
-        }
-        .lightbox-nav {
-            font-size: 3rem;
-            padding: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-        }
-        .lightbox-nav.prev { left: -100px; }
-        .lightbox-nav.next { right: -100px; }
-
-        @media (max-width: 1024px) {
-            .lightbox-nav.prev { left: -50px; font-size: 2rem; }
-            .lightbox-nav.next { right: -50px; font-size: 2rem; }
-        }
-    </style>
+        @media (max-width: 768px) {
+            .lightbox-nav.prev { left: -40px; font-size: 2rem; }
+            .lightbox-nav.next { right: -40px; font-size: 2rem; }
+        }
+    </style>
 </head>
 <body class="font-sans">
 
-    <nav class="sticky top-0 bg-brand-navy/95 backdrop-blur-lg shadow-lg z-50 border-b border-brand-gold/10">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-serif font-bold text-brand-gold text-center leading-none">
-                The Gilded Spoon
-                <span class="block text-xs font-sans font-light not-italic tracking-[0.3em] text-brand-light">SHOPPE & ATELIER</span>
-            </a>
-            <div class="hidden md:flex items-center space-x-8 font-medium">
-                <a href="book.html" class="text-brand-gold hover:text-white transition">The Journal</a>
-                <a href="events.html" class="text-brand-light hover:text-brand-gold transition">Workshops</a>
-                <a href="flipbook.html" class="text-brand-gold hover:text-white transition border-b-2 border-brand-gold pb-1">Portfolio</a>
-                <a href="flavors.html" class="text-brand-light hover:text-brand-gold transition">Flavors</a>
-                <a href="index.html#about" class="text-brand-light hover:text-brand-gold transition">About</a>
-                <a href="mailto:dimple@thegildedspoonshoppe.com" class="text-brand-light hover:text-brand-gold transition">Contact</a>
-            </div>
-            <div class="md:hidden">
-                <button id="hamburger-button" class="text-white focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
-            </div>
-        </div>
-        <div id="mobile-menu" class="hidden md:hidden mt-4 px-4 pb-4 bg-brand-navy text-center">
-            <a href="book.html" class="block py-3 text-brand-gold font-bold uppercase tracking-widest">The Journal</a>
-            <a href="events.html" class="block py-3 text-brand-light">Workshops</a>
-            <a href="flipbook.html" class="block py-3 text-brand-gold">Portfolio</a>
-            <a href="flavors.html" class="block py-3 text-brand-light">Flavors</a>
-            <a href="index.html#about" class="block py-3 text-brand-light">Our Story</a>
-            <a href="mailto:dimple@thegildedspoonshoppe.com" class="block py-3 text-brand-light">Contact</a>
-        </div>
-    </nav>
+    <nav class="sticky top-0 bg-brand-navy/90 backdrop-blur-lg shadow-lg z-50 border-b border-brand-gold/10">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-serif font-bold text-brand-gold text-center leading-none">
+                The Gilded Spoon
+                <span class="block text-xs font-sans font-light not-italic tracking-[0.3em] text-brand-light">SHOPPE & ATELIER</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8 font-medium">
+                <a href="book.html" class="text-brand-gold hover:text-white transition">The Journal</a>
+                <a href="events.html" class="text-brand-light hover:text-brand-gold transition">Workshops</a>
+                <a href="flipbook.html" class="text-brand-light hover:text-brand-gold transition">Portfolio</a>
+                <a href="flavors.html" class="text-brand-light hover:text-brand-gold transition">Flavors</a>
+                <a href="index.html#about" class="text-brand-light hover:text-brand-gold transition">About</a>
+                <a href="mailto:dimple@thegildedspoonshoppe.com" class="text-brand-light hover:text-brand-gold transition">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="hamburger-button" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden mt-4 px-4 pb-4 bg-brand-navy">
+            <a href="book.html" class="block py-2 px-4 text-sm text-brand-gold font-bold">The Journal</a>
+            <a href="events.html" class="block py-2 px-4 text-sm text-brand-light">Workshops</a>
+            <a href="flipbook.html" class="block py-2 px-4 text-sm text-brand-light">Portfolio</a>
+            <a href="flavors.html" class="block py-2 px-4 text-sm text-brand-light">Flavors</a>
+            <a href="index.html#about" class="block py-2 px-4 text-sm text-brand-light">Our Story</a>
+            <a href="mailto:dimple@thegildedspoonshoppe.com" class="block py-2 px-4 text-sm text-brand-light">Contact</a>
+        </div>
+    </nav>
 
-    <header class="text-center py-24 bg-brand-card/30 border-b border-brand-gold/10 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-5 bg-texture"></div>
-        <div class="max-w-4xl mx-auto px-6 relative z-10">
-            <span class="text-brand-gold font-bold tracking-[0.4em] uppercase text-xs block mb-4">The Visual Sanctuary</span>
-            <h1 class="font-serif text-5xl md:text-6xl font-bold text-white leading-tight mb-4">Atelier Portfolio</h1>
-            <p class="text-lg md:text-xl text-brand-light font-light max-w-2xl mx-auto leading-relaxed">A selection of bespoke cakes and sensory designs, crafted to give tangible shape to the human story.</p>
-        </div>
-    </header>
+    <header class="text-center py-20 bg-brand-card/50 border-b border-brand-gold/20">
+        <div class="max-w-4xl mx-auto px-4">
+            <h1 class="font-serif text-4xl md:text-5xl font-bold text-white leading-tight">My Cake Portfolio</h1>
+            <p class="text-lg text-brand-light font-light mt-3 max-w-2xl mx-auto">A selection of my bespoke cakes and artisanal desserts, crafted for special moments.</p>
+        </div>
+    </header>
 
-    <main class="py-20 px-4">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 gallery-grid">
+    <main class="py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 gallery-grid">
 
-                <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(0)">
-                    <img src="images/cake23.jpg" alt="Fresh Berry Cake" class="w-full h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02] group-hover:shadow-2xl">
-                    <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl">
-                        <span class="text-white text-xs font-serif tracking-[0.3em] border border-brand-gold px-6 py-3 uppercase">View Detail</span>
-                    </div>
-                </div>
+                <a href="images/cake23.jpg" class="gallery-item block relative group">
+                    <img src="images/cake23.jpg" alt="Fresh Berry Cake" class="w-full h-80 object-cover rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl">
+                    <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl">
+                        <span class="text-white text-lg font-serif tracking-widest border border-brand-gold px-4 py-2">VIEW</span>
+                    </div>
+                </a>
 
-                <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(1)">
-                    <img src="images/cake24.jpg" alt="Succulent Decorated Cake" class="w-full h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02] group-hover:shadow-2xl">
-                    <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-2xl">
-                        <span class="text-white text-xs font-serif tracking-[0.3em] border border-brand-gold px-6 py-3 uppercase">View Detail</span>
-                    </div>
-                </div>
+                <a href="images/cake24.jpg" class="gallery-item block relative group">
+                    <img src="images/cake24.jpg" alt="Succulent Decorated Cake" class="w-full h-80 object-cover rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl">
+                    <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl">
+                        <span class="text-white text-lg font-serif tracking-widest border border-brand-gold px-4 py-2">VIEW</span>
+                    </div>
+                </a>
 
-                </div>
-        </div>
+                <a href="images/cake3.jpg" class="gallery-item block relative group">
+                    <img src="images/cake3.jpg" alt="Floral Tiered Cake" class="w-full h-80 object-cover rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl">
+                    <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl">
+                        <span class="text-white text-lg font-serif tracking-widest border border-brand-gold px-4 py-2">VIEW</span>
+                    </div>
+                </a>
 
-        <div id="lightbox" class="lightbox-overlay">
-            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
-            <div class="lightbox-content">
-                <span class="lightbox-nav prev" onclick="changeImage(-1)">&#10094;</span>
-                <img id="lightbox-img" src="" alt="Gallery Detail">
-                <span class="lightbox-nav next" onclick="changeImage(1)">&#10095;</span>
-            </div>
-        </div>
-    </main>
+                <a href="images/cake5.jpg" class="gallery-item block relative group">
+                    <img src="images/cake5.jpg" alt="Chocolate Drip Cake" class="w-full h-80 object-cover rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl">
+                    <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl">
+                        <span class="text-white text-lg font-serif tracking-widest border border-brand-gold px-4 py-2">VIEW</span>
+                    </div>
+                </a>
 
-    <footer class="bg-brand-dark text-brand-gray border-t border-brand-gold/20">
-        <div class="max-w-6xl mx-auto px-6 py-16">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center items-center">
-                <div>
-                    <img src="bignew.png" alt="The Gilded Spoon Logo" class="w-32 mx-auto opacity-90">
-                </div>
-                <div>
-                    <h3 class="text-lg font-serif font-bold mb-6 text-brand-light">Explore the Atelier</h3>
-                    <ul class="space-y-3 text-sm">
-                        <li><a href="book.html" class="hover:text-brand-gold transition">The Journal</a></li>
-                        <li><a href="events.html" class="hover:text-brand-gold transition">Workshops</a></li>
-                        <li><a href="flipbook.html" class="hover:text-brand-gold transition">Portfolio</a></li>
-                        <li><a href="flavors.html" class="hover:text-brand-gold transition">Flavor Library</a></li>
-                        <li><a href="policies.html" class="hover:text-brand-gold transition">Policies</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h3 class="text-lg font-serif font-bold mb-6 text-brand-light">Connect</h3>
-                    <div class="flex justify-center space-x-8">
-                        <a href="https://www.instagram.com/thegildedspoonshoppe/" target="_blank" class="hover:text-brand-gold transition"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919 4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg></a>
-                        <a href="https://www.facebook.com/dimple.mckinney" target="_blank" class="hover:text-brand-gold transition"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.494v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.323-1.325z"/></svg></a>
-                        <a href="https://www.linkedin.com/in/dimple-mckinney/" target="_blank" class="hover:text-brand-gold transition"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></a>
-                    </div>
-                </div>
-            </div>
-            <div class="mt-12 pt-8 border-t border-brand-gray/10 text-center text-xs text-brand-gray/50">
-                <p>&copy; 2026 The Gilded Spoon Shoppe. All Rights Reserved.</p>
-                <p class="mt-2">Disclaimer: Products are prepared in a home kitchen that handles allergens including wheat, dairy, eggs, soy, and nuts. My Edible Autobiography guided journal is for educational and creative entertainment purposes only. It is not a substitute for professional medical advice.</p>
-            </div>
-        </div>
-    </footer>
+                <a href="images/cake6.jpg" class="gallery-item block relative group">
+                    <img src="images/cake6.jpg" alt="Pastel Ombre Cake" class="w-full h-80 object-cover rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl">
+                    <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl">
+                        <span class="text-white text-lg font-serif tracking-widest border border-brand-gold px-4 py-2">VIEW</span>
+                    </div>
+                </a>
 
-    <script>
-        const hamburgerButton = document.getElementById('hamburger-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        hamburgerButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+                <a href="images/cake8.jpg" class="gallery-item block relative group">
+                    <img src="images/cake8.jpg" alt="White and Green Buttercream Cake" class="w-full h-80 object-cover rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl">
+                    <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl">
+                        <span class="text-white text-lg font-serif tracking-widest border border-brand-gold px-4 py-2">VIEW</span>
+                    </div>
+                </a>
 
-        const images = [
-            "images/cake23.jpg", "images/cake24.jpg", "images/cake3.jpg", "images/cake5.jpg", 
-            "images/cake6.jpg", "images/cake8.jpg", "images/cake9.jpg", "images/cake10.jpg", 
-            "images/cake11.jpg", "images/cake12.jpg", "images/cake13.jpg", "images/cake14.jpg", 
-            "images/cake16.jpg", "images/cake17.jpg", "images/cake18.jpg", "images/cake19.jpg", 
-            "images/cake20.jpg", "images/cake21.jpg"
-        ];
-        
-        let currentIndex = 0;
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightbox-img');
+                <a href="images/cake9.jpg" class="gallery-item block relative group">
+                    <img src="images/cake9.jpg" alt="Pink Rose Tiered Cake" class="w-full h-80 object-cover rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl">
+                    <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl">
+                        <span class="text-white text-lg font-serif tracking-widest border border-brand-gold px-4 py-2">VIEW</span>
+                    </div>
+                </a>
 
-        function openLightbox(index) {
-            currentIndex = index;
-            updateLightboxImage();
-            lightbox.classList.add('active');
-            document.body.style.overflow = 'hidden'; // Prevent scrolling
-        }
+                <a href="images/cake10.jpg" class="gallery-item block relative group">
+                    <img src="images/cake10.jpg" alt="Minimalist Modern Cake" class="w-full h-80 object-cover rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl">
+                    <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl">
+                        <span class="text-white text-lg font-serif tracking-widest border border-brand-gold px-4 py-2">VIEW</span>
+                    </div>
+                </a>
 
-        function closeLightbox() {
-            lightbox.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
+                <a href="images/cake11.jpg" class="gallery-item block relative group">
+                    <img src="images/cake11.jpg" alt="Rustic Woodland Cake" class="w-full h-80 object-cover rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl">
+                    <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl">
+                        <span class="text-white text-lg font-serif tracking-widest border border-brand-gold px-4 py-2">VIEW</span>
+                    </div>
+                </a>
 
-        function changeImage(direction) {
-            currentIndex += direction;
-            if (currentIndex >= images.length) currentIndex = 0;
-            if (currentIndex < 0) currentIndex = images.length - 1;
-            updateLightboxImage();
-        }
+                <a href="images/cake12.jpg" class="gallery-item block relative group">
+                    <img src="images/cake12.jpg" alt="Gold Leaf Decorated Cake" class="w-full h-80 object-cover rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl">
+                    <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl">
+                        <span class="text-white text-lg font-serif tracking-widest border border-brand-gold px-4 py-2">VIEW</span>
+                    </div>
+                </a>
 
-        function updateLightboxImage() {
-            lightboxImg.src = images[currentIndex];
-        }
+                <a href="images/cake13.jpg" class="gallery-item block relative group">
+                    <img src="images/cake13.jpg" alt="Chocolate Ganache Cake" class="w-full h-80 object-cover rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl">
+                    <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl">
+                        <span class="text-white text-lg font-serif tracking-widest border border-brand-gold px-4 py-2">VIEW</span>
+                    </div>
+                </a>
 
-        // Close on background click
-        lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) closeLightbox();
-        });
+                <a href="images/cake14.jpg" class="gallery-item block relative group">
+                    <img src="images/cake14.jpg" alt="Fruit Topped Cake" class="w-full h-80 object-cover rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl">
+                    <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl">
+                        <span class="text-white text-lg font-serif tracking-widest border border-brand-gold px-4 py-2">VIEW</span>
+                    </div>
+                </a>
 
-        // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            if (!lightbox.classList.contains('active')) return;
-            if (e.key === "Escape") closeLightbox();
-            if (e.key === "ArrowRight") changeImage(1);
-            if (e.key === "ArrowLeft") changeImage(-1);
-        });
-    </script>
+                <a href="images/cake16.jpg" class="gallery-item block relative group">
+                    <img src="images/cake16.jpg" alt="Geometric Design Cake" class="w-full h-80 object-cover rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl">
+                    <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl">
+                        <span class="text-white text-lg font-serif tracking-widest border border-brand-gold px-4 py-2">VIEW</span>
+                    </div>
+                </a>
 
-</body>
-</html>
+                <a href="images/cake17.jpg" class="gallery-item block relative group">
+                    <img src="images/cake17.jpg" alt="Hand Painted Cake" class="w-full h-80 object-cover rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl">
+                    <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl">
+                        <span class="text-white text-lg font-serif tracking-widest border border-brand-gold px-4 py-2">VIEW</span>
+                    </div>
+                </a>
+
+                <a href="images/cake18.jpg" class="gallery-item block relative group">
+                    <img src="images/cake18.jpg" alt="Cupcake Assortment" class="w-full h-80 object-cover rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl">
+                    <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl">
+                        <span class="text-white text-lg font-serif tracking-widest border border-brand-gold px-4 py-2">VIEW</span>
+                    </div>
+                </a>
+
+                <a href="images/cake19.jpg" class="gallery-item block relative group">
+                    <img src="images/cake19.jpg" alt="Mini Cake Collection" class="w-full h-80 object-cover rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl">
+                    <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl">
+                        <span class="text-white text-lg font-serif tracking-widest border border-brand-gold px-4 py-2">VIEW</span>
+                    </div>
+                </a>
+
+                <a href="images/cake20.jpg" class="gallery-item block relative group">
+                    <img src="images/cake20.jpg" alt="Dessert Table Display" class="w-full h-80 object-cover rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl">
+                    <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl">
+                        <span class="text-white text-lg font-serif tracking-widest border border-brand-gold px-4 py-2">VIEW</span>
+                    </div>
+                </a>
+
+                <a href="images/cake21.jpg" class="gallery-item block relative group">
+                    <img src="images/cake21.jpg" alt="Elegant Gold Accented Cake" class="w-full h-80 object-cover rounded-xl shadow-lg transition-transform duration-300 group-hover:scale-105 group-hover:shadow-2xl">
+                    <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-xl">
+                        <span class="text-white text-lg font-serif tracking-widest border border-brand-gold px-4 py-2">VIEW</span>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+
+        <div id="lightbox" class="lightbox-overlay">
+            <span class="lightbox-close">&times;</span>
+            <div class="lightbox-content">
+                <span class="lightbox-nav prev">&#10094;</span>
+                <img id="lightbox-img" src="" alt="Gallery Image">
+                <span class="lightbox-nav next">&#10095;</span>
+            </div>
+        </div>
+    </main>
+
+   <footer class="bg-brand-dark text-brand-gray border-t border-brand-gold/20 mt-12">
+    <div class="max-w-6xl mx-auto px-6 py-10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center items-center">
+            
+            <div>
+                <img src="bignew.png" alt="The Gilded Spoon Logo" class="w-32 mx-auto opacity-90">
+            </div>
+
+            <div>
+                <h3 class="text-lg font-serif font-bold mb-4 text-brand-light">Explore</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="index.html" class="hover:text-brand-gold transition">Home</a></li>
+                    <li><a href="book.html" class="hover:text-brand-gold transition">The Journal</a></li>
+                    <li><a href="events.html" class="hover:text-brand-gold transition">Workshops</a></li>
+                    <li><a href="flipbook.html" class="hover:text-brand-gold transition">Portfolio</a></li>
+                    <li><a href="flavors.html" class="hover:text-brand-gold transition">Flavor Library</a></li>
+                    <li><a href="policies.html" class="hover:text-brand-gold transition">Policies</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="text-lg font-serif font-bold mb-4 text-brand-light">Connect</h3>
+                <div class="flex justify-center space-x-6">
+                    <a href="https://www.instagram.com/thegildedspoonshoppe/" class="text-brand-gray hover:text-brand-gold"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919 4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg></a>
+                        <a href="https://www.facebook.com/dimple.mckinney" class="text-brand-gray hover:text-brand-gold"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.494v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.323-1.325z"/></svg></a>
+                       <a href="https://www.linkedin.com/in/dimple-mckinney/" target="_blank" class="text-brand-gray hover:text-brand-gold">
+    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+    </svg>
+</a>
+                </div>
+            </div>
+        </div>
+        
+            <div class="mt-8 pt-8 border-t border-brand-gray/10 text-center text-xs text-brand-gray/50">
+                <p>&copy; 2025 The Gilded Spoon Shoppe. All Rights Reserved.</p>
+                <p class="mt-2">Disclaimer: Products are prepared in a home kitchen that handles allergens including wheat, dairy, eggs, soy, and nuts. My Edible Autobiography guided journal is for educational and creative entertainment purposes only. It is not a substitute for professional medical advice.</p>
+            </div>
+        </div>
+    </footer>
