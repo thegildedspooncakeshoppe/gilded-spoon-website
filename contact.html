@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | The Gilded Spoon Shoppe</title>
+    <meta name="description" content="Reach out to The Gilded Spoon Atelier for workshop inquiries, wholesale partnerships, and somatic journaling questions.">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-dark': '#1C161E',
+                        'brand-light': '#F4F1ED',
+                        'brand-gold': '#D4AF37',
+                        'brand-card': '#2A232F',
+                        'brand-navy': '#0A2342',
+                    },
+                    fontFamily: {
+                        'serif': ['"Playfair Display"', 'serif'],
+                        'sans': ['"Inter"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #F4F1ED; color: #1C161E; font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="font-sans">
+
+    <nav class="sticky top-0 bg-brand-navy/95 backdrop-blur-lg shadow-lg z-50 border-b border-brand-gold/10">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-serif font-bold text-brand-gold text-center leading-none">
+                The Gilded Spoon
+                <span class="block text-xs font-sans font-light not-italic tracking-[0.3em] text-brand-light">SHOPPE & ATELIER</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8 font-medium">
+                <a href="book.html" class="text-brand-gold hover:text-white transition">The Journal</a>
+                <a href="events.html" class="text-brand-light hover:text-brand-gold transition">Workshops</a>
+                <a href="flipbook.html" class="text-brand-light hover:text-brand-gold transition">Portfolio</a>
+                <a href="flavors.html" class="text-brand-light hover:text-brand-gold transition">Flavors</a>
+                <a href="index.html#about" class="text-brand-light hover:text-brand-gold transition">About</a>
+                <a href="contact.html" class="text-brand-gold hover:text-white transition border-b-2 border-brand-gold pb-1">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="hamburger-button" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden mt-4 px-4 pb-4 bg-brand-navy text-center">
+            <a href="book.html" class="block py-3 text-brand-light">The Journal</a>
+            <a href="events.html" class="block py-3 text-brand-light">Workshops</a>
+            <a href="flipbook.html" class="block py-3 text-brand-light">Portfolio</a>
+            <a href="flavors.html" class="block py-3 text-brand-light">Flavors</a>
+            <a href="index.html#about" class="block py-3 text-brand-light">Our Story</a>
+            <a href="contact.html" class="block py-3 text-brand-gold font-bold">Contact</a>
+        </div>
+    </nav>
+
+    <header class="text-center py-20 bg-brand-navy border-b border-brand-gold/20">
+        <div class="max-w-4xl mx-auto px-4">
+            <h1 class="font-serif text-4xl md:text-5xl font-bold text-white leading-tight">Connect with the Atelier</h1>
+            <p class="text-lg text-brand-light/80 mt-4 max-w-2xl mx-auto">Whether you're inquiring about a workshop, wholesale partnerships, or bespoke commissions, we'd love to hear from you.</p>
+        </div>
+    </header>
+
+    <main class="py-20 px-6">
+        <div class="max-w-3xl mx-auto bg-white p-10 md:p-16 rounded-3xl shadow-2xl border-t-8 border-brand-gold">
+            
+            <form action="https://formspree.io/f/xaqpdkdy" method="POST" class="space-y-8">
+                
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <label class="block text-sm font-bold text-brand-navy uppercase tracking-widest mb-2">Name</label>
+                        <input type="text" name="name" required class="w-full px-4 py-3 bg-brand-light border border-gray-200 rounded-lg focus:outline-none focus:border-brand-gold transition">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-brand-navy uppercase tracking-widest mb-2">Email Address</label>
+                        <input type="email" name="email" required class="w-full px-4 py-3 bg-brand-light border border-gray-200 rounded-lg focus:outline-none focus:border-brand-gold transition">
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold text-brand-navy uppercase tracking-widest mb-2">Subject of Inquiry</label>
+                    <select name="subject" class="w-full px-4 py-3 bg-brand-light border border-gray-200 rounded-lg focus:outline-none focus:border-brand-gold transition appearance-none">
+                        <option value="General Inquiry">General Inquiry</option>
+                        <option value="Workshop Booking">Workshop Booking</option>
+                        <option value="Wholesale & Retail">Wholesale & Retail Stocking</option>
+                        <option value="Bespoke Cake Commission">Bespoke Cake Commission</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-bold text-brand-navy uppercase tracking-widest mb-2">Your Message</label>
+                    <textarea name="message" rows="5" required class="w-full px-4 py-3 bg-brand-light border border-gray-200 rounded-lg focus:outline-none focus:border-brand-gold transition"></textarea>
+                </div>
+
+                <div class="text-center pt-4">
+                    <button type="submit" class="bg-brand-navy text-white font-bold py-4 px-12 rounded-full hover:bg-brand-gold hover:text-brand-navy transition-all shadow-xl uppercase tracking-widest text-sm w-full md:w-auto">
+                        Send Message
+                    </button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer class="bg-brand-dark text-brand-gray border-t border-brand-gold/20">
+        <div class="max-w-6xl mx-auto px-6 py-10 text-center">
+            <p class="text-xs text-brand-gray/50">&copy; 2026 The Gilded Spoon Shoppe. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const hamburgerButton = document.getElementById('hamburger-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        hamburgerButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+    </script>
+</body>
+</html>
