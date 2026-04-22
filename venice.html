@@ -1,0 +1,260 @@
+html_content = """
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Italy Financial & Tipping Itinerary - Final Version</title>
+    <style>
+        :root {
+            --venetian-red: #8B0000;
+            --mediterranean-blue: #0077be;
+            --palace-gold: #D4AF37;
+            --stone-grey: #f4f4f4;
+            --text-dark: #2c3e50;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #faf9f6;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 20px rgba(0,0,0,0.1);
+        }
+        header {
+            background-color: #1a2a3a;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 5px solid var(--palace-gold);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .section {
+            padding: 30px 40px;
+            border-bottom: 1px solid #eee;
+        }
+        .section:nth-child(even) {
+            background-color: #fcfbf9;
+        }
+        h2 {
+            color: var(--venetian-red);
+            border-left: 5px solid var(--venetian-red);
+            padding-left: 15px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            font-size: 1.4em;
+        }
+        .info-block {
+            background: white;
+            border: 1px solid #e1e1e1;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 4px;
+        }
+        .info-block h3 {
+            margin-top: 0;
+            color: var(--mediterranean-blue);
+            font-size: 1.1em;
+            display: flex;
+            align-items: center;
+        }
+        .info-block h3::before {
+            content: '💶';
+            margin-right: 10px;
+        }
+        .action-steps {
+            list-style: none;
+            padding: 0;
+        }
+        .action-steps li {
+            padding-left: 30px;
+            position: relative;
+            margin-bottom: 15px;
+        }
+        .action-steps li::before {
+            content: '➔';
+            position: absolute;
+            left: 0;
+            color: var(--venetian-red);
+            font-weight: bold;
+        }
+        .highlight {
+            background-color: #fff3cd;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+        .currency-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .bill-card {
+            background: #fdfdfd;
+            border: 1px solid #ddd;
+            padding: 15px;
+            text-align: center;
+            border-top: 4px solid var(--mediterranean-blue);
+            border-radius: 4px;
+        }
+        .bill-card .amount {
+            font-size: 1.4em;
+            font-weight: bold;
+            display: block;
+            color: var(--text-dark);
+            margin-bottom: 5px;
+        }
+        .bill-card .purpose {
+            font-size: 0.85em;
+            color: #666;
+            line-height: 1.3;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+        th, td {
+            text-align: left;
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+            font-size: 0.95em;
+        }
+        th {
+            background: #f8f9fa;
+        }
+        footer {
+            background: #1a2a3a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <header>
+        <h1>Italy: Final Financial Strategy</h1>
+        <p>Tactical Guide for Dimple & Kenneth | June 2026</p>
+    </header>
+
+    <section class="section">
+        <h2>I. Currency Acquisition Strategy</h2>
+        
+        <div class="info-block">
+            <h3>1. The Texas "Starter Pack" (€100)</h3>
+            <p><strong>Goal:</strong> Immediate liquidity for landing and initial transfers. Kenneth should order this 10 days before flight.</p>
+            <ul class="action-steps">
+                <li><strong>Quantity:</strong> €100.00 total.</li>
+                <li><strong>Denominations:</strong> Request only €5 and €10 bills. Avoid €20s or €50s for this pack.</li>
+                <li><strong>Usage:</strong> Airport coffee, Water Taxi Captain, and Initial Hotel Porters.</li>
+            </ul>
+        </div>
+
+        <div class="info-block">
+            <h3>2. The Main Withdrawal (€390)</h3>
+            <p><strong>Goal:</strong> Securing the bulk of your cash at a safe, bank-affiliated "Bancomat."</p>
+            <ul class="action-steps">
+                <li><strong>The Anchor:</strong> <strong>Intesa Sanpaolo</strong> (Cannaregio 1353). A 3-minute walk from Ca' Sagredo Hotel.</li>
+                <li><strong>The "Odd Number" Trick:</strong> Request exactly <strong>€390</strong>. This prevents the machine from giving only €50 bills and forces a mix of €20s and €10s.</li>
+                <li><strong>Dynamic Conversion:</strong> If the screen asks "Accept USD Conversion?", select <strong>NO/DECLINE</strong>. Always choose EUR to get the market rate from your own bank.</li>
+                <li><strong>Backup:</strong> If the Starter Pack is missed, use the VCE Airport ATM (after customs) for €50 only. Do not use currency exchange booths.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>II. Strategic Currency Allocation (€400 Target)</h2>
+        <p>Once you have your bulk cash, Kenneth should sort it into these "Financial Armor" stashes for optimal daily use:</p>
+        
+        <div class="currency-grid">
+            <div class="bill-card">
+                <span class="amount">10 x €2.00 Coins</span>
+                <span class="purpose">The Ferry & Lift Fund (Traghetto, Sorrento Lift, Public Restrooms)</span>
+            </div>
+            <div class="bill-card">
+                <span class="amount">12 x €5.00 Bills</span>
+                <span class="purpose">The "Handshake" Fund (Porters, Private Drivers, Small Coffee Tips)</span>
+            </div>
+            <div class="bill-card">
+                <span class="amount">12 x €10.00 Bills</span>
+                <span class="purpose">The Daily Fuel (Lunch, Gelato, Water, Small Souvenirs)</span>
+            </div>
+            <div class="bill-card">
+                <span class="amount">10 x €20.00 Bills</span>
+                <span class="purpose">The "Gatekeeper" Fund (Blue Grotto fees, Fine Dining tips)</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>III. Itinerary Tipping & Logistics</h2>
+
+        <div class="info-block">
+            <h3>1. Venice Arrival (May 31)</h3>
+            <ul class="action-steps">
+                <li><strong>Water Taxi Captain:</strong> Hand over <span class="highlight">€10–€15</span> tip once safely docked at the Ca' Sagredo pier and bags are on the dock.</li>
+                <li><strong>Hotel Porters:</strong> At the lobby and room, tip <span class="highlight">€2.00 per bag</span>. Use your Starter Pack €2 coins or €5 bills.</li>
+                <li><strong>The "Bar Ritual":</strong> To get coins, buy a €1.50 espresso at a bar near the bank. Pay with a €20. The change will provide your initial €2 coins.</li>
+                <li><strong>Santa Sofia Traghetto:</strong> Directly outside the hotel. Cost is <strong>€2.00 per person</strong>. Hand it to the gondolier as you board.</li>
+            </ul>
+        </div>
+
+        <div class="info-block">
+            <h3>2. Fine Dining Protocol (Gio's & La Zucca)</h3>
+            <ul class="action-steps">
+                <li><strong>The "Coperto":</strong> A mandatory cover charge (€3–€6 per person). It is listed on the bill and covers the bread/table. Not a tip.</li>
+                <li><strong>Waitstaff Tipping:</strong> Leave <span class="highlight">5% to 10% in CASH</span> on the table. You cannot add tips to credit card receipts in Italy.</li>
+                <li><strong>The Verbal Cue:</strong> Handing over a tip is better with: "È stato tutto eccellente, grazie."</li>
+            </ul>
+        </div>
+
+        <div class="info-block">
+            <h3>3. Sorrento & Capri (June 3–4)</h3>
+            <ul class="action-steps">
+                <li><strong>Private Driver (Naples-Sorrento):</strong> Customary tip is <span class="highlight">€10–€15</span> for the private 60-minute transfer provided by Luiselle.</li>
+                <li><strong>The Blue Grotto:</strong> Cash-intensive transition. You need <span class="highlight">€18.00 per person</span> (Mandatory) for the rower boat entrance fee.</li>
+                <li><strong>Rower Tipping:</strong> Give the rower an extra <span class="highlight">€5.00–€10.00</span> after the experience. They will often ask for more; €10 total is considered very generous.</li>
+                <li><strong>The Sorrento Lift:</strong> Keep €1 and €2 coins for the elevator from the beach back up to town level.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>IV. The Mlife 03 Security Protocol</h2>
+        <div class="info-block" style="border-left: 5px solid var(--mediterranean-blue); background-color: #eef2ff;">
+            <p><strong>Kenneth's Three-Pocket System:</strong></p>
+            <ol>
+                <li><strong>The Access Pocket:</strong> €2 coins and a €10 bill for immediate transit/coffee.</li>
+                <li><strong>The Daily Wallet:</strong> Approx. €60–€80 in small bills for the day's meals and shopping.</li>
+                <li><strong>The "Vault":</strong> Stash the remaining €300+ and passports in the <strong>internal security compartment</strong> of the Mlife 03 backpack (the compartment closest to the wearer's back).</li>
+            </ol>
+        </div>
+    </section>
+
+    <footer>
+        <p>Strategic Financial Guide V3 | Prepared for Dimple & Kenneth</p>
+        <p><em>"Tenga pure il resto" (Keep the change)</em></p>
+    </footer>
+</div>
+
+</body>
+</html>
+"""
+
+with open("italy-financial-itinerary-v3.html", "w", encoding="utf-8") as f:
+    f.write(html_content)
