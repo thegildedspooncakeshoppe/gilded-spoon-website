@@ -1,230 +1,528 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>July Launch | The Edible Autobiography Bundle | The Gilded Spoon</title>
-    
+    <title>The Shoppe | The Gilded Spoon Shoppe</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Libre+Baskerville:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;700&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
     
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'brand-dark': '#1C161E',
-                        'brand-light': '#F4F1ED',
-                        'brand-gold': '#D4AF37',
-                        'brand-gold-hover': '#E2C76A',
-                        'brand-gray': '#A09DA6',
-                        'brand-card': '#2A232F',
-                        'brand-navy': '#0A2342',
-                        'brand-sage': '#8A9A5B',
-                    },
-                    fontFamily: {
-                        'serif': ['"Playfair Display"', 'serif'],
-                        'sans': ['"Inter"', 'sans-serif'],
-                        'hand': ['"Great Vibes"', 'cursive'],
-                        'baskerville': ['"Libre Baskerville"', 'serif'],
-                    }
-                }
+    <style>
+        /* --- BRAND IDENTITY COLOR MATRICES --- */
+        :root {
+            --blueprint-charcoal: #2D2D2D;
+            --sanctuary-green: #1B3022;
+            --process-sage: #96A695;
+            --jolt-mustard: #DAA520;
+            --soul-coral: #D97E6A;
+            --canvas-parchment: #F9F7F2;
+            --white-pure: #FFFFFF;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--canvas-parchment);
+            color: var(--blueprint-charcoal);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* --- NAVIGATION SECTION STYLE --- */
+        header {
+            border-bottom: 1px solid rgba(150, 166, 149, 0.3);
+            background-color: var(--canvas-parchment);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 18px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-text {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.6rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            color: var(--sanctuary-green);
+            text-decoration: none;
+        }
+
+        nav a {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--blueprint-charcoal);
+            text-decoration: none;
+            margin-left: 28px;
+            font-weight: 500;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--jolt-mustard);
+        }
+
+        /* --- HERO INTRO SECTION --- */
+        .shoppe-hero {
+            max-width: 800px;
+            margin: 70px auto 45px auto;
+            text-align: center;
+            padding: 0 24px;
+        }
+
+        .shoppe-hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 3.2rem;
+            color: var(--sanctuary-green);
+            font-weight: 400;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .shoppe-hero p {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 1.3rem;
+            color: var(--process-sage);
+            max-width: 620px;
+            margin: 0 auto;
+            line-height: 1.4;
+        }
+
+        /* --- THE SINGLE-ROW GRID ARCHITECTURE --- */
+        .main-layout {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 75px;
+        }
+
+        .product-card {
+            background-color: var(--white-pure);
+            border: 1px solid rgba(150, 166, 149, 0.4);
+            border-radius: 2px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.25s ease;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 24px rgba(27, 48, 34, 0.05);
+        }
+
+        .product-image-box {
+            background-color: #F3F1EC;
+            height: 230px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid rgba(150, 166, 149, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Responsive image behavior for your real photos */
+        .product-card-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background-color: var(--jolt-mustard);
+            color: var(--white-pure);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 4px 10px;
+            border-radius: 1px;
+            z-index: 2;
+        }
+
+        .product-badge.digital { background-color: var(--soul-coral); }
+        .product-badge.consulting { background-color: var(--sanctuary-green); }
+
+        .image-placeholder-icon {
+            font-family: 'Cormorant Garamond', serif;
+            font-style: italic;
+            font-size: 3.5rem;
+            color: rgba(150, 166, 149, 0.3);
+            user-select: none;
+        }
+
+        .product-content {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .product-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.35rem;
+            color: var(--sanctuary-green);
+            margin-bottom: 6px;
+            font-weight: 600;
+            line-height: 1.3;
+        }
+
+        .product-price {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9rem;
+            color: var(--blueprint-charcoal);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            margin-bottom: 14px;
+        }
+
+        .product-description {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.88rem;
+            color: var(--blueprint-charcoal);
+            margin-bottom: 18px;
+            text-align: justify;
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+
+        /* Beautiful italic phrasing for the Amazon format addition */
+        .variant-note {
+            font-style: italic;
+            color: var(--sanctuary-green);
+            font-weight: 500;
+        }
+
+        .product-features {
+            list-style: none;
+            margin-bottom: 22px;
+            padding-top: 14px;
+            border-top: 1px dashed rgba(150, 166, 149, 0.4);
+        }
+
+        .product-features li {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.8rem;
+            color: var(--blueprint-charcoal);
+            margin-bottom: 6px;
+            position: relative;
+            padding-left: 16px;
+            line-height: 1.4;
+        }
+
+        .product-features li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: var(--process-sage);
+            font-size: 0.9rem;
+        }
+
+        /* --- PREMIUM BUTTON DESIGN MATRIX --- */
+        .square-btn {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background-color: var(--sanctuary-green);
+            color: var(--canvas-parchment);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            text-decoration: none;
+            padding: 13px;
+            border-radius: 2px;
+            transition: background-color 0.2s ease;
+        }
+
+        .square-btn:hover {
+            background-color: var(--jolt-mustard);
+        }
+
+        /* --- MULTI-RETAILER SUB-LINK MATRIX --- */
+        .alternative-retailers {
+            margin-top: 15px;
+            padding-top: 12px;
+            border-top: 1px dashed rgba(150, 166, 149, 0.3);
+            text-align: center;
+        }
+
+        .retailer-label {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.65rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--process-sage);
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .retailer-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .retailer-link-item {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 500;
+            color: var(--blueprint-charcoal);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            transition: color 0.2s ease;
+        }
+
+        .retailer-link-item:hover {
+            color: var(--jolt-mustard);
+        }
+
+        /* --- COMPLETELY ISOLATED WORKSHOP BLOCK --- */
+        .isolated-workshop-banner {
+            background-color: var(--white-pure);
+            border: 1px solid rgba(150, 166, 149, 0.4);
+            border-left: 5px solid var(--jolt-mustard);
+            border-radius: 2px;
+            padding: 35px 40px;
+            margin-top: 50px;
+            margin-bottom: 25px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .workshop-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .workshop-tag {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--jolt-mustard);
+            margin-bottom: 6px;
+            display: block;
+        }
+
+        .workshop-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.8rem;
+            color: var(--sanctuary-green);
+            margin-bottom: 8px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .workshop-p {
+            font-family: 'Inter', sans-serif;
+            font-size: 0.9rem;
+            color: var(--blueprint-charcoal);
+            max-width: 700px;
+            line-height: 1.5;
+        }
+
+        .workshop-link-btn {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--sanctuary-green);
+            border: 2px solid var(--sanctuary-green);
+            text-decoration: none;
+            padding: 13px 26px;
+            border-radius: 2px;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .workshop-link-btn:hover {
+            background-color: var(--sanctuary-green);
+            color: var(--canvas-parchment);
+        }
+
+        /* --- PLATFORM FOOTER LAYOUT --- */
+        footer {
+            margin-top: 90px;
+            border-top: 1px solid rgba(150, 166, 149, 0.3);
+            padding: 35px 24px;
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--process-sage);
+            letter-spacing: 0.3px;
+        }
+
+        /* --- COLLAPSIBLE MOBILE RESPONSIVENESS --- */
+        @media (max-width: 1024px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 25px;
             }
         }
-    </script>
 
-    <style>
-        body { background-color: #F4F1ED; color: #1C161E; -webkit-font-smoothing: antialiased; }
-        
-        /* Flip Card Logic */
-        .flip-card { background-color: transparent; perspective: 1000px; height: 380px; }
-        .flip-card-inner { position: relative; width: 100%; height: 100%; text-align: center; transition: transform 0.8s; transform-style: preserve-3d; }
-        .flip-card.is-flipped .flip-card-inner { transform: rotateY(180deg); }
-        .flip-card-front, .flip-card-back { position: absolute; width: 100%; height: 100%; -webkit-backface-visibility: hidden; backface-visibility: hidden; border-radius: 1.5rem; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2rem; }
-        .flip-card-back { transform: rotateY(180deg); }
-        
-        /* Hero Image Constraints */
-        .hero-image-container {
-            width: 100%;
-            max-width: 420px;
-            aspect-ratio: 4/5;
-            overflow: hidden;
-            border-radius: 1rem;
+        @media (max-width: 640px) {
+            .shoppe-hero h1 { font-size: 2.4rem; }
+            .nav-container { flex-direction: column; gap: 12px; padding: 15px; }
+            nav a { margin: 0 8px; font-size: 0.7rem; }
+            .product-grid { grid-template-columns: 1fr; }
+            .isolated-workshop-banner { padding: 25px; text-align: center; justify-content: center; }
+            .workshop-link-btn { width: 100%; text-align: center; }
         }
     </style>
 </head>
-<body class="font-sans">
+<body>
 
-    <nav class="sticky top-0 bg-brand-navy/95 backdrop-blur-lg shadow-lg z-50 border-b border-brand-gold/10">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-serif font-bold text-brand-gold text-center leading-none">
-                The Gilded Spoon
-                <span class="block text-xs font-sans font-light not-italic tracking-[0.3em] text-brand-light">SHOPPE & ATELIER</span>
-            </a>
-            <div class="hidden md:flex items-center space-x-8 font-medium">
-                <a href="book.html" class="text-brand-light hover:text-brand-gold transition">The Journal</a>
-                <a href="shoppe.html" class="text-brand-gold hover:text-white transition">The Shoppe</a>
-                <a href="events.html" class="text-brand-light hover:text-brand-gold transition">Workshops</a>
-                <a href="flavors.html" class="text-brand-light hover:text-brand-gold transition">Flavors</a>
-                <a href="index.html#about" class="text-brand-light hover:text-brand-gold transition">About</a>
-                <a href="contact.html" class="text-brand-light hover:text-brand-gold transition">Contact</a>
-            </div>
-            <div class="md:hidden">
-                <button id="hamburger-button" class="text-white">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-                </button>
-            </div>
-        </div>
-        <div id="mobile-menu" class="hidden md:hidden mt-4 px-4 pb-4 bg-brand-navy text-center">
-            <a href="book.html" class="block py-3 text-brand-light">The Journal</a>
-            <a href="shoppe.html" class="block py-3 text-brand-gold font-bold">The Shoppe</a>
-            <a href="events.html" class="block py-3 text-brand-light">Workshops</a>
-            <a href="contact.html" class="block py-3 text-brand-light">Contact</a>
-        </div>
-    </nav>
-
-    <header class="relative overflow-hidden bg-brand-navy pt-20 pb-24 border-b border-brand-gold/20">
-        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')]"></div>
-        <div class="max-w-6xl mx-auto px-6 relative z-10">
-            <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div class="order-2 md:order-1">
-                    <span class="font-hand text-3xl md:text-4xl text-brand-gold block mb-4">Stop Performing. Start Feeling.</span>
-                    <h1 class="font-serif text-5xl md:text-6xl text-white mb-6 leading-tight">
-                        The Edible <br><span class="italic text-brand-gold">Autobiography Bundle</span>
-                    </h1>
-                    <p class="text-lg text-brand-light mb-8 opacity-90 leading-relaxed">
-                        This bundle is an invitation to a new rhythm. Designed for deep feelers, we provide a tactile, sensory space to tell your story when the world gets too loud.
-                    </p>
-                    <div class="text-3xl font-serif text-white mb-8">$149.00</div>
-                    <a href="#flavors" class="bg-brand-gold text-brand-dark font-bold py-4 px-12 rounded-full hover:bg-brand-gold-hover transition shadow-xl inline-block">
-                        Start Your Story
-                    </a>
-                </div>
-                <div class="order-1 md:order-2 flex justify-center">
-                    <div class="hero-image-container relative">
-                        <div class="absolute -inset-4 bg-brand-gold/10 rounded-full blur-3xl"></div>
-                        <img src="https://imgur.com/Krt8oHW.png" alt="Bundle Kit" class="relative w-full h-full object-cover rounded-2xl shadow-2xl border-4 border-brand-gold/20 transform -rotate-2">
-                    </div>
-                </div>
-            </div>
+    <header>
+        <div class="nav-container">
+            <a href="https://thegildedspoonshoppe.com/" class="logo-text">The Gilded Spoon Shoppe</a>
+            <nav>
+                <a href="https://thegildedspoonshoppe.com/">Sanctuary Home</a>
+                <a href="#" class="active">The Shoppe</a>
+                <a href="https://thegildedspoonshoppe.com/events.html">The Workshops</a>
+                <a href="https://thegildedspoonshoppe.com/book.html">About Dimple</a>
+            </nav>
         </div>
     </header>
 
-    <section id="flavors" class="py-24 bg-brand-light">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="font-serif text-4xl md:text-5xl font-bold text-brand-navy mb-4">July Launch Collection</h2>
-                <p class="text-lg italic text-brand-navy/70">Choose the composition that matches the energy you need to borrow this month.</p>
-            </div>
+    <div class="shoppe-hero">
+        <h1>The Shoppe</h1>
+        <p>Simple, honest sensory tools and practices designed to bridge the gap between what a body feels and what an environment provides.</p>
+    </div>
+
+    <main class="main-layout">
+        <div class="product-grid">
             
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-10 rounded-3xl shadow-xl border-t-8 border-brand-sage flex flex-col items-center text-center">
-                    <span class="text-brand-sage font-bold uppercase tracking-widest text-xs mb-4">The Fresh Start</span>
-                    <h3 class="font-serif text-2xl text-brand-navy mb-4">The Joyful Optimist</h3>
-                    <p class="text-brand-navy/70 mb-8 text-sm leading-relaxed">A burst of sunshine to clear mental fog. Vibrant pink and yellow tones to help you find a fresh start.</p>
-                    <p class="text-xs font-bold text-brand-navy/50 uppercase mb-8">Mindful Cue: Lemon & Raspberry</p>
-                    <a href="#" class="mt-auto inline-block bg-brand-navy text-white font-bold py-3 px-8 rounded-full hover:bg-brand-card transition w-full">Add to Sanctuary</a>
+            <div class="product-card">
+                <div class="product-image-box">
+                    <span class="product-badge">Flagship Journal</span>
+                    <img src="https://imgur.com/BmnoY7w.png" alt="The Edible Autobiography Guided Journal" class="product-card-img">
                 </div>
-
-                <div class="bg-white p-10 rounded-3xl shadow-xl border-8 border-brand-gold flex flex-col items-center text-center transform md:scale-105">
-                    <span class="text-brand-gold font-bold uppercase tracking-widest text-xs mb-4">The Steady Anchor</span>
-                    <h3 class="font-serif text-2xl text-brand-navy mb-4">The Gilded Spoon</h3>
-                    <p class="text-brand-navy/70 mb-8 text-sm leading-relaxed">Grounding stability and a weighted blanket for your heart. For when you need to protect your core.</p>
-                    <p class="text-xs font-bold text-brand-navy/50 uppercase mb-8">Mindful Cue: Dark Cocoa</p>
-                    <a href="#" class="mt-auto inline-block bg-brand-gold text-brand-dark font-bold py-3 px-8 rounded-full hover:bg-brand-gold-hover transition w-full">Add to Sanctuary</a>
-                </div>
-
-                <div class="bg-white p-10 rounded-3xl shadow-xl border-t-8 border-brand-navy flex flex-col items-center text-center">
-                    <span class="text-brand-navy font-bold uppercase tracking-widest text-xs mb-4">The Quiet Room</span>
-                    <h3 class="font-serif text-2xl text-brand-navy mb-4">The Sophisticated Bohemian</h3>
-                    <p class="text-brand-navy/70 mb-8 text-sm leading-relaxed">A soft place for the mind to land. Nostalgic, creamy tones for seasons of reflection and discovery.</p>
-                    <p class="text-xs font-bold text-brand-navy/50 uppercase mb-8">Mindful Cue: Vanilla & Nutmeg</p>
-                    <a href="#" class="mt-auto inline-block bg-brand-navy text-white font-bold py-3 px-8 rounded-full hover:bg-brand-card transition w-full">Add to Sanctuary</a>
+                <div class="product-content">
+                    <h2 class="product-title">The Edible Autobiography™ Journal</h2>
+                    <div class="product-price">$45.00</div>
+                    <p class="product-description">Baking is an interactive laboratory for self-discovery and story mapping. This master guided journal re-anchors your daily rhythm, treating every failed bake or broken recipe loop as raw, non-judgmental data rather than a personal disappointment. <span class="variant-note">Also available on Amazon in an expanded 7" x 10" hardcover canvas edition ($52.00) for roomier physical scripting.</span></p>
+                    <ul class="product-features">
+                        <li>Classic 6.125" x 9.25" original volume sizing</li>
+                        <li>High-contrast warm cream layout sheets</li>
+                        <li>Built-in 5-layer workflow guides</li>
+                    </ul>
+                    
+                    <a href="https://thegildedspoonshoppe.com/book" class="square-btn">Order Your Copy</a>
+                    
+                    <div class="alternative-retailers">
+                        <span class="retailer-label">Alternative Retailers</span>
+                        <div class="retailer-links">
+                            <a href="https://a.co/d/0bSGAtOY" class="retailer-link-item">✨ Amazon</a>
+                            <a href="https://www.barnesandnoble.com/w/my-edible-autobiography-dimple-patel-mckinney/1149670351?ean=9798234024299" class="retailer-link-item">📖 Barnes &amp; Noble</a>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <div class="product-card">
+                <div class="product-image-box">
+                    <span class="product-badge">Heirloom Kit</span>
+ <img src="https://imgur.com/gNtrB42.jpg" alt="The Somatic Recipe Book Box Kit" class="product-card-img">
+                </div>
+                <div class="product-content">
+                    <h2 class="product-title">The Somatic Recipe Book Box Kit</h2>
+                    <div class="product-price">$65.00</div>
+                    <p class="product-description">An heirloom-quality, custom-designed storage book box engineered to sit beautifully on your bookshelf, elegantly hiding loose kitchen clutter to protect your visual focus. While the outer shell showcases an expressive, unmasked cover illustration, the hidden interior tray remains completely simple, removing structural friction when your mental energy is spent.</p>
+                    <ul class="product-features">
+                        <li>Premium shelf box storage enclosure</li>
+                        <li>Core recipe cards with circular check-rings</li>
+                        <li>Matte sticker archive </li>
+                        <li>4x6 design postcard</li>
+                    </ul>
+                    <a href="https://square.link/u/zessNdtp" class="square-btn">Purchase Box Kit</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image-box">
+                    <span class="product-badge digital">Digital Download</span>
+                     <img src="https://imgur.com/zRePMVF.jpg" alt="My Personal Sanctuary Builder Journal" class="product-card-img">
+                </div>
+                <div class="product-content">
+                    <h2 class="product-title">My Personal Sanctuary Builder Journal</h2>
+                    <div class="product-price">$12.00</div>
+                    <p class="product-description">A 15-page interactive digital layout built to help your mind drop the performance weight. Features a faded dot-grid matrix background that structures thoughts gently without demanding straight lines, plus the single-page "Daily Dial" game for high-exhaustion recovery days.</p>
+                    <ul class="product-features">
+                        <li>Printable &amp; GoodNotes / iPad friendly file</li>
+                        <li>5-Layer Practice room reset prompts</li>
+                        <li>Built-in 4"x6" portrait postcard frame</li>
+                    </ul>
+                    <a href="https://square.link/u/H6W2i3dT" class="square-btn">Download Digital Kit</a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image-box">
+                    <span class="product-badge consulting">1:1 Session</span>
+<img src="https://imgur.com/66CUNyc.png" alt="Sensory Kitchen & Somatic Consultation" class="product-card-img">                
+</div>
+                <div class="product-content">
+                    <h2 class="product-title">Sensory Kitchen &amp; Somatic Consultation</h2>
+                    <div class="product-price">Custom Session Pricing</div>
+                    <p class="product-description">A personal, supportive session designed to help your family's nervous system finally exhale. Rooted in nursing, health studies, and real lived experience with sensory mismatch, I help you translate your body's silent language into functional, creative kitchen practices. Together, we move past behavioral labels like "picky eating" and use the controlled chemistry of cake to build a safe culinary sanctuary.</p>
+                    <ul class="product-features">
+                        <li>Customized 5-Layer Framework mapping</li>
+                        <li>Overcoming food-touching &amp; texture blocks</li>
+                        <li>Grounded everyday strategies for families</li>
+                    </ul>
+                    <a href="mailto:dimple@thegildedspoonshoppe.com?subject=Inquiry: Sensory Kitchen & Somatic Consultations" class="square-btn">Request Personal Session</a>
+                </div>
+            </div>
+
         </div>
-    </section>
 
-    <section class="py-24 bg-brand-navy text-white">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <span class="text-brand-gold font-bold tracking-widest uppercase text-sm block mb-4">Inside the Kit</span>
-                <h2 class="font-serif text-4xl md:text-5xl font-semibold mb-6">What's Inside Your Sanctuary</h2>
-                <p class="text-brand-light/70 text-sm">(Click a card to reveal the artifact)</p>
+        <div class="isolated-workshop-banner">
+            <div class="workshop-text">
+                <span class="workshop-tag">Live Experience Track</span>
+                <h3 class="workshop-title">The Somatic Workshops &amp; Classes</h3>
+                <p class="workshop-p">Looking for our deep-dive sensory experiences? Our live workshops graduate from standard baking classes into collaborative Somatic Laboratories. Learn to actively regulate internal baselines using structural flavor, color-taste fields, and culinary chemistry variables.</p>
             </div>
-
-            <div class="grid md:grid-cols-4 gap-6">
-                <div class="flip-card" onclick="this.classList.toggle('is-flipped')">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front bg-brand-card/40 border border-brand-gold/20">
-                            <h3 class="text-brand-gold font-serif text-xl mb-4">The Guided Journal</h3>
-                            <p class="text-xs text-brand-light/70 text-center">Your physical sanctuary for documenting your story.</p>
-                            <span class="mt-6 text-[10px] uppercase tracking-widest text-brand-gold/50">Click to Peek</span>
-                        </div>
-                        <div class="flip-card-back bg-white p-2">
-                            <img src="https://imgur.com/Krt8oHW.png" alt="Journal" class="w-full h-full object-cover rounded-xl">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flip-card" onclick="this.classList.toggle('is-flipped')">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front bg-brand-card/40 border border-brand-gold/20">
-                            <h3 class="text-brand-gold font-serif text-xl mb-4">3D Somatic Canvas</h3>
-                            <p class="text-xs text-brand-light/70 text-center">A 5x7 tactile blueprint with hand-applied textures.</p>
-                            <span class="mt-6 text-[10px] uppercase tracking-widest text-brand-gold/50">Click to Peek</span>
-                        </div>
-                        <div class="flip-card-back bg-white p-2">
-                            <img src="https://i.imgur.com/xtvtDQs.jpeg" alt="Canvas" class="w-full h-full object-cover rounded-xl">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flip-card" onclick="this.classList.toggle('is-flipped')">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front bg-brand-card/40 border border-brand-gold/20">
-                            <h3 class="text-brand-gold font-serif text-xl mb-4">Wax Seal Ritual Kit</h3>
-                            <p class="text-xs text-brand-light/70 text-center">A signature spoon, warmer, and stamp for sealing intentions.</p>
-                            <span class="mt-6 text-[10px] uppercase tracking-widest text-brand-gold/50">Click to Peek</span>
-                        </div>
-                        <div class="flip-card-back bg-white p-2">
-                            <img src="https://i.imgur.com/akOT2O1.jpeg" alt="Wax Kit" class="w-full h-full object-cover rounded-xl">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flip-card" onclick="this.classList.toggle('is-flipped')">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front bg-brand-card/40 border border-brand-gold/20">
-                            <h3 class="text-brand-gold font-serif text-xl mb-4">Atelier Tools</h3>
-                            <p class="text-xs text-brand-light/70 text-center">Custom pencils and magnetic bookmarks to hold your place.</p>
-                            <span class="mt-6 text-[10px] uppercase tracking-widest text-brand-gold/50">Click to Peek</span>
-                        </div>
-                        <div class="flip-card-back bg-white p-2">
-                            <img src="https://imgur.com/Krt8oHW.png" alt="Tools" class="w-full h-full object-cover rounded-xl">
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <a href="https://thegildedspoonshoppe.com/events.html" class="workshop-link-btn">View Workshop Schedule</a>
         </div>
-    </section>
- <section class="py-24 bg-white">
-        <div class="max-w-5xl mx-auto px-6 text-center">
-            <h2 class="font-serif text-4xl md:text-5xl font-semibold mb-8 text-brand-navy">Architecture for the Soul</h2>
-            <p class="text-lg leading-relaxed text-brand-dark max-w-3xl mx-auto mb-12">
-                Every bundle includes one of our 26 unique 3D compositions. These pieces aren't just art—they are mindful check-in tools. Run your fingers over the texture, inhale the botanicals, and find your center before you pick up your pen.
-            </p>
-            <div class="bg-brand-light p-10 rounded-3xl border-2 border-dashed border-brand-gold max-w-2xl mx-auto">
-                <span class="font-serif italic text-2xl text-brand-navy block mb-4">The Flour-Stain Clause</span>
-                <p class="text-md text-brand-navy/80 italic leading-relaxed">
-                    "This is a workspace, not a museum. Your journal and your art are allowed to be messy. A messy record is a sign of a life being fully felt."
-                </p>
-            </div>
-        </div>
-    </section>
-    <footer class="bg-brand-dark text-brand-gray border-t border-brand-gold/20">
+    </main>
+<footer class="bg-brand-dark text-brand-gray border-t border-brand-gold/20">
         <div class="max-w-2xl mx-auto px-6 py-8">
             <div class="flex flex-col items-center">
                 
