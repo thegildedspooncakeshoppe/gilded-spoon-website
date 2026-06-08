@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Edible Autobiography | The Gilded Spoon Shoppe</title>
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:wght@400;600;700&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:wght@400;600;700&family=Inter:wght@300;400;500;700&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -24,11 +24,41 @@
                         'serif': ['"Playfair Display"', 'serif'],
                         'montserrat': ['"Montserrat"', 'sans-serif'],
                         'sans': ['"Inter"', 'sans-serif'],
+                        'hand': ['"Caveat"', 'cursive'],
                     }
                 }
             }
         }
     </script>
+    <style>
+        /* Custom Photo Stack CSS Restored & Updated for New Brand */
+        .photo-stack { position: relative; width: 100%; height: 300px; cursor: pointer; transition: transform 0.3s; }
+        .photo-stack:hover { transform: scale(1.02); }
+        .stack-card {
+            position: absolute; width: 60%; height: auto;
+            border: 6px solid #F9F7F2; box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+            background: #F9F7F2; border-radius: 2px;
+        }
+        .pos-1 { top: 0px; left: 15%; transform: rotate(-5deg); z-index: 5; }
+        .pos-2 { top: 10px; left: 25%; transform: rotate(5deg); z-index: 4; }
+        .pos-3 { top: 20px; left: 5%; transform: rotate(-8deg); z-index: 3; }
+        .pos-4 { top: 30px; left: 35%; transform: rotate(3deg); z-index: 2; }
+        .pos-5 { top: 40px; left: 45%; transform: rotate(8deg); z-index: 1; }
+
+        .photo-stack:hover .pos-1 { transform: translateY(-10px) rotate(0deg); }
+        .photo-stack:hover .pos-2 { transform: translateX(40px) rotate(10deg); }
+        .photo-stack:hover .pos-3 { transform: translateX(-40px) rotate(-10deg); }
+        .photo-stack:hover .pos-4 { transform: translateX(60px) rotate(15deg); }
+        .photo-stack:hover .pos-5 { transform: translateX(80px) rotate(20deg); }
+
+        .gold-stack .stack-card { border-color: #DAA520; } /* Uses Brand Jolt */
+
+        /* Lightbox Updated for New Brand */
+        .lightbox { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(27, 48, 34, 0.95); justify-content: center; align-items: center; flex-direction: column; backdrop-filter: blur(5px); }
+        .lightbox.active { display: flex; }
+        .lightbox-img { max-width: 90%; max-height: 80vh; border: 4px solid #F9F7F2; border-radius: 4px; }
+    </style>
 </head>
 <body class="font-sans bg-brand-canvas text-brand-blueprint antialiased">
 
@@ -85,18 +115,78 @@
         </div>
     </section>
 
-    <section class="py-16 bg-brand-blueprint text-brand-canvas">
+    <section class="py-16 bg-white border-y border-brand-process/20">
         <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-            <div class="relative transform -rotate-2 border-4 border-white shadow-2xl">
+            <div class="relative transform -rotate-2 border-4 border-brand-canvas shadow-2xl">
                  <img src="https://imgur.com/Krt8oHW.png" alt="Cover art for My Edible Autobiography" class="w-full">
             </div>
-            <div class="space-y-6 text-lg font-sans leading-relaxed">
-                <h2 class="font-cormorant text-4xl text-brand-jolt font-bold mb-4">The Magic is in the Process.</h2>
+            <div class="space-y-6 text-lg font-sans leading-relaxed text-brand-blueprint">
+                <h2 class="font-cormorant text-4xl text-brand-sanctuary font-bold mb-4">The Magic is in the Process.</h2>
                 <p>If you are reading this with a clenched jaw or tight shoulders, take a breath.</p>
                 <p>For years, I thought baking was about performance—getting the icing smooth, nailing the chemistry. I used it as armor.</p>
                 <p>But baking is actually an interactive laboratory for self-discovery and story mapping. This master guided journal re-anchors your daily rhythm, treating every failed bake or broken recipe loop as raw, non-judgmental data rather than a personal disappointment.</p>
                 <p>I created this journal because you deserve a place to put your feelings that doesn't require you to be "on." This is my permission slip to you.</p>
                 <p class="text-brand-jolt font-serif italic text-3xl mt-4">- Dimple</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-brand-canvas">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="font-cormorant text-5xl text-brand-sanctuary text-center mb-4 font-bold">A Map for Your Senses</h2>
+            <p class="text-center font-sans text-brand-blueprint/80 max-w-2xl mx-auto mb-20 text-lg">
+                This is not a textbook, and there are no grades. Think of this journal as a map. Start where you are, and let your senses guide the way.
+            </p>
+
+            <div class="space-y-24">
+                
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="text-xs font-montserrat font-bold tracking-widest text-brand-process uppercase block mb-2">Volume I</span>
+                        <h3 class="font-serif text-3xl text-brand-sanctuary mb-4">The Sensory Engine</h3>
+                        <p class="text-brand-blueprint font-sans leading-relaxed"><strong>The Permission Slip.</strong> Before you design, you must arrive. This section explores the "Why" behind the cake and gives you the freedom to be messy. It teaches you the language of your own senses before you ever pick up a pencil.</p>
+                    </div>
+                    <div>
+                        <div class="photo-stack" onclick="openLightbox(this)">
+                            <img src="https://imgur.com/gnGLaxA.png" class="stack-card pos-1" alt="Volume I Welcome">
+                            <img src="https://imgur.com/bCdvQ0X.png" class="stack-card pos-2" alt="Volume I Permission">
+                            <img src="https://imgur.com/70o80fn.png" class="stack-card pos-3" alt="Volume I Sensory Engine">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="md:order-2">
+                        <span class="text-xs font-montserrat font-bold tracking-widest text-brand-process uppercase block mb-2">Volume II</span>
+                        <h3 class="font-serif text-3xl text-brand-sanctuary mb-4">The 5-Layer Framework</h3>
+                        <p class="text-brand-blueprint font-sans leading-relaxed"><strong>The Blueprint.</strong> Don't just bake; design. This is your guide for turning abstract feelings into tangible elements. You'll learn to translate emotion into <strong>Foundation, Infusion, Strength, Strategy, and Expression</strong>.</p>
+                    </div>
+                    <div class="md:order-1">
+                        <div class="photo-stack" onclick="openLightbox(this)">
+                             <img src="https://imgur.com/ZjReC0e.png" class="stack-card pos-1" alt="5-Layer Cake Framework">
+                            <img src="https://imgur.com/NoH3Zx3.png" class="stack-card pos-2" alt="Framework Details">
+                            <img src="https://imgur.com/VgxfSJb.png" class="stack-card pos-3" alt="In Practice">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="border-l-4 border-brand-jolt pl-6">
+                        <span class="text-xs font-montserrat font-bold tracking-widest text-brand-jolt uppercase block mb-2">Volume III</span>
+                        <h3 class="font-serif text-3xl text-brand-sanctuary mb-4">The Sensory Rolodex</h3>
+                        <p class="text-brand-blueprint font-sans leading-relaxed"><strong>The Toolbelt.</strong> Located in the center with a distinct gold border, this is your command center. It holds your <strong>Flavor Codex</strong>, <strong>Color Palettes</strong>, and the <strong>Emergency Kit</strong> for when you have zero spoons left.</p>
+                    </div>
+                    <div>
+                        <div class="photo-stack gold-stack" onclick="openLightbox(this)">
+                            <img src="https://imgur.com/wPMg5aK.png" class="stack-card pos-1" alt="Volume III Divider">
+                            <img src="https://imgur.com/Mtp84a7.png" class="stack-card pos-2" alt="Emergency Kit">
+                            <img src="https://imgur.com/tzphOWb.png" class="stack-card pos-3" alt="Anchor & Mood">
+                            <img src="https://imgur.com/aPwp2Va.png" class="stack-card pos-4" alt="Sample Pantry">
+                            <img src="https://imgur.com/7bK2n1v.png" class="stack-card pos-5" alt="Sensory Pantry">
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -114,12 +204,62 @@
             <p class="font-serif text-sm opacity-80">&copy; 2026 The Gilded Spoon Shoppe | McKinney, Texas</p>
         </div>
     </footer>
+
     <script>
+        // Mobile Menu
         const hamburgerButton = document.getElementById('hamburger-button');
         const mobileMenu = document.getElementById('mobile-menu');
         if(hamburgerButton) {
             hamburgerButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
         }
+
+        // Restored Lightbox Functionality
+        let currentImages = [];
+        let currentIndex = 0;
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        function openLightbox(stackElement) {
+            const images = stackElement.querySelectorAll('img');
+            currentImages = Array.from(images).map(img => img.src);
+            currentIndex = 0; 
+            showImage(currentIndex);
+            lightbox.classList.add('active');
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+        }
+
+        function showImage(index) {
+            lightboxImg.src = currentImages[index];
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % currentImages.length;
+            showImage(currentIndex);
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+            showImage(currentIndex);
+        }
+
+        if(lightbox) {
+            lightbox.addEventListener('click', (e) => {
+                if (e.target === lightbox) closeLightbox();
+            });
+        }
     </script>
+
+    <div id="lightbox" class="lightbox">
+        <span class="absolute top-5 right-8 text-white text-4xl cursor-pointer hover:text-brand-jolt transition-colors" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" class="lightbox-img shadow-2xl" src="" alt="Gallery Image">
+        <div class="flex gap-4 mt-6">
+            <button class="font-montserrat font-bold text-xs tracking-widest uppercase border border-white text-white py-3 px-6 rounded-sm hover:bg-brand-jolt hover:border-brand-jolt hover:text-brand-sanctuary transition" onclick="prevImage()">Previous</button>
+            <button class="font-montserrat font-bold text-xs tracking-widest uppercase border border-white text-white py-3 px-6 rounded-sm hover:bg-brand-jolt hover:border-brand-jolt hover:text-brand-sanctuary transition" onclick="nextImage()">Next</button>
+        </div>
+    </div>
+
 </body>
 </html>
