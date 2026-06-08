@@ -3,292 +3,173 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Host an unforgettable private event in DFW. Luxury cake decorating workshops & styled tablescapes designed for somatic wellness and emotional regulation.">
-    <meta name="keywords" content="somatic healing journal, neuro-inclusive wellness, emotional architecture, linguistic bypassing, sensory grounding, zero-bake creative toolkit, culinary art therapy, non-verbal emotional regulation">
-    <title>Atelier Events | The Gilded Spoon Shoppe</title>
-    
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://thegildedspoonshoppe.com/events.html">
-    <meta property="og:title" content="The Gilded Spoon Atelier | Sensory Workshops & Events">
-    <meta property="og:description" content="Immersive, luxury cake decorating experiences designed for emotional regulation and creative connection.">
-
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <title>Parties & Planning | The Gilded Spoon Shoppe</title>
+    <meta name="description" content="Sensory-Friendly Cake Decorating Parties & Full-Service Event Planning for Kids and Adults of All Ages.">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:wght@400;600;700&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'brand-dark': '#1C161E',
-                        'brand-light': '#F4F1ED',
-                        'brand-gold': '#D4AF37',
-                        'brand-gold-hover': '#E2C76A',
-                        'brand-gray': '#A09DA6',
-                        'brand-card': '#2A232F',
-                        'brand-navy': '#0A2342',
+                        'brand-blueprint': '#2D2D2D',
+                        'brand-sanctuary': '#1B3022',
+                        'brand-process': '#96A695',
+                        'brand-jolt': '#DAA520',
+                        'brand-soul': '#D97E6A',
+                        'brand-canvas': '#F9F7F2',
                     },
                     fontFamily: {
+                        'cormorant': ['"Cormorant Garamond"', 'serif'],
                         'serif': ['"Playfair Display"', 'serif'],
+                        'montserrat': ['"Montserrat"', 'sans-serif'],
                         'sans': ['"Inter"', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
-    <style>
-        body { background-color: #0A2342; color: #F4F1ED; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
-        .events-header-bg { background-image: linear-gradient(rgba(10, 35, 66, 0.85), rgba(10, 35, 66, 0.85)), url('https://imgur.com/FX7UFPc.jpeg'); background-size: cover; background-position: center; }
-        
-        .modal {
-            display: none; position: fixed; z-index: 100;
-            left: 0; top: 0; width: 100%; height: 100%;
-            overflow: auto; background-color: rgba(0,0,0,0.8);
-            backdrop-filter: blur(5px);
-        }
-        .modal-content {
-            background-color: #2A232F; color: #F4F1ED;
-            margin: 5% auto; padding: 2rem;
-            border-top: 8px solid #D4AF37;
-            width: 90%; max-width: 600px; border-radius: 1rem;
-            position: relative; animation: slideIn 0.4s ease-out;
-        }
-        @keyframes slideIn { from { transform: translateY(-50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-    </style>
 </head>
-<body class="font-sans">
+<body class="font-sans bg-brand-canvas text-brand-blueprint antialiased">
 
-    <nav class="sticky top-0 bg-brand-navy/95 backdrop-blur-lg shadow-lg z-50 border-b border-brand-gold/10">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-serif font-bold text-brand-gold text-center leading-none">
-                The Gilded Spoon
-                <span class="block text-xs font-sans font-light not-italic tracking-[0.3em] text-brand-light">SHOPPE & ATELIER</span>
+    <nav class="sticky top-0 bg-brand-sanctuary shadow-lg z-50 border-b border-brand-process/30">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="Logo No Background.jpg" alt="The Gilded Spoon Shoppe" class="h-12 object-contain filter invert opacity-90">
+                <span class="text-brand-jolt font-cormorant text-2xl font-bold hidden sm:block">The Gilded Spoon</span>
             </a>
-            <div class="hidden md:flex items-center space-x-8 font-medium">
-                <a href="book.html" class="text-brand-gold hover:text-white transition">The Journal</a>
-                <a href="events.html" class="text-brand-light hover:text-brand-gold transition border-b-2 border-brand-gold pb-1">Workshops</a>
-                <a href="flipbook.html" class="text-brand-light hover:text-brand-gold transition">Portfolio</a>
-                <a href="flavors.html" class="text-brand-light hover:text-brand-gold transition">Flavors</a>
-                <a href="index.html#about" class="text-brand-light hover:text-brand-gold transition">About</a>
-                <a href="contact.html" class="text-brand-light hover:text-brand-gold transition">Contact</a>
+            <div class="hidden md:flex items-center space-x-8 font-montserrat text-xs tracking-widest uppercase font-semibold">
+                <a href="book.html" class="text-brand-canvas hover:text-brand-jolt transition">The Journal</a>
+                <a href="events.html" class="text-brand-jolt transition border-b-2 border-brand-jolt pb-1">Parties</a>
+                <a href="consulting.html" class="text-brand-canvas hover:text-brand-jolt transition">Consulting</a>
+                <a href="shoppe.html" class="text-brand-canvas hover:text-brand-jolt transition">The Shoppe</a>
+                <a href="contact.html" class="text-brand-canvas hover:text-brand-jolt transition">Contact</a>
             </div>
             <div class="md:hidden">
-                <button id="hamburger-button" class="text-white focus:outline-none">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                <button id="hamburger-button" class="text-brand-canvas focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
         </div>
+        <div id="mobile-menu" class="hidden md:hidden mt-2 px-4 pb-4 bg-brand-sanctuary text-center border-t border-brand-process/20 pt-4">
+            <a href="book.html" class="block py-3 text-brand-canvas font-montserrat text-xs uppercase tracking-widest">The Journal</a>
+            <a href="events.html" class="block py-3 text-brand-jolt font-montserrat text-xs uppercase tracking-widest font-bold">Parties</a>
+            <a href="consulting.html" class="block py-3 text-brand-canvas font-montserrat text-xs uppercase tracking-widest">Consulting</a>
+            <a href="shoppe.html" class="block py-3 text-brand-canvas font-montserrat text-xs uppercase tracking-widest">The Shoppe</a>
+            <a href="contact.html" class="block py-3 text-brand-canvas font-montserrat text-xs uppercase tracking-widest">Contact</a>
+        </div>
     </nav>
 
-    <header class="text-center py-24 md:py-32 events-header-bg border-b border-brand-gold/20">
-        <div class="max-w-6xl mx-auto px-6">
-            <span class="text-brand-gold font-bold tracking-[0.4em] uppercase text-sm block mb-4">The Atelier Experience</span>
-            <h1 class="font-serif text-5xl md:text-7xl font-bold text-white leading-tight mb-6">A Sanctuary for <br><span class="italic">Shared Creativity</span></h1>
-            <p class="text-lg md:text-xl text-brand-light font-light max-w-2xl mx-auto leading-relaxed opacity-90">We bring fully-styled, immersive cake design workshops directly to your venue. Designed for connection, somatic regulation, and luxe celebration.</p>
-            <a href="#pricing" class="mt-10 inline-block bg-brand-gold text-brand-dark font-bold py-4 px-10 rounded-full hover:bg-brand-gold-hover transition-all shadow-xl">View The Experiences</a>
+    <header class="text-center py-24 border-b border-brand-process/30 relative" style="background-image: linear-gradient(rgba(27, 48, 34, 0.92), rgba(27, 48, 34, 0.92)), url('https://imgur.com/FX7UFPc.jpeg'); background-size: cover; background-position: center;">
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <span class="text-brand-jolt font-montserrat font-bold tracking-[0.4em] uppercase text-sm block mb-4">The Atelier Experience</span>
+            <h1 class="font-cormorant text-5xl md:text-7xl font-bold text-brand-canvas leading-tight mb-6">Celebrate Without<br><span class="italic text-brand-process">The Overwhelm</span></h1>
+            <p class="text-lg md:text-xl font-serif italic text-brand-canvas/90 max-w-2xl mx-auto leading-relaxed">Sensory-Friendly Cake Decorating Parties & Full-Service Event Planning for Kids and Adults of All Ages.</p>
         </div>
     </header>
 
-    <section class="py-12 bg-brand-navy">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h3 class="text-[10px] font-bold tracking-[0.5em] text-brand-gray uppercase mb-8">Somatic Wellness meets Creative Design</h3>
-            <div class="flex flex-wrap justify-center items-center gap-x-12 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
-                <p class="font-serif text-3xl text-brand-light">Motorola Solutions</p>
-                <p class="font-serif text-3xl text-brand-light">Embrace Texas</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="experiences" class="py-24 bg-brand-light text-brand-dark">
+    <section class="py-24 bg-brand-canvas">
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center mb-20">
-                <h2 class="font-serif text-4xl md:text-5xl font-semibold text-brand-navy">Two Paths to a Perfect Event</h2>
-                <p class="text-lg text-brand-gray mt-4 max-w-2xl mx-auto leading-relaxed">Choose the sensory journey that best fits your occasion.</p>
+                <h2 class="font-serif text-4xl md:text-5xl font-semibold text-brand-sanctuary">Two Paths to a Perfect Event</h2>
             </div>
             
-            <div class="grid md:grid-cols-2 gap-16 items-center mb-32">
-                <div class="order-2 md:order-1">
-                    <span class="text-brand-gold font-bold tracking-widest uppercase text-xs block mb-2">The Joyful Journey</span>
-                    <h3 class="font-serif text-3xl md:text-4xl font-semibold text-brand-navy mb-6 leading-tight">The Paint by Cake Workshop</h3>
-                    <div class="text-brand-dark space-y-6 text-lg leading-relaxed">
-                        <p>In this unique workshop, your canvas is a personal cake and our signature buttercream is your paint. We've removed the pressure of "perfection" and replaced it with low-friction creativity.</p>
-                        <p>Each guest receives a pre-printed edible design divided into numbered sections. Using your corresponding color palette, you'll "paint" your masterpiece while grounding your nervous system in the sensory rhythm of the frosting.</p>
-                        <p class="font-bold text-brand-navy italic">Perfect for: <span class="font-normal opacity-80">Team regulation, bridal showers, and creative birthday celebrations.</span></p>
-                        <button class="open-paint-modal-btn mt-6 inline-block bg-brand-navy text-white font-bold py-3 px-8 rounded-full hover:bg-brand-gold hover:text-brand-dark transition-all shadow-lg">View The Process &rarr;</button>
+            <div class="grid md:grid-cols-2 gap-16 items-center mb-24">
+                <div>
+                    <span class="text-brand-soul font-montserrat font-bold tracking-widest uppercase text-xs block mb-2">The Joyful Journey</span>
+                    <h3 class="font-cormorant text-4xl font-bold text-brand-sanctuary mb-6">Sensory-Friendly Decorating Parties</h3>
+                    <div class="space-y-4 text-lg font-sans leading-relaxed text-brand-blueprint/90">
+                        <p>We believe creativity should be a sanctuary, not a performance. Our parties are designed for neurotypes of all kinds, removing the pressure of "perfection" and replacing it with joyful, low-friction creativity.</p>
+                        <p>Each guest receives their own personal cake canvas and a pre-selected palette of colors. We focus on tactile joy, allowing guests to ground themselves in the rhythm of frosting without sensory overload.</p>
+                        <p class="font-bold text-brand-sanctuary italic font-serif mt-4">Perfect for: <span class="font-normal opacity-80 font-sans">Birthdays, neuro-inclusive gatherings, and creative afternoons.</span></p>
                     </div>
                 </div>
-                <div class="order-1 md:order-2">
-                    <div class="grid grid-cols-2 gap-4">
-                        <img src="https://i.imgur.com/2Cv0vCq.png" class="rounded-2xl shadow-xl aspect-square object-cover transform rotate-2">
-                        <img src="https://i.imgur.com/AwCMwJ7.jpeg" class="rounded-2xl shadow-xl row-span-2 object-cover">
-                        <img src="https://i.imgur.com/EzQH7h1.png" class="rounded-2xl shadow-xl aspect-square object-cover transform -rotate-2">
-                    </div>
+                <div>
+                    <img src="https://i.imgur.com/2Cv0vCq.png" class="rounded-sm shadow-xl w-full object-cover aspect-square border-4 border-white">
                 </div>
             </div>
 
             <div class="grid md:grid-cols-2 gap-16 items-center">
-                <div>
-                    <div class="grid grid-cols-2 gap-4">
-                        <img src="https://i.imgur.com/5GijPvs.png" class="rounded-2xl shadow-xl row-span-2 object-cover">
-                        <img src="https://i.imgur.com/Rokzvwi.png" class="rounded-2xl shadow-xl aspect-square object-cover transform -rotate-3">
-                        <img src="https://i.imgur.com/iLiEYdl.png" class="rounded-2xl shadow-xl aspect-square object-cover transform rotate-3">
-                    </div>
+                <div class="order-2 md:order-1">
+                    <img src="https://i.imgur.com/5GijPvs.png" class="rounded-sm shadow-xl w-full object-cover aspect-square border-4 border-white">
                 </div>
-                <div>
-                    <span class="text-brand-gold font-bold tracking-widest uppercase text-xs block mb-2">The Immersive Journey</span>
-                    <h3 class="font-serif text-3xl md:text-4xl font-semibold text-brand-navy mb-6 leading-tight">The Gilded Palate: <br>A Cake Design Atelier</h3>
-                    <div class="text-brand-dark space-y-6 text-lg leading-relaxed">
-                        <p>This experience is an immersive sensory journey through my <strong>Proprietary 5-Layer Framework</strong>. We begin with a curated tasting board to help each guest uncover their unique "Flavor Personality."</p> 
-                        <p>You will then use your profile to design and decorate a stunning cake that is a tangible expression of your story. This is "Emotional Architecture" in its most delicious form.</p>
-                        <p class="font-bold text-brand-navy italic">Perfect for: <span class="font-normal opacity-80">Sophisticated date nights, client appreciation, and VIP milestone celebrations.</span></p>
-                        <button class="open-atelier-modal-btn mt-6 inline-block bg-brand-navy text-white font-bold py-3 px-8 rounded-full hover:bg-brand-gold hover:text-brand-dark transition-all shadow-lg">View The Process &rarr;</button>
+                <div class="order-1 md:order-2">
+                    <span class="text-brand-soul font-montserrat font-bold tracking-widest uppercase text-xs block mb-2">The Immersive Journey</span>
+                    <h3 class="font-cormorant text-4xl font-bold text-brand-sanctuary mb-6">Special Occasion Party Planning</h3>
+                    <div class="space-y-4 text-lg font-sans leading-relaxed text-brand-blueprint/90">
+                        <p>Let us carry the mental load. The Gilded Spoon Atelier offers comprehensive party planning services to ensure your celebration is as seamless as it is beautiful.</p>
+                        <p>From bespoke cake centerpieces to tablescapes and decor, we handle the architectural details of your event. We specialize in crafting events that respect the sensory needs of your guests, ensuring everyone feels safe, regulated, and ready to celebrate.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-24 bg-brand-navy text-white border-y border-brand-gold/10">
-        <div class="max-w-5xl mx-auto px-6 text-center">
-            <span class="font-serif text-brand-gold text-2xl block mb-4 italic">Elevate the Atmosphere</span>
-            <h2 class="font-serif text-4xl md:text-5xl font-semibold mb-8">The Gilded Tablescape</h2>
-            <p class="text-xl text-brand-light/70 max-w-3xl mx-auto leading-relaxed mb-16">Go beyond the workshop. We transform your space into a photo-ready masterpiece with luxe place settings, themed decor, and ambient lighting.</p>
-            
-            <div class="grid md:grid-cols-2 gap-12 text-left">
-                <div class="bg-brand-card/30 p-8 rounded-2xl border-l-4 border-brand-gold">
-                    <h4 class="font-serif text-2xl text-brand-gold mb-4 text-center sm:text-left">Full Setup & Design</h4>
-                    <p class="text-brand-light leading-relaxed">We handle every detail—custom theme concept, premium chargers, linens, and floral arrangements. <em class="text-brand-gray block mt-2 text-sm">Please allow for 60-90 minutes of pre-event setup.</em></p>
-                </div>
-                <div class="bg-brand-card/30 p-8 rounded-2xl border-l-4 border-brand-gold">
-                    <h4 class="font-serif text-2xl text-brand-gold mb-4 text-center sm:text-left">Investment</h4>
-                    <p class="text-brand-light leading-relaxed">Tablescape enhancements start at <strong>+$500</strong>. This turns your workshop into a high-end sensory gala that your guests will talk about for years.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="pricing" class="py-24 bg-brand-light">
+    <section class="py-24 bg-white border-t border-brand-process/20">
         <div class="max-w-5xl mx-auto px-6">
-            <h2 class="font-serif text-4xl text-brand-navy text-center mb-16">All-Inclusive Atelier Packages</h2>
+            <h2 class="font-serif text-4xl text-brand-sanctuary text-center mb-16">Event Packages</h2>
             <div class="grid md:grid-cols-2 gap-10 max-w-4xl mx-auto">
                 
-                <div class="group bg-white border border-gray-200 p-10 rounded-3xl shadow-sm hover:shadow-2xl hover:border-brand-gold transition-all duration-500">
-                    <h3 class="font-serif text-2xl text-brand-navy mb-4">Paint by Cake</h3>
-                    <p class="font-serif text-5xl text-brand-gold mb-6">$770</p>
-                    <p class="text-brand-gray text-xs mb-8"><em>Covers up to 10 guests. <br>Additional guests $77 each.</em></p>
-                    <ul class="space-y-4 text-brand-dark text-sm mb-10">
-                        <li class="flex items-start"><span class="text-brand-gold mr-3">✔</span> 2-hour guided workshop at your venue</li>
-                        <li class="flex items-start"><span class="text-brand-gold mr-3">✔</span> All materials, personal cakes & palettes</li>
-                        <li class="flex items-start"><span class="text-green-600 font-bold mr-3">✔</span> Travel included (25-mile service area)</li>
-                        <li class="flex items-start"><span class="text-brand-gold mr-3">✔</span> Luxury take-home packaging</li>
+                <div class="bg-brand-canvas border border-brand-process/30 p-10 rounded-sm shadow-md text-center hover:-translate-y-1 transition-transform">
+                    <h3 class="font-cormorant text-3xl text-brand-sanctuary mb-4 font-bold">Sensory Party Package</h3>
+                    <p class="font-montserrat text-4xl text-brand-jolt mb-6 font-bold">$350</p>
+                    <p class="text-brand-process font-serif italic text-sm mb-8">Covers up to 8 guests. <br>Additional guests $25 each.</p>
+                    <ul class="space-y-4 text-brand-blueprint text-sm mb-10 text-left font-sans">
+                        <li class="flex items-start"><span class="text-brand-jolt mr-3">✔</span> Personal cake canvas for each guest</li>
+                        <li class="flex items-start"><span class="text-brand-jolt mr-3">✔</span> Pre-selected, sensory-safe color palettes</li>
+                        <li class="flex items-start"><span class="text-brand-jolt mr-3">✔</span> Guided, low-pressure instruction</li>
                     </ul>
-                    <a href="mailto:dimple@thegildedspoonshoppe.com?subject=Inquiry: Paint by Cake" class="block text-center bg-brand-navy text-white font-bold py-4 rounded-full hover:bg-brand-gold hover:text-brand-navy transition-all">Request Proposal</a>
+                    <a href="contact.html" class="block bg-brand-sanctuary text-brand-canvas font-montserrat text-sm font-bold uppercase tracking-widest py-4 rounded-sm hover:bg-brand-jolt hover:text-brand-sanctuary transition-all shadow-md">Book a Party</a>
                 </div>
 
-                <div class="group bg-white border-2 border-brand-gold p-10 rounded-3xl shadow-xl scale-105 relative">
-                    <span class="absolute -top-4 left-1/2 -translate-x-1/2 bg-brand-gold text-brand-dark text-[10px] font-bold uppercase py-1 px-4 rounded-full">Our Signature Atelier</span>
-                    <h3 class="font-serif text-2xl text-brand-navy mb-4">The Gilded Palate</h3>
-                    <p class="font-serif text-5xl text-brand-gold mb-6">$990</p>
-                    <p class="text-brand-gray text-xs mb-8"><em>Covers up to 10 guests. <br>Additional guests $99 each.</em></p>
-                    <ul class="space-y-4 text-brand-dark text-sm mb-10">
-                        <li class="flex items-start"><span class="text-brand-gold mr-3">✔</span> 2.5-hour immersive sensory journey</li>
-                        <li class="flex items-start"><span class="text-brand-gold mr-3 font-bold">✔</span> 'Bubbles & Bites' guided pairing</li>
-                        <li class="flex items-start"><span class="text-brand-gold mr-3">✔</span> Curated tasting board & premium cakes</li>
-                        <li class="flex items-start"><span class="text-green-600 font-bold mr-3">✔</span> Travel included (25-mile service area)</li>
+                <div class="bg-brand-blueprint border-2 border-brand-jolt p-10 rounded-sm shadow-xl text-center text-white hover:-translate-y-1 transition-transform">
+                    <h3 class="font-cormorant text-3xl text-brand-jolt mb-4 font-bold">Full-Service Planning</h3>
+                    <p class="font-montserrat text-4xl text-brand-canvas mb-6 font-bold">Starts at $500</p>
+                    <p class="text-brand-process font-serif italic text-sm mb-8">+ Cost of materials & goods.</p>
+                    <ul class="space-y-4 text-brand-canvas text-sm mb-10 text-left font-sans">
+                        <li class="flex items-start"><span class="text-brand-soul mr-3">✔</span> Bespoke cake & dessert table design</li>
+                        <li class="flex items-start"><span class="text-brand-soul mr-3">✔</span> Full tablescape & decor setup</li>
+                        <li class="flex items-start"><span class="text-brand-soul mr-3">✔</span> Sensory-accommodating environment design</li>
                     </ul>
-                    <a href="mailto:dimple@thegildedspoonshoppe.com?subject=Inquiry: The Gilded Palate" class="block text-center bg-brand-gold text-brand-dark font-bold py-4 rounded-full hover:bg-brand-navy hover:text-white transition-all">Request Proposal</a>
+                    <a href="contact.html" class="block bg-brand-jolt text-brand-blueprint font-montserrat text-sm font-bold uppercase tracking-widest py-4 rounded-sm hover:bg-white transition-all shadow-md">Request Proposal</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-20 bg-brand-gold text-brand-dark text-center px-4 relative overflow-hidden">
-        <div class="absolute top-0 right-0 p-4 opacity-10">
-            <svg class="w-32 h-32" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm0 3.45L20.15 19H3.85L12 5.45zM11 16h2v2h-2v-2zm0-6h2v4h-2v-4z"/></svg>
-        </div>
-        <div class="max-w-2xl mx-auto relative z-10">
-            <h2 class="font-serif text-3xl md:text-4xl font-bold mb-4">The Zero-Bake Emergency Kit</h2>
-            <p class="mb-8 font-medium opacity-90 text-lg">Join the Sensory Archive newsletter and receive our free guide on using color and texture to ground your nervous system on low-energy days.</p>
-            
-            <form action="https://docs.google.com/forms/d/e/1FAIpQLSeNhynT2TEUkIBl_H35WhOKU7luGxfFWM2V-Hy9dOH2XJkxZg/formResponse" method="POST" target="_blank" class="flex flex-col sm:flex-row gap-4 justify-center">
-                <input type="email" name="entry.1032441224" placeholder="Your best email address" required class="px-6 py-4 rounded-full bg-white text-brand-dark focus:outline-none shadow-inner w-full sm:w-auto min-w-[300px]">
-                <button type="submit" class="bg-brand-navy text-white font-bold py-4 px-10 rounded-full hover:bg-brand-dark transition-all shadow-xl uppercase tracking-widest text-sm">Send the Kit</button>
-            </form>
-            <p class="mt-4 text-xs opacity-70">We respect your peace. No spam, just sensory wellness.</p>
+    <section class="py-16 bg-brand-sanctuary text-center border-t border-brand-process/30">
+        <div class="max-w-3xl mx-auto px-6">
+            <span class="text-brand-jolt font-montserrat font-bold tracking-widest uppercase text-xs block mb-4">Need 1:1 Support?</span>
+            <h3 class="font-cormorant text-3xl text-brand-canvas mb-4 font-bold">Looking for Somatic Kitchen Audits?</h3>
+            <p class="text-brand-canvas/80 font-sans text-sm md:text-base leading-relaxed mb-8 max-w-xl mx-auto">
+                If your child is struggling with the invisible friction of sensory mismatch, food-touching aversions, or "picky eating," we offer private 60-minute Zoom consultations to design a custom sensory safe zone.
+            </p>
+            <a href="consulting.html" class="inline-block border-2 border-brand-process text-brand-canvas font-montserrat font-bold uppercase tracking-widest text-xs py-3 px-8 rounded-sm hover:bg-brand-process hover:text-brand-sanctuary transition-all">
+                Learn More About Audits &rarr;
+            </a>
         </div>
     </section>
 
-    <footer class="bg-brand-dark text-brand-gray border-t border-brand-gold/20">
-        <div class="max-w-2xl mx-auto px-6 py-8">
-            <div class="flex flex-col items-center">
-                
-                <div class="flex justify-center space-x-6 mb-6">
-                    <a href="https://www.instagram.com/thegildedspoonshoppe/" target="_blank" class="text-brand-light hover:text-brand-gold transition-colors">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919 4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg>
-                    </a>
-                    <a href="https://www.facebook.com/dimple.mckinney" target="_blank" class="text-brand-light hover:text-brand-gold transition-colors">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.494v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.323-1.325z"/></svg>
-                    </a>
-                    <a href="https://www.linkedin.com/in/dimple-mckinney/" target="_blank" class="text-brand-light hover:text-brand-gold transition-colors">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                    </a>
-                </div>
-
-                <div class="flex flex-row justify-center space-x-8 mb-6">
-                    <a href="contact.html" class="font-sans text-brand-light hover:text-brand-gold transition-colors font-medium text-[10px] uppercase tracking-[0.2em]">
-                        Contact Us
-                    </a>
-                    <a href="policies.html" class="font-sans text-brand-light hover:text-brand-gold transition-colors font-medium text-[10px] uppercase tracking-[0.2em]">
-                        Order Fulfillment & Delivery
-                    </a>
-                </div>
-
+    <footer class="bg-brand-blueprint text-brand-process pt-16 pb-8 border-t border-brand-process/30">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <img src="Logo No Background.jpg" alt="The Gilded Spoon Tree Logo" class="h-24 mx-auto mb-8 filter invert opacity-50">
+            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-8 mb-8 font-montserrat text-xs uppercase tracking-widest text-brand-canvas/80">
+                <a href="contact.html" class="hover:text-brand-jolt transition">Contact Us</a>
+                <a href="policies.html" class="hover:text-brand-jolt transition">Order Fulfillment & Delivery</a>
             </div>
-
-            <div class="pt-6 border-t border-brand-gray/10 text-center">
-                <p class="font-serif text-brand-light/30 text-xs mb-3">
-                    &copy; 2026 The Gilded Spoon Shoppe | McKinney, Texas
-                </p>
-                <p class="max-w-xl mx-auto font-sans text-[9px] leading-relaxed text-brand-gray/20 italic">
-                    Disclaimer: Products are prepared in a home kitchen that handles allergens including wheat, dairy, eggs, soy, and nuts. It is not a substitute for professional medical advice.
-                </p>
-            </div>
+            <p class="font-sans text-[10px] leading-relaxed max-w-xl mx-auto mb-4 opacity-60">
+                Disclaimer: The Gilded Spoon Shoppe provides somatic and sensory design education. It is not a substitute for professional medical advice, diagnosis, or occupational therapy. Edible products are prepared in a home kitchen that handles allergens including wheat, dairy, eggs, soy, and nuts.
+            </p>
+            <p class="font-serif text-sm opacity-80">&copy; 2026 The Gilded Spoon Shoppe | McKinney, Texas</p>
         </div>
     </footer>
-
     <script>
         const hamburgerButton = document.getElementById('hamburger-button');
         const mobileMenu = document.getElementById('mobile-menu');
-        hamburgerButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
-        
-        document.addEventListener('DOMContentLoaded', () => {
-            const paintModal = document.getElementById('paintByCakeModal');
-            const atelierModal = document.getElementById('atelierProcessModal');
-            const openPaintBtn = document.querySelector('.open-paint-modal-btn');
-            const openAtelierBtn = document.querySelector('.open-atelier-modal-btn');
-            const allModals = document.querySelectorAll('.modal');
-            const allCloseButtons = document.querySelectorAll('.close-button');
-
-            if(openPaintBtn) {
-                openPaintBtn.addEventListener('click', () => { paintModal.style.display = 'block'; });
-            }
-            if(openAtelierBtn) {
-                openAtelierBtn.addEventListener('click', () => { atelierModal.style.display = 'block'; });
-            }
-
-            allCloseButtons.forEach(button => {
-                button.onclick = () => { allModals.forEach(modal => modal.style.display = 'none'); }
-            });
-
-            window.onclick = (event) => {
-                allModals.forEach(modal => { if (event.target == modal) { modal.style.display = 'none'; } });
-            }
-        });
+        if(hamburgerButton) {
+            hamburgerButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+        }
     </script>
 </body>
 </html>
