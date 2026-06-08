@@ -5,46 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Somatic Consulting | The Gilded Spoon Shoppe</title>
     <meta name="description" content="Somatic Baking Lab Micro-Consultations & Kitchen Audits for Neurodivergent Families in Texas.">
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Great+Vibes&family=Libre+Baskerville:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Great+Vibes&family=Libre+Baskerville:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-<script>
-    tailwind.config = {
-        theme: {
-            extend: {
-                colors: {
-                    // Your Real, Active Brand Palette
-                    'brand-dark': '#1C161E',
-                    'brand-light': '#F4F1ED',
-                    'brand-gold': '#D4AF37',
-                    'brand-gold-hover': '#E2C76A',
-                    'brand-gray': '#A09DA6',
-                    'brand-card': '#2A232F',
-                    'brand-navy': '#0A2342',
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Your Real, Active Brand Palette
+                        'brand-dark': '#1C161E',
+                        'brand-light': '#F4F1ED',
+                        'brand-gold': '#D4AF37',
+                        'brand-gold-hover': '#E2C76A',
+                        'brand-gray': '#A09DA6',
+                        'brand-card': '#2A232F',
+                        'brand-navy': '#0A2342',
 
-                    // Safe Remapping (Forces old names to display your real colors)
-                    'brand-sanctuary': '#0A2342',   /* Maps to your real Dark Navy */
-                    'brand-canvas': '#F4F1ED',      /* Maps to your real Warm Light */
-                    'brand-blueprint': '#1C161E',   /* Maps to your real Soft Charcoal */
-                    'brand-jolt': '#D4AF37',        /* Maps to your real Gold */
-                    'brand-soul': '#D4AF37'         /* Maps to your real Gold */
-                },
-                fontFamily: {
-                    'serif': ['"Playfair Display"', 'serif'],
-                    'sans': ['"Inter"', 'sans-serif'],
-                    'cursive': ['"Great Vibes"', 'cursive'],
-                    'baskerville': ['"Libre Baskerville"', 'serif'],
-                    'hand': ['"Caveat"', 'cursive'],
-                    
-                    // Safe Font Remapping
-                    'cormorant': ['"Playfair Display"', 'serif'],
-                    'montserrat': ['"Inter"', 'sans-serif']
+                        // Safe Remapping
+                        'brand-sanctuary': '#0A2342',   
+                        'brand-canvas': '#F4F1ED',      
+                        'brand-blueprint': '#1C161E',   
+                        'brand-jolt': '#D4AF37',        
+                        'brand-soul': '#D4AF37',        
+                        'brand-process': '#D4AF37'      
+                    },
+                    fontFamily: {
+                        'serif': ['"Playfair Display"', 'serif'],
+                        'sans': ['"Inter"', 'sans-serif'],
+                        'cursive': ['"Great Vibes"', 'cursive'],
+                        'baskerville': ['"Libre Baskerville"', 'serif'],
+                        'hand': ['"Caveat"', 'cursive'],
+                        
+                        // Safe Font Remapping
+                        'cormorant': ['"Playfair Display"', 'serif'],
+                        'montserrat': ['"Inter"', 'sans-serif']
+                    }
                 }
             }
         }
-    }
-</script>
+    </script>
 </head>
-<body class="font-sans bg-brand-canvas text-brand-blueprint antialiased">
+<body class="font-sans bg-brand-light text-brand-dark antialiased">
 
     <nav class="sticky top-0 bg-brand-navy/95 backdrop-blur-lg shadow-lg z-50 border-b border-brand-gold/10">
         <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
@@ -74,56 +75,23 @@
         </div>
     </nav>
 
-    <header class="text-center py-24 bg-brand-canvas border-b border-brand-process/30 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-5 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')]"></div>
+    <header class="text-center py-16 md:py-24 bg-brand-navy border-b border-brand-gold/10 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')]"></div>
         <div class="max-w-4xl mx-auto px-6 relative z-10">
-            <span class="text-brand-blueprint font-montserrat font-bold tracking-[0.3em] uppercase text-xs block mb-4">Physiological Literacy</span>
-            <h1 class="font-cormorant text-3xl md:text-6xl font-bold text-brand-sanctuary leading-tight mb-6">Somatic Baking Lab</h1>
-            <p class="text-center text-brand-blueprint/90 max-w-2xl mx-auto mb-16 text-lg font-serif italic">Stop Performing! Start Feeling!</p>
-            
-            <p class="text-center text-brand-blueprint/90 max-w-2xl mx-auto mb-16 text-lg font-serif italic">Cake is the ultimate Somatic Laboratory. It is a controlled environment where we can safely calibrate color palettes, structural densities, and flavor profiles to perfectly mirror an internal state.</p>
-
+            <h1 class="font-serif text-4xl md:text-6xl font-bold text-white leading-tight mb-4">Somatic Baking Lab</h1>
+            <p class="text-center text-brand-gold max-w-2xl mx-auto mb-4 text-lg font-serif italic">Stop Performing! Start Feeling!</p>
+            <p class="text-center text-brand-light/90 max-w-2xl mx-auto mb-0 text-lg font-serif italic">Cake is the ultimate Somatic Laboratory. It is a controlled environment where we can safely calibrate color palettes, structural densities, and flavor profiles to perfectly mirror an internal state.</p>
         </div>
     </header>
-    
-    <section class="py-20 bg-brand-sanctuary">
-        <div class="max-w-5xl mx-auto px-6">
-            <h2 class="font-cormorant text-3xl text-brand-jolt text-center mb-6 font-bold">The 5-Layer Sensory Architecture Framework</h2>    
 
+    <section class="py-16 md:py-24 bg-brand-light text-center border-b border-brand-gold/10">
+        <div class="max-w-4xl mx-auto px-6 bg-white p-10 md:p-14 rounded-3xl shadow-xl border border-brand-gold/20">
+            <span class="text-brand-gold font-sans font-bold tracking-widest uppercase text-xs block mb-4">Book Your Session</span>
+            <h2 class="font-serif text-3xl md:text-4xl text-brand-navy mb-4 font-bold">Somatic Baking Lab: Micro-Consultations</h2>
+            <h3 class="font-serif text-xl text-brand-gold font-bold mb-4 italic">60-Minute Sensory Kitchen Audits</h3>
+            <p class="font-sans font-bold text-2xl text-brand-navy mb-8">$150 - $250</p>
             
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="bg-brand-canvas p-8 rounded-sm border-t-4 border-brand-soul">
-                    <h3 class="font-serif text-xl text-brand-sanctuary mb-3 font-bold">1. Foundation</h3>
-                    <p class="text-sm text-brand-blueprint leading-relaxed">Clearing the room to establish a sensory-safe baseline and remove immediate environmental friction.</p>
-                </div>
-                <div class="bg-brand-canvas p-8 rounded-sm border-t-4 border-brand-soul">
-                    <h3 class="font-serif text-xl text-brand-sanctuary mb-3 font-bold">2. Infusion</h3>
-                    <p class="text-sm text-brand-blueprint leading-relaxed">Integrating comfort cues and safe, calibrated flavor profiles that soothe rather than overstimulate.</p>
-                </div>
-                <div class="bg-brand-canvas p-8 rounded-sm border-t-4 border-brand-soul">
-                    <h3 class="font-serif text-xl text-brand-sanctuary mb-3 font-bold">3. Strength</h3>
-                    <p class="text-sm text-brand-blueprint leading-relaxed">Understanding mouthfeel, density, and tactile feedback to build trust in the kitchen.</p>
-                </div>
-                <div class="bg-brand-canvas p-8 rounded-sm border-t-4 border-brand-soul md:col-start-1">
-                    <h3 class="font-serif text-xl text-brand-sanctuary mb-3 font-bold">4. Strategy</h3>
-                    <p class="text-sm text-brand-blueprint leading-relaxed">Clearing the mind and mapping out practical, neuro-inclusive steps for daily food interaction.</p>
-                </div>
-                <div class="bg-brand-canvas p-8 rounded-sm border-t-4 border-brand-soul">
-                    <h3 class="font-serif text-xl text-brand-sanctuary mb-3 font-bold">5. Expression</h3>
-                    <p class="text-sm text-brand-blueprint leading-relaxed">Finding your anchor by giving tangible, non-verbal shape to internal feelings through design.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 bg-brand-light text-center">
-        <div class="max-w-4xl mx-auto px-6 bg-white p-12 rounded-sm shadow-xl border-2 border-brand-process/20">
-            <span class="text-brand-process font-montserrat font-bold tracking-widest uppercase text-xs block mb-4">Book Your Session</span>
-            <h2 class="font-cormorant text-4xl text-brand-sanctuary mb-4 font-bold">Somatic Baking Lab: Micro-Consultations</h2>
-            <h3 class="font-cormorant text-xl text-brand-gold font-bold mb-4 italic">60-Minute Sensory Kitchen Audits</h3>
-            <p class="font-serif font-bold text-2xl text-brand-soul mb-8">$150 - $250</p>
-            
-            <div class="text-brand-blueprint/90 mb-10 text-lg leading-relaxed font-serif text-left max-w-2xl mx-auto space-y-4">
+            <div class="text-brand-dark/90 mb-10 text-base md:text-lg leading-relaxed font-sans text-left max-w-2xl mx-auto space-y-4">
                 <p><strong>Designed specifically for parents of neurodivergent children who are struggling with "picky eating" or food-touching aversions.</strong></p>
                 <ul class="list-disc pl-6 space-y-2">
                     <li>We will review your child's current sensory profile (textures, colors, and the structural boundaries of food) via a 60-minute Zoom session.</li>
@@ -131,42 +99,102 @@
                 </ul>
             </div>
             
-            <a href="contact.html" class="inline-block bg-brand-sanctuary text-white font-montserrat font-bold py-4 px-12 rounded-sm hover:bg-brand-jolt hover:text-brand-sanctuary transition-all shadow-lg uppercase tracking-widest text-sm">
+            <a href="contact.html" class="inline-block bg-brand-navy text-white font-sans font-bold py-4 px-12 rounded-full hover:bg-brand-gold hover:text-brand-navy transition-all shadow-lg uppercase tracking-widest text-sm">
                 Secure Your Audit Slot
             </a>
         </div>
     </section>
+    
+    <section class="py-16 md:py-24 bg-brand-navy">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="font-serif text-3xl md:text-5xl text-brand-gold text-center mb-6 font-bold">The 5-Layer Sensory Architecture Framework</h2>
+            
+            <div class="max-w-3xl mx-auto text-center mb-16">
+                <p class="text-brand-light/80 font-sans text-base md:text-lg leading-relaxed">
+                    A traditional recipe demands perfection, which immediately triggers performance anxiety. <em>Architecture</em>, on the other hand, provides safety and structure. This proprietary framework is the core of our Somatic Baking Lab. It breaks down the overwhelming sensory environment of the kitchen into five predictable, protective layers. It is designed to help your family gently rebuild trust with food, texture, and routine without ever triggering the nervous system.
+                </p>
+            </div>
+            
+            <div class="relative max-w-5xl mx-auto">
+                <div class="absolute left-6 top-0 bottom-0 w-1 bg-brand-gold/20 md:left-0 md:right-0 md:top-6 md:bottom-auto md:h-1 md:w-full"></div>
 
-    <section class="py-20 bg-brand-sanctuary border-t border-brand-process/20">
+                <div class="flex flex-col md:flex-row gap-10 md:gap-4 justify-between">
+                    
+                    <div class="relative flex flex-col items-start md:items-center w-full md:w-1/5 group">
+                        <div class="w-12 h-12 rounded-full bg-brand-light border-4 border-brand-gold text-brand-navy flex items-center justify-center font-serif text-xl font-bold shadow-xl z-10 group-hover:scale-110 transition-transform">1</div>
+                        <div class="ml-16 md:ml-0 mt-0 md:mt-8 bg-brand-light p-6 rounded-2xl shadow-lg border-t-4 border-brand-gold w-full flex-grow text-left md:text-center group-hover:-translate-y-1 transition-transform">
+                            <h3 class="font-serif text-lg text-brand-navy mb-3 font-bold">Foundation</h3>
+                            <p class="text-xs text-brand-dark/90 leading-relaxed font-sans">Clearing the room to establish a sensory-safe baseline and remove immediate environmental friction.</p>
+                        </div>
+                    </div>
+
+                    <div class="relative flex flex-col items-start md:items-center w-full md:w-1/5 group">
+                        <div class="w-12 h-12 rounded-full bg-brand-light border-4 border-brand-gold text-brand-navy flex items-center justify-center font-serif text-xl font-bold shadow-xl z-10 group-hover:scale-110 transition-transform">2</div>
+                        <div class="ml-16 md:ml-0 mt-0 md:mt-8 bg-brand-light p-6 rounded-2xl shadow-lg border-t-4 border-brand-gold w-full flex-grow text-left md:text-center group-hover:-translate-y-1 transition-transform">
+                            <h3 class="font-serif text-lg text-brand-navy mb-3 font-bold">Infusion</h3>
+                            <p class="text-xs text-brand-dark/90 leading-relaxed font-sans">Integrating comfort cues and safe, calibrated flavor profiles that soothe rather than overstimulate.</p>
+                        </div>
+                    </div>
+
+                    <div class="relative flex flex-col items-start md:items-center w-full md:w-1/5 group">
+                        <div class="w-12 h-12 rounded-full bg-brand-light border-4 border-brand-gold text-brand-navy flex items-center justify-center font-serif text-xl font-bold shadow-xl z-10 group-hover:scale-110 transition-transform">3</div>
+                        <div class="ml-16 md:ml-0 mt-0 md:mt-8 bg-brand-light p-6 rounded-2xl shadow-lg border-t-4 border-brand-gold w-full flex-grow text-left md:text-center group-hover:-translate-y-1 transition-transform">
+                            <h3 class="font-serif text-lg text-brand-navy mb-3 font-bold">Strength</h3>
+                            <p class="text-xs text-brand-dark/90 leading-relaxed font-sans">Understanding mouthfeel, density, and tactile feedback to build trust in the kitchen.</p>
+                        </div>
+                    </div>
+
+                    <div class="relative flex flex-col items-start md:items-center w-full md:w-1/5 group">
+                        <div class="w-12 h-12 rounded-full bg-brand-light border-4 border-brand-gold text-brand-navy flex items-center justify-center font-serif text-xl font-bold shadow-xl z-10 group-hover:scale-110 transition-transform">4</div>
+                        <div class="ml-16 md:ml-0 mt-0 md:mt-8 bg-brand-light p-6 rounded-2xl shadow-lg border-t-4 border-brand-gold w-full flex-grow text-left md:text-center group-hover:-translate-y-1 transition-transform">
+                            <h3 class="font-serif text-lg text-brand-navy mb-3 font-bold">Strategy</h3>
+                            <p class="text-xs text-brand-dark/90 leading-relaxed font-sans">Clearing the mind and mapping out practical, neuro-inclusive steps for daily food interaction.</p>
+                        </div>
+                    </div>
+
+                    <div class="relative flex flex-col items-start md:items-center w-full md:w-1/5 group">
+                        <div class="w-12 h-12 rounded-full bg-brand-light border-4 border-brand-gold text-brand-navy flex items-center justify-center font-serif text-xl font-bold shadow-xl z-10 group-hover:scale-110 transition-transform">5</div>
+                        <div class="ml-16 md:ml-0 mt-0 md:mt-8 bg-brand-light p-6 rounded-2xl shadow-lg border-t-4 border-brand-gold w-full flex-grow text-left md:text-center group-hover:-translate-y-1 transition-transform">
+                            <h3 class="font-serif text-lg text-brand-navy mb-3 font-bold">Expression</h3>
+                            <p class="text-xs text-brand-dark/90 leading-relaxed font-sans">Finding your anchor by giving tangible, non-verbal shape to internal feelings through design.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 md:py-24 bg-brand-light border-t border-brand-gold/10">
         <div class="max-w-4xl mx-auto px-6">
-            <h2 class="font-cormorant text-4xl text-brand-light text-center mb-12 font-bold">Frequently Asked Questions</h2>
-            <div class="space-y-8 font-serif">
+            <h2 class="font-serif text-3xl md:text-4xl text-brand-navy text-center mb-12 font-bold">Frequently Asked Questions</h2>
+            <div class="space-y-6 font-sans">
                 
-                <div class="bg-white p-8 rounded-sm shadow-sm border border-brand-process/30">
-                    <h3 class="font-serif text-xl text-brand-soul font-bold mb-3">Is this medical therapy or occupational therapy?</h3>
-                    <p class="text-brand-blueprint/90 leading-relaxed">No. While I am a former nurse, I do not diagnose or provide medical therapy. I provide Somatic Kitchen Audits to help you translate environmental friction into actionable, creative kitchen practices.</p>
+                <div class="bg-white p-8 rounded-3xl shadow-md border border-brand-gold/20 hover:border-brand-gold transition-colors">
+                    <h3 class="font-serif text-xl text-brand-gold font-bold mb-3">Is this medical therapy or occupational therapy?</h3>
+                    <p class="text-brand-dark/90 leading-relaxed text-sm md:text-base">No. While I am a former nurse, I do not diagnose or provide medical therapy. I provide Somatic Kitchen Audits to help you translate environmental friction into actionable, creative kitchen practices.</p>
                 </div>
 
-                <div class="bg-white p-8 rounded-sm shadow-sm border border-brand-process/30">
-                    <h3 class="font-serif text-xl text-brand-soul font-bold mb-3">Do we actually bake the cake during the 60-minute audit?</h3>
-                    <p class="text-brand-blueprint/90 leading-relaxed">No, the audit is a conversation and a strategy session via Zoom. I evaluate your child's sensory profile and deliver a custom-designed Somatic Cake Recipe for you to execute together in your own time.</p>
+                <div class="bg-white p-8 rounded-3xl shadow-md border border-brand-gold/20 hover:border-brand-gold transition-colors">
+                    <h3 class="font-serif text-xl text-brand-gold font-bold mb-3">Do we actually bake the cake during the 60-minute audit?</h3>
+                    <p class="text-brand-dark/90 leading-relaxed text-sm md:text-base">No, the audit is a conversation and a strategy session via Zoom. I evaluate your child's sensory profile and deliver a custom-designed Somatic Cake Recipe for you to execute together in your own time.</p>
                 </div>
 
-                <div class="bg-white p-8 rounded-sm shadow-sm border border-brand-process/30">
-                    <h3 class="font-serif text-xl text-brand-soul font-bold mb-3">My child won't eat cake. Is this still for us?</h3>
-                    <p class="text-brand-blueprint/90 leading-relaxed">Absolutely. In Somatic Baking, the goal isn't always consumption. Sometimes the goal is simply tolerating the smell of vanilla, touching the texture of flour, or mixing a color. We use cake as a low-stakes laboratory to build tactile trust.</p>
+                <div class="bg-white p-8 rounded-3xl shadow-md border border-brand-gold/20 hover:border-brand-gold transition-colors">
+                    <h3 class="font-serif text-xl text-brand-gold font-bold mb-3">My child won't eat cake. Is this still for us?</h3>
+                    <p class="text-brand-dark/90 leading-relaxed text-sm md:text-base">Absolutely. In Somatic Baking, the goal isn't always consumption. Sometimes the goal is simply tolerating the smell of vanilla, touching the texture of flour, or mixing a color. We use cake as a low-stakes laboratory to build tactile trust.</p>
                 </div>
 
-                <div class="bg-white p-8 rounded-sm shadow-sm border border-brand-process/30">
-                    <h3 class="font-serif text-xl text-brand-soul font-bold mb-3">I'm not in Texas. Can I still book a consultation?</h3>
-                    <p class="text-brand-blueprint/90 leading-relaxed">Yes! Because the Somatic Kitchen Audits are conducted virtually via Zoom, I can work with neurodivergent families globally.</p>
+                <div class="bg-white p-8 rounded-3xl shadow-md border border-brand-gold/20 hover:border-brand-gold transition-colors">
+                    <h3 class="font-serif text-xl text-brand-gold font-bold mb-3">I'm not in Texas. Can I still book a consultation?</h3>
+                    <p class="text-brand-dark/90 leading-relaxed text-sm md:text-base">Yes! Because the Somatic Kitchen Audits are conducted virtually via Zoom, I can work with neurodivergent families globally.</p>
                 </div>
 
             </div>
         </div>
     </section>
 
-    <footer class="bg-brand-dark text-brand-gray border-t border-brand-gold/20 font-serif text-xs">
+    <footer class="bg-brand-dark text-brand-gray border-t border-brand-gold/20 font-sans text-xs">
         <div class="max-w-2xl mx-auto px-6 py-8">
             <div class="flex flex-col items-center">
                 
@@ -193,7 +221,7 @@
                 <p class="font-serif text-brand-light/30 text-xs mb-3">
                     &copy; 2026 The Gilded Spoon Shoppe | McKinney, Texas
                 </p>
-                <p class="max-w-xl mx-auto font-serif text-[9px] leading-relaxed text-brand-gray/20 italic">
+                <p class="max-w-xl mx-auto font-sans text-[9px] leading-relaxed text-brand-gray/20 italic">
                     Disclaimer: The Gilded Spoon Shoppe provides somatic and sensory design education. It is not a substitute for professional medical advice, diagnosis, or occupational therapy. Edible products are prepared in a home kitchen that handles allergens including wheat, dairy, eggs, soy, and nuts.
                 </p>
             </div>
