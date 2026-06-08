@@ -6,29 +6,44 @@
     <title>The Zero-Bake Emergency Kit | The Gilded Spoon</title>
     <meta name="robots" content="noindex, nofollow"> <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Great+Vibes&family=Libre+Baskerville:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">    
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'brand-dark': '#1C161E',
-                        'brand-light': '#F4F1ED',
-                        'brand-gold': '#D4AF37',
-                        'brand-gray': '#A09DA6',
-                        'brand-navy': '#0A2342',
-                        'brand-sage': '#8A9A5B',
-                    },
-                    fontFamily: {
-                        'serif': ['"Playfair Display"', 'serif'],
-                        'sans': ['"Inter"', 'sans-serif'],
-                        'hand': ['"Caveat"', 'cursive'],
-                    }
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    // Your Real, Active Brand Palette
+                    'brand-dark': '#1C161E',
+                    'brand-light': '#F4F1ED',
+                    'brand-gold': '#D4AF37',
+                    'brand-gold-hover': '#E2C76A',
+                    'brand-gray': '#A09DA6',
+                    'brand-card': '#2A232F',
+                    'brand-navy': '#0A2342',
+
+                    // Safe Remapping (Forces old names to display your real colors)
+                    'brand-sanctuary': '#0A2342',   /* Maps to your real Dark Navy */
+                    'brand-canvas': '#F4F1ED',      /* Maps to your real Warm Light */
+                    'brand-blueprint': '#1C161E',   /* Maps to your real Soft Charcoal */
+                    'brand-jolt': '#D4AF37',        /* Maps to your real Gold */
+                    'brand-soul': '#D4AF37'         /* Maps to your real Gold */
+                },
+                fontFamily: {
+                    'serif': ['"Playfair Display"', 'serif'],
+                    'sans': ['"Inter"', 'sans-serif'],
+                    'cursive': ['"Great Vibes"', 'cursive'],
+                    'baskerville': ['"Libre Baskerville"', 'serif'],
+                    'hand': ['"Caveat"', 'cursive'],
+                    
+                    // Safe Font Remapping
+                    'cormorant': ['"Playfair Display"', 'serif'],
+                    'montserrat': ['"Inter"', 'sans-serif']
                 }
             }
         }
-    </script>
+    }
+</script>
     <style>
         body { background-color: #F9F7F2; color: #1C161E; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
         .bg-texture { background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png'); }
