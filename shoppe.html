@@ -6,55 +6,56 @@
     <title>The Shoppe | The Gilded Spoon Shoppe</title>
     <meta name="description" content="Simple, honest sensory tools designed to bridge the gap between what a body feels and what an environment provides.">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-   <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Great+Vibes&family=Libre+Baskerville:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-    tailwind.config = {
-        theme: {
-            extend: {
-                colors: {
-                    // Your Real, Active Brand Palette
-                    'brand-dark': '#1C161E',
-                    'brand-light': '#F4F1ED',
-                    'brand-gold': '#D4AF37',
-                    'brand-gold-hover': '#E2C76A',
-                    'brand-gray': '#A09DA6',
-                    'brand-card': '#2A232F',
-                    'brand-navy': '#0A2342',
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Great+Vibes&family=Libre+Baskerville:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        // Your Real, Active Brand Palette
+                        'brand-dark': '#1C161E',
+                        'brand-light': '#F4F1ED',
+                        'brand-gold': '#D4AF37',
+                        'brand-gold-hover': '#E2C76A',
+                        'brand-gray': '#A09DA6',
+                        'brand-card': '#2A232F',
+                        'brand-navy': '#0A2342',
 
-                    // Safe Remapping (Forces old names to display your real colors)
-                    'brand-sanctuary': '#0A2342',   /* Maps to your real Dark Navy */
-                    'brand-canvas': '#F4F1ED',      /* Maps to your real Warm Light */
-                    'brand-blueprint': '#1C161E',   /* Maps to your real Soft Charcoal */
-                    'brand-jolt': '#D4AF37',        /* Maps to your real Gold */
-                    'brand-soul': '#D4AF37'         /* Maps to your real Gold */
-                },
-                fontFamily: {
-                    'serif': ['"Playfair Display"', 'serif'],
-                    'sans': ['"Inter"', 'sans-serif'],
-                    'cursive': ['"Great Vibes"', 'cursive'],
-                    'baskerville': ['"Libre Baskerville"', 'serif'],
-                    'hand': ['"Caveat"', 'cursive'],
-                    
-                    // Safe Font Remapping
-                    'cormorant': ['"Playfair Display"', 'serif'],
-                    'montserrat': ['"Inter"', 'sans-serif']
+                        // Safe Remapping (Forces old names to display your real colors)
+                        'brand-sanctuary': '#0A2342',   /* Maps to your real Dark Navy */
+                        'brand-canvas': '#F4F1ED',      /* Maps to your real Warm Light */
+                        'brand-blueprint': '#1C161E',   /* Maps to your real Soft Charcoal */
+                        'brand-jolt': '#D4AF37',        /* Maps to your real Gold */
+                        'brand-soul': '#D4AF37',        /* Maps to your real Gold */
+                        'brand-process': '#D4AF37'      /* Safely maps lingering process borders to Gold */
+                    },
+                    fontFamily: {
+                        'serif': ['"Playfair Display"', 'serif'],
+                        'sans': ['"Inter"', 'sans-serif'],
+                        'cursive': ['"Great Vibes"', 'cursive'],
+                        'baskerville': ['"Libre Baskerville"', 'serif'],
+                        'hand': ['"Caveat"', 'cursive'],
+                        
+                        // Safe Font Remapping
+                        'cormorant': ['"Playfair Display"', 'serif'],
+                        'montserrat': ['"Inter"', 'sans-serif']
+                    }
                 }
             }
         }
-    }
-</script>
+    </script>
 </head>
-<body class="font-sans bg-brand-canvas text-brand-blueprint antialiased">
+<body class="font-sans bg-brand-light text-brand-dark antialiased">
 
-   <nav class="sticky top-0 bg-brand-navy/95 backdrop-blur-lg shadow-lg z-50 border-b border-brand-gold/10">
+    <nav class="sticky top-0 bg-brand-navy/95 backdrop-blur-lg shadow-lg z-50 border-b border-brand-gold/10">
         <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
             <a href="index.html" class="text-2xl font-serif font-bold text-brand-gold text-center leading-none">
                 The Gilded Spoon
                 <span class="block text-xs font-sans font-light not-italic tracking-[0.3em] text-brand-light">SHOPPE & ATELIER</span>
             </a>
             <div class="hidden md:flex items-center space-x-8 font-medium text-xs tracking-widest uppercase">
-                <a href="shoppe.html" class="text-brand-gold hover:text-text-brand-light transition">The Shoppe</a>
+                <a href="shoppe.html" class="text-brand-gold hover:text-brand-light transition">The Shoppe</a>
                 <a href="book.html" class="text-brand-light hover:text-brand-gold transition">The Journal</a>
                 <a href="consulting.html" class="text-brand-light hover:text-brand-gold transition">Consulting</a>
                 <a href="events.html" class="text-brand-light hover:text-brand-gold transition">Parties</a>
@@ -68,135 +69,169 @@
         </div>
         <div id="mobile-menu" class="hidden md:hidden mt-4 px-4 pb-4 bg-brand-navy text-center">
             <a href="shoppe.html" class="block py-3 text-brand-gold font-bold uppercase tracking-widest">The Shoppe</a>
-            <a href="book.html" class="block py-3 text-brand-light  uppercase tracking-widest">The Journal</a>
+            <a href="book.html" class="block py-3 text-brand-light uppercase tracking-widest">The Journal</a>
             <a href="consulting.html" class="block py-3 text-brand-light uppercase tracking-widest">Consulting</a>
             <a href="events.html" class="block py-3 text-brand-light uppercase tracking-widest">Parties</a>
             <a href="contact.html" class="block py-3 text-brand-light uppercase tracking-widest">Contact</a>
         </div>
     </nav>
-    <header class="text-center py-20 px-6 bg-brand-canvas relative overflow-hidden">
+
+    <header class="text-center py-20 px-6 bg-brand-light border-b border-brand-gold/10 relative overflow-hidden">
         <div class="max-w-3xl mx-auto relative z-10">
-            <h1 class="font-cormorant text-3xl md:text-6xl font-bold text-brand-sanctuary mb-6">The Shoppe</h1>
-            <p class="font-serif italic text-lg md:text-xl text-brand-blueprint/80 leading-relaxed">
+            <h1 class="font-serif text-4xl md:text-5xl font-bold text-brand-navy mb-6">The Shoppe</h1>
+            <p class="font-serif italic text-lg md:text-xl text-brand-navy/80 leading-relaxed">
                 Simple, honest sensory tools designed to bridge the gap between what a body feels and what an environment provides.
             </p>
         </div>
     </header>
 
-    <main class="py-12 bg-brand-canvas">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-8 mb-20">
+    <main class="py-16 md:py-24 bg-brand-light">
+        <div class="max-w-6xl mx-auto px-6">
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
                 
-                <div class="bg-white border border-brand-process/30 rounded-sm shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col relative">
-                    <div class="absolute top-3 left-3 bg-brand-jolt text-brand-sanctuary font-montserrat font-bold text-[10px] uppercase tracking-widest px-3 py-1 rounded-sm z-10">Flagship Journal</div>
-                    <div class="h-56 bg-brand-canvas border-b border-brand-process/20">
+                <div class="bg-white border border-brand-gold/20 rounded-3xl shadow-lg hover:-translate-y-2 transition-transform flex flex-col h-full relative overflow-hidden">
+                    <div class="absolute top-4 left-4 bg-brand-navy text-brand-light font-sans font-bold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full z-10">Flagship Journal</div>
+                    <div class="h-56 shrink-0 bg-brand-light border-b border-brand-gold/10 overflow-hidden">
                         <img src="https://imgur.com/BmnoY7w.png" alt="My Edible Autobiography" class="w-full h-full object-cover">
                     </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="font-cormorant text-xl font-bold text-brand-sanctuary mb-2 leading-tight">My Edible Autobiography</h3>
-                        <div class="font-montserrat font-bold text-brand-jolt mb-4">$45.00</div>
-                        <p class="font-sans text-sm text-brand-blueprint/90 leading-relaxed mb-6 flex-grow">Baking is an interactive laboratory for self-discovery and story mapping. This master guided journal re-anchors your daily rhythm, treating every failed bake or broken recipe loop as raw, non-judgmental data rather than a personal disappointment. Also available on Amazon in an expanded 7" x 10" hardcover canvas edition ($52.00) for roomier physical scripting.</p>
-                        <ul class="product-features">
-                        <li>Classic 6.125" x 9.25" original volume sizing</li>
-                        <li>High-contrast warm cream layout sheets</li>
-                        <li>Built-in 5-layer workflow guides</li>
-                    </ul>
-                        <a href="book.html" class="mt-auto block w-full text-center bg-brand-sanctuary text-brand-canvas font-montserrat text-[10px] font-bold uppercase tracking-widest py-3 rounded-sm hover:bg-brand-jolt hover:text-brand-sanctuary transition-colors">Order Your Copy</a>
-                             <div class="alternative-retailers">
-                        <span class="retailer-label">Alternative Retailers</span>
-                        <div class="retailer-links">
-                            <a href="https://a.co/d/0bSGAtOY" class="retailer-link-item">✨ Amazon</a>
-                            <a href="https://www.barnesandnoble.com/w/my-edible-autobiography-dimple-patel-mckinney/1149670351?ean=9798234024299" class="retailer-link-item">📖 Barnes &amp; Noble</a>
+                    <div class="p-6 md:p-8 flex flex-col flex-grow">
+                        <h3 class="font-serif text-2xl font-bold text-brand-navy mb-2 leading-tight">My Edible Autobiography</h3>
+                        <div class="font-sans font-bold text-brand-gold mb-4 text-lg">$45.00</div>
+                        
+                        <div class="flex-grow">
+                            <p class="font-sans text-sm text-brand-dark/80 leading-relaxed">Baking is an interactive laboratory for self-discovery and story mapping. This master guided journal re-anchors your daily rhythm, treating every failed bake or broken recipe loop as raw, non-judgmental data rather than a personal disappointment. Also available on Amazon in an expanded 7" x 10" hardcover canvas edition ($52.00) for roomier physical scripting.</p>
+                            <ul class="text-xs text-brand-dark/70 space-y-2 mt-4 list-disc pl-4 font-sans">
+                                <li>Classic 6.125" x 9.25" original volume sizing</li>
+                                <li>High-contrast warm cream layout sheets</li>
+                                <li>Built-in 5-layer workflow guides</li>
+                            </ul>
+                        </div>
+                        <div class="mt-6 pt-5 border-t border-brand-gold/20">
+                                <span class="block text-[10px] font-bold uppercase tracking-widest text-brand-navy/80 mb-3 font-sans">Alternative Retailers</span>
+                                <div class="flex flex-col gap-3">
+                                    <a href="https://a.co/d/0bSGAtOY" class="text-xs font-sans text-brand-gold hover:text-brand-navy transition-colors font-bold">✨ Amazon</a>
+                                    <a href="https://www.barnesandnoble.com/w/my-edible-autobiography-dimple-patel-mckinney/1149670351?ean=9798234024299" class="text-xs font-sans text-brand-gold hover:text-brand-navy transition-colors font-bold">📖 Barnes &amp; Noble</a>
+                        <div class="mt-8 w-full">
+                            <a href="book.html" class="block w-full text-center bg-brand-navy text-white font-sans text-xs font-bold uppercase tracking-widest py-4 rounded-full hover:bg-brand-gold hover:text-brand-navy transition-colors shadow-md">Order Your Copy</a>
+                            
+                
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="bg-white border border-brand-process/30 rounded-sm shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col relative">
-                    <div class="absolute top-3 left-3 bg-brand-jolt text-brand-sanctuary font-montserrat font-bold text-[10px] uppercase tracking-widest px-3 py-1 rounded-sm z-10">Heirloom Kit</div>
-                    <div class="h-56 bg-brand-canvas border-b border-brand-process/20">
+                <div class="bg-white border border-brand-gold/20 rounded-3xl shadow-lg hover:-translate-y-2 transition-transform flex flex-col h-full relative overflow-hidden">
+                    <div class="absolute top-4 left-4 bg-brand-navy text-brand-light font-sans font-bold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full z-10">Heirloom Kit</div>
+                    <div class="h-56 shrink-0 bg-brand-light border-b border-brand-gold/10 overflow-hidden">
                         <img src="https://imgur.com/gNtrB42.jpg" alt="The Somatic Recipe Book Box" class="w-full h-full object-cover">
                     </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="font-cormorant text-xl font-bold text-brand-sanctuary mb-2 leading-tight">The Somatic Recipe Book Box</h3>
-                        <div class="font-montserrat font-bold text-brand-jolt mb-4">$65.00</div>
-                        <p class="font-sans text-sm text-brand-blueprint/90 leading-relaxed mb-6 flex-grow">An heirloom-quality, custom-designed storage book box engineered to sit beautifully on your bookshelf, elegantly hiding loose kitchen clutter to protect your visual focus. While the outer shell showcases an expressive, unmasked cover illustration, the hidden interior tray remains completely simple, removing structural friction when your mental energy is spent.</p>
-                        <ul class="product-features">
-                        <li>Premium shelf box storage enclosure</li>
-                        <li>Core recipe cards with circular check-rings</li>
-                        <li>Matte sticker archive </li>
-                        <li>4x6 design postcard</li>
-                    </ul>
-                        <a href="https://square.link/u/zessNdtp" class="mt-auto block w-full text-center bg-brand-sanctuary text-brand-canvas font-montserrat text-[10px] font-bold uppercase tracking-widest py-3 rounded-sm hover:bg-brand-jolt hover:text-brand-sanctuary transition-colors" target="_blank">Purchase Box Kit</a>
+                    <div class="p-6 md:p-8 flex flex-col flex-grow">
+                        <h3 class="font-serif text-2xl font-bold text-brand-navy mb-2 leading-tight">The Somatic Recipe Book Box</h3>
+                        <div class="font-sans font-bold text-brand-gold mb-4 text-lg">$65.00</div>
+                        
+                        <div class="flex-grow">
+                            <p class="font-sans text-sm text-brand-dark/80 leading-relaxed">An heirloom-quality, custom-designed storage book box engineered to sit beautifully on your bookshelf, elegantly hiding loose kitchen clutter to protect your visual focus. While the outer shell showcases an expressive, unmasked cover illustration, the hidden interior tray remains completely simple, removing structural friction when your mental energy is spent.</p>
+                            <ul class="text-xs text-brand-dark/70 space-y-2 mt-4 list-disc pl-4 font-sans">
+                                <li>Premium shelf box storage enclosure</li>
+                                <li>Core recipe cards with circular check-rings</li>
+                                <li>Matte sticker archive </li>
+                                <li>4x6 design postcard</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mt-8 w-full">
+                            <a href="https://square.link/u/zessNdtp" class="block w-full text-center bg-brand-navy text-white font-sans text-xs font-bold uppercase tracking-widest py-4 rounded-full hover:bg-brand-gold hover:text-brand-navy transition-colors shadow-md" target="_blank">Purchase Box Kit</a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="bg-white border border-brand-process/30 rounded-sm shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col relative">
-                    <div class="absolute top-3 left-3 bg-brand-process text-white font-montserrat font-bold text-[10px] uppercase tracking-widest px-3 py-1 rounded-sm z-10">Digital Guide</div>
-                    <div class="h-56 bg-brand-canvas border-b border-brand-process/20">
+                <div class="bg-white border border-brand-gold/20 rounded-3xl shadow-lg hover:-translate-y-2 transition-transform flex flex-col h-full relative overflow-hidden">
+                    <div class="absolute top-4 left-4 bg-brand-navy text-brand-light font-sans font-bold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full z-10">Digital Guide</div>
+                    <div class="h-56 shrink-0 bg-brand-light border-b border-brand-gold/10 overflow-hidden">
                         <img src="https://imgur.com/zRePMVF.jpg" alt="The Architecture of Cake Guide" class="w-full h-full object-cover" style="filter: hue-rotate(45deg);">
                     </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="font-cormorant text-xl font-bold text-brand-sanctuary mb-2 leading-tight">The Architecture of Cake</h3>
-                        <div class="font-montserrat font-bold text-brand-jolt mb-4">$9.00</div>
-                        <p class="font-sans text-sm text-brand-blueprint/90 leading-relaxed mb-6 flex-grow">A 5-page highly visual guide detailing the exact structural changes to make baking safe for Autistic/ADHD sensory profiles. Learn how color and texture density reduce food anxiety.</p>
-                        <a href="#" class="mt-auto block w-full text-center bg-brand-sanctuary text-brand-canvas font-montserrat text-[10px] font-bold uppercase tracking-widest py-3 rounded-sm hover:bg-brand-jolt hover:text-brand-sanctuary transition-colors">Download Guide</a>
+                    <div class="p-6 md:p-8 flex flex-col flex-grow">
+                        <h3 class="font-serif text-2xl font-bold text-brand-navy mb-2 leading-tight">The Architecture of Cake</h3>
+                        <div class="font-sans font-bold text-brand-gold mb-4 text-lg">$9.00</div>
+                        
+                        <div class="flex-grow">
+                            <p class="font-sans text-sm text-brand-dark/80 leading-relaxed">A 5-page highly visual guide detailing the exact structural changes to make baking safe for Autistic/ADHD sensory profiles. Learn how color and texture density reduce food anxiety.</p>
+                        </div>
+                        
+                        <div class="mt-8 w-full">
+                            <a href="#" class="block w-full text-center bg-brand-navy text-white font-sans text-xs font-bold uppercase tracking-widest py-4 rounded-full hover:bg-brand-gold hover:text-brand-navy transition-colors shadow-md">Download Guide</a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="bg-white border border-brand-process/30 rounded-sm shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col relative">
-                    <div class="absolute top-3 left-3 bg-brand-process text-white font-montserrat font-bold text-[10px] uppercase tracking-widest px-3 py-1 rounded-sm z-10">Digital Download</div>
-                    <div class="h-56 bg-brand-canvas border-b border-brand-process/20">
+                <div class="bg-white border border-brand-gold/20 rounded-3xl shadow-lg hover:-translate-y-2 transition-transform flex flex-col h-full relative overflow-hidden">
+                    <div class="absolute top-4 left-4 bg-brand-navy text-brand-light font-sans font-bold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full z-10">Digital Download</div>
+                    <div class="h-56 shrink-0 bg-brand-light border-b border-brand-gold/10 overflow-hidden">
                         <img src="https://imgur.com/zRePMVF.jpg" alt="Personal Sanctuary Builder" class="w-full h-full object-cover">
                     </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="font-cormorant text-xl font-bold text-brand-sanctuary mb-2 leading-tight">Personal Sanctuary Builder</h3>
-                        <div class="font-montserrat font-bold text-brand-jolt mb-4">$12.00</div>
-                        <p class="font-sans text-sm text-brand-blueprint/90 leading-relaxed mb-6 flex-grow">A 15-page interactive digital layout built to help your mind drop the performance weight. Print-ready or compatible with iPad/GoodNotes for immediate relief.</p>
-                       <ul class="product-features">
-                        <li>Printable &amp; GoodNotes / iPad friendly file</li>
-                        <li>5-Layer Practice room reset prompts</li>
-                        <li>Built-in 4"x6" portrait postcard frame</li>
-                    </ul>
-                        <a href="https://square.link/u/H6W2i3dT" class="mt-auto block w-full text-center bg-brand-sanctuary text-brand-canvas font-montserrat text-[10px] font-bold uppercase tracking-widest py-3 rounded-sm hover:bg-brand-jolt hover:text-brand-sanctuary transition-colors" target="_blank">Download Kit</a>
+                    <div class="p-6 md:p-8 flex flex-col flex-grow">
+                        <h3 class="font-serif text-2xl font-bold text-brand-navy mb-2 leading-tight">Personal Sanctuary Builder</h3>
+                        <div class="font-sans font-bold text-brand-gold mb-4 text-lg">$12.00</div>
+                        
+                        <div class="flex-grow">
+                            <p class="font-sans text-sm text-brand-dark/80 leading-relaxed">A 15-page interactive digital layout built to help your mind drop the performance weight. Print-ready or compatible with iPad/GoodNotes for immediate relief.</p>
+                            <ul class="text-xs text-brand-dark/70 space-y-2 mt-4 list-disc pl-4 font-sans">
+                                <li>Printable &amp; GoodNotes / iPad friendly file</li>
+                                <li>5-Layer Practice room reset prompts</li>
+                                <li>Built-in 4"x6" portrait postcard frame</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mt-8 w-full">
+                            <a href="https://square.link/u/H6W2i3dT" class="block w-full text-center bg-brand-navy text-white font-sans text-xs font-bold uppercase tracking-widest py-4 rounded-full hover:bg-brand-gold hover:text-brand-navy transition-colors shadow-md" target="_blank">Download Kit</a>
+                        </div>
                     </div>
                 </div>
 
-                <div class="bg-white border border-brand-process/30 rounded-sm shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col relative">
-                    <div class="absolute top-3 left-3 bg-brand-soul text-white font-montserrat font-bold text-[10px] uppercase tracking-widest px-3 py-1 rounded-sm z-10">1:1 Session</div>
-                    <div class="h-56 bg-brand-canvas border-b border-brand-process/20">
+                <div class="bg-white border border-brand-gold/20 rounded-3xl shadow-lg hover:-translate-y-2 transition-transform flex flex-col h-full relative overflow-hidden">
+                    <div class="absolute top-4 left-4 bg-brand-navy text-brand-light font-sans font-bold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full z-10">1:1 Session</div>
+                    <div class="h-56 shrink-0 bg-brand-light border-b border-brand-gold/10 overflow-hidden">
                         <img src="https://imgur.com/66CUNyc.png" alt="Somatic Consultation" class="w-full h-full object-cover">
                     </div>
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="font-cormorant text-xl font-bold text-brand-sanctuary mb-2 leading-tight">Somatic Baking Lab: Micro-Consultation</h3>
-                        <div class="font-montserrat font-bold text-brand-jolt mb-4">$150 - $250</div>
-                        <p class="font-sans text-sm text-brand-blueprint/90 leading-relaxed mb-6 flex-grow">A 60-minute personal, supportive session designed to help your family's nervous system finally exhale. Rooted in the science of Gastronomy, Mindful Eating and real lived experience with sensory mismatch, I help you translate your body's silent language into functional, creative kitchen practices. Together, we move past behavioral labels like "picky eating" and use the controlled chemistry of cake to build a safe culinary sanctuary
-                        <ul class="product-features">
-                        <li>Customized 5-Layer Framework mapping</li>
-                        <li>Overcoming food-touching &amp; texture blocks</li>
-                        <li>Grounded everyday strategies for families</li>
-                        <li> Available Virtually too! </li>
-    
-                    </ul>
-                            <a href="consulting.html" class="mt-auto block w-full text-center bg-brand-sanctuary text-brand-canvas font-montserrat text-[10px] font-bold uppercase tracking-widest py-3 rounded-sm hover:bg-brand-jolt hover:text-brand-sanctuary transition-colors">Learn More & Book</a>
+                    <div class="p-6 md:p-8 flex flex-col flex-grow">
+                        <h3 class="font-serif text-2xl font-bold text-brand-navy mb-2 leading-tight">Somatic Baking Lab: Micro-Consultation</h3>
+                        <div class="font-sans font-bold text-brand-gold mb-4 text-lg">$150 - $250</div>
+                        
+                        <div class="flex-grow">
+                            <p class="font-sans text-sm text-brand-dark/80 leading-relaxed">A 60-minute personal, supportive session designed to help your family's nervous system finally exhale. Rooted in the science of Gastronomy, Mindful Eating and real lived experience with sensory mismatch, I help you translate your body's silent language into functional, creative kitchen practices. Together, we move past behavioral labels like "picky eating" and use the controlled chemistry of cake to build a safe culinary sanctuary.</p>
+                            <ul class="text-xs text-brand-dark/70 space-y-2 mt-4 list-disc pl-4 font-sans">
+                                <li>Customized 5-Layer Framework mapping</li>
+                                <li>Overcoming food-touching &amp; texture blocks</li>
+                                <li>Grounded everyday strategies for families</li>
+                                <li>Available Virtually too!</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="mt-8 w-full">
+                            <a href="consulting.html" class="block w-full text-center bg-brand-navy text-white font-sans text-xs font-bold uppercase tracking-widest py-4 rounded-full hover:bg-brand-gold hover:text-brand-navy transition-colors shadow-md">Learn More & Book</a>
+                        </div>
                     </div>
                 </div>
 
             </div>
 
-            <div class="bg-white border border-brand-process/30 border-l-4 border-l-brand-jolt rounded-sm p-8 md:p-12 flex flex-col md:flex-row justify-between items-center gap-8 shadow-sm">
+            <div class="bg-white border border-brand-gold/20 border-l-4 border-l-brand-gold rounded-3xl p-8 md:p-12 flex flex-col md:flex-row justify-between items-center gap-8 shadow-lg max-w-5xl mx-auto">
                 <div class="text-center md:text-left">
-                    <span class="font-montserrat font-bold text-[10px] uppercase tracking-widest text-brand-jolt block mb-2">Live Experiences</span>
-                    <h3 class="font-cormorant text-3xl font-bold text-brand-sanctuary mb-4">Celebrate Without the Overwhelm</h3>
-                    <p class="font-sans text-brand-blueprint/90 max-w-2xl leading-relaxed">Looking for a deep-dive sensory experience or a party? Our live workshops graduate from standard baking classes into collaborative Somatic Laboratories.Learn to actively regulate internal baselines using structural flavor, color-taste fields, and culinary chemistry variables. We also offer <strong>sensory-friendly cake decorating parties</strong> and <strong>full-service event planning </strong>for all neurotypes and ages. </p>
+                    <span class="font-sans font-bold text-[10px] uppercase tracking-widest text-brand-gold block mb-3">Live Experiences</span>
+                    <h3 class="font-serif text-3xl font-bold text-brand-navy mb-4">Celebrate Without the Overwhelm</h3>
+                    <p class="font-sans text-brand-dark/80 max-w-2xl leading-relaxed text-sm md:text-base">Looking for a deep-dive sensory experience or a party? Our live workshops graduate from standard baking classes into collaborative Somatic Laboratories. Learn to actively regulate internal baselines using structural flavor, color-taste fields, and culinary chemistry variables. We also offer <strong>sensory-friendly cake decorating parties</strong> and <strong>full-service event planning</strong> for all neurotypes and ages. </p>
                 </div>
-                <div class="shrink-0 w-full md:w-auto">
-                    <a href="events.html" class="block text-center border-2 border-brand-sanctuary text-brand-sanctuary font-montserrat text-xs font-bold uppercase tracking-widest py-4 px-8 rounded-sm hover:bg-brand-sanctuary hover:text-white transition-colors">View Party Packages</a>
+                <div class="shrink-0 w-full md:w-auto mt-4 md:mt-0">
+                    <a href="events.html" class="block text-center border-2 border-brand-navy text-brand-navy font-sans text-xs font-bold uppercase tracking-widest py-4 px-8 rounded-full hover:bg-brand-navy hover:text-white transition-colors shadow-sm">View Party Packages</a>
                 </div>
             </div>
 
         </div>
     </main>
 
-<footer class="bg-brand-dark text-brand-gray border-t border-brand-gold/20 font-sans text-xs">
+    <footer class="bg-brand-dark text-brand-gray border-t border-brand-gold/20 font-sans text-xs">
         <div class="max-w-2xl mx-auto px-6 py-8">
             <div class="flex flex-col items-center">
                 
@@ -205,7 +240,7 @@
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919 4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg>
                     </a>
                     <a href="https://www.facebook.com/dimple.mckinney" target="_blank" class="hover:text-brand-gold transition-colors">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.494v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12ีv9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.323-1.325z"/></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.494v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.323-1.325z"/></svg>
                     </a>
                     <a href="https://www.linkedin.com/in/dimple-mckinney/" target="_blank" class="hover:text-brand-gold transition-colors">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
