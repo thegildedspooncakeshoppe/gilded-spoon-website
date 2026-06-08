@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somatic Consulting | The Gilded Spoon Shoppe</title>
+    <meta name="description" content="Somatic Baking Lab Micro-Consultations & Kitchen Audits for Neurodivergent Families in Texas.">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:wght@400;600;700&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-blueprint': '#2D2D2D',
+                        'brand-sanctuary': '#1B3022',
+                        'brand-process': '#96A695',
+                        'brand-jolt': '#DAA520',
+                        'brand-soul': '#D97E6A',
+                        'brand-canvas': '#F9F7F2',
+                    },
+                    fontFamily: {
+                        'cormorant': ['"Cormorant Garamond"', 'serif'],
+                        'serif': ['"Playfair Display"', 'serif'],
+                        'montserrat': ['"Montserrat"', 'sans-serif'],
+                        'sans': ['"Inter"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-brand-canvas text-brand-blueprint antialiased">
+
+    <nav class="sticky top-0 bg-brand-sanctuary shadow-lg z-50 border-b border-brand-process/30">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="Logo No Background.jpg" alt="The Gilded Spoon Shoppe" class="h-12 object-contain filter invert opacity-90">
+                <span class="text-brand-jolt font-cormorant text-2xl font-bold hidden sm:block">The Gilded Spoon</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-8 font-montserrat text-xs tracking-widest uppercase font-semibold">
+                <a href="book.html" class="text-brand-canvas hover:text-brand-jolt transition">The Journal</a>
+                <a href="events.html" class="text-brand-canvas hover:text-brand-jolt transition">Parties</a>
+                <a href="consulting.html" class="text-brand-jolt transition border-b-2 border-brand-jolt pb-1">Consulting</a>
+                <a href="shoppe.html" class="text-brand-canvas hover:text-brand-jolt transition">The Shoppe</a>
+                <a href="contact.html" class="text-brand-canvas hover:text-brand-jolt transition">Contact</a>
+            </div>
+            <div class="md:hidden">
+                <button id="hamburger-button" class="text-brand-canvas focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden mt-2 px-4 pb-4 bg-brand-sanctuary text-center border-t border-brand-process/20 pt-4">
+            <a href="book.html" class="block py-3 text-brand-canvas font-montserrat text-xs uppercase tracking-widest">The Journal</a>
+            <a href="events.html" class="block py-3 text-brand-canvas font-montserrat text-xs uppercase tracking-widest">Parties</a>
+            <a href="consulting.html" class="block py-3 text-brand-jolt font-montserrat text-xs uppercase tracking-widest font-bold">Consulting</a>
+            <a href="shoppe.html" class="block py-3 text-brand-canvas font-montserrat text-xs uppercase tracking-widest">The Shoppe</a>
+            <a href="contact.html" class="block py-3 text-brand-canvas font-montserrat text-xs uppercase tracking-widest">Contact</a>
+        </div>
+    </nav>
+
+    <header class="text-center py-24 bg-brand-blueprint border-b border-brand-process/30 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')]"></div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <span class="text-brand-process font-montserrat font-bold tracking-[0.4em] uppercase text-xs block mb-4">Physiological Literacy</span>
+            <h1 class="font-cormorant text-5xl md:text-6xl font-bold text-brand-canvas leading-tight mb-6">Stop Performing.<br>Start Feeling.</h1>
+            <p class="text-lg md:text-xl text-brand-canvas/80 font-serif italic max-w-2xl mx-auto leading-relaxed">Somatic Baking Lab Micro-Consultations for Neurodivergent Families.</p>
+        </div>
+    </header>
+
+    <section class="py-20 bg-brand-canvas">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="font-serif text-4xl text-brand-sanctuary mb-8 text-center">The Architecture of Food That Cannot Touch</h2>
+            <div class="space-y-6 text-lg leading-relaxed text-brand-blueprint border-l-4 border-brand-soul pl-8 bg-white p-10 shadow-sm rounded-sm">
+                <p>We called it "picky eating" because our language for childhood distress is often coarse and insufficient.</p>
+                <p>For years, I watched my son navigate the daily, invisible friction of sensory mismatch. To the outside world, his behavior looked like defiance. To my trained eyes as a nurse, it was a profound physiological protest. He was reacting to the tactile betrayal of clothing textures and the terrifying architectural rigidity of food that could not touch.</p>
+                <p>When my own late-in-life autism diagnosis arrived, it was the final, missing ingredient. It gave a name to a lifetime of feeling profoundly out of place. I didn't find my path forward in a clinic. I found it in the chemistry and texture of cake.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-brand-sanctuary">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="font-cormorant text-4xl text-brand-jolt text-center mb-6 font-bold">The 5-Layer Sensory Architecture Framework™</h2>
+            <p class="text-center text-brand-canvas/90 max-w-2xl mx-auto mb-16 text-lg font-serif italic">Cake is the ultimate Somatic Laboratory. It is a controlled environment where we can safely calibrate color palettes, structural densities, and flavor profiles to perfectly mirror an internal state.</p>
+            
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-brand-canvas p-8 rounded-sm border-t-4 border-brand-soul">
+                    <h3 class="font-serif text-xl text-brand-sanctuary mb-3 font-bold">1. Foundation</h3>
+                    <p class="text-sm text-brand-blueprint leading-relaxed">Clearing the room to establish a sensory-safe baseline and remove immediate environmental friction.</p>
+                </div>
+                <div class="bg-brand-canvas p-8 rounded-sm border-t-4 border-brand-soul">
+                    <h3 class="font-serif text-xl text-brand-sanctuary mb-3 font-bold">2. Infusion</h3>
+                    <p class="text-sm text-brand-blueprint leading-relaxed">Integrating comfort cues and safe, calibrated flavor profiles that soothe rather than overstimulate.</p>
+                </div>
+                <div class="bg-brand-canvas p-8 rounded-sm border-t-4 border-brand-soul">
+                    <h3 class="font-serif text-xl text-brand-sanctuary mb-3 font-bold">3. Strength</h3>
+                    <p class="text-sm text-brand-blueprint leading-relaxed">Understanding mouthfeel, density, and tactile feedback to build trust in the kitchen.</p>
+                </div>
+                <div class="bg-brand-canvas p-8 rounded-sm border-t-4 border-brand-soul md:col-start-1">
+                    <h3 class="font-serif text-xl text-brand-sanctuary mb-3 font-bold">4. Strategy</h3>
+                    <p class="text-sm text-brand-blueprint leading-relaxed">Clearing the mind and mapping out practical, neuro-inclusive steps for daily food interaction.</p>
+                </div>
+                <div class="bg-brand-canvas p-8 rounded-sm border-t-4 border-brand-soul">
+                    <h3 class="font-serif text-xl text-brand-sanctuary mb-3 font-bold">5. Expression</h3>
+                    <p class="text-sm text-brand-blueprint leading-relaxed">Finding your anchor by giving tangible, non-verbal shape to internal feelings through design.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-brand-canvas text-center">
+        <div class="max-w-4xl mx-auto px-6 bg-white p-12 rounded-sm shadow-xl border-2 border-brand-process/20">
+            <span class="text-brand-process font-montserrat font-bold tracking-widest uppercase text-xs block mb-4">Book Your Session</span>
+            <h2 class="font-cormorant text-5xl text-brand-sanctuary mb-4 font-bold">Somatic Baking Lab: Micro-Consultations</h2>
+            <h3 class="font-serif text-2xl text-brand-blueprint mb-4 italic">60-Minute Sensory Kitchen Audits</h3>
+            <p class="font-montserrat font-bold text-2xl text-brand-soul mb-8">$150 - $250</p>
+            
+            <div class="text-brand-blueprint/90 mb-10 text-lg leading-relaxed font-sans text-left max-w-2xl mx-auto space-y-4">
+                <p><strong>Designed specifically for parents of neurodivergent children who are struggling with "picky eating" or food-touching aversions.</strong></p>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li>We will review your child's current sensory profile (textures, colors, and the structural boundaries of food) via a 60-minute Zoom session.</li>
+                    <li>Using the 5-Layer Sensory Architecture Framework™, I will design <strong>one custom "Somatic Cake Recipe"</strong> tailored precisely to your child’s sensory safe zone.</li>
+                </ul>
+            </div>
+            
+            <a href="contact.html" class="inline-block bg-brand-sanctuary text-white font-montserrat font-bold py-4 px-12 rounded-sm hover:bg-brand-jolt hover:text-brand-sanctuary transition-all shadow-lg uppercase tracking-widest text-sm">
+                Secure Your Audit Slot
+            </a>
+        </div>
+    </section>
+
+    <section class="py-20 bg-brand-canvas border-t border-brand-process/20">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="font-cormorant text-4xl text-brand-sanctuary text-center mb-12 font-bold">Frequently Asked Questions</h2>
+            <div class="space-y-8 font-sans">
+                
+                <div class="bg-white p-8 rounded-sm shadow-sm border border-brand-process/30">
+                    <h3 class="font-serif text-xl text-brand-soul font-bold mb-3">Is this medical therapy or occupational therapy?</h3>
+                    <p class="text-brand-blueprint/90 leading-relaxed">No. While I am a former nurse, I do not diagnose or provide medical therapy. I provide Somatic Kitchen Audits to help you translate environmental friction into actionable, creative kitchen practices.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-sm shadow-sm border border-brand-process/30">
+                    <h3 class="font-serif text-xl text-brand-soul font-bold mb-3">Do we actually bake the cake during the 60-minute audit?</h3>
+                    <p class="text-brand-blueprint/90 leading-relaxed">No, the audit is a conversation and a strategy session via Zoom. I evaluate your child's sensory profile and deliver a custom-designed Somatic Cake Recipe for you to execute together in your own time.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-sm shadow-sm border border-brand-process/30">
+                    <h3 class="font-serif text-xl text-brand-soul font-bold mb-3">My child won't eat cake. Is this still for us?</h3>
+                    <p class="text-brand-blueprint/90 leading-relaxed">Absolutely. In Somatic Baking, the goal isn't always consumption. Sometimes the goal is simply tolerating the smell of vanilla, touching the texture of flour, or mixing a color. We use cake as a low-stakes laboratory to build tactile trust.</p>
+                </div>
+
+                <div class="bg-white p-8 rounded-sm shadow-sm border border-brand-process/30">
+                    <h3 class="font-serif text-xl text-brand-soul font-bold mb-3">I'm not in Texas. Can I still book a consultation?</h3>
+                    <p class="text-brand-blueprint/90 leading-relaxed">Yes! Because the Somatic Kitchen Audits are conducted virtually via Zoom, I can work with neurodivergent families globally.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-blueprint text-brand-process pt-16 pb-8 border-t border-brand-process/30">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <img src="Logo No Background.jpg" alt="The Gilded Spoon Tree Logo" class="h-24 mx-auto mb-8 filter invert opacity-50">
+            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-8 mb-8 font-montserrat text-xs uppercase tracking-widest text-brand-canvas/80">
+                <a href="contact.html" class="hover:text-brand-jolt transition">Contact Us</a>
+                <a href="policies.html" class="hover:text-brand-jolt transition">Order Fulfillment & Delivery</a>
+            </div>
+            <p class="font-sans text-[10px] leading-relaxed max-w-xl mx-auto mb-4 opacity-60">
+                Disclaimer: The Gilded Spoon Shoppe provides somatic and sensory design education. It is not a substitute for professional medical advice, diagnosis, or occupational therapy. Edible products are prepared in a home kitchen that handles allergens including wheat, dairy, eggs, soy, and nuts.
+            </p>
+            <p class="font-serif text-sm opacity-80">&copy; 2026 The Gilded Spoon Shoppe | McKinney, Texas</p>
+        </div>
+    </footer>
+    <script>
+        const hamburgerButton = document.getElementById('hamburger-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if(hamburgerButton) {
+            hamburgerButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+        }
+    </script>
+</body>
+</html>
