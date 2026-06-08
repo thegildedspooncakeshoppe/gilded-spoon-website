@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Gilded Spoon Shoppe & Atelier | A Neuro-Inclusive Sanctuary for Somatic Healing</title>
+    <title>The Gilded Spoon Atelier | A Neuro-Inclusive Sanctuary for Somatic Healing</title>
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:wght@400;600;700&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -32,112 +32,92 @@
 </head>
 <body class="font-sans bg-brand-canvas text-brand-blueprint antialiased">
 
-    <nav class="sticky top-0 bg-brand-canvas shadow-md z-50 border-b-2 border-brand-process/20">
-        <div class="max-w-6xl mx-auto px-4 py-2 flex justify-between items-center">
+    <nav class="sticky top-0 bg-brand-sanctuary shadow-lg z-50 border-b border-brand-process/30">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
             <a href="index.html" class="flex items-center gap-3">
-                <img src="Logo No Background.jpg" alt="The Gilded Spoon Shoppe" class="h-16 md:h-20 object-contain mix-blend-multiply">
+                <img src="Logo No Background.jpg" alt="The Gilded Spoon Shoppe" class="h-12 object-contain filter invert opacity-90">
+                <span class="text-brand-jolt font-cormorant text-2xl font-bold hidden sm:block">The Gilded Spoon</span>
             </a>
-            <div class="hidden md:flex items-center space-x-8 font-montserrat text-xs tracking-widest uppercase font-semibold text-brand-sanctuary">
-                <a href="book.html" class="hover:text-brand-jolt transition">The Journal</a>
-                <a href="events.html" class="hover:text-brand-jolt transition">Parties</a>
-                <a href="consulting.html" class="hover:text-brand-jolt transition">Consulting</a>
-                <a href="shoppe.html" class="hover:text-brand-jolt transition">The Shoppe</a>
-                <a href="contact.html" class="hover:text-brand-jolt transition">Contact</a>
+            <div class="hidden md:flex items-center space-x-8 font-montserrat text-xs tracking-widest uppercase font-semibold">
+                <a href="book.html" class="text-brand-canvas hover:text-brand-jolt transition">The Journal</a>
+                <a href="events.html" class="text-brand-canvas hover:text-brand-jolt transition">Parties</a>
+                <a href="consulting.html" class="text-brand-canvas hover:text-brand-jolt transition">Consulting</a>
+                <a href="shoppe.html" class="text-brand-canvas hover:text-brand-jolt transition">The Shoppe</a>
+                <a href="contact.html" class="text-brand-canvas hover:text-brand-jolt transition">Contact</a>
             </div>
             <div class="md:hidden">
-                <button id="hamburger-button" class="text-brand-sanctuary focus:outline-none">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                <button id="hamburger-button" class="text-brand-canvas focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden mt-2 px-4 pb-4 bg-brand-canvas text-center border-t border-brand-process/20 pt-4 shadow-inner">
-            <a href="book.html" class="block py-3 text-brand-sanctuary font-montserrat text-xs uppercase tracking-widest">The Journal</a>
-            <a href="events.html" class="block py-3 text-brand-sanctuary font-montserrat text-xs uppercase tracking-widest">Parties</a>
-            <a href="consulting.html" class="block py-3 text-brand-sanctuary font-montserrat text-xs uppercase tracking-widest">Consulting</a>
-            <a href="shoppe.html" class="block py-3 text-brand-sanctuary font-montserrat text-xs uppercase tracking-widest">The Shoppe</a>
-            <a href="contact.html" class="block py-3 text-brand-sanctuary font-montserrat text-xs uppercase tracking-widest">Contact</a>
+        <div id="mobile-menu" class="hidden md:hidden mt-2 px-4 pb-4 bg-brand-sanctuary text-center border-t border-brand-process/20 pt-4">
+            <a href="book.html" class="block py-3 text-brand-canvas font-montserrat text-xs uppercase tracking-widest">The Journal</a>
+            <a href="events.html" class="block py-3 text-brand-canvas font-montserrat text-xs uppercase tracking-widest">Parties</a>
+            <a href="consulting.html" class="block py-3 text-brand-canvas font-montserrat text-xs uppercase tracking-widest">Consulting</a>
+            <a href="shoppe.html" class="block py-3 text-brand-canvas font-montserrat text-xs uppercase tracking-widest">The Shoppe</a>
+            <a href="contact.html" class="block py-3 text-brand-canvas font-montserrat text-xs uppercase tracking-widest">Contact</a>
         </div>
     </nav>
 
-    <header class="relative overflow-hidden bg-brand-sanctuary pt-24 pb-32 border-b-8 border-brand-jolt">
+    <header class="relative overflow-hidden bg-brand-sanctuary pt-24 pb-32">
         <div class="absolute inset-0 opacity-5 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')]"></div>
         <div class="max-w-6xl mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-16 items-center">
-            
             <div class="text-left">
-                <span class="font-cormorant italic text-3xl md:text-4xl text-brand-jolt block mb-4">Stop Performing. Start Feeling.</span>
-                <h1 class="font-cormorant text-5xl md:text-7xl text-brand-canvas mb-6 leading-tight font-bold">Your Story is <br><span class="italic text-brand-process font-light">Architecture.</span></h1>
-                
-                <div class="border-l-2 border-brand-jolt pl-6 mb-10">
-                    <p class="text-lg font-sans text-brand-canvas/90 max-w-lg leading-relaxed">
-                        A sensory sanctuary for deep feelers. Discover the proprietary 5-Layer Framework designed by a former nurse to ground your nervous system through the language of cake and color.
-                    </p>
-                </div>
-                
-                <div class="flex flex-col sm:flex-row gap-5 font-montserrat text-xs font-bold tracking-widest uppercase">
-                    <a href="book.html" class="bg-brand-jolt text-brand-sanctuary py-4 px-10 rounded-sm hover:bg-white transition-all text-center shadow-lg">The Journal</a>
-                    <a href="consulting.html" class="border border-brand-process text-brand-canvas py-4 px-10 rounded-sm hover:bg-brand-process hover:text-brand-sanctuary transition-all text-center">Book an Audit</a>
+                <span class="font-cormorant italic text-3xl text-brand-jolt block mb-4">Stop Performing. Start Feeling.</span>
+                <h1 class="font-cormorant text-5xl md:text-7xl text-brand-canvas mb-6 leading-tight">Your Story is <br><span class="italic text-brand-process">Architecture.</span></h1>
+                <p class="text-lg font-sans text-brand-canvas/90 mb-10 max-w-lg leading-relaxed">A sensory sanctuary for deep feelers. Discover the proprietary 5-Layer Framework designed by a former nurse to ground your nervous system through the language of cake and color.</p>
+                <div class="flex flex-col sm:flex-row gap-5 font-montserrat text-sm font-semibold tracking-widest uppercase">
+                    <a href="book.html" class="bg-brand-jolt text-brand-sanctuary py-4 px-10 rounded-sm hover:bg-white transition-all text-center">The Journal</a>
+                    <a href="consulting.html" class="border-2 border-brand-process text-brand-canvas py-4 px-10 rounded-sm hover:bg-brand-process hover:text-brand-sanctuary transition-all text-center">Book an Audit</a>
                 </div>
             </div>
-            
-            <div class="relative flex justify-center mt-10 md:mt-0">
-                <div class="absolute inset-0 border-2 border-brand-jolt/40 transform translate-x-4 translate-y-4 rounded-sm max-w-[280px] lg:max-w-[320px] mx-auto hidden md:block"></div>
-                <img src="https://imgur.com/Krt8oHW.png" alt="My Edible Autobiography" class="relative w-full max-w-[280px] lg:max-w-[320px] rounded-sm shadow-2xl z-10 transform -rotate-2 hover:rotate-0 transition-transform duration-500 border-4 border-brand-canvas">
+            <div class="relative">
+                <img src="https://imgur.com/Krt8oHW.png" alt="My Edible Autobiography" class="relative rounded-sm shadow-2xl border-4 border-brand-jolt/20 transform rotate-2">
             </div>
-            
         </div>
     </header>
 
-    <section class="py-24 bg-brand-canvas text-brand-blueprint">
+    <section class="py-24 bg-brand-canvas text-brand-blueprint border-t border-brand-process/20">
         <div class="max-w-6xl mx-auto px-6 text-center">
-            <span class="text-brand-jolt font-montserrat font-bold tracking-[0.3em] uppercase text-xs block mb-4">The Studio</span>
-            <h2 class="font-cormorant text-4xl md:text-5xl font-bold mb-16 text-brand-sanctuary">Consultations & Parties</h2>
+            <span class="text-brand-jolt font-montserrat font-bold tracking-widest uppercase text-sm block mb-4">The Studio</span>
+            <h2 class="font-serif text-4xl md:text-5xl font-semibold mb-16 text-brand-sanctuary">Somatic Consultations & Sensory Parties</h2>
             
-            <div class="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-                <div class="bg-white rounded-sm border-t-4 border-t-brand-soul border-x border-b border-brand-process/20 p-12 text-left shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-white rounded-sm border border-brand-process/30 p-10 text-left shadow-lg hover:-translate-y-2 transition-transform">
                     <h3 class="font-cormorant text-3xl text-brand-sanctuary mb-4 font-bold">The Somatic Kitchen Audit</h3>
-                    <p class="text-brand-blueprint/80 text-base mb-8 leading-relaxed font-sans flex-grow">For neurodivergent families navigating the invisible friction of sensory mismatch. We spend 60 minutes auditing your kitchen to design a safe, biochemical baseline.</p>
-                    <a href="consulting.html" class="text-brand-soul font-montserrat font-bold uppercase tracking-widest text-[10px] flex items-center gap-2 hover:text-brand-sanctuary transition-colors">
-                        <span>Learn More ($150-$250)</span>
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                    </a>
+                    <p class="text-brand-blueprint text-base mb-8 leading-relaxed font-sans">For neurodivergent families navigating the invisible friction of sensory mismatch. We spend 60 minutes auditing your kitchen to design a safe, biochemical baseline.</p>
+                    <a href="consulting.html" class="text-brand-soul font-montserrat font-bold border-b-2 border-brand-soul/30 hover:border-brand-soul transition pb-1 text-sm uppercase tracking-widest">Learn More ($150-$250) &rarr;</a>
                 </div>
 
-                <div class="bg-white rounded-sm border-t-4 border-t-brand-jolt border-x border-b border-brand-process/20 p-12 text-left shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all flex flex-col">
+                <div class="bg-white rounded-sm border border-brand-process/30 p-10 text-left shadow-lg hover:-translate-y-2 transition-transform">
                     <h3 class="font-cormorant text-3xl text-brand-sanctuary mb-4 font-bold">Sensory-Friendly Parties</h3>
-                    <p class="text-brand-blueprint/80 text-base mb-8 leading-relaxed font-sans flex-grow">Celebrate without the overwhelm. Low-friction cake decorating parties and inclusive full-service event planning for kids and adults of all neurotypes.</p>
-                    <a href="events.html" class="text-brand-jolt font-montserrat font-bold uppercase tracking-widest text-[10px] flex items-center gap-2 hover:text-brand-sanctuary transition-colors">
-                        <span>View Party Packages</span>
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                    </a>
+                    <p class="text-brand-blueprint text-base mb-8 leading-relaxed font-sans">Celebrate without the overwhelm. Low-friction cake decorating parties and inclusive full-service event planning for kids and adults of all neurotypes.</p>
+                    <a href="events.html" class="text-brand-soul font-montserrat font-bold border-b-2 border-brand-soul/30 hover:border-brand-soul transition pb-1 text-sm uppercase tracking-widest">View Party Packages &rarr;</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="about" class="py-24 bg-white border-y border-brand-process/20">
+    <section id="about" class="py-24 bg-brand-sanctuary text-brand-canvas">
         <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-3 gap-16 items-center">
-            
-            <div class="flex justify-center relative md:order-1 order-2">
-                <div class="absolute inset-0 border border-brand-process/50 transform translate-x-4 -translate-y-4 rounded-t-full max-w-[250px] mx-auto h-[320px]"></div>
-                <img src="https://imgur.com/FWkUS15.png" alt="Dimple Patel McKinney" class="relative w-full max-w-[250px] h-[320px] object-cover object-top rounded-t-full shadow-lg border-b-8 border-brand-jolt z-10">
-            </div>
-
-            <div class="md:col-span-2 md:order-2 order-1">
-                <span class="text-brand-process font-montserrat font-bold tracking-[0.3em] uppercase text-xs block mb-3">The Spine of the Brand</span>
-                <h2 class="font-cormorant text-4xl md:text-5xl font-bold mb-8 text-brand-sanctuary">Meet Dimple</h2>
-                
-                <div class="font-sans space-y-5 leading-relaxed text-brand-blueprint/90 bg-brand-canvas p-8 rounded-sm border-l-2 border-brand-soul">
+            <div class="md:col-span-2">
+                <span class="text-brand-jolt font-montserrat font-bold tracking-widest uppercase text-sm block mb-2">The Spine of the Brand</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-semibold mb-6">Meet Dimple</h2>
+                <div class="font-sans space-y-6 leading-relaxed text-lg text-brand-canvas/90">
                     <p>I am a <strong>Founder, Author, and Former Nurse</strong>—but most importantly, I am a sensory designer for the beautiful mess of the human story.</p>
                     <p>I’ve traded clinical rounds for creative regulation. Using my medical background and my own late-in-life autism diagnosis, I build tools that help you ground your nervous system, protect your energy, and finally stop performing. Let's start feeling, together.</p>
                 </div>
             </div>
-            
+            <div class="flex justify-center">
+                <img src="https://imgur.com/FWkUS15.png" alt="Dimple Patel McKinney" class="w-64 h-64 md:w-80 md:h-80 object-cover object-top rounded-full shadow-2xl border-4 border-brand-jolt">
+            </div>
         </div>
     </section>
 
     <footer class="bg-brand-blueprint text-brand-process pt-16 pb-8 border-t border-brand-process/30">
         <div class="max-w-4xl mx-auto px-6 text-center">
-            <img src="Logo No Background.jpg" alt="The Gilded Spoon Tree Logo" class="h-24 mx-auto mb-8 filter invert opacity-50 mix-blend-screen">
+            <img src="Logo No Background.jpg" alt="The Gilded Spoon Tree Logo" class="h-24 mx-auto mb-8 filter invert opacity-50">
             <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-8 mb-8 font-montserrat text-xs uppercase tracking-widest text-brand-canvas/80">
                 <a href="contact.html" class="hover:text-brand-jolt transition">Contact Us</a>
                 <a href="policies.html" class="hover:text-brand-jolt transition">Order Fulfillment & Delivery</a>
@@ -148,7 +128,6 @@
             <p class="font-serif text-sm opacity-80">&copy; 2026 The Gilded Spoon Shoppe | McKinney, Texas</p>
         </div>
     </footer>
-    
     <script>
         const hamburgerButton = document.getElementById('hamburger-button');
         const mobileMenu = document.getElementById('mobile-menu');
