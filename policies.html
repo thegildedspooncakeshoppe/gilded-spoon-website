@@ -3,126 +3,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shipping & Fulfillment | The Gilded Spoon</title>
-    
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <title>Store Policies & Fulfillment | The Gilded Spoon Shoppe</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Montserrat:wght@400;600;700&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'brand-dark': '#1C161E',
-                        'brand-light': '#F4F1ED',
-                        'brand-gold': '#D4AF37',
-                        'brand-navy': '#0A2342',
-                        'brand-gray': '#A09DA6',
-                        'brand-card': '#2A232F',
+                        'brand-blueprint': '#2D2D2D',
+                        'brand-sanctuary': '#1B3022',
+                        'brand-process': '#96A695',
+                        'brand-jolt': '#DAA520',
+                        'brand-soul': '#D97E6A',
+                        'brand-canvas': '#F9F7F2',
                     },
                     fontFamily: {
+                        'cormorant': ['"Cormorant Garamond"', 'serif'],
                         'serif': ['"Playfair Display"', 'serif'],
+                        'montserrat': ['"Montserrat"', 'sans-serif'],
                         'sans': ['"Inter"', 'sans-serif'],
                     }
                 }
             }
         }
     </script>
-    <style>
-        body { background-color: #0A2342; color: #F4F1ED; -webkit-font-smoothing: antialiased; }
-    </style>
 </head>
-<body class="font-sans">
+<body class="font-sans bg-brand-canvas text-brand-blueprint antialiased">
 
-    <nav class="sticky top-0 bg-brand-navy/90 backdrop-blur-lg shadow-lg z-50 border-b border-brand-gold/10">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <a href="index.html" class="text-2xl font-serif font-bold text-brand-gold text-center leading-none">
-                The Gilded Spoon
-                <span class="block text-xs font-sans font-light tracking-[0.3em] text-brand-light">SHOPPE & ATELIER</span>
+    <nav class="sticky top-0 bg-brand-sanctuary shadow-lg z-50 border-b border-brand-process/30">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center gap-3">
+                <img src="Logo No Background.jpg" alt="The Gilded Spoon Shoppe" class="h-12 object-contain filter invert opacity-90">
+                <span class="text-brand-jolt font-cormorant text-2xl font-bold hidden sm:block">The Gilded Spoon</span>
             </a>
-            <div class="hidden md:flex items-center space-x-8 font-medium text-sm">
-                <a href="index.html" class="text-brand-light hover:text-brand-gold transition">Home</a>
-                <a href="book.html" class="text-brand-light hover:text-brand-gold transition">The Journal</a>
-                <a href="shoppe.html" class="text-brand-light hover:text-brand-gold transition">The Shoppe</a>
-                <a href="contact.html" class="text-brand-light hover:text-brand-gold transition">Contact</a>
+            <div class="hidden md:flex items-center space-x-8 font-montserrat text-xs tracking-widest uppercase font-semibold">
+                <a href="book.html" class="text-brand-canvas hover:text-brand-jolt transition">The Journal</a>
+                <a href="events.html" class="text-brand-canvas hover:text-brand-jolt transition">Parties</a>
+                <a href="consulting.html" class="text-brand-canvas hover:text-brand-jolt transition">Consulting</a>
+                <a href="shoppe.html" class="text-brand-canvas hover:text-brand-jolt transition">The Shoppe</a>
+                <a href="contact.html" class="text-brand-canvas hover:text-brand-jolt transition">Contact</a>
             </div>
+            <div class="md:hidden">
+                <button id="hamburger-button" class="text-brand-canvas focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden mt-2 px-4 pb-4 bg-brand-sanctuary text-center border-t border-brand-process/20 pt-4">
+            <a href="book.html" class="block py-3 text-brand-canvas font-montserrat text-xs uppercase tracking-widest">The Journal</a>
+            <a href="events.html" class="block py-3 text-brand-canvas font-montserrat text-xs uppercase tracking-widest">Parties</a>
+            <a href="consulting.html" class="block py-3 text-brand-canvas font-montserrat text-xs uppercase tracking-widest">Consulting</a>
+            <a href="shoppe.html" class="block py-3 text-brand-canvas font-montserrat text-xs uppercase tracking-widest">The Shoppe</a>
+            <a href="contact.html" class="block py-3 text-brand-canvas font-montserrat text-xs uppercase tracking-widest">Contact</a>
         </div>
     </nav>
 
-    <header class="text-center py-20 bg-brand-card/30 border-b border-brand-gold/10">
-        <div class="max-w-4xl mx-auto px-6">
-            <h1 class="font-serif text-4xl md:text-5xl font-bold text-brand-gold mb-4">Shipping & Fulfillment</h1>
-            <p class="text-brand-light text-lg italic">How we deliver the tools for your sensory journey.</p>
+    <header class="text-center py-24 bg-brand-sanctuary border-b border-brand-process/20 relative overflow-hidden">
+        <div class="absolute inset-0 opacity-5 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')]"></div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <h1 class="font-cormorant text-5xl md:text-6xl font-bold text-brand-jolt mb-4">Store Policies & Fulfillment</h1>
+            <p class="text-brand-canvas/80 text-lg md:text-xl font-serif italic max-w-2xl mx-auto leading-relaxed">How we deliver the tools for your sensory journey.</p>
         </div>
     </header>
 
-    <main class="py-16">
-        <div class="max-w-3xl mx-auto px-6 space-y-20">
+    <main class="py-20">
+        <div class="max-w-3xl mx-auto px-6 space-y-16">
             
             <section id="shipping">
-                <h2 class="font-serif text-3xl text-brand-gold mb-6 border-b border-brand-gold/10 pb-2">National Shipping</h2>
-                <p class="text-brand-light mb-6 leading-relaxed">
-                    Our non-edible artifacts—including <strong>My Edible Autobiography Guided Journal</strong> and our <strong>Sanctuary Bundle Kits</strong> (non-perishable components)—are available for shipping across the United States.
+                <h2 class="font-serif text-3xl text-brand-sanctuary mb-6 border-b border-brand-process/30 pb-2">National Shipping (Physical Goods)</h2>
+                <p class="font-sans text-brand-blueprint mb-6 leading-relaxed">
+                    Our non-edible physical artifacts—including <strong>My Edible Autobiography Guided Journal</strong> and our <strong>Sanctuary Box Kits</strong>—are available for shipping across the United States.
                 </p>
-                <ul class="space-y-4 text-brand-light">
-                    <li class="flex items-start">
-                        <span class="text-brand-light mr-3">📦</span>
-                        <span><strong>Carriers:</strong> We utilize USPS and UPS to ensure your items arrive safely.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-brand-light mr-3">📦</span>
-                        <span><strong>Processing Time:</strong> Orders are typically prepared and shipped within 3-5 business days.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-brand-light mr-3">📦</span>
-                        <span><strong>Tracking:</strong> You will receive a tracking number via email as soon as your package begins its journey.</span>
-                    </li>
+                <ul class="space-y-4 font-sans text-sm text-brand-blueprint/90">
+                    <li class="flex items-start"><span class="text-brand-jolt mr-3">✔</span> <strong>Carriers:</strong> We utilize USPS and UPS to ensure your items arrive safely.</li>
+                    <li class="flex items-start"><span class="text-brand-jolt mr-3">✔</span> <strong>Processing Time:</strong> Orders are typically prepared and shipped within 3-5 business days.</li>
+                    <li class="flex items-start"><span class="text-brand-jolt mr-3">✔</span> <strong>Tracking:</strong> You will receive a tracking number via email as soon as your package begins its journey.</li>
                 </ul>
+            </section>
+
+            <section id="digital-downloads">
+                <h2 class="font-serif text-3xl text-brand-sanctuary mb-6 border-b border-brand-process/30 pb-2">Digital Downloads</h2>
+                <p class="font-sans text-brand-blueprint mb-6 leading-relaxed">
+                    Products marked as "Digital Download" (such as The Architecture of Cake PDF) are delivered instantly via email upon purchase. Please ensure you enter the correct email address at checkout. If you do not receive your file within 15 minutes, please check your spam folder or contact us.
+                </p>
             </section>
 
             <section id="local-delivery">
-                <h2 class="font-serif text-3xl text-brand-gold mb-6 border-b border-brand-gold/10 pb-2">Local Delivery (Edible Compositions)</h2>
+                <h2 class="font-serif text-3xl text-brand-sanctuary mb-6 border-b border-brand-process/30 pb-2">Local Events & Edible Components</h2>
                 
-                <div class="bg-brand-gold/10 border border-brand-gold/30 rounded-2xl p-6 text-center mb-8">
-                    <p class="text-[12px] uppercase tracking-widest font-bold text-brand-gold mb-2">Cottage Food Disclosure</p>
-                    <p class="text-xs leading-relaxed opacity-90"><strong>
-                        ALL EDIBLE PRODUCTS ARE PRODUCED IN A PRIVATE RESIDENCE THAT IS NOT SUBJECT TO GOVERNMENTAL LICENSING OR INSPECTION.</strong></p>
-                   <p class="text-[12px] uppercase tracking-widest font-bold text-brand-gold mb-2"> <strong>SAFE HANDLING:</strong></p> 
-                   <p class="text-xs italic leading-relaxed opacity-90"> Keep food refrigerated or frozen until prepared for consumption.</p>
+                <div class="bg-brand-canvas border-2 border-brand-jolt/50 rounded-sm p-6 text-center mb-8 shadow-sm">
+                    <p class="font-montserrat text-xs uppercase tracking-widest font-bold text-brand-sanctuary mb-2">Cottage Food Disclosure</p>
+                    <p class="font-sans text-xs leading-relaxed opacity-90 mb-3"><strong>ALL EDIBLE PRODUCTS ARE PRODUCED IN A PRIVATE RESIDENCE THAT IS NOT SUBJECT TO GOVERNMENTAL LICENSING OR INSPECTION.</strong></p>
+                    <p class="font-serif text-xs italic leading-relaxed opacity-90">Keep food refrigerated or frozen until prepared for consumption.</p>
                 </div>
-                <p class="text-brand-light mb-6 leading-relaxed">
-                    Due to <strong>Texas Cottage Food Law</strong>, any order containing edible/perishable elements must be personally delivered or picked up. We cannot ship food items via third-party carriers.
-                </p>
-                <ul class="space-y-4 text-brand-light">
-                    <li class="flex items-start">
-                        <span class="text-brand-light mr-3">🥄</span>
-                        <span><strong>Service Area:</strong> Local delivery is available within a 50-mile radius of McKinney, TX.</span>
-                    </li>
-                    <li class="flex items-start">
-                        <span class="text-brand-light mr-3">🥄</span>
-                        <span><strong>Delivery Schedule:</strong> Typically Thursdays between 1 PM and 5 PM.</span>
-                    </li>
-                </ul>
-            </section>
-
-            <section id="pickup" class="bg-brand-card/40 p-8 rounded-2xl border border-brand-gold/10">
-                <h2 class="font-serif text-3xl text-brand-gold mb-4">Atelier Pickup</h2>
-                <p class="text-white leading-relaxed">
-                    For our local guests, we offer a dedicated pickup option. We will inform you of the <strong>pickup location address</strong> in McKinney and coordinate a <strong>specific pickup time</strong> once your order is confirmed.
+                <p class="font-sans text-brand-blueprint mb-6 leading-relaxed">
+                    Due to <strong>Texas Cottage Food Law</strong>, any order containing edible/perishable elements (such as party packages) must be personally delivered or picked up. We cannot ship food items via third-party carriers. Local services are available within a 50-mile radius of McKinney, TX.
                 </p>
             </section>
 
-            <section id="returns" class="pt-12 border-t border-brand-gold/10">
-                <h2 class="font-serif text-3xl text-brand-light mb-8">Returns & Refunds</h2>
-                <div class="space-y-8 text-brand-gray">
+            <section id="returns" class="pt-12 border-t-2 border-brand-process/30">
+                <h2 class="font-cormorant text-4xl font-bold text-brand-sanctuary mb-8">Returns & Refunds</h2>
+                <div class="space-y-8 font-sans text-brand-blueprint/90">
                     <div>
-                        <h3 class="font-serif text-xl text-brand-gold mb-2"><strong>Edible Artifacts</strong></h3>
-                        <p>All sales are final for edible compositions and perishable items. We cannot accept returns on food products.</p>
+                        <h3 class="font-serif text-xl text-brand-soul mb-2 font-bold">Digital Products & Consultations</h3>
+                        <p>Because of the immediate nature of digital downloads and the reserved time of 1:1 consultations, <strong>all sales on digital PDFs, digital templates, and Somatic Audits are final and non-refundable</strong>.</p>
                     </div>
                     <div>
-                        <h3 class="font-serif text-xl text-brand-gold mb-2"><strong>Journals & Non-Perishables</strong></h3>
-                        <p>Unused and unopened journals or tools may be returned within 14 days of receipt. Return shipping costs are the responsibility of the customer.</p>
+                        <h3 class="font-serif text-xl text-brand-soul mb-2 font-bold">Physical Journals & Non-Perishables</h3>
+                        <p>Unused and unopened journals or box kits may be returned within 14 days of receipt. Return shipping costs are the responsibility of the customer. Please contact us to initiate a return.</p>
                     </div>
                 </div>
             </section>
@@ -130,32 +120,25 @@
         </div>
     </main>
 
-    <footer class="bg-brand-dark text-brand-gray border-t border-brand-gold/20">
-        <div class="max-w-2xl mx-auto px-6 py-8">
-            <div class="flex flex-col items-center">
-                <div class="flex justify-center space-x-6 mb-6">
-                    <a href="https://www.instagram.com/thegildedspoonshoppe/" target="_blank" class="text-brand-light hover:text-brand-gold transition-colors">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919 4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg>
-                    </a>
-                    <a href="https://www.facebook.com/dimple.mckinney" target="_blank" class="text-brand-light hover:text-brand-gold transition-colors">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.494v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.323-1.325z"/></svg>
-                    </a>
-  <a href="https://www.linkedin.com/in/dimple-mckinney/" target="_blank" class="text-brand-light hover:text-brand-gold transition-colors">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                    </a>
-               
-                </div>
-
-                <div class="flex flex-row justify-center space-x-8 mb-6">
-                    <a href="contact.html" class="font-sans text-brand-light hover:text-brand-gold transition font-medium text-[10px] uppercase tracking-widest">Contact Us</a>
-                    <a href="policies.html" class="font-sans text-brand-light transition font-medium text-[10px] uppercase tracking-widest">Order Fulfillment & Delivery</a>
-                </div>
+    <footer class="bg-brand-blueprint text-brand-process pt-16 pb-8 border-t border-brand-process/30">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <img src="Logo No Background.jpg" alt="The Gilded Spoon Tree Logo" class="h-24 mx-auto mb-8 filter invert opacity-50">
+            <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-8 mb-8 font-montserrat text-xs uppercase tracking-widest text-brand-canvas/80">
+                <a href="contact.html" class="hover:text-brand-jolt transition">Contact Us</a>
+                <a href="policies.html" class="hover:text-brand-jolt transition">Order Fulfillment & Delivery</a>
             </div>
-            <div class="pt-6 border-t border-brand-gray/10 text-center text-[9px] text-brand-gray/30">
-                &copy; 2026 The Gilded Spoon Shoppe | McKinney, Texas
-            </div>
+            <p class="font-sans text-[10px] leading-relaxed max-w-xl mx-auto mb-4 opacity-60">
+                Disclaimer: The Gilded Spoon Shoppe provides somatic and sensory design education. It is not a substitute for professional medical advice, diagnosis, or occupational therapy. Edible products are prepared in a home kitchen that handles allergens including wheat, dairy, eggs, soy, and nuts.
+            </p>
+            <p class="font-serif text-sm opacity-80">&copy; 2026 The Gilded Spoon Shoppe | McKinney, Texas</p>
         </div>
     </footer>
-
+    <script>
+        const hamburgerButton = document.getElementById('hamburger-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if(hamburgerButton) {
+            hamburgerButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+        }
+    </script>
 </body>
 </html>
