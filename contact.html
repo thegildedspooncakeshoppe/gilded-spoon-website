@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | The Gilded Spoon Shoppe</title>
-    <meta name="description" content="Reach out to The Gilded Spoon Atelier for Somatic Kitchen Audits, Sensory Parties, and wholesale partnerships.">
+    <meta name="description" content="Reach out to The Gilded Spoon Atelier for Sensory Workshop Labs, Sensory Parties, and wholesale partnerships.">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Great+Vibes&family=Libre+Baskerville:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -57,7 +57,7 @@
              <div class="hidden md:flex items-center space-x-8 font-medium text-xs tracking-widest uppercase">
                 <a href="shoppe.html" class="text-brand-light hover:text-brand-gold transition">The Shoppe</a>
                 <a href="book.html" class="text-brand-light hover:text-brand-gold transition">The Journal</a>
-                <a href="workshop.html" class="text-brand-light hover:text-brand-gold transition">Consulting</a>
+                <a href="workshop.html" class="text-brand-light hover:text-brand-gold transition">Workshops</a>
                 <a href="events.html" class="text-brand-light hover:text-brand-gold transition">Parties</a>
                 <a href="contact.html" class="text-brand-gold hover:text-brand-light transition">Contact</a>
             </div>
@@ -70,7 +70,7 @@
         <div id="mobile-menu" class="hidden md:hidden mt-4 px-4 pb-4 bg-brand-navy text-center">
             <a href="shoppe.html" class="block py-3 text-brand-light uppercase tracking-widest">The Shoppe</a>
             <a href="book.html" class="block py-3 text-brand-light uppercase tracking-widest">The Journal</a>
-            <a href="workshop.html" class="block py-3 text-brand-light uppercase tracking-widest">Consulting</a>
+            <a href="workshop.html" class="block py-3 text-brand-light uppercase tracking-widest">Workshops</a>
             <a href="events.html" class="block py-3 text-brand-light uppercase tracking-widest">Parties</a>
             <a href="contact.html" class="block py-3 text-brand-gold font-bold uppercase tracking-widest">Contact</a>
         </div>
@@ -80,7 +80,7 @@
         <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')]"></div>
         <div class="max-w-4xl mx-auto px-6 relative z-10">
             <h1 class="font-serif text-4xl md:text-6xl font-bold text-white leading-tight mb-4">Connect with the Atelier</h1>
-            <p class="text-base md:text-lg text-brand-light/90 font-serif italic max-w-2xl mx-auto leading-relaxed">Whether you are inquiring about a Somatic Kitchen Audit, a Sensory-Friendly Party, or wholesale partnerships, we would love to hear from you.</p>
+            <p class="text-base md:text-lg text-brand-light/90 font-serif italic max-w-2xl mx-auto leading-relaxed">Whether you are inquiring about reserving a Sensory Workshop Lab&trade; seat, booking a Sensory-Friendly Party, or wholesale collection partnerships, we would love to hear from you.</p>
         </div>
     </header>
 
@@ -102,17 +102,35 @@
 
                 <div>
                     <label class="block text-[10px] font-sans font-bold text-brand-navy uppercase tracking-widest mb-3 pl-2">Subject of Inquiry</label>
-                    <select name="subject" class="w-full px-6 py-4 bg-brand-light border border-brand-gold/20 rounded-full focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition appearance-none text-brand-dark cursor-pointer">
+                    <select id="subject-selector" name="subject" class="w-full px-6 py-4 bg-brand-light border border-brand-gold/20 rounded-full focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition appearance-none text-brand-dark cursor-pointer">
                         <option value="General Inquiry">General Inquiry</option>
-                        <option value="Somatic Kitchen Audit">Somatic Kitchen Audit</option>
+                        <option value="Sensory Workshop Lab">Sensory Workshop Lab Reservation</option>
                         <option value="Sensory Party Booking">Sensory Party Booking</option>
-                        <option value="Wholesale & Retail">Wholesale & Retail Stocking</option>
+                        <option value="Wholesale & Retail">Wholesale &amp; Retail Stocking</option>
                     </select>
                 </div>
 
                 <div>
-                    <label class="block text-[10px] font-sans font-bold text-brand-navy uppercase tracking-widest mb-3 pl-2">Your Message</label>
-                    <textarea name="message" rows="6" required class="w-full px-6 py-5 bg-brand-light border border-brand-gold/20 rounded-3xl focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition text-brand-dark resize-none"></textarea>
+                    <label class="block text-[10px] font-sans font-bold text-brand-navy uppercase tracking-widest mb-3 pl-2">How Do You Best Process Communication?</label>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                        <label class="flex items-center p-4 bg-brand-light border border-brand-gold/10 rounded-2xl cursor-pointer hover:border-brand-gold/40 transition">
+                            <input type="radio" name="communication_preference" value="Email" checked class="accent-brand-navy h-4 w-4">
+                            <span class="ml-3 text-xs font-medium text-brand-navy">Email <span class="block text-[10px] opacity-60 font-normal">Structured text updates</span></span>
+                        </label>
+                        <label class="flex items-center p-4 bg-brand-light border border-brand-gold/10 rounded-2xl cursor-pointer hover:border-brand-gold/40 transition">
+                            <input type="radio" name="communication_preference" value="Text Message" class="accent-brand-navy h-4 w-4">
+                            <span class="ml-3 text-xs font-medium text-brand-navy">Text Message <span class="block text-[10px] opacity-60 font-normal">Quick, functional alerts</span></span>
+                        </label>
+                        <label class="flex items-center p-4 bg-brand-light border border-brand-gold/10 rounded-2xl cursor-pointer hover:border-brand-gold/40 transition">
+                            <input type="radio" name="communication_preference" value="Phone Call" class="accent-brand-navy h-4 w-4">
+                            <span class="ml-3 text-xs font-medium text-brand-navy">Phone Call <span class="block text-[10px] opacity-60 font-normal">I will send an agenda first</span></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-[10px] font-sans font-bold text-brand-navy uppercase tracking-widest mb-3 pl-2">Your Guided Message</label>
+                    <textarea id="message-field" name="message" rows="8" required class="w-full px-6 py-5 bg-brand-light border border-brand-gold/20 rounded-3xl focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition text-brand-dark resize-none font-sans text-sm leading-relaxed"></textarea>
                 </div>
 
                 <div class="text-center pt-4">
@@ -152,18 +170,56 @@
                     &copy; 2026 The Gilded Spoon Shoppe | McKinney, Texas
                 </p>
                 <p class="max-w-xl mx-auto font-sans text-[9px] leading-relaxed text-brand-gray/20 italic">
-                    Disclaimer: The Gilded Spoon Shoppe provides somatic and sensory design education. It is not a substitute for professional medical advice, diagnosis, or occupational therapy. Edible products are prepared in a home kitchen that handles allergens including wheat, dairy, eggs, soy, and nuts.
+                    Disclaimer: The Gilded Spoon Shoppe provides sensory design education. It is not a substitute for professional medical advice, diagnosis, or occupational therapy. Edible products are prepared in a home kitchen that handles allergens including wheat, dairy, eggs, soy, and nuts.
                 </p>
             </div>
         </div>
     </footer>
 
     <script>
+        // Mobile Menu Button Logic
         const hamburgerButton = document.getElementById('hamburger-button');
         const mobileMenu = document.getElementById('mobile-menu');
         if(hamburgerButton) {
             hamburgerButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
         }
+
+        // Low Friction Smart Contextual Form Scripting
+        document.addEventListener('DOMContentLoaded', () => {
+            const subjectSelector = document.getElementById('subject-selector');
+            const messageField = document.getElementById('message-field');
+
+            const inquiryTemplates = {
+                'General Inquiry': "Hi Dimple,\n\nI'd love to connect with the Atelier regarding...",
+                
+                'Sensory Workshop Lab': "Hi Dimple,\n\nI would love to reserve a seat (or organize a signature cohort) for the Sensory Workshop Lab&trade;!\n\n- Preferred Month or Event Date:\n- Estimated Number of Seats Needed:\n- Any unique sensory needs or accommodations you can support me with:",
+                
+                'Sensory Party Booking': "Hi Dimple,\n\nI'm looking to coordinate a sensory-friendly party or full-service celebration without the overwhelm!\n\n- Projected Guest Count:\n- Preferred Dates / Times:\n- Age Range of Celebrants:\n- Vision or Core Themes for the Layout:",
+                
+                'Wholesale & Retail': "Hi Dimple,\n\nI am interested in carrying your artisan works (My Edible Autobiography Journal / Handmade Signature Canvas Recipe Panels) in our collection!\n\n- Retail Entity Name & Web Address:\n- Operational Location:\n- Targeted Items & Projected Initial Stock Quantities:"
+            };
+
+            function populateGuidedText() {
+                const currentSelection = subjectSelector.value;
+                if(inquiryTemplates[currentSelection]) {
+                    messageField.value = inquiryTemplates[currentSelection];
+                }
+            }
+
+            // Sync text inputs on option change
+            subjectSelector.addEventListener('change', populateGuidedText);
+
+            // Read inbound URL parameters dynamically (Allows quick linking like contact.html?subject=Sensory Workshop Lab)
+            const URLSearchParameters = new URLSearchParams(window.location.search);
+            const targetedSubject = URLSearchParameters.get('subject');
+            
+            if(targetedSubject && inquiryTemplates[targetedSubject]) {
+                subjectSelector.value = targetedSubject;
+            }
+            
+            // Fire layout assignment smoothly on arrival
+            populateGuidedText();
+        });
     </script>
 </body>
 </html>
