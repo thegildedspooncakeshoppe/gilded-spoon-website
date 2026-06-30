@@ -47,14 +47,7 @@
     </script>
     <style>
         body { background-color: #F4F1ED; color: #1C161E; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
-        
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .letter-line { opacity: 0; }
-        .animate-fadeInUp { animation: fadeInUp 0.8s ease-out forwards; }
-        
+        /* Cleaned obsolete loading animations to speed up runtime visual compilation */
         .testimonial-slide { transition: opacity 1s ease-in-out; }
     </style>
 </head>
@@ -96,14 +89,14 @@
         <div class="max-w-6xl mx-auto px-6 relative z-10">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div class="text-left">
-                    <span class="font-hand text-2xl md:text-3xl text-brand-gold block mb-4 letter-line">Five layers of sensory design. Zero layers of masking. Stop Performing and Start Feeling!</span>
-                    <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight letter-line">
+                    <span class="font-hand text-2xl md:text-3xl text-brand-gold block mb-4">Five layers of sensory design. Zero layers of masking. Stop Performing and Start Feeling!</span>
+                    <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight">
                         Your Story is <br><span class="italic text-brand-gold">Architecture.</span>
                     </h1>
-                    <p class="text-base md:text-lg text-brand-light mb-10 max-w-lg leading-relaxed opacity-90 letter-line">
+                    <p class="text-base md:text-lg text-brand-light mb-10 max-w-lg leading-relaxed opacity-90">
                         A sensory sanctuary for deep feelers. Discover the proprietary The 5-Layer Framework&trade; designed by a former nurse to ground your nervous system through the language of cake and color.
                     </p>
-                    <div class="flex flex-col sm:flex-row gap-5 letter-line text-xs tracking-widest font-bold uppercase">
+                    <div class="flex flex-col sm:flex-row gap-5 text-xs tracking-widest font-bold uppercase">
                         <a href="shoppe.html" class="inline-block bg-brand-gold text-brand-dark py-4 px-10 rounded-full hover:bg-brand-gold-hover transition-all shadow-xl text-center">
                             Step Into The Shoppe
                         </a>
@@ -112,7 +105,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="relative letter-line flex justify-center items-center">
+                <div class="relative flex justify-center items-center">
                     <div class="absolute -inset-4 bg-brand-gold/10 rounded-full blur-3xl"></div>
                     <img src="https://imgur.com/XCKFGH2.png" alt="The Gilded Spoon Logo" class="relative object-cover aspect-[4/5] rounded-t-full rounded-b-xl shadow-[0_20px_50px_rgba(0,0,0,0.5)] border-2 border-brand-gold/30 hover:-translate-y-2 transition-transform duration-700 w-full max-w-[280px] md:max-w-[360px] lg:max-w-[400px]">
                 </div>
@@ -234,7 +227,7 @@
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919 4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg>
                     </a>
                     <a href="https://www.facebook.com/dimple.mckinney" target="_blank" class="hover:text-brand-gold transition-colors">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.494v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12ีv9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.323-1.325z"/></svg>
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.494v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.323-1.325z"/></svg>
                     </a>
                     <a href="https://www.linkedin.com/in/dimple-mckinney/" target="_blank" class="hover:text-brand-gold transition-colors">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
@@ -267,13 +260,7 @@
             hamburgerButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
         }
 
-        document.addEventListener('DOMContentLoaded', () => {
-            const letterLines = document.querySelectorAll('.letter-line');
-            letterLines.forEach((line, index) => {
-                setTimeout(() => { line.classList.add('animate-fadeInUp'); }, 500 + (index * 300));
-            });
-        });
-
+        // Retained the functional cyclic testimonial carousel configuration exclusively
         document.addEventListener('DOMContentLoaded', () => {
             const testimonials = document.querySelectorAll('.testimonial-slide');
             if (testimonials.length > 1) {
