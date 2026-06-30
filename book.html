@@ -130,8 +130,8 @@
     <section class="py-20 bg-brand-navy">
         <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
             
-            <div class="relative transform -rotate-2 border-4 border-white shadow-2xl max-w-[280px] md:max-w-[320px] mx-auto bg-white">
-                 <img src="https://imgur.com/qQK8A7H.png" alt="Cover art for My Edible Autobiography" class="w-full">
+            <div class="relative transform -rotate-2 border-4 border-white shadow-2xl max-w-[280px] md:max-w-[320px] mx-auto bg-white overflow-hidden">
+                 <img src="https://imgur.com/qQK8A7H.png" alt="Cover art for My Edible Autobiography" class="w-full h-auto object-contain block">
             </div>
             
             <div class="bg-white p-8 md:p-10 shadow-lg border border-brand-gold/20 rounded-3xl transform rotate-1 relative mt-8 md:mt-0">
@@ -226,10 +226,10 @@
                 </div>
 
                 <div class="flex flex-row justify-center space-x-8 mb-6 text-brand-light font-medium text-[10px] uppercase tracking-[0.2em]">
-    <a href="contact.html" class="hover:text-brand-gold transition-colors">Contact Us</a>
-    <a href="partnerships.html" class="hover:text-brand-gold transition-colors">Partnerships</a>
-    <a href="policies.html" class="hover:text-brand-gold transition-colors">Order Fulfillment & Delivery</a>
-</div>
+                    <a href="contact.html" class="hover:text-brand-gold transition-colors">Contact Us</a>
+                    <a href="partnerships.html" class="hover:text-brand-gold transition-colors">Partnerships</a>
+                    <a href="policies.html" class="hover:text-brand-gold transition-colors">Order Fulfillment & Delivery</a>
+                </div>
             </div>
 
             <div class="pt-6 border-t border-brand-gray/10 text-center">
@@ -242,6 +242,15 @@
             </div>
         </div>
     </footer>
+
+    <div id="lightbox" class="lightbox">
+        <span class="absolute top-5 right-8 text-white text-4xl cursor-pointer hover:text-brand-gold transition-colors" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" class="lightbox-img shadow-2xl rounded-sm" src="" alt="Gallery Image">
+        <div class="flex gap-4 mt-6">
+            <button class="font-sans font-bold text-xs tracking-widest uppercase border border-white text-white py-3 px-8 rounded-full hover:bg-brand-gold hover:border-brand-gold hover:text-brand-navy transition" onclick="prevImage()">Previous</button>
+            <button class="font-sans font-bold text-xs tracking-widest uppercase border border-white text-white py-3 px-8 rounded-full hover:bg-brand-gold hover:border-brand-gold hover:text-brand-navy transition" onclick="nextImage()">Next</button>
+        </div>
+    </div>
 
     <script>
         // Mobile Menu
@@ -289,15 +298,6 @@
             });
         }
     </script>
-
-    <div id="lightbox" class="lightbox">
-        <span class="absolute top-5 right-8 text-white text-4xl cursor-pointer hover:text-brand-gold transition-colors" onclick="closeLightbox()">&times;</span>
-        <img id="lightbox-img" class="lightbox-img shadow-2xl rounded-sm" src="" alt="Gallery Image">
-        <div class="flex gap-4 mt-6">
-            <button class="font-sans font-bold text-xs tracking-widest uppercase border border-white text-white py-3 px-8 rounded-full hover:bg-brand-gold hover:border-brand-gold hover:text-brand-navy transition" onclick="prevImage()">Previous</button>
-            <button class="font-sans font-bold text-xs tracking-widest uppercase border border-white text-white py-3 px-8 rounded-full hover:bg-brand-gold hover:border-brand-gold hover:text-brand-navy transition" onclick="nextImage()">Next</button>
-        </div>
-    </div>
 
 </body>
 </html>
