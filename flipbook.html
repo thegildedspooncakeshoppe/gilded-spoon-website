@@ -19,7 +19,7 @@
     <link rel="manifest" href="/site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Great+Vibes&family=Libre+Baskerville:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">        
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Great+Vibes&family=Libre+Baskerville:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">        
     <script src="https://cdn.tailwindcss.com"></script>
 <script>
     tailwind.config = {
@@ -61,17 +61,28 @@
     <style>
         body { background-color: #0A2342; color: #F4F1ED; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
         .bg-texture { background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png'); }
-        .lightbox-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.95); display: flex; justify-content: center; align-items: center; z-index: 1000; opacity: 0; visibility: hidden; transition: opacity 0.3s ease; backdrop-filter: blur(10px); }
+        
+        /* Updated Split-View Lightbox Styles */
+        .lightbox-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(10, 35, 66, 0.95); display: flex; justify-content: center; align-items: center; z-index: 1000; opacity: 0; visibility: hidden; transition: opacity 0.3s ease; backdrop-filter: blur(10px); }
         .lightbox-overlay.active { opacity: 1; visibility: visible; }
-        .lightbox-content { position: relative; max-width: 90vw; max-height: 90vh; display: flex; justify-content: center; align-items: center; }
-        .lightbox-content img { max-width: 100%; max-height: 85vh; object-fit: contain; border: 4px solid #fff; border-radius: 4px; box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5); }
+        .lightbox-content { position: relative; width: 90vw; max-width: 1000px; max-height: 85vh; display: flex; justify-content: center; align-items: center; }
+        
         .lightbox-close, .lightbox-nav { position: absolute; color: white; cursor: pointer; z-index: 1001; transition: color 0.2s ease; }
         .lightbox-close:hover, .lightbox-nav:hover { color: #D4AF37; }
         .lightbox-close { top: -50px; right: 0; font-size: 2.5rem; }
         .lightbox-nav { font-size: 3rem; padding: 20px; top: 50%; transform: translateY(-50%); }
-        .lightbox-nav.prev { left: -100px; }
-        .lightbox-nav.next { right: -100px; }
-        @media (max-width: 1024px) { .lightbox-nav.prev { left: -50px; font-size: 2rem; } .lightbox-nav.next { right: -50px; font-size: 2rem; } }
+        .lightbox-nav.prev { left: -80px; }
+        .lightbox-nav.next { right: -80px; }
+        
+        @media (max-width: 1024px) { 
+            .lightbox-nav.prev { left: -40px; font-size: 2rem; } 
+            .lightbox-nav.next { right: -40px; font-size: 2rem; } 
+            .lightbox-close { top: -45px; right: 10px; }
+        }
+        @media (max-width: 768px) {
+            .lightbox-nav { display: none; }
+            .lightbox-content { max-height: 90vh; }
+        }
     </style>
 </head>
 <body class="font-sans">
@@ -119,120 +130,136 @@
                 <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(0)">
                     <img src="images/cake23.jpg" alt="Fresh Berry" class="w-full h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
                     <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">View Detail</span>
+                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">Read Story</span>
                     </div>
                 </div>
                 <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(1)">
                     <img src="images/cake24.jpg" alt="Succulent" class="w-full h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
                     <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">View Detail</span>
+                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">Read Story</span>
                     </div>
                 </div>
                 <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(2)">
                     <img src="images/cake3.jpg" alt="Floral Tiered" class="w-full h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
                     <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">View Detail</span>
+                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">Read Story</span>
                     </div>
                 </div>
                 <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(3)">
                     <img src="images/cake5.jpg" alt="Chocolate Drip" class="w-full h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
                     <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">View Detail</span>
+                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">Read Story</span>
                     </div>
                 </div>
                 <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(4)">
                     <img src="images/cake6.jpg" alt="Pastel Ombre" class="w-full h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
                     <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">View Detail</span>
+                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">Read Story</span>
                     </div>
                 </div>
                 <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(5)">
                     <img src="images/cake8.jpg" alt="White and Green" class="w-full h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
                     <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">View Detail</span>
+                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">Read Story</span>
                     </div>
                 </div>
                 <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(6)">
                     <img src="images/cake9.jpg" alt="Pink Rose" class="w-full h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
                     <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">View Detail</span>
+                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">Read Story</span>
                     </div>
                 </div>
                 <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(7)">
                     <img src="images/cake10.jpg" alt="Minimalist Modern" class="w-full h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
                     <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">View Detail</span>
+                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">Read Story</span>
                     </div>
                 </div>
                 <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(8)">
                     <img src="images/cake11.jpg" alt="Rustic Woodland" class="w-full h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
                     <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">View Detail</span>
+                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">Read Story</span>
                     </div>
                 </div>
                 <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(9)">
                     <img src="images/cake12.jpg" alt="Gold Leaf" class="w-full h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
                     <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">View Detail</span>
+                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">Read Story</span>
                     </div>
                 </div>
                 <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(10)">
                     <img src="images/cake13.jpg" alt="Chocolate Ganache" class="w-full h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
                     <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">View Detail</span>
+                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">Read Story</span>
                     </div>
                 </div>
                 <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(11)">
                     <img src="images/cake14.jpg" alt="Fruit Topped" class="w-full h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
                     <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">View Detail</span>
+                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">Read Story</span>
                     </div>
                 </div>
                 <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(12)">
                     <img src="images/cake16.jpg" alt="Geometric Design" class="w-full h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
                     <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">View Detail</span>
+                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">Read Story</span>
                     </div>
                 </div>
                 <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(13)">
                     <img src="images/cake17.jpg" alt="Hand Painted" class="w-full h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
                     <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">View Detail</span>
+                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">Read Story</span>
                     </div>
                 </div>
                 <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(14)">
                     <img src="images/cake18.jpg" alt="Cupcakes" class="w-full h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
                     <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">View Detail</span>
+                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">Read Story</span>
                     </div>
                 </div>
                 <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(15)">
                     <img src="images/cake19.jpg" alt="Mini Cakes" class="w-full h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
                     <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">View Detail</span>
+                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">Read Story</span>
                     </div>
                 </div>
                 <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(16)">
                     <img src="images/cake20.jpg" alt="Dessert Display" class="w-full h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
                     <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">View Detail</span>
+                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">Read Story</span>
                     </div>
                 </div>
                 <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(17)">
                     <img src="images/cake21.jpg" alt="Gold Accents" class="w-full h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
                     <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">View Detail</span>
+                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">Read Story</span>
                     </div>
                 </div>
             </div>
         </div>
 
         <div id="lightbox" class="lightbox-overlay">
-            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+            <div class="absolute inset-0 cursor-pointer" onclick="closeLightbox()"></div>
+            
             <div class="lightbox-content">
-                <span class="lightbox-nav prev" onclick="changeImage(-1)">&#10094;</span>
-                <img id="lightbox-img" src="" alt="Gallery Detail">
-                <span class="lightbox-nav next" onclick="changeImage(1)">&#10095;</span>
+                <span class="lightbox-nav prev" onclick="changeImage(-1); event.stopPropagation();">&#10094;</span>
+                <span class="lightbox-nav next" onclick="changeImage(1); event.stopPropagation();">&#10095;</span>
+                <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+                
+                <div class="bg-brand-light text-brand-dark w-full rounded-3xl overflow-hidden shadow-2xl grid grid-cols-1 md:grid-cols-2 max-h-[80vh] md:max-h-[75vh] overflow-y-auto md:overflow-hidden relative z-10">
+                    
+                    <div class="bg-brand-dark/5 flex items-center justify-center p-6 md:p-8 border-b md:border-b-0 md:border-r border-brand-gold/10 overflow-hidden h-72 md:h-full">
+                        <img id="lightbox-img" src="" alt="Gallery Detail" class="max-w-full max-h-full object-contain rounded-xl shadow-md">
+                    </div>
+                    
+                    <div class="p-8 md:p-12 flex flex-col justify-center overflow-y-auto h-auto md:h-full text-left">
+                        <span class="text-[10px] font-sans font-bold tracking-widest text-brand-gold uppercase block mb-2">Emotional Architecture</span>
+                        <h2 id="lightbox-title" class="font-serif text-2xl md:text-3xl font-bold text-brand-navy mb-4 leading-tight"></h2>
+                        <div class="w-12 h-0.5 bg-brand-gold/40 mb-6"></div>
+                        <p id="lightbox-story" class="font-sans text-brand-dark/90 text-sm md:text-base leading-relaxed font-light whitespace-pre-line"></p>
+                    </div>
+                    
+                </div>
             </div>
         </div>
     </main>
@@ -296,17 +323,105 @@
         const mobileMenu = document.getElementById('mobile-menu');
         hamburgerButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
 
-        const images = [
-            "images/cake23.jpg", "images/cake24.jpg", "images/cake3.jpg", "images/cake5.jpg", 
-            "images/cake6.jpg", "images/cake8.jpg", "images/cake9.jpg", "images/cake10.jpg", 
-            "images/cake11.jpg", "images/cake12.jpg", "images/cake13.jpg", "images/cake14.jpg", 
-            "images/cake16.jpg", "images/cake17.jpg", "images/cake18.jpg", "images/cake19.jpg", 
-            "images/cake20.jpg", "images/cake21.jpg"
+        // Synchronized Image and Narrative Content Structure array
+        const portfolioData = [
+            { 
+                src: "images/cake23.jpg", 
+                title: "The Velocity of Stillness", 
+                story: "This layout explores raw organic textures to slow down overstimulated nervous systems. By organizing geometric fruit patterns across a deep velvet base, it provides visual anchors that ground working memory and offset social performance stress." 
+            },
+            { 
+                src: "images/cake24.jpg", 
+                title: "Somatic Desert Architecture", 
+                story: "Inspired by resilient ecosystem patterns, this design balances clean sand-toned frosting curves with soft, sculptural botanical features. It highlights structural protection frameworks, translating emotional processing into physical layer definitions." 
+            },
+            { 
+                src: "images/cake3.jpg", 
+                title: "The Multilayer Narrative", 
+                story: "A tiered workspace exploration built directly on the 5-Layer Sensory Framework™. Moving from a heavy, structurally sound foundation up to light, flowing floral accents, it mimics the incremental safety steps of unmasking." 
+            },
+            { 
+                src: "images/cake5.jpg", 
+                title: "Tactile Gravity Experiments", 
+                story: "An intentional contrast play utilizing dynamic, rich color drops against a predictable background grid. This execution directly focuses on sensory-sensitive focus points, swapping out chaotic environments for clean, interactive texture flows." 
+            },
+            { 
+                src: "images/cake6.jpg", 
+                title: "Decompressed Sky Field", 
+                story: "An ethereal ombre workspace mimicking biological calming fields. The gradual shifting of light hues signals environmental safety and ease to hyper-vigilant minds, serving as a functional canvas for emotional regulation." 
+            },
+            { 
+                src: "images/cake8.jpg", 
+                title: "The Unmasked Meadow", 
+                story: "Emphasizing soft, monochromatic botanical lines over pristine, rigid perfection. This piece provides deep feelers with explicit permission to be beautifully messy, capturing authentic natural form instead of synthetic performance armor." 
+            },
+            { 
+                src: "images/cake9.jpg", 
+                title: "Nostalgic Infusion Labs", 
+                story: "An architecture exploration accessing classic, memory-linked floral arrays to anchor present mood levels. The gentle layout handles sensory overstimulation through the therapeutic cadence of deliberate, repetitive line structures." 
+            },
+            { 
+                src: "images/cake10.jpg", 
+                title: "Minimalist Cognitive Boundaries", 
+                story: "A hyper-clean, zero-clutter canvas layout designed to safeguard working memory. Stripping away heavy visual noise provides a structured, low-friction sanctuary where deep thinkers can process executive choices smoothly." 
+            },
+            { 
+                src: "images/cake11.jpg", 
+                title: "The Grounded Woodland", 
+                story: "A earthy, high-texture workspace modeled after ancient forest floor configurations. It emphasizes rugged bark finishes and deep botanical anchors to trigger biological calming mechanisms on high-fatigue days." 
+            },
+            { 
+                src: "images/cake12.jpg", 
+                title: "The Illuminated Fracture", 
+                story: "This design explores structural cracks layered with luminous metallic accents. It stands as a beautiful metaphor for processing emotional fractures, proving that healing pathways can be mapped out with luxury details." 
+            },
+            { 
+                src: "images/cake13.jpg", 
+                title: "Deep Sensory Submersion", 
+                story: "Utilizing dark, uniform color densities to provide a comforting visual cocoon. The rich monochromatic depth eliminates environmental parsing requirements, creating a safe room for overstimulated cognitive states." 
+            },
+            { 
+                src: "images/cake14.jpg", 
+                title: "The Spatial Harvesting Grid", 
+                story: "A rhythmically balanced composition showcasing seasonal culinary variables. The structured placement of organic matter helps intercept executive fatigue by establishing clean, predictable visual routines." 
+            },
+            { 
+                src: "images/cake16.jpg", 
+                title: "Symmetrical Logic Panels", 
+                story: "An explicit exercise in balanced geometric line-mapping. This layout coordinates hard structural facets with soft cream accents, creating a calm, predictable haven for analytical, neurodivergent minds." 
+            },
+            { 
+                src: "images/cake17.jpg", 
+                title: "The Expressive Impulse Canvas", 
+                story: "A fluid, impressionist experiment that entirely steps away from recipe constraints. It prioritizes direct emotional mark-making, offering deep feelers an organic channel for non-verbal emotional expression." 
+            },
+            { 
+                src: "images/cake18.jpg", 
+                title: "Bite-Sized Sensory Cohorts", 
+                story: "A playful distribution of micro-canvases designed for community interaction without social anxiety. Each piece functions as a self-contained layout for color-taste and personal space experiments." 
+            },
+            { 
+                src: "images/cake19.jpg", 
+                title: "The Mini Sanctuary Modules", 
+                story: "Intimate, individual-scale design architectures constructed to protect personal boundary spaces. These structures demonstrate that emotional architecture does not require a grand scale to deliver profound grounding results." 
+            },
+            { 
+                src: "images/cake20.jpg", 
+                title: "The Collaborative Sensory Pantry", 
+                story: "A multi-layered exhibition layout designed for community gatherings. It maps shared human stories through interactive color landscapes, entirely eliminating stuffy, performance-driven corporate networking routines." 
+            },
+            { 
+                src: "images/cake21.jpg", 
+                title: "The Golden Thread Framework", 
+                story: "Capturing the core spine of our atelier brand. This design threads delicate metallic highlights across a rich, dark workspace canvas, locking in emotional transition and celebrating the structure of unique minds." 
+            }
         ];
         
         let currentIndex = 0;
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxTitle = document.getElementById('lightbox-title');
+        const lightboxStory = document.getElementById('lightbox-story');
 
         function openLightbox(index) {
             currentIndex = index;
@@ -322,12 +437,16 @@
 
         function changeImage(direction) {
             currentIndex += direction;
-            if (currentIndex >= images.length) currentIndex = 0;
-            if (currentIndex < 0) currentIndex = images.length - 1;
+            if (currentIndex >= portfolioData.length) currentIndex = 0;
+            if (currentIndex < 0) currentIndex = portfolioData.length - 1;
             updateLightboxImage();
         }
 
-        function updateLightboxImage() { lightboxImg.src = images[currentIndex]; }
+        function updateLightboxImage() { 
+            lightboxImg.src = portfolioData[currentIndex].src; 
+            lightboxTitle.textContent = portfolioData[currentIndex].title;
+            lightboxStory.textContent = portfolioData[currentIndex].story;
+        }
 
         lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
 
