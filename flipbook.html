@@ -238,8 +238,8 @@
                 <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(18)">
                     <img src="images/MihirsBirthdayCake.jpg" alt="Mihir's Birthday Cake" class="w-full h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
                     <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                    <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">Read Story</span>
-                </div>
+                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">Read Story</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -255,7 +255,7 @@
                 <div class="bg-brand-light text-brand-dark w-full rounded-3xl overflow-hidden shadow-2xl grid grid-cols-1 md:grid-cols-2 max-h-[80vh] md:max-h-[75vh] overflow-y-auto md:overflow-hidden relative z-10">
                     
                     <div class="bg-brand-dark/5 flex items-center justify-center p-6 md:p-8 border-b md:border-b-0 md:border-r border-brand-gold/10 overflow-hidden h-72 md:h-full">
-                        <img id="lightbox-img" src="" alt="Gallery Detail" class="max-w-full max-h-full object-contain rounded-xl shadow-md">
+                        <img id="lightbox-img" src="" alt="Gallery Detail" style="border:none !important; box-shadow:none !important; border-radius: 0.75rem !important; max-height: 100% !important; max-width: 100% !important;" class="object-contain block mx-auto">
                     </div>
                     
                     <div class="p-8 md:p-12 flex flex-col justify-center overflow-y-auto h-auto md:h-full text-left">
@@ -421,13 +421,12 @@
                 title: "The Golden Thread Framework", 
                 story: "Capturing the core spine of our atelier brand. This design threads delicate metallic highlights across a rich, dark workspace canvas, locking in emotional transition and celebrating the structure of unique minds." 
             },
-            {
-            src: "images/mihirsbirthdaycake.jpg", 
-            title: "The Sovereign Anchor", 
-            story: "Crafted as a landmark 50th milestone celebration, this multi-tiered architectural layout explores the archetype of the guardian to honor a profound personal history. A calming midnight navy foundation establishes an immediate visual baseline, accented by hand-sculpted golden scales and protective wings that offer a highly structured, rhythmic visual pattern to ground focus. To counteract executive fatigue and eliminate choice overwhelm, the layout pairs the central structure with a deliberate tri-flavor palette—deep chocolate, classic vanilla cream, and grounding green pistachio. This offers distinct, predictable sensory profiles that invite the individual to completely drop the weight of social performance and connect authentically with the present moment."        
-            },
-    ]; // This is the end of the portfolioData array
-       
+            { 
+                src: "images/MihirsBirthdayCake.jpg", 
+                title: "The Sovereign Anchor", 
+                story: "Crafted as a landmark 50th milestone celebration, this multi-tiered architectural layout explores the archetype of the guardian to honor a profound personal history. A calming midnight navy foundation establishes an immediate visual baseline, accented by hand-sculpted golden scales and protective wings that offer a highly structured, rhythmic visual pattern to ground focus. To counteract executive fatigue and eliminate choice overwhelm, the layout pairs the central structure with a deliberate tri-flavor palette—deep chocolate, classic vanilla cream, and grounding green pistachio. This offers distinct, predictable sensory profiles that invite the individual to completely drop the weight of social performance and connect authentically with the present moment." 
+            }
+        ];
         
         let currentIndex = 0;
         const lightbox = document.getElementById('lightbox');
