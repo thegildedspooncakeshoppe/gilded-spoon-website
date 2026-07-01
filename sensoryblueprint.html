@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="p:domain_verify" content="8497c86d445458f17cdce81e920478f2"/>
+    <title>Sensory Blueprint Calculator | The Gilded Spoon Shoppe</title>
+    <meta name="description" content="Translate abstract internal feelings into tangible environmental adjustments using our proprietary 5-Layer Sensory Framework.">
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Great+Vibes&family=Libre+Baskerville:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-dark': '#1C161E',
+                        'brand-light': '#F4F1ED',
+                        'brand-gold': '#D4AF37',
+                        'brand-gold-hover': '#E2C76A',
+                        'brand-gray': '#A09DA6',
+                        'brand-card': '#2A232F',
+                        'brand-navy': '#0A2342',
+                    },
+                    fontFamily: {
+                        'serif': ['"Playfair Display"', 'serif'],
+                        'sans': ['"Inter"', 'sans-serif'],
+                        'cursive': ['"Great Vibes"', 'cursive'],
+                        'baskerville': ['"Libre Baskerville"', 'serif'],
+                        'hand': ['"Caveat"', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { background-color: #F4F1ED; color: #1C161E; -webkit-font-smoothing: antialiased; }
+        
+        .color-btn { transition: all 0.2s cubic-bezier(0.25, 0.8, 0.25, 1); cursor: pointer; }
+        .color-btn:hover { transform: translateY(-2px); }
+        .color-btn.active { border-color: #D4AF37 !important; border-width: 4px !important; transform: scale(1.05); box-shadow: 0 6px 15px rgba(212, 175, 55, 0.3); }
+
+        .emotion-btn { transition: all 0.2s ease; text-align: left; }
+        .emotion-btn.active { background-color: #0A2342 !important; color: #F4F1ED !important; border-color: #D4AF37 !important; }
+
+        .sub-pill { transition: all 0.2s ease; }
+        .sub-pill.active { background-color: #D4AF37 !important; color: #1C161E !important; border-color: #D4AF37 !important; }
+
+        .battery-btn { transition: all 0.2s ease; }
+        .battery-btn.active-low { background-color: #EF4444 !important; color: white !important; border-color: #EF4444 !important; }
+        .battery-btn.active-med { background-color: #F59E0B !important; color: white !important; border-color: #F59E0B !important; }
+        .battery-btn.active-high { background-color: #10B981 !important; color: white !important; border-color: #10B981 !important; }
+
+        @media print {
+            body { background: white !important; }
+            .no-print { display: none !important; }
+            .print-only { display: block !important; }
+            #blueprint-result-zone { 
+                position: static !important; 
+                width: 100% !important; 
+                max-width: 100% !important; 
+                box-shadow: none !important; 
+                border: 2px solid #D4AF37 !important;
+                page-break-inside: avoid;
+                color: black !important;
+            }
+            .blueprint-text-node { color: black !important; }
+            .cake-stroke { stroke: #1C161E !important; stroke-width: 2.5px !important; }
+            * { -webkit-print-color-adjust: exact !important; print-color-adjust: exact !important; }
+        }
+    </style>
+</head>
+<body class="font-sans">
+
+    <nav class="sticky top-0 bg-brand-navy/95 backdrop-blur-lg shadow-lg z-50 border-b border-brand-gold/10 no-print">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-serif font-bold text-brand-gold text-center leading-none">
+                The Gilded Spoon
+                <span class="block text-xs font-sans font-light not-italic tracking-[0.3em] text-brand-light">SHOPPE & ATELIER</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-6 font-medium text-xs tracking-widest uppercase">
+                <a href="shoppe.html" class="text-brand-light hover:text-brand-gold transition">The Shoppe</a>
+                <a href="book.html" class="text-brand-light hover:text-brand-gold transition">The Journal</a>
+                <a href="workshop.html" class="text-brand-light hover:text-brand-gold transition">Workshops</a>
+                <a href="events.html" class="text-brand-light hover:text-brand-gold transition">Parties</a>
+                <a href="flipbook.html" class="text-brand-light hover:text-brand-gold transition">Portfolio</a>
+                <a href="contact.html" class="text-brand-light hover:text-brand-gold transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="text-center py-16 md:py-20 bg-brand-navy border-b border-brand-gold/10 relative overflow-hidden no-print">
+        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')]"></div>
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <span class="text-brand-gold font-bold tracking-[0.3em] uppercase text-xs block mb-3">Emotional Architecture Suite</span>
+            <h1 class="font-serif text-4xl md:text-5xl font-bold text-white leading-tight mb-4">Sensory Blueprint Calculator</h1>
+            <p class="text-brand-light/90 max-w-2xl mx-auto text-base md:text-lg font-serif italic leading-relaxed">
+                Map your nervous system parameters smoothly without technical confusion. Step through each layer to design your personalized physical sanctuary.
+            </p>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-4 py-12 md:py-16 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+        
+        <section class="lg:col-span-7 space-y-10 no-print">
+            
+            <div class="bg-white p-6 md:p-10 rounded-3xl shadow-xl border border-brand-gold/20">
+                <div class="flex items-center space-x-3 mb-3">
+                    <div class="w-10 h-10 rounded-full bg-brand-navy text-brand-gold flex items-center justify-center font-serif font-bold text-lg shadow-inner shrink-0">1</div>
+                    <h2 class="font-serif text-xl font-bold text-brand-navy">Layer 1 &amp; 2: Your Current Mood &amp; Color Signal (The Invitation)</h2>
+                </div>
+                
+                <div class="space-y-6 mt-6 md:ml-13">
+                    <div>
+                        <label class="block text-[11px] font-bold text-brand-navy uppercase tracking-widest mb-3">How does your nervous system feel right now?</label>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                            <button type="button" onclick="selectPalette('Sanctuary')" id="btn-sanctuary" class="emotion-btn p-4 bg-brand-light rounded-2xl border border-brand-gold/10 text-xs font-semibold text-brand-navy hover:border-brand-gold/40">
+                                Overstimulated, Scattered or Anxious
+                                <span class="block text-[9px] font-normal opacity-70 mt-0.5">I need a soft, quiet space to land and tune out the noise.</span>
+                            </button>
+                            <button type="button" onclick="selectPalette('Nostalgic')" id="btn-nostalgic" class="emotion-btn p-4 bg-brand-light rounded-2xl border border-brand-gold/10 text-xs font-semibold text-brand-navy hover:border-brand-gold/40">
+                                Untethered, Floating or Lonely
+                                <span class="block text-[9px] font-normal opacity-70 mt-0.5">I need warmth, roots, stability, and historical comfort.</span>
+                            </button>
+                            <button type="button" onclick="selectPalette('Transformation')" id="btn-transformation" class="emotion-btn p-4 bg-brand-light rounded-2xl border border-brand-gold/10 text-xs font-semibold text-brand-navy hover:border-brand-gold/40">
+                                Invisible, Small or Over-Masked
+                                <span class="block text-[9px] font-normal opacity-70 mt-0.5">I need clear boundaries, personal power, and a clean change.</span>
+                            </button>
+                            <button type="button" onclick="selectPalette('Whimsical')" id="btn-whimsical" class="emotion-btn p-4 bg-brand-light rounded-2xl border border-brand-gold/10 text-xs font-semibold text-brand-navy hover:border-brand-gold/40">
+                                Drained, Stagnant or Stuck in Fog
+                                <span class="block text-[9px] font-normal opacity-70 mt-0.5">I need a metabolic burst of fun, joy, and quick motivation.</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="palette-expansion-pane" class="bg-brand-light p-5 rounded-2xl border border-brand-gold/20 hidden">
+                        <div class="mb-4">
+                            <label class="block text-[10px] font-bold text-brand-navy uppercase tracking-widest mb-3">Pick the exact color you are drawn to:</label>
+                            <div id="square-swatches-grid" class="grid grid-cols-2 sm:grid-cols-4 gap-3"></div>
+                        </div>
+                        <div class="border-t border-brand-gold/20 pt-3 mt-3">
+                            <span class="text-[9px] font-bold tracking-widest text-brand-gold uppercase block mb-1">Color Meaning</span>
+                            <h4 id="active-hue-title" class="font-serif font-bold text-brand-navy text-sm"></h4>
+                            <p id="palette-psychology-text" class="text-xs text-brand-dark/80 mt-1 leading-relaxed font-light"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 md:p-10 rounded-3xl shadow-xl border border-brand-gold/20">
+                <div class="flex items-center space-x-3 mb-3">
+                    <div class="w-10 h-10 rounded-full bg-brand-navy text-brand-gold flex items-center justify-center font-serif font-bold text-lg shadow-inner shrink-0">2</div>
+                    <h2 class="font-serif text-xl font-bold text-brand-navy">Layer 3: Your Flavor Codex &amp; Design Style (The Memory)</h2>
+                </div>
+                <p class="text-sm text-brand-dark/80 mb-6 leading-relaxed md:ml-13">
+                    Flavor acts as an emotional time machine. Select a recipe from your filtered catalog below to open its specific recipe instructions and textured anchors.
+                </p>
+                
+                <div class="space-y-6 md:ml-13">
+                    <div>
+                        <label class="block text-[10px] font-bold text-brand-navy uppercase tracking-widest mb-2">Available Organic Recipes:</label>
+                        <div id="recipe-buttons-container" class="flex flex-wrap gap-2"></div>
+                    </div>
+
+                    <div id="recipe-card-box" class="bg-brand-light p-5 rounded-2xl border border-brand-gold/10 hidden">
+                        <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 mb-4 pb-3 border-b border-brand-gold/20">
+                            <div>
+                                <span id="recipe-chapter-num" class="text-[9px] font-mono tracking-widest uppercase text-brand-gold font-bold"></span>
+                                <h4 id="recipe-title-display" class="font-serif text-base font-bold text-brand-navy"></h4>
+                            </div>
+                            <a id="recipe-checkout-link" href="contact.html?subject=Purchase%20Panels" class="shrink-0 bg-brand-navy hover:bg-brand-gold text-white hover:text-brand-navy transition-colors text-[10px] font-sans font-bold uppercase tracking-widest py-2.5 px-4 rounded-full shadow-md text-center">
+                                Buy Canvas Panel Set
+                            </a>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs font-sans">
+                            <div>
+                                <span class="font-bold text-brand-navy block mb-1 uppercase tracking-wider text-[9px]">Ingredients Checklist:</span>
+                                <div id="recipe-ingredients" class="text-brand-dark/90 space-y-0.5 pl-2 border-l border-brand-gold/30 italic"></div>
+                            </div>
+                            <div>
+                                <span class="font-bold text-brand-navy block mb-1 uppercase tracking-wider text-[9px]">Somatic Kitchen Process:</span>
+                                <p id="recipe-ritual" class="text-brand-dark/80 font-light leading-relaxed"></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-[10px] font-bold text-brand-navy uppercase tracking-widest mb-3">Cake Decoration Style (Visual Boundary Structure)</label>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                            <label class="flex flex-col p-4 bg-brand-light border border-brand-gold/10 rounded-2xl cursor-pointer hover:border-brand-gold/50 transition text-center items-center">
+                                <input type="radio" name="blueprint_shape" value="ruin" class="accent-brand-navy h-4 w-4 mb-2" onclick="updateVisualizer()">
+                                <span class="text-xs font-bold text-brand-navy mb-1">The Ruin Style</span>
+                                <span class="text-[9px] opacity-70">Exposed side crumbs, rough frosting loops. Let go of perfection loops.</span>
+                            </label>
+                            <label class="flex flex-col p-4 bg-brand-light border border-brand-gold/10 rounded-2xl cursor-pointer hover:border-brand-gold/50 transition text-center items-center">
+                                <input type="radio" name="blueprint_shape" value="fortress" checked class="accent-brand-navy h-4 w-4 mb-2" onclick="updateVisualizer()">
+                                <span class="text-xs font-bold text-brand-navy mb-1">The Fortress Style</span>
+                                <span class="text-[9px] opacity-70">Sharp cuts, rigid square lines. Builds strong boundary structures.</span>
+                            </label>
+                            <label class="flex flex-col p-4 bg-brand-light border border-brand-gold/10 rounded-2xl cursor-pointer hover:border-brand-gold/50 transition text-center items-center">
+                                <input type="radio" name="blueprint_shape" value="cloud" class="accent-brand-navy h-4 w-4 mb-2" onclick="updateVisualizer()">
+                                <span class="text-xs font-bold text-brand-navy mb-1">The Cloud Style</span>
+                                <span class="text-[9px] opacity-70">Pillowy soft piping peaks, rounded cream curves. Signals absolute soft comfort.</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 md:p-10 rounded-3xl shadow-xl border border-brand-gold/20">
+                <div class="flex items-center space-x-3 mb-3">
+                    <div class="w-10 h-10 rounded-full bg-brand-navy text-brand-gold flex items-center justify-center font-serif font-bold text-lg shadow-inner shrink-0">3</div>
+                    <h2 class="font-serif text-xl font-bold text-brand-navy">Layer 4: Your Texture Choice &amp; Social Battery (The Anchor)</h2>
+                </div>
+                <p class="text-sm text-brand-dark/80 mb-6 leading-relaxed md:ml-13 italic">
+                    Texture grounds your awareness instantly. Pick a coping mechanism family, pick your custom garnish ingredient, and map your current social battery drainage.
+                </p>
+                
+                <div class="space-y-6 md:ml-13">
+                    <div>
+                        <label class="block text-[10px] font-bold text-brand-navy uppercase tracking-widest mb-3">Select Your Texture Style:</label>
+                        <div class="grid grid-cols-2 gap-3">
+                            <label class="flex items-center p-3 bg-brand-light border border-brand-gold/10 rounded-xl cursor-pointer hover:border-brand-gold/40 transition">
+                                <input type="radio" name="base_texture" value="snap" class="accent-brand-navy h-4 w-4" onclick="loadSubTextures('snap')">
+                                <span class="ml-2 text-xs font-bold text-brand-navy">The Snap <span class="block text-[9px] font-normal opacity-70">A sharp break to help you make firm, clear choices.</span></span>
+                            </label>
+                            <label class="flex items-center p-3 bg-brand-light border border-brand-gold/10 rounded-xl cursor-pointer hover:border-brand-gold/40 transition">
+                                <input type="radio" name="base_texture" value="crunch" checked class="accent-brand-navy h-4 w-4" onclick="loadSubTextures('crunch')">
+                                <span class="ml-2 text-xs font-bold text-brand-navy">The Crunch <span class="block text-[9px] font-normal opacity-70 whitespace-normal">A loud grind to snap your mind out of spiraling loops.</span></span>
+                            </label>
+                            <label class="flex items-center p-3 bg-brand-light border border-brand-gold/10 rounded-xl cursor-pointer hover:border-brand-gold/40 transition">
+                                <input type="radio" name="base_texture" value="chew" class="accent-brand-navy h-4 w-4" onclick="loadSubTextures('chew')">
+                                <span class="ml-2 text-xs font-bold text-brand-navy">The Chew <span class="block text-[9px] font-normal opacity-70">Elastic resistance that helps build structural resilience over a tough season.</span></span>
+                            </label>
+                            <label class="flex items-center p-3 bg-brand-light border border-brand-gold/10 rounded-xl cursor-pointer hover:border-brand-gold/40 transition">
+                                <input type="radio" name="base_texture" value="silk" class="accent-brand-navy h-4 w-4" onclick="loadSubTextures('silk')">
+                                <span class="ml-2 text-xs font-bold text-brand-navy">The Silk <span class="block text-[9px] font-normal opacity-70">A smooth velvet coating to deeply soothe worried thoughts.</span></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div id="sub-texture-box" class="bg-brand-light p-4 rounded-xl border border-brand-gold/10">
+                        <label class="block text-[9px] font-bold text-brand-gold uppercase tracking-widest mb-2">Pick Your Ingredient Garnish Tool:</label>
+                        <div id="sub-texture-pills" class="flex flex-wrap gap-2"></div>
+                    </div>
+
+                    <div>
+                        <label class="block text-[10px] font-bold text-brand-navy uppercase tracking-widest mb-3">Where is your social battery at? (Placement Strategy)</label>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+                            <button type="button" onclick="setBattery('low')" id="bat-low" class="battery-btn text-left p-4 bg-brand-light rounded-xl border border-brand-gold/10 text-xs font-bold flex flex-col justify-between">
+                                <span class="flex items-center justify-between w-full mb-1">
+                                    <span class="text-brand-navy">Low Energy (10%)</span>
+                                    <span>🪫</span>
+                                </span>
+                                <span class="text-[9px] font-normal opacity-70">Center Placement. Hides texture items safely inside the core out of view to protect your vulnerability.</span>
+                            </button>
+                            <button type="button" onclick="setBattery('med')" id="bat-med" class="battery-btn text-left p-4 bg-brand-light rounded-xl border border-brand-gold/10 text-xs font-bold flex flex-col justify-between">
+                                <span class="flex items-center justify-between w-full mb-1">
+                                    <span class="text-brand-navy">Medium Energy (50%)</span>
+                                    <span>🔋</span>
+                                </span>
+                                <span class="text-[9px] font-normal opacity-70">Border Placement. Lines tools strictly along the outer edges to lock down firm boundaries.</span>
+                            </button>
+                            <button type="button" onclick="setBattery('high')" id="bat-high" class="battery-btn text-left p-4 bg-brand-light rounded-xl border border-brand-gold/10 text-xs font-bold flex flex-col justify-between">
+                                <span class="flex items-center justify-between w-full mb-1">
+                                    <span class="text-brand-navy">Full Energy (100%)</span>
+                                    <span>⚡</span>
+                                </span>
+                                <span class="text-[9px] font-normal opacity-70">Radial Placement. Scatters elements globally across the top layer to share joy with the whole room.</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 md:p-10 rounded-3xl shadow-xl border border-brand-gold/20">
+                <div class="flex items-center space-x-3 mb-3">
+                    <div class="w-10 h-10 rounded-full bg-brand-navy text-brand-gold flex items-center justify-center font-serif font-bold text-lg shadow-inner shrink-0">4</div>
+                    <h2 class="font-serif text-xl font-bold text-brand-navy">Layer 5: The Final Touch (The Magic Shift)</h2>
+                </div>
+                <p class="text-sm text-brand-dark/80 mb-6 leading-relaxed md:ml-13">
+                    The accent is the final punctuation mark of your design statement. Choose how loud your layout wants to speak to your environment today.
+                </p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 md:ml-13">
+                    <label class="flex items-center p-4 bg-brand-light border border-brand-gold/10 rounded-xl cursor-pointer hover:border-brand-gold/50 transition">
+                        <input type="radio" name="blueprint_expression" value="crescent" class="accent-brand-navy h-4 w-4" onclick="updateVisualizer()">
+                        <span class="ml-2 text-xs font-bold text-brand-navy">The Crescent <br><span class="text-[9px] font-normal opacity-70">Organic asymmetrical line-art sweep paths.</span></span>
+                    </label>
+                    <label class="flex items-center p-4 bg-brand-light border border-brand-gold/10 rounded-xl cursor-pointer hover:border-brand-gold/50 transition">
+                        <input type="radio" name="blueprint_expression" value="crown" class="accent-brand-navy h-4 w-4" onclick="updateVisualizer()">
+                        <span class="ml-2 text-xs font-bold text-brand-navy">The Crown <br><span class="text-[9px] font-normal opacity-70">Centered, rich focal rings to mark a milestone.</span></span>
+                    </label>
+                    <label class="flex items-center p-4 bg-brand-light border border-brand-gold/10 rounded-xl cursor-pointer hover:border-brand-gold/50 transition">
+                        <input type="radio" name="blueprint_expression" value="singular" checked class="accent-brand-navy h-4 w-4" onclick="updateVisualizer()">
+                        <span class="ml-2 text-xs font-bold text-brand-navy">Singular Punctuation <br><span class="text-[9px] font-normal opacity-70">A single focused highlight point. Less noise is more.</span></span>
+                    </label>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="blueprint-result-zone" class="lg:col-span-5 sticky top-28 h-fit space-y-6">
+            
+            <div class="bg-brand-navy text-white rounded-3xl p-6 md:p-8 border-2 border-brand-gold shadow-2xl relative overflow-hidden">
+                <div class="absolute inset-0 opacity-5 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] pointer-events-none"></div>
+                
+                <div class="relative z-10 flex flex-col h-full">
+                    
+                    <div class="border-b border-brand-gold/20 pb-4 mb-6 flex justify-between items-start">
+                        <div>
+                            <span class="text-[9px] font-sans tracking-[0.2em] uppercase text-brand-gold block">Official Document</span>
+                            <h3 class="font-serif text-xl font-bold text-white">Sensory Architectural Blueprint</h3>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-[9px] font-sans tracking-[0.15em] uppercase text-brand-light/40 block">Atelier Year</span>
+                            <span class="text-xs font-mono font-bold text-brand-gold">2026</span>
+                        </div>
+                    </div>
+
+                    <div class="bg-brand-light/10 border border-brand-gold/20 rounded-2xl p-4 mb-6 flex flex-col items-center justify-center relative min-h-[260px] shadow-inner">
+                        <svg viewBox="0 0 200 180" class="w-full h-full max-h-[210px] mt-4 overflow-visible" id="cake-svg">
+                            <defs>
+                                <filter id="sketch-blur" x="-10%" y="-10%" width="120%" height="120%">
+                                    <feDropShadow dx="0" dy="6" stdDeviation="5" flood-opacity="0.4"/>
+                                </filter>
+                            </defs>
+                            
+                            <path d="M 15 160 L 185 160" stroke="#F4F1ED" stroke-width="2.5" stroke-linecap="round" class="cake-stroke opacity-40"/>
+                            
+                            <g id="svg-shape-fortress">
+                                <rect x="50" y="55" width="100" height="105" fill="#7E9A85" stroke="#F4F1ED" stroke-width="2.5" filter="url(#sketch-blur)" class="cake-fill cake-stroke transition-all duration-500"/>
+                                <line x1="50" y1="107" x2="150" y2="107" stroke="#F4F1ED" stroke-width="1.5" class="cake-stroke opacity-30"/>
+                            </g>
+                            <g id="svg-shape-cloud" class="hidden">
+                                <path d="M 45 160 C 45 35, 155 35, 155 160 Z" fill="#7E9A85" stroke="#F4F1ED" stroke-width="2.5" filter="url(#sketch-blur)" class="cake-fill cake-stroke transition-all duration-500"/>
+                                <path d="M 58 120 Q 100 100 142 120" fill="none" stroke="#F4F1ED" stroke-width="1.5" class="cake-stroke opacity-30"/>
+                            </g>
+                            <g id="svg-shape-ruin" class="hidden">
+                                <path d="M 52 160 L 47 115 L 55 105 L 48 58 L 100 52 L 152 58 L 145 105 L 153 115 L 148 160 Z" fill="#7E9A85" stroke="#F4F1ED" stroke-width="2.5" filter="url(#sketch-blur)" class="cake-fill cake-stroke transition-all duration-500"/>
+                                <path d="M 50 115 Q 100 120 148 115 M 51 72 Q 100 78 149 72" fill="none" stroke="#F4F1ED" stroke-width="1.5" stroke-dasharray="4 3" class="cake-stroke opacity-50"/>
+                            </g>
+
+                            <g id="svg-place-center">
+                                <circle cx="94" cy="95" r="4" fill="#D4AF37" stroke="#1C161E" stroke-width="0.5"/>
+                                <circle cx="106" cy="100" r="5" fill="#D4AF37" stroke="#1C161E" stroke-width="0.5"/>
+                                <circle cx="98" cy="110" r="3.5" fill="#D4AF37" stroke="#1C161E" stroke-width="0.5"/>
+                                <circle cx="102" cy="85" r="4" fill="#D4AF37" stroke="#1C161E" stroke-width="0.5"/>
+                            </g>
+                            <g id="svg-place-radial" class="hidden">
+                                <circle cx="65" cy="75" r="4" fill="#D4AF37"/><circle cx="135" cy="75" r="4" fill="#D4AF37"/>
+                                <circle cx="78" cy="120" r="4.5" fill="#D4AF37"/><circle cx="122" cy="120" r="4.5" fill="#D4AF37"/>
+                                <circle cx="100" cy="75" r="4" fill="#D4AF37"/><circle cx="100" cy="135" r="4" fill="#D4AF37"/>
+                            </g>
+                            <g id="svg-place-border" class="hidden">
+                                <circle cx="56" cy="154" r="3.5" fill="#D4AF37"/><circle cx="70" cy="154" r="3.5" fill="#D4AF37"/>
+                                <circle cx="84" cy="154" r="3.5" fill="#D4AF37"/><circle cx="98" cy="154" r="3.5" fill="#D4AF37"/>
+                                <circle cx="112" cy="154" r="3.5" fill="#D4AF37"/><circle cx="126" cy="154" r="3.5" fill="#D4AF37"/>
+                                <circle cx="140" cy="154" r="3.5" fill="#D4AF37"/>
+                                <circle cx="56" cy="60" r="3" fill="#D4AF37"/><circle cx="76" cy="57" r="3" fill="#D4AF37"/><circle cx="96" cy="55" r="3" fill="#D4AF37"/><circle cx="116" cy="55" r="3" fill="#D4AF37"/><circle cx="136" cy="57" r="3" fill="#D4AF37"/>
+                            </g>
+
+                            <g id="svg-accent-singular">
+                                <path d="M 100 24 L 104 35 L 116 35 L 107 42 L 110 53 L 100 46 L 90 53 L 93 42 L 84 35 L 96 35 Z" fill="#D4AF37" stroke="#F4F1ED" stroke-width="1" class="cake-stroke"/>
+                            </g>
+                            <g id="svg-accent-crown" class="hidden">
+                                <path d="M 60 52 L 72 32 L 100 46 L 128 32 L 140 52" fill="none" stroke="#F4F1ED" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="cake-stroke"/>
+                                <circle cx="72" cy="27" r="2.5" fill="#D4AF37"/><circle cx="100" cy="40" r="2.5" fill="#D4AF37"/><circle cx="128" cy="27" r="2.5" fill="#D4AF37"/>
+                            </g>
+                            <g id="svg-accent-crescent" class="hidden">
+                                <path d="M 55 45 C 55 15, 145 15, 145 45" fill="none" stroke="#D4AF37" stroke-width="4.5" stroke-linecap="round" stroke-dasharray="8 4"/>
+                                <circle cx="142" cy="45" r="4" fill="#F4F1ED"/>
+                            </g>
+                        </svg>
+                    </div>
+
+                    <div class="space-y-6 font-sans text-xs">
+                        <div class="bg-brand-dark/40 p-5 rounded-2xl border border-white/5 flex flex-col items-center text-center">
+                            <span class="text-[9px] uppercase tracking-[0.25em] text-brand-light/50 mb-1 font-medium">Your Selected Hue</span>
+                            <span id="result-color-name" class="font-serif text-white text-xl font-bold transition-colors duration-300 mb-2">Soft Sage</span>
+                            <div class="w-12 h-[1px] bg-brand-gold/30 mb-3"></div>
+                            <span class="text-[9px] uppercase tracking-[0.25em] text-brand-light/50 mb-1 font-medium">Sensory Archetype</span>
+                            <span id="result-archetype" class="font-sans font-bold text-white text-xs tracking-widest uppercase">SENSORY AVOIDER (COOLING)</span>
+                        </div>
+                        
+                        <div class="space-y-3">
+                            <h5 class="text-[10px] font-bold text-brand-gold uppercase tracking-widest border-b border-brand-gold/20 pb-2">Real-World Room Adjustments</h5>
+                            <div id="result-env-needs" class="text-brand-light/90 leading-relaxed text-xs space-y-4 blueprint-text-node"></div>
+                        </div>
+
+                        <div class="space-y-3 border-t border-brand-gold/20 pt-4">
+                            <h5 class="text-[10px] font-bold text-brand-gold uppercase tracking-widest border-b border-brand-gold/20 pb-2">Your Somatic Narrative Map</h5>
+                            <div id="result-layer-breakdown" class="text-brand-light/90 leading-relaxed text-xs tracking-wide space-y-3 blueprint-text-node font-sans italic"></div>
+                        </div>
+
+                        <div class="border-t border-brand-gold/20 pt-4 mt-2">
+                            <h6 class="text-[10px] font-bold text-brand-gold uppercase tracking-widest mb-1">Somatic Shift Audit:</h6>
+                            <p class="italic text-brand-light/80 leading-relaxed text-[11px]">
+                                "Take a breath. Look closely at your generated sketch architecture. Did the internal weight shift? Did the chaos quiet down?"
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="flex gap-4 no-print">
+                <button onclick="window.print()" class="flex-1 bg-brand-gold text-brand-navy text-center font-sans font-bold text-xs tracking-widest uppercase py-4 px-4 rounded-full hover:bg-brand-gold-hover transition-colors shadow-lg">
+                    Print / Save PDF
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <section class="bg-brand-card text-white py-16 px-6 border-t border-brand-gold/20 no-print">
+        <div class="max-w-6xl mx-auto">
+            <div class="border-b border-brand-gold/20 pb-4 mb-8">
+                <span class="text-[10px] font-sans font-bold tracking-[0.3em] text-brand-gold uppercase block mb-1">Cross-Reference Manual</span>
+                <h2 class="font-serif text-2xl md:text-3xl font-bold text-white">Atelier Clinical Reference Dictionary</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 font-sans text-xs">
+                <div class="bg-brand-dark/50 p-6 rounded-2xl border border-brand-gold/10">
+                    <h4 class="font-serif text-brand-gold font-bold text-base mb-1">Linguistic Bypassing</h4>
+                    <p class="text-brand-light/80 leading-relaxed">Processing sensory parameters via tactile creative mediums to cleanly navigate around its verbal cognitive centers.</p>
+                </div>
+                <div class="bg-brand-dark/50 p-6 rounded-2xl border border-brand-gold/10">
+                    <h4 class="font-serif text-brand-gold font-bold text-base mb-1">Trigeminal Nerve Stimulation</h4>
+                    <p class="text-brand-light/80 leading-relaxed">Engaging fifth cranial nerve pathways through bone-conduction snap inputs to intercept active anxiety loops.</p>
+                </div>
+                <div class="bg-brand-dark/50 p-6 rounded-2xl border border-brand-gold/10">
+                    <h4 class="font-serif text-brand-gold font-bold text-base mb-1">Interoceptive Calibration</h4>
+                    <p class="text-brand-light/80 leading-relaxed">Identifying internal physiological baselines without judgment to locate where you sit on your baseline map.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-brand-dark text-brand-gray border-t border-brand-gold/20 font-sans text-xs no-print">
+        <div class="max-w-2xl mx-auto px-6 py-8 text-center">
+            <p class="font-serif text-brand-light/30 text-xs mb-3">&copy; 2026 The Gilded Spoon Shoppe | McKinney, Texas</p>
+        </div>
+    </footer>
+
+    <script>
+        const recipeDatabase = {
+            'Sanctuary': [
+                {
+                    id: 'lavender-blackberry',
+                    chapter: 'Chapter VI • The Melancholy Dreamer',
+                    title: 'Lavender Blackberry Earl Grey Formulation',
+                    ingredients: '• 8oz Hot Milk infused with 4 Earl Grey Bags<br>• 1tsp Ground Culinary Lavender dry mix<br>• ½c Sour Cream + 4 Room Temp Egg Whites<br>• Core filling: ½c Fresh Blackberry Preserves',
+                    ritual: 'Steep tea bags in hot milk. Watch it transform into a foggy, comforting slate-grey color. Mix with lavender drys. Core center when cool and fill with purple preserves.'
+                },
+                {
+                    id: 'pineberry-velvet',
+                    chapter: 'Chapter X • The Sophisticated Bohemian',
+                    title: 'Pineberry Vanilla Bean Nutmeg Velvet',
+                    ingredients: '• 12oz Pineberries + ¼c Sugar reduction compote<br>• ½c Sour Cream + Pinch of Ground Nutmeg drys<br>• 1 scraped whole artisan Vanilla Bean<br>• Coating: White Chocolate Frosting',
+                    ritual: 'Cook pineberries until they burst and syrup thickens. Inhale the warm nutmeg dry layers. The removal of noise is the first step of this creation.'
+                },
+                {
+                    id: 'pure-vanilla-anise',
+                    chapter: 'Chapter XI • The Minimalist White',
+                    title: 'Pure Vanilla Bean Star Anise Infusion',
+                    ingredients: '• 1c Hot Milk steeped with 3 Star Anise Pods<br>• 2 whole scraped Madagascar Vanilla Beans<br>• ½c Sour Cream + ¼c Heavy Whipping Cream<br>• 16oz Salted Butter structural base',
+                    ritual: 'Steep pods in hot milk. Notice the woody, grounding licorice anise perfume. There are no hidden cores here—we are explicitly honoring the beauty of empty space.'
+                }
+            ],
+            'Nostalgic': [
+                {
+                    id: 'pandan-brown-butter',
+                    chapter: 'Chapter IV • The Creative Fusionist',
+                    title: 'Apple Coconut Pandan & Brown Butter',
+                    ingredients: '• ½c Butter melted until deep hazelnut bits brown<br>• 1c Room Temp Coconut Milk + 1tsp Pandan extract<br>• 1c Fresh Diced Sweet Apples folded<br>• Frosting: Heavy arching Coconut Cream',
+                    ritual: 'Watch butter solids toast until deep hazelnut. Listen closely for the sizzle to completely quiet down before fold. Notice the leaf green Pandan filling the studio room.'
+                },
+                {
+                    id: 'chamomile-poached-pear',
+                    chapter: 'Chapter V • The Introspective Dreamer',
+                    title: 'Chamomile Wildflower Honey Poached Pear',
+                    ingredients: '• 1c Hot Milk steeped with 2tbsp Dried Chamomile Flowers<br>• ½c Wildflower Honey + 3 Room Temp Eggs<br>• 1c Pre-Poached Pear soft cubes<br>• Frosting: Chamomile Extract silk whipped',
+                    ritual: 'Breathe in the sun-baked meadow chamomile steam notes to calm your mind before mixing. Protect the hidden, silken poached pear core parameters.'
+                }
+            ],
+            'Transformation': [
+                {
+                    id: 'true-cinnamon-espresso',
+                    chapter: 'Chapter VII • The Bold Purist',
+                    title: 'True Cinnamon Espresso Salt Cake',
+                    ingredients: '• 8oz Hot Brewed Coffee Infusion<br>• 2tsp Ground True Cinnamon<br>• 6oz Mayo + 4 whipped Egg Whites<br>• Finish: 1tbsp Coarse Sea Salt + 1tsp Espresso powder',
+                    ritual: 'Brew hot coffee infusion. The intense scent immediately clears away fogs and inertia. This dense, uncompromising crumb structure requires total physical stability.'
+                },
+                {
+                    id: 'espresso-black-cardamom',
+                    chapter: 'Chapter IX • The Enigmatic Intellectual',
+                    title: 'Espresso & Black Cardamom Pod Dark Cake',
+                    ingredients: '• 12oz Hot Coffee + ½c Dark Dutch Cocoa<br>• Seeds from 3 Black Cardamom Pods<br>• 6oz Mayo + 2tsp aromatic Almond Extract<br>• Frosting: Espresso Activated Charcoal lines',
+                    ritual: 'Manually grind smoky cardamom seeds. The deep bitter aroma plants your feet back on earth. The liquid batter will look like dark smoke velvet.'
+                }
+            ],
+            'Whimsical': [
+                {
+                    id: 'white-berry-yuzu',
+                    chapter: 'Chapter XIV • The Playful Artist',
+                    title: 'White Berry Almond & Electric Yuzu Canvas',
+                    ingredients: '• 12oz Pineberries reduced with 2tbsp Yuzu Juice<br>• 8oz Room Temp Milk + 2tsp Almond Extract<br>• Frosting: 2tbsp High-Acidity Yuzu Juice whipped',
+                    ritual: 'Cook bright pineberries until pink syrup reduces. Inhale the sharp yuzu lines. The white almond canvas is fully set and ready to command vibrant colors.'
+                },
+                {
+                    id: 'passionfruit-paradise',
+                    chapter: 'Chapter XV • The Adventurous Spirit',
+                    title: 'Passion Fruit & Grains of Paradise Spice',
+                    ingredients: '• ½c High-Viscosity Passion Fruit Curd<br>• 2tsp Whole Grains of Paradise hand ground<br>• 1c Grated Carrots + 1tsp Ginger & Cinnamon<br>• Frosting: Tangy Cream Cheese base',
+                    ritual: 'Manually grind pepper-floral grain seeds. Fill the structural center core with passion fruit curd to surprise alert centers. Crumb will be dense and rustic.'
+                }
+            ]
+        };
+
+        const textureSubOptions = {
+            'snap': ['Candied Isomalt Shards', 'Fractured Hard Glaze Layers', 'Brittle Honey Crisps'],
+            'crunch': ['Crushed Candied Pecans', 'Toasted Pistachio Dust', 'Candied Ginger Crumbles'],
+            'chew': ['Toasted Coconut Flakes', 'Dehydrated Hibiscus Petals', 'Pressed Seasonal Flowers'],
+            'silk': ['Gilded Gold Leaf Sheets', 'Fine Black Sesame Dust', 'Crushed Mastic Crystals']
+        };
+
+        const paletteFamilies = {
+            'Sanctuary': {
+                headline: 'Sanctuary Palette (Calm Focus Profile)',
+                psychology: 'Cool desaturated fields eliminate direct environmental glare. Because sage and lavender frequencies are rare in stressful settings, visual cortices slow down their processing cadence to investigate, relaxing muscle armor loops.',
+                archetype: 'SENSORY AVOIDER (COOLING)',
+                emotion: 'Overstimulated, Scattered or Anxious',
+                goal: 'a soft, quiet space to land and tune out the noise',
+                colors: [
+                    { name: 'Soft Sage', hex: '#7E9A85', psychology: 'Soft Sage signals absolute protection and retreat. Cool wavelengths reduce structural loop fatigue.' },
+                    { name: 'Lavender', hex: '#9683B5', psychology: 'Lavender provides a deep somatic "hush" to overstimulated nervous fields.' },
+                    { name: 'Pale Stone', hex: '#D9D4C7', psychology: 'Pale Stone provides clean, low-friction visual bounds to aid processing loops.' },
+                    { name: 'Sky Blue', hex: '#8DB6C7', psychology: 'Sky Blue clears internal static and lowers chronic hyper-vigilance baselines.' }
+                ]
+            },
+            'Nostalgic': {
+                headline: 'Nostalgic Palette (Warm Continuity)',
+                archetype: 'GROUNDING SEEKER (ANCHORING)',
+                emotion: 'Untethered, Floating or Lonely',
+                goal: 'warmth, roots, stability, and historical comfort',
+                colors: [
+                    { name: 'Sepia Brown', hex: '#704214', psychology: 'Sepia provides the comforting weight of history and roots to counter floating states.' },
+                    { name: 'Dusty Rose', hex: '#C27E7E', psychology: 'Dusty Rose offers non-judgmental intimacy, letting you drop defense loops safely.' },
+                    { name: 'Muted Olive', hex: '#6B705C', psychology: 'Muted Olive offers structural consistency, calming complex analytical loops.' },
+                    { name: 'Terracotta', hex: '#E2725B', psychology: 'Terracotta fuels a safe slow-burn level of energy without spiking anxiety filters.' }
+                ]
+            },
+            'Transformation': {
+                headline: 'Transformation Palette (Clarity & Bounds)',
+                archetype: 'BOUNDARY DEFENDER (STRUCTURING)',
+                emotion: 'Invisible, Small or Over-Masked',
+                goal: 'clear boundaries, personal power, and a clean change',
+                colors: [
+                    { name: 'Deep Indigo', hex: '#281E5D', psychology: 'Deep Indigo signals major life pivots, causing cortices to reflect and unmask.' },
+                    { name: 'Saffron Gold', hex: '#F4C430', psychology: 'Saffron stands as a high-visibility shield protecting valuable mental reserves.' },
+                    { name: 'Vivid Magenta', hex: '#9D0B59', psychology: 'Vivid Magenta is an unyielding declaration against insignificance or masking limits.' },
+                    { name: 'Charcoal Black', hex: '#36454F', psychology: 'Charcoal acts as an absorbing armor block to neutralize toxic incoming inputs.' }
+                ]
+            },
+            'Whimsical': {
+                headline: 'Whimsical Palette (Dopamine Activation)',
+                archetype: 'SENSORY SEEKER (STIMULATING)',
+                emotion: 'Drained, Stagnant or Stuck in Fog',
+                goal: 'a metabolic burst of fun, joy, and quick motivation',
+                colors: [
+                    { name: 'Artisan Coral', hex: '#FF7F50', psychology: 'Artisan Coral activates the reward pathways like a quick flash of morning sun.' },
+                    { name: 'Lemon Zest', hex: '#FFF44F', psychology: 'Lemon Zest triggers metabolic alertness to lift lethargy and deep brain fog.' },
+                    { name: 'Bright Mint', hex: '#98FF98', psychology: 'Bright Mint introduces an asset of fresh acidity to wake up focus lanes.' },
+                    { name: 'Bright Pink', hex: '#FF007F', psychology: 'Bright Pink provides a fast dopamine lift to pull you out of burnout loops.' }
+                ]
+            }
+        };
+
+        let activePaletteId = 'Sanctuary';
+        let activeColorHex = '#7E9A85';
+        let activeColorName = 'Soft Sage';
+        let activeSpecificPsychology = '';
+        let activeRecipeIndex = 0;
+        let activeSubTextureName = 'Crushed Candied Pecans';
+        let activeBatteryState = 'low';
+
+        function selectPalette(paletteName) {
+            activePaletteId = paletteName;
+            const data = paletteFamilies[paletteName];
+
+            document.querySelectorAll('.emotion-btn').forEach(btn => btn.classList.remove('active'));
+            document.getElementById('btn-' + paletteName.toLowerCase()).classList.add('active');
+            document.getElementById('palette-expansion-pane').classList.remove('hidden');
+
+            const grid = document.getElementById('square-swatches-grid');
+            grid.innerHTML = '';
+
+            data.colors.forEach((c, index) => {
+                const swatchWrapper = document.createElement('div');
+                swatchWrapper.className = "flex flex-col items-center gap-1.5 p-2 bg-white rounded-xl border border-brand-gray/10 shadow-sm cursor-pointer";
+
+                const sw = document.createElement('div');
+                sw.className = "color-btn h-12 w-12 rounded-lg border-2 border-brand-gray/20";
+                sw.style.backgroundColor = c.hex;
+                sw.onclick = (e) => {
+                    e.preventDefault();
+                    document.querySelectorAll('.color-btn').forEach(s => s.classList.remove('active'));
+                    sw.classList.add('active');
+                    selectSpecificColor(c.name, c.hex, c.psychology);
+                };
+
+                const nameLabel = document.createElement('span');
+                nameLabel.className = "text-[9px] font-bold text-brand-dark/80 text-center uppercase tracking-wider mt-1";
+                nameLabel.textContent = c.name;
+
+                swatchWrapper.appendChild(sw);
+                swatchWrapper.appendChild(nameLabel);
+                grid.appendChild(swatchWrapper);
+
+                if(index === 0) {
+                    sw.classList.add('active');
+                    selectSpecificColor(c.name, c.hex, c.psychology);
+                }
+            });
+
+            loadRecipesForPalette();
+        }
+
+        function selectSpecificColor(name, hex, psychologyText) {
+            activeColorName = name;
+            activeColorHex = hex;
+            activeSpecificPsychology = psychologyText;
+            updateVisualizer();
+        }
+
+        function loadRecipesForPalette() {
+            const container = document.getElementById('recipe-buttons-container');
+            container.innerHTML = '';
+            const recipes = recipeDatabase[activePaletteId];
+
+            recipes.forEach((r, idx) => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = `sub-pill border border-brand-navy/20 px-4 py-2 rounded-full text-xs font-semibold text-brand-navy bg-brand-light hover:border-brand-gold`;
+                btn.textContent = r.title.split(' Formulation')[0];
+                btn.onclick = () => {
+                    document.querySelectorAll('.sub-pill').forEach(p => p.classList.remove('active'));
+                    btn.classList.add('active');
+                    displayRecipeCard(idx);
+                };
+                container.appendChild(btn);
+
+                if(idx === 0) {
+                    btn.classList.add('active');
+                    displayRecipeCard(0);
+                }
+            });
+        }
+
+        function displayRecipeCard(index) {
+            activeRecipeIndex = index;
+            const r = recipeDatabase[activePaletteId][index];
+            
+            document.getElementById('recipe-card-box').classList.remove('hidden');
+            document.getElementById('recipe-chapter-num').textContent = r.chapter;
+            document.getElementById('recipe-title-display').textContent = r.title;
+            document.getElementById('recipe-ingredients').innerHTML = r.ingredients;
+            document.getElementById('recipe-ritual').textContent = r.ritual;
+
+            document.getElementById('recipe-checkout-link').href = `contact.html?subject=Purchase%20Panels&recipe=${encodeURIComponent(r.title)}`;
+            updateVisualizer();
+        }
+
+        function loadSubTextures(categoryKey) {
+            const container = document.getElementById('sub-texture-pills');
+            container.innerHTML = '';
+            const list = textureSubOptions[categoryKey];
+
+            list.forEach((item, idx) => {
+                const pill = document.createElement('button');
+                pill.type = 'button';
+                pill.className = `sub-pill border border-brand-navy/10 px-3 py-1.5 rounded-lg text-[11px] font-medium text-brand-dark bg-white hover:border-brand-gold`;
+                pill.textContent = item;
+                pill.onclick = () => {
+                    document.querySelectorAll('#sub-texture-pills .sub-pill').forEach(p => p.classList.remove('active'));
+                    pill.classList.add('active');
+                    activeSubTextureName = item;
+                    updateVisualizer();
+                };
+                container.appendChild(pill);
+                if(idx === 0) {
+                    pill.classList.add('active');
+                    activeSubTextureName = item;
+                }
+            });
+            updateVisualizer();
+        }
+
+        function setBattery(batteryLevel) {
+            activeBatteryState = batteryLevel;
+            document.querySelectorAll('.battery-btn').forEach(b => {
+                b.classList.remove('active-low', 'active-med', 'active-high');
+            });
+
+            const targetBtn = document.getElementById('bat-' + batteryLevel);
+            if(batteryLevel === 'low') targetBtn.classList.add('active-low');
+            else if(batteryLevel === 'med') targetBtn.classList.add('active-med');
+            else targetBtn.classList.add('active-high');
+
+            updateVisualizer();
+        }
+
+        function updateVisualizer() {
+            const data = paletteFamilies[activePaletteId];
+            const r = recipeDatabase[activePaletteId][activeRecipeIndex] || { title: 'None Loaded' };
+            const shape = document.querySelector('input[name="blueprint_shape"]:checked').value;
+            const expression = document.querySelector('input[name="blueprint_expression"]:checked').value;
+
+            // 1. Rerender Drawing Vectors
+            document.querySelectorAll('.cake-fill').forEach(p => { p.style.fill = activeColorHex; });
+
+            ['fortress', 'cloud', 'ruin'].forEach(s => { document.getElementById('svg-shape-' + s).classList.add('hidden'); });
+            document.getElementById('svg-shape-' + shape).classList.remove('hidden');
+
+            let svgBatteryKey = 'center';
+            if (activeBatteryState === 'med') svgBatteryKey = 'border';
+            if (activeBatteryState === 'high') svgBatteryKey = 'radial';
+
+            ['center', 'radial', 'border'].forEach(p => { document.getElementById('svg-place-' + p).classList.add('hidden'); });
+            document.getElementById('svg-place-' + svgBatteryKey).classList.remove('hidden');
+
+            ['crescent', 'crown', 'singular'].forEach(e => { document.getElementById('svg-accent-' + e).classList.add('hidden'); });
+            document.getElementById('svg-accent-' + expression).classList.remove('hidden');
+
+            // 2. Sync Document Readout Parameters
+            document.getElementById('result-color-name').textContent = activeColorName;
+            document.getElementById('result-archetype').textContent = data.archetype;
+            
+            document.getElementById('active-hue-title').textContent = activeColorName + ' Color Meaning';
+            document.getElementById('palette-psychology-text').textContent = activeSpecificPsychology;
+
+            // 3. Sync Dynamic Target Baseline Text Profiles
+            let targetBaselineText = "";
+            if (activePaletteId === 'Sanctuary') {
+                targetBaselineText = "To down-regulate hyper-vigilance, lower active physiological guards, and cool a frantic brain loop seamlessly.";
+            } else if (activePaletteId === 'Nostalgic') {
+                targetBaselineText = "To anchor untethered situations, capture emotional stability, and re-root your focus using physical memory continuity.";
+            } else if (activePaletteId === 'Transformation') {
+                targetBaselineText = "To establish rigid boundary filters, build personal power, and break through emotional processing loops firmly.";
+            } else if (activePaletteId === 'Whimsical') {
+                targetBaselineText = "To deliver an immediate metabolic dopamine lift, jumpstart executive focus, and break out of stagnation.";
+            }
+
+            let adjustments = { light: '', sound: '', clutter: '', scent: '', touch: '', quiet: '' };
+            if(activePaletteId === 'Sanctuary') {
+                adjustments.light = "Use single, low-standing table lamps containing warm 2200K bulbs. Intentionally shut off all direct overhead fluorescent glare fields.";
+                adjustments.sound = "Toggle continuous soft brown noise or gentle pink sound masks. Hang dense acoustic curtains or heavy rugs to absorb background echoes.";
+                adjustments.clutter = "Clear backdrops entirely. Move cooking tools behind dark, solid cabinet doors to eliminate active working memory strain.";
+                adjustments.scent = "Strictly switch to fragrance-free cleaning items. Ventilate rooms thoroughly and anchor the space with delicate, soothing notes from your chosen lavender tea reduction.";
+                adjustments.touch = "Introduce friction-free cotton fabrics or silky velvet textures on high-touch furniture planes. Avoid sharp textures near your workspace.";
+                adjustments.quiet = "Set up a low-traffic sanctuary nook equipped with low ambient lighting, soft fabrics, and specialized non-verbal scripting materials.";
+            } 
+            else if(activePaletteId === 'Nostalgic') {
+                adjustments.light = "Utilize soft, deep directional lighting paths or amber vintage fixtures to build physical intimacy and history.";
+                adjustments.sound = "Play slow, predictable acoustic instrumental tracks or grounding low-frequency rhythmic background music to prevent attention drift.";
+                adjustments.clutter = "Introduce familiar, grounding heirloom objects. Keep layout organization family strict and unvarying to protect daily cognitive routines.";
+                adjustments.scent = "Infuse rich, organic background aromas like warm baking spices or roasted coconut to signal structural comfort.";
+                adjustments.touch = "Provide heavy physical touchpoint variables such as thick pottery mugs, heavy wood frames, or weighted lap pads.";
+                adjustments.quiet = "Build a stable comfort corner wrapped entirely in earth-toned sepia variables, containing cherished physical artifacts and books.";
+            }
+            else if(activePaletteId === 'Transformation') {
+                adjustments.light = "Position sharp, high-intensity task spotlights directed exclusively at your single active work target pane.";
+                adjustments.sound = "Utilize active noise-canceling headphones to completely block outside communication channels and protect processing reservoirs.";
+                adjustments.clutter = "Set up solid dividers or dark visual blocks to completely block out distracting ambient peripheral movement.";
+                adjustments.scent = "Diffuse strong, mentally clarifying aroma properties like sharp espresso or black cardamom pod smoke grids to force cognitive orientation.";
+                adjustments.touch = "Incorporate rigid, high-boundary seating layouts with firm backing materials that demand alert physical postures.";
+                adjustments.quiet = "Designate a separate, uncompromising fortress workspace that safely intercepts background interruptions. Command strict 90-minute downtime resets.";
+            }
+            else if(activePaletteId === 'Whimsical') {
+                adjustments.light = "Maximize bright, unfiltered natural sunlight window paths to instantly target offline motivation lanes.";
+                adjustments.sound = "Introduce high-vibrancy sync beats or rhythmic sounds to sustain physical momentum and clear lethargy loops.";
+                adjustments.clutter = "Incorporate open storage grids and hanging project layouts. Keeping tools visible helps prompt quick task transitions.";
+                adjustments.scent = "Infuse high-acidity zests, electric yuzu oils, or fresh herbal mint aromas to trigger immediate alertness.";
+                adjustments.touch = "Scatter varied sensory fidget textures, physical resistance bands, or bumpy tactile items within direct reach.";
+                adjustments.quiet = "Set up a highly dynamic interactive workspace lab nook that allows fluid moving, unmasked pacing, and stimming with zero friction.";
+            }
+
+            let reportHTML = `
+                <div class="space-y-4 font-sans text-xs">
+                    <p class="text-brand-gold font-serif italic text-sm leading-relaxed mb-4">Target Baseline: ${targetBaselineText}</p>
+                    <p class="leading-relaxed">• <strong>1. Light Changes:</strong> ${adjustments.light}</p>
+                    <p class="leading-relaxed">• <strong>2. Sound Changes:</strong> ${adjustments.sound}</p>
+                    <p class="leading-relaxed">• <strong>3. Visual Environment:</strong> ${adjustments.clutter}</p>
+                    <p class="leading-relaxed">• <strong>4. Scent and Air Quality:</strong> ${adjustments.scent}</p>
+                    <p class="leading-relaxed">• <strong>5. Textures and Touch:</strong> ${adjustments.touch}</p>
+                    <p class="leading-relaxed">• <strong>6. Your Safe Quiet Zone:</strong> ${adjustments.quiet}</p>
+                </div>
+            `;
+            document.getElementById('result-env-needs').innerHTML = reportHTML;
+
+            // 4. PARAGRAPH STORY MAP ENGINE
+            let shapeName = shape === 'fortress' ? 'the structured wall safety of a perfect Fortress Style square cake' : shape === 'cloud' ? 'the soft, forgiving flow parameters of a pillowy Cloud Style curved cake' : 'the beautiful imperfect vulnerabilities of a raw Ruin Style tiered cake';
+            
+            let batteryText = "";
+            if (activeBatteryState === 'low') {
+                batteryText = `Because your active social battery level is running at a low 10% capacity, your system is strategically forcing an Internal Center Strategy. You are burying your textural coping tools safely within the center core of your design, choosing to retreat inward and nurture your internal resources where outside noise cannot drain them.`;
+            } else if (activeBatteryState === 'med') {
+                batteryText = `Operating under a balanced 50% medium battery capacity, your system is executing a secure Border Boundary alignment. You are lining your grounding tools strictly along the outer peripheral rims and perimeter edges of the structure, actively holding space and setting unyielding boundaries to control who and what leans into your life right now.`;
+            } else {
+                batteryText = `With your physical social battery running at a full 100% capacity, your framework is radiating an Explosive Radial path. You are scattering your tools globally and generously across the top layer, letting your internal strength flow outward easily to connect with and share joy with the surrounding room.`;
+            }
+
+            let accentText = expression === 'singular' ? 'a Singular Punctuation point to draw immense power from minimalist focus' : expression === 'crown' ? 'a centered celebratory Crown to highlight abundance' : 'asymmetrical Crescent lines to lead your awareness on an organic journey';
+
+            let storyNarrative = `Your emotional tracking journey begins at the baseline origin point of feeling ${data.emotion.toLowerCase()}. To honor this state, you have thrown up a dynamic color signal flare of ${activeColorName}, using its properties to send a direct message of ${data.goal.toLowerCase()} to your spirit. 
+            
+            This sensory signal is built upon ${shapeName}, giving tangible shape and visual stability to your narrative, which tastes of the sweet and complex notes found inside your ${r.title.split(' Formulation')[0]} recipe sheet. 
+            
+            ${batteryText} 
+            
+            Reserving a physical set of these handcrafted recipe panels will safeguard these layout directions at home. Finally, your hand mimics your heart by anchoring the design with ${accentText}. This final touch completes your narrative blueprint, moving your nervous system into a state of regulated unmasked balance.`;
+            
+            document.getElementById('result-layer-breakdown').innerHTML = storyNarrative;
+        }
+
+        window.addEventListener('DOMContentLoaded', () => {
+            selectPalette('Sanctuary');
+            loadSubTextures('crunch');
+            setBattery('low');
+        });
+    </script>
+</body>
+</html>
