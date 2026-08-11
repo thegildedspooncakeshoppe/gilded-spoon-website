@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Guide | Bake to Baseline</title>
+  <style>
+    :root {
+      --bg-color: #FBF9F5;        /* Warm parchment background */
+      --card-bg: #FFFDF9;         /* Soft ivory card */
+      --border-outer: #E6DCB8;    /* Gilded taupe outer border */
+      --border-inner: #F0E6D2;    /* Soft inner accent line */
+      --text-primary: #2B2825;    /* Deep charcoal ink */
+      --text-muted: #625B54;      /* Soft warm grey */
+      --accent-gold: #B89659;     /* Gilded spoon bronze/gold */
+      --accent-gold-hover: #9E7D43;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: var(--bg-color);
+      font-family: 'Georgia', serif;
+      color: var(--text-primary);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      background-color: var(--card-bg);
+      max-width: 540px;
+      margin: 40px 20px;
+      padding: 55px 40px;
+      border: 1px solid var(--border-outer);
+      border-radius: 2px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+      text-align: center;
+      position: relative;
+    }
+
+    .container::before {
+      content: "";
+      position: absolute;
+      top: 12px; left: 12px; right: 12px; bottom: 12px;
+      border: 1px solid var(--border-inner);
+      pointer-events: none;
+    }
+
+    .glyphs {
+      font-size: 14px;
+      color: var(--accent-gold);
+      letter-spacing: 4px;
+      margin-bottom: 15px;
+    }
+
+    .brand-name {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      margin-bottom: 12px;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+
+    h1 {
+      font-size: 30px;
+      font-weight: normal;
+      font-style: italic;
+      color: var(--text-primary);
+      margin: 0 0 15px 0;
+      line-height: 1.3;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--text-muted);
+      margin-bottom: 30px;
+    }
+
+    .download-btn {
+      display: inline-block;
+      background-color: var(--accent-gold);
+      color: #FFFDF9;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 16px 32px;
+      border-radius: 2px;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      position: relative;
+      z-index: 2;
+    }
+
+    .download-btn:hover {
+      background-color: var(--accent-gold-hover);
+      transform: translateY(-1px);
+    }
+
+    .divider {
+      height: 1px;
+      background-color: var(--border-inner);
+      margin: 35px auto 25px auto;
+      width: 50%;
+    }
+
+    .subtext {
+      font-size: 13px;
+      font-style: italic;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .footer-link {
+      margin-top: 30px;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      position: relative;
+      z-index: 2;
+    }
+
+    .footer-link a {
+      color: var(--accent-gold);
+      text-decoration: none;
+    }
+
+    .footer-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="glyphs">✦ 🌿 ✦</div>
+    <div class="brand-name">The Gilded Spoon Shoppe</div>
+    
+    <h1>Your kitchen reset begins here.</h1>
+    
+    <p>Thank you for joining our quiet archive. Tap the button below to download your 1-page guide and keep it nearby for your next bake.</p>
+
+    <!-- WIRED DIRECTLY TO YOUR GOOGLE DRIVE FILE -->
+    <a href="https://drive.google.com/file/d/1dRQBHYjXyw2hm7xh8lHJc6UcJmHoaF4e/view?usp=drive_link" class="download-btn" target="_blank">
+      Download Free Guide (PDF)
+    </a>
+
+    <div class="divider"></div>
+
+    <div class="subtext">
+      Remember: pacing over perfectionism. Take a deep breath before preheating the oven today.
+    </div>
+
+    <div class="footer-link">
+      <a href="https://www.thegildedspoonshoppe.com">Return to the Main Atelier</a>
+    </div>
+  </div>
+
+</body>
+</html>
