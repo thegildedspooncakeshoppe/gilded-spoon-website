@@ -3,16 +3,18 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bake to Baseline | Free Somatic Baking Cheat Sheet</title>
+  <title>Bake to Baseline | The Gilded Spoon Shoppe</title>
   <style>
     :root {
-      --bg-color: #FBF9F5;
-      --card-bg: #FFFDF9;
-      --border-outer: #E6DCB8;
-      --border-inner: #F0E6D2;
-      --text-primary: #2B2825;
-      --text-muted: #625B54;
-      --accent-gold: #B89659;
+      --bg-color: #FBF9F5;        /* Site parchment background */
+      --text-primary: #2B2825;    /* Deep charcoal ink */
+      --text-muted: #625B54;      /* Soft warm grey */
+      --accent-gold: #B89659;     /* Gilded spoon gold */
+      --border-line: #E6DCB8;     /* Subtle accent line */
+    }
+
+    * {
+      box-sizing: border-box;
     }
 
     body {
@@ -21,122 +23,147 @@
       background-color: var(--bg-color);
       font-family: 'Georgia', serif;
       color: var(--text-primary);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
+      line-height: 1.6;
     }
 
-    .container {
-      background-color: var(--card-bg);
-      max-width: 580px;
-      margin: 40px 20px;
-      padding: 55px 30px;
-      border: 1px solid var(--border-outer);
-      border-radius: 2px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+    /* --- SITE HEADER & NAVIGATION --- */
+    .site-header {
+      padding: 30px 20px 20px 20px;
       text-align: center;
-      position: relative;
-    }
-
-    .container::before {
-      content: "";
-      position: absolute;
-      top: 12px; left: 12px; right: 12px; bottom: 12px;
-      border: 1px solid var(--border-inner);
-      pointer-events: none;
+      border-bottom: 1px solid var(--border-line);
+      background-color: var(--bg-color);
     }
 
     .brand-logo {
-      max-width: 85px;
+      max-width: 75px;
       height: auto;
-      margin-bottom: 12px;
-      display: inline-block;
+      margin-bottom: 10px;
     }
 
     .brand-name {
-      font-size: 11px;
+      font-size: 13px;
       letter-spacing: 3px;
       text-transform: uppercase;
       color: var(--accent-gold);
-      margin-bottom: 25px;
       font-family: system-ui, -apple-system, sans-serif;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 15px;
+    }
+
+    .site-nav {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      font-family: system-ui, -apple-system, sans-serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .site-nav a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .site-nav a:hover, .site-nav a.active {
+      color: var(--accent-gold);
+    }
+
+    /* --- MAIN PAGE CONTENT --- */
+    .page-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 60px 20px 80px 20px;
+    }
+
+    .hero-section {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .hero-tagline {
+      font-size: 12px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: var(--accent-gold);
+      font-family: system-ui, -apple-system, sans-serif;
+      margin-bottom: 15px;
     }
 
     h1 {
-      font-size: 28px;
+      font-size: 36px;
       font-weight: normal;
       font-style: italic;
       color: var(--text-primary);
-      margin: 0 0 15px 0;
+      margin: 0 0 20px 0;
       line-height: 1.3;
     }
 
-    p {
-      font-size: 15px;
-      line-height: 1.6;
+    .hero-intro {
+      font-size: 17px;
       color: var(--text-muted);
-      margin-bottom: 20px;
-      padding: 0 10px;
+      max-width: 620px;
+      margin: 0 auto 35px auto;
     }
 
-    /* Styled Feature List */
-    .feature-list {
-      list-style: none;
-      padding: 0;
+    /* --- FEATURE LIST (SEAMLESS GRID) --- */
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+      margin: 40px 0;
       text-align: left;
-      max-width: 480px;
-      margin: 0 auto 25px auto;
     }
 
-    .feature-list li {
-      font-size: 14px;
-      line-height: 1.5;
-      color: var(--text-muted);
-      margin-bottom: 14px;
-      padding-left: 20px;
-      position: relative;
+    .feature-item {
+      padding: 20px;
+      background: #FFFDF9;
+      border: 1px solid var(--border-line);
+      border-radius: 2px;
     }
 
-    .feature-list li::before {
-      content: "✦";
-      color: var(--accent-gold);
-      position: absolute;
-      left: 0;
-      font-size: 11px;
-      top: 2px;
-    }
-
-    .feature-list strong {
-      color: var(--text-primary);
-      font-weight: normal;
+    .feature-item h3 {
+      font-size: 16px;
       font-style: italic;
+      font-weight: normal;
+      color: var(--accent-gold);
+      margin: 0 0 8px 0;
+    }
+
+    .feature-item p {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.5;
     }
 
     .divider {
       height: 1px;
-      background-color: var(--border-inner);
-      margin: 20px auto;
-      width: 40%;
+      background-color: var(--border-line);
+      margin: 50px auto;
+      width: 60%;
     }
 
-    .form-wrapper {
-      margin-top: 15px;
-      position: relative;
-      z-index: 2;
-      border-radius: 2px;
-      overflow: hidden;
+    /* --- FORM SECTION --- */
+    .form-container {
+      max-width: 550px;
+      margin: 0 auto;
     }
 
     iframe {
       width: 100%;
-      height: 520px;
+      height: 280px; /* Short height because trimmed form only needs email/name */
       border: none;
       background: transparent;
     }
 
-    .footer-note {
-      margin-top: 20px;
+    /* --- SITE FOOTER --- */
+    .site-footer {
+      border-top: 1px solid var(--border-line);
+      padding: 40px 20px;
+      text-align: center;
       font-family: system-ui, -apple-system, sans-serif;
       font-size: 11px;
       color: var(--accent-gold);
@@ -147,85 +174,61 @@
 </head>
 <body>
 
-  <div class="container">
-    <img src="https://i.imgur.com/38kHjr9.png" alt="The Gilded Spoon Shoppe Logo" class="brand-logo">
-    <div class="brand-name">The Gilded Spoon Shoppe</div>
+  <!-- SITE HEADER -->
+  <header class="site-header">
+    <a href="https://www.thegildedspoonshoppe.com">
+      <img src="https://i.imgur.com/38kHjr9.png" alt="The Gilded Spoon Shoppe Logo" class="brand-logo">
+    </a>
+    <a href="https://www.thegildedspoonshoppe.com" class="brand-name">The Gilded Spoon Shoppe</a>
     
-    <h1>5 layers of sensory design.<br>Zero layers of masking.</h1>
-    
-    <p>Map your energy, tune your senses, and bake at your baseline. Join our quiet archive to receive your free 1-page <strong>Somatic Baking Cheat Sheet</strong>:</p>
+    <nav class="site-nav">
+      <a href="https://www.thegildedspoonshoppe.com">Home</a>
+      <a href="https://www.thegildedspoonshoppe.com/baketobaseline" class="active">Bake to Baseline</a>
+      <a href="https://www.thegildedspoonshoppe.com/contact">Contact</a>
+    </nav>
+  </header>
 
-    <ul class="feature-list">
-      <li><strong>The Somatic Check-In Matrix:</strong> Match your real-time body signals to specific low-friction kitchen strategies.</li>
-      <li><strong>The Low-Overwhelm Flow:</strong> Embrace guilt-free pause points and trust sensory cues over strict timers.</li>
-      <li><strong>Executive Function Safeguards:</strong> Eliminate dish fatigue and second-guessing with smart counter rules.</li>
-    </ul>
+  <!-- MAIN PAGE CONTENT -->
+  <main class="page-container">
+    
+    <section class="hero-section">
+      <div class="hero-tagline">5 layers of sensory design • zero layers of masking</div>
+      <h1>Map your energy, tune your senses,<br>and bake at your baseline.</h1>
+      
+      <p class="hero-intro">
+        Join our quiet archive to receive your free 1-page <strong>Somatic Baking Cheat Sheet</strong>—a counter reference for sensory check-ins, low-overwhelm baking flows, and executive function safeguards.
+      </p>
+    </section>
+
+    <!-- 3 FEATURES DISPLAYED AS CLEAN PAGE CARDS -->
+    <section class="feature-grid">
+      <div class="feature-item">
+        <h3>✦ Somatic Check-In</h3>
+        <p>Match your real-time body signals to specific low-friction kitchen strategies.</p>
+      </div>
+      <div class="feature-item">
+        <h3>✦ Low-Overwhelm Flow</h3>
+        <p>Embrace guilt-free pause points and trust sensory cues over strict timers.</p>
+      </div>
+      <div class="feature-item">
+        <h3>✦ Executive Function</h3>
+        <p>Eliminate dish fatigue and second-guessing with smart counter rules.</p>
+      </div>
+    </section>
 
     <div class="divider"></div>
 
-    <div class="form-wrapper">
+    <!-- EMBEDDED FORM -->
+    <section class="form-container">
       <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeNhynT2TEUkIBl_H35WhOKU7luGxfFWM2V-Hy9dOH2XJkxZg/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-    </div>
+    </section>
 
-    <div class="footer-note">
-      Quiet kitchen notes for sensitive nervous systems
-    </div>
-  </div>
- <footer class="bg-brand-dark text-brand-gray border-t border-brand-gold/20 font-sans text-xs">
-        <div class="max-w-2xl mx-auto px-6 py-8">
-            <div class="flex flex-col items-center">
-                
-                <div class="flex justify-center space-x-6 mb-6 text-brand-light">
-                    <a href="https://www.instagram.com/thegildedspoonshoppe/" target="_blank" class="hover:text-brand-gold transition-colors">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919 4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg>
-                    </a>
-                    <a href="https://www.facebook.com/dimple.mckinney" target="_blank" class="hover:text-brand-gold transition-colors">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.494v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.323-1.325z"/></svg>
-                    </a>
-                    <a href="https://www.linkedin.com/in/dimple-mckinney/" target="_blank" class="hover:text-brand-gold transition-colors">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                    </a>
-                </div>
+  </main>
 
-                <div class="flex flex-row justify-center space-x-8 mb-6 text-brand-light font-medium text-[10px] uppercase tracking-[0.2em]">
-                    <a href="contact.html" class="hover:text-brand-gold transition-colors">Contact Us</a>
-                    <a href="partnerships.html" class="hover:text-brand-gold transition-colors">Partnerships</a>
-                    <a href="policies.html" class="hover:text-brand-gold transition-colors">Order Fulfillment & Delivery</a>
-                </div>
+  <!-- SITE FOOTER -->
+  <footer class="site-footer">
+    Quiet kitchen notes for sensitive nervous systems • The Gilded Spoon Shoppe
+  </footer>
 
-            </div>
-
-            <div class="pt-6 border-t border-brand-gray/10 text-center">
-                <p class="font-serif text-brand-light/30 text-xs mb-3">
-                    &copy; 2026 The Gilded Spoon Shoppe | McKinney, Texas
-                </p>
-                <p class="max-w-xl mx-auto font-sans text-[9px] leading-relaxed text-brand-gray/20 italic">
-                    Disclaimer: The Gilded Spoon Shoppe provides sensory design education. It is not a substitute for professional medical advice, diagnosis, or occupational therapy. Edible products are prepared in a home kitchen that handles allergens including wheat, dairy, eggs, soy, and nuts.
-                </p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        const hamburgerButton = document.getElementById('hamburger-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        if(hamburgerButton) {
-            hamburgerButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
-        }
-
-        // Retained the functional cyclic testimonial carousel configuration exclusively
-        document.addEventListener('DOMContentLoaded', () => {
-            const testimonials = document.querySelectorAll('.testimonial-slide');
-            if (testimonials.length > 1) {
-                let currentTestimonial = 0;
-                const testimonialDuration = 6000;
-                setInterval(() => {
-                    testimonials[currentTestimonial].classList.replace('opacity-100', 'opacity-0');
-                    currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-                    testimonials[currentTestimonial].classList.replace('opacity-0', 'opacity-100');
-                }, testimonialDuration);
-            }
-        });
-    </script>
 </body>
 </html>
