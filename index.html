@@ -203,20 +203,33 @@
     </section>
 
     <section class="py-20 bg-brand-gold text-brand-dark text-center px-4 relative overflow-hidden border-t border-brand-navy/10">
-        <div class="absolute top-0 right-0 p-4 opacity-10">
-            <svg class="w-32 h-32" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L1 21h22L12 2zm0 3.45L20.15 19H3.85L12 5.45zM11 16h2v2h-2v-2zm0-6h2v4h-2v-4z"/></svg>
-        </div>
-        <div class="max-w-2xl mx-auto relative z-10">
-            <h2 class="font-serif text-2xl md:text-3xl font-bold mb-4 text-brand-navy">The Zero-Bake Emergency Kit</h2>
-            <p class="mb-8 text-sm md:text-base font-medium opacity-90">Join the Sensory Archive newsletter and receive our free guide on using color and texture to ground your nervous system on low-energy days.</p>
-            
-            <form action="https://docs.google.com/forms/d/e/1FAIpQLSeNhynT2TEUkIBl_H35WhOKU7luGxfFWM2V-Hy9dOH2XJkxZg/formResponse" method="POST" target="_blank" class="flex flex-col sm:flex-row gap-4 justify-center">
-                <input type="email" name="entry.1032441224" placeholder="Your best email address" required class="px-6 py-3 rounded-full bg-white text-brand-dark focus:outline-none shadow-inner w-full sm:w-[300px] text-sm">
-                <button type="submit" class="bg-brand-navy text-white font-sans font-bold py-3 px-8 rounded-full hover:bg-brand-dark transition-all shadow-xl uppercase tracking-widest text-xs">Send the Kit</button>
-            </form>
-            <p class="transparent mt-4 text-[11px] opacity-70 font-sans">We respect your peace. No spam, just sensory wellness.</p>
-        </div>
-    </section>
+    <!-- Background Icon (Updated to a soft cloud/sensory element) -->
+    <div class="absolute top-0 right-0 p-4 opacity-10">
+        <svg class="w-32 h-32" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96z"/>
+        </svg>
+    </div>
+
+    <div class="max-w-2xl mx-auto relative z-10">
+        <!-- Headline -->
+        <h2 class="font-serif text-2xl md:text-3xl font-bold mb-4 text-brand-navy">Bake to Baseline</h2>
+        
+        <!-- Subtitle -->
+        <p class="mb-8 text-sm md:text-base font-medium opacity-90">
+            Download your free 1-page Nervous System & Low-Overwhelm Baking Guide. Check in with your body, match your energy level to low-friction recipes, and skip perfectionist panic.
+        </p>
+        
+        <!-- Form -->
+        <!-- NOTE: If you built a NEW Google Form for Bake to Baseline, swap the action URL and entry ID below -->
+        <form action="https://docs.google.com/forms/d/e/1FAIpQLSeNhynT2TEUkIBl_H35WhOKU7luGxfFWM2V-Hy9dOH2XJkxZg/formResponse" method="POST" target="_blank" class="flex flex-col sm:flex-row gap-4 justify-center">
+            <input type="email" name="entry.1032441224" placeholder="Your best email address" required class="px-6 py-3 rounded-full bg-white text-brand-dark focus:outline-none shadow-inner w-full sm:w-[300px] text-sm">
+            <button type="submit" class="bg-brand-navy text-white font-sans font-bold py-3 px-8 rounded-full hover:bg-brand-dark transition-all shadow-xl uppercase tracking-widest text-xs">Get the Free Guide</button>
+        </form>
+        
+        <!-- Reassurance Subtext -->
+        <p class="transparent mt-4 text-[11px] opacity-70 font-sans">We respect your peace. No spam, just low-friction baking rituals.</p>
+    </div>
+</section>
 
     <footer class="bg-brand-dark text-brand-gray border-t border-brand-gold/20 font-sans text-xs">
         <div class="max-w-2xl mx-auto px-6 py-8">
