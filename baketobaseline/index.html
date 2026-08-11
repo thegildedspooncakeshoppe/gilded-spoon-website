@@ -3,16 +3,16 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bake to Baseline | Free Somatic Baking Guide</title>
+  <title>Bake to Baseline | Free Somatic Baking Cheat Sheet</title>
   <style>
     :root {
-      --bg-color: #FBF9F5;        /* Warm parchment background */
-      --card-bg: #FFFDF9;         /* Soft ivory card */
-      --border-outer: #E6DCB8;    /* Gilded taupe outer border */
-      --border-inner: #F0E6D2;    /* Soft inner accent line */
-      --text-primary: #2B2825;    /* Deep charcoal ink */
-      --text-muted: #625B54;      /* Soft warm grey */
-      --accent-gold: #B89659;     /* Gilded spoon bronze/gold */
+      --bg-color: #FBF9F5;
+      --card-bg: #FFFDF9;
+      --border-outer: #E6DCB8;
+      --border-inner: #F0E6D2;
+      --text-primary: #2B2825;
+      --text-muted: #625B54;
+      --accent-gold: #B89659;
     }
 
     body {
@@ -47,9 +47,8 @@
       pointer-events: none;
     }
 
-    /* Logo Styling */
     .brand-logo {
-      max-width: 85px; /* Adjust size if you want it larger/smaller */
+      max-width: 85px;
       height: auto;
       margin-bottom: 12px;
       display: inline-block;
@@ -60,7 +59,7 @@
       letter-spacing: 3px;
       text-transform: uppercase;
       color: var(--accent-gold);
-      margin-bottom: 12px;
+      margin-bottom: 25px;
       font-family: system-ui, -apple-system, sans-serif;
     }
 
@@ -79,6 +78,39 @@
       color: var(--text-muted);
       margin-bottom: 20px;
       padding: 0 10px;
+    }
+
+    /* Styled Feature List */
+    .feature-list {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+      max-width: 480px;
+      margin: 0 auto 25px auto;
+    }
+
+    .feature-list li {
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--text-muted);
+      margin-bottom: 14px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .feature-list li::before {
+      content: "✦";
+      color: var(--accent-gold);
+      position: absolute;
+      left: 0;
+      font-size: 11px;
+      top: 2px;
+    }
+
+    .feature-list strong {
+      color: var(--text-primary);
+      font-weight: normal;
+      font-style: italic;
     }
 
     .divider {
@@ -116,14 +148,18 @@
 <body>
 
   <div class="container">
-    <!-- YOUR BRAND LOGO -->
-    <img src="https://imgur.com/R1G4s6r.png" alt="The Gilded Spoon Shoppe Logo" class="brand-logo">
-    
+    <img src="https://i.imgur.com/38kHjr9.png" alt="The Gilded Spoon Shoppe Logo" class="brand-logo">
     <div class="brand-name">The Gilded Spoon Shoppe</div>
     
-    <h1>Take a quiet breath before preheating the oven.</h1>
+    <h1>5 layers of sensory design.<br>Zero layers of masking.</h1>
     
-    <p>Join our quiet archive to receive <strong>Bake to Baseline</strong>—a free 1-page somatic guide for low-overwhelm baking and sensory kitchen rituals.</p>
+    <p>Map your energy, tune your senses, and bake at your baseline. Join our quiet archive to receive your free 1-page <strong>Somatic Baking Cheat Sheet</strong>:</p>
+
+    <ul class="feature-list">
+      <li><strong>The Somatic Check-In Matrix:</strong> Match your real-time body signals to specific low-friction kitchen strategies.</li>
+      <li><strong>The Low-Overwhelm Flow:</strong> Embrace guilt-free pause points and trust sensory cues over strict timers.</li>
+      <li><strong>Executive Function Safeguards:</strong> Eliminate dish fatigue and second-guessing with smart counter rules.</li>
+    </ul>
 
     <div class="divider"></div>
 
