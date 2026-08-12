@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="p:domain_verify" content="8497c86d445458f17cdce81e920478f2"/>
     <title>Bake to Baseline | The Gilded Spoon Shoppe</title>
     <meta name="description" content="Map your energy, tune your senses, and bake at your baseline. Download The Somatic Baking Cheat Sheet from The Gilded Spoon Atelier.">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -45,42 +46,43 @@
 <body class="font-sans bg-brand-light text-brand-dark antialiased">
 
     <!-- NAVIGATION (Subfolder Root-Relative Links) -->
-<nav class="sticky top-0 bg-brand-navy/95 backdrop-blur-lg shadow-lg z-50 border-b border-brand-gold/10">
-    <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-        <!-- Logo points to main index -->
-        <a href="/index.html" class="text-2xl font-serif font-bold text-brand-gold text-center leading-none">
-            The Gilded Spoon
-            <span class="block text-xs font-sans font-light not-italic tracking-[0.3em] text-brand-light">SHOPPE & ATELIER</span>
-        </a>
-        
-        <!-- Desktop Nav Links (Leading slashes added) -->
-        <div class="hidden md:flex items-center space-x-6 font-medium text-xs tracking-widest uppercase">
-            <a href="/shoppe.html" class="text-brand-light hover:text-brand-gold transition">The Shoppe</a>
-            <a href="/baketobaseline/" class="text-brand-gold transition">Bake to Baseline</a>
-            <a href="/workshop.html" class="text-brand-light hover:text-brand-gold transition">Workshops</a>
-            <a href="/events.html" class="text-brand-light hover:text-brand-gold transition">Parties</a>
-            <a href="/flipbook.html" class="text-brand-light hover:text-brand-gold transition">Portfolio</a>
-            <a href="/contact.html" class="text-brand-light hover:text-brand-gold transition">Contact</a>
+    <nav class="sticky top-0 bg-brand-navy/95 backdrop-blur-lg shadow-lg z-50 border-b border-brand-gold/10">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <!-- Logo points to main index -->
+            <a href="/index.html" class="text-2xl font-serif font-bold text-brand-gold text-center leading-none">
+                The Gilded Spoon
+                <span class="block text-xs font-sans font-light not-italic tracking-[0.3em] text-brand-light">SHOPPE &amp; ATELIER</span>
+            </a>
+            
+            <!-- Desktop Nav Links -->
+            <div class="hidden md:flex items-center space-x-6 font-medium text-xs tracking-widest uppercase">
+                <a href="/shoppe.html" class="text-brand-light hover:text-brand-gold transition">The Shoppe</a>
+                <a href="/baketobaseline/" class="text-brand-gold transition">Bake to Baseline</a>
+                <a href="/workshop.html" class="text-brand-light hover:text-brand-gold transition">Workshops</a>
+                <a href="/events.html" class="text-brand-light hover:text-brand-gold transition">Parties</a>
+                <a href="/flipbook.html" class="text-brand-light hover:text-brand-gold transition">Portfolio</a>
+                <a href="/contact.html" class="text-brand-light hover:text-brand-gold transition">Contact</a>
+            </div>
+            
+            <!-- Mobile Hamburger Button -->
+            <div class="md:hidden">
+                <button id="hamburger-button" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
         </div>
-        
-        <!-- Mobile Hamburger Button -->
-        <div class="md:hidden">
-            <button id="hamburger-button" class="text-white focus:outline-none">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-        </div>
-    </div>
 
-    <!-- Mobile Nav Menu (Leading slashes added) -->
-    <div id="mobile-menu" class="hidden md:hidden mt-4 px-4 pb-4 bg-brand-navy text-center">
-        <a href="/shoppe.html" class="block py-3 text-brand-light uppercase tracking-widest">The Shoppe</a>
-        <a href="/baketobaseline/" class="block py-3 text-brand-gold font-bold uppercase tracking-widest">Bake to Baseline</a>
-        <a href="/workshop.html" class="block py-3 text-brand-light uppercase tracking-widest">Workshops</a>
-        <a href="/events.html" class="block py-3 text-brand-light uppercase tracking-widest">Parties</a>
-        <a href="/flipbook.html" class="block py-3 text-brand-light uppercase tracking-widest">Portfolio</a>
-        <a href="/contact.html" class="block py-3 text-brand-light uppercase tracking-widest">Contact</a>
-    </div>
-</nav>
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 px-4 pb-4 bg-brand-navy text-center">
+            <a href="/shoppe.html" class="block py-3 text-brand-light uppercase tracking-widest">The Shoppe</a>
+            <a href="/baketobaseline/" class="block py-3 text-brand-gold font-bold uppercase tracking-widest">Bake to Baseline</a>
+            <a href="/workshop.html" class="block py-3 text-brand-light uppercase tracking-widest">Workshops</a>
+            <a href="/events.html" class="block py-3 text-brand-light uppercase tracking-widest">Parties</a>
+            <a href="/flipbook.html" class="block py-3 text-brand-light uppercase tracking-widest">Portfolio</a>
+            <a href="/contact.html" class="block py-3 text-brand-light uppercase tracking-widest">Contact</a>
+        </div>
+    </nav>
+
     <!-- HEADER SECTION -->
     <header class="text-center py-16 md:py-20 bg-brand-navy border-b border-brand-gold/10 relative overflow-hidden">
         <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')]"></div>
@@ -114,9 +116,17 @@
                 </div>
             </div>
 
-            <!-- EMBEDDED FORM CONTAINER -->
+            <!-- EMBEDDED FORM CONTAINER (WITH FRAME-BREAKING SANDBOX PERMISSIONS) -->
             <div class="bg-white p-6 md:p-10 rounded-3xl shadow-xl border border-brand-gold/20">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeNhynT2TEUkIBl_H35WhOKU7luGxfFWM2V-Hy9dOH2XJkxZg/viewform?embedded=true" class="w-full h-[280px] border-0" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                <iframe 
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSeNhynT2TEUkIBl_H35WhOKU7luGxfFWM2V-Hy9dOH2XJkxZg/viewform?embedded=true" 
+                    class="w-full h-[320px] border-0" 
+                    frameborder="0" 
+                    marginheight="0" 
+                    marginwidth="0"
+                    sandbox="allow-scripts allow-forms allow-same-origin allow-popups allow-popups-to-escape-sandbox allow-top-navigation">
+                    Loading…
+                </iframe>
             </div>
 
         </div>
@@ -140,9 +150,9 @@
                 </div>
 
                 <div class="flex flex-row justify-center space-x-8 mb-6 text-brand-light font-medium text-[10px] uppercase tracking-[0.2em]">
-                    <a href="thegildedspoonshoppe.com/contact" class="hover:text-brand-gold transition-colors">Contact Us</a>
-                    <a href="thegildedspoonshoppe.com/partnerships.html" class="hover:text-brand-gold transition-colors">Partnerships</a>
-                    <a href="thegildedspoonshoppe.com/policies.html" class="hover:text-brand-gold transition-colors">Order Fulfillment & Delivery</a>
+                    <a href="/contact.html" class="hover:text-brand-gold transition-colors">Contact Us</a>
+                    <a href="/partnerships.html" class="hover:text-brand-gold transition-colors">Partnerships</a>
+                    <a href="/policies.html" class="hover:text-brand-gold transition-colors">Order Fulfillment &amp; Delivery</a>
                 </div>
 
             </div>
