@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="p:domain_verify" content="8497c86d445458f17cdce81e920478f2"/>
     <title>Sensory Workshop Labs&trade; | The Gilded Spoon Shoppe</title>
-    <meta name="description" content="Step into the Sensory Workshop Lab&trade;. An interactive sensory experience blending cake design with nervous system regulation.">
+    <meta name="description" content="Step into the Sensory Workshop Lab&trade;. Individual seats and private corporate group cohorts blending tactile design with nervous system regulation.">
     
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -19,7 +19,6 @@
             theme: {
                 extend: {
                     colors: {
-                        // Your Real, Active Brand Palette
                         'brand-dark': '#1C161E',
                         'brand-light': '#F4F1ED',
                         'brand-gold': '#D4AF37',
@@ -28,13 +27,11 @@
                         'brand-card': '#2A232F',
                         'brand-navy': '#0A2342',
 
-                        // Safe Remapping
                         'brand-sanctuary': '#0A2342',   
                         'brand-canvas': '#F4F1ED',      
                         'brand-blueprint': '#1C161E',   
                         'brand-jolt': '#D4AF37',        
-                        'brand-soul': '#D4AF37',        
-                        'brand-process': '#D4AF37'      
+                        'brand-soul': '#D4AF37'        
                     },
                     fontFamily: {
                         'serif': ['"Playfair Display"', 'serif'],
@@ -42,8 +39,6 @@
                         'cursive': ['"Great Vibes"', 'cursive'],
                         'baskerville': ['"Libre Baskerville"', 'serif'],
                         'hand': ['"Caveat"', 'cursive'],
-                        
-                        // Safe Font Remapping
                         'cormorant': ['"Playfair Display"', 'serif'],
                         'montserrat': ['"Inter"', 'sans-serif']
                     }
@@ -54,8 +49,9 @@
 </head>
 <body class="font-sans bg-brand-light text-brand-dark antialiased">
 
-    <nav class="sticky top-0 bg-brand-navy/95 backdrop-blur-lg shadow-lg z-50 border-b border-brand-gold/10">
-        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+    <!-- NAVIGATION -->
+    <nav class="sticky top-0 bg-brand-navy z-50 border-b border-brand-gold/10">
+        <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
             <a href="index.html" class="text-2xl font-serif font-bold text-brand-gold text-center leading-none">
                 The Gilded Spoon
                 <span class="block text-xs font-sans font-light not-italic tracking-[0.3em] text-brand-light">SHOPPE & ATELIER</span>
@@ -63,13 +59,11 @@
             <div class="hidden md:flex items-center space-x-6 font-medium text-xs tracking-widest uppercase">
                 <a href="shoppe.html" class="text-brand-light hover:text-brand-gold transition">Shoppe</a>
                 <a href="workshop.html" class="text-brand-gold hover:text-white transition">Workshops</a>
-                <a href="events.html" class="text-brand-light hover:text-brand-gold transition">Parties</a>
                 <a href="flipbook.html" class="text-brand-light hover:text-brand-gold transition">Portfolio</a>
                 <a href="contact.html" class="text-brand-light hover:text-brand-gold transition">Contact</a>
-                <!-- SOLID FILLED CTA BUTTON -->
-    <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-navy hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm">
-        Free Guide
-    </a>
+                <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-navy hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm">
+                    Free Guide
+                </a>
             </div>
             <div class="md:hidden">
                 <button id="hamburger-button" class="text-white focus:outline-none">
@@ -80,99 +74,187 @@
         <div id="mobile-menu" class="hidden md:hidden mt-4 px-4 pb-4 bg-brand-navy text-center">
             <a href="shoppe.html" class="block py-3 text-brand-light uppercase tracking-widest">Shoppe</a>
             <a href="workshop.html" class="block py-3 text-brand-light uppercase tracking-widest">Workshops</a>
-            <a href="events.html" class="block py-3 text-brand-light uppercase tracking-widest">Parties</a>
             <a href="flipbook.html" class="block py-3 text-brand-light uppercase tracking-widest">Portfolio</a>
             <a href="contact.html" class="block py-3 text-brand-light uppercase tracking-widest">Contact</a>
-<!-- SOLID FILLED CTA BUTTON -->
-    <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-navy hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm">
-        Free Guide
-    </a>
+            <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-navy hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm mt-2 inline-block">
+                Free Guide
+            </a>
         </div>
     </nav>
 
-    <header class="text-center py-16 md:py-24 bg-brand-navy border-b border-brand-gold/10 relative overflow-hidden">
-        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')]"></div>
+    <!-- HEADER -->
+    <header class="text-center py-16 md:py-20 bg-brand-navy border-b border-brand-gold/10 relative overflow-hidden">
         <div class="max-w-4xl mx-auto px-6 relative z-10">
-            <h1 class="font-serif text-4xl md:text-6xl font-bold text-white leading-tight mb-4">Sensory Workshop Labs&trade;</h1>
-            <p class="text-center text-brand-gold max-w-2xl mx-auto mb-4 text-lg font-serif italic">Five layers of sensory design. Zero layers of masking. Stop Performing and Start Feeling!</p>
-            <p class="text-center text-brand-light/90 max-w-2xl mx-auto mb-0 text-lg font-serif italic">Our live workshops graduate from standard baking classes into collaborative Sensory Workshop Labs&trade;. Step into an immersive space designed to actively ground your nervous system using structural flavor, color-taste fields, and culinary variables.</p>
+            <span class="text-brand-gold font-montserrat font-bold tracking-[0.3em] uppercase text-xs block mb-3">The Atelier Experience</span>
+            <h1 class="font-serif text-4xl md:text-5xl font-bold text-white leading-tight mb-4">Sensory Workshop Labs&trade;</h1>
+            <p class="text-center text-brand-gold max-w-2xl mx-auto mb-3 text-base md:text-lg font-serif italic">Five layers of sensory design. Zero layers of masking. Stop Performing and Start Feeling.</p>
+            <p class="text-center text-brand-light/90 max-w-2xl mx-auto text-xs md:text-sm font-sans leading-relaxed">Our live workshops graduate from standard baking classes into collaborative Sensory Workshop Labs&trade;. Join an upcoming public cohort or book a private team session designed to actively ground your nervous system through tactile creation and cognitive strategy.</p>
         </div>
     </header>
 
-    <section class="py-16 md:py-24 bg-brand-light text-center border-b border-brand-gold/10">
-        <div class="max-w-4xl mx-auto px-6 bg-white p-10 md:p-14 rounded-3xl shadow-xl border border-brand-gold/20">
-            <span class="text-brand-gold font-sans font-bold tracking-widest uppercase text-xs block mb-4">Reserve Your Seat</span>
-            <h2 class="font-serif text-3xl md:text-4xl text-brand-navy mb-4 font-bold">The Sensory Cake Design Experience</h2>
-            <h3 class="font-serif text-xl text-brand-gold font-bold mb-4 italic">An Interactive Group Pilot Workshop</h3>
-            <p class="font-sans font-bold text-3xl text-brand-navy mb-8">$115 <span class="text-sm font-normal opacity-70">/ Seat</span></p>
-            
-            <div class="text-brand-dark/90 mb-10 text-base md:text-lg leading-relaxed font-sans text-left max-w-2xl mx-auto space-y-4">
-                <p><strong>Designed for deep feelers, neurodivergent creators (AuDHD), and anyone ready to completely drop the heavy weight of social performance. We use the tactile, beautiful language of cake architecture to safely map and process your internal world.</strong></p>
-                <ul class="list-disc pl-6 space-y-2 text-sm md:text-base">
-                    <li><strong>Decorate a Mini Cake Canvas:</strong> Translate your abstract internal feelings into tangible elements using custom, low-friction frosting techniques.</li>
-                    <li><strong>The 5-Layer Framework&trade;:</strong> Move layer-by-layer through a structured, supportive workflow that transforms kitchen chaos into an absolute safe haven.</li>
-                    <li><strong>Handmade Signature Canvas Recipe Panels Included:</strong> Take home a premium physical copy of our Handmade Signature Canvas Recipe Panels, designed explicitly to protect your working memory.</li>
-                </ul>
+    <!-- WORKSHOP OFFERINGS GRID -->
+    <section class="py-12 md:py-16 bg-brand-light border-b border-brand-gold/10">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-10">
+                <span class="text-brand-gold font-sans font-bold tracking-widest uppercase text-xs block mb-2">Our Two Core Lab Tracks</span>
+                <h2 class="font-serif text-3xl font-bold text-brand-navy">Choose Your Workshop Experience</h2>
             </div>
-            
-            <a href="contact.html?subject=Sensory%20Workshop%20Lab" class="inline-block bg-brand-navy text-white font-sans font-bold py-4 px-12 rounded-full hover:bg-brand-gold hover:text-brand-navy transition-all shadow-lg uppercase tracking-widest text-sm">
-                Inquire / Reserve A Seat
-            </a>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                
+                <!-- LAB 1: SENSORY WORKSHOP LAB -->
+                <div class="bg-white p-8 rounded-3xl shadow-xl border border-brand-gold/20 flex flex-col">
+                    <span class="text-brand-gold font-sans font-bold tracking-widest uppercase text-[10px] block mb-2">Lab 01 &bull; Tactile Regulation</span>
+                    <h3 class="font-serif text-2xl text-brand-navy font-bold mb-2">Sensory Workshop Lab&trade;</h3>
+                    <p class="font-sans font-bold text-2xl text-brand-gold mb-4">$115 <span class="text-xs font-normal text-brand-dark/60">/ Seat</span></p>
+                    
+                    <p class="text-xs text-brand-dark/80 font-sans leading-relaxed mb-6">Designed for deep feelers and neurodivergent creators ready to drop social performance. Translate internal energy into tangible form using rhythmic motion and tactile materials.</p>
+                    
+                    <div class="bg-brand-light/60 p-4 rounded-xl text-xs font-sans text-brand-dark/90 mb-6 space-y-2 border border-brand-gold/10">
+                        <strong class="text-brand-navy font-serif block text-sm">Choose Your Medium:</strong>
+                        <p><strong>✦ Edible Path:</strong> Mini Cake Canvas with custom, low-friction frostings and toppings.</p>
+                        <p><strong>✦ Non-Edible Path:</strong> Thick Modeling Paste on gallery canvas (tactile ASMR, zero mess, permanent art piece).</p>
+                    </div>
+
+                    <a href="contact.html?subject=Reserve%20Sensory%20Workshop%20Lab" class="block text-center bg-brand-navy text-white font-sans font-bold py-3 px-6 rounded-full hover:bg-brand-gold hover:text-brand-navy transition-all uppercase tracking-widest text-xs mt-auto">
+                        Reserve Individual Seat
+                    </a>
+                </div>
+
+                <!-- LAB 2: RECIPE DECONSTRUCTION LAB -->
+                <div class="bg-white p-8 rounded-3xl shadow-xl border border-brand-gold/20 flex flex-col">
+                    <span class="text-brand-gold font-sans font-bold tracking-widest uppercase text-[10px] block mb-2">Lab 02 &bull; Executive Function</span>
+                    <h3 class="font-serif text-2xl text-brand-navy font-bold mb-2">Recipe Deconstruction Lab&trade;</h3>
+                    <p class="font-sans font-bold text-2xl text-brand-gold mb-4">$150 <span class="text-xs font-normal text-brand-dark/60">/ Seat</span></p>
+                    
+                    <p class="text-xs text-brand-dark/80 font-sans leading-relaxed mb-6">Learn our proprietary visual coding system to "weld down" complex, overwhelming recipes into low-friction Atelier Recipe Card Decks that protect working memory.</p>
+
+                    <div class="bg-brand-light/60 p-4 rounded-xl text-xs font-sans text-brand-dark/90 mb-6 space-y-2 border border-brand-gold/10">
+                        <strong class="text-brand-navy font-serif block text-sm">Included Materials:</strong>
+                        <p><strong>✦ Visual Blueprint System:</strong> Hands-on instruction to visual-code chaotic recipes, pause points, and thermal steps.</p>
+                        <p><strong>✦ Atelier Recipe Card Deck:</strong> Create physical, durable recipe cards designed explicitly for executive function support.</p>
+                    </div>
+
+                    <a href="contact.html?subject=Reserve%20Recipe%20Deconstruction%20Lab" class="block text-center bg-brand-navy text-white font-sans font-bold py-3 px-6 rounded-full hover:bg-brand-gold hover:text-brand-navy transition-all uppercase tracking-widest text-xs mt-auto">
+                        Reserve Individual Seat
+                    </a>
+                </div>
+
+            </div>
         </div>
     </section>
-    
-    <section class="py-16 md:py-24 bg-brand-navy">
+
+    <!-- PRIVATE GROUPS & CORPORATE EVENTS SECTION (CLEARLY MATCHED TO CORE OFFERINGS) -->
+    <section class="py-12 md:py-16 bg-white border-b border-brand-gold/10">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="bg-brand-navy text-white p-8 md:p-12 rounded-3xl shadow-2xl border border-brand-gold/30">
+                <div class="grid md:grid-cols-3 gap-8 items-center">
+                    <div class="md:col-span-2">
+                        <span class="text-brand-gold font-sans font-bold tracking-widest uppercase text-xs block mb-2">Private Cohorts &amp; Workplace Wellness</span>
+                        <h2 class="font-serif text-3xl font-bold text-white mb-4">Book a Private Group or Corporate Workshop</h2>
+                        <p class="text-xs md:text-sm text-brand-light/80 font-sans leading-relaxed mb-4">
+                            Bring either of our signature workshop labs exclusively to your team, organization, or gathering. We provide the exact same core experiences in a private setting designed for unmasked connection and individual sensory comfort.
+                        </p>
+                        <ul class="text-xs text-brand-light/90 space-y-2 font-sans mb-2">
+                            <li class="flex items-start"><span class="text-brand-gold mr-2 mt-0.5">✦</span> <span><strong>In-Person Local Cohorts:</strong> Hosted in McKinney, TX or at your private venue.</span></li>
+                            <li class="flex items-start"><span class="text-brand-gold mr-2 mt-0.5">✦</span> <span><strong>Remote Corporate Labs:</strong> Non-edible strategy kits shipped nationally for team wellness.</span></li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col items-center md:items-end justify-center text-center md:text-right">
+                        <p class="font-serif text-xs md:text-sm italic text-brand-gold mb-4 leading-snug">Private Cohorts &amp; Custom Corporate Proposals Available</p>
+                        <a href="contact.html?subject=Private%20Group%20or%20Corporate%20Workshop%20Inquiry" class="inline-block bg-brand-gold text-brand-navy font-sans font-bold py-3.5 px-6 rounded-full hover:bg-white hover:text-brand-navy transition-all uppercase tracking-widest text-xs shadow-lg whitespace-nowrap">
+                            Request a Proposal
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE ATELIER PROCESS SECTION -->
+    <section class="py-12 md:py-16 bg-brand-canvas border-b border-brand-navy/5">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="font-serif text-3xl md:text-5xl text-brand-gold text-center mb-6 font-bold">The 5-Layer Framework&trade;</h2>
+            <div class="text-center mb-10 max-w-2xl mx-auto">
+                <span class="block text-xs font-bold uppercase tracking-widest text-brand-navy mb-2">The Atelier Process</span>
+                <h2 class="font-serif text-3xl font-bold text-brand-navy mb-4 leading-tight">Effortless Group Facilitation</h2>
+                <p class="text-xs md:text-sm text-brand-dark/80 font-sans leading-relaxed">
+                    Whether attending an individual seat or hosting a private group, we carry the mental load from start to finish.
+                </p>
+            </div>
             
-            <div class="max-w-3xl mx-auto text-center mb-16">
-                <p class="text-brand-light/80 font-sans text-base md:text-lg leading-relaxed">
-                    A traditional recipe demands flawless precision, which immediately triggers anxiety. Our <em>Framework</em>, on the other hand, provides unshakeable emotional safety. During the live workshop, we break down your sensory environment into five predictable, protective steps to help you safely regulate your nervous system.
+            <div class="grid md:grid-cols-3 gap-6 text-center max-w-5xl mx-auto">
+                <div class="bg-white p-6 rounded-2xl border border-brand-gold/10">
+                    <span class="text-brand-gold text-2xl font-hand block mb-2 leading-none">1. Consultation</span>
+                    <h3 class="font-serif font-bold text-brand-navy mb-2 text-sm">Match Capacity to Creation</h3>
+                    <p class="text-[11px] text-brand-dark/70 font-sans leading-relaxed">We review your group size, format preferences (in-person or remote), and any dietary needs to recommend the ideal lab track.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-brand-gold/10">
+                    <span class="text-brand-gold text-2xl font-hand block mb-2 leading-none">2. Curation</span>
+                    <h3 class="font-serif font-bold text-brand-navy mb-2 text-sm">We Prepare the Blueprint</h3>
+                    <p class="text-[11px] text-brand-dark/70 font-sans leading-relaxed">The Atelier team curates custom palettes, pre-selected color coding, tactile tools, and simplified visual instructions. Kits shipped nationally for remote teams.</p>
+                </div>
+                <div class="bg-white p-6 rounded-2xl border border-brand-gold/10">
+                    <span class="text-brand-gold text-2xl font-hand block mb-2 leading-none">3. Facilitation</span>
+                    <h3 class="font-serif font-bold text-brand-navy mb-2 text-sm">Grounding &amp; Group Flow</h3>
+                    <p class="text-[11px] text-brand-dark/70 font-sans leading-relaxed">Full setup to post-session cleanup is entirely handled. Guided labs focus on unmasked release, tactile grounding, and executive function support.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5-LAYER FRAMEWORK SECTION -->
+    <section class="py-16 bg-brand-navy">
+        <div class="max-w-6xl mx-auto px-6">
+            <h2 class="font-serif text-3xl md:text-4xl text-brand-gold text-center mb-4 font-bold">The 5-Layer Framework&trade;</h2>
+            
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <p class="text-brand-light/80 font-sans text-xs md:text-sm leading-relaxed">
+                    A traditional recipe demands flawless precision, which triggers executive fatigue. Our <em>Framework</em> breaks down your environment into five predictable, protective steps to help you safely regulate your nervous system.
                 </p>
             </div>
             
             <div class="relative max-w-5xl mx-auto">
-                <div class="absolute left-6 top-0 bottom-0 w-1 bg-brand-gold/20 md:left-0 md:right-0 md:top-6 md:bottom-auto md:h-1 md:w-full"></div>
+                <div class="hidden md:block absolute left-0 right-0 top-6 h-1 bg-brand-gold/20"></div>
 
-                <div class="flex flex-col md:flex-row gap-10 md:gap-4 justify-between">
+                <div class="flex flex-col md:flex-row gap-6 justify-between">
                     
-                    <div class="relative flex flex-col items-start md:items-center w-full md:w-1/5 group">
-                        <div class="w-12 h-12 rounded-full bg-brand-light border-4 border-brand-gold text-brand-navy flex items-center justify-center font-serif text-xl font-bold shadow-xl z-10 group-hover:scale-110 transition-transform">1</div>
-                        <div class="ml-16 md:ml-0 mt-0 md:mt-8 bg-brand-light p-6 rounded-2xl shadow-lg border-t-4 border-brand-gold w-full flex-grow text-left md:text-center group-hover:-translate-y-1 transition-transform">
-                            <h3 class="font-serif text-lg text-brand-navy mb-3 font-bold">The Heart</h3>
-                            <p class="text-xs text-brand-dark/90 leading-relaxed font-sans">Arriving in the sanctuary, shedding social expectations, and gently mapping out your present internal energy levels.</p>
+                    <div class="relative flex flex-col items-center w-full md:w-1/5 group">
+                        <div class="w-12 h-12 rounded-full bg-brand-light border-4 border-brand-gold text-brand-navy flex items-center justify-center font-serif text-xl font-bold shadow-xl z-10">1</div>
+                        <div class="mt-4 bg-brand-light p-5 rounded-2xl shadow-lg border-t-4 border-brand-gold w-full text-center">
+                            <h3 class="font-serif text-base text-brand-navy mb-2 font-bold">The Heart</h3>
+                            <p class="text-[11px] text-brand-dark/90 leading-relaxed font-sans">Shedding social expectations and gently mapping out your present energy levels.</p>
                         </div>
                     </div>
 
-                    <div class="relative flex flex-col items-start md:items-center w-full md:w-1/5 group">
-                        <div class="w-12 h-12 rounded-full bg-brand-light border-4 border-brand-gold text-brand-navy flex items-center justify-center font-serif text-xl font-bold shadow-xl z-10 group-hover:scale-110 transition-transform">2</div>
-                        <div class="ml-16 md:ml-0 mt-0 md:mt-8 bg-brand-light p-6 rounded-2xl shadow-lg border-t-4 border-brand-gold w-full flex-grow text-left md:text-center group-hover:-translate-y-1 transition-transform">
-                            <h3 class="font-serif text-lg text-brand-navy mb-3 font-bold">The Invitation</h3>
-                            <p class="text-xs text-brand-dark/90 leading-relaxed font-sans">Selecting personalized, sensory-safe color palettes that intentionally signal comfort and decompression to the brain.</p>
+                    <div class="relative flex flex-col items-center w-full md:w-1/5 group">
+                        <div class="w-12 h-12 rounded-full bg-brand-light border-4 border-brand-gold text-brand-navy flex items-center justify-center font-serif text-xl font-bold shadow-xl z-10">2</div>
+                        <div class="mt-4 bg-brand-light p-5 rounded-2xl shadow-lg border-t-4 border-brand-gold w-full text-center">
+                            <h3 class="font-serif text-base text-brand-navy mb-2 font-bold">The Invitation</h3>
+                            <p class="text-[11px] text-brand-dark/90 leading-relaxed font-sans">Selecting sensory-safe color palettes that signal comfort and decompression.</p>
                         </div>
                     </div>
 
-                    <div class="relative flex flex-col items-start md:items-center w-full md:w-1/5 group">
-                        <div class="w-12 h-12 rounded-full bg-brand-light border-4 border-brand-gold text-brand-navy flex items-center justify-center font-serif text-xl font-bold shadow-xl z-10 group-hover:scale-110 transition-transform">3</div>
-                        <div class="ml-16 md:ml-0 mt-0 md:mt-8 bg-brand-light p-6 rounded-2xl shadow-lg border-t-4 border-brand-gold w-full flex-grow text-left md:text-center group-hover:-translate-y-1 transition-transform">
-                            <h3 class="font-serif text-lg text-brand-navy mb-3 font-bold">The Memory &amp; Shape</h3>
-                            <p class="text-xs text-brand-dark/90 leading-relaxed font-sans">Accessing nostalgic emotional anchors through flavor curation while exploring soft versus sharp structural boundaries.</p>
+                    <div class="relative flex flex-col items-center w-full md:w-1/5 group">
+                        <div class="w-12 h-12 rounded-full bg-brand-light border-4 border-brand-gold text-brand-navy flex items-center justify-center font-serif text-xl font-bold shadow-xl z-10">3</div>
+                        <div class="mt-4 bg-brand-light p-5 rounded-2xl shadow-lg border-t-4 border-brand-gold w-full text-center">
+                            <h3 class="font-serif text-base text-brand-navy mb-2 font-bold">The Memory</h3>
+                            <p class="text-[11px] text-brand-dark/90 leading-relaxed font-sans">Accessing emotional anchors through flavor curation or structural shapes.</p>
                         </div>
                     </div>
 
-                    <div class="relative flex flex-col items-start md:items-center w-full md:w-1/5 group">
-                        <div class="w-12 h-12 rounded-full bg-brand-light border-4 border-brand-gold text-brand-navy flex items-center justify-center font-serif text-xl font-bold shadow-xl z-10 group-hover:scale-110 transition-transform">4</div>
-                        <div class="ml-16 md:ml-0 mt-0 md:mt-8 bg-brand-light p-6 rounded-2xl shadow-lg border-t-4 border-brand-gold w-full flex-grow text-left md:text-center group-hover:-translate-y-1 transition-transform">
-                            <h3 class="font-serif text-lg text-brand-navy mb-3 font-bold">The Anchor &amp; Strategy</h3>
-                            <p class="text-xs text-brand-dark/90 leading-relaxed font-sans">Deploying powerful tactile inputs (like a trigeminal nerve crunch texture) to safely bypass cognitive overwhelm.</p>
+                    <div class="relative flex flex-col items-center w-full md:w-1/5 group">
+                        <div class="w-12 h-12 rounded-full bg-brand-light border-4 border-brand-gold text-brand-navy flex items-center justify-center font-serif text-xl font-bold shadow-xl z-10">4</div>
+                        <div class="mt-4 bg-brand-light p-5 rounded-2xl shadow-lg border-t-4 border-brand-gold w-full text-center">
+                            <h3 class="font-serif text-base text-brand-navy mb-2 font-bold">The Anchor</h3>
+                            <p class="text-[11px] text-brand-dark/90 leading-relaxed font-sans">Deploying tactile inputs and visual codes to bypass cognitive overwhelm.</p>
                         </div>
                     </div>
 
-                    <div class="relative flex flex-col items-start md:items-center w-full md:w-1/5 group">
-                        <div class="w-12 h-12 rounded-full bg-brand-light border-4 border-brand-gold text-brand-navy flex items-center justify-center font-serif text-xl font-bold shadow-xl z-10 group-hover:scale-110 transition-transform">5</div>
-                        <div class="ml-16 md:ml-0 mt-0 md:mt-8 bg-brand-light p-6 rounded-2xl shadow-lg border-t-4 border-brand-gold w-full flex-grow text-left md:text-center group-hover:-translate-y-1 transition-transform">
-                            <h3 class="font-serif text-lg text-brand-navy mb-3 font-bold">The Magic</h3>
-                            <p class="text-xs text-brand-dark/90 leading-relaxed font-sans">Applying finishing design flourishes that lock in your emotional transformation, leaving you deeply regulated.</p>
+                    <div class="relative flex flex-col items-center w-full md:w-1/5 group">
+                        <div class="w-12 h-12 rounded-full bg-brand-light border-4 border-brand-gold text-brand-navy flex items-center justify-center font-serif text-xl font-bold shadow-xl z-10">5</div>
+                        <div class="mt-4 bg-brand-light p-5 rounded-2xl shadow-lg border-t-4 border-brand-gold w-full text-center">
+                            <h3 class="font-serif text-base text-brand-navy mb-2 font-bold">The Magic</h3>
+                            <p class="text-[11px] text-brand-dark/90 leading-relaxed font-sans">Finishing design flourishes that lock in emotional transformation and regulation.</p>
                         </div>
                     </div>
 
@@ -181,67 +263,46 @@
         </div>
     </section>
 
-    <section class="py-16 md:py-24 bg-brand-light border-t border-brand-gold/10">
+    <!-- FAQ SECTION -->
+    <section class="py-16 bg-brand-light border-t border-brand-gold/10">
         <div class="max-w-4xl mx-auto px-6">
-            <h2 class="font-serif text-3xl md:text-4xl text-brand-navy text-center mb-12 font-bold">Frequently Asked Questions</h2>
-            <div class="space-y-6 font-sans">
+            <h2 class="font-serif text-3xl text-brand-navy text-center mb-10 font-bold">Frequently Asked Questions</h2>
+            <div class="space-y-4 font-sans">
                 
-                <div class="bg-white p-8 rounded-3xl shadow-md border border-brand-gold/20 hover:border-brand-gold transition-colors">
-                    <h3 class="font-serif text-xl text-brand-gold font-bold mb-3">Do I need to have prior baking or decorating experience?</h3>
-                    <p class="text-brand-dark/90 leading-relaxed text-sm md:text-base">Not at all. There is absolutely no oven required during this experience. We provide your mini cake canvases pre-baked and ready, allowing you to completely skip the cognitive clutter of kitchen cleanup and leap straight into sensory design.</p>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-brand-gold/20">
+                    <h3 class="font-serif text-lg text-brand-gold font-bold mb-2">Do I need prior baking or design experience?</h3>
+                    <p class="text-brand-dark/90 leading-relaxed text-xs md:text-sm">Not at all. There is no baking required during the sessions. All edible mini cakes or gallery canvas materials arrive pre-prepared so you skip kitchen cleanup and jump straight into sensory flow.</p>
                 </div>
 
-                <div class="bg-white p-8 rounded-3xl shadow-md border border-brand-gold/20 hover:border-brand-gold transition-colors">
-                    <h3 class="font-serif text-xl text-brand-gold font-bold mb-3">What exactly do I take home from the laboratory session?</h3>
-                    <p class="text-brand-dark/90 leading-relaxed text-sm md:text-base">You will walk out of the studio with your custom-decorated edible mini cake canvas and a premium physical copy of our Handmade Signature Canvas Recipe Panels to anchor your routines at home.</p>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-brand-gold/20">
+                    <h3 class="font-serif text-lg text-brand-gold font-bold mb-2">What do I take home from the laboratory session?</h3>
+                    <p class="text-brand-dark/90 leading-relaxed text-xs md:text-sm">Depending on your lab track, you take home your custom-decorated mini cake canvas, a permanent gallery-wrapped modeling paste canvas, or physical Atelier Recipe Card Decks.</p>
                 </div>
 
-                <div class="bg-white p-8 rounded-3xl shadow-md border border-brand-gold/20 hover:border-brand-gold transition-colors">
-                    <h3 class="font-serif text-xl text-brand-gold font-bold mb-3">How are the workshop groups structured for sensory protection?</h3>
-                    <p class="text-brand-dark/90 leading-relaxed text-sm md:text-base">To preserve an absolute sensory sanctuary and safeguard everyone's energetic boundaries, seats are strictly capped for an intimate, calm environment. There are no bright fluorescent overheads or loud, unexpected performance pressures.</p>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-brand-gold/20">
+                    <h3 class="font-serif text-lg text-brand-gold font-bold mb-2">How are groups structured for sensory protection?</h3>
+                    <p class="text-brand-dark/90 leading-relaxed text-xs md:text-sm">Seats are strictly capped for an intimate, low-noise environment. There are no harsh overhead lights or performance pressures.</p>
                 </div>
 
-                <div class="bg-white p-8 rounded-3xl shadow-md border border-brand-gold/20 hover:border-brand-gold transition-colors">
-                    <h3 class="font-serif text-xl text-brand-gold font-bold mb-3">Can I book a private cohort workshop session?</h3>
-                    <p class="text-brand-dark/90 leading-relaxed text-sm md:text-base">Yes! We host private sensory workshop cohorts for aligned local business teams, neuroinclusive networks, and creative groups looking to establish deep connection without social masking. Are you an ERG leader or local venue coordinator? <a href="partnerships.html" class="text-brand-gold hover:text-brand-navy font-bold transition-colors underline decoration-brand-gold/30 underline-offset-4 ml-1">Explore our Partnership Opportunities &rarr;</a></p>
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-brand-gold/20">
+                    <h3 class="font-serif text-lg text-brand-gold font-bold mb-2">Can I book a private cohort workshop or corporate wellness event?</h3>
+                    <p class="text-brand-dark/90 leading-relaxed text-xs md:text-sm">Yes! We host private cohorts for families, business teams, ERGs, and neuroinclusive groups locally in-person or virtually with shipped kits. Use our contact page to request a private team proposal.</p>
                 </div>
 
             </div>
         </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="bg-brand-dark text-brand-gray border-t border-brand-gold/20 font-sans text-xs">
-        <div class="max-w-2xl mx-auto px-6 py-8">
-            <div class="flex flex-col items-center">
-                
-                <div class="flex justify-center space-x-6 mb-6 text-brand-light">
-                    <a href="https://www.instagram.com/thegildedspoonshoppe/" target="_blank" class="hover:text-brand-gold transition-colors">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919 4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg>
-                    </a>
-                    <a href="https://www.facebook.com/dimple.mckinney" target="_blank" class="hover:text-brand-gold transition-colors">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.494v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12ีv9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.323-1.325z"/></svg>
-                    </a>
-                    <a href="https://www.linkedin.com/in/dimple-mckinney/" target="_blank" class="hover:text-brand-gold transition-colors">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                    </a>
-                </div>
-
-                <div class="flex flex-row justify-center space-x-8 mb-6 text-brand-light font-medium text-[10px] uppercase tracking-[0.2em]">
-                    <a href="contact.html" class="hover:text-brand-gold transition-colors">Contact Us</a>
-                    <a href="partnerships.html" class="hover:text-brand-gold transition-colors">Partnerships</a>
-                    <a href="policies.html" class="hover:text-brand-gold transition-colors">Order Fulfillment & Delivery</a>
-                </div>
-
+        <div class="max-w-2xl mx-auto px-6 py-8 text-center">
+            <div class="flex justify-center space-x-8 mb-6 text-brand-light font-medium uppercase tracking-[0.2em]">
+                <a href="contact.html" class="hover:text-brand-gold transition-colors">Contact Us</a>
+                <a href="partnerships.html" class="hover:text-brand-gold transition-colors">Partnerships</a>
+                <a href="policies.html" class="hover:text-brand-gold transition-colors">Policies</a>
             </div>
-
-            <div class="pt-6 border-t border-brand-gray/10 text-center">
-                <p class="font-serif text-brand-light/30 text-xs mb-3">
-                    &copy; 2026 The Gilded Spoon Shoppe | McKinney, Texas
-                </p>
-                <p class="max-w-xl mx-auto font-sans text-[9px] leading-relaxed text-brand-gray/20 italic">
-                    Disclaimer: The Gilded Spoon Shoppe provides sensory design education. It is not a substitute for professional medical advice, diagnosis, or occupational therapy. Edible products are prepared in a home kitchen that handles allergens including wheat, dairy, eggs, soy, and nuts.
-                </p>
-            </div>
+            <p class="font-serif text-brand-light/30 text-xs mb-3">&copy; 2026 The Gilded Spoon Shoppe | McKinney, Texas</p>
+            <p class="max-w-xl mx-auto font-sans text-[9px] leading-relaxed text-brand-gray/20 italic">Disclaimer: The Gilded Spoon Shoppe provides sensory design education. It is not a substitute for medical advice or occupational therapy.</p>
         </div>
     </footer>
 
