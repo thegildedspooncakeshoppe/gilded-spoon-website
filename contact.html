@@ -49,10 +49,11 @@
                 <a href="flipbook.html" class="text-brand-light hover:text-brand-gold transition">Portfolio</a>
                 <a href="contact.html" class="text-brand-gold font-bold transition">Contact</a>
 
-            <!-- SOLID FILLED CTA BUTTON -->
-    <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-navy hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm">
-        Free Guide
-    </a></div>
+                <!-- SOLID FILLED CTA BUTTON -->
+                <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-navy hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm">
+                    Free Guide
+                </a>
+            </div>
             <div class="md:hidden">
                 <button id="hamburger-button" class="text-white focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
@@ -65,9 +66,9 @@
             <a href="flipbook.html" class="block py-3 text-brand-light uppercase tracking-widest">Portfolio</a>
             <a href="contact.html" class="block py-3 text-brand-gold font-bold uppercase tracking-widest">Contact</a>
             <!-- SOLID FILLED CTA BUTTON -->
-    <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-navy hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm">
-        Free Guide
-    </a>
+            <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-navy hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm mt-2 inline-block">
+                Free Guide
+            </a>
         </div>
     </nav>
 
@@ -77,7 +78,7 @@
             <span class="text-xs font-bold uppercase tracking-[0.25em] text-brand-gold block mb-3">Begin The Conversation</span>
             <h1 class="font-serif text-4xl md:text-5xl font-bold text-brand-light mb-4">Atelier Inquiries &amp; Commissions</h1>
             <p class="font-serif italic text-base md:text-lg text-brand-light/80 leading-relaxed max-w-xl mx-auto">
-                Whether requesting a bespoke somatic recipe deck commission or inquiring about boutique retail stocking, we welcome your message.
+                Whether reserving an individual workshop seat, requesting a private team proposal, or commissioning a custom recipe deck, we welcome your message.
             </p>
         </div>
     </header>
@@ -106,22 +107,41 @@
                     <div>
                         <label for="subject" class="block text-xs font-bold uppercase tracking-wider text-brand-navy mb-2">Inquiry Type *</label>
                         <select id="subject" required class="w-full bg-brand-light/50 border border-brand-gold/30 rounded-xl px-4 py-3 text-sm text-brand-dark focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors">
+                            <option value="Reserve Sensory Workshop Lab Seat">Reserve Sensory Workshop Lab Seat ($115)</option>
+                            <option value="Reserve Recipe Deconstruction Lab Seat">Reserve Recipe Deconstruction Lab Seat ($115)</option>
+                            <option value="Private Group or Corporate Workshop Proposal">Private Group or Corporate Workshop Proposal</option>
                             <option value="Custom Atelier Recipe Deck Commission">Bespoke Custom Atelier Recipe Deck Commission</option>
                             <option value="Signature Atelier Recipe Deck Order">Signature Atelier Recipe Deck Order (Lemon Raspberry Cake)</option>
-                            <option value="Sensory Workshop & Events">Sensory Workshop &amp; Private Gathering Inquiries</option>
                             <option value="Wholesale & Boutique Retail">Wholesale &amp; Boutique Retail Stocking</option>
                             <option value="General Inquiry">General Inquiry / Story Mapping</option>
                         </select>
                     </div>
 
-                    <!-- DYNAMIC COMMISSION GUIDANCE HELPER (Shows for Custom Commissions) -->
-                    <div id="custom-commission-guide" class="bg-brand-navy/5 border border-brand-gold/30 rounded-2xl p-5 text-xs text-brand-dark/80 space-y-2">
+                    <!-- HELPER 1: WORKSHOP INQUIRY CHECKLIST (Shows for Workshops/Proposals/Seats) -->
+                    <div id="workshop-inquiry-guide" class="hidden bg-brand-navy/5 border border-brand-gold/30 rounded-2xl p-5 text-xs text-brand-dark/80 space-y-2">
+                        <div class="flex items-center space-x-2 text-brand-navy font-bold uppercase tracking-wider">
+                            <svg class="w-4 h-4 text-brand-gold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span>Workshop Inquiry Checklist</span>
+                        </div>
+                        <p class="leading-relaxed">
+                            To help us tailor your experience or prepare an accurate team proposal, feel free to include:
+                        </p>
+                        <ul class="list-disc pl-5 space-y-1 text-brand-dark/70">
+                            <li><strong>Format &amp; Location:</strong> In-person (McKinney, TX / your private venue) OR remote shipped kits.</li>
+                            <li><strong>Group Size &amp; Type:</strong> Estimated headcount (e.g., individual seat, social gathering, corporate team, or ERG).</li>
+                            <li><strong>Lab Track Preference:</strong> Lab 01 (Somatic/Sensory Mini Cake or Canvas) OR Lab 02 (Cognitive Recipe Deconstruction).</li>
+                            <li><strong>Sensory &amp; Dietary Notes:</strong> Specific allergen needs (eggless/GF) or low-stimulus environment requests.</li>
+                        </ul>
+                    </div>
+
+                    <!-- HELPER 2: CUSTOM COMMISSION GUIDANCE (Shows for Recipe Decks) -->
+                    <div id="custom-commission-guide" class="hidden bg-brand-navy/5 border border-brand-gold/30 rounded-2xl p-5 text-xs text-brand-dark/80 space-y-2">
                         <div class="flex items-center space-x-2 text-brand-navy font-bold uppercase tracking-wider">
                             <svg class="w-4 h-4 text-brand-gold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                             <span>Custom Recipe Deck Checklist</span>
                         </div>
                         <p class="leading-relaxed">
-                            To help us design your low-overwhelm Somatic Recipe Deck, please feel free to include the following in your message:
+                            To help us design your low-overwhelm Somatic Recipe Deck, please feel free to include:
                         </p>
                         <ul class="list-disc pl-5 space-y-1 text-brand-dark/70">
                             <li><strong>Recipe Name &amp; Origin:</strong> Family heirloom, favorite signature bake, or specific pastry type.</li>
@@ -132,8 +152,8 @@
 
                     <!-- MESSAGE AREA -->
                     <div>
-                        <label for="message" class="block text-xs font-bold uppercase tracking-wider text-brand-navy mb-2">Message &amp; Recipe Details *</label>
-                        <textarea id="message" rows="5" required class="w-full bg-brand-light/50 border border-brand-gold/30 rounded-xl px-4 py-3 text-sm text-brand-dark focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors placeholder-brand-dark/40" placeholder="Please share your recipe details, sensory preferences, or general inquiry..."></textarea>
+                        <label for="message" class="block text-xs font-bold uppercase tracking-wider text-brand-navy mb-2">Message &amp; Inquiry Details *</label>
+                        <textarea id="message" rows="5" required class="w-full bg-brand-light/50 border border-brand-gold/30 rounded-xl px-4 py-3 text-sm text-brand-dark focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors placeholder-brand-dark/40" placeholder="Please share your details, preferences, or general inquiry..."></textarea>
                     </div>
 
                     <!-- SUBMIT BUTTON -->
@@ -189,7 +209,7 @@
         </div>
     </footer>
 
-    <!-- SCRIPT TO PARSE URL QUERY PARAMETERS & AUTO-SELECT SUBJECT -->
+    <!-- SCRIPT TO PARSE URL QUERY PARAMETERS & TOGGLE HELPER GUIDES -->
     <script>
         // Mobile Menu Toggle
         const hamburgerButton = document.getElementById('hamburger-button');
@@ -198,7 +218,7 @@
             hamburgerButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
         }
 
-        // URL Query Parameter Parser
+        // Dynamic URL Query Parameter Parser & Helper Box Togglers
         document.addEventListener('DOMContentLoaded', () => {
             const urlParams = new URLSearchParams(window.location.search);
             const subjectParam = urlParams.get('subject');
@@ -207,12 +227,25 @@
             const subjectSelect = document.getElementById('subject');
             const messageInput = document.getElementById('message');
             const customGuide = document.getElementById('custom-commission-guide');
+            const workshopGuide = document.getElementById('workshop-inquiry-guide');
 
             if (subjectParam && subjectSelect) {
-                const searchLower = subjectParam.toLowerCase();
+                const searchLower = decodeURIComponent(subjectParam).toLowerCase();
+                
                 for (let option of subjectSelect.options) {
                     const optLower = option.value.toLowerCase();
-                    if (optLower.includes(searchLower) || searchLower.includes('custom') && optLower.includes('custom')) {
+                    
+                    if (
+                        optLower === searchLower ||
+                        (searchLower.includes('sensory workshop') && optLower.includes('sensory workshop')) ||
+                        (searchLower.includes('recipe deconstruction') && optLower.includes('recipe deconstruction')) ||
+                        (searchLower.includes('proposal') && optLower.includes('proposal')) ||
+                        (searchLower.includes('corporate') && optLower.includes('corporate')) ||
+                        (searchLower.includes('private group') && optLower.includes('private group')) ||
+                        (searchLower.includes('custom') && optLower.includes('custom')) ||
+                        (searchLower.includes('signature') && optLower.includes('signature')) ||
+                        (searchLower.includes('wholesale') && optLower.includes('wholesale'))
+                    ) {
                         option.selected = true;
                         break;
                     }
@@ -223,17 +256,27 @@
                 messageInput.placeholder = "Please share details regarding: " + decodeURIComponent(detailsParam) + "...";
             }
 
-            // Function to toggle custom commission guidance box
-            function updateCustomGuideVisibility() {
-                if (subjectSelect.value.toLowerCase().includes('commission') || subjectSelect.value.toLowerCase().includes('custom')) {
+            // Toggle visibility of helper guidance boxes based on current select value
+            function updateGuideVisibility() {
+                const val = subjectSelect.value.toLowerCase();
+
+                // Custom Deck Guide
+                if (val.includes('commission') || val.includes('custom')) {
                     customGuide.classList.remove('hidden');
                 } else {
                     customGuide.classList.add('hidden');
                 }
+
+                // Workshop Guide
+                if (val.includes('workshop') || val.includes('proposal') || val.includes('seat') || val.includes('reserve')) {
+                    workshopGuide.classList.remove('hidden');
+                } else {
+                    workshopGuide.classList.add('hidden');
+                }
             }
 
-            subjectSelect.addEventListener('change', updateCustomGuideVisibility);
-            updateCustomGuideVisibility(); // Run on initial page load
+            subjectSelect.addEventListener('change', updateGuideVisibility);
+            updateGuideVisibility(); // Run on initial page load
         });
     </script>
 
