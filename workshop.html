@@ -54,7 +54,7 @@
         <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
             <a href="index.html" class="text-2xl font-serif font-bold text-brand-gold text-center leading-none">
                 The Gilded Spoon
-                <span class="block text-xs font-sans font-light not-italic tracking-[0.3em] text-brand-light">SHOPPE & ATELIER</span>
+                <span class="block text-xs font-sans font-light not-italic tracking-[0.3em] text-brand-light">SHOPPE &amp; ATELIER</span>
             </a>
             <div class="hidden md:flex items-center space-x-6 font-medium text-xs tracking-widest uppercase">
                 <a href="shoppe.html" class="text-brand-light hover:text-brand-gold transition">Shoppe</a>
@@ -73,7 +73,7 @@
         </div>
         <div id="mobile-menu" class="hidden md:hidden mt-4 px-4 pb-4 bg-brand-navy text-center">
             <a href="shoppe.html" class="block py-3 text-brand-light uppercase tracking-widest">Shoppe</a>
-            <a href="workshop.html" class="block py-3 text-brand-light uppercase tracking-widest">Workshops</a>
+            <a href="workshop.html" class="block py-3 text-brand-gold font-bold uppercase tracking-widest">Workshops</a>
             <a href="flipbook.html" class="block py-3 text-brand-light uppercase tracking-widest">Portfolio</a>
             <a href="contact.html" class="block py-3 text-brand-light uppercase tracking-widest">Contact</a>
             <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-navy hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm mt-2 inline-block">
@@ -101,7 +101,7 @@
     </section>
 
     <!-- WORKSHOP OFFERINGS GRID (3-TIER PER-SEAT PRICING) -->
-    <section class="py-12 md:py-16 bg-brand-light border-b border-brand-gold/10">
+    <section id="tiers" class="py-12 md:py-16 bg-brand-light border-b border-brand-gold/10">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="text-center mb-10">
                 <span class="text-brand-gold font-sans font-bold tracking-widest uppercase text-xs block mb-2">3-Tiered Workshop Pricing</span>
@@ -112,7 +112,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-6 items-stretch">
                 
                 <!-- TIER 1: PUBLIC STUDIO SEATS -->
-                <div class="bg-white px-5 py-6 md:px-6 md:py-8 rounded-3xl shadow-lg border border-brand-gold/20 flex flex-col">
+                <div id="tier1" class="bg-white px-5 py-6 md:px-6 md:py-8 rounded-3xl shadow-lg border border-brand-gold/20 flex flex-col">
                     <span class="text-brand-gold font-sans font-bold tracking-widest uppercase text-[10px] block mb-1">Tier 1 &bull; Public Studio Cohort</span>
                     <h3 class="font-serif text-xl lg:text-[22px] xl:text-2xl text-brand-navy font-bold mb-1 tracking-tight">Public Studio Seat</h3>
                     <p class="font-sans text-brand-gold font-bold text-xs mb-3">Scheduled Public Dates &bull; Shared Studio Space</p>
@@ -129,13 +129,13 @@
                         <p class="text-[11px]"><strong>✦ Included:</strong> 5-Layer Somatic Card &amp; 8x8x5 window bakery transport box.</p>
                     </div>
 
-                    <a href="contact.html?subject=Reserve%20Public%20Studio%20Seat%20(%24115)" class="block text-center bg-brand-navy text-white font-sans font-bold py-3.5 px-4 rounded-full hover:bg-brand-gold hover:text-brand-navy transition-all uppercase tracking-widest text-[11px] mt-auto">
+                    <a href="contact.html?subject=Tier%201%3A%20Reserve%20Public%20Studio%20Seat%20(%24115)" class="block text-center bg-brand-navy text-white font-sans font-bold py-3.5 px-4 rounded-full hover:bg-brand-gold hover:text-brand-navy transition-all uppercase tracking-widest text-[11px] mt-auto">
                         Reserve $115 Seat
                     </a>
                 </div>
 
                 <!-- TIER 2: PRIVATE LOCAL TEAM LABS (HYBRID FRIENDLY) -->
-                <div class="bg-white px-5 py-6 md:px-6 md:py-8 rounded-3xl shadow-lg border-2 border-brand-gold flex flex-col relative">
+                <div id="tier2" class="bg-white px-5 py-6 md:px-6 md:py-8 rounded-3xl shadow-lg border-2 border-brand-gold flex flex-col relative">
                     <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-gold text-brand-navy text-[9px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-sm whitespace-nowrap">
                         Most Popular for In-Person &amp; Hybrid Teams
                     </div>
@@ -157,18 +157,18 @@
                         <p class="text-[11px]"><strong>✦ Hybrid Remote Add-On:</strong> Have remote team members? Add individual shipped kits ($145/kit + shipping) for out-of-state colleagues so everyone creates live together!</p>
                     </div>
 
-                    <a href="contact.html?subject=Request%20Private%20Local%20Team%20Lab%20Proposal%20(%24135%2Fseat)" class="block text-center bg-brand-navy text-white font-sans font-bold py-3.5 px-4 rounded-full hover:bg-brand-gold hover:text-brand-navy transition-all uppercase tracking-widest text-[11px] mt-auto">
+                    <a href="contact.html?subject=Tier%202%3A%20Request%20Private%20Local%20or%20Hybrid%20Team%20Proposal%20(%24135)" class="block text-center bg-brand-navy text-white font-sans font-bold py-3.5 px-4 rounded-full hover:bg-brand-gold hover:text-brand-navy transition-all uppercase tracking-widest text-[11px] mt-auto">
                         Book Local Team ($135/Seat)
                     </a>
                 </div>
 
                 <!-- TIER 3: SHIPPED VIRTUAL CORPORATE KITS -->
-                <div class="bg-brand-navy text-white px-5 py-6 md:px-6 md:py-8 rounded-3xl shadow-xl border border-brand-gold/30 flex flex-col relative mt-4 lg:mt-0">
+                <div id="tier3" class="bg-brand-navy text-white px-5 py-6 md:px-6 md:py-8 rounded-3xl shadow-xl border border-brand-gold/30 flex flex-col relative mt-4 lg:mt-0">
                     <span class="text-brand-gold font-sans font-bold tracking-widest uppercase text-[10px] block mb-1">Tier 3 &bull; Remote Virtual Workshop</span>
                     <h3 class="font-serif text-xl lg:text-[21px] xl:text-2xl font-bold text-white mb-1 tracking-tight leading-tight">Remote Shipped Team Lab</h3>
                     <p class="font-sans text-brand-gold font-bold text-xs mb-3">Shipped Non-Edible 3D Keepsake Kits</p>
                     <p class="font-sans font-bold text-3xl text-white mb-1">$145 <span class="text-xs font-normal text-brand-light/60">/ Seat</span></p>
-                    <span class="text-[10px] font-sans text-brand-light/60 mb-4 font-medium">( 10 Kits or $1,450 Minimum Base &bull; Hybrid Splits Available)</span>
+                    <span class="text-[10px] font-sans text-brand-light/60 mb-4 font-medium">(10 Kits or $1,450 Minimum Event Base)</span>
 
                     <p class="text-xs text-brand-light/80 font-sans leading-relaxed mb-4">
                         We ship complete, non-edible 3D Sensory Canvas Kits directly to your remote employees' homes nationwide for a live, camera-optional virtual team lab.
@@ -181,7 +181,7 @@
                         <p class="text-[11px] text-brand-light/90"><strong>✦ Live Virtual Facilitation:</strong> 60–90 minute guided Zoom/Teams regulation &amp; unmasking session.</p>
                     </div>
 
-                    <a href="contact.html?subject=Request%20Remote%20Shipped%20Team%20Lab%20Proposal%20(%24145%2Fseat)" class="block text-center bg-brand-gold text-brand-navy font-sans font-bold py-3.5 px-4 rounded-full hover:bg-white transition-all uppercase tracking-widest text-[11px] mt-auto shadow-md">
+                    <a href="contact.html?subject=Tier%203%3A%20Request%20Remote%20Shipped%20Virtual%20Team%20Proposal%20(%24145)" class="block text-center bg-brand-gold text-brand-navy font-sans font-bold py-3.5 px-4 rounded-full hover:bg-white transition-all uppercase tracking-widest text-[11px] mt-auto shadow-md">
                         Book Virtual Team ($145/Seat)
                     </a>
                 </div>
