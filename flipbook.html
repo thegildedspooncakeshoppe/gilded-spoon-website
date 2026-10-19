@@ -5,14 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="p:domain_verify" content="8497c86d445458f17cdce81e920478f2"/>
     <title>Atelier Portfolio | The Gilded Spoon Shoppe</title>
-    <meta name="description" content="A gallery of bespoke cakes and tactile mixed-media sculptures crafted by Dimple McKinney in McKinney, Texas.">
-    <meta name="keywords" content="custom cakes McKinney TX, sensory art portfolio, keepsake cake sculpture, dimensional cake decorating, artisanal pastry design">
+    <meta name="description" content="A gallery of handcrafted celebration cakes and tactile mixed-media art pieces made by Dimple McKinney in McKinney, Texas.">
+    <meta name="keywords" content="custom cakes McKinney TX, celebration cakes, birthday cakes, keepsake cake sculpture, artisanal pastry design">
     
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://thegildedspoonshoppe.com/flipbook.html">
-    <meta property="og:title" content="The Gilded Spoon Atelier | Portfolio">
-    <meta property="og:description" content="A gallery of bespoke celebration cakes and tactile mixed-media art pieces.">
-
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -48,23 +43,23 @@
         
         .lightbox-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(10, 35, 66, 0.95); display: flex; justify-content: center; align-items: center; z-index: 1000; opacity: 0; visibility: hidden; transition: opacity 0.3s ease; backdrop-filter: blur(10px); }
         .lightbox-overlay.active { opacity: 1; visibility: visible; }
-        .lightbox-content { position: relative; width: 90vw; max-width: 1000px; max-height: 85vh; display: flex; justify-content: center; align-items: center; }
+        .lightbox-content { position: relative; width: 92vw; max-width: 1050px; max-height: 90vh; display: flex; justify-content: center; align-items: center; }
         
         .lightbox-close, .lightbox-nav { position: absolute; color: white; cursor: pointer; z-index: 1001; transition: color 0.2s ease; }
         .lightbox-close:hover, .lightbox-nav:hover { color: #D4AF37; }
-        .lightbox-close { top: -50px; right: 0; font-size: 2.5rem; }
-        .lightbox-nav { font-size: 3rem; padding: 20px; top: 50%; transform: translateY(-50%); }
-        .lightbox-nav.prev { left: -80px; }
-        .lightbox-nav.next { right: -80px; }
+        .lightbox-close { top: -45px; right: 0; font-size: 2.2rem; }
+        .lightbox-nav { font-size: 2.5rem; padding: 15px; top: 50%; transform: translateY(-50%); }
+        .lightbox-nav.prev { left: -65px; }
+        .lightbox-nav.next { right: -65px; }
         
         @media (max-width: 1024px) { 
-            .lightbox-nav.prev { left: -40px; font-size: 2rem; } 
-            .lightbox-nav.next { right: -40px; font-size: 2rem; } 
-            .lightbox-close { top: -45px; right: 10px; }
+            .lightbox-nav.prev { left: -35px; font-size: 2rem; } 
+            .lightbox-nav.next { right: -35px; font-size: 2rem; } 
+            .lightbox-close { top: -40px; right: 10px; }
         }
         @media (max-width: 768px) {
             .lightbox-nav { display: none; }
-            .lightbox-content { max-height: 90vh; }
+            .lightbox-content { max-height: 92vh; }
         }
     </style>
 </head>
@@ -107,156 +102,21 @@
     <header class="text-center py-20 md:py-24 bg-brand-card/30 border-b border-brand-gold/10 relative overflow-hidden">
         <div class="absolute inset-0 opacity-5 bg-texture"></div>
         <div class="max-w-4xl mx-auto px-6 relative z-10">
-            <span class="text-brand-gold font-bold tracking-[0.4em] uppercase text-[10px] block mb-4">Handcrafted Confectionery &amp; Sculpture</span>
+            <span class="text-brand-gold font-bold tracking-[0.4em] uppercase text-[10px] block mb-4">Celebration Cakes and Studio Works</span>
             <h1 class="font-serif text-4xl md:text-6xl font-bold text-white leading-tight mb-4">Atelier Portfolio</h1>
             <p class="text-base md:text-lg text-brand-light font-light max-w-2xl mx-auto leading-relaxed">
-                A gallery of bespoke celebration cakes, dessert tables, and tactile mixed-media sculptures handcrafted in our McKinney studio.
+                A selection of handcrafted celebration cakes and tactile pieces, documented through our 5-Layer Sensory Framework.
             </p>
         </div>
     </header>
 
-    <!-- GALLERY GRID -->
+    <!-- GALLERY CONTAINER -->
     <main class="py-16 md:py-20 px-4">
         <div class="max-w-7xl mx-auto">
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8">
-                
-                <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(0)">
-                    <img src="images/cake23.jpg" alt="Summer Berry Palette" class="w-full h-80 md:h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
-                    <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">View Detail</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(1)">
-                    <img src="images/cake24.jpg" alt="Desert Succulent Study" class="w-full h-80 md:h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
-                    <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">View Detail</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(2)">
-                    <img src="images/cake3.jpg" alt="Tiered Garden Botanicals" class="w-full h-80 md:h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
-                    <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">View Detail</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(3)">
-                    <img src="images/cake5.jpg" alt="Dark Chocolate Ganache Drip" class="w-full h-80 md:h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
-                    <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">View Detail</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(4)">
-                    <img src="images/cake6.jpg" alt="Pastel Horizon Ombre" class="w-full h-80 md:h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
-                    <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">View Detail</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(5)">
-                    <img src="images/cake8.jpg" alt="Botanical Meadow" class="w-full h-80 md:h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
-                    <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">View Detail</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(6)">
-                    <img src="images/cake9.jpg" alt="Vintage Rose &amp; Ribbons" class="w-full h-80 md:h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
-                    <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">View Detail</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(7)">
-                    <img src="images/cake10.jpg" alt="Modern Minimalist White" class="w-full h-80 md:h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
-                    <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">View Detail</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(8)">
-                    <img src="images/cake11.jpg" alt="Rustic Woodland Bark" class="w-full h-80 md:h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
-                    <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">View Detail</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(9)">
-                    <img src="images/cake12.jpg" alt="The Gilded Edge" class="w-full h-80 md:h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
-                    <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">View Detail</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(10)">
-                    <img src="images/cake13.jpg" alt="Velvet Midnight Cocoa" class="w-full h-80 md:h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
-                    <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">View Detail</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(11)">
-                    <img src="images/cake14.jpg" alt="Harvest Fig &amp; Citrus" class="w-full h-80 md:h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
-                    <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">View Detail</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(12)">
-                    <img src="images/cake16.jpg" alt="Geometric Ridges" class="w-full h-80 md:h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
-                    <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">View Detail</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(13)">
-                    <img src="images/cake17.jpg" alt="Palette Knife Impressionism" class="w-full h-80 md:h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
-                    <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">View Detail</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(14)">
-                    <img src="images/cake18.jpg" alt="Artisan Cupcake Set" class="w-full h-80 md:h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
-                    <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">View Detail</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(15)">
-                    <img src="images/cake19.jpg" alt="Mini Celebration Rounds" class="w-full h-80 md:h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
-                    <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">View Detail</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(16)">
-                    <img src="images/cake20.jpg" alt="Dessert Table Styling" class="w-full h-80 md:h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
-                    <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">View Detail</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(17)">
-                    <img src="images/cake21.jpg" alt="Matte Black &amp; Gold" class="w-full h-80 md:h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
-                    <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">View Detail</span>
-                    </div>
-                </div>
-
-                <div class="gallery-item block relative group cursor-pointer" onclick="openLightbox(18)">
-                    <img src="images/MihirsBirthdayCake.jpg" alt="The Midnight Guardian" class="w-full h-80 md:h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
-                    <div class="absolute inset-0 bg-brand-navy/60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl">
-                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-6 py-3 uppercase">View Detail</span>
-                    </div>
-                </div>
-
-            </div>
+            <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8"></div>
         </div>
 
-        <!-- SPLIT VIEW LIGHTBOX -->
+        <!-- 5-LAYER BREAKDOWN LIGHTBOX -->
         <div id="lightbox" class="lightbox-overlay">
             <div class="absolute inset-0 cursor-pointer" onclick="closeLightbox()"></div>
             
@@ -265,17 +125,39 @@
                 <span class="lightbox-nav next" onclick="changeImage(1); event.stopPropagation();">&#10095;</span>
                 <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
                 
-                <div class="bg-brand-light text-brand-dark w-full rounded-3xl overflow-hidden shadow-2xl grid grid-cols-1 md:grid-cols-2 max-h-[85vh] md:max-h-[75vh] overflow-y-auto md:overflow-hidden relative z-10">
+                <div class="bg-brand-light text-brand-dark w-full rounded-3xl overflow-hidden shadow-2xl grid grid-cols-1 md:grid-cols-2 max-h-[88vh] md:max-h-[82vh] overflow-y-auto md:overflow-hidden relative z-10">
                     
-                    <div class="bg-brand-dark/5 flex items-center justify-center p-6 md:p-8 border-b md:border-b-0 md:border-r border-brand-gold/10 overflow-hidden h-72 md:h-full">
-                        <img id="lightbox-img" src="" alt="Gallery Detail" class="object-contain block mx-auto max-h-full max-w-full rounded-xl">
+                    <!-- Left: Real Photo Container -->
+                    <div class="bg-brand-dark/5 flex items-center justify-center p-6 border-b md:border-b-0 md:border-r border-brand-gold/10 overflow-hidden h-72 md:h-full">
+                        <img id="lightbox-img" src="" alt="Cake Detail" class="object-contain block mx-auto max-h-full max-w-full rounded-xl drop-shadow-md">
                     </div>
                     
-                    <div class="p-8 md:p-12 flex flex-col justify-center overflow-y-auto h-auto md:h-full text-left">
-                        <span class="text-[10px] font-sans font-bold tracking-widest text-brand-gold-dark uppercase block mb-2">Studio Project Detail</span>
-                        <h2 id="lightbox-title" class="font-serif text-2xl md:text-3xl font-bold text-brand-navy mb-4 leading-tight"></h2>
-                        <div class="w-12 h-0.5 bg-brand-gold/40 mb-6"></div>
-                        <p id="lightbox-story" class="font-sans text-brand-dark/90 text-sm md:text-base leading-relaxed font-normal whitespace-pre-line"></p>
+                    <!-- Right: Complete 5-Layer Breakdown Card -->
+                    <div class="p-6 md:p-8 flex flex-col justify-start overflow-y-auto text-left space-y-4">
+                        
+                        <div>
+                            <span id="lightbox-tag" class="text-[10px] font-sans font-bold tracking-widest text-brand-gold-dark uppercase block mb-1"></span>
+                            <h2 id="lightbox-title" class="font-serif text-2xl md:text-3xl font-bold text-brand-navy leading-tight"></h2>
+                            <p id="lightbox-meta" class="text-xs font-sans text-brand-dark/70 mt-1"></p>
+                        </div>
+                        
+                        <div class="w-12 h-0.5 bg-brand-gold/40"></div>
+                        
+                        <!-- 5 Layers Structured List -->
+                        <div class="space-y-2 text-xs font-sans text-brand-dark/85 leading-relaxed bg-white/70 p-4 rounded-xl border border-brand-gold/20">
+                            <div><strong class="text-brand-navy block text-[11px]">Layer 1 (Color &amp; Atmosphere):</strong> <span id="layer-1"></span></div>
+                            <div><strong class="text-brand-navy block text-[11px]">Layer 2 (Shape &amp; Movement):</strong> <span id="layer-2"></span></div>
+                            <div><strong class="text-brand-navy block text-[11px]">Layer 3 (Texture &amp; Touch):</strong> <span id="layer-3"></span></div>
+                            <div><strong class="text-brand-navy block text-[11px]">Layer 4 (Strategy &amp; Boundaries):</strong> <span id="layer-4"></span></div>
+                            <div><strong class="text-brand-navy block text-[11px]">Layer 5 (Finishing Ritual):</strong> <span id="layer-5"></span></div>
+                        </div>
+
+                        <!-- Artisan Background Note -->
+                        <div class="border-t border-brand-gold/20 pt-3">
+                            <span class="text-[10px] font-sans font-bold uppercase tracking-wider text-brand-gold-dark block mb-1">Behind The Bake</span>
+                            <p id="lightbox-note" class="text-xs font-sans text-brand-dark/80 italic leading-relaxed"></p>
+                        </div>
+
                     </div>
                     
                 </div>
@@ -285,41 +167,22 @@
 
     <!-- FOOTER -->
     <footer class="bg-brand-dark text-brand-gray border-t border-brand-gold/20 font-sans text-xs">
-        <div class="max-w-2xl mx-auto px-6 py-8">
-            <div class="flex flex-col items-center">
-                
-                <div class="flex justify-center space-x-6 mb-6 text-brand-light">
-                    <a href="https://www.instagram.com/thegildedspoonshoppe/" target="_blank" class="hover:text-brand-gold transition-colors">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919 4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg>
-                    </a>
-                    <a href="https://www.facebook.com/dimple.mckinney" target="_blank" class="hover:text-brand-gold transition-colors">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.494v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.323-1.325z"/></svg>
-                    </a>
-                    <a href="https://www.linkedin.com/in/dimple-mckinney/" target="_blank" class="hover:text-brand-gold transition-colors">
-                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                    </a>
-                </div>
-
-                <div class="flex flex-row justify-center space-x-8 mb-6 text-brand-light font-medium text-[10px] uppercase tracking-[0.2em]">
-                    <a href="contact.html" class="hover:text-brand-gold transition-colors">Contact Us</a>
-                    <a href="partnerships.html" class="hover:text-brand-gold transition-colors">Partnerships</a>
-                    <a href="policies.html" class="hover:text-brand-gold transition-colors">Order Fulfillment &amp; Delivery</a>
-                </div>
-
+        <div class="max-w-2xl mx-auto px-6 py-8 text-center">
+            <div class="flex justify-center space-x-8 mb-6 text-brand-light font-medium uppercase tracking-[0.2em]">
+                <a href="contact.html" class="hover:text-brand-gold transition-colors">Contact Us</a>
+                <a href="partnerships.html" class="hover:text-brand-gold transition-colors">Partnerships</a>
+                <a href="policies.html" class="hover:text-brand-gold transition-colors">Order Fulfillment &amp; Delivery</a>
             </div>
-
-            <div class="pt-6 border-t border-brand-gray/10 text-center">
-                <p class="font-serif text-brand-light/30 text-xs mb-3">
-                    &copy; 2026 The Gilded Spoon Shoppe | McKinney, Texas
-                </p>
-                <p class="max-w-xl mx-auto font-sans text-[9px] leading-relaxed text-brand-gray/20 italic">
-                    Disclaimer: The Gilded Spoon Shoppe provides sensory design education. It is not a substitute for professional medical advice, diagnosis, or occupational therapy. Edible products are prepared in a home kitchen that handles allergens including wheat, dairy, eggs, soy, and nuts.
-                </p>
-            </div>
+            <p class="font-serif text-brand-light/30 text-xs mb-3">
+                &copy; 2026 The Gilded Spoon Shoppe | McKinney, Texas
+            </p>
+            <p class="max-w-xl mx-auto font-sans text-[9px] leading-relaxed text-brand-gray/20 italic">
+                Disclaimer: The Gilded Spoon Shoppe provides sensory design education. It is not a substitute for professional medical advice, diagnosis, or occupational therapy.
+            </p>
         </div>
     </footer>
 
-    <!-- SYNCHRONIZED PORTFOLIO SCRIPT -->
+    <!-- PORTFOLIO DATA SCRIPT -->
     <script>
         const hamburgerButton = document.getElementById('hamburger-button');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -329,111 +192,219 @@
 
         const portfolioData = [
             { 
-                src: "images/cake23.jpg", 
-                title: "Wild Berry &amp; Rosemary Canvas", 
-                story: "Fresh blackberries, raspberries, and sprigs of culinary rosemary set against a rich velvet base coat. Designed to celebrate natural fruit textures and warm color contrast." 
+                src: "images/Ketals Birthday Cake.jpg", 
+                title: "The First Bake: Golf Green Birthday Cake",
+                tag: "The Origin Bake (2013)",
+                meta: "Occasion: Birthday Celebration | Flavors: Chocolate Sponge Cake with Vanilla Buttercream",
+                layer1: "Vibrant fairway green base with clean white and cobalt blue accents.",
+                layer2: "Continuous grass tip piping building layered, textured turf across the entire surface.",
+                layer3: "High-friction piped grass blades contrasted with smooth molded fondant figures.",
+                layer4: "Playful narrative layout with the golfer lined up directly toward the putting cup.",
+                layer5: "Handcrafted white flag pin and tiny sculpted golf balls placed across the green.",
+                note: "The very first cake I ever decorated back in 2013. Made for a golf enthusiast's birthday, this cake was my first time exploring multi-opening piping tips and sculpted fondant storytelling. It sparked my entire journey into confectionery art."
             },
             { 
-                src: "images/cake24.jpg", 
-                title: "Desert Succulent Study", 
-                story: "Hand-piped buttercream succulents in soft sage, dusty terracotta, and muted stone hues. Focuses on botanical petal layering and clean desert geometry." 
-            },
-            { 
-                src: "images/cake3.jpg", 
-                title: "Tiered Garden Botanicals", 
-                story: "A multi-tiered celebration cake featuring textured ivory frosting, pressed dried florals, and organic eucalyptus accents. Built to feel airy, light, and natural." 
-            },
-            { 
-                src: "images/cake5.jpg", 
-                title: "Dark Chocolate &amp; Espresso Drip", 
-                story: "Rich dark chocolate ganache draped over espresso-infused buttercream with delicate chocolate curls. Emphasizes warm, comforting aromas and deep cocoa tones." 
-            },
-            { 
-                src: "images/cake6.jpg", 
-                title: "Pastel Horizon Ombre", 
-                story: "A gentle watercolor transition from soft sky blue to warm cream, finished with smooth spatula sweeps and delicate sugar pearls." 
-            },
-            { 
-                src: "images/cake8.jpg", 
-                title: "Botanical Meadow", 
-                story: "Textural white buttercream adorned with fresh greenery, chamomile blossoms, and soft herbal accents for a relaxed, nature-inspired gathering." 
-            },
-            { 
-                src: "images/cake9.jpg", 
-                title: "Vintage Rose &amp; Ribbons", 
-                story: "Classic Victorian-inspired shell piping and delicate hand-piped pink rosettes. Celebrates the rhythmic, repetitive piping motions that bring a sense of calm." 
-            },
-            { 
-                src: "images/cake10.jpg", 
-                title: "Modern Minimalist White", 
-                story: "Clean lines, deliberate palette knife ridges, and a clean silhouette. Proves that subtle textures can carry more presence than heavy decoration." 
-            },
-            { 
-                src: "images/cake11.jpg", 
-                title: "Rustic Woodland Bark", 
-                story: "Hand-carved chocolate bark textures layered with culinary rosemary sprigs, dusted cocoa, and earthy spice accents." 
-            },
-            { 
-                src: "images/cake12.jpg", 
-                title: "The Gilded Edge", 
-                story: "Textured slate-colored frosting highlighted with genuine edible gold leaf along hand-torn deckled edges. A study in finding beauty in organic irregularity." 
-            },
-            { 
-                src: "images/cake13.jpg", 
-                title: "Velvet Midnight Cocoa", 
-                story: "Deep, glossy chocolate ganache paired with dark charcoal tones and smooth, light-absorbing finishes. A comforting, decadent centerpiece." 
-            },
-            { 
-                src: "images/cake14.jpg", 
-                title: "Harvest Fig &amp; Citrus", 
-                story: "Sliced seasonal mission figs, candied blood orange wheels, and toasted coconut flakes arranged in an organic crescent." 
-            },
-            { 
-                src: "images/cake16.jpg", 
-                title: "Geometric Ridges", 
-                story: "Crisp comb-textured ridges balanced by smooth top surfaces and subtle pearl details, offering visual harmony and order." 
-            },
-            { 
-                src: "images/cake17.jpg", 
-                title: "Palette Knife Impressionism", 
-                story: "Hand-painted buttercream florals created with miniature palette knives, blending soft pastel tones into an edible canvas." 
-            },
-            { 
-                src: "images/cake18.jpg", 
-                title: "Artisan Cupcake Set", 
-                story: "Individual cake canvases exploring different piping tip textures, from closed-star rosettes to smooth French round swirls." 
-            },
-            { 
-                src: "images/cake19.jpg", 
-                title: "Mini Celebration Rounds", 
-                story: "Personal-sized four-inch cakes designed for intimate dinners, featuring delicate dried botanicals and custom color bands." 
-            },
-            { 
-                src: "images/cake20.jpg", 
-                title: "Dessert Table Styling", 
-                story: "A curated dessert table featuring coordinating mini cakes, tarts, and floral accents tailored for a relaxed community gathering." 
-            },
-            { 
-                src: "images/cake21.jpg", 
-                title: "Matte Black &amp; Gold", 
-                story: "Striking matte black cocoa frosting paired with warm metallic gold leafing and botanical touches." 
+                src: "images/Mandala Cake Portland.jpg", 
+                title: "Intricate Mandala Celebration Cake",
+                tag: "Intricate Piping Art",
+                meta: "Occasion: Artistic Milestone Gathering | Flavors: Spiced Chai Cake with Cinnamon Honey Buttercream",
+                layer1: "Smooth charcoal slate base offering high visual contrast for vibrant piping.",
+                layer2: "Continuous concentric circular piping using fine round and star tips.",
+                layer3: "Precise bead drops, lace loops, and repeating dot textures across the cake surface.",
+                layer4: "Radial geometry expanding symmetrically outward from a single center point.",
+                layer5: "A centered concentric blossom pattern that anchors the entire design.",
+                note: "Inspired by traditional meditative mandala art, piped entirely by hand in one continuous sitting to achieve clean symmetry."
             },
             { 
                 src: "images/MihirsBirthdayCake.jpg", 
-                title: "The Midnight Guardian", 
-                story: "A custom three-tier 50th birthday centerpiece featuring layers of rich chocolate, vanilla bean cream, and roasted pistachio. Finished in smooth midnight navy buttercream, hand-sculpted golden dragon wings, and detailed dimensional scale work for a memorable milestone." 
+                title: "50th Milestone Celebration Cake",
+                tag: "Milestone Celebration",
+                meta: "Occasion: 50th Birthday Party | Flavors: Chocolate Fudge, Vanilla Bean Cream, Roasted Pistachio Sponge",
+                layer1: "Midnight navy base with warm antique gold highlights.",
+                layer2: "Hand-sculpted dragon wings and rhythmic shell scale piping.",
+                layer3: "Edible gold leafing paired with firm palette knife ridges.",
+                layer4: "Radial boundary balancing central vertical wings with grounded lower tiers.",
+                layer5: "Deliberate hand-painted gold luster across structural wing peaks.",
+                note: "Designed for a landmark 50th milestone celebration. Built around high-contrast structural symmetry to make a bold personal statement."
+            },
+            { 
+                src: "images/Arati's Birthday Cake 40th.jpg", 
+                title: "Vibrant 40th Birthday Floral Cake",
+                tag: "Milestone Birthday",
+                meta: "Occasion: 40th Birthday Celebration | Flavors: Vanilla Bean Sponge, Strawberry Compote, Vanilla Buttercream",
+                layer1: "Clean ivory canvas with vibrant coral, saffron yellow, royal blue, and berry red accents.",
+                layer2: "Freeform palette knife petal strokes and dimensional floral piping.",
+                layer3: "Thick buttercream blooms paired with edible sugar center pearls.",
+                layer4: "Asymmetrical floral cascade wrapping around the top shoulder and spilling down one corner.",
+                layer5: "Delicate edible gold leaf accents set into the center of the main focal blossom.",
+                note: "Created for a festive 40th birthday dinner, inspired by an abundance of fresh garden blossoms and warm colors."
+            },
+            { 
+                src: "images/90th Birthday Cake.jpg", 
+                title: "90th Milestone Ocean Celebration Cake",
+                tag: "Landmark Milestone",
+                meta: "Occasion: 90th Birthday Celebration | Flavors: Vanilla Chiffon with Light Lemon Cream",
+                layer1: "Ocean turquoise and sea glass blue base with coral pink and seafoam accents.",
+                layer2: "Wavy water textures around the base with hand-piped coral fans and sea flora.",
+                layer3: "Tactile piped sea anemones, textured coral clusters, and smooth fondant sea turtles.",
+                layer4: "Ascending underwater scene building from deep ocean bottom to a lively reef top.",
+                layer5: "Custom 90th milestone gold topper anchoring the top tier.",
+                note: "Designed for a family celebrating a beloved elder's 90th birthday, reflecting a lifelong love of the ocean and coastal waters."
+            },
+            { 
+                src: "images/75th Birthday Cake -Kaushik.JPG", 
+                title: "75th Milestone Celebration Cake",
+                tag: "Milestone Birthday",
+                meta: "Occasion: 75th Birthday Gathering | Flavors: Rich Dark Chocolate Sponge with Mocha Buttercream",
+                layer1: "Neutral cream background with warm navy and metallic gold accents.",
+                layer2: "Smooth base coat with crisp piped border framing the tier.",
+                layer3: "Fondant modeling work and dimensional edible accents.",
+                layer4: "Front-facing personalized figure display with custom typography framing the base.",
+                layer5: "Custom gold 75th Birthday script topper sealing the design.",
+                note: "A meaningful family centerpiece honoring seventy-five years, featuring a custom hand-sculpted figure to bring smiles to the whole family."
+            },
+            { 
+                src: "images/Embrace 2025 Grad Cake.jpg", 
+                title: "Class of 2025 Graduation Cake",
+                tag: "Graduation Celebration",
+                meta: "Occasion: Class of 2025 Graduation Party | Flavors: Red Velvet Cake with Cream Cheese Frosting",
+                layer1: "Deep black cocoa and midnight navy base with bright gold lettering.",
+                layer2: "Straight bench scraper side ridges with classic bottom shell borders.",
+                layer3: "Smooth frosted walls contrasted with crisp edible graduation graphics.",
+                layer4: "Balanced front-facing logo panel with an open top for the graduation cap.",
+                layer5: "Handcrafted miniature graduation cap and gold tassel centerpiece.",
+                note: "Built to honor student achievement and celebrate a proud graduation milestone with classmates and family."
+            },
+            { 
+                src: "images/Vanilla Daisy Cake- Emma's 1.jpg", 
+                title: "First Birthday Daisy Cake",
+                tag: "First Birthday",
+                meta: "Occasion: First Birthday Celebration | Flavors: Golden Vanilla Cake with Sweet Cream Filling",
+                layer1: "Soft sky white base with peach coral and buttercup yellow floral tones.",
+                layer2: "Gentle petal knife sculpting and soft rounded button centers.",
+                layer3: "Smooth, pillowy buttercream with textured flower centers.",
+                layer4: "Three delicate statement daisies spaced evenly around the top shoulder.",
+                layer5: "Single miniature accent blossom placed on the vintage jadeite cake stand.",
+                note: "A tender, sweet first birthday cake designed for a memorable cake smash and family photos."
+            },
+            { 
+                src: "images/Full Side View Lemon Cake .jpg", 
+                title: "Sunshine Lemon &amp; Sugared Citrus Cake",
+                tag: "Citrus Celebration",
+                meta: "Occasion: Summer Family Gathering | Flavors: Meyer Lemon Zest Sponge, Lemon Curd, Whipped Vanilla Frosting",
+                layer1: "Warm butter yellow base with ivory rosettes and sunny citrus pops.",
+                layer2: "Swirled open-star rosettes and textured spatula sweeps along the sides.",
+                layer3: "Sugared lemon wheels, crisp dehydrated citrus slices, and fresh mint leaves.",
+                layer4: "Crown crescent layout curving along one edge of the top tier.",
+                layer5: "Light dusting of fine powdered sugar over the candied citrus slices.",
+                note: "Made with fresh lemons from start to finish, offering a bright and cheerful flavor profile for warm weather gatherings."
+            },
+            { 
+                src: "images/Sharons Birthday Coconut Cake.jpg", 
+                title: "Botanical Coconut Birthday Cake",
+                tag: "Birthday Gathering",
+                meta: "Occasion: Birthday Celebration | Flavors: Toasted Coconut Chiffon, Coconut Cream Cheese Frosting",
+                layer1: "Crisp white coconut base with deep royal blue, emerald green, and blush pink florals.",
+                layer2: "Hand-piped dimensional hydrangeas, closed-star rosettes, and delicate leaf tips.",
+                layer3: "Flaked toasted coconut providing physical crunch and texture against smooth frosting.",
+                layer4: "Lush botanical wreath framing the perimeter of the cake top.",
+                layer5: "Whole dried botanical buds nestled between the piped floral clusters.",
+                note: "Designed around a love of rich toasted coconut flavor and deep blue floral gardens."
+            },
+            { 
+                src: "images/Corey's Birthday Cake.JPG", 
+                title: "30th Milestone Route 66 Cake",
+                tag: "Milestone Birthday",
+                meta: "Occasion: 30th Birthday Celebration | Flavors: Chocolate Fudge Sponge with Peanut Butter Mousse",
+                layer1: "Bold crimson red base with black highway asphalt and white road markings.",
+                layer2: "Sharp edge smoothing with hand-piped road sign script and borders.",
+                layer3: "Glossy fondant route crest resting on a matte frosted background.",
+                layer4: "Central heraldic shield layout dominating the face of the cake.",
+                layer5: "Clean script lettering declaring the 30th milestone Road to Perfection.",
+                note: "A playful tribute cake for an automotive enthusiast turning thirty, paired with a matching display of custom cupcakes."
+            },
+            { 
+                src: "images/Rainbow Cake .jpeg", 
+                title: "Rainbow Arch &amp; Cloud Cake",
+                tag: "Children's Birthday",
+                meta: "Occasion: Children's Birthday Party | Flavors: Six-Layer Rainbow Vanilla Sponge, Sweet Buttercream",
+                layer1: "Cloud white exterior revealing vibrant layered colors once sliced.",
+                layer2: "Smooth buttercream coat with piped marshmallow-style cloud puffs.",
+                layer3: "Multi-colored sprinkle confetti ringing the base for festive crunch.",
+                layer4: "Grounded bottom border balancing the arching rainbow overhead.",
+                layer5: "Handcrafted rainbow arch anchored into pillowy cloud clusters.",
+                note: "The joyful magic of this cake happens on the first cut, revealing six vibrant, independently baked sponge layers inside."
+            },
+            { 
+                src: "images/Strawberry Vanilla Trial Cake.jpg", 
+                title: "Fresh Strawberry Summer Shortcake",
+                tag: "Seasonal Family Bake",
+                meta: "Occasion: Intimate Family Sunday Dessert | Flavors: Light Vanilla Sponge with Fresh Macerated Strawberries",
+                layer1: "Natural golden sponge with soft cream colored filling peeking through.",
+                layer2: "Semi-naked scraped edge highlighting the natural cake crumb.",
+                layer3: "Juicy sliced ripe strawberries and whole blueberries providing fresh fruit texture.",
+                layer4: "Starburst radial arrangement of sliced strawberries on the top deck.",
+                layer5: "Whole fresh blueberry cluster centered in the fruit rosette.",
+                note: "A celebration of fresh market berries and honest scratch baking where the fruit takes center stage."
+            },
+            { 
+                src: "images/Hamburger Cakes - Kenne...Dad.jpg", 
+                title: "Handcrafted Cookout Hamburger Cakes",
+                tag: "Novelty Celebration",
+                meta: "Occasion: Father's Day and Birthday Cookout | Flavors: Vanilla Sponge Buns, Rich Brownie Patties",
+                layer1: "Golden baked bun tones with rich chocolate brown burger patties.",
+                layer2: "Realistic sculpting shaping cake rounds into burger buns.",
+                layer3: "Real sesame seeds toasted on the top bun with piped shredded green lettuce and melted cheese.",
+                layer4: "Multi-piece slider presentation on a shared party platter.",
+                layer5: "Realistic piped red ketchup and yellow mustard dollops peeking from under the bun.",
+                note: "An enduring family favorite that brings huge laughs when guests realize the gourmet burgers are actually sweet cakes."
+            },
+            { 
+                src: "images/Surina Cake Birthday Top.jpg", 
+                title: "Hand-Painted Floral Birthday Cake",
+                tag: "Birthday Celebration",
+                meta: "Occasion: Birthday Celebration | Flavors: Cardamom Rose Sponge with Whipped White Chocolate Ganache",
+                layer1: "Natural linen white buttercream with dusty mauve, chocolate brown, and sky blue blossoms.",
+                layer2: "Whimsical palette knife petals and delicate handwritten script.",
+                layer3: "Soft piped buttercream petals clustered against smooth flat frosting.",
+                layer4: "Asymmetrical corner garden layout leaving open breathing room for the birthday inscription.",
+                layer5: "A gentle scattered petal trail leading across the cake surface.",
+                note: "An organic birthday cake celebrating custom color palettes and personalized piping."
             }
         ];
-        
+
+        const galleryGrid = document.getElementById('gallery-grid');
+        portfolioData.forEach((item, index) => {
+            const card = document.createElement('div');
+            card.className = "gallery-item block relative group cursor-pointer";
+            card.onclick = () => openLightbox(index);
+            card.innerHTML = `
+                <img src="${item.src}" alt="${item.title}" class="w-full h-80 md:h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
+                <div class="absolute inset-0 bg-brand-navy/60 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl p-4 text-center">
+                    <span class="text-brand-gold text-[10px] font-sans uppercase tracking-widest font-bold mb-1">${item.tag}</span>
+                    <h3 class="text-white text-base font-serif font-bold mb-3">${item.title}</h3>
+                    <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-4 py-2 uppercase">View Details</span>
+                </div>
+            `;
+            galleryGrid.appendChild(card);
+        });
+
         let currentIndex = 0;
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
         const lightboxTitle = document.getElementById('lightbox-title');
-        const lightboxStory = document.getElementById('lightbox-story');
+        const lightboxTag = document.getElementById('lightbox-tag');
+        const lightboxMeta = document.getElementById('lightbox-meta');
+        const layer1 = document.getElementById('layer-1');
+        const layer2 = document.getElementById('layer-2');
+        const layer3 = document.getElementById('layer-3');
+        const layer4 = document.getElementById('layer-4');
+        const layer5 = document.getElementById('layer-5');
+        const lightboxNote = document.getElementById('lightbox-note');
 
         function openLightbox(index) {
             currentIndex = index;
-            updateLightboxImage();
+            updateLightboxContent();
             lightbox.classList.add('active');
             document.body.style.overflow = 'hidden'; 
         }
@@ -447,13 +418,21 @@
             currentIndex += direction;
             if (currentIndex >= portfolioData.length) currentIndex = 0;
             if (currentIndex < 0) currentIndex = portfolioData.length - 1;
-            updateLightboxImage();
+            updateLightboxContent();
         }
 
-        function updateLightboxImage() { 
-            lightboxImg.src = portfolioData[currentIndex].src; 
-            lightboxTitle.textContent = portfolioData[currentIndex].title;
-            lightboxStory.textContent = portfolioData[currentIndex].story;
+        function updateLightboxContent() { 
+            const data = portfolioData[currentIndex];
+            lightboxImg.src = data.src; 
+            lightboxTitle.textContent = data.title;
+            lightboxTag.textContent = data.tag;
+            lightboxMeta.textContent = data.meta;
+            layer1.textContent = data.layer1;
+            layer2.textContent = data.layer2;
+            layer3.textContent = data.layer3;
+            layer4.textContent = data.layer4;
+            layer5.textContent = data.layer5;
+            lightboxNote.textContent = data.note;
         }
 
         lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
