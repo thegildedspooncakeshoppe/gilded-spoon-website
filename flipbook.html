@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="p:domain_verify" content="8497c86d445458f17cdce81e920478f2"/>
     <title>Atelier Portfolio | The Gilded Spoon Shoppe</title>
-    <meta name="description" content="A gallery of handcrafted celebration cakes and tactile mixed-media art pieces made by Dimple McKinney in McKinney, Texas.">
+    <meta name="description" content="A gallery of handcrafted celebration cakes, community volunteer bakes, and tactile mixed-media art pieces made by Dimple McKinney in McKinney, Texas.">
     <meta name="keywords" content="custom cakes McKinney TX, celebration cakes, birthday cakes, keepsake cake sculpture, artisanal pastry design">
     
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -105,10 +105,31 @@
             <span class="text-brand-gold font-bold tracking-[0.4em] uppercase text-[10px] block mb-4">Celebration Cakes and Studio Works</span>
             <h1 class="font-serif text-4xl md:text-6xl font-bold text-white leading-tight mb-4">Atelier Portfolio</h1>
             <p class="text-base md:text-lg text-brand-light font-light max-w-2xl mx-auto leading-relaxed">
-                A selection of handcrafted celebration cakes and tactile pieces, documented through our 5-Layer Sensory Framework.
+                A selection of handcrafted celebration cakes, community volunteer bakes, and tactile pieces, documented through our 5-Layer Sensory Framework.
             </p>
         </div>
     </header>
+
+    <!-- CATEGORY FILTER TABS -->
+    <section class="py-8 bg-brand-navy border-b border-brand-gold/15 sticky top-[73px] z-40 backdrop-blur-md bg-brand-navy/95">
+        <div class="max-w-6xl mx-auto px-4 flex flex-wrap justify-center items-center gap-2 sm:gap-3 text-xs uppercase tracking-widest font-sans font-bold">
+            <button onclick="filterGallery('all')" class="filter-btn active py-2.5 px-5 rounded-full border border-brand-gold transition-all text-brand-navy bg-brand-gold shadow-sm" data-category="all">
+                All Works
+            </button>
+            <button onclick="filterGallery('milestone')" class="filter-btn py-2.5 px-5 rounded-full border border-brand-gold/30 hover:border-brand-gold transition-all text-brand-light bg-brand-navy/60" data-category="milestone">
+                Milestones &amp; Birthdays
+            </button>
+            <button onclick="filterGallery('sculpted')" class="filter-btn py-2.5 px-5 rounded-full border border-brand-gold/30 hover:border-brand-gold transition-all text-brand-light bg-brand-navy/60" data-category="sculpted">
+                Sculpted &amp; 3D Art
+            </button>
+            <button onclick="filterGallery('botanical')" class="filter-btn py-2.5 px-5 rounded-full border border-brand-gold/30 hover:border-brand-gold transition-all text-brand-light bg-brand-navy/60" data-category="botanical">
+                Botanicals &amp; Florals
+            </button>
+            <button onclick="filterGallery('community')" class="filter-btn py-2.5 px-5 rounded-full border border-brand-gold/30 hover:border-brand-gold transition-all text-brand-light bg-brand-navy/60" data-category="community">
+                Community &amp; Meaningful Bakes
+            </button>
+        </div>
+    </section>
 
     <!-- GALLERY CONTAINER -->
     <main class="py-16 md:py-20 px-4">
@@ -127,7 +148,7 @@
                 
                 <div class="bg-brand-light text-brand-dark w-full rounded-3xl overflow-hidden shadow-2xl grid grid-cols-1 md:grid-cols-2 max-h-[88vh] md:max-h-[82vh] overflow-y-auto md:overflow-hidden relative z-10">
                     
-                    <!-- Left: Real Photo Container -->
+                    <!-- Left: Photo Container -->
                     <div class="bg-brand-dark/5 flex items-center justify-center p-6 border-b md:border-b-0 md:border-r border-brand-gold/10 overflow-hidden h-72 md:h-full">
                         <img id="lightbox-img" src="" alt="Cake Detail" class="object-contain block mx-auto max-h-full max-w-full rounded-xl drop-shadow-md">
                     </div>
@@ -182,7 +203,7 @@
         </div>
     </footer>
 
-    <!-- PORTFOLIO DATA SCRIPT -->
+    <!-- PORTFOLIO DATA & FILTER SCRIPT -->
     <script>
         const hamburgerButton = document.getElementById('hamburger-button');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -190,8 +211,9 @@
             hamburgerButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
         }
 
-        const portfolioData = [
+        const masterPortfolioData = [
             { 
+                category: "sculpted",
                 src: "images/Ketals Birthday Cake.jpg", 
                 title: "The First Bake: Golf Green Birthday Cake",
                 tag: "The Origin Bake (2013)",
@@ -204,6 +226,189 @@
                 note: "The very first cake I ever decorated back in 2013. Made for a golf enthusiast's birthday, this cake was my first time exploring multi-opening piping tips and sculpted fondant storytelling. It sparked my entire journey into confectionery art."
             },
             { 
+                category: "milestone",
+                src: "images/Screenshot 2026-10-19 at 5.00.20 PM.png", 
+                title: "50th Milestone Dragon Celebration Cake",
+                tag: "Architectural Milestone",
+                meta: "Occasion: 50th Birthday Party | Flavors: Chocolate Fudge, Vanilla Bean Cream, Roasted Pistachio Sponge",
+                layer1: "Deep midnight cerulean and ocean navy base coat with warm champagne gold highlights.",
+                layer2: "Hand-sculpted 3D dragon head, sweeping serpent torso, soaring wings, and rhythmic shell scale piping.",
+                layer3: "Raised multi-depth scales, stone-textured skin, delicate dorsal spines, and beaded gold base trim.",
+                layer4: "Vertical ascending layout wrapping dynamically across three tiered drums to draw the eye upward to the wing peaks.",
+                layer5: "Hand-painted metallic gold luster detailing across the dragon horn tips, wing crests, and scale ridges.",
+                note: "An authentic photo from our studio table during the final detailing stage. Designed for a landmark 50th birthday, combining hand-sculpted dimensional modeling with rich chocolate fudge and roasted pistachio sponge."
+            },
+            { 
+                category: "sculpted",
+                src: "images/Baby Frankie cake.jpg", 
+                title: "Baby Frankie Sculpted Halloween Cake",
+                tag: "3D Character Sculpture",
+                meta: "Occasion: Halloween Celebration | Flavors: Spiced Vanilla Sponge with Whipped Buttercream",
+                layer1: "Muted moss green skin tones paired with deep chocolate brown, burlap tan, and violet accents.",
+                layer2: "3D structural character sculpting with rounded facial features, stitched hairline, and sculpted hands.",
+                layer3: "Dimensional burlap weave embossing on the trick-or-treat bucket and smooth fondant modeling.",
+                layer4: "Centered focal character balancing the seated figure with an overflowing sweet treat basket.",
+                layer5: "Hand-sculpted edible candies and bonbons spilling from the pumpkin cauldron onto the display board.",
+                note: "A 3D sculpted piece inspired by master cake artist Avalon Yarnes during a virtual cake conference, recreated entirely by hand with sculpted modeling paste and edible candies."
+            },
+            { 
+                category: "sculpted",
+                src: "images/Front Shark Cake.jpg", 
+                title: "Deep Sea Shark Birthday Cake",
+                tag: "Ocean Adventure",
+                meta: "Occasion: Ocean Themed Birthday Celebration | Flavors: Dark Chocolate Almond Sponge with Roasted Espresso Buttercream",
+                layer1: "Atmospheric deep sea navy and slate blue watercolor wash.",
+                layer2: "Rhythmic spatula wave crests along the top rim and base plate simulating ocean tides.",
+                layer3: "Hand-sculpted dark chocolate shark, translucent teal sugar glass wave shards, and piped multi-colored sea coral.",
+                layer4: "Asymmetrical swimming trajectory with the shark breaching outward from the side reef toward the sugar glass crest.",
+                layer5: "Translucent blue sugar glass shards catching light at the summit of the cake.",
+                note: "Crafted for an ocean enthusiast, pairing rich chocolate almond cake and espresso with hand-poured sugar glass and sculpted marine life."
+            },
+            { 
+                category: "botanical",
+                src: "images/Sharons Close Up Birthday Cake.jpeg", 
+                title: "Black Coconut &amp; Rose Birthday Cake",
+                tag: "High-Contrast Floral",
+                meta: "Occasion: Birthday Celebration | Flavors: Toasted Coconut Chiffon Cake with Coconut Cream Cheese Frosting",
+                layer1: "High-contrast palette pairing ivory semi-naked frosting with deep midnight black coconut and fresh blush pink florals.",
+                layer2: "Smooth flat side scraping providing a clean pedestal for the dramatic floral crown.",
+                layer3: "Hand-dyed jet black shredded coconut creating coarse tactile contrast against soft velvet rose petals.",
+                layer4: "Concentrated center crown pooling the black coconut bed in the middle to elevate the fresh flowers.",
+                layer5: "Fresh pink garden roses, lisianthus, and magenta globe amaranth blossoms set into the dark coconut base.",
+                note: "Made for a birthday celebration, exploring bold color drama by hand-tinting shredded coconut into a midnight bed for garden roses."
+            },
+            { 
+                category: "botanical",
+                src: "images/IMG_6893.jpeg", 
+                title: "Mother's Birthday Watercolor &amp; Gold Cake",
+                tag: "Family Celebration",
+                meta: "Occasion: Mother's Birthday Celebration | Flavors: Vanilla Almond Sponge with Orange Blossom Buttercream",
+                layer1: "Pastel watercolor wash blending sky blue, blush pink, and soft turquoise over a warm ivory base.",
+                layer2: "Continuous horizontal comb grooves wrapping the circumference with a natural ruffled top crest.",
+                layer3: "Genuine edible gold leaf hand-pressed across the textured ridges.",
+                layer4: "Scatter distribution of gold leaf guiding focus toward the top celebration candle.",
+                layer5: "Top crest flecked with gold leaf and finished with a glowing celebration candle.",
+                note: "Baked for my mother's birthday dinner, combining gentle pastel watercolor tones with aromatic orange blossom and roasted almond flavors."
+            },
+            { 
+                category: "community",
+                src: "images/IMG_5522.jpeg", 
+                title: "Police Shield Volunteer Birthday Cake",
+                tag: "Community Impact Bake",
+                meta: "Occasion: Youth Birthday via For Goodness Cakes | Flavors: Rich Chocolate Sponge with Vanilla Bean Frosting",
+                layer1: "Clean porcelain white background with deep navy blue badge illustration.",
+                layer2: "Repetitive shell border piping framing the top perimeter in classic pastry tradition.",
+                layer3: "Smooth top canvas contrasted with crisp, ruffled border piping.",
+                layer4: "Centered protective shield layout with an arched personalized birthday banner.",
+                layer5: "Continuous star border sealing the outer edge.",
+                note: "Donated through For Goodness Cakes, an organization matching volunteer bakers with foster youth and children overcoming adversity to ensure every child receives a custom birthday cake."
+            },
+            { 
+                category: "botanical",
+                src: "images/IMG_1706.jpeg", 
+                title: "Strawberry Pistachio Botanical Cake",
+                tag: "Family Milestone",
+                meta: "Occasion: Mother's Birthday Dinner | Flavors: Strawberry Pistachio Sponge with Rose and Vanilla Buttercream",
+                layer1: "Semi-naked ivory crumb coat with rich magenta, violet, forest green, and golden yellow accents.",
+                layer2: "Smooth flat top surface providing a stage for an organic botanical wreath.",
+                layer3: "Fresh blackberries, raspberries, chopped green pistachios, edible thistle, and velvet roses.",
+                layer4: "Crescent layout clustering rich fruits and flowers along one edge with open breathing space.",
+                layer5: "Chopped raw pistachios scattered across the frosting rim like garden stones.",
+                note: "Created for my mother's birthday, pairing ground roasted pistachios with fresh market berries and aromatic rosewater cream."
+            },
+            { 
+                category: "milestone",
+                src: "images/IMG_0737.jpeg", 
+                title: "Six-Layer Funfetti Rainbow Drip Cake",
+                tag: "Celebration Cake",
+                meta: "Occasion: Birthday Party | Flavors: Six-Layer Vanilla Sponge Baked with Rainbow Sprinkles, Sweet Buttercream",
+                layer1: "Pure white exterior with a soft strawberry pink drip, revealing six vibrant rainbow sponge layers inside.",
+                layer2: "Rhythmic open-star rosettes piped along the upper rim with gentle vertical drip streams.",
+                layer3: "Crunchy rainbow sprinkle confetti ringing the base and scattering across the glazed top.",
+                layer4: "Crown perimeter border framing a pool of pink glaze and sprinkles.",
+                layer5: "The first slice reveal displaying purple, blue, green, yellow, orange, and red sponge layers.",
+                note: "The rainbow sprinkles are baked directly into each colored sponge layer, creating a joyful reveal on the very first cut."
+            },
+            { 
+                category: "botanical",
+                src: "images/IMG_2962.jpeg", 
+                title: "Autumn Harvest Pumpkin Spice Latte Cake",
+                tag: "Seasonal Celebration",
+                meta: "Occasion: Fall Gathering | Flavors: Spiced Pumpkin Sponge, Cream Cheese Frosting, Roasted Coffee Notes",
+                layer1: "Semi-naked rustic finish with warm autumn orange, dark cocoa, and espresso brown accents.",
+                layer2: "Drop rosettes in warm pumpkin orange paired with hand-placed cinnamon sticks and whole pecans.",
+                layer3: "Whole roasted coffee beans, toasted pecan halves, cinnamon bark, and dark chocolate squares.",
+                layer4: "Crown wreath arrangement leaving the spiced crumb interior visible when sliced.",
+                layer5: "Generous dusting of dark cocoa and ground espresso across the base board and top peaks.",
+                note: "Inspired by autumn coffeehouse flavors, balancing warm spiced pumpkin with tangy cream cheese and whole spices."
+            },
+            { 
+                category: "sculpted",
+                src: "images/IMG_5833.jpeg", 
+                title: "Woodland Easter Bunny Cake",
+                tag: "Holiday Celebration",
+                meta: "Occasion: Easter Family Celebration | Flavors: White Almond Sour Cream Cake with Sweet Pineberries",
+                layer1: "Tree bark brown sides with lush springtime grass green and pastel easter egg pops.",
+                layer2: "Hand-carved wood grain bark ridges and dense multi-opening grass tip piping.",
+                layer3: "Granulated sugar crystal coating on the sculpted bunny tail, smooth chocolate eggs, and sugar carrot toppers.",
+                layer4: "Circular garden meadow boundary framing a playful central character.",
+                layer5: "Miniature umbrella handle and pastel chocolate eggs nestled around the base.",
+                note: "A joyful spring centerpiece featuring a fondant bunny diving into the grass, layered with fresh seasonal pineberries."
+            },
+            { 
+                category: "botanical",
+                src: "images/A4DF3960-8996-4DCA-97E5-29EF06173A94.jpeg", 
+                title: "Embroidered Wildflower Celebration Cake",
+                tag: "Special Occasion",
+                meta: "Occasion: Family Pet Birthday Celebration (Human-Edible Cake) | Flavors: Dark Chocolate Almond Sponge with Espresso Buttercream",
+                layer1: "Clean linen white canvas with colorful meadow flowers in magenta, violet, sunny marigold, and leafy green.",
+                layer2: "Intricate palette knife and fine-tip piping mimicking needlepoint floral embroidery.",
+                layer3: "Raised multi-depth floral petals and lush piped grass along the upper rim.",
+                layer4: "Vertical floral stems climbing the side walls with a beaded rainbow border at the base.",
+                layer5: "Handcrafted sculpted puppy figures resting on the lush grass lawn.",
+                note: "Baked for human guests celebrating a beloved family pet's birthday, pairing dark chocolate almond cake with espresso buttercream and garden embroidery."
+            },
+            { 
+                category: "milestone",
+                src: "images/IMG_2891.jpeg", 
+                title: "Ocean Adventure First Birthday Cake",
+                tag: "First Birthday",
+                meta: "Occasion: 1st Birthday Celebration | Flavors: Golden Vanilla Sponge with Fresh Berry Filling",
+                layer1: "Swirled ocean watercolor blend of deep sea navy, turquoise, and sea glass teal.",
+                layer2: "Horizontal spatula wave ridges imitating ocean tides.",
+                layer3: "Translucent sugar sea glass shards, molded white chocolate sea shells, and starfish.",
+                layer4: "Custom personalized name plaque surrounded by a protective reef of sugar shells.",
+                layer5: "Angular blue sugar glass waves rising from the top tier.",
+                note: "Inspired by seaside animated adventures, featuring molded white chocolate sea life and clear sugar glass waves."
+            },
+            { 
+                category: "community",
+                src: "images/IMG_6589.jpeg", 
+                title: "Milestone Recovery Celebration Cookies",
+                tag: "Celebration of Life",
+                meta: "Occasion: Health Battle Victory Celebration | Hand-Decorated Vanilla Bean Sugar Cookies",
+                layer1: "Soft slate blue and warm ivory royal icing with shimmering gold luster accents.",
+                layer2: "Arching cookie frames with fine script lettering and organic line work.",
+                layer3: "Sparkling white sugar crystals and raised piping relief.",
+                layer4: "Clean plaque framing with dedicated message space celebrating healing.",
+                layer5: "Hand-painted metallic gold luster sealing the dimensional character medallion.",
+                note: "Baked to celebrate a brave young boy who triumphed over a major medical health battle, honoring his resilient spirit with custom cookies."
+            },
+            { 
+                category: "community",
+                src: "images/IMG_6369.jpeg", 
+                title: "Sunny Lemon Confectionery Gems",
+                tag: "Confectionery Set",
+                meta: "Occasion: Summer Gathering Dessert Tray | Flavors: Meyer Lemon Confectionery Rounds",
+                layer1: "Bright sunshine yellow chocolate glaze with clean white royal icing accents.",
+                layer2: "Piped grid textures, radiating sunbursts, and gentle zig-zag drizzles.",
+                layer3: "Crisp sugar confetti sprinkles and glossy dipped chocolate coating.",
+                layer4: "Individual round canvases exploring unique geometric patterns across a unified yellow palette.",
+                layer5: "Multi-colored confetti sprinkles dusting the final white chocolate drizzle.",
+                note: "Individual bite-sized treats celebrating bright citrus flavor and playful piping variations."
+            },
+            { 
+                category: "botanical",
                 src: "images/Mandala Cake Portland.jpg", 
                 title: "Intricate Mandala Celebration Cake",
                 tag: "Intricate Piping Art",
@@ -216,18 +421,7 @@
                 note: "Inspired by traditional meditative mandala art, piped entirely by hand in one continuous sitting to achieve clean symmetry."
             },
             { 
-                src: "images/MihirsBirthdayCake.jpg", 
-                title: "50th Milestone Celebration Cake",
-                tag: "Milestone Celebration",
-                meta: "Occasion: 50th Birthday Party | Flavors: Chocolate Fudge, Vanilla Bean Cream, Roasted Pistachio Sponge",
-                layer1: "Midnight navy base with warm antique gold highlights.",
-                layer2: "Hand-sculpted dragon wings and rhythmic shell scale piping.",
-                layer3: "Edible gold leafing paired with firm palette knife ridges.",
-                layer4: "Radial boundary balancing central vertical wings with grounded lower tiers.",
-                layer5: "Deliberate hand-painted gold luster across structural wing peaks.",
-                note: "Designed for a landmark 50th milestone celebration. Built around high-contrast structural symmetry to make a bold personal statement."
-            },
-            { 
+                category: "milestone",
                 src: "images/Arati's Birthday Cake 40th.jpg", 
                 title: "Vibrant 40th Birthday Floral Cake",
                 tag: "Milestone Birthday",
@@ -240,6 +434,20 @@
                 note: "Created for a festive 40th birthday dinner, inspired by an abundance of fresh garden blossoms and warm colors."
             },
             { 
+                category: "milestone",
+                src: "images/75th Birthday Cake -Kaushik.JPG", 
+                title: "75th Milestone Lemon Celebration Cake",
+                tag: "Milestone Birthday",
+                meta: "Occasion: 75th Birthday Gathering | Flavors: Fresh Lemon Zest Sponge with Lemon Cream Filling and Vanilla Buttercream",
+                layer1: "Neutral cream background with warm navy and metallic gold accents.",
+                layer2: "Smooth base coat with crisp piped border framing the tier.",
+                layer3: "Fondant modeling work and dimensional edible accents.",
+                layer4: "Front-facing personalized figure display with custom typography framing the base.",
+                layer5: "Custom gold 75th Birthday script topper sealing the design.",
+                note: "A meaningful family centerpiece honoring seventy-five years, featuring a bright lemon sponge and a custom hand-sculpted figure to bring smiles to the whole family."
+            },
+            { 
+                category: "milestone",
                 src: "images/90th Birthday Cake.jpg", 
                 title: "90th Milestone Ocean Celebration Cake",
                 tag: "Landmark Milestone",
@@ -252,66 +460,7 @@
                 note: "Designed for a family celebrating a beloved elder's 90th birthday, reflecting a lifelong love of the ocean and coastal waters."
             },
             { 
-                src: "images/75th Birthday Cake -Kaushik.JPG", 
-                title: "75th Milestone Celebration Cake",
-                tag: "Milestone Birthday",
-                meta: "Occasion: 75th Birthday Gathering | Flavors: Rich Dark Chocolate Sponge with Mocha Buttercream",
-                layer1: "Neutral cream background with warm navy and metallic gold accents.",
-                layer2: "Smooth base coat with crisp piped border framing the tier.",
-                layer3: "Fondant modeling work and dimensional edible accents.",
-                layer4: "Front-facing personalized figure display with custom typography framing the base.",
-                layer5: "Custom gold 75th Birthday script topper sealing the design.",
-                note: "A meaningful family centerpiece honoring seventy-five years, featuring a custom hand-sculpted figure to bring smiles to the whole family."
-            },
-            { 
-                src: "images/Embrace 2025 Grad Cake.jpg", 
-                title: "Class of 2025 Graduation Cake",
-                tag: "Graduation Celebration",
-                meta: "Occasion: Class of 2025 Graduation Party | Flavors: Red Velvet Cake with Cream Cheese Frosting",
-                layer1: "Deep black cocoa and midnight navy base with bright gold lettering.",
-                layer2: "Straight bench scraper side ridges with classic bottom shell borders.",
-                layer3: "Smooth frosted walls contrasted with crisp edible graduation graphics.",
-                layer4: "Balanced front-facing logo panel with an open top for the graduation cap.",
-                layer5: "Handcrafted miniature graduation cap and gold tassel centerpiece.",
-                note: "Built to honor student achievement and celebrate a proud graduation milestone with classmates and family."
-            },
-            { 
-                src: "images/Vanilla Daisy Cake- Emmas 1.jpg", 
-                title: "First Birthday Daisy Cake",
-                tag: "First Birthday",
-                meta: "Occasion: First Birthday Celebration | Flavors: Golden Vanilla Cake with Sweet Cream Filling",
-                layer1: "Soft sky white base with peach coral and buttercup yellow floral tones.",
-                layer2: "Gentle petal knife sculpting and soft rounded button centers.",
-                layer3: "Smooth, pillowy buttercream with textured flower centers.",
-                layer4: "Three delicate statement daisies spaced evenly around the top shoulder.",
-                layer5: "Single miniature accent blossom placed on the vintage jadeite cake stand.",
-                note: "A tender, sweet first birthday cake designed for a memorable cake smash and family photos."
-            },
-            { 
-                src: "images/Full Side View Lemon Cake .jpg", 
-                title: "Sunshine Lemon &amp; Sugared Citrus Cake",
-                tag: "Citrus Celebration",
-                meta: "Occasion: Summer Family Gathering | Flavors: Meyer Lemon Zest Sponge, Lemon Curd, Whipped Vanilla Frosting",
-                layer1: "Warm butter yellow base with ivory rosettes and sunny citrus pops.",
-                layer2: "Swirled open-star rosettes and textured spatula sweeps along the sides.",
-                layer3: "Sugared lemon wheels, crisp dehydrated citrus slices, and fresh mint leaves.",
-                layer4: "Crown crescent layout curving along one edge of the top tier.",
-                layer5: "Light dusting of fine powdered sugar over the candied citrus slices.",
-                note: "Made with fresh lemons from start to finish, offering a bright and cheerful flavor profile for warm weather gatherings."
-            },
-            { 
-                src: "images/Sharons Birthday Coconut Cake.jpg", 
-                title: "Botanical Coconut Birthday Cake",
-                tag: "Birthday Gathering",
-                meta: "Occasion: Birthday Celebration | Flavors: Toasted Coconut Chiffon, Coconut Cream Cheese Frosting",
-                layer1: "Crisp white coconut base with deep royal blue, emerald green, and blush pink florals.",
-                layer2: "Hand-piped dimensional hydrangeas, closed-star rosettes, and delicate leaf tips.",
-                layer3: "Flaked toasted coconut providing physical crunch and texture against smooth frosting.",
-                layer4: "Lush botanical wreath framing the perimeter of the cake top.",
-                layer5: "Whole dried botanical buds nestled between the piped floral clusters.",
-                note: "Designed around a love of rich toasted coconut flavor and deep blue floral gardens."
-            },
-            { 
+                category: "milestone",
                 src: "images/Corey's Birthday Cake.JPG", 
                 title: "30th Milestone Route 66 Cake",
                 tag: "Milestone Birthday",
@@ -324,18 +473,72 @@
                 note: "A playful tribute cake for an automotive enthusiast turning thirty, paired with a matching display of custom cupcakes."
             },
             { 
-                src: "images/Rainbow Cake .jpeg", 
-                title: "Rainbow Arch &amp; Cloud Cake",
-                tag: "Children's Birthday",
-                meta: "Occasion: Children's Birthday Party | Flavors: Six-Layer Rainbow Vanilla Sponge, Sweet Buttercream",
-                layer1: "Cloud white exterior revealing vibrant layered colors once sliced.",
-                layer2: "Smooth buttercream coat with piped marshmallow-style cloud puffs.",
-                layer3: "Multi-colored sprinkle confetti ringing the base for festive crunch.",
-                layer4: "Grounded bottom border balancing the arching rainbow overhead.",
-                layer5: "Handcrafted rainbow arch anchored into pillowy cloud clusters.",
-                note: "The joyful magic of this cake happens on the first cut, revealing six vibrant, independently baked sponge layers inside."
+                category: "milestone",
+                src: "images/Embrace 2025 Grad Cake.jpg", 
+                title: "Class of 2025 Graduation Cake",
+                tag: "Graduation Celebration",
+                meta: "Occasion: Class of 2025 Graduation Party | Flavors: Red Velvet Cake with Cream Cheese Frosting",
+                layer1: "Deep black cocoa and midnight navy base with bright gold lettering.",
+                layer2: "Straight bench scraper side ridges with classic bottom shell borders.",
+                layer3: "Smooth frosted walls contrasted with crisp edible graduation graphics.",
+                layer4: "Balanced front-facing logo panel with an open top for the graduation cap.",
+                layer5: "Handcrafted miniature graduation cap and gold tassel centerpiece.",
+                note: "Built to honor student achievement and celebrate a proud graduation milestone with classmates and family."
             },
             { 
+                category: "botanical",
+                src: "images/Vanilla Daisy Cake- Emmas 1.jpg", 
+                title: "First Birthday Daisy Smash Cake",
+                tag: "First Birthday",
+                meta: "Occasion: First Birthday Celebration | Flavors: Golden Vanilla Cake with Sweet Cream Filling",
+                layer1: "Soft sky white base with peach coral and buttercup yellow floral tones.",
+                layer2: "Gentle petal knife sculpting and soft rounded button centers.",
+                layer3: "Smooth, pillowy buttercream with textured flower centers.",
+                layer4: "Three delicate statement daisies spaced evenly around the top shoulder.",
+                layer5: "Single miniature accent blossom placed on the vintage jadeite cake stand.",
+                note: "A tender, sweet first birthday cake designed for a memorable cake smash and family photos."
+            },
+            { 
+                category: "botanical",
+                src: "images/Full Side View Lemon Cake .jpg", 
+                title: "Sunshine Lemon &amp; Sugared Citrus Cake",
+                tag: "Citrus Celebration",
+                meta: "Occasion: Summer Family Gathering | Flavors: Meyer Lemon Zest Sponge, Lemon Curd, Whipped Vanilla Frosting",
+                layer1: "Warm butter yellow base with ivory rosettes and sunny citrus pops.",
+                layer2: "Swirled open-star rosettes and textured spatula sweeps along the sides.",
+                layer3: "Sugared lemon wheels, crisp dehydrated citrus slices, and fresh mint leaves.",
+                layer4: "Crown crescent layout curving along one edge of the top tier.",
+                layer5: "Light dusting of fine powdered sugar over the candied citrus slices.",
+                note: "Made with fresh lemons from start to finish, offering a bright and cheerful flavor profile for warm weather gatherings."
+            },
+            { 
+                category: "botanical",
+                src: "images/Sharons Birthday Coconut Cake.jpg", 
+                title: "Botanical Coconut Celebration Cake",
+                tag: "Birthday Gathering",
+                meta: "Occasion: Birthday Celebration | Flavors: Toasted Coconut Chiffon, Coconut Cream Cheese Frosting",
+                layer1: "Crisp white coconut base with deep royal blue, emerald green, and blush pink florals.",
+                layer2: "Hand-piped dimensional hydrangeas, closed-star rosettes, and delicate leaf tips.",
+                layer3: "Flaked toasted coconut providing physical crunch and texture against smooth frosting.",
+                layer4: "Lush botanical wreath framing the perimeter of the cake top.",
+                layer5: "Whole dried botanical buds nestled between the piped floral clusters.",
+                note: "Designed around a love of rich toasted coconut flavor and deep blue floral gardens."
+            },
+            { 
+                category: "sculpted",
+                src: "images/Hamburger Cakes - Kenne...Dad.jpg", 
+                title: "Handcrafted Cookout Hamburger Cakes",
+                tag: "Novelty Celebration",
+                meta: "Occasion: Father's Day and Birthday Cookout | Flavors: Vanilla Sponge Buns, Rich Brownie Patties",
+                layer1: "Golden baked bun tones with rich chocolate brown burger patties.",
+                layer2: "Realistic sculpting shaping cake rounds into burger buns.",
+                layer3: "Real sesame seeds toasted on the top bun with piped shredded green lettuce and melted cheese.",
+                layer4: "Multi-piece slider presentation on a shared party platter.",
+                layer5: "Realistic piped red ketchup and yellow mustard dollops peeking from under the bun.",
+                note: "An enduring family favorite that brings huge laughs when guests realize the gourmet burgers are actually sweet cakes."
+            },
+            { 
+                category: "botanical",
                 src: "images/Strawberry Vanilla Trial Cake.jpg", 
                 title: "Fresh Strawberry Summer Shortcake",
                 tag: "Seasonal Family Bake",
@@ -348,20 +551,9 @@
                 note: "A celebration of fresh market berries and honest scratch baking where the fruit takes center stage."
             },
             { 
-                src: "images/Hamburger Cakes - Kenneth's Dad.jpg", 
-                title: "Handcrafted Cookout Hamburger Cakes",
-                tag: "Novelty Celebration",
-                meta: "Occasion: Father's Day and Birthday Cookout | Flavors: Vanilla Sponge Buns, Rich Brownie Patties",
-                layer1: "Golden baked bun tones with rich chocolate brown burger patties.",
-                layer2: "Realistic sculpting shaping cake rounds into burger buns.",
-                layer3: "Real sesame seeds toasted on the top bun with piped shredded green lettuce and melted cheese.",
-                layer4: "Multi-piece slider presentation on a shared party platter.",
-                layer5: "Realistic piped red ketchup and yellow mustard dollops peeking from under the bun.",
-                note: "An enduring family favorite that brings huge laughs when guests realize the gourmet burgers are actually sweet cakes."
-            },
-            { 
+                category: "botanical",
                 src: "images/Surina Cake Birthday Top.jpg", 
-                title: "Hand-Painted Floral Birthday Cake",
+                title: "Hand-Painted Floral Celebration Cake",
                 tag: "Birthday Celebration",
                 meta: "Occasion: Birthday Celebration | Flavors: Cardamom Rose Sponge with Whipped White Chocolate Ganache",
                 layer1: "Natural linen white buttercream with dusty mauve, chocolate brown, and sky blue blossoms.",
@@ -373,23 +565,10 @@
             }
         ];
 
-        const galleryGrid = document.getElementById('gallery-grid');
-        portfolioData.forEach((item, index) => {
-            const card = document.createElement('div');
-            card.className = "gallery-item block relative group cursor-pointer";
-            card.onclick = () => openLightbox(index);
-            card.innerHTML = `
-                <img src="${item.src}" alt="${item.title}" class="w-full h-80 md:h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
-                <div class="absolute inset-0 bg-brand-navy/60 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl p-4 text-center">
-                    <span class="text-brand-gold text-[10px] font-sans uppercase tracking-widest font-bold mb-1">${item.tag}</span>
-                    <h3 class="text-white text-base font-serif font-bold mb-3">${item.title}</h3>
-                    <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-4 py-2 uppercase">View Details</span>
-                </div>
-            `;
-            galleryGrid.appendChild(card);
-        });
-
+        let currentFilteredData = [...masterPortfolioData];
         let currentIndex = 0;
+
+        const galleryGrid = document.getElementById('gallery-grid');
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
         const lightboxTitle = document.getElementById('lightbox-title');
@@ -401,6 +580,44 @@
         const layer4 = document.getElementById('layer-4');
         const layer5 = document.getElementById('layer-5');
         const lightboxNote = document.getElementById('lightbox-note');
+
+        function renderGallery() {
+            galleryGrid.innerHTML = '';
+            currentFilteredData.forEach((item, index) => {
+                const card = document.createElement('div');
+                card.className = "gallery-item block relative group cursor-pointer";
+                card.onclick = () => openLightbox(index);
+                card.innerHTML = `
+                    <img src="${item.src}" alt="${item.title}" class="w-full h-80 md:h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
+                    <div class="absolute inset-0 bg-brand-navy/60 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl p-4 text-center">
+                        <span class="text-brand-gold text-[10px] font-sans uppercase tracking-widest font-bold mb-1">${item.tag}</span>
+                        <h3 class="text-white text-base font-serif font-bold mb-3">${item.title}</h3>
+                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-4 py-2 uppercase">View Details</span>
+                    </div>
+                `;
+                galleryGrid.appendChild(card);
+            });
+        }
+
+        function filterGallery(category) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => {
+                if (btn.getAttribute('data-category') === category) {
+                    btn.classList.add('bg-brand-gold', 'text-brand-navy');
+                    btn.classList.remove('bg-brand-navy/60', 'text-brand-light');
+                } else {
+                    btn.classList.remove('bg-brand-gold', 'text-brand-navy');
+                    btn.classList.add('bg-brand-navy/60', 'text-brand-light');
+                }
+            });
+
+            if (category === 'all') {
+                currentFilteredData = [...masterPortfolioData];
+            } else {
+                currentFilteredData = masterPortfolioData.filter(item => item.category === category);
+            }
+            renderGallery();
+        }
 
         function openLightbox(index) {
             currentIndex = index;
@@ -416,13 +633,13 @@
 
         function changeImage(direction) {
             currentIndex += direction;
-            if (currentIndex >= portfolioData.length) currentIndex = 0;
-            if (currentIndex < 0) currentIndex = portfolioData.length - 1;
+            if (currentIndex >= currentFilteredData.length) currentIndex = 0;
+            if (currentIndex < 0) currentIndex = currentFilteredData.length - 1;
             updateLightboxContent();
         }
 
         function updateLightboxContent() { 
-            const data = portfolioData[currentIndex];
+            const data = currentFilteredData[currentIndex];
             lightboxImg.src = data.src; 
             lightboxTitle.textContent = data.title;
             lightboxTag.textContent = data.tag;
@@ -443,6 +660,9 @@
             if (e.key === "ArrowRight") changeImage(1);
             if (e.key === "ArrowLeft") changeImage(-1);
         });
+
+        // Initialize on load
+        renderGallery();
     </script>
 </body>
 </html>
