@@ -69,7 +69,7 @@
     </nav>
 
     <!-- HEADER SECTION -->
-    <header class="text-center py-20 md:py-24 px-6 bg-brand-navy border-b border-brand-gold/10 relative overflow-hidden">
+    <header class="text-center py-20 px-6 bg-brand-navy border-b border-brand-gold/10 relative overflow-hidden">
         <div class="max-w-3xl mx-auto relative z-10">
             <h1 class="font-serif text-4xl md:text-5xl font-bold text-brand-light mb-4">The Shoppe</h1>
             <p class="font-serif italic text-lg md:text-xl text-brand-light/80 leading-relaxed max-w-2xl mx-auto">
@@ -78,110 +78,132 @@
         </div>
     </header>
 
-    <main class="py-20 md:py-28 bg-brand-light">
-        <div class="max-w-7xl mx-auto px-6">
+    <main class="py-16 md:py-24 bg-brand-light">
+        <div class="max-w-6xl mx-auto px-6">
             
-            <!-- SECTION 1: PHYSICAL PRODUCTS -->
-            <section class="mb-24">
-                <div class="text-center max-w-2xl mx-auto mb-16">
-                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-gold-dark">Tools For Low-Stress Making</span>
-                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-navy mt-1">Physical Products</h2>
-                </div>
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-gold-dark">Tools For Low-Stress Making</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-navy mt-1">The Physical Collection</h2>
+                <p class="text-sm text-brand-dark/75 mt-2">Thoughtfully designed editions to help you decompress at home.</p>
+            </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 max-w-5xl mx-auto gap-10 items-stretch">
+            <!-- PRODUCT 1: HORIZONTAL EDITORIAL ROW (THE GUIDED JOURNAL) -->
+            <div id="journal" class="bg-white rounded-3xl border border-brand-gold/25 p-8 md:p-12 shadow-xl mb-16 hover:shadow-2xl transition-all">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
                     
-                    <!-- PRODUCT 1: FLAGSHIP JOURNAL -->
-                    <div id="journal" class="bg-white border border-brand-gold/20 rounded-3xl shadow-lg hover:-translate-y-2 transition-transform flex flex-col h-full relative overflow-hidden">
-                        <span class="absolute top-4 left-4 bg-brand-gold text-brand-navy font-sans font-bold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full z-10 shadow-sm">Flagship Journal</span>
-                        
-                        <div class="h-72 sm:h-80 p-8 flex items-center justify-center bg-brand-light/60 border-b border-brand-gold/10 overflow-hidden relative">
-                            <img src="https://imgur.com/5Xw0j7q.png" alt="Bake to Baseline: The Guided Sensory Journal" class="max-h-full max-w-full object-contain drop-shadow-md">
-                        </div>
-                        
-                        <div class="p-8 md:p-10 flex flex-col flex-grow">
-                            <h3 class="font-serif text-2xl font-bold text-brand-navy mb-1 leading-tight">Bake to Baseline: The Guided Journal</h3>
-                            <p class="text-xs font-serif italic text-brand-gold-dark mb-4">A Lay-Flat Creative Book for Self-Discovery</p>
-                            <div class="font-sans font-bold text-brand-navy mb-5 text-2xl">$40.00</div>
-                            
-                            <p class="font-sans text-xs md:text-sm text-brand-dark/80 leading-relaxed mb-6">
-                                Designed for days when you feel overwhelmed or tired. This guided journal gives your mind a quiet place to create through cake design sketches, color palettes, and comforting flavor memories, with no oven or kitchen cleanup required.
-                            </p>
-                            
-                            <ul class="text-xs text-brand-dark/80 space-y-3 font-sans mb-8 flex-grow">
-                                <li class="flex items-start">
-                                    <span class="text-brand-gold-dark mr-2 font-serif text-sm">✦</span>
-                                    <span><strong>7.44" x 9.66" Lay-Flat Spiral:</strong> Twin-wire binding that stays open on your table or counter.</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-brand-gold-dark mr-2 font-serif text-sm">✦</span>
-                                    <span><strong>Warm Cream Pages:</strong> High-contrast sheets designed for low eye strain and gentle focus.</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-brand-gold-dark mr-2 font-serif text-sm">✦</span>
-                                    <span><strong>5-Layer Sensory Framework:</strong> Thoughtful prompts to help you decompress through color, texture, and touch.</span>
-                                </li>
-                            </ul>
-                            
-                            <div class="pt-6 border-t border-brand-gold/20 w-full mt-auto">
-                                <a href="contact.html?subject=Order%20Bake%20to%20Baseline%20Journal" class="block w-full text-center bg-brand-navy text-white font-sans text-xs font-bold uppercase tracking-widest py-4 rounded-full hover:bg-brand-gold hover:text-brand-navy transition-colors shadow-md">
-                                    Order Journal ($40)
-                                </a>
-                            </div>
-                        </div>
+                    <!-- Left: Styled Gallery Display Bay -->
+                    <div class="lg:col-span-5 bg-brand-light/70 rounded-2xl p-6 md:p-8 flex items-center justify-center border border-brand-gold/15 shadow-inner min-h-[340px] md:min-h-[400px]">
+                        <img src="https://imgur.com/5Xw0j7q.png" alt="Bake to Baseline Guided Journal" class="max-h-72 md:max-h-84 w-auto object-contain drop-shadow-xl rounded-lg">
                     </div>
-
-                    <!-- PRODUCT 2: THE DECONSTRUCTED RECIPE DECK -->
-                    <div class="bg-white border border-brand-gold/20 rounded-3xl shadow-lg hover:-translate-y-2 transition-transform flex flex-col h-full relative overflow-hidden">
-                        <span class="absolute top-4 left-4 bg-brand-gold text-brand-navy font-sans font-bold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full z-10 shadow-sm">Signature Item</span>
+                    
+                    <!-- Right: Product Information & Purchase -->
+                    <div class="lg:col-span-7 flex flex-col justify-center text-left">
+                        <span class="inline-block bg-brand-gold text-brand-navy font-sans font-bold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full mb-3 self-start shadow-sm">
+                            Flagship Edition
+                        </span>
                         
-                        <div class="h-72 sm:h-80 p-8 flex items-center justify-center bg-brand-light/60 border-b border-brand-gold/10 overflow-hidden relative">
-                            <img src="https://imgur.com/qOUw74z.png" alt="The Deconstructed Recipe Deck with Counter Stand" class="max-h-full max-w-full object-contain drop-shadow-md">
-                        </div>
+                        <h3 class="font-serif text-3xl font-bold text-brand-navy mb-1 leading-tight">
+                            Bake to Baseline: The Guided Journal
+                        </h3>
+                        <p class="text-xs font-serif italic text-brand-gold-dark mb-4">
+                            A Lay-Flat Creative Book for Self-Discovery
+                        </p>
                         
-                        <div class="p-8 md:p-10 flex flex-col flex-grow">
-                            <h3 class="font-serif text-2xl font-bold text-brand-navy mb-1 leading-tight">The Deconstructed Recipe Deck</h3>
-                            <p class="text-xs font-serif italic text-brand-gold-dark mb-4">Single-Step Kitchen Cards with Counter Easel</p>
-                            <div class="font-sans font-bold text-brand-navy mb-5 text-2xl">Starts at $48.00</div>
-                            
-                            <p class="font-sans text-xs md:text-sm text-brand-dark/80 leading-relaxed mb-6">
-                                Built to eliminate kitchen fatigue and recipe confusion. Each step is printed on its own sturdy 5x7 card and displayed upright on a clear counter stand, so you only focus on what is in front of you. Choose our signature Lemon Raspberry White Chocolate collection or have your own family heirloom recipe deconstructed.
-                            </p>
-                            
-                            <ul class="text-xs text-brand-dark/80 space-y-3 font-sans mb-8 flex-grow">
-                                <li class="flex items-start">
-                                    <span class="text-brand-gold-dark mr-2 font-serif text-sm">✦</span>
-                                    <span><strong>33 Tabbed 5x7 Cards:</strong> Volume dividers, clear active and rest times, and built-in permission to pause.</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-brand-gold-dark mr-2 font-serif text-sm">✦</span>
-                                    <span><strong>Zero-Math Gram Conversions:</strong> Open-flat guide with exact gram weights so you can weigh ingredients straight into one bowl without measuring cups.</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-brand-gold-dark mr-2 font-serif text-sm">✦</span>
-                                    <span><strong>Clear Counter Easel:</strong> Keeps your active card clean, upright, splash-resistant, and easy to read at a glance.</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <span class="text-brand-gold-dark mr-2 font-serif text-sm">✦</span>
-                                    <span><strong>Custom Heirloom Option:</strong> Available as our signature bake or custom-made from your own family recipe card.</span>
-                                </li>
-                            </ul>
-                            
-                            <div class="pt-6 border-t border-brand-gold/20 w-full mt-auto">
-                                <a href="contact.html?subject=Order%20The%20Deconstructed%20Recipe%20Suite" class="block w-full text-center bg-brand-navy text-white font-sans text-xs font-bold uppercase tracking-widest py-4 rounded-full hover:bg-brand-gold hover:text-brand-navy transition-colors shadow-md">
-                                    Order Recipe Deck (From $48)
-                                </a>
-                            </div>
+                        <div class="font-sans font-bold text-brand-navy text-2xl mb-4">$40.00</div>
+                        
+                        <p class="font-sans text-xs md:text-sm text-brand-dark/80 leading-relaxed mb-6">
+                            Designed for days when you feel overwhelmed or depleted. This guided journal gives your mind a quiet place to create through cake design sketches, color palettes, and comforting flavor memories, with no oven or kitchen cleanup required.
+                        </p>
+                        
+                        <ul class="text-xs text-brand-dark/80 space-y-2.5 font-sans mb-8 border-t border-b border-brand-gold/15 py-4">
+                            <li class="flex items-start">
+                                <span class="text-brand-gold-dark mr-2 font-serif text-sm">✦</span>
+                                <span><strong>7.44" x 9.66" Lay-Flat Spiral:</strong> Heavy-duty twin-wire binding that stays open on your table or counter.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-brand-gold-dark mr-2 font-serif text-sm">✦</span>
+                                <span><strong>Warm Cream Pages:</strong> High-contrast layout sheets engineered for low eye strain and gentle focus.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-brand-gold-dark mr-2 font-serif text-sm">✦</span>
+                                <span><strong>5-Layer Sensory Framework:</strong> Step-by-step prompts to help you decompress through color, texture, and touch.</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="flex flex-col sm:flex-row items-center gap-4">
+                            <a href="contact.html?subject=Order%20Bake%20to%20Baseline%20Journal" class="w-full sm:w-auto text-center bg-brand-navy text-white font-sans text-xs font-bold uppercase tracking-widest py-4 px-10 rounded-full hover:bg-brand-gold hover:text-brand-navy transition-colors shadow-md">
+                                Order Journal ($40)
+                            </a>
+                            <span class="text-[11px] text-brand-dark/60 font-sans italic">Ships nationwide across the United States</span>
                         </div>
                     </div>
 
                 </div>
-            </section>
+            </div>
+
+            <!-- PRODUCT 2: HORIZONTAL EDITORIAL ROW (THE RECIPE DECK) -->
+            <div class="bg-white rounded-3xl border border-brand-gold/25 p-8 md:p-12 shadow-xl mb-20 hover:shadow-2xl transition-all">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+                    
+                    <!-- Left: Product Information & Purchase -->
+                    <div class="lg:col-span-7 flex flex-col justify-center text-left order-2 lg:order-1">
+                        <span class="inline-block bg-brand-gold text-brand-navy font-sans font-bold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full mb-3 self-start shadow-sm">
+                            Signature Kitchen Tool
+                        </span>
+                        
+                        <h3 class="font-serif text-3xl font-bold text-brand-navy mb-1 leading-tight">
+                            The Deconstructed Recipe Deck
+                        </h3>
+                        <p class="text-xs font-serif italic text-brand-gold-dark mb-4">
+                            Single-Step Kitchen Cards with Counter Display Easel
+                        </p>
+                        
+                        <div class="font-sans font-bold text-brand-navy text-2xl mb-4">Starts at $48.00</div>
+                        
+                        <p class="font-sans text-xs md:text-sm text-brand-dark/80 leading-relaxed mb-6">
+                            Built to eliminate kitchen fatigue and recipe confusion. Each step is printed on its own sturdy 5x7 card and displayed upright on a clear counter stand, so you only focus on what is in front of you. Available as our signature Lemon Raspberry White Chocolate collection or custom-made from your own family heirloom recipe.
+                        </p>
+                        
+                        <ul class="text-xs text-brand-dark/80 space-y-2.5 font-sans mb-8 border-t border-b border-brand-gold/15 py-4">
+                            <li class="flex items-start">
+                                <span class="text-brand-gold-dark mr-2 font-serif text-sm">✦</span>
+                                <span><strong>33 Tabbed 5x7 Cards:</strong> Volume dividers, clear active and rest times, and built-in permission to pause.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-brand-gold-dark mr-2 font-serif text-sm">✦</span>
+                                <span><strong>Zero-Math Gram Conversions:</strong> Open-flat guide with exact gram weights to weigh ingredients straight into one bowl without measuring cups.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-brand-gold-dark mr-2 font-serif text-sm">✦</span>
+                                <span><strong>Clear Counter Easel:</strong> Keeps your active card clean, upright, splash-resistant, and easy to read at a glance.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-brand-gold-dark mr-2 font-serif text-sm">✦</span>
+                                <span><strong>Custom Heirloom Option:</strong> Choose our signature bake or commission a custom deck designed from your family's favorite handwritten recipe.</span>
+                            </li>
+                        </ul>
+                        
+                        <div class="flex flex-col sm:flex-row items-center gap-4">
+                            <a href="contact.html?subject=Order%20The%20Deconstructed%20Recipe%20Suite" class="w-full sm:w-auto text-center bg-brand-navy text-white font-sans text-xs font-bold uppercase tracking-widest py-4 px-10 rounded-full hover:bg-brand-gold hover:text-brand-navy transition-colors shadow-md">
+                                Order Recipe Deck (From $48)
+                            </a>
+                            <span class="text-[11px] text-brand-dark/60 font-sans italic">Includes counter easel and keepsake storage box</span>
+                        </div>
+                    </div>
+
+                    <!-- Right: Styled Gallery Display Bay -->
+                    <div class="lg:col-span-5 bg-brand-light/70 rounded-2xl p-6 md:p-8 flex items-center justify-center border border-brand-gold/15 shadow-inner min-h-[340px] md:min-h-[400px] order-1 lg:order-2">
+                        <img src="https://imgur.com/qOUw74z.png" alt="Deconstructed Recipe Deck with Counter Stand" class="max-h-72 md:max-h-84 w-auto object-contain drop-shadow-xl rounded-lg">
+                    </div>
+
+                </div>
+            </div>
 
             <!-- SECTION 2: LIVE WORKSHOP SESSIONS -->
-            <section id="live-experiences" class="py-20 md:py-24 bg-brand-navy text-white border-t border-brand-gold/20 rounded-3xl relative overflow-hidden mb-24 shadow-2xl">
-                <div class="max-w-7xl mx-auto px-6 relative z-10">
+            <section id="live-experiences" class="py-16 md:py-20 bg-brand-navy text-white border-t border-brand-gold/20 rounded-3xl relative overflow-hidden mb-20 shadow-2xl">
+                <div class="max-w-6xl mx-auto px-6 relative z-10">
                     
-                    <div class="text-center max-w-3xl mx-auto mb-14">
+                    <div class="text-center max-w-3xl mx-auto mb-12">
                         <span class="text-brand-gold font-sans font-bold tracking-[0.3em] uppercase text-xs block mb-2">Tactile In-Person and Virtual Sessions</span>
                         <h2 class="font-serif text-3xl md:text-4xl font-bold text-white mb-4">Hands-On Studio Experiences</h2>
                         <p class="text-brand-light/80 font-sans text-xs md:text-sm leading-relaxed">
@@ -189,10 +211,10 @@
                         </p>
                     </div>
 
-                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch mb-14">
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch mb-12">
                         
                         <!-- TIER 1 -->
-                        <div class="bg-brand-card/90 p-8 rounded-3xl border border-brand-gold/20 flex flex-col hover:border-brand-gold/50 transition-all">
+                        <div class="bg-brand-card/90 p-6 md:p-8 rounded-3xl border border-brand-gold/20 flex flex-col hover:border-brand-gold/50 transition-all">
                             <span class="text-brand-gold font-sans font-bold tracking-widest uppercase text-[10px] block mb-1">Tier 1: Individual Seats</span>
                             <h3 class="font-serif text-2xl font-bold text-white mb-1">Public Studio Sessions</h3>
                             <p class="text-brand-gold font-bold text-xs mb-3">Scheduled Dates in McKinney and DFW Venues</p>
@@ -214,7 +236,7 @@
                         </div>
 
                         <!-- TIER 2 -->
-                        <div class="bg-brand-card p-8 rounded-3xl border-2 border-brand-gold flex flex-col relative shadow-2xl">
+                        <div class="bg-brand-card p-6 md:p-8 rounded-3xl border-2 border-brand-gold flex flex-col relative shadow-2xl">
                             <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-gold text-brand-navy text-[9px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-sm whitespace-nowrap">
                                 In-Person and Hybrid Teams
                             </div>
@@ -241,7 +263,7 @@
                         </div>
 
                         <!-- TIER 3 -->
-                        <div class="bg-brand-card/90 p-8 rounded-3xl border border-brand-gold/20 flex flex-col hover:border-brand-gold/50 transition-all">
+                        <div class="bg-brand-card/90 p-6 md:p-8 rounded-3xl border border-brand-gold/20 flex flex-col hover:border-brand-gold/50 transition-all">
                             <span class="text-brand-gold font-sans font-bold tracking-widest uppercase text-[10px] block mb-1">Tier 3: Virtual Teams</span>
                             <h3 class="font-serif text-2xl font-bold text-white mb-1">Remote Shipped Workshops</h3>
                             <p class="text-brand-gold font-bold text-xs mb-3">Delivered Directly to Remote Doors Nationwide</p>
@@ -265,7 +287,7 @@
 
                     </div>
 
-                    <div class="bg-brand-card/50 p-8 rounded-2xl border border-brand-gold/20 text-center max-w-4xl mx-auto">
+                    <div class="bg-brand-card/50 p-6 md:p-8 rounded-2xl border border-brand-gold/20 text-center max-w-4xl mx-auto">
                         <h4 class="font-serif text-xl font-bold text-brand-gold mb-2">Want to see our 5-Layer Sensory Method?</h4>
                         <p class="text-brand-light/80 text-xs font-sans mb-6 max-w-2xl mx-auto leading-relaxed">
                             Read our full workshop breakdown, material lists, and booking options on our dedicated Atelier page.
@@ -279,17 +301,17 @@
             </section>
 
             <!-- SECTION 3: WHOLESALE & RETAIL BAR -->
-            <section class="bg-white border border-brand-gold/20 rounded-2xl p-8 md:p-10 flex flex-col md:flex-row justify-between items-center gap-6 shadow-md">
-                <div class="flex items-center space-x-5">
-                    <div class="w-14 h-14 rounded-full bg-brand-light border border-brand-gold/30 flex items-center justify-center shrink-0">
-                        <svg class="w-7 h-7 text-brand-gold-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+            <section class="bg-white border border-brand-gold/20 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row justify-between items-center gap-6 shadow-sm">
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 rounded-full bg-brand-light border border-brand-gold/30 flex items-center justify-center shrink-0">
+                        <svg class="w-6 h-6 text-brand-gold-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
                     </div>
                     <div>
-                        <h4 class="font-serif font-bold text-brand-navy text-xl">Boutique Retail and Wholesale</h4>
-                        <p class="text-xs md:text-sm text-brand-dark/70 font-sans mt-1">Stock our tactile journals and single-step recipe decks in your bookstore, gift shop, or wellness boutique.</p>
+                        <h4 class="font-serif font-bold text-brand-navy text-lg">Boutique Retail and Wholesale</h4>
+                        <p class="text-xs text-brand-dark/70 font-sans">Stock our tactile journals and single-step recipe decks in your bookstore, gift shop, or wellness boutique.</p>
                     </div>
                 </div>
-                <a href="contact.html?subject=Wholesale%20%26%20Retail" class="shrink-0 bg-brand-light border border-brand-navy text-brand-navy font-sans text-xs font-bold uppercase tracking-widest py-3.5 px-8 rounded-full hover:bg-brand-navy hover:text-white transition-colors">Inquire for Wholesale</a>
+                <a href="contact.html?subject=Wholesale%20%26%20Retail" class="shrink-0 bg-brand-light border border-brand-navy text-brand-navy font-sans text-xs font-bold uppercase tracking-widest py-3 px-6 rounded-full hover:bg-brand-navy hover:text-white transition-colors">Inquire for Wholesale</a>
             </section>
 
         </div>
