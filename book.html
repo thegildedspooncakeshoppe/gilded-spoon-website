@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="p:domain_verify" content="8497c86d445458f17cdce81e920478f2"/>
-    <title>Bake to Baseline: Your Edible Blueprint | The Gilded Spoon Shoppe</title>
-    <meta name="description" content="A premium 7 x 10 twin-wire spiral-bound guided journal for mapping your story through sensory baking, color, and texture. No oven required.">
+    <title>Bake to Baseline: The Guided Journal | The Gilded Spoon Shoppe</title>
+    <meta name="description" content="A premium 7 x 10 lay-flat spiral-bound guided journal for self-discovery through sensory baking, color, and texture. No oven required.">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Great+Vibes&family=Libre+Baskerville:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -18,21 +18,14 @@
                         'brand-light': '#F4F1ED',
                         'brand-gold': '#D4AF37',
                         'brand-gold-hover': '#E2C76A',
+                        'brand-gold-dark': '#8C6D18',
                         'brand-gray': '#A09DA6',
                         'brand-card': '#2A232F',
-                        'brand-navy': '#0A2342',
-
-                        'brand-sanctuary': '#0A2342',   
-                        'brand-canvas': '#F4F1ED',      
-                        'brand-blueprint': '#1C161E',   
-                        'brand-jolt': '#D4AF37',        
-                        'brand-soul': '#D4AF37'         
+                        'brand-navy': '#0A2342'
                     },
                     fontFamily: {
                         'serif': ['"Playfair Display"', 'serif'],
                         'sans': ['"Inter"', 'sans-serif'],
-                        'cursive': ['"Great Vibes"', 'cursive'],
-                        'baskerville': ['"Libre Baskerville"', 'serif'],
                         'hand': ['"Caveat"', 'cursive']
                     }
                 }
@@ -40,7 +33,6 @@
         }
     </script>
     <style>
-        /* Custom Photo Stack CSS */
         .photo-stack { position: relative; width: 100%; height: 300px; cursor: pointer; transition: transform 0.3s; }
         .photo-stack:hover { transform: scale(1.02); }
         .stack-card {
@@ -63,7 +55,6 @@
 
         .gold-stack .stack-card { border-color: #D4AF37; } 
 
-        /* Lightbox */
         .lightbox { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(10, 35, 66, 0.95); justify-content: center; align-items: center; flex-direction: column; backdrop-filter: blur(5px); }
         .lightbox.active { display: flex; }
         .lightbox-img { max-width: 90%; max-height: 80vh; border: 4px solid #F4F1ED; border-radius: 4px; }
@@ -76,11 +67,12 @@
         <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
             <a href="index.html" class="text-2xl font-serif font-bold text-brand-gold text-center leading-none">
                 The Gilded Spoon
-                <span class="block text-xs font-sans font-light not-italic tracking-[0.3em] text-brand-light">SHOPPE & ATELIER</span>
+                <span class="block text-xs font-sans font-light not-italic tracking-[0.3em] text-brand-light">SHOPPE &amp; ATELIER</span>
             </a>
             <div class="hidden md:flex items-center space-x-6 font-medium text-xs tracking-widest uppercase">
                 <a href="shoppe.html" class="text-brand-light hover:text-brand-gold transition">Shoppe</a>
                 <a href="workshop.html" class="text-brand-light hover:text-brand-gold transition">Workshops</a>
+                <a href="events.html" class="text-brand-light hover:text-brand-gold transition">Parties</a>
                 <a href="flipbook.html" class="text-brand-light hover:text-brand-gold transition">Portfolio</a>
                 <a href="contact.html" class="text-brand-light hover:text-brand-gold transition">Contact</a>
                 <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-navy hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm">
@@ -96,6 +88,7 @@
         <div id="mobile-menu" class="hidden md:hidden mt-4 px-4 pb-4 bg-brand-navy text-center">
             <a href="shoppe.html" class="block py-3 text-brand-light uppercase tracking-widest">Shoppe</a>
             <a href="workshop.html" class="block py-3 text-brand-light uppercase tracking-widest">Workshops</a>
+            <a href="events.html" class="block py-3 text-brand-light uppercase tracking-widest">Parties</a>
             <a href="flipbook.html" class="block py-3 text-brand-light uppercase tracking-widest">Portfolio</a>
             <a href="contact.html" class="block py-3 text-brand-light uppercase tracking-widest">Contact</a>
             <a href="/baketobaseline/index.html" class="inline-block mt-2 bg-brand-gold text-brand-navy hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm">
@@ -108,11 +101,11 @@
     <section class="text-center py-16 px-4 bg-brand-navy relative overflow-hidden border-b border-brand-gold/10">
         <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')]"></div>
         <div class="relative z-10">
-            <span class="font-serif italic text-lg md:text-xl text-brand-gold block mb-3">Five layers of sensory design. Zero layers of masking.</span>
+            <span class="font-serif italic text-lg md:text-xl text-brand-gold block mb-3">Five sensory layers. Zero pressure to perform.</span>
             <h1 class="font-serif font-bold text-4xl md:text-6xl text-white mb-2">Bake to Baseline</h1>
-            <span class="font-serif text-2xl md:text-3xl text-brand-gold block mb-4 italic">The Edible Blueprint</span>
+            <span class="font-serif text-2xl md:text-3xl text-brand-gold block mb-4 italic">The Sensory Guided Journal</span>
             <p class="text-base md:text-lg font-serif text-brand-light/90 max-w-xl mx-auto leading-relaxed">
-                A Premium 7" x 10" Lay-Flat Spiral-Bound Guided Journal for Mapping Your Story Through Cake, Color, and Texture.
+                A premium 7" x 10" lay-flat spiral-bound journal for self-discovery through cake design, color mapping, and texture.
                 <strong class="text-brand-gold block mt-3 font-sans uppercase tracking-widest text-xs">No Oven Required.</strong>
             </p>
         </div>
@@ -121,13 +114,13 @@
     <!-- CALL TO ACTION CARD -->
     <section class="max-w-3xl mx-auto my-16 px-6 text-center">
         <div class="bg-white border border-brand-gold/20 rounded-3xl p-8 md:p-12 shadow-xl hover:-translate-y-1 transition-transform">
-            <p class="font-hand text-2xl md:text-3xl text-brand-navy italic mb-8">
-                "For the version of you that needs permission to be messy."
+            <p class="font-hand text-2xl md:text-3xl text-brand-navy italic mb-6">
+                "For anyone who loves the creativity of baking, but needs permission to skip the kitchen stress."
             </p>
-            <a href="contact.html?subject=Purchase%20Journal" class="inline-block bg-brand-navy text-white font-sans text-xs tracking-widest uppercase py-4 px-10 rounded-full hover:bg-brand-gold hover:text-brand-navy transition-all shadow-md">
-                Purchase Your Edible Blueprint
+            <a href="contact.html?subject=Order%20Bake%20to%20Baseline%20Journal" class="inline-block bg-brand-navy text-white font-sans text-xs tracking-widest uppercase py-4 px-10 rounded-full hover:bg-brand-gold hover:text-brand-navy transition-all shadow-md">
+                Order The Journal ($40)
             </a>
-            <p class="mt-6 font-sans text-xs text-brand-dark/70">You don't need to be a baker to find peace. You just need a place to put your feelings.</p>
+            <p class="mt-6 font-sans text-xs text-brand-dark/70">You don't have to be a professional baker to find calm. You just need a quiet place to express yourself.</p>
         </div>
     </section>
 
@@ -135,24 +128,24 @@
     <section class="max-w-5xl mx-auto px-6 mb-16">
         <div class="bg-brand-navy text-brand-light p-8 md:p-10 rounded-3xl border border-brand-gold/30 shadow-lg">
             <div class="text-center mb-8">
-                <span class="text-brand-gold font-sans uppercase tracking-widest text-xs font-bold block mb-1">Baseline Check</span>
-                <h2 class="font-serif text-2xl md:text-3xl font-bold text-white">Choose Your Path Based on Today's Energy Battery</h2>
+                <span class="text-brand-gold font-sans uppercase tracking-widest text-xs font-bold block mb-1">Energy Check-In</span>
+                <h2 class="font-serif text-2xl md:text-3xl font-bold text-white">Choose Your Path Based on Today's Battery</h2>
             </div>
             <div class="grid md:grid-cols-3 gap-6">
                 <div class="bg-white/5 p-6 rounded-2xl border border-brand-gold/10">
-                    <span class="text-brand-gold font-bold text-sm block mb-1">PATH A: SOS Reset</span>
-                    <h3 class="font-serif font-bold text-lg text-white mb-2">High Anxiety / Zero Spoons</h3>
-                    <p class="text-xs text-brand-light/80 leading-relaxed">Skip the hard reading. Turn straight to the SOS Emergency Reset Kit in Volume III for quick, low-barrier box-mix hacks designed to restore safety.</p>
+                    <span class="text-brand-gold font-bold text-sm block mb-1">PATH A: Quick Reset</span>
+                    <h3 class="font-serif font-bold text-lg text-white mb-2">Low Energy (5% Battery)</h3>
+                    <p class="text-xs text-brand-light/80 leading-relaxed">Skip the heavy writing. Flip directly to the Quick Reset section for 5-minute sensory prompts and soothing comfort-baking ideas that require zero kitchen cleanup.</p>
                 </div>
                 <div class="bg-white/5 p-6 rounded-2xl border border-brand-gold/10">
-                    <span class="text-brand-gold font-bold text-sm block mb-1">PATH B: Fine Tune</span>
+                    <span class="text-brand-gold font-bold text-sm block mb-1">PATH B: Gentle Focus</span>
                     <h3 class="font-serif font-bold text-lg text-white mb-2">Steady State Calibration</h3>
-                    <p class="text-xs text-brand-light/80 leading-relaxed">Track your internal weather, observe your room coordinates, and log your boundaries using the Sensory Pulse Tracker in Volume IV.</p>
+                    <p class="text-xs text-brand-light/80 leading-relaxed">Map your sensory preferences, explore aroma pairings, and discover which comforting color palettes help your nervous system feel centered.</p>
                 </div>
                 <div class="bg-white/5 p-6 rounded-2xl border border-brand-gold/10">
-                    <span class="text-brand-gold font-bold text-sm block mb-1">PATH C: Deep Dive</span>
-                    <h3 class="font-serif font-bold text-lg text-white mb-2">High Capacity / Creative Spark</h3>
-                    <p class="text-xs text-brand-light/80 leading-relaxed">Your battery is charged. Dive into Volume I & II to translate your story into rich 5-Layer cake architecture and custom color spectrums.</p>
+                    <span class="text-brand-gold font-bold text-sm block mb-1">PATH C: Creative Spark</span>
+                    <h3 class="font-serif font-bold text-lg text-white mb-2">High Capacity &amp; Flow</h3>
+                    <p class="text-xs text-brand-light/80 leading-relaxed">When your battery is full, dive into multi-layer cake design sketches, flavor architecture, and tactile hands-on decorating rituals.</p>
                 </div>
             </div>
         </div>
@@ -163,31 +156,30 @@
         <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
             
             <div class="relative transform -rotate-2 w-full max-w-[360px] md:max-w-[420px] mx-auto group">
-                 <!-- Replace src with your rendered Master Journal Cover image asset (e.g. images/journal/cover.jpg) -->
-                 <img src="https://imgur.com/zXXrIsd.png" alt="Bake to Baseline: The Edible Blueprint Cover Art" class="w-full h-auto block rounded-2xl relative z-10 border border-white/5 shadow-inner">
+                 <img src="https://imgur.com/zXXrIsd.png" alt="Bake to Baseline Journal Cover" class="w-full h-auto block rounded-2xl relative z-10 border border-white/5 shadow-inner">
             </div>
             
             <div class="bg-white p-8 md:p-10 shadow-lg border border-brand-gold/20 rounded-3xl transform rotate-1 relative mt-8 md:mt-0">
                 <div class="absolute -top-4 left-1/2 transform -translate-x-1/2 w-28 h-8 bg-brand-gold/60 backdrop-blur-sm shadow-sm rotate-2 border border-brand-gold/20 z-10 rounded-sm"></div>
                 <div class="font-hand text-2xl text-brand-navy space-y-4 pt-2">
-                    <p>Dear Creative Soul,</p>
-                    <p>If you are reading this with a clenched jaw or tight shoulders, take a breath.</p>
-                    <p>I know the world feels loud right now. For years, I thought baking was about performance—getting the icing smooth, nailing the chemistry. I used it as armor.</p>
-                    <p>But then I realized: <strong>The magic isn't in the product. It's in the process.</strong></p>
-                    <p>I created this guided blueprint because you deserve a space to put your feelings that doesn't require you to be "on." Consider this your personal permission slip.</p>
-                    <p class="text-brand-gold font-bold">- Dimple</p>
+                    <p>Dear Creative Friend,</p>
+                    <p>If you are reading this with tense shoulders or an exhausted mind, take a deep breath.</p>
+                    <p>For 20 years working as a nurse, I saw firsthand how fast burnout drains us. For years, I treated baking like another high-pressure exam—obsessing over perfect symmetry, smooth icing, and exact timing.</p>
+                    <p>Then I realized: <strong>The calm isn't in a flawless dessert. It's in the soothing, rhythmic motion of making.</strong></p>
+                    <p>I created this guided journal so you have a safe, quiet space to put your thoughts that never demands perfection. Consider this your official permission to rest.</p>
+                    <p class="text-brand-gold-dark font-bold">- Dimple</p>
                 </div>
             </div>
             
         </div>
     </section>
     
-    <!-- VOLUME BREAKDOWN (Updated to 4 Volumes from Master Journal PDF) -->
+    <!-- VOLUME BREAKDOWN -->
     <section class="py-16 md:py-24 bg-brand-light">
         <div class="max-w-4xl mx-auto px-6">
-            <h2 class="font-serif text-3xl md:text-4xl text-brand-navy text-center mb-4 font-bold">A Map for Your Senses</h2>
+            <h2 class="font-serif text-3xl md:text-4xl text-brand-navy text-center mb-4 font-bold">What's Inside The Journal</h2>
             <p class="text-center font-sans text-brand-dark/80 max-w-2xl mx-auto mb-16 text-sm md:text-base leading-relaxed">
-                This is not a textbook, and there are no grades. Built with heavy-duty twin-wire spiral binding so it lays completely flat on your work table, think of this journal as a somatic guided blueprint. Start where you are, and let your senses lead the way.
+                This is not a traditional cookbook, and there are no tests. Bound with a durable twin-wire spiral so it lays completely flat on your counter, this book meets you wherever your energy is today.
             </p>
 
             <div class="space-y-20 md:space-y-28">
@@ -195,22 +187,21 @@
                 <!-- Volume I -->
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div>
-                        <span class="text-xs font-sans font-bold tracking-widest text-brand-gold uppercase block mb-2">Volume I</span>
-                        <h3 class="font-serif text-3xl font-bold text-brand-navy mb-4">The Sensory Lab & Journey</h3>
-                        <p class="text-brand-dark font-sans leading-relaxed mb-4"><strong>Unpacking Your Story.</strong> Orientation, synesthesia, and reframing perfectionism. Learn how the body listens, evaluate background static with the Room Compass, and discover how color architecture shifts your internal state.</p>
-                        <ul class="text-xs font-sans text-brand-dark/70 space-y-1 list-disc list-inside">
-                            <li>Working Clauses & Permission Slips (The Flour-Stain Clause)</li>
-                            <li>Evaluating Background Static & Room Compass</li>
-                            <li>How the Body Listens (Sensory Translation Log)</li>
-                            <li>Visual Architecture & The Color Invitation Compass</li>
+                        <span class="text-xs font-sans font-bold tracking-widest text-brand-gold-dark uppercase block mb-2">Volume I</span>
+                        <h3 class="font-serif text-3xl font-bold text-brand-navy mb-4">Finding Your Baseline</h3>
+                        <p class="text-brand-dark font-sans leading-relaxed mb-4"><strong>Unpacking Your Story.</strong> Gentle orientation prompts, letting go of perfectionism, and learning to read your body's subtle cues. Discover how room ambiance, lighting, and color harmony influence your mental state.</p>
+                        <ul class="text-xs font-sans text-brand-dark/70 space-y-1.5 list-disc list-inside">
+                            <li>Personal Permission Slips (The Flour-Stain Clause)</li>
+                            <li>Evaluating Noise &amp; Kitchen Distractions</li>
+                            <li>Reading Physical Fatigue &amp; Stress Cues</li>
+                            <li>Color Harmony &amp; Visual Grounding Guides</li>
                         </ul>
                     </div>
                     <div>
                         <div class="photo-stack" onclick="openLightbox(this)">
-                            <!-- Update src attributes to point to your page export images for Volume I -->
                             <img src="https://imgur.com/FAN6pr5.png" class="stack-card pos-1" alt="Volume I: Orientation Path">
-                            <img src="https://imgur.com/J3yXFHm.png" class="stack-card pos-2" alt="Volume I: Evaluating Background Static">
-                            <img src="https://imgur.com/FS6dcA0.png" class="stack-card pos-3" alt="Volume I: Visual Architecture & Color">
+                            <img src="https://imgur.com/J3yXFHm.png" class="stack-card pos-2" alt="Volume I: Background Atmosphere">
+                            <img src="https://imgur.com/FS6dcA0.png" class="stack-card pos-3" alt="Volume I: Color Harmony">
                         </div>
                     </div>
                 </div>
@@ -218,23 +209,22 @@
                 <!-- Volume II -->
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div class="md:order-2">
-                        <span class="text-xs font-sans font-bold tracking-widest text-brand-gold uppercase block mb-2">Volume II</span>
-                        <h3 class="font-serif text-3xl font-bold text-brand-navy mb-4">The 5-Layer Framework & Reference Directory</h3>
-                        <p class="text-brand-dark font-sans leading-relaxed mb-4"><strong>Translating Sentiment into Structure.</strong> Locate your starting state among the 4 Baseline Profiles, then build your bake through 5 sensory layers: Invitation (Color & Spectrums 1–10), Memory (Shapes & Gestures), Anchor (Tactile Notes & Jaw Circuit Breaker), Strategy (Placement & Anchor Phrases), and The Magic Shift.</p>
-                        <ul class="text-xs font-sans text-brand-dark/70 space-y-1 list-disc list-inside">
-                            <li>The 4 Baseline Origin Profiles (Overstimulated, Inertia, Masking, Disconnection)</li>
-                            <li>Layer 1: Color Spectrums 1–10 (Sage, Sky, Lavender, Sepia, Terracotta, Indigo...)</li>
-                            <li>Layer 2: Soft, Rhythmic & Botanical Gesture Families</li>
-                            <li>Layer 3: Soft Cushion, Crisp Grounding Wire & Organic Anchors</li>
-                            <li>Layer 4 & 5: Placement Allocation, Anchor Phrase Directory & Sealing Gestures</li>
+                        <span class="text-xs font-sans font-bold tracking-widest text-brand-gold-dark uppercase block mb-2">Volume II</span>
+                        <h3 class="font-serif text-3xl font-bold text-brand-navy mb-4">The 5 Sensory Layers</h3>
+                        <p class="text-brand-dark font-sans leading-relaxed mb-4"><strong>Translating Feelings into Texture.</strong> Identify where your energy is starting today, then build your creative session across five comforting dimensions: Color, Nostalgic Aromas, Tactile Piping, Simple Boundaries, and Mindful Release.</p>
+                        <ul class="text-xs font-sans text-brand-dark/70 space-y-1.5 list-disc list-inside">
+                            <li>4 Energy Starting States (Overstimulated, Depleted, Masking, Restless)</li>
+                            <li>Layer 1: 10 Soothing Color Spectrums (Sage, Sky Blue, Warm Terracotta...)</li>
+                            <li>Layer 2: Nostalgic Aroma &amp; Warming Flavor Pairings</li>
+                            <li>Layer 3: Rhythmic Palette Knife &amp; Piping Textures</li>
+                            <li>Layers 4 &amp; 5: Compositional Boundaries &amp; Gentle Release</li>
                         </ul>
                     </div>
                     <div class="md:order-1">
                         <div class="photo-stack" onclick="openLightbox(this)">
-                            <!-- Update src attributes to point to your page export images for Volume II -->
-                            <img src="https://imgur.com/VXZ9n7R.png" class="stack-card pos-1" alt="Volume II: The 5-Layer Cake Slice Diagram">
-                            <img src="https://imgur.com/WPeBrpT.png" class="stack-card pos-2" alt="Volume II: Color Spectrums 1-10">
-                            <img src="https://imgur.com/3FxLG6R.png" class="stack-card pos-3" alt="Volume II: Anchor Phrase Tag Directory">
+                            <img src="https://imgur.com/VXZ9n7R.png" class="stack-card pos-1" alt="Volume II: 5 Layers Diagram">
+                            <img src="https://imgur.com/WPeBrpT.png" class="stack-card pos-2" alt="Volume II: Color Spectrums">
+                            <img src="https://imgur.com/3FxLG6R.png" class="stack-card pos-3" alt="Volume II: Grounding Words Directory">
                         </div>
                     </div>
                 </div>
@@ -242,23 +232,21 @@
                 <!-- Volume III -->
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div>
-                        <span class="text-xs font-sans font-bold tracking-widest text-brand-gold uppercase block mb-2">Volume III</span>
-                        <h3 class="font-serif text-3xl font-bold text-brand-navy mb-4">Sensory Climates & SOS Reset</h3>
-                        <p class="text-brand-dark font-sans leading-relaxed mb-4"><strong>Unmasking Landscapes & Zero-Spoon Hacks.</strong> Journey through four sensory climates—Adaptation, Saturation, Nostalgia, and Silence—and access the How the Body Feels Sensory Key and SOS Emergency Reset Kit for zero-spoon days.</p>
-                        <ul class="text-xs font-sans text-brand-dark/70 space-y-1 list-disc list-inside">
-                            <li>Climate I: Adaptation & Origin (Eggless & Allergy Agility)</li>
-                            <li>Climate II: Saturation & Unmasking (Dropping the Mask)</li>
-                            <li>Climate III: Nostalgia & Anxiety (Warming Spices & Texture Shields)</li>
-                            <li>Climate IV: Silence, Rest & Architecture</li>
-                            <li>SOS Emergency Reset Kit (The Dopamine Dispenser, Emotional Anchor, Crunch Release)</li>
+                        <span class="text-xs font-sans font-bold tracking-widest text-brand-gold-dark uppercase block mb-2">Volume III</span>
+                        <h3 class="font-serif text-3xl font-bold text-brand-navy mb-4">Low-Energy Resets &amp; Comfort Bakes</h3>
+                        <p class="text-brand-dark font-sans leading-relaxed mb-4"><strong>Zero-Spoon Days.</strong> When you have barely any energy, turn here for quick box-mix upgrades, low-mess allergy substitutions, and sensory grounding rituals that require no oven or measuring spoons.</p>
+                        <ul class="text-xs font-sans text-brand-dark/70 space-y-1.5 list-disc list-inside">
+                            <li>Allergy Agility: Easy eggless, gluten-free, and dairy-free swaps</li>
+                            <li>Comfort Flavors: Warming spices and soothing textures</li>
+                            <li>Zero-Bake Resets: 5-minute tactile check-ins</li>
+                            <li>SOS Emergency Hacks for exhausting days</li>
                         </ul>
                     </div>
                     <div>
                         <div class="photo-stack gold-stack" onclick="openLightbox(this)">
-                            <!-- Update src attributes to point to your page export images for Volume III -->
-                            <img src="https://imgur.com/f0CsYot.png" class="stack-card pos-1" alt="Volume III: Climate Landscapes">
-                            <img src="https://imgur.com/ZrdgGF2.png" class="stack-card pos-2" alt="Volume III: How the Body Feels Key">
-                            <img src="https://imgur.com/9ICGGse.png" class="stack-card pos-3" alt="Volume III: SOS Emergency Reset Kit">
+                            <img src="https://imgur.com/f0CsYot.png" class="stack-card pos-1" alt="Volume III: Comfort Climates">
+                            <img src="https://imgur.com/ZrdgGF2.png" class="stack-card pos-2" alt="Volume III: Body Signals Guide">
+                            <img src="https://imgur.com/9ICGGse.png" class="stack-card pos-3" alt="Volume III: Quick Reset Kit">
                         </div>
                     </div>
                 </div>
@@ -266,23 +254,21 @@
                 <!-- Volume IV -->
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div class="md:order-2">
-                        <span class="text-xs font-sans font-bold tracking-widest text-brand-gold uppercase block mb-2">Volume IV</span>
-                        <h3 class="font-serif text-3xl font-bold text-brand-navy mb-4">The Active Creation Hub & Workspaces</h3>
-                        <p class="text-brand-dark font-sans leading-relaxed mb-4"><strong>Your Interactive Studio Space.</strong> All interactive tracking and planning tools are neatly moved to the back of the book so you only use them when your energy allows. Includes Prep Rituals, 5-Layer Vision Boards, Master Staging Grids, Tasting Notes, and Pulse Trackers.</p>
-                        <ul class="text-xs font-sans text-brand-dark/70 space-y-1 list-disc list-inside">
-                            <li>Sensory Planning Sheets & Ingredient Checklists</li>
-                            <li>Notes from the Counter: 5-Step Baking Narrative</li>
-                            <li>5-Layer Sensory Vision Board Spreads & Master 5-Zone Staging Grid</li>
-                            <li>Tasting Notes, Blueprint vs. Reality Matrix & Companion Index</li>
-                            <li>Sensory Pulse Tracker, Beautiful Mess Log & Compassion Pledge</li>
+                        <span class="text-xs font-sans font-bold tracking-widest text-brand-gold-dark uppercase block mb-2">Volume IV</span>
+                        <h3 class="font-serif text-3xl font-bold text-brand-navy mb-4">The Active Studio Workspace</h3>
+                        <p class="text-brand-dark font-sans leading-relaxed mb-4"><strong>Your Personal Creative Sandbox.</strong> All blank sketching grids, flavor pairing notes, and messy logs are tucked neatly in the back of the journal so you only engage when your energy allows.</p>
+                        <ul class="text-xs font-sans text-brand-dark/70 space-y-1.5 list-disc list-inside">
+                            <li>Counter Prep Checklists &amp; Single-Bowl Rules</li>
+                            <li>5-Layer Cake Design Sketching Spreads</li>
+                            <li>Tasting Reflections &amp; Texture Notes</li>
+                            <li>The "Beautiful Mess" Log &amp; Self-Compassion Notes</li>
                         </ul>
                     </div>
                     <div class="md:order-1">
                         <div class="photo-stack" onclick="openLightbox(this)">
-                            <!-- Update src attributes to point to your page export images for Volume IV -->
-                            <img src="https://imgur.com/3XyZzsR.png" class="stack-card pos-1" alt="Volume IV: Sensory Planning Sheet">
-                            <img src="https://imgur.com/T7Rw2my.png" class="stack-card pos-2" alt="Volume IV: 5-Layer Sensory Vision Board">
-                            <img src="https://imgur.com/KvAoqFO.png" class="stack-card pos-3" alt="Volume IV: Master 5-Zone Staging Grid">
+                            <img src="https://imgur.com/3XyZzsR.png" class="stack-card pos-1" alt="Volume IV: Planning Sheet">
+                            <img src="https://imgur.com/T7Rw2my.png" class="stack-card pos-2" alt="Volume IV: Sketching Grid">
+                            <img src="https://imgur.com/KvAoqFO.png" class="stack-card pos-3" alt="Volume IV: Counter Staging Grid">
                         </div>
                     </div>
                 </div>
@@ -311,7 +297,7 @@
                 <div class="flex flex-row justify-center space-x-8 mb-6 text-brand-light font-medium text-[10px] uppercase tracking-[0.2em]">
                     <a href="contact.html" class="hover:text-brand-gold transition-colors">Contact Us</a>
                     <a href="partnerships.html" class="hover:text-brand-gold transition-colors">Partnerships</a>
-                    <a href="policies.html" class="hover:text-brand-gold transition-colors">Order Fulfillment & Delivery</a>
+                    <a href="policies.html" class="hover:text-brand-gold transition-colors">Order Fulfillment &amp; Delivery</a>
                 </div>
 
             </div>
@@ -321,7 +307,7 @@
                     &copy; 2026 The Gilded Spoon Shoppe | McKinney, Texas
                 </p>
                 <p class="max-w-xl mx-auto font-sans text-[9px] leading-relaxed text-brand-gray/20 italic">
-                    Disclaimer: The Gilded Spoon Shoppe provides sensory design education. It is not a substitute for professional medical advice, diagnosis, or occupational therapy. Edible products are prepared in a home kitchen that handles allergens including wheat, dairy, eggs, soy, and nuts.
+                    Disclaimer: The Gilded Spoon Shoppe provides sensory design education. It is not a substitute for professional medical advice, diagnosis, or occupational therapy.
                 </p>
             </div>
         </div>
@@ -330,7 +316,7 @@
     <!-- LIGHTBOX MODAL -->
     <div id="lightbox" class="lightbox">
         <span class="absolute top-5 right-8 text-white text-4xl cursor-pointer hover:text-brand-gold transition-colors" onclick="closeLightbox()">&times;</span>
-        <img id="lightbox-img" class="lightbox-img shadow-2xl rounded-sm" src="" alt="Gallery Image">
+        <img id="lightbox-img" class="lightbox-img shadow-2xl rounded-sm" src="" alt="Gallery Preview">
         <div class="flex gap-4 mt-6">
             <button class="font-sans font-bold text-xs tracking-widest uppercase border border-white text-white py-3 px-8 rounded-full hover:bg-brand-gold hover:border-brand-gold hover:text-brand-navy transition" onclick="prevImage()">Previous</button>
             <button class="font-sans font-bold text-xs tracking-widest uppercase border border-white text-white py-3 px-8 rounded-full hover:bg-brand-gold hover:border-brand-gold hover:text-brand-navy transition" onclick="nextImage()">Next</button>
@@ -338,14 +324,12 @@
     </div>
 
     <script>
-        // Mobile Menu Logic
         const hamburgerButton = document.getElementById('hamburger-button');
         const mobileMenu = document.getElementById('mobile-menu');
         if(hamburgerButton) {
             hamburgerButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
         }
 
-        // Lightbox Functionality
         let currentImages = [];
         let currentIndex = 0;
         const lightbox = document.getElementById('lightbox');
@@ -383,6 +367,5 @@
             });
         }
     </script>
-
 </body>
 </html>
