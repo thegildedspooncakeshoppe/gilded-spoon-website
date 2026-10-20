@@ -78,49 +78,46 @@
         </div>
     </header>
 
-    <main>
-        
-        <!-- SECTION 1: AT-HOME DIY STUDIO KITS (WARM LINEN WITH DARK CONTRAST MAT) -->
-        <section class="py-14 md:py-18 bg-brand-light border-b border-brand-gold/20">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6">
-                
+    <main class="py-12 md:py-16 bg-brand-light">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            
+            <!-- SECTION 1: AT-HOME DIY STUDIO KITS -->
+            <div class="mb-14 md:mb-18">
                 <div class="text-center max-w-2xl mx-auto mb-10 md:mb-12">
                     <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-gold-dark">Experience The Atelier At Home</span>
                     <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-navy mt-1">DIY Studio Kits</h2>
                     <p class="text-xs md:text-sm text-brand-dark/75 mt-2">Complete materials, tools, and step-by-step guidance delivered to your door.</p>
                 </div>
 
-                <div class="bg-white rounded-3xl border border-brand-gold/30 p-6 md:p-10 shadow-lg hover:shadow-xl transition-all">
+                <div class="bg-white rounded-3xl border border-brand-gold/25 p-6 md:p-10 shadow-lg hover:shadow-xl transition-all">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                         
-                        <!-- Left: Deep Velvet Shadow-Box Display Bay (Width-Locked to Prevent Stretching) -->
+                        <!-- Left: Responsive Proportional Image Bay -->
                         <div class="lg:col-span-5 flex flex-col items-center w-full max-w-sm sm:max-w-md mx-auto">
-                            
-                            <!-- Main Large Photo View inside Dark Velvet Gallery Mat -->
                             <div class="w-full aspect-[4/5] bg-brand-navy rounded-2xl p-6 flex items-center justify-center border-2 border-brand-gold/40 shadow-xl overflow-hidden mb-3 relative">
                                 <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/5 to-transparent pointer-events-none"></div>
                                 <img id="kit-main-image" src="images/IMG_7507.jpeg" alt="Sensory Design Studio DIY Kit Full Spread" class="max-h-full max-w-full object-contain drop-shadow-[0_12px_20px_rgba(0,0,0,0.5)] rounded-lg transition-all duration-300">
                             </div>
                             
-                            <!-- 4 Clickable Thumbnails to Inspect the Pieces -->
+                            <!-- 4 Clickable Thumbnails -->
                             <div class="grid grid-cols-4 gap-2 w-full">
-                                <button type="button" onclick="swapKitImage('images/IMG_7507.jpeg', this)" class="kit-thumb active border-2 border-brand-gold rounded-xl overflow-hidden bg-brand-navy p-1 shadow-sm transition-all focus:outline-none">
+                                <button type="button" onclick="swapProductImage('kit-main-image', 'kit-thumb', 'images/IMG_7507.jpeg', this)" class="kit-thumb active border-2 border-brand-gold rounded-xl overflow-hidden bg-brand-navy p-1 shadow-sm transition-all focus:outline-none">
                                     <img src="images/IMG_7507.jpeg" alt="Complete Kit Spread" class="w-full h-12 sm:h-14 object-cover rounded-lg">
                                 </button>
-                                <button type="button" onclick="swapKitImage('images/IMG_7494.jpeg', this)" class="kit-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-navy p-1 shadow-sm transition-all focus:outline-none">
+                                <button type="button" onclick="swapProductImage('kit-main-image', 'kit-thumb', 'images/IMG_7494.jpeg', this)" class="kit-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-navy p-1 shadow-sm transition-all focus:outline-none">
                                     <img src="images/IMG_7494.jpeg" alt="Palette Knives and Guides" class="w-full h-12 sm:h-14 object-cover rounded-lg">
                                 </button>
-                                <button type="button" onclick="swapKitImage('images/IMG_7562.jpeg', this)" class="kit-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-navy p-1 shadow-sm transition-all focus:outline-none">
+                                <button type="button" onclick="swapProductImage('kit-main-image', 'kit-thumb', 'images/IMG_7562.jpeg', this)" class="kit-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-navy p-1 shadow-sm transition-all focus:outline-none">
                                     <img src="images/IMG_7562.jpeg" alt="Mineral Pigments and Sculpted Block" class="w-full h-12 sm:h-14 object-cover rounded-lg">
                                 </button>
-                                <button type="button" onclick="swapKitImage('images/image000000.jpeg', this)" class="kit-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-navy p-1 shadow-sm transition-all focus:outline-none">
-                                    <img src="images/image000000.jpeg" alt="Colorful Piping Bags and Palette" class="w-full h-12 sm:h-14 object-cover rounded-lg">
+                                <button type="button" onclick="swapProductImage('kit-main-image', 'kit-thumb', 'images/image000000.jpeg', this)" class="kit-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-navy p-1 shadow-sm transition-all focus:outline-none">
+                                    <img src="images/image000000.jpeg" alt="Piping Bags and Palette" class="w-full h-12 sm:h-14 object-cover rounded-lg">
                                 </button>
                             </div>
-                            <span class="text-[10px] font-sans uppercase tracking-widest text-brand-dark/50 mt-2.5 font-semibold">Tap photos above to inspect kit materials</span>
+                            <span class="text-[10px] font-sans uppercase tracking-widest text-brand-dark/50 mt-2 font-semibold">Tap photos above to inspect kit materials</span>
                         </div>
                         
-                        <!-- Right: Details & Options -->
+                        <!-- Right: Details -->
                         <div class="lg:col-span-7 flex flex-col justify-center text-left">
                             <span class="inline-block bg-brand-gold text-brand-navy font-sans font-bold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full mb-2.5 self-start shadow-sm">
                                 Complete Boxed Kit
@@ -135,7 +132,7 @@
                             
                             <div class="font-sans font-bold text-brand-navy text-2xl mb-3">Starts at $68.00</div>
                             
-                            <p class="font-sans text-xs md:text-sm text-brand-dark/80 leading-relaxed mb-5">
+                            <p class="font-sans text-xs sm:text-sm text-brand-dark/80 leading-relaxed mb-5">
                                 Experience the grounding rhythm of our in-person workshop wherever you are. Each kit includes our proprietary 5-Layer Sensory Blueprint, palette knives, a full 8-ounce jar of archival spackle medium, a curated six-color mineral pigment collection, raw quartz gemstones, and pressed dried botanicals.
                             </p>
                             
@@ -166,21 +163,16 @@
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- SECTION 2: ORIGINAL STUDIO ART PIECES (DRAMATIC DEEP NAVY GALLERY WALL CONTRAST) -->
-        <section class="py-14 md:py-18 bg-brand-navy text-white border-b border-brand-gold/20 relative overflow-hidden">
-            <div class="absolute inset-0 opacity-5 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')]"></div>
-            
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
-                
+            <!-- SECTION 2: ORIGINAL STUDIO ART PIECES -->
+            <div class="mb-14 md:mb-18">
                 <div class="text-center max-w-2xl mx-auto mb-10 md:mb-12">
-                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-gold">Direct From The Studio</span>
-                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-white mt-1">Original Studio Art Pieces</h2>
-                    <p class="text-xs md:text-sm text-brand-light/75 mt-2">One-of-a-kind tactile pieces handmade by Dimple in McKinney, Texas.</p>
+                    <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-gold-dark">Direct From The Studio</span>
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-navy mt-1">Original Studio Art Pieces</h2>
+                    <p class="text-xs md:text-sm text-brand-dark/75 mt-2">One-of-a-kind tactile pieces handmade by Dimple in McKinney, Texas.</p>
                 </div>
 
-                <div class="bg-brand-card/90 rounded-3xl border-2 border-brand-gold/40 p-6 md:p-10 shadow-2xl">
+                <div class="bg-white rounded-3xl border border-brand-gold/25 p-6 md:p-10 shadow-lg hover:shadow-xl transition-all">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                         
                         <!-- Left: Details -->
@@ -189,94 +181,106 @@
                                 Studio Original Works
                             </span>
                             
-                            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-1 leading-tight">
+                            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-brand-navy mb-1 leading-tight">
                                 Keepsake Sculptures &amp; Confectionery Canvases
                             </h3>
-                            <p class="text-xs font-serif italic text-brand-gold mb-3">
+                            <p class="text-xs font-serif italic text-brand-gold-dark mb-3">
                                 Archival 3D Display Pieces &amp; Framed 2D Wall Art
                             </p>
                             
-                            <div class="font-sans font-bold text-brand-gold text-2xl mb-3">Pricing Available Upon Inquiry</div>
+                            <div class="font-sans font-bold text-brand-navy text-2xl mb-3">Pricing Available Upon Inquiry</div>
                             
-                            <p class="font-sans text-xs md:text-sm text-brand-light/85 leading-relaxed mb-5">
+                            <p class="font-sans text-xs md:text-sm text-brand-dark/80 leading-relaxed mb-5">
                                 Bring the peaceful aesthetic of confectionery art into your home permanently. Created using archival modeling paste, mineral pigments, pressed botanicals, and raw gemstones, each original work carries our studio seal: <em>Contains 0% bad vibes, 100% comfort.</em>
                             </p>
                             
-                            <ul class="text-xs text-brand-light/80 space-y-2.5 font-sans mb-6 border-t border-b border-brand-gold/20 py-3.5">
+                            <ul class="text-xs text-brand-dark/80 space-y-2 font-sans mb-6 border-t border-b border-brand-gold/15 py-3.5">
                                 <li class="flex items-start">
-                                    <span class="text-brand-gold mr-2 font-serif text-sm">✦</span>
+                                    <span class="text-brand-gold-dark mr-2 font-serif text-sm">✦</span>
                                     <span><strong>Dimensional 3D Sculptures:</strong> Tactile display pieces finished on gold cake drums, designed for desks, bookshelves, and entryways.</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <span class="text-brand-gold mr-2 font-serif text-sm">✦</span>
+                                    <span class="text-brand-gold-dark mr-2 font-serif text-sm">✦</span>
                                     <span><strong>Framed 2D Confectionery Canvases:</strong> Palette knife floral reliefs and textured piping mounted on archival artist panels for wall display.</span>
                                 </li>
                                 <li class="flex items-start">
-                                    <span class="text-brand-gold mr-2 font-serif text-sm">✦</span>
+                                    <span class="text-brand-gold-dark mr-2 font-serif text-sm">✦</span>
                                     <span><strong>Bespoke Color Commissions:</strong> Custom palettes crafted to complement your personal living space or office sanctuary.</span>
                                 </li>
                             </ul>
                             
                             <div class="flex flex-col sm:flex-row items-center gap-3.5">
-                                <a href="contact.html?subject=Original%20Art%20Piece%20Inquiry" class="w-full sm:w-auto text-center bg-brand-gold text-brand-navy font-sans text-xs font-bold uppercase tracking-widest py-3.5 px-8 rounded-full hover:bg-white transition-colors shadow-md">
+                                <a href="contact.html?subject=Original%20Art%20Piece%20Inquiry" class="w-full sm:w-auto text-center bg-brand-navy text-white font-sans text-xs font-bold uppercase tracking-widest py-3.5 px-8 rounded-full hover:bg-brand-gold hover:text-brand-navy transition-colors shadow-md">
                                     Inquire About Available Pieces
                                 </a>
-                                <span class="text-[11px] text-brand-light/60 font-sans italic">Custom commissions welcome</span>
+                                <span class="text-[11px] text-brand-dark/60 font-sans italic">Custom commissions welcome</span>
                             </div>
                         </div>
 
-                        <!-- Right: Interactive Proportional Art Gallery (Width-Locked) -->
+                        <!-- Right: Interactive Proportional Art Gallery -->
                         <div class="lg:col-span-5 flex flex-col items-center w-full max-w-sm sm:max-w-md mx-auto order-1 lg:order-2">
                             
-                            <!-- Main Art View Window -->
                             <div class="w-full aspect-[4/5] bg-brand-navy rounded-2xl p-6 flex items-center justify-center border-2 border-brand-gold/40 shadow-xl overflow-hidden mb-3 relative">
                                 <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-white/5 to-transparent pointer-events-none"></div>
                                 <img id="art-main-image" src="images/IMG_7606.jpeg" alt="Original Tactile Art Piece with Comfort Seal" class="max-h-full max-w-full object-contain drop-shadow-[0_12px_20px_rgba(0,0,0,0.5)] rounded-lg transition-all duration-300">
                             </div>
                             
-                            <!-- 4 Art Piece Thumbnails -->
+                            <!-- 4 Art Thumbnails -->
                             <div class="grid grid-cols-4 gap-2 w-full">
-                                <button type="button" onclick="swapArtImage('images/IMG_7606.jpeg', this)" class="art-thumb active border-2 border-brand-gold rounded-xl overflow-hidden bg-brand-navy p-1 shadow-sm transition-all focus:outline-none">
-                                    <img src="images/IMG_7606.jpeg" alt="3D Terracotta Cake Sculpture" class="w-full h-12 sm:h-14 object-cover rounded-lg">
+                                <button type="button" onclick="swapProductImage('art-main-image', 'art-thumb', 'images/IMG_7606.jpeg', this)" class="art-thumb active border-2 border-brand-gold rounded-xl overflow-hidden bg-brand-navy p-1 shadow-sm transition-all focus:outline-none">
+                                    <img src="images/IMG_7606.jpeg" alt="3D Terracotta Front View" class="w-full h-12 sm:h-14 object-cover rounded-lg">
                                 </button>
-                                <button type="button" onclick="swapArtImage('images/IMG_7611.jpeg', this)" class="art-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-navy p-1 shadow-sm transition-all focus:outline-none">
+                                <button type="button" onclick="swapProductImage('art-main-image', 'art-thumb', 'images/IMG_7611.jpeg', this)" class="art-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-navy p-1 shadow-sm transition-all focus:outline-none">
                                     <img src="images/IMG_7611.jpeg" alt="Angle View with Booklet" class="w-full h-12 sm:h-14 object-cover rounded-lg">
                                 </button>
-                                <button type="button" onclick="swapArtImage('images/0CF9B74D-5AE8-4A29-9A3F-93E103C86DCD_1_105_c.jpeg', this)" class="art-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-navy p-1 shadow-sm transition-all focus:outline-none">
+                                <button type="button" onclick="swapProductImage('art-main-image', 'art-thumb', 'images/0CF9B74D-5AE8-4A29-9A3F-93E103C86DCD_1_105_c.jpeg', this)" class="art-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-navy p-1 shadow-sm transition-all focus:outline-none">
                                     <img src="images/0CF9B74D-5AE8-4A29-9A3F-93E103C86DCD_1_105_c.jpeg" alt="2D Solar Pressed Botanical Canvas" class="w-full h-12 sm:h-14 object-cover rounded-lg">
                                 </button>
-                                <button type="button" onclick="swapArtImage('images/IMG_6952.jpeg', this)" class="art-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-navy p-1 shadow-sm transition-all focus:outline-none">
+                                <button type="button" onclick="swapProductImage('art-main-image', 'art-thumb', 'images/IMG_6952.jpeg', this)" class="art-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-navy p-1 shadow-sm transition-all focus:outline-none">
                                     <img src="images/IMG_6952.jpeg" alt="2D Green Chevron Drip Canvas" class="w-full h-12 sm:h-14 object-cover rounded-lg">
                                 </button>
                             </div>
-                            <span class="text-[10px] font-sans uppercase tracking-widest text-brand-gold/70 mt-2.5 font-semibold">Tap above to view 3D sculptures and 2D wall canvases</span>
+                            <span class="text-[10px] font-sans uppercase tracking-widest text-brand-dark/50 mt-2 font-semibold">Tap above to view 3D sculptures and 2D wall canvases</span>
                         </div>
 
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- SECTION 3: BOOKS & KITCHEN TOOLS (WARM LINEN BASE) -->
-        <section class="py-14 md:py-18 bg-brand-light">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6">
-                
+            <!-- SECTION 3: BOOKS & KITCHEN EDITIONS -->
+            <div class="mb-14 md:mb-18">
                 <div class="text-center max-w-2xl mx-auto mb-10 md:mb-12">
                     <span class="text-xs font-bold uppercase tracking-[0.2em] text-brand-gold-dark">Publications &amp; Kitchen Editions</span>
                     <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-navy mt-1">Books &amp; Recipe Decks</h2>
                     <p class="text-xs md:text-sm text-brand-dark/75 mt-2">Tactile guides and zero-math tools designed for calm creation.</p>
                 </div>
 
-                <!-- PRODUCT 1: THE GUIDED JOURNAL -->
-                <div id="journal" class="bg-white rounded-3xl border border-brand-gold/30 p-6 md:p-10 shadow-lg mb-8 hover:shadow-xl transition-all">
+                <!-- ITEM 1: THE GUIDED JOURNAL (WITH FRONT/BACK/PHYSICAL THUMBNAIL SWITCHER) -->
+                <div id="journal" class="bg-white rounded-3xl border border-brand-gold/25 p-6 md:p-10 shadow-lg mb-8 hover:shadow-xl transition-all">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                         
-                        <div class="lg:col-span-5 w-full max-w-sm sm:max-w-md mx-auto">
-                            <div class="w-full aspect-[4/5] bg-brand-navy rounded-2xl p-6 flex items-center justify-center border-2 border-brand-gold/40 shadow-xl overflow-hidden">
-                                <img src="https://imgur.com/5Xw0j7q.png" alt="Bake to Baseline Guided Journal" class="max-h-full max-w-full object-contain drop-shadow-[0_12px_20px_rgba(0,0,0,0.5)] rounded-lg">
+                        <!-- Left: Proportional Warm Linen Mat -->
+                        <div class="lg:col-span-5 flex flex-col items-center w-full max-w-sm sm:max-w-md mx-auto">
+                            <div class="w-full aspect-[4/5] bg-brand-light/90 rounded-2xl p-5 flex items-center justify-center border border-brand-gold/25 shadow-inner overflow-hidden mb-3">
+                                <img id="journal-main-image" src="images/Cover Image.png" alt="Bake to Baseline Guided Journal Cover" class="max-h-full max-w-full object-contain drop-shadow-xl rounded-lg transition-all duration-300">
                             </div>
+                            
+                            <!-- 3 Thumbnails for Journal -->
+                            <div class="grid grid-cols-3 gap-2 w-full">
+                                <button type="button" onclick="swapProductImage('journal-main-image', 'journal-thumb', 'images/Cover Image.png', this)" class="journal-thumb active border-2 border-brand-gold rounded-xl overflow-hidden bg-brand-navy p-1 shadow-sm transition-all focus:outline-none">
+                                    <img src="images/Cover Image.png" alt="Front Cover" class="w-full h-12 sm:h-14 object-cover rounded-lg">
+                                </button>
+                                <button type="button" onclick="swapProductImage('journal-main-image', 'journal-thumb', 'images/Highlight Slide New Journal2.png', this)" class="journal-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-navy p-1 shadow-sm transition-all focus:outline-none">
+                                    <img src="images/Highlight Slide New Journal2.png" alt="5-Layer Framework Back Cover Map" class="w-full h-12 sm:h-14 object-cover rounded-lg">
+                                </button>
+                                <button type="button" onclick="swapProductImage('journal-main-image', 'journal-thumb', 'https://imgur.com/5Xw0j7q.png', this)" class="journal-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-light p-1 shadow-sm transition-all focus:outline-none">
+                                    <img src="https://imgur.com/5Xw0j7q.png" alt="Physical Spiral Book on Table" class="w-full h-12 sm:h-14 object-cover rounded-lg">
+                                </button>
+                            </div>
+                            <span class="text-[10px] font-sans uppercase tracking-widest text-brand-dark/50 mt-2 font-semibold">Tap to view front cover, framework map, and book</span>
                         </div>
                         
+                        <!-- Right: Details -->
                         <div class="lg:col-span-7 flex flex-col justify-center text-left">
                             <span class="inline-block bg-brand-gold text-brand-navy font-sans font-bold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full mb-2.5 self-start shadow-sm">
                                 Flagship Journal
@@ -306,7 +310,7 @@
                                 </li>
                                 <li class="flex items-start">
                                     <span class="text-brand-gold-dark mr-2 font-serif text-sm">✦</span>
-                                    <span><strong>5-Layer Sensory Framework:</strong> Step-by-step prompts to help you decompress through color, texture, and touch.</span>
+                                    <span><strong>5-Layer Sensory Framework:</strong> Built-in visual map to help you decompress through color, texture, and touch.</span>
                                 </li>
                             </ul>
                             
@@ -321,10 +325,11 @@
                     </div>
                 </div>
 
-                <!-- PRODUCT 2: THE DECONSTRUCTED RECIPE DECK -->
-                <div class="bg-white rounded-3xl border border-brand-gold/30 p-6 md:p-10 shadow-lg hover:shadow-xl transition-all">
+                <!-- ITEM 2: THE DECONSTRUCTED RECIPE DECK (FEATURING REAL COLOR-CODED VOLUME CARDS) -->
+                <div class="bg-white rounded-3xl border border-brand-gold/25 p-6 md:p-10 shadow-lg hover:shadow-xl transition-all">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                         
+                        <!-- Left: Details -->
                         <div class="lg:col-span-7 flex flex-col justify-center text-left order-2 lg:order-1">
                             <span class="inline-block bg-brand-gold text-brand-navy font-sans font-bold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full mb-2.5 self-start shadow-sm">
                                 Kitchen Innovation
@@ -340,13 +345,13 @@
                             <div class="font-sans font-bold text-brand-navy text-2xl mb-3">Starts at $48.00</div>
                             
                             <p class="font-sans text-xs md:text-sm text-brand-dark/80 leading-relaxed mb-5">
-                                Built to eliminate kitchen fatigue and recipe confusion. Each step is printed on its own sturdy 5x7 card and displayed upright on a clear counter stand, so you only focus on what is in front of you. Available as our signature Lemon Raspberry White Chocolate collection or custom-made from your own family heirloom recipe.
+                                Built to eliminate kitchen fatigue and recipe confusion. Each step is printed on its own sturdy 5x7 card and displayed upright on a clear counter stand, so you only focus on what is in front of you. Color-coded by volume phase, including our signature Lemon Raspberry White Chocolate collection and custom heirloom options.
                             </p>
                             
                             <ul class="text-xs text-brand-dark/80 space-y-2 font-sans mb-6 border-t border-b border-brand-gold/15 py-3.5">
                                 <li class="flex items-start">
                                     <span class="text-brand-gold-dark mr-2 font-serif text-sm">✦</span>
-                                    <span><strong>33 Tabbed 5x7 Cards:</strong> Volume dividers, clear active and rest times, and built-in permission to pause.</span>
+                                    <span><strong>Color-Coded Volume Phases:</strong> Yellow setup cards, mauve infusions, green dietary adaptations, and pink finishing touches.</span>
                                 </li>
                                 <li class="flex items-start">
                                     <span class="text-brand-gold-dark mr-2 font-serif text-sm">✦</span>
@@ -366,50 +371,67 @@
                             </div>
                         </div>
 
-                        <!-- Right: Framed Shadow-Box for Recipe Deck (Width-Locked) -->
-                        <div class="lg:col-span-5 w-full max-w-sm sm:max-w-md mx-auto order-1 lg:order-2">
-                            <div class="w-full aspect-[4/5] bg-brand-navy rounded-2xl p-6 flex items-center justify-center border-2 border-brand-gold/40 shadow-xl overflow-hidden">
-                                <img src="https://imgur.com/qOUw74z.png" alt="Deconstructed Recipe Deck with Counter Stand" class="max-h-full max-w-full object-contain drop-shadow-[0_12px_20px_rgba(0,0,0,0.5)] rounded-lg">
+                        <!-- Right: Real Physical Card Photos with 5 Thumbnails -->
+                        <div class="lg:col-span-5 flex flex-col items-center w-full max-w-sm sm:max-w-md mx-auto order-1 lg:order-2">
+                            
+                            <div class="w-full aspect-[4/5] bg-brand-light/90 rounded-2xl p-5 flex items-center justify-center border border-brand-gold/25 shadow-inner overflow-hidden mb-3">
+                                <img id="deck-main-image" src="images/Equipment Deconstructed Recipe Card (Yellow).png" alt="Physical Deconstructed Recipe Card in Hand" class="max-h-full max-w-full object-contain drop-shadow-xl rounded-lg transition-all duration-300">
                             </div>
+                            
+                            <!-- 5 Thumbnails for Color-Coded Phases -->
+                            <div class="grid grid-cols-5 gap-1.5 w-full">
+                                <button type="button" onclick="swapProductImage('deck-main-image', 'deck-thumb', 'images/Equipment Deconstructed Recipe Card (Yellow).png', this)" class="deck-thumb active border-2 border-brand-gold rounded-xl overflow-hidden bg-brand-light p-0.5 shadow-sm transition-all focus:outline-none">
+                                    <img src="images/Equipment Deconstructed Recipe Card (Yellow).png" alt="Card in Hand" class="w-full h-11 sm:h-13 object-cover rounded-md">
+                                </button>
+                                <button type="button" onclick="swapProductImage('deck-main-image', 'deck-thumb', 'images/Equipment & Prep ( Yellow Card).png', this)" class="deck-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-light p-0.5 shadow-sm transition-all focus:outline-none">
+                                    <img src="images/Equipment & Prep ( Yellow Card).png" alt="Yellow Prep Cards" class="w-full h-11 sm:h-13 object-cover rounded-md">
+                                </button>
+                                <button type="button" onclick="swapProductImage('deck-main-image', 'deck-thumb', 'images/Eggless Adaptation (Green).png', this)" class="deck-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-light p-0.5 shadow-sm transition-all focus:outline-none">
+                                    <img src="images/Eggless Adaptation (Green).png" alt="Green Eggless Card" class="w-full h-11 sm:h-13 object-cover rounded-md">
+                                </button>
+                                <button type="button" onclick="swapProductImage('deck-main-image', 'deck-thumb', 'images/Infusing Flavors ( Mauve).png', this)" class="deck-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-light p-0.5 shadow-sm transition-all focus:outline-none">
+                                    <img src="images/Infusing Flavors ( Mauve).png" alt="Mauve Infusion Cards" class="w-full h-11 sm:h-13 object-cover rounded-md">
+                                </button>
+                                <button type="button" onclick="swapProductImage('deck-main-image', 'deck-thumb', 'images/Finishing Touches ( Pink).png', this)" class="deck-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-light p-0.5 shadow-sm transition-all focus:outline-none">
+                                    <img src="images/Finishing Touches ( Pink).png" alt="Pink Finishing Card" class="w-full h-11 sm:h-13 object-cover rounded-md">
+                                </button>
+                            </div>
+                            <span class="text-[10px] font-sans uppercase tracking-widest text-brand-dark/50 mt-2 font-semibold">Tap to view color-coded recipe phases</span>
                         </div>
 
                     </div>
                 </div>
             </div>
-        </section>
 
-        <!-- SECTION 4: WORKSHOP ATELIER PREVIEW -->
-        <section id="live-experiences" class="py-14 md:py-16 bg-brand-navy text-white border-t border-brand-gold/20 relative overflow-hidden shadow-2xl">
-            <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
-                <span class="text-brand-gold font-sans font-bold tracking-[0.3em] uppercase text-xs block mb-2">Live Studio Sessions</span>
-                <h2 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-3">Looking to Join an In-Person Workshop?</h2>
-                <p class="text-brand-light/80 font-sans text-xs sm:text-sm leading-relaxed max-w-xl mx-auto mb-6">
-                    Experience our 5-Layer Sensory Method in person. Join a scheduled public studio cohort in McKinney, host an on-site corporate retreat, or book a private celebration.
-                </p>
-                <a href="workshop.html" class="inline-block bg-brand-gold text-brand-navy font-sans font-bold py-3.5 px-8 rounded-full hover:bg-white transition-all uppercase tracking-widest text-xs shadow-md">
-                    Explore Studio Workshops &rarr;
-                </a>
-            </div>
-        </section>
-
-        <!-- SECTION 5: WHOLESALE & RETAIL BAR -->
-        <section class="py-14 bg-brand-light border-t border-brand-gold/15">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6">
-                <div class="bg-white border border-brand-gold/30 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row justify-between items-center gap-6 shadow-sm">
-                    <div class="flex items-center space-x-4">
-                        <div class="w-12 h-12 rounded-full bg-brand-light border border-brand-gold/30 flex items-center justify-center shrink-0">
-                            <svg class="w-6 h-6 text-brand-gold-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
-                        </div>
-                        <div>
-                            <h4 class="font-serif font-bold text-brand-navy text-lg">Boutique Retail and Wholesale</h4>
-                            <p class="text-xs text-brand-dark/70 font-sans mt-0.5">Stock our tactile journals, studio kits, and single-step recipe decks in your bookstore, gift shop, or wellness boutique.</p>
-                        </div>
-                    </div>
-                    <a href="contact.html?subject=Wholesale%20%26%20Retail" class="shrink-0 bg-brand-light border border-brand-navy text-brand-navy font-sans text-xs font-bold uppercase tracking-widest py-3 px-6 rounded-full hover:bg-brand-navy hover:text-white transition-colors">Inquire for Wholesale</a>
+            <!-- SECTION 4: WORKSHOP ATELIER PREVIEW -->
+            <section id="live-experiences" class="py-14 md:py-16 bg-brand-navy text-white border-t border-brand-gold/20 rounded-3xl relative overflow-hidden mb-14 shadow-xl">
+                <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
+                    <span class="text-brand-gold font-sans font-bold tracking-[0.3em] uppercase text-xs block mb-2">Live Studio Sessions</span>
+                    <h2 class="font-serif text-2xl sm:text-3xl font-bold text-white mb-3">Looking to Join an In-Person Workshop?</h2>
+                    <p class="text-brand-light/80 font-sans text-xs sm:text-sm leading-relaxed max-w-xl mx-auto mb-6">
+                        Experience our 5-Layer Sensory Method in person. Join a scheduled public studio cohort in McKinney, host an on-site corporate retreat, or book a private celebration.
+                    </p>
+                    <a href="workshop.html" class="inline-block bg-brand-gold text-brand-navy font-sans font-bold py-3.5 px-8 rounded-full hover:bg-white transition-all uppercase tracking-widest text-xs shadow-md">
+                        Explore Studio Workshops &rarr;
+                    </a>
                 </div>
-            </div>
-        </section>
+            </section>
 
+            <!-- SECTION 5: WHOLESALE & RETAIL BAR -->
+            <section class="bg-white border border-brand-gold/20 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row justify-between items-center gap-6 shadow-sm">
+                <div class="flex items-center space-x-4">
+                    <div class="w-12 h-12 rounded-full bg-brand-light border border-brand-gold/30 flex items-center justify-center shrink-0">
+                        <svg class="w-6 h-6 text-brand-gold-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    </div>
+                    <div>
+                        <h4 class="font-serif font-bold text-brand-navy text-lg">Boutique Retail and Wholesale</h4>
+                        <p class="text-xs text-brand-dark/70 font-sans">Stock our tactile journals, studio kits, and single-step recipe decks in your bookstore, gift shop, or wellness boutique.</p>
+                    </div>
+                </div>
+                <a href="contact.html?subject=Wholesale%20%26%20Retail" class="shrink-0 bg-brand-light border border-brand-navy text-brand-navy font-sans text-xs font-bold uppercase tracking-widest py-3 px-6 rounded-full hover:bg-brand-navy hover:text-white transition-colors">Inquire for Wholesale</a>
+            </section>
+
+        </div>
     </main>
 
     <!-- FOOTER -->
@@ -448,7 +470,7 @@
         </div>
     </footer>
 
-    <!-- INTERACTIVE THUMBNAIL SWITCHER SCRIPT -->
+    <!-- REUSABLE PRODUCT IMAGE SWITCHER -->
     <script>
         const hamburgerButton = document.getElementById('hamburger-button');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -456,26 +478,12 @@
             hamburgerButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
         }
 
-        function swapKitImage(newSrc, clickedThumb) {
-            const mainImg = document.getElementById('kit-main-image');
+        function swapProductImage(mainImgId, thumbClass, newSrc, clickedThumb) {
+            const mainImg = document.getElementById(mainImgId);
             if (mainImg) {
                 mainImg.src = newSrc;
             }
-            const thumbs = document.querySelectorAll('.kit-thumb');
-            thumbs.forEach(t => {
-                t.classList.remove('active', 'border-brand-gold');
-                t.classList.add('border-transparent');
-            });
-            clickedThumb.classList.add('active', 'border-brand-gold');
-            clickedThumb.classList.remove('border-transparent');
-        }
-
-        function swapArtImage(newSrc, clickedThumb) {
-            const mainImg = document.getElementById('art-main-image');
-            if (mainImg) {
-                mainImg.src = newSrc;
-            }
-            const thumbs = document.querySelectorAll('.art-thumb');
+            const thumbs = document.querySelectorAll('.' + thumbClass);
             thumbs.forEach(t => {
                 t.classList.remove('active', 'border-brand-gold');
                 t.classList.add('border-transparent');
