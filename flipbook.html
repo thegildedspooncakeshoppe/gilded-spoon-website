@@ -206,7 +206,7 @@
         </div>
     </footer>
 
-    <!-- PORTFOLIO DATA & FILTER SCRIPT -->
+    <!-- PORTFOLIO DATA & SCRIPT -->
     <script>
         const hamburgerButton = document.getElementById('hamburger-button');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -215,7 +215,6 @@
         }
 
         const masterPortfolioData = [
-            // ERA 1: THE EARLY FOUNDATIONAL YEARS
             { 
                 categories: ["classic", "sculpted"],
                 src: "images/Ketals Birthday Cake.jpg", 
@@ -242,7 +241,7 @@
                 layer5: "Clean script lettering declaring the 30th milestone Road to Perfection.",
                 note: "A milestone tribute cake for an automotive enthusiast turning thirty, paired with a matching display of custom cupcakes."
             },
-             { 
+            { 
                 categories: ["botanical"],
                 src: "images/Mandala Cake Portland.jpg", 
                 title: "Intricate Mandala Celebration Cake",
@@ -294,7 +293,7 @@
                 layer5: "Fresh caviar lime vesicles spooned over cake balls resting on sugared lemon slices and shortbread cookies.",
                 note: "Created for my dad's birthday, which falls right around Christmas. Because he loves lemon and pound cake, I built an abundant dessert board pairing fresh citrus, warm apple pies, and bite-sized cake balls for the family."
             },
-             { 
+            { 
                 categories: ["botanical", "milestone"],
                 src: "images/IMG_2605.jpeg", 
                 title: "Mom's Spring Floral Birthday Cake",
@@ -307,7 +306,7 @@
                 layer5: "Custom cursive birthday topper anchored above hand-sculpted wafer butterfly and flower blossoms.",
                 note: "Baked for my mom's spring birthday. Yellow is her favorite color, so I paired a classic white almond sour cream cake with fresh pineberries, wrapped in sunny pastel tones and delicate wafer florals."
             },
-             { 
+            { 
                 categories: ["botanical"],
                 src: "images/Sharons Close Up Birthday Cake.jpeg", 
                 title: "Black Coconut &amp; Rose Birthday Cake",
@@ -424,7 +423,6 @@
                 layer5: "Continuous star border sealing the outer edge.",
                 note: "Donated through For Goodness Cakes, an organization matching volunteer bakers with foster youth and children overcoming adversity to ensure every child receives a custom birthday cake."
             },
-           
             { 
                 categories: ["milestone"],
                 src: "images/IMG_0737.jpeg", 
@@ -438,7 +436,7 @@
                 layer5: "The first slice reveal displaying purple, blue, green, yellow, orange, and red sponge layers.",
                 note: "The rainbow sprinkles are baked directly into each colored sponge layer, creating a joyful reveal on the very first cut."
             },
-             { 
+            { 
                 categories: ["milestone"],
                 src: "images/IMG_2891.jpeg", 
                 title: "Ocean Adventure First Birthday Cake",
@@ -503,8 +501,7 @@
                 layer5: "Hand-sculpted edible candies and bonbons spilling from the pumpkin cauldron onto the display board.",
                 note: "A 3D sculpted piece inspired by master cake artist Avalon Yarnes during a virtual cake conference, recreated entirely by hand with sculpted modeling paste and edible candies."
             },
-             
-             { 
+            { 
                 categories: ["botanical"],
                 src: "images/A4DF3960-8996-4DCA-97E5-29EF06173A94.jpeg", 
                 title: "Embroidered Wildflower Celebration Cake",
@@ -517,7 +514,7 @@
                 layer5: "Handcrafted sculpted puppy figures resting on the lush grass lawn.",
                 note: "Baked for human guests celebrating a beloved family pet's birthday, pairing dark chocolate almond cake with espresso buttercream and garden embroidery."
             },
-             { 
+            { 
                 categories: ["milestone"],
                 src: "images/90th Birthday Cake.jpg", 
                 title: "90th Milestone Ocean Celebration Cake",
@@ -556,7 +553,7 @@
                 layer5: "Multi-colored confetti sprinkles dusting the final white chocolate drizzle.",
                 note: "Individual bite-sized treats celebrating bright citrus flavor and playful piping variations."
             },
-             { 
+            { 
                 categories: ["sculpted"],
                 src: "images/IMG_5833.jpeg", 
                 title: "Woodland Easter Bunny Cake",
@@ -569,7 +566,7 @@
                 layer5: "Miniature umbrella handle and pastel chocolate eggs nestled around the base.",
                 note: "A joyful spring centerpiece featuring a fondant bunny diving into the grass, layered with fresh seasonal pineberries."
             },
-             { 
+            { 
                 categories: ["milestone"],
                 src: "images/Embrace 2025 Grad Cake.jpg", 
                 title: "Class of 2025 Graduation Cake",
@@ -595,7 +592,7 @@
                 layer5: "Hand-painted edible gold luster dust illuminated across the baked lettering and solar core.",
                 note: "An artistic studio experiment in reverse batter painting. The design was piped directly onto parchment using tinted cake batter, baked into a tender sheet cake, and sealed with edible gold luster."
             },
-             { 
+            { 
                 categories: ["milestone", "sculpted"],
                 src: "images/IMG_6666.jpeg", 
                 title: "50th Milestone Dragon Celebration Cake",
@@ -608,7 +605,7 @@
                 layer5: "Hand-painted metallic gold luster detailing across the dragon horn tips, wing crests, and scale ridges.",
                 note: "An authentic photo from our studio table during the final detailing stage. Designed for a landmark 50th birthday, combining hand-sculpted dimensional modeling with rich chocolate fudge and roasted pistachio sponge."
             },
-             { 
+            { 
                 categories: ["community"],
                 src: "images/IMG_6589.jpeg", 
                 title: "Milestone Recovery Celebration Cookies",
@@ -633,8 +630,6 @@
                 layer4: "Scatter distribution of gold leaf guiding focus toward the top celebration candle.",
                 layer5: "Top crest flecked with gold leaf and finished with a glowing celebration candle.",
                 note: "Baked for my mom's birthday dinner, combining gentle pastel watercolor tones with aromatic orange blossom and roasted almond flavors."
-            },
-            
             }
         ];
 
@@ -658,14 +653,15 @@
             galleryGrid.innerHTML = '';
             currentFilteredData.forEach((item, index) => {
                 const card = document.createElement('div');
-                card.className = "gallery-item block relative group cursor-pointer";
+                card.className = "gallery-item block relative group cursor-pointer bg-brand-card/40 border border-brand-gold/15 rounded-2xl overflow-hidden hover:border-brand-gold/40 transition-all p-3 flex flex-col justify-between";
                 card.onclick = () => openLightbox(index);
                 card.innerHTML = `
-                    <img src="${item.src}" alt="${item.title}" class="w-full h-80 md:h-96 object-cover rounded-2xl shadow-lg transition-all duration-500 group-hover:scale-[1.02]">
-                    <div class="absolute inset-0 bg-brand-navy/60 flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl p-4 text-center">
-                        <span class="text-brand-gold text-[10px] font-sans uppercase tracking-widest font-bold mb-1">${item.tag}</span>
-                        <h3 class="text-white text-base font-serif font-bold mb-3">${item.title}</h3>
-                        <span class="text-white text-xs font-serif tracking-widest border border-brand-gold px-4 py-2 uppercase">View Details</span>
+                    <div class="w-full h-64 sm:h-72 flex items-center justify-center overflow-hidden rounded-xl bg-brand-dark/20 mb-3">
+                        <img src="${item.src}" alt="${item.title}" class="max-h-full max-w-full object-contain rounded-lg transition-transform duration-300 group-hover:scale-95 drop-shadow-md">
+                    </div>
+                    <div class="text-left px-1">
+                        <span class="text-brand-gold text-[10px] font-sans uppercase tracking-widest font-bold block mb-1">${item.tag}</span>
+                        <h3 class="text-white text-sm font-serif font-bold leading-snug line-clamp-2">${item.title}</h3>
                     </div>
                 `;
                 galleryGrid.appendChild(card);
