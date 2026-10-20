@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="p:domain_verify" content="8497c86d445458f17cdce81e920478f2"/>
-    <title>Contact &amp; Atelier Inquiries | The Gilded Spoon Shoppe</title>
-    <meta name="description" content="Connect with The Gilded Spoon Shoppe for 3-tiered sensory workshop lab reservations, corporate/hybrid team proposals, custom recipe suite commissions, Bake to Baseline tools, and wholesale boutique stocking.">
+    <title>Contact &amp; Custom Orders | The Gilded Spoon Shoppe</title>
+    <meta name="description" content="Connect with Dimple at The Gilded Spoon Shoppe in McKinney, Texas for custom cake art commissions, family heirloom recipe decks, private group workshops, and wholesale inquiries.">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Great+Vibes&family=Libre+Baskerville:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -18,6 +18,7 @@
                         'brand-light': '#F4F1ED',
                         'brand-gold': '#D4AF37',
                         'brand-gold-hover': '#E2C76A',
+                        'brand-gold-dark': '#8C6D18',
                         'brand-gray': '#A09DA6',
                         'brand-card': '#2A232F',
                         'brand-navy': '#0A2342'
@@ -25,8 +26,6 @@
                     fontFamily: {
                         'serif': ['"Playfair Display"', 'serif'],
                         'sans': ['"Inter"', 'sans-serif'],
-                        'cursive': ['"Great Vibes"', 'cursive'],
-                        'baskerville': ['"Libre Baskerville"', 'serif'],
                         'hand': ['"Caveat"', 'cursive']
                     }
                 }
@@ -48,8 +47,6 @@
                 <a href="workshop.html" class="text-brand-light hover:text-brand-gold transition">Workshops</a>
                 <a href="flipbook.html" class="text-brand-light hover:text-brand-gold transition">Portfolio</a>
                 <a href="contact.html" class="text-brand-gold font-bold transition">Contact</a>
-
-                <!-- SOLID FILLED CTA BUTTON -->
                 <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-navy hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm">
                     Free Guide
                 </a>
@@ -65,7 +62,6 @@
             <a href="workshop.html" class="block py-3 text-brand-light uppercase tracking-widest">Workshops</a>
             <a href="flipbook.html" class="block py-3 text-brand-light uppercase tracking-widest">Portfolio</a>
             <a href="contact.html" class="block py-3 text-brand-gold font-bold uppercase tracking-widest">Contact</a>
-            <!-- SOLID FILLED CTA BUTTON -->
             <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-navy hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm mt-2 inline-block">
                 Free Guide
             </a>
@@ -75,21 +71,33 @@
     <!-- HEADER SECTION -->
     <header class="text-center py-16 md:py-20 px-6 bg-brand-navy border-b border-brand-gold/10 relative overflow-hidden">
         <div class="max-w-3xl mx-auto relative z-10">
-            <span class="text-xs font-bold uppercase tracking-[0.25em] text-brand-gold block mb-3">Begin The Conversation</span>
-            <h1 class="font-serif text-4xl md:text-5xl font-bold text-brand-light mb-4">Atelier Inquiries &amp; Commissions</h1>
+            <span class="text-xs font-bold uppercase tracking-[0.25em] text-brand-gold block mb-3">Studio Conversations</span>
+            <h1 class="font-serif text-4xl md:text-5xl font-bold text-brand-light mb-4">Inquiries &amp; Custom Orders</h1>
             <p class="font-serif italic text-base md:text-lg text-brand-light/80 leading-relaxed max-w-xl mx-auto">
-                Whether reserving a public workshop seat, booking a private or hybrid corporate team lab, commissioning a custom recipe suite, or stocking our shoppe tools, we welcome your message.
+                Ready to commission a custom art piece, adapt a family recipe into a single-step deck, plan a private team workshop, or just say hello? We would love to connect.
             </p>
         </div>
     </header>
 
+    <!-- SHOPPING & BOOKING NOTICE BANNER -->
+    <section class="bg-brand-gold/10 border-b border-brand-gold/20 py-3.5 px-4">
+        <div class="max-w-6xl mx-auto text-center font-sans text-xs text-brand-navy flex flex-col sm:flex-row items-center justify-center gap-2">
+            <span><strong>Looking for instant checkout or tickets?</strong> Order studio kits and journals in our Shoppe, or reserve public workshop seats directly.</span>
+            <div class="flex items-center gap-3">
+                <a href="shoppe.html" class="underline font-bold hover:text-brand-gold-dark text-brand-navy transition-colors">Go to Shoppe &rarr;</a>
+                <span class="text-brand-dark/40">&bull;</span>
+                <a href="workshop.html#tiers" class="underline font-bold hover:text-brand-gold-dark text-brand-navy transition-colors">Book Workshop Seats &rarr;</a>
+            </div>
+        </div>
+    </section>
+
     <!-- FORM & CONTACT SECTION -->
-    <main class="py-12 md:py-20 bg-brand-light">
-        <div class="max-w-4xl mx-auto px-6">
+    <main class="py-12 md:py-16 bg-brand-light">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
             
-            <div class="bg-white border border-brand-gold/20 rounded-3xl p-8 md:p-12 shadow-xl">
+            <div class="bg-white border border-brand-gold/30 rounded-3xl p-6 sm:p-10 md:p-12 shadow-xl">
                 
-                <form id="contact-form" class="space-y-6" onsubmit="event.preventDefault(); alert('Thank you for reaching out to The Gilded Spoon Shoppe. We have received your inquiry and will respond shortly.');">
+                <form id="contact-form" class="space-y-6" onsubmit="event.preventDefault(); alert('Thank you for reaching out to The Gilded Spoon Shoppe. Dimple has received your inquiry and will reply shortly.');">
                     
                     <!-- USER DETAILS -->
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -107,85 +115,98 @@
                     <div>
                         <label for="subject" class="block text-xs font-bold uppercase tracking-wider text-brand-navy mb-2">Inquiry Type *</label>
                         <select id="subject" required class="w-full bg-brand-light/50 border border-brand-gold/30 rounded-xl px-4 py-3 text-sm text-brand-dark focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors">
-                            <option value="General Inquiry">General Inquiry</option>
-                            <option value="Tier 1: Reserve Public Studio Seat ($115)">Tier 1: Reserve Public Studio Seat ($115/seat)</option>
-                            <option value="Tier 2: Request Private Local or Hybrid Team Proposal ($135)">Tier 2: Request Private Local or Hybrid Team Proposal ($135/seat)</option>
-                            <option value="Tier 3: Request Remote Shipped Virtual Team Proposal ($145)">Tier 3: Request Remote Shipped Virtual Team Proposal ($145/seat)</option>
-                            <option value="Custom Atelier Recipe Suite Commission">Bespoke Custom Atelier Recipe Suite Commission</option>
-                            <option value="Order The Deconstructed Recipe Suite">Order The Deconstructed Recipe Suite ($48)</option>
-                            <option value="Order Bake to Baseline Card Suite">Order Bake to Baseline Card Suite ($34)</option>
-                            <option value="Wholesale & Boutique Retail">Wholesale &amp; Boutique Retail Stocking</option>       
+                            <option value="General Inquiry">General Inquiry or Hello</option>
+                            <option value="Custom Art Piece Commission">Custom Art Piece Commission (2D Canvas or 3D Sculpture)</option>
+                            <option value="Custom Heirloom Recipe Deck">Custom Heirloom Recipe Deck Commission</option>
+                            <option value="Private Group Workshop Inquiry">Private Group Workshop or Team Retreat</option>
+                            <option value="Wholesale & Boutique Stocking">Wholesale &amp; Boutique Retail Stocking</option>
                         </select>
                     </div>
 
-                    <!-- HELPER 1: WORKSHOP INQUIRY CHECKLIST -->
-                    <div id="workshop-inquiry-guide" class="hidden bg-brand-navy/5 border border-brand-gold/30 rounded-2xl p-5 text-xs text-brand-dark/80 space-y-2">
+                    <!-- HELPER 1: CUSTOM ART PIECE CHECKLIST -->
+                    <div id="art-guide" class="hidden bg-brand-navy/5 border border-brand-gold/30 rounded-2xl p-5 text-xs text-brand-dark/80 space-y-2">
                         <div class="flex items-center space-x-2 text-brand-navy font-bold uppercase tracking-wider">
-                            <svg class="w-4 h-4 text-brand-gold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            <span>Workshop Inquiry Checklist</span>
+                            <svg class="w-4 h-4 text-brand-gold-dark shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span>Custom Artwork Checklist</span>
                         </div>
                         <p class="leading-relaxed">
-                            To help us tailor your experience or prepare an accurate team proposal, feel free to include:
+                            To help Dimple understand your space and vision, please share:
                         </p>
                         <ul class="list-disc pl-5 space-y-1 text-brand-dark/70">
-                            <li><strong>Format &amp; Tier:</strong> Tier 1 Public Studio ($115), Tier 2 Private Local/Hybrid ($135), or Tier 3 Remote Shipped Virtual ($145).</li>
-                            <li><strong>Medium Track Preference:</strong> Option A (3D Non-Edible Sculpture with gemstones) OR Option B (Edible Culinary Cake Canvas with buttercreams &amp; food gems).</li>
-                            <li><strong>Headcount &amp; Hybrid Split:</strong> Total team count + number of remote members needing shipped kits for hybrid events.</li>
-                            <li><strong>Somatic Spectrum Preference:</strong> Desert Oasis (Grounding/Fall), Winter Solstice (Shielding/Winter), or Spring Awakening (Dopamine/Spring).</li>
+                            <li><strong>Format Preference:</strong> 3D sculpted cake keepsake on a gold display drum, or framed 2D floral relief canvas for wall display.</li>
+                            <li><strong>Color Palette &amp; Feeling:</strong> Neutral earth tones, calm greens, sunny yellows, or tones that match your home sanctuary.</li>
+                            <li><strong>Special Inclusions:</strong> Specific pressed florals, raw quartz crystals, or personal meaningful accents.</li>
+                            <li><strong>Timing &amp; Destination:</strong> Any target date and city for shipping or local McKinney pickup.</li>
                         </ul>
                     </div>
 
-                    <!-- HELPER 2: CUSTOM COMMISSION GUIDANCE -->
-                    <div id="custom-commission-guide" class="hidden bg-brand-navy/5 border border-brand-gold/30 rounded-2xl p-5 text-xs text-brand-dark/80 space-y-2">
+                    <!-- HELPER 2: CUSTOM RECIPE DECK CHECKLIST -->
+                    <div id="recipe-guide" class="hidden bg-brand-navy/5 border border-brand-gold/30 rounded-2xl p-5 text-xs text-brand-dark/80 space-y-2">
                         <div class="flex items-center space-x-2 text-brand-navy font-bold uppercase tracking-wider">
-                            <svg class="w-4 h-4 text-brand-gold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            <span>Custom Recipe Suite Checklist</span>
+                            <svg class="w-4 h-4 text-brand-gold-dark shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span>Custom Recipe Deck Checklist</span>
                         </div>
                         <p class="leading-relaxed">
-                            To help us translate your favorite bake into a low-overwhelm Deconstructed Recipe Suite, please feel free to include:
+                            To help us translate your favorite recipe into single-step counter cards with zero math:
                         </p>
                         <ul class="list-disc pl-5 space-y-1 text-brand-dark/70">
-                            <li><strong>Recipe Name &amp; Origin:</strong> Family heirloom, favorite signature bake, or specific pastry type.</li>
-                            <li><strong>Dietary/Sensory Needs:</strong> Explicit adaptations needed (e.g., eggless substitutions, gluten-free, dairy-free).</li>
-                            <li><strong>Special Cues:</strong> Specific step-by-step pain points or temperature checkpoints where executive fatigue usually sets in.</li>
+                            <li><strong>Recipe Name &amp; Origin:</strong> Family heirloom, favorite holiday cake, or special bake passed down through generations.</li>
+                            <li><strong>Dietary Adaptations:</strong> Eggless, gluten-free, dairy-free, or specific ingredient replacements needed.</li>
+                            <li><strong>Kitchen Stress Points:</strong> Steps where timing, temperature, or multitasking usually feels overwhelming.</li>
                         </ul>
                     </div>
 
-                    <!-- HELPER 3: WHOLESALE & BOUTIQUE RETAIL CHECKLIST -->
-                    <div id="wholesale-inquiry-guide" class="hidden bg-brand-navy/5 border border-brand-gold/30 rounded-2xl p-5 text-xs text-brand-dark/80 space-y-2">
+                    <!-- HELPER 3: PRIVATE WORKSHOP / RETREAT CHECKLIST -->
+                    <div id="workshop-guide" class="hidden bg-brand-navy/5 border border-brand-gold/30 rounded-2xl p-5 text-xs text-brand-dark/80 space-y-2">
                         <div class="flex items-center space-x-2 text-brand-navy font-bold uppercase tracking-wider">
-                            <svg class="w-4 h-4 text-brand-gold shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            <span>Wholesale &amp; Retail Inquiry Checklist</span>
+                            <svg class="w-4 h-4 text-brand-gold-dark shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span>Private Group Workshop Checklist</span>
                         </div>
                         <p class="leading-relaxed">
-                            Interested in stocking our tactile publications and card suites in your shop or wellness space? Feel free to share:
+                            For private in-person gatherings, workplace retreats, or virtual team kits:
                         </p>
                         <ul class="list-disc pl-5 space-y-1 text-brand-dark/70">
-                            <li><strong>Shop Name &amp; Location:</strong> Store name, city/state, and website or social media handle.</li>
-                            <li><strong>Store Concept:</strong> Independent bookstore, gift shop, wellness studio, museum shop, or online store.</li>
-                            <li><strong>Items of Interest:</strong> Bake to Baseline Guided Journals, Bake to Baseline Card Suites, or The Deconstructed Recipe Suites.</li>
-                            <li><strong>Estimated Order Size / Timeline:</strong> Projected opening order quantity or target shelf launch date.</li>
+                            <li><strong>Event Format:</strong> Private Local In-Person, Hybrid (local + remote shipped kits), or 100% Virtual Shipped.</li>
+                            <li><strong>Medium Track:</strong> Keepsake 3D Sculptures (permanent desk display) or Fresh Edible Cake Art (mini cakes with buttercreams).</li>
+                            <li><strong>Estimated Group Size:</strong> Approximate headcount and location (office, private venue, or remote doors).</li>
+                            <li><strong>Preferred Dates:</strong> Desired month, weekday, or weekend timing.</li>
+                        </ul>
+                    </div>
+
+                    <!-- HELPER 4: WHOLESALE CHECKLIST -->
+                    <div id="wholesale-guide" class="hidden bg-brand-navy/5 border border-brand-gold/30 rounded-2xl p-5 text-xs text-brand-dark/80 space-y-2">
+                        <div class="flex items-center space-x-2 text-brand-navy font-bold uppercase tracking-wider">
+                            <svg class="w-4 h-4 text-brand-gold-dark shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                            <span>Wholesale &amp; Retail Checklist</span>
+                        </div>
+                        <p class="leading-relaxed">
+                            Interested in stocking our guided journals, recipe decks, or studio kits in your shop?
+                        </p>
+                        <ul class="list-disc pl-5 space-y-1 text-brand-dark/70">
+                            <li><strong>Store Information:</strong> Shop name, location (city/state), and online store or social link.</li>
+                            <li><strong>Items of Interest:</strong> Bake to Baseline Guided Journals, The Deconstructed Recipe Decks, or Studio DIY Kits.</li>
+                            <li><strong>Target Quantity &amp; Timeline:</strong> Opening order size or planned shelf launch date.</li>
                         </ul>
                     </div>
 
                     <!-- MESSAGE AREA -->
                     <div>
-                        <label for="message" class="block text-xs font-bold uppercase tracking-wider text-brand-navy mb-2">Message &amp; Inquiry Details *</label>
-                        <textarea id="message" rows="5" required class="w-full bg-brand-light/50 border border-brand-gold/30 rounded-xl px-4 py-3 text-sm text-brand-dark focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors placeholder-brand-dark/40" placeholder="Please share your details, preferences, or general inquiry..."></textarea>
+                        <label for="message" class="block text-xs font-bold uppercase tracking-wider text-brand-navy mb-2">Message &amp; Project Details *</label>
+                        <textarea id="message" rows="5" required class="w-full bg-brand-light/50 border border-brand-gold/30 rounded-xl px-4 py-3 text-sm text-brand-dark focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors placeholder-brand-dark/40" placeholder="Please share details about your custom piece, event, or questions..."></textarea>
                     </div>
 
                     <!-- SUBMIT BUTTON -->
                     <button type="submit" class="w-full bg-brand-navy text-white font-sans text-xs font-bold uppercase tracking-widest py-4 rounded-full hover:bg-brand-gold hover:text-brand-navy transition-colors shadow-md">
-                        Send Inquiry 
+                        Send Message
                     </button>
                 </form>
 
             </div>
 
             <!-- DIRECT CONTACT DETAILS FOOTNOTE -->
-            <div class="mt-12 text-center text-xs text-brand-dark/60 space-y-2 font-sans">
-                <p>Located in McKinney, Texas &bull; Serving intentional bakers worldwide</p>
-                <p>Direct inquiries: <a href="mailto:contact@thegildedspoonshoppe.com" class="text-brand-navy font-bold underline hover:text-brand-gold">contact@thegildedspoonshoppe.com</a></p>
+            <div class="mt-10 text-center text-xs text-brand-dark/60 space-y-1 font-sans">
+                <p class="font-medium text-brand-navy">Located in McKinney, Texas &bull; Serving thoughtful bakers and collectors everywhere</p>
+                <p>Direct email: <a href="mailto:contact@thegildedspoonshoppe.com" class="text-brand-navy font-bold underline hover:text-brand-gold transition-colors">contact@thegildedspoonshoppe.com</a></p>
             </div>
 
         </div>
@@ -193,18 +214,41 @@
 
     <!-- FOOTER -->
     <footer class="bg-brand-dark text-brand-gray border-t border-brand-gold/20 font-sans text-xs">
-        <div class="max-w-2xl mx-auto px-6 py-8 text-center">
-            <div class="flex justify-center space-x-8 mb-6 text-brand-light font-medium uppercase tracking-[0.2em]">
-                <a href="contact.html" class="hover:text-brand-gold transition-colors">Contact Us</a>
-                <a href="partnerships.html" class="hover:text-brand-gold transition-colors">Partnerships</a>
-                <a href="policies.html" class="hover:text-brand-gold transition-colors">Order Fulfillment &amp; Delivery</a>
+        <div class="max-w-2xl mx-auto px-6 py-8">
+            <div class="flex flex-col items-center">
+                
+                <div class="flex justify-center space-x-6 mb-6 text-brand-light">
+                    <a href="https://www.instagram.com/thegildedspoonshoppe/" target="_blank" class="hover:text-brand-gold transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919 4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/dimple.mckinney" target="_blank" class="hover:text-brand-gold transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.494v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.323-1.325z"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/dimple-mckinney/" target="_blank" class="hover:text-brand-gold transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                </div>
+
+                <div class="flex flex-row justify-center space-x-8 mb-6 text-brand-light font-medium text-[10px] uppercase tracking-[0.2em]">
+                    <a href="contact.html" class="hover:text-brand-gold transition-colors">Contact Us</a>
+                    <a href="partnerships.html" class="hover:text-brand-gold transition-colors">Partnerships</a>
+                    <a href="policies.html" class="hover:text-brand-gold transition-colors">Order Fulfillment &amp; Delivery</a>
+                </div>
+
             </div>
-            <p class="font-serif text-brand-light/30 text-xs mb-3">&copy; 2026 The Gilded Spoon Shoppe | McKinney, Texas</p>
-            <p class="max-w-xl mx-auto font-sans text-[9px] leading-relaxed text-brand-gray/20 italic">Disclaimer: The Gilded Spoon Shoppe provides sensory design education. It is not a substitute for medical advice or occupational therapy.</p>
+
+            <div class="pt-6 border-t border-brand-gray/10 text-center">
+                <p class="font-serif text-brand-light/30 text-xs mb-3">
+                    &copy; 2026 The Gilded Spoon Shoppe | McKinney, Texas
+                </p>
+                <p class="max-w-xl mx-auto font-sans text-[9px] leading-relaxed text-brand-gray/20 italic">
+                    Disclaimer: The Gilded Spoon Shoppe provides sensory design education. It is not a substitute for professional medical advice, diagnosis, or occupational therapy. Edible products are prepared in a home kitchen that handles allergens including wheat, dairy, eggs, soy, and nuts.
+                </p>
+            </div>
         </div>
     </footer>
 
-    <!-- SCRIPT TO PARSE URL QUERY PARAMETERS & TOGGLE ALL 3 HELPER GUIDES -->
+    <!-- SCRIPT TO PARSE URL QUERY PARAMETERS & TOGGLE HELPER GUIDES -->
     <script>
         // Mobile Menu Toggle
         const hamburgerButton = document.getElementById('hamburger-button');
@@ -213,7 +257,7 @@
             hamburgerButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
         }
 
-        // Dynamic URL Query Parameter Parser & Helper Box Togglers
+        // URL Query Parameter Parser and Guidance Togglers
         document.addEventListener('DOMContentLoaded', () => {
             const urlParams = new URLSearchParams(window.location.search);
             const subjectParam = urlParams.get('subject');
@@ -222,30 +266,31 @@
             const subjectSelect = document.getElementById('subject');
             const messageInput = document.getElementById('message');
             
-            const customGuide = document.getElementById('custom-commission-guide');
-            const workshopGuide = document.getElementById('workshop-inquiry-guide');
-            const wholesaleGuide = document.getElementById('wholesale-inquiry-guide');
+            const artGuide = document.getElementById('art-guide');
+            const recipeGuide = document.getElementById('recipe-guide');
+            const workshopGuide = document.getElementById('workshop-guide');
+            const wholesaleGuide = document.getElementById('wholesale-guide');
 
             if (subjectParam && subjectSelect) {
-                const searchLower = decodeURIComponent(subjectParam).toLowerCase();
+                const searchLower = decodeURIComponent(subjectParam).toLowerCase().trim();
                 
                 for (let option of subjectSelect.options) {
                     const optLower = option.value.toLowerCase();
                     
                     if (
                         optLower === searchLower ||
-                        (searchLower.includes('tier 1') && optLower.includes('tier 1')) ||
-                        (searchLower.includes('tier 2') && optLower.includes('tier 2')) ||
-                        (searchLower.includes('tier 3') && optLower.includes('tier 3')) ||
-                        (searchLower.includes('public') && optLower.includes('public')) ||
-                        (searchLower.includes('local') && optLower.includes('local')) ||
-                        (searchLower.includes('remote') && optLower.includes('remote')) ||
-                        (searchLower.includes('shipped') && optLower.includes('shipped')) ||
-                        (searchLower.includes('proposal') && optLower.includes('proposal')) ||
-                        (searchLower.includes('commission') && optLower.includes('commission')) ||
-                        (searchLower.includes('deconstructed') && optLower.includes('deconstructed')) ||
-                        (searchLower.includes('baseline') && optLower.includes('baseline')) ||
-                        (searchLower.includes('wholesale') && optLower.includes('wholesale'))
+                        (searchLower.includes('art') && optLower.includes('art')) ||
+                        (searchLower.includes('sculpture') && optLower.includes('art')) ||
+                        (searchLower.includes('recipe') && optLower.includes('recipe')) ||
+                        (searchLower.includes('deck') && optLower.includes('recipe')) ||
+                        (searchLower.includes('heirloom') && optLower.includes('recipe')) ||
+                        (searchLower.includes('tier') && optLower.includes('workshop')) ||
+                        (searchLower.includes('workshop') && optLower.includes('workshop')) ||
+                        (searchLower.includes('proposal') && optLower.includes('workshop')) ||
+                        (searchLower.includes('private') && optLower.includes('workshop')) ||
+                        (searchLower.includes('team') && optLower.includes('workshop')) ||
+                        (searchLower.includes('wholesale') && optLower.includes('wholesale')) ||
+                        (searchLower.includes('retail') && optLower.includes('wholesale'))
                     ) {
                         option.selected = true;
                         break;
@@ -261,15 +306,22 @@
             function updateGuideVisibility() {
                 const val = subjectSelect.value.toLowerCase();
 
-                // Custom Suite Guide
-                if (val.includes('commission') || val.includes('custom')) {
-                    customGuide.classList.remove('hidden');
+                // Custom Art Guide
+                if (val.includes('art')) {
+                    artGuide.classList.remove('hidden');
                 } else {
-                    customGuide.classList.add('hidden');
+                    artGuide.classList.add('hidden');
                 }
 
-                // Workshop Guide
-                if (val.includes('tier') || val.includes('workshop') || val.includes('proposal') || val.includes('seat') || val.includes('public') || val.includes('private') || val.includes('remote')) {
+                // Custom Recipe Guide
+                if (val.includes('recipe') || val.includes('heirloom')) {
+                    recipeGuide.classList.remove('hidden');
+                } else {
+                    recipeGuide.classList.add('hidden');
+                }
+
+                // Private Workshop Guide
+                if (val.includes('workshop') || val.includes('tier') || val.includes('team')) {
                     workshopGuide.classList.remove('hidden');
                 } else {
                     workshopGuide.classList.add('hidden');
@@ -284,7 +336,7 @@
             }
 
             subjectSelect.addEventListener('change', updateGuideVisibility);
-            updateGuideVisibility(); // Run on initial page load
+            updateGuideVisibility();
         });
     </script>
 
