@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="p:domain_verify" content="8497c86d445458f17cdce81e920478f2"/>
+    <title>Studio Workshops | The Gilded Spoon Atelier</title>
+    <meta name="description" content="Tactile art and cake decorating workshops in McKinney, Texas. Low pressure sensory grounding, zero baking experience needed, and zero performance required.">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Great+Vibes&family=Libre+Baskerville:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-dark': '#1C161E',
+                        'brand-light': '#F4F1ED',
+                        'brand-gold': '#D4AF37',
+                        'brand-gold-hover': '#E2C76A',
+                        'brand-gold-dark': '#8C6D18',
+                        'brand-gray': '#A09DA6',
+                        'brand-card': '#2A232F',
+                        'brand-navy': '#0A2342'
+                    },
+                    fontFamily: {
+                        'serif': ['"Playfair Display"', 'serif'],
+                        'sans': ['"Inter"', 'sans-serif'],
+                        'hand': ['"Caveat"', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-brand-light text-brand-dark antialiased">
+
+    <!-- NAVIGATION -->
+    <nav class="sticky top-0 bg-brand-navy/95 backdrop-blur-lg shadow-lg z-50 border-b border-brand-gold/10">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-2xl font-serif font-bold text-brand-gold text-center leading-none">
+                The Gilded Spoon
+                <span class="block text-xs font-sans font-light not-italic tracking-[0.3em] text-brand-light">SHOPPE &amp; ATELIER</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-6 font-medium text-xs tracking-widest uppercase">
+                <a href="shoppe.html" class="text-brand-light hover:text-brand-gold transition">Shoppe</a>
+                <a href="workshop.html" class="text-brand-gold font-bold transition">Workshops</a>
+                <a href="flipbook.html" class="text-brand-light hover:text-brand-gold transition">Portfolio</a>
+                <a href="contact.html" class="text-brand-light hover:text-brand-gold transition">Contact</a>
+                <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-navy hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm">
+                    Free Guide
+                </a>
+            </div>
+            <div class="md:hidden">
+                <button id="hamburger-button" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden mt-4 px-4 pb-4 bg-brand-navy text-center">
+            <a href="shoppe.html" class="block py-3 text-brand-light uppercase tracking-widest">Shoppe</a>
+            <a href="workshop.html" class="block py-3 text-brand-gold font-bold uppercase tracking-widest">Workshops</a>
+            <a href="flipbook.html" class="block py-3 text-brand-light uppercase tracking-widest">Portfolio</a>
+            <a href="contact.html" class="block py-3 text-brand-light uppercase tracking-widest">Contact</a>
+            <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-navy hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm mt-2 inline-block">
+                Free Guide
+            </a>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="text-center py-16 md:py-20 bg-brand-navy border-b border-brand-gold/10 relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-6 relative z-10">
+            <span class="text-brand-gold font-sans font-bold tracking-[0.3em] uppercase text-xs block mb-3">Tactile Studio Gatherings</span>
+            <h1 class="font-serif text-4xl md:text-5xl font-bold text-white leading-tight mb-4">A Quiet Place for Busy Minds</h1>
+            <p class="text-center text-brand-gold max-w-2xl mx-auto mb-3 text-base md:text-lg font-serif italic">Using your feelings to tell your story through cake and tactile art.</p>
+            <p class="text-center text-brand-light/90 max-w-2xl mx-auto text-xs md:text-sm font-sans leading-relaxed">
+                Step inside an intentional studio space designed to help you drop your shoulders and decompress. In our atelier, there is zero performance required, zero baking experience needed, and your nervous system sets the rules.
+            </p>
+        </div>
+    </header>
+
+    <!-- SHOPPE NOTICE -->
+    <section class="bg-brand-gold/10 border-b border-brand-gold/20 py-3 px-4">
+        <div class="max-w-6xl mx-auto text-center font-sans text-xs text-brand-navy flex flex-col sm:flex-row items-center justify-center gap-2">
+            <span><strong>Want to experience the method at home?</strong> Explore our DIY studio kits and guided journals in the Shoppe.</span>
+            <a href="shoppe.html" class="underline font-bold hover:text-brand-gold-dark text-brand-navy transition-colors">Visit the Shoppe &rarr;</a>
+        </div>
+    </section>
+
+    <!-- SECTION: THE PURPOSE OF THE WORKSHOPS -->
+    <section class="py-14 md:py-18 bg-brand-light border-b border-brand-gold/20">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="bg-white rounded-3xl border border-brand-gold/30 p-8 sm:p-12 shadow-lg">
+                <div class="max-w-3xl mx-auto text-center mb-8">
+                    <span class="text-brand-gold-dark font-sans font-bold tracking-widest uppercase text-xs block mb-2">The Story Behind The Atelier</span>
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-navy">What This Experience Is Truly About</h2>
+                </div>
+                <div class="space-y-5 text-brand-dark/85 text-xs sm:text-sm font-sans leading-relaxed max-w-3xl mx-auto">
+                    <p>
+                        Baking is chemistry and precision. Exact weights and temperature control matter, but cake design was always something deeper. Yet for years, whenever I turned from the oven to decorating, my mind would become completely overwhelmed, jumping from one question to the next with zero direction.
+                    </p>
+                    <p>
+                        The world outside demands that we constantly mask our exhaustion, meet tight deadlines, and pretend we aren't feeling everything all at once. Too often, creative classes end up adding to that pressure, turning art into a competition for perfection where you worry about doing it right.
+                    </p>
+                    <p class="font-serif font-bold text-brand-navy text-sm sm:text-base">
+                        I created these workshops to be the exact opposite.
+                    </p>
+                    <p>
+                        Looking back across years of my own bakes, I noticed a clear pattern: a method for the madness, and the spark that finally let me put down perfectionism. Decorating was never about spotless execution. It was an art form, a connection, and a personal story unfolding. Accepting my creativity became my way of healing and feeling.
+                    </p>
+                    <div class="bg-brand-navy text-brand-light p-6 sm:p-8 rounded-2xl border border-brand-gold/30 my-6 shadow-inner text-center">
+                        <p class="font-serif italic text-base sm:text-lg text-brand-gold mb-3">
+                            "You are not here to bake a pastry test or perform for an audience. You are here to give your mind a predictable, tactile environment where you hold absolute control."
+                        </p>
+                        <span class="text-[11px] font-sans uppercase tracking-widest text-brand-light/70 font-semibold">Contains 0% bad vibes, 100% comfort</span>
+                    </div>
+                    <p>
+                        When you sweep a palette knife across whipped medium, squeeze a piping bag, or press raw quartz crystals into wet paste, your focus naturally narrows. The mental chatter quiets down, and your hands take over the work of soothing your nervous system. In this space, messy parts are welcome, perfectionism is left at the door, and your cake becomes a canvas to tell your story honestly.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE 5-LAYER SENSORY METHOD -->
+    <section class="py-14 md:py-18 bg-white border-b border-brand-gold/20">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-10 md:mb-12">
+                <span class="text-brand-gold-dark font-sans font-bold tracking-widest uppercase text-xs block mb-2">Our Step-by-Step Storytelling Process</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-navy mb-4">The 5-Layer Sensory Framework</h2>
+                <p class="text-xs md:text-sm text-brand-dark/75 leading-relaxed">
+                    Instead of staring at a blank canvas or feeling pressured to copy a sample cake, we walk through five self-guided stages to translate what you feel into physical form:
+                </p>
+            </div>
+
+            <!-- ORIGIN CALLOUT: THE HEART -->
+            <div class="max-w-4xl mx-auto mb-10 bg-brand-light rounded-2xl p-6 border-2 border-brand-gold/30 text-center shadow-sm">
+                <span class="text-[10px] font-sans font-bold uppercase tracking-widest text-brand-gold-dark block mb-1">Starting Baseline</span>
+                <h3 class="font-serif text-xl font-bold text-brand-navy mb-2">The Heart (The Origin)</h3>
+                <p class="text-xs text-brand-dark/80 max-w-2xl mx-auto font-sans leading-relaxed">
+                    Where are you starting today? Are you tired, anxious, joyful, or overstimulated? We do not judge the feeling; we simply name it. This is your unmasked mark on the map before picking up any tools.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-5">
+                
+                <!-- LAYER 1 -->
+                <div class="bg-brand-light p-5 rounded-2xl border border-brand-gold/20 flex flex-col justify-between shadow-sm">
+                    <div>
+                        <span class="text-[10px] font-sans font-bold uppercase tracking-widest text-brand-gold-dark block mb-2">Layer 1</span>
+                        <h3 class="font-serif text-base md:text-lg font-bold text-brand-navy mb-2">The Invitation</h3>
+                        <p class="text-[11px] font-serif italic text-brand-gold-dark mb-2">Color &amp; Atmosphere</p>
+                        <p class="text-xs text-brand-dark/80 leading-relaxed font-sans">
+                            What signal does your spirit need right now? Choose an earthy cooling palette to hush room noise, or a sunny dopamine pop to break through mental fatigue.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- LAYER 2 -->
+                <div class="bg-brand-light p-5 rounded-2xl border border-brand-gold/20 flex flex-col justify-between shadow-sm">
+                    <div>
+                        <span class="text-[10px] font-sans font-bold uppercase tracking-widest text-brand-gold-dark block mb-2">Layer 2</span>
+                        <h3 class="font-serif text-base md:text-lg font-bold text-brand-navy mb-2">The Memory</h3>
+                        <p class="text-[11px] font-serif italic text-brand-gold-dark mb-2">Shape &amp; Movement</p>
+                        <p class="text-xs text-brand-dark/80 leading-relaxed font-sans">
+                            What memory or feeling are you recreating? Use flowing curves for gentle ease, repetitive piped shells for rhythmic anxiety relief, or wild botanical carvings.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- LAYER 3 -->
+                <div class="bg-brand-light p-5 rounded-2xl border border-brand-gold/20 flex flex-col justify-between shadow-sm">
+                    <div>
+                        <span class="text-[10px] font-sans font-bold uppercase tracking-widest text-brand-gold-dark block mb-2">Layer 3</span>
+                        <h3 class="font-serif text-base md:text-lg font-bold text-brand-navy mb-2">The Anchor</h3>
+                        <p class="text-[11px] font-serif italic text-brand-gold-dark mb-2">Texture &amp; Touch</p>
+                        <p class="text-xs text-brand-dark/80 leading-relaxed font-sans">
+                            What physical feel brings you back to your body? Choose a soft velvet cushion to soothe overstimulation, or crisp crystals and sea salt to snap out of brain fog.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- LAYER 4 -->
+                <div class="bg-brand-light p-5 rounded-2xl border border-brand-gold/20 flex flex-col justify-between shadow-sm">
+                    <div>
+                        <span class="text-[10px] font-sans font-bold uppercase tracking-widest text-brand-gold-dark block mb-2">Layer 4</span>
+                        <h3 class="font-serif text-base md:text-lg font-bold text-brand-navy mb-2">The Strategy</h3>
+                        <p class="text-[11px] font-serif italic text-brand-gold-dark mb-2">Placement &amp; Reach</p>
+                        <p class="text-xs text-brand-dark/80 leading-relaxed font-sans">
+                            Where do elements belong based on your social battery? Protect your energy in a centered core, draw protective border frames, or scatter radial blooms outward.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- LAYER 5 -->
+                <div class="bg-brand-light p-5 rounded-2xl border border-brand-gold/20 flex flex-col justify-between shadow-sm">
+                    <div>
+                        <span class="text-[10px] font-sans font-bold uppercase tracking-widest text-brand-gold-dark block mb-2">Layer 5</span>
+                        <h3 class="font-serif text-base md:text-lg font-bold text-brand-navy mb-2">The Magic</h3>
+                        <p class="text-[11px] font-serif italic text-brand-gold-dark mb-2">The Shift &amp; Final Ritual</p>
+                        <p class="text-xs text-brand-dark/80 leading-relaxed font-sans">
+                            Take a conscious breath and observe how the heaviness lifted. Add a splatter of gold luster or a delicate blossom to declare your story complete.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- VISUAL SPOTLIGHT: TWO CREATIVE TRACKS -->
+    <section class="py-14 md:py-18 bg-brand-light border-b border-brand-gold/20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="text-center max-w-2xl mx-auto mb-10 md:mb-12">
+                <span class="text-brand-gold-dark font-sans font-bold tracking-widest uppercase text-xs block mb-2">What You Will Create</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-navy">Two Studio Mediums</h2>
+                <p class="text-xs md:text-sm text-brand-dark/75 mt-2">Choose between a permanent keepsake sculpture or fresh edible cake art.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+                
+                <!-- TRACK 1: KEEPSAKE SCULPTURE -->
+                <div class="bg-white rounded-3xl border border-brand-gold/30 p-6 md:p-8 shadow-lg flex flex-col justify-between">
+                    <div>
+                        <div class="w-full aspect-[4/3] bg-brand-navy rounded-2xl p-4 flex items-center justify-center border-2 border-brand-gold/40 shadow-inner overflow-hidden mb-5 relative">
+                            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.05),transparent)] pointer-events-none"></div>
+                            <img src="images/IMG_7606.jpeg" alt="3D Keepsake Cake Sculpture with Comfort Seal" class="max-h-full max-w-full object-contain drop-shadow-[0_10px_18px_rgba(0,0,0,0.5)] rounded-lg">
+                        </div>
+                        <span class="inline-block bg-brand-navy text-brand-gold font-sans font-bold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full mb-2">Track A &bull; Permanent Keepsake</span>
+                        <h3 class="font-serif text-2xl font-bold text-brand-navy mb-1">Keepsake Cake Sculptures</h3>
+                        <p class="text-xs font-serif italic text-brand-gold-dark mb-3">Permanent Tactile Art for Home or Office</p>
+                        
+                        <p class="text-xs text-brand-dark/80 leading-relaxed font-sans mb-4">
+                            Pipe whipped sculpting paste onto a 4x6-inch 3D sculpting form using palette knives, raw quartz gemstones, and pressed botanicals. Finished on a gold presentation drum with our studio comfort seal, this is a permanent decorative piece for your desk or home that never spoils.
+                        </p>
+                    </div>
+                    <ul class="text-[11px] text-brand-dark/75 space-y-1.5 font-sans border-t border-brand-gold/15 pt-4">
+                        <li>✦ <strong>Materials:</strong> Sculpting paste, mineral pigments, quartz gems, dried florals</li>
+                        <li>✦ <strong>Finish:</strong> Permanent decorative keepsake for your desk, shelf, or tabletop</li>
+                        <li>✦ <strong>Availability:</strong> Public sessions, private team retreats, and virtual shipped kits</li>
+                    </ul>
+                </div>
+
+                <!-- TRACK 2: THE CAKE CANVAS -->
+                <div class="bg-white rounded-3xl border border-brand-gold/30 p-6 md:p-8 shadow-lg flex flex-col justify-between">
+                    <div>
+                        <div class="w-full aspect-[4/3] bg-brand-navy rounded-2xl p-4 flex items-center justify-center border-2 border-brand-gold/40 shadow-inner overflow-hidden mb-5 relative">
+                            <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.05),transparent)] pointer-events-none"></div>
+                            <img src="images/IMG_6660.jpeg" alt="The Cake Canvas Painted Cake with Buttercream" class="max-h-full max-w-full object-contain drop-shadow-[0_10px_18px_rgba(0,0,0,0.5)] rounded-lg">
+                        </div>
+                        <span class="inline-block bg-brand-gold text-brand-navy font-sans font-bold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full mb-2">Track B &bull; Fresh &amp; Edible</span>
+                        <h3 class="font-serif text-2xl font-bold text-brand-navy mb-1">The Cake Canvas</h3>
+                        <p class="text-xs font-serif italic text-brand-gold-dark mb-3">Edible Painting, Textured Piping &amp; Creative Expression</p>
+                        
+                        <p class="text-xs text-brand-dark/80 leading-relaxed font-sans mb-4">
+                            Your cake is your canvas. There are zero technical pastry tests, rigid piping rules, or perfection pressure here. Using artist paintbrushes, palette knives, specialty piping tips, and whipped artisan buttercreams, explore soothing textures and paint pre-baked mini cake layers however you feel led. Finish with edible gems and take home your boxed creation ready to enjoy.
+                        </p>
+                    </div>
+                    <ul class="text-[11px] text-brand-dark/75 space-y-1.5 font-sans border-t border-brand-gold/15 pt-4">
+                        <li>✦ <strong>Materials:</strong> Fresh cake layers, artisan buttercreams, confectionery gems, piping tips</li>
+                        <li>✦ <strong>Techniques:</strong> Paintbrush color washes, palette knife sweeps, dimensional piping</li>
+                        <li>✦ <strong>Safe Transport:</strong> Sturdy 8-inch window bakery box included with every seat</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 3-TIER PRICING & BOOKING -->
+    <section id="tiers" class="py-14 md:py-18 bg-brand-light">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="text-center mb-10 md:mb-12">
+                <span class="text-brand-gold-dark font-sans font-bold tracking-widest uppercase text-xs block mb-2">Ways to Gather</span>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-navy">Choose Your Workshop</h2>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
+                
+                <!-- TIER 1 -->
+                <div id="tier1" class="bg-brand-navy px-6 py-8 rounded-3xl shadow-lg border border-brand-gold/20 flex flex-col">    
+                    <span class="text-brand-gold font-sans font-bold tracking-widest uppercase text-[10px] block mb-1">Tier 1 &bull; Individual Seats</span>
+                    <h3 class="font-serif text-2xl font-bold text-white mb-1">Public Studio Seat</h3>
+                    <p class="text-brand-gold font-bold text-xs mb-3">Scheduled Dates &bull; McKinney &amp; DFW Venues</p>
+                    <p class="font-sans font-bold text-3xl text-white mb-1">$85 <span class="text-xs font-normal text-brand-light/60">/ Seat</span></p>
+                    <span class="text-[10px] font-sans text-brand-gold mb-4 font-medium">(Studio tools provided for session use &bull; Take home your finished creation)</span>
+
+                    <p class="text-xs text-brand-light/80 font-sans leading-relaxed mb-6">
+                        Reserve a personal seat at an upcoming studio table. Choose the medium track that fits what you want to explore:
+                    </p>
+
+                    <div class="bg-brand-card/60 p-4 rounded-xl text-xs font-sans text-brand-light/90 mb-6 space-y-2.5 border border-brand-gold/10 flex-grow">      
+                        <strong class="text-brand-gold font-serif block text-xs">Included At Your Seat:</strong>
+                        <p class="text-[11px]"><strong>✦ Keepsake Cake Sculpture Track:</strong> Pipe lightweight sculpting medium onto a 4x6-inch 3D sculpting form using palette knives, raw gemstones, and dried botanicals.</p>
+                        <p class="text-[11px]"><strong>✦ The Cake Canvas Track:</strong> Use paintbrushes, palette knives, and piping tips to paint and texture pre-baked mini cake layers with gourmet buttercreams and confectionery gems.</p>
+                        <p class="text-[11px]"><strong>✦ Carry-Home Bakery Box:</strong> Every seat includes all materials to complete your piece, plus an 8-inch window bakery box to carry your creation home safely.</p>
+                        <p class="text-[11px] text-brand-gold pt-2 border-t border-brand-gold/15"><strong>✦ Optional Take-Home Studio Kit:</strong> Want to keep practicing at home? Add a complete DIY Studio Kit for $50 (Save $18 off our standard $68 retail price) during checkout or at your workshop table.</p>
+                    </div>
+
+                    <div class="space-y-3 mt-auto pt-2">
+                        <a href="https://square.link/u/hNKitO2s" target="_blank" rel="noopener" class="block text-center bg-brand-gold text-brand-navy font-sans font-bold py-3.5 px-4 rounded-full hover:bg-white transition-all uppercase tracking-widest text-[10px] shadow-sm border border-brand-gold">
+                            Reserve Keepsake Sculpture Seat ($85)
+                        </a>
+                        <a href="https://square.link/u/qFrG9ghO" target="_blank" rel="noopener" class="block text-center bg-white text-brand-navy font-sans font-bold py-3.5 px-4 rounded-full hover:bg-brand-gold hover:border-brand-gold transition-all uppercase tracking-widest text-[10px] shadow-sm border border-transparent">
+                            Reserve Cake Canvas Seat ($85)
+                        </a>
+                    </div>
+                </div>
+
+                <!-- TIER 2 (WITH QUICK POPUP MODAL BUTTON) -->
+                <div id="tier2" class="bg-white px-6 py-8 rounded-3xl shadow-lg border-2 border-brand-gold flex flex-col relative">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-gold text-brand-navy text-[9px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-sm whitespace-nowrap">
+                        Most Popular for In-Person &amp; Hybrid Teams
+                    </div>
+
+                    <span class="text-brand-gold-dark font-sans font-bold tracking-widest uppercase text-[10px] block mb-1 mt-1">Tier 2 &bull; Private In-Person &amp; Hybrid</span>
+                    <h3 class="font-serif text-2xl text-brand-navy font-bold mb-1 tracking-tight">Private Local Gathering</h3>
+                    <p class="font-sans text-brand-gold-dark font-bold text-xs mb-3">On-Site at Your Office, Home, or Private Venue</p>
+                    <p class="font-sans font-bold text-3xl text-brand-navy mb-1">$135 <span class="text-xs font-normal text-brand-dark/60">/ Seat</span></p>
+                    <span class="text-[10px] font-sans text-brand-dark/60 mb-4 font-medium">($1,350 Minimum Base &bull; Local Seats + Remote Shipped Kits Count Together)</span>
+                    
+                    <p class="text-xs text-brand-dark/80 font-sans leading-relaxed mb-4">
+                        We bring the entire studio experience directly to your workplace, home, or event space with every tool, sculpting form, pigment jar, and dropcloth ready to go.
+                    </p>
+
+                    <div class="bg-brand-light/60 p-4 rounded-xl text-xs font-sans text-brand-dark/90 mb-6 space-y-2.5 border border-brand-gold/10 flex-grow">
+                        <strong class="text-brand-navy font-serif block text-xs">Workshop Details:</strong>
+                        <p class="text-[11px]"><strong>✦ Schedule on Your Time:</strong> Select the exact morning or evening that works best for your group.</p>
+                        <p class="text-[11px]"><strong>✦ Your Choice of Medium:</strong> Choose between gourmet edible mini cakes or lasting keepsake sculptures.</p>
+                        <p class="text-[11px]"><strong>✦ Hybrid Team Add-On:</strong> Ship matching kits ($145/kit plus $12 flat ground shipping) to remote coworkers so everyone creates together live on camera!</p>
+                    </div>
+
+                    <button type="button" onclick="openInquiryModal('Tier 2: Private Local Gathering ($135/seat)')" class="block w-full text-center bg-brand-navy text-white font-sans font-bold py-3.5 px-4 rounded-full hover:bg-brand-gold hover:text-brand-navy transition-all uppercase tracking-widest text-[11px] mt-auto shadow-md">
+                        Interested in Booking? Contact Me!
+                    </button>
+                </div>
+
+                <!-- TIER 3 (WITH QUICK POPUP MODAL BUTTON) -->
+                <div id="tier3" class="bg-brand-navy text-white px-6 py-8 rounded-3xl shadow-xl border border-brand-gold/30 flex flex-col relative mt-4 lg:mt-0">
+                    <span class="text-brand-gold font-sans font-bold tracking-widest uppercase text-[10px] block mb-1">Tier 3 &bull; Remote Virtual Workshop</span>
+                    <h3 class="font-serif text-2xl font-bold text-white mb-1 tracking-tight leading-tight">Remote Shipped Workshops</h3>
+                    <p class="font-sans text-brand-gold font-bold text-xs mb-3">Delivered Directly to Remote Doors Nationwide</p>
+                    <p class="font-sans font-bold text-3xl text-white mb-1">$145 <span class="text-xs font-normal text-brand-light/60">/ Seat</span></p>
+                    <span class="text-[10px] font-sans text-brand-light/60 mb-4 font-medium">(100% Virtual Teams &bull; $1,450 Event Base &bull; $12/kit Flat Ground Shipping)</span>
+
+                    <p class="text-xs text-brand-light/80 font-sans leading-relaxed mb-4">
+                        Complete keepsake cake sculpture kits delivered straight to coworkers' doorsteps nationwide for a relaxed, camera-optional virtual retreat.
+                    </p>
+                    
+                    <div class="bg-brand-card/70 p-4 rounded-2xl border border-brand-gold/20 mb-6 text-xs font-sans space-y-2.5 flex-grow">
+                        <strong class="text-brand-gold font-serif block text-xs">Included in Each Kit:</strong>
+                        <p class="text-[11px] text-brand-light/90"><strong>✦ Complete Keepsake Kit:</strong> 4x6-inch 3D sculpting form, base drum, whipped spackle, 6-color palette, gemstones, piping tips, and dried botanicals.</p>
+                        <p class="text-[11px] text-brand-light/90"><strong>✦ Doorstep Tracking:</strong> Individualized tracking sent directly to each participant.</p>
+                        <p class="text-[11px] text-brand-light/90"><strong>✦ Live Virtual Gathering:</strong> 60 to 90 minute calm session guided live step-by-step.</p>
+                    </div>
+
+                    <button type="button" onclick="openInquiryModal('Tier 3: Remote Virtual Workshop ($145/seat)')" class="block w-full text-center bg-brand-gold text-brand-navy font-sans font-bold py-3.5 px-4 rounded-full hover:bg-white transition-all uppercase tracking-widest text-[11px] mt-auto shadow-md">
+                        Interested in Booking? Contact Me!
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION -->
+    <section class="py-14 bg-brand-light border-t border-brand-gold/10">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="font-serif text-3xl text-brand-navy text-center mb-10 font-bold">Frequently Asked Questions</h2>
+            <div class="space-y-4 font-sans">
+                
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-brand-gold/20">
+                    <h3 class="font-serif text-lg text-brand-gold-dark font-bold mb-2">Do I need any cake decorating or art experience?</h3>
+                    <p class="text-brand-dark/90 leading-relaxed text-xs md:text-sm">Not at all. In fact, most people who attend have never touched a palette knife or piping bag before. This experience is designed for complete beginners and overstimulated minds. There is no right or wrong way to make your piece, and you cannot ruin it.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-brand-gold/20">
+                    <h3 class="font-serif text-lg text-brand-gold-dark font-bold mb-2">How do hybrid team bookings work?</h3>
+                    <p class="text-brand-dark/90 leading-relaxed text-xs md:text-sm">Hybrid bookings are simple. If you book an in-person Private Local Gathering ($135/seat, meeting our 10-seat event minimum), you can add individual shipped kits ($145/kit plus $12 flat ground shipping) for remote colleagues. They receive their keepsake sculpture kits at home and join directly into the live video session with your local group.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-brand-gold/20">
+                    <h3 class="font-serif text-lg text-brand-gold-dark font-bold mb-2">What is the difference between Keepsake Sculpture and The Cake Canvas tracks?</h3>
+                    <p class="text-brand-dark/90 leading-relaxed text-xs md:text-sm">The <strong>Keepsake Cake Sculpture Track</strong> uses a 4x6-inch 3D sculpting form, whipped spackle medium, palette knives, gemstones, and botanicals to make a permanent desk or home art piece. <strong>The Cake Canvas Track</strong> uses freshly baked mini cakes, gourmet buttercreams, paintbrushes, palette knives, and confectionery gems to make a delicious edible creation to enjoy at home.</p>
+                </div>
+
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-brand-gold/20">
+                    <h3 class="font-serif text-lg text-brand-gold-dark font-bold mb-2">Are shipped virtual corporate kits edible or non-edible?</h3>
+                    <p class="text-brand-dark/90 leading-relaxed text-xs md:text-sm">Shipped virtual kits are exclusively non-edible keepsake sculptures. This ensures all materials arrive in clean condition without perishable food risks, giving participants a permanent decorative keepsake for their home or office.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-brand-dark text-brand-gray border-t border-brand-gold/20 font-sans text-xs">
+        <div class="max-w-2xl mx-auto px-6 py-8">
+            <div class="flex flex-col items-center">
+                
+                <div class="flex justify-center space-x-6 mb-6 text-brand-light">
+                    <a href="https://www.instagram.com/thegildedspoonshoppe/" target="_blank" class="hover:text-brand-gold transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919 4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/dimple.mckinney" target="_blank" class="hover:text-brand-gold transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.494v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.323-1.325z"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/dimple-mckinney/" target="_blank" class="hover:text-brand-gold transition-colors">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                </div>
+
+                <div class="flex flex-row justify-center space-x-8 mb-6 text-brand-light font-medium text-[10px] uppercase tracking-[0.2em]">
+                    <a href="contact.html" class="hover:text-brand-gold transition-colors">Contact Us</a>
+                    <a href="partnerships.html" class="hover:text-brand-gold transition-colors">Partnerships</a>
+                    <a href="policies.html" class="hover:text-brand-gold transition-colors">Order Fulfillment &amp; Delivery</a>
+                </div>
+
+            </div>
+
+            <div class="pt-6 border-t border-brand-gray/10 text-center">
+                <p class="font-serif text-brand-light/30 text-xs mb-3">
+                    &copy; 2026 The Gilded Spoon Shoppe | McKinney, Texas
+                </p>
+                <p class="max-w-xl mx-auto font-sans text-[9px] leading-relaxed text-brand-gray/20 italic">
+                    Disclaimer: The Gilded Spoon Shoppe provides sensory design education. It is not a substitute for professional medical advice, diagnosis, or occupational therapy. Edible products are prepared in a home kitchen that handles allergens including wheat, dairy, eggs, soy, and nuts.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- QUICK PRIVATE GATHERING INQUIRY MODAL -->
+    <div id="inquiry-modal" class="fixed inset-0 bg-brand-navy/80 backdrop-blur-md z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="bg-white rounded-3xl border-2 border-brand-gold/40 shadow-2xl max-w-lg w-full p-6 sm:p-8 relative max-h-[90vh] overflow-y-auto text-left">
+            <button type="button" onclick="closeInquiryModal()" class="absolute top-5 right-5 text-brand-dark/40 hover:text-brand-navy text-2xl font-bold focus:outline-none transition-colors" aria-label="Close modal">
+                &times;
+            </button>
+
+            <span class="text-brand-gold-dark font-sans font-bold text-[10px] uppercase tracking-widest block mb-1">Direct Studio Inquiry</span>
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-brand-navy mb-2">Interested in Booking?</h3>
+            <p class="text-xs sm:text-sm text-brand-dark/75 font-sans mb-5 leading-relaxed">
+                Leave your details below and we will reach out directly to check dates, answer questions, and plan your gathering.
+            </p>
+
+            <form id="quick-inquiry-form" class="space-y-4" onsubmit="handleQuickInquiry(event)">
+                <div>
+                    <label class="block text-[11px] font-bold uppercase tracking-wider text-brand-navy mb-1.5">Selected Gathering Type</label>
+                    <input type="text" id="modal-tier" name="gathering_type" readonly class="w-full bg-brand-light/70 border border-brand-gold/30 rounded-xl px-4 py-2.5 text-xs text-brand-navy font-semibold focus:outline-none">
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+                    <div>
+                        <label for="modal-name" class="block text-[11px] font-bold uppercase tracking-wider text-brand-navy mb-1.5">Your Name *</label>
+                        <input type="text" id="modal-name" name="name" required placeholder="e.g. Eleanor Vance" class="w-full bg-brand-light/40 border border-brand-gold/30 rounded-xl px-3.5 py-2.5 text-xs text-brand-dark focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold">
+                    </div>
+                    <div>
+                        <label for="modal-email" class="block text-[11px] font-bold uppercase tracking-wider text-brand-navy mb-1.5">Email Address *</label>
+                        <input type="email" id="modal-email" name="email" required placeholder="you@example.com" class="w-full bg-brand-light/40 border border-brand-gold/30 rounded-xl px-3.5 py-2.5 text-xs text-brand-dark focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold">
+                    </div>
+                </div>
+
+                <div>
+                    <label for="modal-phone" class="block text-[11px] font-bold uppercase tracking-wider text-brand-navy mb-1.5">Phone Number *</label>
+                    <input type="tel" id="modal-phone" name="phone" required placeholder="e.g. (214) 555-0199" class="w-full bg-brand-light/40 border border-brand-gold/30 rounded-xl px-3.5 py-2.5 text-xs text-brand-dark focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold">
+                </div>
+
+                <div>
+                    <label class="block text-[11px] font-bold uppercase tracking-wider text-brand-navy mb-1.5">How would you prefer we contact you? *</label>
+                    <div class="grid grid-cols-3 gap-2.5">
+                        <label class="flex items-center justify-center p-2.5 rounded-xl border border-brand-gold/30 cursor-pointer text-xs font-sans text-brand-dark hover:bg-brand-light transition-colors has-[:checked]:bg-brand-navy has-[:checked]:text-white has-[:checked]:border-brand-navy">
+                            <input type="radio" name="preferred_contact" value="Text" checked class="sr-only">
+                            <span>Text (Fastest)</span>
+                        </label>
+                        <label class="flex items-center justify-center p-2.5 rounded-xl border border-brand-gold/30 cursor-pointer text-xs font-sans text-brand-dark hover:bg-brand-light transition-colors has-[:checked]:bg-brand-navy has-[:checked]:text-white has-[:checked]:border-brand-navy">
+                            <input type="radio" name="preferred_contact" value="Phone Call" class="sr-only">
+                            <span>Phone Call</span>
+                        </label>
+                        <label class="flex items-center justify-center p-2.5 rounded-xl border border-brand-gold/30 cursor-pointer text-xs font-sans text-brand-dark hover:bg-brand-light transition-colors has-[:checked]:bg-brand-navy has-[:checked]:text-white has-[:checked]:border-brand-navy">
+                            <input type="radio" name="preferred_contact" value="Email" class="sr-only">
+                            <span>Email</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="modal-details" class="block text-[11px] font-bold uppercase tracking-wider text-brand-navy mb-1.5">Estimated Group Size &amp; Target Timing (Optional)</label>
+                    <input type="text" id="modal-details" name="details" placeholder="e.g. About 12 people, hoping for a Friday in November" class="w-full bg-brand-light/40 border border-brand-gold/30 rounded-xl px-3.5 py-2.5 text-xs text-brand-dark focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold">
+                </div>
+
+                <div class="pt-2">
+                    <button type="submit" class="w-full bg-brand-navy text-white font-sans text-xs font-bold uppercase tracking-widest py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-navy transition-all shadow-md">
+                        Contact Me About This Gathering!
+                    </button>
+                </div>
+                <p class="text-[10px] text-center text-brand-dark/50 font-sans italic">
+                    We respect your time. Zero sales spam, just direct communication from our studio.
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script>
+        const hamburgerButton = document.getElementById('hamburger-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        if (hamburgerButton) {
+            hamburgerButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
+        }
+
+        const inquiryModal = document.getElementById('inquiry-modal');
+        const modalTierInput = document.getElementById('modal-tier');
+
+        function openInquiryModal(gatheringType) {
+            if (modalTierInput) {
+                modalTierInput.value = gatheringType;
+            }
+            if (inquiryModal) {
+                inquiryModal.classList.remove('opacity-0', 'pointer-events-none');
+                inquiryModal.classList.add('opacity-100');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeInquiryModal() {
+            if (inquiryModal) {
+                inquiryModal.classList.remove('opacity-100');
+                inquiryModal.classList.add('opacity-0', 'pointer-events-none');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        if (inquiryModal) {
+            inquiryModal.addEventListener('click', (e) => {
+                if (e.target === inquiryModal) {
+                    closeInquiryModal();
+                }
+            });
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && inquiryModal && !inquiryModal.classList.contains('pointer-events-none')) {
+                closeInquiryModal();
+            }
+        });
+
+        function handleQuickInquiry(event) {
+            event.preventDefault();
+            const form = event.target;
+            const name = form.name.value;
+            const preferred = form.preferred_contact.value;
+            const tier = form.gathering_type.value;
+
+            alert('Thank you, ' + name + '! We have received your inquiry for ' + tier + '. We will reach out to you via ' + preferred + ' shortly.');
+            form.reset();
+            closeInquiryModal();
+        }
+    </script>
+</body>
+</html>
