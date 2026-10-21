@@ -315,7 +315,7 @@
                 layer1: "High-contrast palette pairing ivory semi-naked frosting with deep midnight black coconut and fresh blush pink florals.",
                 layer2: "Smooth flat side scraping providing a clean pedestal for the dramatic floral crown.",
                 layer3: "Hand-dyed jet black shredded coconut creating coarse tactile contrast against soft velvet rose petals.",
-                layer4: "Concentrated center crown pooling the black coconut bed in the middle to elevate the fresh flowers.",
+                layer4: "Concentrated center crown pooling the black coconut bed in the middle to lift the fresh flowers.",
                 layer5: "Fresh pink garden roses, lisianthus, and magenta globe amaranth blossoms set into the dark coconut base.",
                 note: "Made for a birthday celebration, exploring bold color drama by hand-tinting shredded coconut into a midnight bed for garden roses."
             },
@@ -328,7 +328,7 @@
                 layer1: "Crisp ivory frosting base with deep peacock teal, cobalt blue, warm coral, and sage green blossoms.",
                 layer2: "Hand-sculpted multi-petal dahlia, garden rose, and blossom gestures.",
                 layer3: "Velvety smooth frosting base topped with dimensional, raised sugar petals and detailed leaf veining.",
-                layer4: "Full circular garden crown layout nestled gracefully across the top dome.",
+                layer4: "Full circular garden crown layout placed gracefully across the top dome.",
                 layer5: "Fine piped yellow stamen centers detailing each individual blossom.",
                 note: "A top view detail of the botanical coconut cake, capturing the intricate hand-piped floral work before transport."
             },
@@ -355,7 +355,7 @@
                 layer2: "Hand-piped dimensional hydrangeas, closed-star rosettes, and delicate leaf tips.",
                 layer3: "Flaked toasted coconut providing physical crunch and texture against smooth frosting.",
                 layer4: "Lush botanical wreath framing the perimeter of the cake top.",
-                layer5: "Whole dried botanical buds nestled between the piped floral clusters.",
+                layer5: "Whole dried botanical buds placed between the piped floral clusters.",
                 note: "Designed around a love of rich toasted coconut flavor and deep blue floral gardens."
             },
             { 
@@ -421,7 +421,7 @@
                 layer3: "Smooth top canvas contrasted with crisp, ruffled border piping.",
                 layer4: "Centered protective shield layout with an arched personalized birthday banner.",
                 layer5: "Continuous star border sealing the outer edge.",
-                note: "Donated through For Goodness Cakes, an organization matching volunteer bakers with foster youth and children overcoming adversity to ensure every child receives a custom birthday cake."
+                note: "Donated through For Goodness Cakes, an organization matching volunteer bakers with support youth and children overcoming adversity to ensure every child receives a custom birthday cake."
             },
             { 
                 categories: ["milestone"],
@@ -563,7 +563,7 @@
                 layer2: "Hand-carved wood grain bark ridges and dense multi-opening grass tip piping.",
                 layer3: "Granulated sugar crystal coating on the sculpted bunny tail, smooth chocolate eggs, and sugar carrot toppers.",
                 layer4: "Circular garden meadow boundary framing a playful central character.",
-                layer5: "Miniature umbrella handle and pastel chocolate eggs nestled around the base.",
+                layer5: "Miniature umbrella handle and pastel chocolate eggs placed around the base.",
                 note: "A joyful spring centerpiece featuring a fondant bunny diving into the grass, layered with fresh seasonal pineberries."
             },
             { 
@@ -630,85 +630,7 @@
                 layer4: "Scatter distribution of gold leaf guiding focus toward the top celebration candle.",
                 layer5: "Top crest flecked with gold leaf and finished with a glowing celebration candle.",
                 note: "Baked for a birthday celebration, combining gentle pastel watercolor tones with aromatic orange blossom and roasted almond flavors."
-            }
-        ];
-
-        let currentFilteredData = [...masterPortfolioData];
-        let currentIndex = 0;
-
-        const galleryGrid = document.getElementById('gallery-grid');
-        const lightbox = document.getElementById('lightbox');
-        const lightboxImg = document.getElementById('lightbox-img');
-        const lightboxTitle = document.getElementById('lightbox-title');
-        const lightboxTag = document.getElementById('lightbox-tag');
-        const lightboxMeta = document.getElementById('lightbox-meta');
-        const layer1 = document.getElementById('layer-1');
-        const layer2 = document.getElementById('layer-2');
-        const layer3 = document.getElementById('layer-3');
-        const layer4 = document.getElementById('layer-4');
-        const layer5 = document.getElementById('layer-5');
-        const lightboxNote = document.getElementById('lightbox-note');
-
-        function renderGallery() {
-            galleryGrid.innerHTML = '';
-            currentFilteredData.forEach((item, index) => {
-                const card = document.createElement('div');
-                card.className = "gallery-item block relative group cursor-pointer bg-brand-card/40 border border-brand-gold/15 rounded-2xl overflow-hidden hover:border-brand-gold/40 transition-all p-3 flex flex-col justify-between";
-                card.onclick = () => openLightbox(index);
-                card.innerHTML = `
-                    <div class="w-full h-64 sm:h-72 flex items-center justify-center overflow-hidden rounded-xl bg-brand-dark/20 mb-3">
-                        <img src="${item.src}" alt="${item.title}" class="max-h-full max-w-full object-contain rounded-lg transition-transform duration-300 group-hover:scale-95 drop-shadow-md">
-                    </div>
-                    <div class="text-left px-1">
-                        <span class="text-brand-gold text-[10px] font-sans uppercase tracking-widest font-bold block mb-1">${item.tag}</span>
-                        <h3 class="text-white text-sm font-serif font-bold leading-snug line-clamp-2">${item.title}</h3>
-                    </div>
-                `;
-                galleryGrid.appendChild(card);
-            });
-        }
-
-        function filterGallery(category) {
-            const buttons = document.querySelectorAll('.filter-btn');
-            buttons.forEach(btn => {
-                if (btn.getAttribute('data-category') === category) {
-                    btn.classList.add('bg-brand-gold', 'text-brand-navy');
-                    btn.classList.remove('bg-brand-navy/60', 'text-brand-light');
-                } else {
-                    btn.classList.remove('bg-brand-gold', 'text-brand-navy');
-                    btn.classList.add('bg-brand-navy/60', 'text-brand-light');
-                }
-            });
-
-            if (category === 'all') {
-                currentFilteredData = [...masterPortfolioData];
-            } else {
-                currentFilteredData = masterPortfolioData.filter(item => item.categories.includes(category));
-            }
-            renderGallery();
-        }
-
-        function openLightbox(index) {
-            currentIndex = index;
-            updateLightboxContent();
-            lightbox.classList.add('active');
-            document.body.style.overflow = 'hidden'; 
-        }
-
-        function closeLightbox() {
-            lightbox.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-
-        function changeImage(direction) {
-            currentIndex += direction;
-            if (currentIndex >= currentFilteredData.length) currentIndex = 0;
-            if (currentIndex < 0) currentIndex = currentFilteredData.length - 1;
-            updateLightboxContent();
-        }
-
-        function updateLightboxContent() { 
-            const data = currentFilteredData[currentIndex,
+            },
             { 
                 categories: ["painted"],
                 src: "images/IMG_0356.jpeg", 
@@ -802,6 +724,82 @@
             }
         ];
 
+        let currentFilteredData = [...masterPortfolioData];
+        let currentIndex = 0;
+
+        const galleryGrid = document.getElementById('gallery-grid');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const lightboxTitle = document.getElementById('lightbox-title');
+        const lightboxTag = document.getElementById('lightbox-tag');
+        const lightboxMeta = document.getElementById('lightbox-meta');
+        const layer1 = document.getElementById('layer-1');
+        const layer2 = document.getElementById('layer-2');
+        const layer3 = document.getElementById('layer-3');
+        const layer4 = document.getElementById('layer-4');
+        const layer5 = document.getElementById('layer-5');
+        const lightboxNote = document.getElementById('lightbox-note');
+
+        function renderGallery() {
+            galleryGrid.innerHTML = '';
+            currentFilteredData.forEach((item, index) => {
+                const card = document.createElement('div');
+                card.className = "gallery-item block relative group cursor-pointer bg-brand-card/40 border border-brand-gold/15 rounded-2xl overflow-hidden hover:border-brand-gold/40 transition-all p-3 flex flex-col justify-between";
+                card.onclick = () => openLightbox(index);
+                card.innerHTML = `
+                    <div class="w-full h-64 sm:h-72 flex items-center justify-center overflow-hidden rounded-xl bg-brand-dark/20 mb-3">
+                        <img src="${item.src}" alt="${item.title}" class="max-h-full max-w-full object-contain rounded-lg transition-transform duration-300 group-hover:scale-95 drop-shadow-md">
+                    </div>
+                    <div class="text-left px-1">
+                        <span class="text-brand-gold text-[10px] font-sans uppercase tracking-widest font-bold block mb-1">${item.tag}</span>
+                        <h3 class="text-white text-sm font-serif font-bold leading-snug line-clamp-2">${item.title}</h3>
+                    </div>
+                `;
+                galleryGrid.appendChild(card);
+            });
+        }
+
+        function filterGallery(category) {
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => {
+                if (btn.getAttribute('data-category') === category) {
+                    btn.classList.add('bg-brand-gold', 'text-brand-navy');
+                    btn.classList.remove('bg-brand-navy/60', 'text-brand-light');
+                } else {
+                    btn.classList.remove('bg-brand-gold', 'text-brand-navy');
+                    btn.classList.add('bg-brand-navy/60', 'text-brand-light');
+                }
+            });
+
+            if (category === 'all') {
+                currentFilteredData = [...masterPortfolioData];
+            } else {
+                currentFilteredData = masterPortfolioData.filter(item => item.categories.includes(category));
+            }
+            renderGallery();
+        }
+
+        function openLightbox(index) {
+            currentIndex = index;
+            updateLightboxContent();
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden'; 
+        }
+
+        function closeLightbox() {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        function changeImage(direction) {
+            currentIndex += direction;
+            if (currentIndex >= currentFilteredData.length) currentIndex = 0;
+            if (currentIndex < 0) currentIndex = currentFilteredData.length - 1;
+            updateLightboxContent();
+        }
+
+        function updateLightboxContent() { 
+            const data = currentFilteredData[currentIndex];
             lightboxImg.src = data.src; 
             lightboxTitle.textContent = data.title;
             lightboxTag.textContent = data.tag;
