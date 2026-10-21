@@ -18,14 +18,16 @@
             theme: {
                 extend: {
                     colors: {
-                        'brand-dark': '#1C161E',
-                        'brand-light': '#F4F1ED',
-                        'brand-gold': '#D4AF37',
+                        'brand-dark': '#2A272A',      /* Soft Charcoal */
+                        'brand-light': '#F4F1ED',     /* Warm Linen / Parchment */
+                        'brand-gold': '#D4AF37',      /* Muted Gold */
                         'brand-gold-hover': '#E2C76A',
                         'brand-gold-dark': '#8C6D18',
                         'brand-gray': '#A09DA6',
-                        'brand-card': '#2A232F',
-                        'brand-clay': '#3B2C27'
+                        'brand-terracotta': '#C17767',/* Terracotta accent */
+                        'brand-blush': '#E8D5D1',     /* Soft Blush */
+                        'brand-oak': '#2A3428',       /* Shadowy, Chalky Dark Green (Ancient Oak) */
+                        'brand-sand': '#E3D8C8'       /* Tan/Sand */
                     },
                     fontFamily: {
                         'serif': ['"Playfair Display"', 'serif'],
@@ -40,7 +42,7 @@
     <style>
         .bg-texture { background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png'); }
         
-        .lightbox-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(10, 35, 66, 0.95); display: flex; justify-content: center; align-items: center; z-index: 1000; opacity: 0; visibility: hidden; transition: opacity 0.3s ease; backdrop-filter: blur(10px); }
+        .lightbox-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(42, 52, 40, 0.95); display: flex; justify-content: center; align-items: center; z-index: 1000; opacity: 0; visibility: hidden; transition: opacity 0.3s ease; backdrop-filter: blur(10px); }
         .lightbox-overlay.active { opacity: 1; visibility: visible; }
         .lightbox-content { position: relative; width: 92vw; max-width: 1050px; max-height: 90vh; display: flex; justify-content: center; align-items: center; }
         
@@ -65,7 +67,7 @@
 <body class="font-sans bg-brand-light text-brand-dark antialiased">
 
     <!-- NAVIGATION -->
-    <nav class="sticky top-0 bg-brand-clay/95 backdrop-blur-lg shadow-lg z-50 border-b border-brand-gold/10">
+    <nav class="sticky top-0 bg-brand-oak/95 backdrop-blur-lg shadow-lg z-50 border-b border-brand-gold/10">
         <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
             <a href="index.html" class="text-2xl font-serif font-bold text-brand-gold text-center leading-none">
                 The Gilded Spoon
@@ -76,7 +78,7 @@
                 <a href="workshop.html" class="text-brand-light hover:text-brand-gold transition">Workshops</a>
                 <a href="flipbook.html" class="text-brand-gold font-bold transition">Portfolio</a>
                 <a href="contact.html" class="text-brand-light hover:text-brand-gold transition">Contact</a>
-                <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-clay hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm">
+                <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-oak hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm">
                     Free Guide
                 </a>
             </div>
@@ -86,19 +88,19 @@
                 </button>
             </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden mt-4 px-4 pb-4 bg-brand-clay text-center">
+        <div id="mobile-menu" class="hidden md:hidden mt-4 px-4 pb-4 bg-brand-oak text-center">
             <a href="shoppe.html" class="block py-3 text-brand-light uppercase tracking-widest">Shoppe</a>
             <a href="workshop.html" class="block py-3 text-brand-light uppercase tracking-widest">Workshops</a>
             <a href="flipbook.html" class="block py-3 text-brand-gold font-bold uppercase tracking-widest">Portfolio</a>
             <a href="contact.html" class="block py-3 text-brand-light uppercase tracking-widest">Contact</a>
-            <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-clay hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm inline-block mt-2">
+            <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-oak hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm inline-block mt-2">
                 Free Guide
             </a>
         </div>
     </nav>
 
     <!-- HEADER -->
-    <header class="text-center py-16 md:py-20 px-6 bg-brand-clay border-b border-brand-gold/10 relative overflow-hidden">
+    <header class="text-center py-16 md:py-20 px-6 bg-brand-oak border-b border-brand-gold/10 relative overflow-hidden">
         <div class="absolute inset-0 opacity-5 bg-texture"></div>
         <div class="max-w-4xl mx-auto px-6 relative z-10">
             <span class="text-brand-gold font-bold tracking-[0.4em] uppercase text-[10px] block mb-4">Celebration Cakes and Studio Works</span>
@@ -112,22 +114,22 @@
     <!-- CATEGORY FILTER TABS -->
     <section class="py-6 bg-brand-light/95 border-b border-brand-gold/20 sticky top-[73px] z-40 backdrop-blur-md">
         <div class="max-w-6xl mx-auto px-4 flex flex-wrap justify-center items-center gap-2 sm:gap-3 text-xs uppercase tracking-widest font-sans font-bold">
-            <button onclick="filterGallery('all')" class="filter-btn active py-2.5 px-5 rounded-full border border-brand-clay transition-all text-white bg-brand-clay shadow-sm" data-category="all">
+            <button onclick="filterGallery('all')" class="filter-btn active py-2.5 px-5 rounded-full border border-brand-oak transition-all text-white bg-brand-oak shadow-sm" data-category="all">
                 All Works
             </button>
-            <button onclick="filterGallery('classic')" class="filter-btn py-2.5 px-5 rounded-full border border-brand-gold/30 hover:border-brand-gold transition-all text-brand-clay bg-white shadow-sm" data-category="classic">
+            <button onclick="filterGallery('classic')" class="filter-btn py-2.5 px-5 rounded-full border border-brand-gold/30 hover:border-brand-gold transition-all text-brand-oak bg-white shadow-sm" data-category="classic">
                 Classic &amp; Heritage Bakes
             </button>
-            <button onclick="filterGallery('milestone')" class="filter-btn py-2.5 px-5 rounded-full border border-brand-gold/30 hover:border-brand-gold transition-all text-brand-clay bg-white shadow-sm" data-category="milestone">
+            <button onclick="filterGallery('milestone')" class="filter-btn py-2.5 px-5 rounded-full border border-brand-gold/30 hover:border-brand-gold transition-all text-brand-oak bg-white shadow-sm" data-category="milestone">
                 Milestones &amp; Birthdays
             </button>
-            <button onclick="filterGallery('sculpted')" class="filter-btn py-2.5 px-5 rounded-full border border-brand-gold/30 hover:border-brand-gold transition-all text-brand-clay bg-white shadow-sm" data-category="sculpted">
+            <button onclick="filterGallery('sculpted')" class="filter-btn py-2.5 px-5 rounded-full border border-brand-gold/30 hover:border-brand-gold transition-all text-brand-oak bg-white shadow-sm" data-category="sculpted">
                 Sculpted &amp; 3D Art
             </button>
-            <button onclick="filterGallery('botanical')" class="filter-btn py-2.5 px-5 rounded-full border border-brand-gold/30 hover:border-brand-gold transition-all text-brand-clay bg-white shadow-sm" data-category="botanical">
+            <button onclick="filterGallery('botanical')" class="filter-btn py-2.5 px-5 rounded-full border border-brand-gold/30 hover:border-brand-gold transition-all text-brand-oak bg-white shadow-sm" data-category="botanical">
                 Botanicals &amp; Florals
             </button>
-            <button onclick="filterGallery('community')" class="filter-btn py-2.5 px-5 rounded-full border border-brand-gold/30 hover:border-brand-gold transition-all text-brand-clay bg-white shadow-sm" data-category="community">
+            <button onclick="filterGallery('community')" class="filter-btn py-2.5 px-5 rounded-full border border-brand-gold/30 hover:border-brand-gold transition-all text-brand-oak bg-white shadow-sm" data-category="community">
                 Community &amp; Giving
             </button>
         </div>
@@ -151,7 +153,7 @@
                 <div class="bg-brand-light text-brand-dark w-full rounded-3xl overflow-hidden shadow-2xl grid grid-cols-1 md:grid-cols-2 max-h-[88vh] md:max-h-[82vh] overflow-y-auto md:overflow-hidden relative z-10">
                     
                     <!-- Left: Photo Container & View Toggle Bar -->
-                    <div class="bg-brand-clay flex flex-col items-center justify-between p-4 sm:p-6 border-b md:border-b-0 md:border-r border-brand-gold/20 overflow-hidden h-80 md:h-full relative shadow-inner">
+                    <div class="bg-brand-oak flex flex-col items-center justify-between p-4 sm:p-6 border-b md:border-b-0 md:border-r border-brand-gold/20 overflow-hidden h-80 md:h-full relative shadow-inner">
                         <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.05),transparent)] pointer-events-none"></div>
                         <div class="w-full flex-1 flex items-center justify-center overflow-hidden min-h-0">
                             <img id="lightbox-img" src="" alt="Cake Detail" class="object-contain block mx-auto max-h-full max-w-full rounded-md border border-brand-gold/60 p-2 bg-brand-dark shadow-[0_15px_30px_rgba(0,0,0,0.6)] transition-all duration-300">
@@ -165,7 +167,7 @@
                         
                         <div>
                             <span id="lightbox-tag" class="text-[10px] font-sans font-bold tracking-widest text-brand-gold-dark uppercase block mb-1"></span>
-                            <h2 id="lightbox-title" class="font-serif text-2xl md:text-3xl font-bold text-brand-clay leading-tight"></h2>
+                            <h2 id="lightbox-title" class="font-serif text-2xl md:text-3xl font-bold text-brand-oak leading-tight"></h2>
                             <p id="lightbox-meta" class="text-xs font-sans text-brand-dark/70 mt-1"></p>
                         </div>
                         
@@ -173,11 +175,11 @@
                         
                         <!-- 5 Layers Structured List -->
                         <div class="space-y-2 text-xs font-sans text-brand-dark/85 leading-relaxed bg-white/70 p-4 rounded-xl border border-brand-gold/20">
-                            <div><strong class="text-brand-clay block text-[11px]">Layer 1 (Color &amp; Atmosphere):</strong> <span id="layer-1"></span></div>
-                            <div><strong class="text-brand-clay block text-[11px]">Layer 2 (Shape &amp; Movement):</strong> <span id="layer-2"></span></div>
-                            <div><strong class="text-brand-clay block text-[11px]">Layer 3 (Texture &amp; Touch):</strong> <span id="layer-3"></span></div>
-                            <div><strong class="text-brand-clay block text-[11px]">Layer 4 (Strategy &amp; Boundaries):</strong> <span id="layer-4"></span></div>
-                            <div><strong class="text-brand-clay block text-[11px]">Layer 5 (Finishing Ritual):</strong> <span id="layer-5"></span></div>
+                            <div><strong class="text-brand-oak block text-[11px]">Layer 1 (Color &amp; Atmosphere):</strong> <span id="layer-1"></span></div>
+                            <div><strong class="text-brand-oak block text-[11px]">Layer 2 (Shape &amp; Movement):</strong> <span id="layer-2"></span></div>
+                            <div><strong class="text-brand-oak block text-[11px]">Layer 3 (Texture &amp; Touch):</strong> <span id="layer-3"></span></div>
+                            <div><strong class="text-brand-oak block text-[11px]">Layer 4 (Strategy &amp; Boundaries):</strong> <span id="layer-4"></span></div>
+                            <div><strong class="text-brand-oak block text-[11px]">Layer 5 (Finishing Ritual):</strong> <span id="layer-5"></span></div>
                         </div>
 
                         <!-- Artisan Background Note -->
@@ -764,7 +766,7 @@
                     : '';
 
                 card.innerHTML = `
-                    <div class="w-full h-64 sm:h-72 flex items-center justify-center overflow-hidden rounded-xl bg-brand-clay shadow-inner border border-brand-gold/20 mb-3 relative p-4 transition-colors group-hover:border-brand-gold/50">
+                    <div class="w-full h-64 sm:h-72 flex items-center justify-center overflow-hidden rounded-xl bg-brand-oak shadow-inner border border-brand-gold/20 mb-3 relative p-4 transition-colors group-hover:border-brand-gold/50">
                         <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.05),transparent)] pointer-events-none"></div>
                         <img src="${item.src}" alt="${item.title}" class="max-h-full max-w-full object-contain rounded-sm border border-brand-gold/60 p-1.5 bg-brand-dark shadow-[0_10px_20px_rgba(0,0,0,0.6)] transition-transform duration-300 group-hover:scale-95 relative z-10">
                     </div>
@@ -773,7 +775,7 @@
                             <span class="text-brand-gold text-[10px] font-sans uppercase tracking-widest font-bold truncate">${item.tag}</span>
                             ${viewBadge}
                         </div>
-                        <h3 class="text-brand-clay text-sm font-serif font-bold leading-snug line-clamp-2">${item.title}</h3>
+                        <h3 class="text-brand-oak text-sm font-serif font-bold leading-snug line-clamp-2">${item.title}</h3>
                     </div>
                 `;
                 galleryGrid.appendChild(card);
@@ -784,11 +786,11 @@
             const buttons = document.querySelectorAll('.filter-btn');
             buttons.forEach(btn => {
                 if (btn.getAttribute('data-category') === category) {
-                    btn.classList.add('bg-brand-clay', 'text-white', 'border-brand-clay');
-                    btn.classList.remove('bg-white', 'text-brand-clay', 'border-brand-gold/30', 'hover:border-brand-gold');
+                    btn.classList.add('bg-brand-oak', 'text-white', 'border-brand-oak');
+                    btn.classList.remove('bg-white', 'text-brand-oak', 'border-brand-gold/30', 'hover:border-brand-gold');
                 } else {
-                    btn.classList.remove('bg-brand-clay', 'text-white', 'border-brand-clay');
-                    btn.classList.add('bg-white', 'text-brand-clay', 'border-brand-gold/30', 'hover:border-brand-gold');
+                    btn.classList.remove('bg-brand-oak', 'text-white', 'border-brand-oak');
+                    btn.classList.add('bg-white', 'text-brand-oak', 'border-brand-gold/30', 'hover:border-brand-gold');
                 }
             });
 
@@ -844,8 +846,8 @@
                     const isActive = (idx === currentViewIndex);
                     btn.className = `text-[10px] font-sans font-bold uppercase tracking-wider py-1.5 px-3 rounded-full border transition-all ${
                         isActive 
-                        ? 'bg-brand-gold text-brand-clay border-brand-gold shadow-sm' 
-                        : 'bg-white/80 text-brand-dark/75 border-brand-gold/30 hover:border-brand-gold hover:text-brand-clay'
+                        ? 'bg-brand-gold text-brand-oak border-brand-gold shadow-sm' 
+                        : 'bg-white/80 text-brand-dark/75 border-brand-gold/30 hover:border-brand-gold hover:text-brand-oak'
                     }`;
                     btn.textContent = v.label;
                     btn.onclick = (e) => {
