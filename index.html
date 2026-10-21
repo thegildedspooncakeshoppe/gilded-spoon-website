@@ -10,24 +10,26 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Great+Vibes&family=Libre+Baskerville:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Fondamento:ital@0;1&family=Great+Vibes&family=Inter:wght@300;400;500;700&family=Libre+Baskerville:ital@0;1&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'brand-dark': '#1C161E',
-                        'brand-light': '#F4F1ED',
-                        'brand-gold': '#D4AF37',
+                        'brand-dark': '#2A272A',      /* Soft Charcoal */
+                        'brand-light': '#F4F1ED',     /* Warm Linen / Parchment */
+                        'brand-gold': '#D4AF37',      /* Muted Gold */
                         'brand-gold-hover': '#E2C76A',
                         'brand-gold-dark': '#8C6D18',
                         'brand-gray': '#A09DA6',
-                        'brand-card': '#2A232F',
-                        'brand-navy': '#0A2342'
+                        'brand-terracotta': '#C17767',/* Terracotta accent */
+                        'brand-blush': '#E8D5D1',     /* Soft Blush */
+                        'brand-oak': '#2A3428',       /* Shadowy, Chalky Dark Green (Ancient Oak) */
+                        'brand-sand': '#E3D8C8'       /* Tan/Sand */
                     },
                     fontFamily: {
-                        'serif': ['"Playfair Display"', 'serif'],
+                        'serif': ['"Fondamento"', 'cursive', 'serif'],
                         'sans': ['"Inter"', 'sans-serif'],
                         'hand': ['"Caveat"', 'cursive']
                     }
@@ -39,7 +41,7 @@
 <body class="font-sans bg-brand-light text-brand-dark antialiased">
 
     <!-- NAVIGATION -->
-    <nav class="sticky top-0 bg-brand-navy/95 backdrop-blur-lg shadow-lg z-50 border-b border-brand-gold/10">
+    <nav class="sticky top-0 bg-brand-oak/95 backdrop-blur-lg shadow-lg z-50 border-b border-brand-gold/10">
         <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
             <a href="index.html" class="text-2xl font-serif font-bold text-brand-gold text-center leading-none">
                 The Gilded Spoon
@@ -50,7 +52,7 @@
                 <a href="workshop.html" class="text-brand-light hover:text-brand-gold transition">Workshops</a>
                 <a href="flipbook.html" class="text-brand-light hover:text-brand-gold transition">Portfolio</a>
                 <a href="contact.html" class="text-brand-light hover:text-brand-gold transition">Contact</a>
-                <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-navy hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm">
+                <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-oak hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm">
                     Free Guide
                 </a>
             </div>
@@ -60,19 +62,19 @@
                 </button>
             </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden mt-4 px-4 pb-4 bg-brand-navy text-center">
+        <div id="mobile-menu" class="hidden md:hidden mt-4 px-4 pb-4 bg-brand-oak text-center">
             <a href="shoppe.html" class="block py-3 text-brand-light uppercase tracking-widest">Shoppe</a>
             <a href="workshop.html" class="block py-3 text-brand-light uppercase tracking-widest">Workshops</a>
             <a href="flipbook.html" class="block py-3 text-brand-light uppercase tracking-widest">Portfolio</a>
             <a href="contact.html" class="block py-3 text-brand-light uppercase tracking-widest">Contact</a>
-            <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-navy hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm inline-block mt-2">
+            <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-oak hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm inline-block mt-2">
                 Free Guide
             </a>
         </div>
     </nav>
 
     <!-- HERO SECTION -->
-    <header class="relative overflow-hidden bg-brand-navy pt-20 pb-24 md:pt-28 md:pb-32 border-b border-brand-gold/10">
+    <header class="relative overflow-hidden bg-brand-oak pt-20 pb-24 md:pt-28 md:pb-32 border-b border-brand-gold/10">
         <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')]"></div>
         
         <div class="max-w-6xl mx-auto px-6 relative z-10">
@@ -86,10 +88,10 @@
                         Welcome to The Gilded Spoon, an atelier in McKinney, Texas. Founded by a former nurse, we bridge the steady rhythms of cake design with tactile art to help you slow down, decompress, and create without the pressure of perfection.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-5 text-xs tracking-widest font-bold uppercase">
-                        <a href="#pathways" class="inline-block bg-brand-gold text-brand-navy py-4 px-10 rounded-full hover:bg-brand-gold-hover transition-all shadow-xl text-center">
+                        <a href="#pathways" class="inline-block bg-brand-gold text-brand-oak py-4 px-10 rounded-full hover:bg-brand-gold-hover transition-all shadow-xl text-center">
                             Explore The Atelier
                         </a>
-                        <a href="flipbook.html" class="inline-block border-2 border-brand-light/30 text-brand-light py-4 px-10 rounded-full hover:bg-white hover:text-brand-navy transition-all text-center">
+                        <a href="flipbook.html" class="inline-block border-2 border-brand-light/30 text-brand-light py-4 px-10 rounded-full hover:bg-white hover:text-brand-oak transition-all text-center">
                             View Portfolio
                         </a>
                     </div>
@@ -99,10 +101,10 @@
                     <div class="absolute -inset-4 bg-brand-gold/15 rounded-3xl blur-2xl"></div>
                     
                     <!-- Gallery Framed Cake Display -->
-                    <div class="relative bg-brand-navy p-2 sm:p-3 rounded-3xl border-2 border-brand-gold/40 shadow-[0_25px_50px_rgba(0,0,0,0.6)]">
+                    <div class="relative bg-brand-oak p-2 sm:p-3 rounded-3xl border-2 border-brand-gold/40 shadow-[0_25px_50px_rgba(0,0,0,0.6)]">
                         <img src="images/IMG_0422.JPG" 
                              alt="Soft Peach Blossom Palette Knife Cake - The Gilded Spoon Atelier" 
-                             class="object-cover aspect-[4/3] rounded-2xl w-full max-w-[340px] sm:max-w-[420px] lg:max-w-[480px]">
+                             class="object-cover aspect-[4/3] rounded-sm border border-brand-gold/60 p-1.5 bg-brand-dark w-full max-w-[340px] sm:max-w-[420px] lg:max-w-[480px]">
                         <div class="pt-2.5 pb-1 px-2 text-center">
                             <span class="text-[10px] font-sans uppercase tracking-[0.25em] text-brand-gold font-bold">The Cake Canvas &bull; Palette Knife Study</span>
                         </div>
@@ -117,7 +119,7 @@
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center max-w-2xl mx-auto mb-16">
                 <span class="text-brand-gold-dark font-sans font-bold tracking-widest uppercase text-xs block mb-2">Our Two Offerings</span>
-                <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-navy mb-4">How You Can Create With Us</h2>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-oak mb-4">How You Can Create With Us</h2>
                 <p class="text-sm md:text-base text-brand-dark/75 leading-relaxed">
                     Choose between tactile tools delivered directly to your kitchen counter or interactive workshops hosted in our studio and partner venues.
                 </p>
@@ -129,7 +131,7 @@
                 <div class="bg-white rounded-3xl p-8 md:p-12 border border-brand-gold/20 shadow-lg flex flex-col justify-between hover:shadow-xl transition-shadow">
                     <div>
                         <span class="text-brand-gold-dark font-sans font-bold text-[10px] uppercase tracking-widest block mb-2">Home Editions &bull; Tactile Tools</span>
-                        <h3 class="font-serif text-2xl md:text-3xl font-bold text-brand-navy mb-4">The Shoppe</h3>
+                        <h3 class="font-serif text-2xl md:text-3xl font-bold text-brand-oak mb-4">The Shoppe</h3>
                         <p class="text-brand-dark/80 text-sm leading-relaxed mb-6">
                             Physical editions designed to remove friction from your kitchen counter. Explore our lay-flat guided journal, single-step recipe card decks with display stands, and custom family custom recipe deconstructions.
                         </p>
@@ -140,14 +142,14 @@
                         </ul>
                     </div>
                     <div>
-                        <a href="shoppe.html" class="inline-block bg-brand-navy text-white text-xs font-bold tracking-widest uppercase py-4 px-8 rounded-full hover:bg-brand-gold hover:text-brand-navy transition-colors shadow-md">
+                        <a href="shoppe.html" class="inline-block bg-brand-oak text-white text-xs font-bold tracking-widest uppercase py-4 px-8 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-colors shadow-md">
                             Browse Physical Goods &rarr;
                         </a>
                     </div>
                 </div>
 
                 <!-- PATHWAY 2: THE WORKSHOPS -->
-                <div class="bg-brand-navy text-white rounded-3xl p-8 md:p-12 border border-brand-gold/30 shadow-xl flex flex-col justify-between hover:shadow-2xl transition-shadow">
+                <div class="bg-brand-oak text-white rounded-3xl p-8 md:p-12 border border-brand-gold/30 shadow-xl flex flex-col justify-between hover:shadow-2xl transition-shadow">
                     <div>
                         <span class="text-brand-gold font-sans font-bold text-[10px] uppercase tracking-widest block mb-2">Live Experiences &bull; Local &amp; Virtual</span>
                         <h3 class="font-serif text-2xl md:text-3xl font-bold text-white mb-4">Hands-On Workshops</h3>
@@ -161,7 +163,7 @@
                         </ul>
                     </div>
                     <div>
-                        <a href="workshop.html" class="inline-block bg-brand-gold text-brand-navy text-xs font-bold tracking-widest uppercase py-4 px-8 rounded-full hover:bg-white transition-colors shadow-md">
+                        <a href="workshop.html" class="inline-block bg-brand-gold text-brand-oak text-xs font-bold tracking-widest uppercase py-4 px-8 rounded-full hover:bg-white transition-colors shadow-md">
                             View Workshop Options &rarr;
                         </a>
                     </div>
@@ -177,19 +179,19 @@
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
                     <span class="text-brand-gold-dark font-sans font-bold tracking-widest uppercase text-xs block mb-3">Honoring The Medium</span>
-                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-navy mb-6">A Shared Language of Touch and Form</h2>
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-oak mb-6">A Shared Language of Touch and Form</h2>
                     <p class="text-brand-dark/85 text-base md:text-lg leading-relaxed font-serif italic mb-6">
                         "Whether working with fresh buttercream on sponge cake or sculpting paste and raw minerals on a 3D sculpting form, tactile cake art is one of the most rhythmic, grounding mediums in the world."
                     </p>
                     <p class="text-brand-dark/75 text-sm leading-relaxed font-sans mb-8">
                         We celebrate the traditional tools of pastry chefs: palette knives, leaf tips, star borders, and natural textures. By removing competitive expectations and rigid timers, we allow the calming motion of decorating to take center stage.
                     </p>
-                    <a href="flipbook.html" class="inline-block bg-brand-light border border-brand-navy text-brand-navy font-sans text-xs font-bold uppercase tracking-widest py-3.5 px-8 rounded-full hover:bg-brand-navy hover:text-white transition-colors">
+                    <a href="flipbook.html" class="inline-block bg-brand-light border border-brand-oak text-brand-oak font-sans text-xs font-bold uppercase tracking-widest py-3.5 px-8 rounded-full hover:bg-brand-oak hover:text-white transition-colors">
                         Explore The Cake Portfolio &rarr;
                     </a>
                 </div>
                 <div class="bg-brand-light p-6 md:p-8 rounded-3xl border border-brand-gold/20 shadow-md">
-                    <img src="images/IMG_0356.jpeg" alt="Original Palette Knife Floral Cake" class="w-full h-80 md:h-96 object-cover rounded-2xl shadow-sm">
+                    <img src="images/IMG_0356.jpeg" alt="Original Palette Knife Floral Cake" class="w-full h-80 md:h-96 object-cover rounded-sm border border-brand-gold/60 p-1.5 bg-brand-dark shadow-[0_10px_20px_rgba(0,0,0,0.6)]">
                     <p class="text-xs font-sans text-brand-dark/70 text-center mt-4 italic">
                         Original palette knife cake art from our McKinney studio.
                     </p>
@@ -205,7 +207,7 @@
                 
                 <div class="md:col-span-2 order-2 md:order-1">
                     <span class="text-brand-gold-dark font-bold tracking-widest uppercase text-xs block mb-2">Founder &bull; Author &bull; Sensory Artist</span>
-                    <h2 class="font-serif text-3xl md:text-4xl font-semibold mb-6 text-brand-navy">Meet Dimple</h2>
+                    <h2 class="font-serif text-3xl md:text-4xl font-semibold mb-6 text-brand-oak">Meet Dimple</h2>
                     
                     <div class="text-brand-dark/85 space-y-4 leading-relaxed text-base">
                         <p>After 20 years as a nurse across varied healthcare settings, I saw firsthand what chronic stress and sensory overload do to the nervous system. When the noise of daily life felt overwhelming, I found calm in the steady, repetitive motions of cake decorating and textured art.</p> 
@@ -216,7 +218,7 @@
                     </div>
                     
                     <div class="mt-8 text-xs font-bold tracking-widest uppercase">
-                        <a href="https://www.linkedin.com/in/dimple-mckinney/" target="_blank" class="text-brand-navy border-b-2 border-brand-gold hover:text-brand-gold transition pb-1">Connect on LinkedIn &rarr;</a>
+                        <a href="https://www.linkedin.com/in/dimple-mckinney/" target="_blank" class="text-brand-oak border-b-2 border-brand-gold hover:text-brand-gold transition pb-1">Connect on LinkedIn &rarr;</a>
                     </div>
                 </div>
                 
@@ -232,10 +234,10 @@
     </section>
 
     <!-- FREE CHEAT SHEET BANNER -->
-    <section class="py-14 bg-brand-gold text-brand-navy text-center px-4 relative overflow-hidden border-t border-brand-navy/10">
+    <section class="py-14 bg-brand-gold text-brand-oak text-center px-4 relative overflow-hidden border-t border-brand-oak/10">
         <div class="max-w-3xl mx-auto relative z-10">
-            <span class="text-xs font-sans font-bold tracking-[0.2em] text-brand-navy uppercase block mb-1">Free 1-Page Kitchen Anchor</span>
-            <h2 class="font-serif text-2xl md:text-3xl font-bold mb-2 text-brand-navy">Low-stress baking rituals. Zero pressure.</h2>
+            <span class="text-xs font-sans font-bold tracking-[0.2em] text-brand-oak uppercase block mb-1">Free 1-Page Kitchen Anchor</span>
+            <h2 class="font-serif text-2xl md:text-3xl font-bold mb-2 text-brand-oak">Low-stress baking rituals. Zero pressure.</h2>
             
             <p class="mb-6 text-sm md:text-base font-medium opacity-90 max-w-2xl mx-auto">
                 Download your free 1-page Bake to Baseline Cheat Sheet for calm, low-friction baking strategies.
@@ -244,7 +246,7 @@
             <form action="https://docs.google.com/forms/d/e/1FAIpQLSeNhynT2TEUkIBl_H35WhOKU7luGxfFWM2V-Hy9dOH2XJkxZg/formResponse" method="POST" target="_blank" class="flex flex-col md:flex-row gap-3 justify-center items-center">
                 <input type="text" name="entry.495745563" placeholder="First name" required class="px-5 py-3 rounded-full bg-white text-brand-dark focus:outline-none shadow-inner w-full md:w-[200px] text-sm">
                 <input type="email" name="entry.1413430073" placeholder="Your best email address" required class="px-5 py-3 rounded-full bg-white text-brand-dark focus:outline-none shadow-inner w-full md:w-[280px] text-sm">
-                <button type="submit" class="bg-brand-navy text-white font-sans font-bold py-3 px-8 rounded-full hover:bg-brand-dark transition-all shadow-xl uppercase tracking-widest text-xs w-full md:w-auto whitespace-nowrap">
+                <button type="submit" class="bg-brand-oak text-white font-sans font-bold py-3 px-8 rounded-full hover:bg-brand-dark transition-all shadow-xl uppercase tracking-widest text-xs w-full md:w-auto whitespace-nowrap">
                     Get Free Cheat Sheet
                 </button>
             </form>
