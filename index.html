@@ -10,7 +10,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Great+Vibes&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..800&family=Homemade+Apple&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Xanh+Mono:ital@0;1&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -26,12 +26,15 @@
                         'brand-terracotta': '#C17767',/* Terracotta accent */
                         'brand-blush': '#E8D5D1',     /* Soft Blush */
                         'brand-oak': '#2A3428',       /* Shadowy, Chalky Dark Green (Ancient Oak) */
-                        'brand-sand': '#E3D8C8'       /* Tan/Sand */
+                        'brand-sand': '#E3D8C8',      /* Tan/Sand */
+                        'brand-card': '#1E251D'       /* Deep forest overlay for dark cards */
                     },
                     fontFamily: {
                         'serif': ['"Fraunces"', 'serif'],
                         'sans': ['"Inter"', 'sans-serif'],
-                        'hand': ['"Caveat"', 'cursive']
+                        'hand': ['"Caveat"', 'cursive'],
+                        'mono': ['"Xanh Mono"', 'monospace'],
+                        'badge': ['"Plus Jakarta Sans"', 'sans-serif']
                     }
                 }
             }
@@ -106,7 +109,7 @@
                              alt="Soft Peach Blossom Palette Knife Cake - The Gilded Spoon Atelier" 
                              class="object-cover aspect-[4/3] rounded-sm border border-brand-gold/60 p-1.5 bg-brand-dark w-full max-w-[340px] sm:max-w-[420px] lg:max-w-[480px]">
                         <div class="pt-2.5 pb-1 px-2 text-center">
-                            <span class="text-[10px] font-sans uppercase tracking-[0.25em] text-brand-gold font-bold">The Cake Canvas &bull; Palette Knife Study</span>
+                            <span class="text-[10px] font-badge uppercase tracking-[0.25em] text-brand-gold font-bold">The Edible Cake Canvas &bull; Palette Knife Study</span>
                         </div>
                     </div>
                 </div>
@@ -130,12 +133,12 @@
                 <!-- PATHWAY 1: THE SHOPPE -->
                 <div class="bg-white rounded-3xl p-8 md:p-12 border border-brand-gold/20 shadow-lg flex flex-col justify-between hover:shadow-xl transition-shadow">
                     <div>
-                        <span class="text-brand-gold-dark font-sans font-bold text-[10px] uppercase tracking-widest block mb-2">Home Editions &bull; Tactile Tools</span>
+                        <span class="inline-block bg-brand-gold/20 text-brand-gold-dark font-badge font-bold uppercase tracking-wider text-xs px-3.5 py-1 rounded-full border border-brand-gold/40 self-start mb-3">Home Editions &bull; Tactile Tools</span>
                         <h3 class="font-serif text-2xl md:text-3xl font-bold text-brand-oak mb-4">The Shoppe</h3>
-                        <p class="text-brand-dark/80 text-sm leading-relaxed mb-6">
+                        <p class="text-brand-dark/80 text-sm sm:text-base leading-relaxed mb-6">
                             Physical editions designed to remove friction from your kitchen counter. Explore our lay-flat guided journal, single-step recipe card decks with display stands, and custom family custom recipe deconstructions.
                         </p>
-                        <ul class="text-xs text-brand-dark/80 space-y-3 font-sans mb-8">
+                        <ul class="text-xs sm:text-sm text-brand-dark/80 space-y-3 font-sans mb-8">
                             <li class="flex items-start"><span class="text-brand-gold-dark mr-2 font-serif text-sm">✦</span> <span><strong>Bake to Baseline Journal:</strong> Spiral-bound book for color and flavor reflections with zero baking required.</span></li>
                             <li class="flex items-start"><span class="text-brand-gold-dark mr-2 font-serif text-sm">✦</span> <span><strong>The Deconstructed Recipe Deck:</strong> One step per card with single-bowl gram weights to eliminate measuring panic.</span></li>
                             <li class="flex items-start"><span class="text-brand-gold-dark mr-2 font-serif text-sm">✦</span> <span><strong>Custom Commissions:</strong> Have your family's favorite handwritten bake transformed into a counter card deck.</span></li>
@@ -151,12 +154,12 @@
                 <!-- PATHWAY 2: THE WORKSHOPS -->
                 <div class="bg-brand-oak text-brand-light rounded-3xl p-8 md:p-12 border border-brand-gold/30 shadow-xl flex flex-col justify-between hover:shadow-2xl transition-shadow">
                     <div>
-                        <span class="text-brand-gold font-sans font-bold text-[10px] uppercase tracking-widest block mb-2">Live Experiences &bull; Local &amp; Virtual</span>
-                        <h3 class="font-serif text-2xl md:text-3xl font-bold text-brand-light mb-4">Hands-On Workshops</h3>
-                        <p class="text-brand-light/85 text-sm leading-relaxed mb-6">
-                            Low-pressure creative sessions that guide you through tactile cake design techniques without judgment. Decorate pre-baked gourmet mini cakes or pipe permanent permanent cake sculptures using our 5-Layer Sensory Method.
+                        <span class="inline-block bg-brand-dark/40 text-brand-sand font-badge font-bold uppercase tracking-wider text-xs px-3.5 py-1 rounded-full border border-brand-gold/30 self-start mb-3">Live Experiences &bull; Local &amp; Virtual</span>
+                        <h3 class="font-serif text-2xl md:text-3xl font-bold text-brand-sand mb-4">Hands-On Workshops</h3>
+                        <p class="text-brand-light/85 text-sm sm:text-base leading-relaxed mb-6">
+                            Low-pressure creative sessions that guide you through tactile cake design techniques without judgment. Decorate pre-baked gourmet mini cakes or pipe permanent cake sculptures using our 5-Layer Sensory Method.
                         </p>
-                        <ul class="text-xs text-brand-light/85 space-y-3 font-sans mb-8">
+                        <ul class="text-xs sm:text-sm text-brand-light/85 space-y-3 font-sans mb-8">
                             <li class="flex items-start"><span class="text-brand-gold mr-2 font-serif text-sm">✦</span> <span><strong>Public Studio Cohorts:</strong> Reserve individual seats on our scheduled public calendar across DFW venues.</span></li>
                             <li class="flex items-start"><span class="text-brand-gold mr-2 font-serif text-sm">✦</span> <span><strong>Private Team Offsites:</strong> On-site guidance for workplace wellness, team offsites, and milestone celebrations.</span></li>
                             <li class="flex items-start"><span class="text-brand-gold mr-2 font-serif text-sm">✦</span> <span><strong>Shipped Virtual Kits:</strong> Complete permanent kits delivered to remote employees nationwide for video retreats.</span></li>
@@ -183,10 +186,10 @@
                     <p class="text-brand-dark/85 text-base md:text-lg leading-relaxed font-serif italic mb-6">
                         "Whether working with fresh buttercream on sponge cake or sculpting paste and raw minerals on a 3D sculpting form, tactile cake art is one of the most rhythmic, grounding mediums in the world."
                     </p>
-                    <p class="text-brand-dark/75 text-sm leading-relaxed font-sans mb-8">
+                    <p class="text-brand-dark/75 text-sm sm:text-base leading-relaxed font-sans mb-8">
                         We celebrate the traditional tools of pastry chefs: palette knives, leaf tips, star borders, and natural textures. By removing competitive expectations and rigid timers, we allow the calming motion of decorating to take center stage.
                     </p>
-                    <a href="flipbook.html" class="inline-block bg-brand-light border border-brand-oak text-brand-oak font-sans text-xs font-bold uppercase tracking-widest py-3.5 px-8 rounded-full hover:bg-brand-oak hover:text-brand-light transition-colors">
+                    <a href="flipbook.html" class="inline-block bg-brand-light border border-brand-oak text-brand-oak font-sans text-xs font-bold uppercase tracking-widest py-3.5 px-8 rounded-full hover:bg-brand-oak hover:text-white transition-colors">
                         Explore The Cake Portfolio &rarr;
                     </a>
                 </div>
@@ -209,7 +212,7 @@
                     <span class="text-brand-gold-dark font-bold tracking-widest uppercase text-xs block mb-2">Founder &bull; Author &bull; Sensory Artist</span>
                     <h2 class="font-serif text-3xl md:text-4xl font-semibold mb-6 text-brand-oak">Meet Dimple</h2>
                     
-                    <div class="text-brand-dark/85 space-y-4 leading-relaxed text-base">
+                    <div class="text-brand-dark/85 space-y-4 leading-relaxed text-sm sm:text-base">
                         <p>After 20 years as a nurse across varied healthcare settings, I saw firsthand what chronic stress and sensory overload do to the nervous system. When the noise of daily life felt overwhelming, I found calm in the steady, repetitive motions of cake decorating and textured art.</p> 
                         
                         <p>I created The Gilded Spoon to share that restorative experience. Blending two decades of patient care with tactile design, I build tools and workshops that let people slow down and work with their hands in a quiet, supportive environment.</p> 
@@ -255,7 +258,7 @@
         </div>
     </section>
 
-        <!-- FOOTER -->
+    <!-- FOOTER -->
     <footer class="bg-brand-dark text-brand-gray border-t border-brand-gold/20 font-sans text-xs">
         <div class="max-w-2xl mx-auto px-6 py-8">
             <div class="flex flex-col items-center">
