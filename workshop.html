@@ -7,7 +7,7 @@
     <title>Studio Workshops | The Gilded Spoon Atelier</title>
     <meta name="description" content="Tactile art and cake decorating workshops in McKinney, Texas. Low pressure sensory grounding, zero baking experience needed, and zero performance required.">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Great+Vibes&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..800&family=Homemade+Apple&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Xanh+Mono:ital@0;1&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -23,12 +23,15 @@
                         'brand-terracotta': '#C17767',/* Terracotta accent */
                         'brand-blush': '#E8D5D1',     /* Soft Blush */
                         'brand-oak': '#2A3428',       /* Shadowy, Chalky Dark Green (Ancient Oak) */
-                        'brand-sand': '#E3D8C8'       /* Tan/Sand */
+                        'brand-sand': '#E3D8C8',      /* Tan/Sand */
+                        'brand-card': '#1E251D'       /* Deep forest overlay for dark cards */
                     },
                     fontFamily: {
                         'serif': ['"Fraunces"', 'serif'],
                         'sans': ['"Inter"', 'sans-serif'],
-                        'hand': ['"Caveat"', 'cursive']
+                        'hand': ['"Homemade Apple"', 'cursive'],
+                        'mono': ['"Xanh Mono"', 'monospace'],
+                        'badge': ['"Plus Jakarta Sans"', 'sans-serif']
                     }
                 }
             }
@@ -64,7 +67,7 @@
             <a href="workshop.html" class="block py-3 text-brand-gold font-bold uppercase tracking-widest">Workshops</a>
             <a href="flipbook.html" class="block py-3 text-brand-light uppercase tracking-widest">Portfolio</a>
             <a href="contact.html" class="block py-3 text-brand-light uppercase tracking-widest">Contact</a>
-            <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-oak hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm mt-2 inline-block">
+            <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-oak hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm inline-block mt-2">
                 Free Guide
             </a>
         </div>
@@ -74,7 +77,7 @@
     <header class="text-center py-16 md:py-20 bg-brand-oak border-b border-brand-gold/10 relative overflow-hidden">
         <div class="max-w-4xl mx-auto px-6 relative z-10">
             <span class="text-brand-gold font-sans font-bold tracking-[0.3em] uppercase text-xs block mb-3">Tactile Studio Gatherings</span>
-            <h1 class="font-serif text-4xl md:text-5xl font-bold text-brand-sand leading-tight mb-4">A Quiet Place for Busy Minds</h1>
+            <h1 class="font-hand text-2xl sm:text-3xl md:text-4xl text-brand-sand leading-relaxed tracking-wide mb-4 py-1">A Quiet Place for Busy Minds</h1>
             <p class="font-serif italic text-base md:text-lg text-brand-light/80 leading-relaxed max-w-2xl mx-auto">
                 Step inside an intentional studio space designed to help you drop your shoulders and decompress. In our atelier, there is zero performance required, zero baking experience needed, and your nervous system sets the rules.
             </p>
@@ -97,7 +100,7 @@
                     <span class="text-brand-gold-dark font-sans font-bold tracking-widest uppercase text-xs block mb-2">The Story Behind The Atelier</span>
                     <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-oak">What This Experience Is Truly About</h2>
                 </div>
-                <div class="space-y-5 text-brand-dark/85 text-xs sm:text-sm font-sans leading-relaxed max-w-3xl mx-auto">
+                <div class="space-y-5 text-brand-dark/85 text-sm sm:text-[15px] font-sans leading-relaxed max-w-3xl mx-auto">
                     <p>
                         Baking is chemistry and precision. Exact weights and temperature control matter, but cake design was always something deeper. Yet for years, whenever I turned from the oven to decorating, my mind would become completely overwhelmed, jumping from one question to the next with zero direction.
                     </p>
@@ -137,7 +140,7 @@
 
             <!-- ORIGIN CALLOUT: THE HEART -->
             <div class="max-w-4xl mx-auto mb-10 bg-brand-light rounded-2xl p-6 border-2 border-brand-gold/30 text-center shadow-sm">
-                <span class="text-[10px] font-sans font-bold uppercase tracking-widest text-brand-gold-dark block mb-1">Starting Baseline</span>
+                <span class="text-xs font-mono uppercase tracking-[0.2em] text-brand-gold-dark font-bold block mb-1">Starting Baseline</span>
                 <h3 class="font-serif text-xl font-bold text-brand-oak mb-2">The Heart (The Origin)</h3>
                 <p class="text-xs text-brand-dark/80 max-w-2xl mx-auto font-sans leading-relaxed">
                     Where are you starting today? Are you tired, anxious, joyful, or overstimulated? We do not judge the feeling; we simply name it. This is your unmasked mark on the map before picking up any tools.
@@ -149,10 +152,10 @@
                 <!-- LAYER 1 -->
                 <div class="bg-brand-light p-5 rounded-2xl border border-brand-gold/20 flex flex-col justify-between shadow-sm">
                     <div>
-                        <span class="text-[10px] font-sans font-bold uppercase tracking-widest text-brand-gold-dark block mb-2">Layer 1</span>
+                        <span class="text-xs font-mono uppercase tracking-[0.2em] text-brand-gold-dark font-bold block mb-2">Layer 1</span>
                         <h3 class="font-serif text-base md:text-lg font-bold text-brand-oak mb-2">The Invitation</h3>
                         <p class="text-[11px] font-serif italic text-brand-gold-dark mb-2">Color &amp; Atmosphere</p>
-                        <p class="text-xs text-brand-dark/80 leading-relaxed font-sans">
+                        <p class="text-[13px] text-brand-dark/80 leading-relaxed font-sans">
                             What signal does your spirit need right now? Choose an earthy cooling palette to hush room noise, or a sunny dopamine pop to break through mental fatigue.
                         </p>
                     </div>
@@ -161,10 +164,10 @@
                 <!-- LAYER 2 -->
                 <div class="bg-brand-light p-5 rounded-2xl border border-brand-gold/20 flex flex-col justify-between shadow-sm">
                     <div>
-                        <span class="text-[10px] font-sans font-bold uppercase tracking-widest text-brand-gold-dark block mb-2">Layer 2</span>
+                        <span class="text-xs font-mono uppercase tracking-[0.2em] text-brand-gold-dark font-bold block mb-2">Layer 2</span>
                         <h3 class="font-serif text-base md:text-lg font-bold text-brand-oak mb-2">The Memory</h3>
                         <p class="text-[11px] font-serif italic text-brand-gold-dark mb-2">Shape &amp; Movement</p>
-                        <p class="text-xs text-brand-dark/80 leading-relaxed font-sans">
+                        <p class="text-[13px] text-brand-dark/80 leading-relaxed font-sans">
                             What memory or feeling are you recreating? Use flowing curves for gentle ease, repetitive piped shells for rhythmic anxiety relief, or wild botanical carvings.
                         </p>
                     </div>
@@ -173,10 +176,10 @@
                 <!-- LAYER 3 -->
                 <div class="bg-brand-light p-5 rounded-2xl border border-brand-gold/20 flex flex-col justify-between shadow-sm">
                     <div>
-                        <span class="text-[10px] font-sans font-bold uppercase tracking-widest text-brand-gold-dark block mb-2">Layer 3</span>
+                        <span class="text-xs font-mono uppercase tracking-[0.2em] text-brand-gold-dark font-bold block mb-2">Layer 3</span>
                         <h3 class="font-serif text-base md:text-lg font-bold text-brand-oak mb-2">The Anchor</h3>
                         <p class="text-[11px] font-serif italic text-brand-gold-dark mb-2">Texture &amp; Touch</p>
-                        <p class="text-xs text-brand-dark/80 leading-relaxed font-sans">
+                        <p class="text-[13px] text-brand-dark/80 leading-relaxed font-sans">
                             What physical feel brings you back to your body? Choose a soft velvet cushion to soothe overstimulation, or crisp crystals and sea salt to snap out of brain fog.
                         </p>
                     </div>
@@ -185,10 +188,10 @@
                 <!-- LAYER 4 -->
                 <div class="bg-brand-light p-5 rounded-2xl border border-brand-gold/20 flex flex-col justify-between shadow-sm">
                     <div>
-                        <span class="text-[10px] font-sans font-bold uppercase tracking-widest text-brand-gold-dark block mb-2">Layer 4</span>
+                        <span class="text-xs font-mono uppercase tracking-[0.2em] text-brand-gold-dark font-bold block mb-2">Layer 4</span>
                         <h3 class="font-serif text-base md:text-lg font-bold text-brand-oak mb-2">The Strategy</h3>
                         <p class="text-[11px] font-serif italic text-brand-gold-dark mb-2">Placement &amp; Reach</p>
-                        <p class="text-xs text-brand-dark/80 leading-relaxed font-sans">
+                        <p class="text-[13px] text-brand-dark/80 leading-relaxed font-sans">
                             Where do elements belong based on your social battery? Protect your energy in a centered core, draw protective border frames, or scatter radial blooms outward.
                         </p>
                     </div>
@@ -197,10 +200,10 @@
                 <!-- LAYER 5 -->
                 <div class="bg-brand-light p-5 rounded-2xl border border-brand-gold/20 flex flex-col justify-between shadow-sm">
                     <div>
-                        <span class="text-[10px] font-sans font-bold uppercase tracking-widest text-brand-gold-dark block mb-2">Layer 5</span>
+                        <span class="text-xs font-mono uppercase tracking-[0.2em] text-brand-gold-dark font-bold block mb-2">Layer 5</span>
                         <h3 class="font-serif text-base md:text-lg font-bold text-brand-oak mb-2">The Magic</h3>
                         <p class="text-[11px] font-serif italic text-brand-gold-dark mb-2">The Shift &amp; Final Ritual</p>
-                        <p class="text-xs text-brand-dark/80 leading-relaxed font-sans">
+                        <p class="text-[13px] text-brand-dark/80 leading-relaxed font-sans">
                             Take a conscious breath and observe how the heaviness lifted. Add a splatter of gold luster or a delicate blossom to declare your story complete.
                         </p>
                     </div>
@@ -228,37 +231,37 @@
                             <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.05),transparent)] pointer-events-none"></div>
                             <img src="images/IMG_7606.jpeg" alt="3D Keepsake Cake Sculpture with Comfort Seal" class="max-h-full max-w-full object-contain drop-shadow-[0_10px_18px_rgba(0,0,0,0.5)] rounded-lg">
                         </div>
-                        <span class="inline-block bg-brand-oak text-brand-gold font-sans font-bold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full mb-2">Track A &bull; Permanent Keepsake</span>
+                        <span class="inline-block bg-brand-oak text-brand-sand font-badge font-bold text-xs uppercase tracking-wider px-3.5 py-1.5 rounded-full mb-2.5 border border-brand-gold/40 shadow-sm">Track A &bull; Permanent Keepsake</span>
                         <h3 class="font-serif text-2xl font-bold text-brand-oak mb-1">Keepsake Cake Sculptures</h3>
                         <p class="text-xs font-serif italic text-brand-gold-dark mb-3">Permanent Tactile Art for Home or Office</p>
                         
-                        <p class="text-xs text-brand-dark/80 leading-relaxed font-sans mb-4">
+                        <p class="text-sm text-brand-dark/80 leading-relaxed font-sans mb-4">
                             Pipe whipped sculpting paste onto a 4x6-inch 3D sculpting form using palette knives, raw quartz gemstones, and pressed botanicals. Finished on a gold presentation drum with our studio comfort seal, this is a permanent decorative piece for your desk or home that never spoils.
                         </p>
                     </div>
-                    <ul class="text-[11px] text-brand-dark/75 space-y-1.5 font-sans border-t border-brand-gold/15 pt-4">
+                    <ul class="text-xs text-brand-dark/80 space-y-2 font-sans border-t border-brand-gold/15 pt-4">
                         <li>✦ <strong>Materials:</strong> Sculpting paste, mineral pigments, quartz gems, dried florals</li>
                         <li>✦ <strong>Finish:</strong> Permanent decorative keepsake for your desk, shelf, or tabletop</li>
                         <li>✦ <strong>Availability:</strong> Public sessions, private team retreats, and virtual shipped kits</li>
                     </ul>
                 </div>
 
-                <!-- TRACK 2: THE EDIBLE CAKE CANVAS -->
+                <!-- TRACK 2: THE CAKE CANVAS -->
                 <div class="bg-white rounded-3xl border border-brand-gold/30 p-6 md:p-8 shadow-lg flex flex-col justify-between">
                     <div>
                         <div class="w-full aspect-[4/3] bg-brand-oak rounded-2xl p-4 flex items-center justify-center border-2 border-brand-gold/40 shadow-inner overflow-hidden mb-5 relative">
                             <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.05),transparent)] pointer-events-none"></div>
-                            <img src="images/IMG_6660.jpeg" alt="The Edible Cake Canvas Painted Cake with Buttercream" class="max-h-full max-w-full object-contain drop-shadow-[0_10px_18px_rgba(0,0,0,0.5)] rounded-lg">
+                            <img src="images/IMG_6660.jpeg" alt="The Cake Canvas Painted Cake with Buttercream" class="max-h-full max-w-full object-contain drop-shadow-[0_10px_18px_rgba(0,0,0,0.5)] rounded-lg">
                         </div>
-                        <span class="inline-block bg-brand-gold text-brand-oak font-sans font-bold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full mb-2">Track B &bull; Fresh &amp; Edible</span>
-                        <h3 class="font-serif text-2xl font-bold text-brand-oak mb-1">The Edible Cake Canvas</h3>
+                        <span class="inline-block bg-brand-gold text-brand-oak font-badge font-bold text-xs uppercase tracking-wider px-3.5 py-1.5 rounded-full mb-2.5 border border-brand-oak/20 shadow-sm">Track B &bull; Fresh &amp; Edible</span>
+                        <h3 class="font-serif text-2xl font-bold text-brand-oak mb-1">The Cake Canvas</h3>
                         <p class="text-xs font-serif italic text-brand-gold-dark mb-3">Edible Painting, Textured Piping &amp; Creative Expression</p>
                         
-                        <p class="text-xs text-brand-dark/80 leading-relaxed font-sans mb-4">
+                        <p class="text-sm text-brand-dark/80 leading-relaxed font-sans mb-4">
                             Your cake is your canvas. There are zero technical pastry tests, rigid piping rules, or perfection pressure here. Using artist paintbrushes, palette knives, specialty piping tips, and whipped artisan buttercreams, explore soothing textures and paint pre-baked mini cake layers however you feel led. Finish with edible gems and take home your boxed creation ready to enjoy.
                         </p>
                     </div>
-                    <ul class="text-[11px] text-brand-dark/75 space-y-1.5 font-sans border-t border-brand-gold/15 pt-4">
+                    <ul class="text-xs text-brand-dark/80 space-y-2 font-sans border-t border-brand-gold/15 pt-4">
                         <li>✦ <strong>Materials:</strong> Fresh cake layers, artisan buttercreams, edible sugar gems, piping tips</li>
                         <li>✦ <strong>Techniques:</strong> Paintbrush color washes, palette knife sweeps, dimensional piping</li>
                         <li>✦ <strong>Safe Transport:</strong> Sturdy 8-inch window bakery box included with every seat</li>
@@ -293,41 +296,41 @@
                 
                 <!-- TIER 1 -->
                 <div id="tier1" class="bg-brand-oak px-6 py-8 rounded-3xl shadow-lg border border-brand-gold/20 flex flex-col">    
-                    <span class="text-brand-gold font-sans font-bold tracking-widest uppercase text-[10px] block mb-1">Tier 1 &bull; Individual Seats</span>
-                    <h3 class="font-serif text-2xl font-bold text-brand-light mb-1">Public Studio Seat</h3>
+                    <span class="inline-block bg-brand-dark/40 text-brand-sand font-badge font-bold uppercase tracking-wider text-xs px-3.5 py-1 rounded-full border border-brand-gold/30 self-start mb-2.5">Tier 1 &bull; Individual Seats</span>
+                    <h3 class="font-serif text-2xl font-bold text-brand-sand mb-1">Public Studio Seat</h3>
                     <p class="text-brand-gold font-bold text-xs mb-3">Scheduled Dates &bull; McKinney &amp; DFW Venues</p>
-                    <p class="font-sans font-bold text-3xl text-brand-light mb-1">$85 <span class="text-xs font-normal text-brand-light/60">/ Seat</span></p>
-                    <span class="text-[10px] font-sans text-brand-gold mb-4 font-medium">(Studio tools provided for session use &bull; Take home your finished creation)</span>
+                    <p class="font-sans font-bold text-3xl text-brand-sand mb-1">$85 <span class="text-xs font-normal text-brand-sand/70">/ Seat</span></p>
+                    <span class="text-xs font-sans text-brand-sand/80 mb-4 font-medium block">(Studio tools provided for session use &bull; Take home your finished creation)</span>
 
-                    <p class="text-xs text-brand-light/80 font-sans leading-relaxed mb-6">
+                    <p class="text-sm text-brand-sand/90 font-sans leading-relaxed mb-5">
                         Reserve a personal seat at an upcoming studio table. Choose the medium track that fits what you want to explore:
                     </p>
 
-                    <div class="bg-brand-card/60 p-4 rounded-xl text-xs font-sans text-brand-light/90 mb-6 space-y-2.5 border border-brand-gold/10 flex-grow">      
+                    <div class="bg-brand-card/60 p-4 rounded-xl text-xs sm:text-[13px] font-sans text-brand-sand/90 mb-6 space-y-2.5 border border-brand-gold/15 flex-grow">      
                         <strong class="text-brand-gold font-serif block text-xs">Included At Your Seat:</strong>
                         <p class="text-[11px]"><strong>✦ Keepsake Cake Sculpture Track:</strong> Pipe lightweight sculpting medium onto a 4x6-inch 3D sculpting form using palette knives, raw gemstones, and dried botanicals.</p>
-                        <p class="text-[11px]"><strong>✦ The Edible Cake Canvas Track:</strong> Use paintbrushes, palette knives, and piping tips to paint and texture pre-baked mini cake layers with gourmet buttercreams and edible sugar gems.</p>
+                        <p class="text-[11px]"><strong>✦ The Cake Canvas Track:</strong> Use paintbrushes, palette knives, and piping tips to paint and texture pre-baked mini cake layers with gourmet buttercreams and edible sugar gems.</p>
                         <p class="text-[11px]"><strong>✦ Carry-Home Bakery Box:</strong> Every seat includes all materials to complete your piece, plus an 8-inch window bakery box to carry your creation home safely.</p>
                         <p class="text-[11px] text-brand-gold pt-2 border-t border-brand-gold/15"><strong>✦ Optional Take-Home Studio Kit:</strong> Want to keep practicing at home? Add a complete DIY Studio Kit for $50 (Save $18 off our standard $68 retail price) during checkout or at your workshop table.</p>
                     </div>
 
                     <div class="space-y-3 mt-auto pt-2">
-                        <a href="https://square.link/u/hNKitO2s" target="_blank" rel="noopener" class="block text-center bg-brand-gold text-brand-oak font-sans font-bold py-3.5 px-4 rounded-full hover:bg-white transition-all uppercase tracking-widest text-[10px] shadow-sm border border-brand-gold">
+                        <a href="https://square.link/u/hNKitO2s" target="_blank" rel="noopener" class="block text-center bg-brand-gold text-brand-oak font-badge font-bold py-3.5 px-4 rounded-full hover:bg-brand-sand transition-all uppercase tracking-wider text-xs shadow-sm border border-brand-gold">
                             Reserve Keepsake Sculpture Seat ($85)
                         </a>
-                        <a href="https://square.link/u/qFrG9ghO" target="_blank" rel="noopener" class="block text-center bg-white text-brand-oak font-sans font-bold py-3.5 px-4 rounded-full hover:bg-brand-gold hover:border-brand-gold transition-all uppercase tracking-widest text-[10px] shadow-sm border border-transparent">
-                            Reserve Edible Cake Canvas Seat ($85)
+                        <a href="https://square.link/u/qFrG9ghO" target="_blank" rel="noopener" class="block text-center bg-brand-sand/10 text-brand-sand font-badge font-bold py-3.5 px-4 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all uppercase tracking-wider text-xs shadow-sm border border-brand-gold/40">
+                            Reserve Cake Canvas Seat ($85)
                         </a>
                     </div>
                 </div>
 
                 <!-- TIER 2 (WITH QUICK POPUP MODAL BUTTON) -->
                 <div id="tier2" class="bg-white px-6 py-8 rounded-3xl shadow-lg border-2 border-brand-gold flex flex-col relative">
-                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-gold text-brand-oak text-[9px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-sm whitespace-nowrap">
+                    <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-brand-gold text-brand-oak font-badge font-bold text-xs uppercase tracking-wider px-4 py-1 rounded-full shadow-sm border border-brand-oak/20 whitespace-nowrap">
                         Most Popular for In-Person &amp; Hybrid Teams
                     </div>
 
-                    <span class="text-brand-gold-dark font-sans font-bold tracking-widest uppercase text-[10px] block mb-1 mt-1">Tier 2 &bull; Private In-Person &amp; Hybrid</span>
+                    <span class="inline-block bg-brand-gold/20 text-brand-gold-dark font-badge font-bold uppercase tracking-wider text-xs px-3.5 py-1 rounded-full border border-brand-gold/40 self-start mb-2.5 mt-2">Tier 2 &bull; Private In-Person &amp; Hybrid</span>
                     <h3 class="font-serif text-2xl text-brand-oak font-bold mb-1 tracking-tight">Private Local Gathering</h3>
                     <p class="font-sans text-brand-gold-dark font-bold text-xs mb-3">On-Site at Your Office, Home, or Private Venue</p>
                     <p class="font-sans font-bold text-3xl text-brand-oak mb-1">$135 <span class="text-xs font-normal text-brand-dark/60">/ Seat</span></p>
@@ -344,31 +347,31 @@
                         <p class="text-[11px]"><strong>✦ Hybrid Team Add-On:</strong> Ship matching kits ($145/kit plus $12 flat ground shipping) to remote coworkers so everyone creates together live on camera!</p>
                     </div>
 
-                    <button type="button" onclick="openInquiryModal('Tier 2: Private Local Gathering ($135/seat)')" class="block w-full text-center bg-brand-oak text-brand-light font-sans font-bold py-3.5 px-4 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all uppercase tracking-widest text-[11px] mt-auto shadow-md">
+                    <button type="button" onclick="openInquiryModal('Tier 2: Private Local Gathering ($135/seat)')" class="block w-full text-center bg-brand-oak text-brand-sand font-badge font-bold py-3.5 px-4 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all uppercase tracking-wider text-xs mt-auto shadow-md border border-brand-gold/20">
                         Interested in Booking? Contact Me!
                     </button>
                 </div>
 
                 <!-- TIER 3 (WITH QUICK POPUP MODAL BUTTON) -->
                 <div id="tier3" class="bg-brand-oak text-brand-light px-6 py-8 rounded-3xl shadow-xl border border-brand-gold/30 flex flex-col relative mt-4 lg:mt-0">
-                    <span class="text-brand-gold font-sans font-bold tracking-widest uppercase text-[10px] block mb-1">Tier 3 &bull; Remote Virtual Workshop</span>
-                    <h3 class="font-serif text-2xl font-bold text-brand-light mb-1 tracking-tight leading-tight">Remote Shipped Workshops</h3>
+                    <span class="inline-block bg-brand-dark/40 text-brand-sand font-badge font-bold uppercase tracking-wider text-xs px-3.5 py-1 rounded-full border border-brand-gold/30 self-start mb-2.5">Tier 3 &bull; Remote Virtual Workshop</span>
+                    <h3 class="font-serif text-2xl font-bold text-brand-sand mb-1 tracking-tight leading-tight">Remote Shipped Workshops</h3>
                     <p class="font-sans text-brand-gold font-bold text-xs mb-3">Delivered Directly to Remote Doors Nationwide</p>
-                    <p class="font-sans font-bold text-3xl text-brand-light mb-1">$145 <span class="text-xs font-normal text-brand-light/60">/ Seat</span></p>
-                    <span class="text-[10px] font-sans text-brand-light/60 mb-4 font-medium">(100% Virtual Teams &bull; $1,450 Event Base &bull; $12/kit Flat Ground Shipping)</span>
+                    <p class="font-sans font-bold text-3xl text-brand-sand mb-1">$145 <span class="text-xs font-normal text-brand-sand/70">/ Seat</span></p>
+                    <span class="text-xs font-sans text-brand-sand/80 mb-4 font-medium block">(100% Virtual Teams &bull; $1,450 Event Base &bull; $12/kit Flat Ground Shipping)</span>
 
-                    <p class="text-xs text-brand-light/80 font-sans leading-relaxed mb-4">
+                    <p class="text-sm text-brand-sand/90 font-sans leading-relaxed mb-4">
                         Complete keepsake cake sculpture kits delivered straight to coworkers' doorsteps nationwide for a relaxed, camera-optional virtual retreat.
                     </p>
                     
-                    <div class="bg-brand-card/70 p-4 rounded-2xl border border-brand-gold/20 mb-6 text-xs font-sans space-y-2.5 flex-grow">
+                    <div class="bg-brand-card/70 p-4 rounded-2xl border border-brand-gold/20 mb-6 text-xs sm:text-[13px] font-sans text-brand-sand space-y-2.5 flex-grow">
                         <strong class="text-brand-gold font-serif block text-xs">Included in Each Kit:</strong>
-                        <p class="text-[11px] text-brand-light/90"><strong>✦ Complete Keepsake Kit:</strong> 4x6-inch 3D sculpting form, base drum, whipped spackle, 6-color palette, gemstones, piping tips, and dried botanicals.</p>
-                        <p class="text-[11px] text-brand-light/90"><strong>✦ Doorstep Tracking:</strong> Individualized tracking sent directly to each participant.</p>
-                        <p class="text-[11px] text-brand-light/90"><strong>✦ Live Virtual Gathering:</strong> 60 to 90 minute calm session guided live step-by-step.</p>
+                        <p class="text-xs sm:text-[13px] text-brand-sand/90 leading-relaxed"><strong>✦ Complete Keepsake Kit:</strong> 4x6-inch 3D sculpting form, base drum, whipped spackle, 6-color palette, gemstones, piping tips, and dried botanicals.</p>
+                        <p class="text-xs sm:text-[13px] text-brand-sand/90 leading-relaxed"><strong>✦ Doorstep Tracking:</strong> Individualized tracking sent directly to each participant.</p>
+                        <p class="text-xs sm:text-[13px] text-brand-sand/90 leading-relaxed"><strong>✦ Live Virtual Gathering:</strong> 60 to 90 minute calm session guided live step-by-step.</p>
                     </div>
 
-                    <button type="button" onclick="openInquiryModal('Tier 3: Remote Virtual Workshop ($145/seat)')" class="block w-full text-center bg-brand-gold text-brand-oak font-sans font-bold py-3.5 px-4 rounded-full hover:bg-white transition-all uppercase tracking-widest text-[11px] mt-auto shadow-md">
+                    <button type="button" onclick="openInquiryModal('Tier 3: Remote Virtual Workshop ($145/seat)')" class="block w-full text-center bg-brand-gold text-brand-oak font-badge font-bold py-3.5 px-4 rounded-full hover:bg-brand-sand transition-all uppercase tracking-wider text-xs mt-auto shadow-md border border-brand-gold">
                         Interested in Booking? Contact Me!
                     </button>
                 </div>
@@ -385,22 +388,22 @@
                 
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-brand-gold/20">
                     <h3 class="font-serif text-lg text-brand-gold-dark font-bold mb-2">Do I need any cake decorating or art experience?</h3>
-                    <p class="text-brand-dark/90 leading-relaxed text-xs md:text-sm">Not at all. In fact, most people who attend have never touched a palette knife or piping bag before. This experience is designed for complete beginners and overstimulated minds. There is no right or wrong way to make your piece, and you cannot ruin it.</p>
+                    <p class="text-brand-dark/90 leading-relaxed text-sm md:text-[15px]">Not at all. In fact, most people who attend have never touched a palette knife or piping bag before. This experience is designed for complete beginners and overstimulated minds. There is no right or wrong way to make your piece, and you cannot ruin it.</p>
                 </div>
 
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-brand-gold/20">
                     <h3 class="font-serif text-lg text-brand-gold-dark font-bold mb-2">How do hybrid team bookings work?</h3>
-                    <p class="text-brand-dark/90 leading-relaxed text-xs md:text-sm">Hybrid bookings are simple. If you book an in-person Private Local Gathering ($135/seat, meeting our 10-seat event minimum), you can add individual shipped kits ($145/kit plus $12 flat ground shipping) for remote colleagues. They receive their keepsake sculpture kits at home and join directly into the live video session with your local group.</p>
+                    <p class="text-brand-dark/90 leading-relaxed text-sm md:text-[15px]">Hybrid bookings are simple. If you book an in-person Private Local Gathering ($135/seat, meeting our 10-seat event minimum), you can add individual shipped kits ($145/kit plus $12 flat ground shipping) for remote colleagues. They receive their keepsake sculpture kits at home and join directly into the live video session with your local group.</p>
                 </div>
 
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-brand-gold/20">
-                    <h3 class="font-serif text-lg text-brand-gold-dark font-bold mb-2">What is the difference between Keepsake Sculpture and The Edible Cake Canvas tracks?</h3>
-                    <p class="text-brand-dark/90 leading-relaxed text-xs md:text-sm">The <strong>Keepsake Cake Sculpture Track</strong> uses a 4x6-inch 3D sculpting form, whipped spackle medium, palette knives, gemstones, and botanicals to make a permanent desk or home art piece. <strong>The Edible Cake Canvas Track</strong> uses freshly baked mini cakes, gourmet buttercreams, paintbrushes, palette knives, and edible sugar gems to make a delicious edible creation to enjoy at home.</p>
+                    <h3 class="font-serif text-lg text-brand-gold-dark font-bold mb-2">What is the difference between Keepsake Sculpture and The Cake Canvas tracks?</h3>
+                    <p class="text-brand-dark/90 leading-relaxed text-sm md:text-[15px]">The <strong>Keepsake Cake Sculpture Track</strong> uses a 4x6-inch 3D sculpting form, whipped spackle medium, palette knives, gemstones, and botanicals to make a permanent desk or home art piece. <strong>The Cake Canvas Track</strong> uses freshly baked mini cakes, gourmet buttercreams, paintbrushes, palette knives, and edible sugar gems to make a delicious edible creation to enjoy at home.</p>
                 </div>
 
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-brand-gold/20">
                     <h3 class="font-serif text-lg text-brand-gold-dark font-bold mb-2">Are shipped virtual corporate kits edible or non-edible?</h3>
-                    <p class="text-brand-dark/90 leading-relaxed text-xs md:text-sm">Shipped virtual kits are exclusively non-edible keepsake sculptures. This ensures all materials arrive in clean condition without perishable food risks, giving participants a permanent decorative keepsake for their home or office.</p>
+                    <p class="text-brand-dark/90 leading-relaxed text-sm md:text-[15px]">Shipped virtual kits are exclusively non-edible keepsake sculptures. This ensures all materials arrive in clean condition without perishable food risks, giving participants a permanent decorative keepsake for their home or office.</p>
                 </div>
             </div>
         </div>
