@@ -31,11 +31,9 @@
                     },
                     fontFamily: {
                         'serif': ['"Fraunces"', 'serif'],
-                        'sans': ['"Inter"', 'sans-serif'],
                         'hand': ['"Homemade Apple"', 'cursive'],
                         'caveat': ['"Caveat"', 'cursive'],
-                        'mono': ['"Xanh Mono"', 'monospace'],
-                        'badge': ['"Plus Jakarta Sans"', 'sans-serif']
+                        'mono': ['"Xanh Mono"', 'monospace']
                     }
                 }
             }
@@ -45,7 +43,7 @@
         .bg-texture { background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png'); }
     </style>
 </head>
-<body class="font-serif bg-brand-light text-brand-dark antialiased">
+<body class="font-sans bg-brand-light text-brand-dark antialiased">
 
     <!-- NAVIGATION -->
     <nav class="sticky top-0 bg-brand-oak/95 backdrop-blur-lg shadow-lg z-50 border-b border-brand-gold/10">
@@ -84,7 +82,7 @@
     <header class="text-center py-16 md:py-20 px-6 bg-brand-oak border-b border-brand-gold/10 relative overflow-hidden">
         <div class="absolute inset-0 opacity-5 bg-texture"></div>
         <div class="max-w-4xl mx-auto px-6 relative z-10">
-            <span class="text-brand-gold font-hand text-2xl block mb-2">Interviews &amp; Publications</span>
+            <span class="text-brand-gold font-caveat text-2xl md:text-3xl block mb-2">Interviews &amp; Publications</span>
             <h1 class="font-hand text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-brand-sand leading-relaxed tracking-wide mb-4 py-1">Press &amp; Media</h1>
             <p class="font-serif italic text-base md:text-lg text-brand-light/80 leading-relaxed max-w-2xl mx-auto">
                 Essays, interviews, and audio explorations bridging sensory art with everyday life.
@@ -97,8 +95,8 @@
 
             <!-- BOLD JOURNEY FEATURE -->
             <div class="bg-white rounded-3xl border border-brand-gold/30 p-8 md:p-12 shadow-lg mb-12 flex flex-col md:flex-row gap-8 items-center relative overflow-hidden">
-                <div class="absolute top-0 right-0 bg-brand-oak text-brand-gold font-badge text-[10px] font-bold uppercase tracking-wider px-4 py-1.5 rounded-bl-xl shadow-sm z-10">
-                    Coming Soon
+                <div class="absolute top-0 right-0 bg-brand-gold/10 text-brand-gold-dark border-l border-b border-brand-gold/30 font-sans text-[10px] font-bold uppercase tracking-wider px-4 py-1.5 rounded-bl-xl shadow-sm z-10">
+                    Published Feature
                 </div>
                 <div class="w-full md:w-1/3 flex justify-center shrink-0">
                     <div class="w-48 h-48 bg-brand-light rounded-full border-4 border-brand-gold/20 flex items-center justify-center p-6 shadow-inner relative">
@@ -108,14 +106,12 @@
                     </div>
                 </div>
                 <div class="w-full md:w-2/3 text-center md:text-left">
-                    <span class="text-brand-gold-dark font-hand text-2xl block mb-2">Magazine Interview</span>
+                    <span class="text-brand-gold-dark font-caveat text-2xl md:text-3xl block mb-2">Magazine Interview</span>
                     <h2 class="font-serif text-3xl font-bold text-brand-oak mb-4">Bold Journey Magazine</h2>
-                    <p class="text-sm text-brand-dark/80 font-serif leading-relaxed mb-6">
-                        An upcoming feature interview exploring the origins of The Gilded Spoon Atelier. Read about the intersection of neurodivergence, sensory regulation, and how giving up perfectionism in cake decorating sparked a new approach to accessible tactile art.
+                    <p class="text-sm text-brand-dark/80 font-sans leading-relaxed mb-6">
+                        A feature interview exploring the origins of The Gilded Spoon Atelier. Read about the intersection of neurodivergence, sensory regulation, and how giving up perfectionism in cake decorating sparked a new approach to accessible tactile art.
                     </p>
-                    <button disabled class="inline-block bg-brand-gray/20 text-brand-dark/40 font-badge text-xs font-bold uppercase tracking-wider py-3 px-8 rounded-full cursor-not-allowed">
-                        Link Available Soon
-                    </button>
+                    <a href="https://boldjourney.com/meet-dimple-mckinney" target="_blank" rel="noopener" class="inline-block bg-brand-oak text-brand-sand font-sans text-[11px] font-bold uppercase tracking-widest py-3.5 px-8 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md">Read the Interview &rarr;</a>
                 </div>
             </div>
 
@@ -123,12 +119,12 @@
 
                 <!-- BAKE TO BASELINE SUBSTACK -->
                 <div class="bg-white rounded-3xl border border-brand-gold/20 p-8 shadow-md flex flex-col hover:shadow-xl transition-shadow relative">
-                    <div class="absolute top-4 right-4 bg-brand-gold/10 text-brand-gold-dark border border-brand-gold/30 font-badge text-[9px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+                    <div class="absolute top-4 right-4 bg-brand-gold/10 text-brand-gold-dark border border-brand-gold/30 font-sans text-[9px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
                         Live Publication
                     </div>
                     <h3 class="font-serif text-2xl font-bold text-brand-oak mb-1 pr-24 mt-2">Bake to Baseline</h3>
                     <p class="text-xl font-hand text-brand-gold-dark mb-4">Essays on Substack</p>
-                    <p class="text-sm text-brand-dark/80 font-serif leading-relaxed flex-grow mb-6">
+                    <p class="text-sm text-brand-dark/80 font-sans leading-relaxed flex-grow mb-6">
                         Essays on color regulation, sensory memory, neurodivergence, and the quiet alchemy of cake decorating. Read along as we unpack stories from the kitchen counter and explore how tactile hobbies anchor the mind.
                     </p>
                     
@@ -143,7 +139,7 @@
                         </iframe>
                     </div>
 
-                    <a href="https://baketobaseline.substack.com/" target="_blank" rel="noopener" class="block w-full text-center bg-brand-oak text-brand-sand font-badge text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-sm border border-brand-gold/20">
+                    <a href="https://baketobaseline.substack.com/" target="_blank" rel="noopener" class="block w-full text-center bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-sm border border-brand-gold/20">
                         Read Full Archive &rarr;
                     </a>
                 </div>
@@ -153,25 +149,25 @@
                     <div class="absolute -right-10 -bottom-10 opacity-5">
                         <svg class="w-48 h-48 text-brand-gold" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/></svg>
                     </div>
-                    <div class="absolute top-4 right-4 bg-brand-gold text-brand-oak font-badge text-[9px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm z-10 border border-brand-gold/40">
+                    <div class="absolute top-4 right-4 bg-brand-gold text-brand-oak font-sans text-[9px] font-bold uppercase tracking-wider px-3 py-1 rounded-full shadow-sm z-10 border border-brand-gold/40">
                         In Development
                     </div>
                     
                     <h3 class="font-serif text-2xl font-bold text-brand-sand mb-1 pr-24 mt-2 relative z-10">So Blessed &amp; Elevated</h3>
                     <p class="text-xl font-hand text-brand-gold mb-4 relative z-10">Wearing words as fashion...</p>
-                    <p class="text-sm text-brand-light/90 font-serif leading-relaxed flex-grow mb-6 relative z-10">
+                    <p class="text-sm text-brand-light/90 font-sans leading-relaxed flex-grow mb-6 relative z-10">
                         An upcoming multimedia project blending newsletter essays and podcast conversations. We will explore intentional expression, personal aesthetic, and how the words we speak over ourselves become the ultimate lifestyle design.
                     </p>
                     
                     <div class="bg-brand-card/60 rounded-xl p-5 border border-brand-gold/20 mb-6 relative z-10">
-                        <span class="block text-brand-gold font-mono text-[10px] font-bold uppercase tracking-[0.2em] mb-1.5">Format</span>
+                        <span class="block text-brand-gold font-sans text-[10px] font-bold uppercase tracking-[0.2em] mb-1.5">Format</span>
                         <p class="text-[11px] font-serif text-brand-light/90">Audio Conversations &amp; Written Letters</p>
                         <div class="w-full h-px bg-brand-gold/10 my-3"></div>
-                        <span class="block text-brand-gold font-mono text-[10px] font-bold uppercase tracking-[0.2em] mb-1.5">Status</span>
+                        <span class="block text-brand-gold font-sans text-[10px] font-bold uppercase tracking-[0.2em] mb-1.5">Status</span>
                         <p class="text-[11px] font-serif text-brand-light/90">Recording Early Sessions</p>
                     </div>
 
-                    <button disabled class="block w-full text-center bg-transparent border-2 border-brand-gold/40 text-brand-gold font-badge text-xs font-bold uppercase tracking-wider py-3 px-6 rounded-full cursor-not-allowed relative z-10">
+                    <button disabled class="block w-full text-center bg-transparent border-2 border-brand-gold/40 text-brand-gold font-sans text-xs font-bold uppercase tracking-wider py-3 px-6 rounded-full cursor-not-allowed relative z-10">
                         Launching Soon
                     </button>
                 </div>
@@ -214,7 +210,7 @@
                 <p class="font-serif text-brand-light/30 text-xs mb-3">
                     &copy; 2026 The Gilded Spoon Shoppe | McKinney, Texas
                 </p>
-                <p class="max-w-xl mx-auto font-sans text-[9px] leading-relaxed text-brand-gray/20 italic">
+                <p class="max-w-xl mx-auto font-serif text-[9px] leading-relaxed text-brand-gray/20 italic">
                     Disclaimer: The Gilded Spoon Shoppe provides sensory design education. It is not a substitute for professional medical advice, diagnosis, or occupational therapy. Edible products are prepared in a home kitchen that handles allergens including wheat, dairy, eggs, soy, and nuts.
                 </p>
             </div>
