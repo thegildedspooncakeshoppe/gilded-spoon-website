@@ -7,7 +7,7 @@
     <title>Studio Workshops | The Gilded Spoon Atelier</title>
     <meta name="description" content="Tactile art and cake decorating workshops in McKinney, Texas. Low pressure sensory grounding, zero baking experience needed, and zero performance required.">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Great+Vibes&family=Libre+Baskerville:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Great+Vibes&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -26,7 +26,7 @@
                         'brand-sand': '#E3D8C8'       /* Tan/Sand */
                     },
                     fontFamily: {
-                        'serif': ['"Playfair Display"', 'serif'],
+                        'serif': ['"Fraunces"', 'serif'],
                         'sans': ['"Inter"', 'sans-serif'],
                         'hand': ['"Caveat"', 'cursive']
                     }
@@ -54,7 +54,7 @@
                 </a>
             </div>
             <div class="md:hidden">
-                <button id="hamburger-button" class="text-white focus:outline-none">
+                <button id="hamburger-button" class="text-brand-light focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
@@ -74,7 +74,7 @@
     <header class="text-center py-16 md:py-20 bg-brand-oak border-b border-brand-gold/10 relative overflow-hidden">
         <div class="max-w-4xl mx-auto px-6 relative z-10">
             <span class="text-brand-gold font-sans font-bold tracking-[0.3em] uppercase text-xs block mb-3">Tactile Studio Gatherings</span>
-            <h1 class="font-serif text-4xl md:text-5xl font-bold text-white leading-tight mb-4">A Quiet Place for Busy Minds</h1>
+            <h1 class="font-serif text-4xl md:text-5xl font-bold text-brand-sand leading-tight mb-4">A Quiet Place for Busy Minds</h1>
             <p class="font-serif italic text-base md:text-lg text-brand-light/80 leading-relaxed max-w-2xl mx-auto">
                 Step inside an intentional studio space designed to help you drop your shoulders and decompress. In our atelier, there is zero performance required, zero baking experience needed, and your nervous system sets the rules.
             </p>
@@ -274,7 +274,7 @@
                 <p class="text-xs sm:text-sm text-brand-dark/80 font-sans leading-relaxed max-w-xl mx-auto mb-6">
                     Explore our portfolio gallery to see live participant bakes, tactile sculpting studies, and multi-view process breakdowns from past studio sessions.
                 </p>
-                <a href="flipbook.html" class="inline-block bg-brand-oak text-white font-sans text-xs font-bold uppercase tracking-widest py-3.5 px-8 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md">
+                <a href="flipbook.html" class="inline-block bg-brand-oak text-brand-light font-sans text-xs font-bold uppercase tracking-widest py-3.5 px-8 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md">
                     View Workshop Bakes in Portfolio &rarr;
                 </a>
             </div>
@@ -294,9 +294,9 @@
                 <!-- TIER 1 -->
                 <div id="tier1" class="bg-brand-oak px-6 py-8 rounded-3xl shadow-lg border border-brand-gold/20 flex flex-col">    
                     <span class="text-brand-gold font-sans font-bold tracking-widest uppercase text-[10px] block mb-1">Tier 1 &bull; Individual Seats</span>
-                    <h3 class="font-serif text-2xl font-bold text-white mb-1">Public Studio Seat</h3>
+                    <h3 class="font-serif text-2xl font-bold text-brand-light mb-1">Public Studio Seat</h3>
                     <p class="text-brand-gold font-bold text-xs mb-3">Scheduled Dates &bull; McKinney &amp; DFW Venues</p>
-                    <p class="font-sans font-bold text-3xl text-white mb-1">$85 <span class="text-xs font-normal text-brand-light/60">/ Seat</span></p>
+                    <p class="font-sans font-bold text-3xl text-brand-light mb-1">$85 <span class="text-xs font-normal text-brand-light/60">/ Seat</span></p>
                     <span class="text-[10px] font-sans text-brand-gold mb-4 font-medium">(Studio tools provided for session use &bull; Take home your finished creation)</span>
 
                     <p class="text-xs text-brand-light/80 font-sans leading-relaxed mb-6">
@@ -344,17 +344,17 @@
                         <p class="text-[11px]"><strong>✦ Hybrid Team Add-On:</strong> Ship matching kits ($145/kit plus $12 flat ground shipping) to remote coworkers so everyone creates together live on camera!</p>
                     </div>
 
-                    <button type="button" onclick="openInquiryModal('Tier 2: Private Local Gathering ($135/seat)')" class="block w-full text-center bg-brand-oak text-white font-sans font-bold py-3.5 px-4 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all uppercase tracking-widest text-[11px] mt-auto shadow-md">
+                    <button type="button" onclick="openInquiryModal('Tier 2: Private Local Gathering ($135/seat)')" class="block w-full text-center bg-brand-oak text-brand-light font-sans font-bold py-3.5 px-4 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all uppercase tracking-widest text-[11px] mt-auto shadow-md">
                         Interested in Booking? Contact Me!
                     </button>
                 </div>
 
                 <!-- TIER 3 (WITH QUICK POPUP MODAL BUTTON) -->
-                <div id="tier3" class="bg-brand-oak text-white px-6 py-8 rounded-3xl shadow-xl border border-brand-gold/30 flex flex-col relative mt-4 lg:mt-0">
+                <div id="tier3" class="bg-brand-oak text-brand-light px-6 py-8 rounded-3xl shadow-xl border border-brand-gold/30 flex flex-col relative mt-4 lg:mt-0">
                     <span class="text-brand-gold font-sans font-bold tracking-widest uppercase text-[10px] block mb-1">Tier 3 &bull; Remote Virtual Workshop</span>
-                    <h3 class="font-serif text-2xl font-bold text-white mb-1 tracking-tight leading-tight">Remote Shipped Workshops</h3>
+                    <h3 class="font-serif text-2xl font-bold text-brand-light mb-1 tracking-tight leading-tight">Remote Shipped Workshops</h3>
                     <p class="font-sans text-brand-gold font-bold text-xs mb-3">Delivered Directly to Remote Doors Nationwide</p>
-                    <p class="font-sans font-bold text-3xl text-white mb-1">$145 <span class="text-xs font-normal text-brand-light/60">/ Seat</span></p>
+                    <p class="font-sans font-bold text-3xl text-brand-light mb-1">$145 <span class="text-xs font-normal text-brand-light/60">/ Seat</span></p>
                     <span class="text-[10px] font-sans text-brand-light/60 mb-4 font-medium">(100% Virtual Teams &bull; $1,450 Event Base &bull; $12/kit Flat Ground Shipping)</span>
 
                     <p class="text-xs text-brand-light/80 font-sans leading-relaxed mb-4">
@@ -508,7 +508,7 @@
                 </div>
 
                 <div class="pt-2">
-                    <button type="submit" class="w-full bg-brand-oak text-white font-sans text-xs font-bold uppercase tracking-widest py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md">
+                    <button type="submit" class="w-full bg-brand-oak text-brand-light font-sans text-xs font-bold uppercase tracking-widest py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md">
                         Contact Me About This Gathering!
                     </button>
                 </div>
