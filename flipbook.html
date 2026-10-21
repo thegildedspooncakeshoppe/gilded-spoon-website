@@ -9,9 +9,10 @@
     <meta name="keywords" content="custom cakes McKinney TX, celebration cakes, birthday cakes, keepsake cake sculpture, artisanal pastry design">
     
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..800&family=Homemade+Apple&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Xanh+Mono:ital@0;1&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..800&family=Homemade+Apple&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Xanh+Mono:ital@0;1&display=swap" rel="stylesheet">  
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -34,6 +35,7 @@
                         'serif': ['"Fraunces"', 'serif'],
                         'sans': ['"Inter"', 'sans-serif'],
                         'hand': ['"Homemade Apple"', 'cursive'],
+                        'caveat': ['"Caveat"', 'cursive'],
                         'mono': ['"Xanh Mono"', 'monospace'],
                         'badge': ['"Plus Jakarta Sans"', 'sans-serif']
                     }
@@ -74,7 +76,7 @@
         <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
             <a href="index.html" class="text-2xl font-serif font-bold text-brand-gold text-center leading-none">
                 The Gilded Spoon
-                <span class="block text-xs font-sans font-light not-italic tracking-[0.3em] text-brand-light">SHOPPE &amp; ATELIER</span>
+                <span class="block text-xs font-serif font-light not-italic tracking-[0.3em] text-brand-light">SHOPPE &amp; ATELIER</span>
             </a>
             <div class="hidden md:flex items-center space-x-6 font-medium text-xs tracking-widest uppercase">
                 <a href="shoppe.html" class="text-brand-light hover:text-brand-gold transition">Shoppe</a>
@@ -107,7 +109,7 @@
         <div class="absolute inset-0 opacity-5 bg-texture"></div>
         <div class="max-w-4xl mx-auto px-6 relative z-10">
             <span class="text-brand-gold font-bold tracking-[0.4em] uppercase text-[10px] block mb-4">Celebration Cakes and Studio Works</span>
-            <h1 class="font-hand text-2xl sm:text-3xl md:text-4xl text-brand-sand leading-relaxed tracking-wide mb-4 py-1">Atelier Portfolio</h1>
+            <h1 class="font-hand text-3xl sm:text-4xl md:text-5xl text-brand-sand leading-relaxed tracking-wide mb-4 py-1">Atelier Portfolio</h1>
             <p class="font-serif italic text-base md:text-lg text-brand-light/80 leading-relaxed max-w-2xl mx-auto">
                 A visual collection of handcrafted celebration cakes, community volunteer bakes, and tactile pieces, documented through our 5-Layer Sensory Framework.
             </p>
@@ -116,7 +118,7 @@
 
     <!-- CATEGORY FILTER TABS -->
     <section class="py-6 bg-brand-light/95 border-b border-brand-gold/20 sticky top-[73px] z-40 backdrop-blur-md">
-        <div class="max-w-6xl mx-auto px-4 flex flex-wrap justify-center items-center gap-2 sm:gap-3 text-xs uppercase tracking-widest font-sans font-bold">
+        <div class="max-w-6xl mx-auto px-4 flex flex-wrap justify-center items-center gap-2 sm:gap-3 text-xs uppercase tracking-widest font-serif font-bold">
             <button onclick="filterGallery('all')" class="filter-btn active py-2.5 px-5 rounded-full border border-brand-oak transition-all text-brand-light bg-brand-oak shadow-sm" data-category="all">
                 All Works
             </button>
@@ -156,7 +158,7 @@
                 <div class="bg-brand-light text-brand-dark w-full rounded-3xl overflow-hidden shadow-2xl grid grid-cols-1 md:grid-cols-2 max-h-[88vh] md:max-h-[82vh] overflow-y-auto md:overflow-hidden relative z-10">
                     
                     <!-- Left: Photo Container & View Toggle Bar -->
-                    <div class="bg-brand-oak flex flex-col items-center justify-between p-4 sm:p-6 border-b md:border-b-0 md:border-r border-brand-gold/20 overflow-hidden h-80 md:h-full relative shadow-inner">
+                    <div class="bg-brand-light flex flex-col items-center justify-between p-4 sm:p-6 border-b md:border-b-0 md:border-r border-brand-gold/30 overflow-hidden h-80 md:h-full relative shadow-inner">
                         <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.05),transparent)] pointer-events-none"></div>
                         <div class="w-full flex-1 flex items-center justify-center overflow-hidden min-h-0">
                             <img id="lightbox-img" src="" alt="Cake Detail" class="object-contain block mx-auto max-h-full max-w-full rounded-md border border-brand-gold/60 p-2 bg-brand-dark shadow-[0_15px_30px_rgba(0,0,0,0.6)] transition-all duration-300">
@@ -169,15 +171,15 @@
                     <div class="p-6 md:p-8 flex flex-col justify-start overflow-y-auto text-left space-y-4">
                         
                         <div>
-                            <span id="lightbox-tag" class="text-[10px] font-sans font-bold tracking-widest text-brand-gold-dark uppercase block mb-1"></span>
-                            <h2 id="lightbox-title" class="font-sans text-2xl md:text-3xl font-bold text-brand-oak leading-tight"></h2>
-                            <p id="lightbox-meta" class="text-xs font-sans text-brand-dark/70 mt-1"></p>
+                            <span id="lightbox-tag" class="text-[10px] font-serif font-bold tracking-widest text-brand-gold-dark uppercase block mb-1"></span>
+                            <h2 id="lightbox-title" class="font-serif text-2xl md:text-3xl font-bold text-brand-oak leading-tight"></h2>
+                            <p id="lightbox-meta" class="text-xs font-serif text-brand-dark/80 mt-1"></p>
                         </div>
                         
                         <div class="w-12 h-0.5 bg-brand-gold/40"></div>
                         
                         <!-- 5 Layers Structured List -->
-                        <div class="space-y-2 text-xs font-sans text-brand-dark/85 leading-relaxed bg-white/70 p-4 rounded-xl border border-brand-gold/20">
+                        <div class="space-y-2 text-xs font-serif text-brand-dark/85 leading-relaxed bg-white/70 p-4 rounded-xl border border-brand-gold/20">
                             <div><strong class="text-brand-oak block text-[11px]">Layer 1 (Color &amp; Atmosphere):</strong> <span id="layer-1"></span></div>
                             <div><strong class="text-brand-oak block text-[11px]">Layer 2 (Shape &amp; Movement):</strong> <span id="layer-2"></span></div>
                             <div><strong class="text-brand-oak block text-[11px]">Layer 3 (Texture &amp; Touch):</strong> <span id="layer-3"></span></div>
@@ -187,8 +189,8 @@
 
                         <!-- Artisan Background Note -->
                         <div class="border-t border-brand-gold/20 pt-3">
-                            <span class="text-[10px] font-sans font-bold uppercase tracking-wider text-brand-gold-dark block mb-1">Behind The Bake</span>
-                            <p id="lightbox-note" class="text-xs font-sans text-brand-dark/80 italic leading-relaxed"></p>
+                            <span class="text-[10px] font-serif font-bold uppercase tracking-wider text-brand-gold-dark block mb-1">Behind The Bake</span>
+                            <p id="lightbox-note" class="text-xs font-serif text-brand-dark/80 italic leading-relaxed"></p>
                         </div>
 
                     </div>
@@ -199,7 +201,7 @@
     </main>
 
         <!-- FOOTER -->
-    <footer class="bg-brand-dark text-brand-gray border-t border-brand-gold/20 font-sans text-xs">
+    <footer class="bg-brand-dark text-brand-gray border-t border-brand-gold/20 font-serif text-xs">
         <div class="max-w-2xl mx-auto px-6 py-8">
             <div class="flex flex-col items-center">
                 
@@ -234,7 +236,7 @@
                 <p class="font-serif text-brand-light/30 text-xs mb-3">
                     &copy; 2026 The Gilded Spoon Shoppe | McKinney, Texas
                 </p>
-                <p class="max-w-xl mx-auto font-sans text-[9px] leading-relaxed text-brand-gray/20 italic">
+                <p class="max-w-xl mx-auto font-serif text-[9px] leading-relaxed text-brand-gray/20 italic">
                     Disclaimer: The Gilded Spoon Shoppe provides sensory design education. It is not a substitute for professional medical advice, diagnosis, or occupational therapy. Edible products are prepared in a home kitchen that handles allergens including wheat, dairy, eggs, soy, and nuts.
                 </p>
             </div>
@@ -760,25 +762,25 @@
             galleryGrid.innerHTML = '';
             currentFilteredData.forEach((item, index) => {
                 const card = document.createElement('div');
-                card.className = "gallery-item block relative group cursor-pointer bg-white border border-brand-gold/30 shadow-md rounded-2xl overflow-hidden hover:border-brand-gold/40 transition-all p-3 flex flex-col justify-between";
+                card.className = "gallery-item block relative group cursor-pointer bg-brand-oak border border-brand-gold/30 shadow-md rounded-2xl overflow-hidden hover:border-brand-gold/60 transition-all p-3 flex flex-col justify-between";
                 card.onclick = () => openLightbox(index);
 
                 const hasMultipleViews = item.views && item.views.length > 1;
                 const viewBadge = hasMultipleViews 
-                    ? `<span class="inline-block bg-brand-gold/20 text-brand-gold text-[9px] font-sans font-bold uppercase tracking-widest px-2 py-0.5 rounded-full border border-brand-gold/40 ml-1.5 whitespace-nowrap shrink-0">${item.views.length} Views</span>`
+                    ? `<span class="inline-block bg-brand-gold/20 text-brand-gold text-[9px] font-serif font-bold uppercase tracking-widest px-2 py-0.5 rounded-full border border-brand-gold/40 ml-1.5 whitespace-nowrap shrink-0">${item.views.length} Views</span>`
                     : '';
 
                 card.innerHTML = `
-                    <div class="w-full h-64 sm:h-72 flex items-center justify-center overflow-hidden rounded-xl bg-brand-oak shadow-inner border border-brand-gold/20 mb-3 relative p-4 transition-colors group-hover:border-brand-gold/50">
+                    <div class="w-full h-64 sm:h-72 flex items-center justify-center overflow-hidden rounded-xl bg-brand-dark/20 shadow-inner border border-brand-gold/20 mb-3 relative p-4 transition-colors group-hover:border-brand-gold/40">
                         <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.05),transparent)] pointer-events-none"></div>
                         <img src="${item.src}" alt="${item.title}" class="max-h-full max-w-full object-contain rounded-sm border border-brand-gold/60 p-1.5 bg-brand-dark shadow-[0_10px_20px_rgba(0,0,0,0.6)] transition-transform duration-300 group-hover:scale-95 relative z-10">
                     </div>
                     <div class="text-left px-1">
                         <div class="flex items-center justify-between mb-1 gap-1.5">
-                            <span class="text-brand-gold text-[10px] font-sans uppercase tracking-widest font-bold truncate">${item.tag}</span>
+                            <span class="text-brand-gold text-[10px] font-mono text-[11px] uppercase tracking-widest font-bold truncate">${item.tag}</span>
                             ${viewBadge}
                         </div>
-                        <h3 class="text-brand-oak text-sm font-serif font-bold leading-snug line-clamp-2">${item.title}</h3>
+                        <h3 class="text-brand-light text-sm font-serif font-bold leading-snug line-clamp-2">${item.title}</h3>
                     </div>
                 `;
                 galleryGrid.appendChild(card);
@@ -847,7 +849,7 @@
                     const btn = document.createElement('button');
                     btn.type = 'button';
                     const isActive = (idx === currentViewIndex);
-                    btn.className = `text-[10px] font-sans font-bold uppercase tracking-wider py-1.5 px-3 rounded-full border transition-all ${
+                    btn.className = `text-[10px] font-serif font-bold uppercase tracking-wider py-1.5 px-3 rounded-full border transition-all ${
                         isActive 
                         ? 'bg-brand-gold text-brand-oak border-brand-gold shadow-sm' 
                         : 'bg-white/80 text-brand-dark/75 border-brand-gold/30 hover:border-brand-gold hover:text-brand-oak'
