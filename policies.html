@@ -7,36 +7,44 @@
     <title>Store Policies &amp; Fulfillment | The Gilded Spoon Shoppe</title>
     <meta name="description" content="Shipping, fulfillment, local McKinney delivery, Cottage Food disclosures, and return policies for The Gilded Spoon Shoppe and Studio in McKinney, Texas.">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Great+Vibes&family=Libre+Baskerville:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..800&family=Homemade+Apple&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Xanh+Mono:ital@0;1&display=swap" rel="stylesheet">  
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'brand-dark': '#1C161E',
-                        'brand-light': '#F4F1ED',
-                        'brand-gold': '#D4AF37',
+                        'brand-dark': '#2A272A',      /* Soft Charcoal */
+                        'brand-light': '#F4F1ED',     /* Warm Linen / Parchment */
+                        'brand-gold': '#D4AF37',      /* Muted Gold */
                         'brand-gold-hover': '#E2C76A',
                         'brand-gold-dark': '#8C6D18',
                         'brand-gray': '#A09DA6',
-                        'brand-card': '#2A232F',
-                        'brand-navy': '#0A2342'
+                        'brand-terracotta': '#C17767',/* Terracotta accent */
+                        'brand-blush': '#E8D5D1',     /* Soft Blush */
+                        'brand-oak': '#2A3428',       /* Shadowy, Chalky Dark Green (Ancient Oak) */
+                        'brand-sand': '#E3D8C8',      /* Tan/Sand */
+                        'brand-card': '#1E251D'       /* Deep forest overlay for dark cards */
                     },
                     fontFamily: {
-                        'serif': ['"Playfair Display"', 'serif'],
+                        'serif': ['"Fraunces"', 'serif'],
                         'sans': ['"Inter"', 'sans-serif'],
-                        'hand': ['"Caveat"', 'cursive']
+                        'hand': ['"Homemade Apple"', 'cursive'],
+                        'caveat': ['"Caveat"', 'cursive'],
+                        'mono': ['"Xanh Mono"', 'monospace'],
+                        'badge': ['"Plus Jakarta Sans"', 'sans-serif']
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="font-sans bg-brand-light text-brand-dark antialiased">
+<body class="font-serif bg-brand-light text-brand-dark antialiased">
 
     <!-- NAVIGATION -->
-    <nav class="sticky top-0 bg-brand-navy/95 backdrop-blur-lg shadow-lg z-50 border-b border-brand-gold/10">
+    <nav class="sticky top-0 bg-brand-oak/95 backdrop-blur-lg shadow-lg z-50 border-b border-brand-gold/10">
         <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
             <a href="index.html" class="text-2xl font-serif font-bold text-brand-gold text-center leading-none">
                 The Gilded Spoon
@@ -47,32 +55,32 @@
                 <a href="workshop.html" class="text-brand-light hover:text-brand-gold transition">Workshops</a>
                 <a href="flipbook.html" class="text-brand-light hover:text-brand-gold transition">Portfolio</a>
                 <a href="contact.html" class="text-brand-light hover:text-brand-gold transition">Contact</a>
-                <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-navy hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm">
+                <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-oak hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm">
                     Free Guide
                 </a>
             </div>
             <div class="md:hidden">
-                <button id="hamburger-button" class="text-white focus:outline-none">
+                <button id="hamburger-button" class="text-brand-light focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden mt-4 px-4 pb-4 bg-brand-navy text-center">
+        <div id="mobile-menu" class="hidden md:hidden mt-4 px-4 pb-4 bg-brand-oak text-center">
             <a href="shoppe.html" class="block py-3 text-brand-light uppercase tracking-widest">Shoppe</a>
             <a href="workshop.html" class="block py-3 text-brand-light uppercase tracking-widest">Workshops</a>
             <a href="flipbook.html" class="block py-3 text-brand-light uppercase tracking-widest">Portfolio</a>
             <a href="contact.html" class="block py-3 text-brand-light uppercase tracking-widest">Contact</a>
-            <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-navy hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm mt-2 inline-block">
+            <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-oak hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm mt-2 inline-block">
                 Free Guide
             </a>
         </div>
     </nav>
 
     <!-- HEADER SECTION -->
-    <header class="text-center py-16 md:py-20 px-6 bg-brand-navy border-b border-brand-gold/10 relative overflow-hidden">
+    <header class="text-center py-16 md:py-20 px-6 bg-brand-oak border-b border-brand-gold/10 relative overflow-hidden">
         <div class="max-w-3xl mx-auto relative z-10">
-            <span class="text-xs font-bold uppercase tracking-[0.25em] text-brand-gold block mb-3">Studio Standards</span>
-            <h1 class="font-serif text-4xl md:text-5xl font-bold text-brand-light mb-4">Store Policies &amp; Fulfillment</h1>
+            <span class="text-brand-gold font-hand text-2xl block mb-2">Studio Standards</span>
+            <h1 class="font-hand text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-brand-sand leading-relaxed tracking-wide mb-4 py-1">Store Policies &amp; Fulfillment</h1>
             <p class="font-serif italic text-base md:text-lg text-brand-light/80 leading-relaxed max-w-xl mx-auto">
                 Careful packaging, reliable delivery, cottage food guidelines, and return terms for our studio editions, kits, and workshop seats.
             </p>
@@ -85,31 +93,31 @@
             
             <!-- SECTION 1: NATIONWIDE SHIPPING -->
             <section id="shipping" class="bg-white border border-brand-gold/30 rounded-3xl p-6 sm:p-10 shadow-lg">
-                <span class="text-brand-gold-dark font-sans font-bold tracking-widest uppercase text-[10px] block mb-1">Physical Studio Goods</span>
-                <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-navy mb-4 border-b border-brand-gold/20 pb-3">Nationwide Shipping Across the United States</h2>
-                <p class="font-sans text-xs sm:text-sm text-brand-dark/85 mb-5 leading-relaxed">
+                <span class="text-brand-gold-dark font-hand text-2xl block mb-2">Physical Studio Goods</span>
+                <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-oak mb-4 border-b border-brand-gold/20 pb-3">Nationwide Shipping Across the United States</h2>
+                <p class="font-serif text-sm sm:text-base text-brand-dark/85 mb-5 leading-relaxed">
                     All non-perishable studio creations ship across the United States. This includes our flagship publications, physical bakeshop tools, and archival art pieces:
                 </p>
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 font-sans text-xs text-brand-dark/80">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 font-serif text-sm text-brand-dark/80">
                     <div class="bg-brand-light/70 p-3.5 rounded-xl border border-brand-gold/15">
-                        <strong class="text-brand-navy font-serif block text-xs mb-1">✦ Publications &amp; Decks</strong>
-                        <span>Bake to Baseline Guided Journals and The Deconstructed Recipe Decks.</span>
+                        <strong class="text-brand-oak font-serif block text-sm mb-1">✦ Publications &amp; Decks</strong>
+                        <span class="text-[13px] leading-relaxed block">Bake to Baseline Guided Journals and The Deconstructed Recipe Decks.</span>
                     </div>
                     <div class="bg-brand-light/70 p-3.5 rounded-xl border border-brand-gold/15">
-                        <strong class="text-brand-navy font-serif block text-xs mb-1">✦ Archival DIY Studio Kits</strong>
-                        <span>Boxed kits with wooden 3D forms, canvas panels, whipped spackle medium, quartz crystals, and mineral pigments.</span>
+                        <strong class="text-brand-oak font-serif block text-sm mb-1">✦ Archival DIY Studio Kits</strong>
+                        <span class="text-[13px] leading-relaxed block">Boxed kits with wooden 3D forms, canvas panels, whipped spackle medium, quartz crystals, and mineral pigments.</span>
                     </div>
                     <div class="bg-brand-light/70 p-3.5 rounded-xl border border-brand-gold/15">
-                        <strong class="text-brand-navy font-serif block text-xs mb-1">✦ Original Art Pieces</strong>
-                        <span>Framed 2D confectionery canvases and 3D keepsake cake sculptures finished on gold presentation drums.</span>
+                        <strong class="text-brand-oak font-serif block text-sm mb-1">✦ Original Art Pieces</strong>
+                        <span class="text-[13px] leading-relaxed block">Framed 2D confectionery canvases and 3D keepsake cake sculptures finished on gold presentation drums.</span>
                     </div>
                     <div class="bg-brand-light/70 p-3.5 rounded-xl border border-brand-gold/15">
-                        <strong class="text-brand-navy font-serif block text-xs mb-1">✦ Remote Workshop Kits</strong>
-                        <span>Tier 3 individual kits shipped directly to remote team members for live virtual sessions.</span>
+                        <strong class="text-brand-oak font-serif block text-sm mb-1">✦ Remote Workshop Kits</strong>
+                        <span class="text-[13px] leading-relaxed block">Tier 3 individual kits shipped directly to remote team members for live virtual sessions.</span>
                     </div>
                 </div>
 
-                <ul class="space-y-3 font-sans text-xs sm:text-sm text-brand-dark/80 border-t border-brand-gold/15 pt-5">
+                <ul class="space-y-3 font-serif text-sm sm:text-[15px] text-brand-dark/80 border-t border-brand-gold/15 pt-5">
                     <li class="flex items-start">
                         <span class="text-brand-gold-dark mr-2 font-serif text-sm">✦</span>
                         <span><strong>Carriers:</strong> We ship via USPS Priority Mail and UPS Ground to ensure packages arrive promptly and safely.</span>
@@ -131,23 +139,23 @@
 
             <!-- SECTION 2: TEXAS COTTAGE FOOD DISCLOSURE & LOCAL DELIVERY -->
             <section id="local-delivery" class="bg-white border border-brand-gold/30 rounded-3xl p-6 sm:p-10 shadow-lg">
-                <span class="text-brand-gold-dark font-sans font-bold tracking-widest uppercase text-[10px] block mb-1">Perishable &amp; Fresh Bakes</span>
-                <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-navy mb-4 border-b border-brand-gold/20 pb-3">Local Pickup, DFW Delivery &amp; Cottage Food Rules</h2>
+                <span class="text-brand-gold-dark font-hand text-2xl block mb-2">Perishable &amp; Fresh Bakes</span>
+                <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-oak mb-4 border-b border-brand-gold/20 pb-3">Local Pickup, DFW Delivery &amp; Cottage Food Rules</h2>
                 
                 <!-- COTTAGE FOOD CALLOUT -->
                 <div class="bg-brand-light border-2 border-brand-gold/40 rounded-2xl p-5 text-center mb-6 shadow-sm">
-                    <p class="font-sans text-[10px] uppercase tracking-widest font-bold text-brand-navy mb-1.5">Texas Cottage Food Law Disclosure</p>
-                    <p class="font-sans text-xs leading-relaxed text-brand-dark font-medium mb-2">
+                    <p class="font-mono text-xs font-bold uppercase tracking-widest text-brand-oak mb-1.5">Texas Cottage Food Law Disclosure</p>
+                    <p class="font-serif text-sm leading-relaxed text-brand-dark font-medium mb-2">
                         This food is made in a home kitchen and is not inspected by the Department of State Health Services or a local health authority.
                     </p>
-                    <p class="font-serif text-[11px] italic text-brand-dark/70">
+                    <p class="font-serif text-xs italic text-brand-dark/70">
                         Edible products are prepared in a private residential kitchen that handles common allergens including wheat, dairy, eggs, soy, and nuts. Keep perishable food refrigerated until consumption.
                     </p>
                 </div>
 
-                <div class="space-y-4 font-sans text-xs sm:text-sm text-brand-dark/80 leading-relaxed">
+                <div class="space-y-4 font-serif text-sm sm:text-base text-brand-dark/80 leading-relaxed">
                     <p>
-                        Under <strong>Texas Cottage Food Law</strong>, fresh edible items cannot be shipped through parcel carriers across state lines[cite: 40]. Fresh food items are available exclusively for local pickup in McKinney, Texas, or scheduled hand-delivery throughout Collin County and the Dallas-Fort Worth metroplex[cite: 40].
+                        Under <strong>Texas Cottage Food Law</strong>, fresh edible items cannot be shipped through parcel carriers across state lines. Fresh food items are available exclusively for local pickup in McKinney, Texas, or scheduled hand-delivery throughout Collin County and the Dallas-Fort Worth metroplex.
                     </p>
                     <p>
                         This applies specifically to <strong>Fresh Edible Edition Studio Kits</strong> (pre-baked mini cakes and fresh buttercreams) and in-person workshop tracks. When placing an edible order, please specify your preferred pickup window or delivery address at checkout.
@@ -157,31 +165,31 @@
 
             <!-- SECTION 3: DIGITAL DOWNLOADS -->
             <section id="digital-downloads" class="bg-white border border-brand-gold/30 rounded-3xl p-6 sm:p-10 shadow-lg">
-                <span class="text-brand-gold-dark font-sans font-bold tracking-widest uppercase text-[10px] block mb-1">Electronic Guides</span>
-                <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-navy mb-4 border-b border-brand-gold/20 pb-3">Digital Guides &amp; Downloads</h2>
-                <div class="space-y-3 font-sans text-xs sm:text-sm text-brand-dark/80 leading-relaxed">
+                <span class="text-brand-gold-dark font-hand text-2xl block mb-2">Electronic Guides</span>
+                <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-oak mb-4 border-b border-brand-gold/20 pb-3">Digital Guides &amp; Downloads</h2>
+                <div class="space-y-3 font-serif text-sm sm:text-base text-brand-dark/80 leading-relaxed">
                     <p>
-                        Resources marked as digital downloads (such as our free starter guide, printable frameworks, or PDF worksheets) are delivered immediately via email upon submission or checkout[cite: 40].
+                        Resources marked as digital downloads (such as our free starter guide, printable frameworks, or PDF worksheets) are delivered immediately via email upon submission or checkout.
                     </p>
                     <p>
-                        Please double check that your email address is spelled correctly[cite: 40]. If your download link does not appear in your inbox within 15 minutes, please check your spam or promotions folder before reaching out to us[cite: 40].
+                        Please double check that your email address is spelled correctly. If your download link does not appear in your inbox within 15 minutes, please check your spam or promotions folder before reaching out to us.
                     </p>
                 </div>
             </section>
 
             <!-- SECTION 4: WORKSHOP RESERVATIONS & RESCHEDULING -->
             <section id="workshops" class="bg-white border border-brand-gold/30 rounded-3xl p-6 sm:p-10 shadow-lg">
-                <span class="text-brand-gold-dark font-sans font-bold tracking-widest uppercase text-[10px] block mb-1">Session Attendance</span>
-                <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-navy mb-4 border-b border-brand-gold/20 pb-3">Workshop Reservations &amp; Rescheduling</h2>
-                <div class="space-y-4 font-sans text-xs sm:text-sm text-brand-dark/80 leading-relaxed">
+                <span class="text-brand-gold-dark font-hand text-2xl block mb-2">Session Attendance</span>
+                <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-oak mb-4 border-b border-brand-gold/20 pb-3">Workshop Reservations &amp; Rescheduling</h2>
+                <div class="space-y-4 font-serif text-sm sm:text-base text-brand-dark/80 leading-relaxed">
                     <div>
-                        <strong class="text-brand-navy font-serif block text-sm mb-1">Tier 1: Public Studio Seats</strong>
+                        <strong class="text-brand-oak font-serif block text-base mb-1">Tier 1: Public Studio Seats</strong>
                         <p>
-                            Table seating for our public studio sessions in McKinney is kept intentionally small to maintain a calm, sensory-friendly atmosphere. Because seats are limited, reservations are non-refundable[cite: 40]. However, if you let us know at least 48 hours before your session, we are happy to transfer your seat to a future open date or issue a studio credit.
+                            Table seating for our public studio sessions in McKinney is kept intentionally small to maintain a calm, sensory-friendly atmosphere. Because seats are limited, reservations are non-refundable. However, if you let us know at least 48 hours before your session, we are happy to transfer your seat to a future open date or issue a studio credit.
                         </p>
                     </div>
                     <div>
-                        <strong class="text-brand-navy font-serif block text-sm mb-1">Tier 2 &amp; Tier 3: Private Local and Remote Virtual Sessions</strong>
+                        <strong class="text-brand-oak font-serif block text-base mb-1 mt-3">Tier 2 &amp; Tier 3: Private Local and Remote Virtual Sessions</strong>
                         <p>
                             Private team sessions and group retreats require a deposit to hold your date. Final headcount and remote shipping addresses must be locked at least 14 days before the event date so kits can be assembled and shipped on time.
                         </p>
@@ -191,31 +199,31 @@
 
             <!-- SECTION 5: RETURNS & REFUNDS -->
             <section id="returns" class="bg-white border border-brand-gold/30 rounded-3xl p-6 sm:p-10 shadow-lg">
-                <span class="text-brand-gold-dark font-sans font-bold tracking-widest uppercase text-[10px] block mb-1">Customer Care</span>
-                <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-navy mb-4 border-b border-brand-gold/20 pb-3">Returns, Refunds &amp; Damaged Items</h2>
-                <div class="space-y-5 font-sans text-xs sm:text-sm text-brand-dark/80 leading-relaxed">
+                <span class="text-brand-gold-dark font-hand text-2xl block mb-2">Customer Care</span>
+                <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-oak mb-4 border-b border-brand-gold/20 pb-3">Returns, Refunds &amp; Damaged Items</h2>
+                <div class="space-y-5 font-serif text-sm sm:text-base text-brand-dark/80 leading-relaxed">
                     <div>
-                        <strong class="text-brand-navy font-serif block text-sm mb-1">Physical Shoppe Goods (Journals, Recipe Decks, Unopened Kits)</strong>
+                        <strong class="text-brand-oak font-serif block text-base mb-1">Physical Shoppe Goods (Journals, Recipe Decks, Unopened Kits)</strong>
                         <p>
-                            Unused physical items in their original, unopened packaging may be returned within 14 days of delivery[cite: 40]. Return shipping costs are the responsibility of the customer[cite: 40]. Please email us before sending any items back so we can provide the correct return address and confirm your return[cite: 40].
+                            Unused physical items in their original, unopened packaging may be returned within 14 days of delivery. Return shipping costs are the responsibility of the customer. Please email us before sending any items back so we can provide the correct return address and confirm your return.
                         </p>
                     </div>
                     <div>
-                        <strong class="text-brand-navy font-serif block text-sm mb-1">Custom Commissions &amp; Heirloom Recipe Decks</strong>
+                        <strong class="text-brand-oak font-serif block text-base mb-1">Custom Commissions &amp; Heirloom Recipe Decks</strong>
                         <p>
                             Original handcrafted art pieces and custom family heirloom recipe decks are individually made to personal specifications. Because of this personalized craftsmanship, all sales on custom artwork and personalized decks are final once design work or painting begins.
                         </p>
                     </div>
                     <div>
-                        <strong class="text-brand-navy font-serif block text-sm mb-1">Digital Downloads &amp; Workshop Seats</strong>
+                        <strong class="text-brand-oak font-serif block text-base mb-1">Digital Downloads &amp; Workshop Seats</strong>
                         <p>
-                            Due to the instant delivery of digital files and limited workshop table space, sales on digital PDF products and live session seats are non-refundable[cite: 40].
+                            Due to the instant delivery of digital files and limited workshop table space, sales on digital PDF products and live session seats are non-refundable.
                         </p>
                     </div>
                     <div class="border-t border-brand-gold/15 pt-4">
-                        <strong class="text-brand-navy font-serif block text-sm mb-1">Items Damaged in Transit</strong>
+                        <strong class="text-brand-oak font-serif block text-base mb-1">Items Damaged in Transit</strong>
                         <p>
-                            If your package arrives with shipping damage, please take photos of the box and damaged contents right away and send them to <a href="mailto:contact@thegildedspoonshoppe.com" class="text-brand-navy font-bold underline hover:text-brand-gold">contact@thegildedspoonshoppe.com</a> within 48 hours of delivery. We will make it right with a quick replacement or solution.
+                            If your package arrives with shipping damage, please take photos of the box and damaged contents right away and send them to <a href="mailto:contact@thegildedspoonshoppe.com" class="text-brand-oak font-bold underline hover:text-brand-gold">contact@thegildedspoonshoppe.com</a> within 48 hours of delivery. We will make it right with a quick replacement or solution.
                         </p>
                     </div>
                 </div>
@@ -259,7 +267,6 @@
             </div>
         </div>
     </footer>
-
     <script>
         const hamburgerButton = document.getElementById('hamburger-button');
         const mobileMenu = document.getElementById('mobile-menu');
