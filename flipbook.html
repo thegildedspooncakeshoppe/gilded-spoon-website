@@ -38,7 +38,6 @@
     </script>
     
     <style>
-        body { background-color: #0A2342; color: #F4F1ED; font-family: 'Inter', sans-serif; -webkit-font-smoothing: antialiased; }
         .bg-texture { background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png'); }
         
         .lightbox-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(10, 35, 66, 0.95); display: flex; justify-content: center; align-items: center; z-index: 1000; opacity: 0; visibility: hidden; transition: opacity 0.3s ease; backdrop-filter: blur(10px); }
@@ -63,7 +62,7 @@
         }
     </style>
 </head>
-<body class="font-sans">
+<body class="font-sans bg-brand-light text-brand-dark antialiased">
 
     <!-- NAVIGATION -->
     <nav class="sticky top-0 bg-brand-navy/95 backdrop-blur-lg shadow-lg z-50 border-b border-brand-gold/10">
@@ -111,24 +110,24 @@
     </header>
 
     <!-- CATEGORY FILTER TABS -->
-    <section class="py-6 bg-brand-navy border-b border-brand-gold/15 sticky top-[73px] z-40 backdrop-blur-md bg-brand-navy/95">
+    <section class="py-6 bg-brand-light/95 border-b border-brand-gold/20 sticky top-[73px] z-40 backdrop-blur-md">
         <div class="max-w-6xl mx-auto px-4 flex flex-wrap justify-center items-center gap-2 sm:gap-3 text-xs uppercase tracking-widest font-sans font-bold">
-            <button onclick="filterGallery('all')" class="filter-btn active py-2.5 px-5 rounded-full border border-brand-gold transition-all text-brand-navy bg-brand-gold shadow-sm" data-category="all">
+            <button onclick="filterGallery('all')" class="filter-btn active py-2.5 px-5 rounded-full border border-brand-navy transition-all text-white bg-brand-navy shadow-sm" data-category="all">
                 All Works
             </button>
-            <button onclick="filterGallery('classic')" class="filter-btn py-2.5 px-5 rounded-full border border-brand-gold/30 hover:border-brand-gold transition-all text-brand-light bg-brand-navy/60" data-category="classic">
+            <button onclick="filterGallery('classic')" class="filter-btn py-2.5 px-5 rounded-full border border-brand-gold/30 hover:border-brand-gold transition-all text-brand-navy bg-white shadow-sm" data-category="classic">
                 Classic &amp; Heritage Bakes
             </button>
-            <button onclick="filterGallery('milestone')" class="filter-btn py-2.5 px-5 rounded-full border border-brand-gold/30 hover:border-brand-gold transition-all text-brand-light bg-brand-navy/60" data-category="milestone">
+            <button onclick="filterGallery('milestone')" class="filter-btn py-2.5 px-5 rounded-full border border-brand-gold/30 hover:border-brand-gold transition-all text-brand-navy bg-white shadow-sm" data-category="milestone">
                 Milestones &amp; Birthdays
             </button>
-            <button onclick="filterGallery('sculpted')" class="filter-btn py-2.5 px-5 rounded-full border border-brand-gold/30 hover:border-brand-gold transition-all text-brand-light bg-brand-navy/60" data-category="sculpted">
+            <button onclick="filterGallery('sculpted')" class="filter-btn py-2.5 px-5 rounded-full border border-brand-gold/30 hover:border-brand-gold transition-all text-brand-navy bg-white shadow-sm" data-category="sculpted">
                 Sculpted &amp; 3D Art
             </button>
-            <button onclick="filterGallery('botanical')" class="filter-btn py-2.5 px-5 rounded-full border border-brand-gold/30 hover:border-brand-gold transition-all text-brand-light bg-brand-navy/60" data-category="botanical">
+            <button onclick="filterGallery('botanical')" class="filter-btn py-2.5 px-5 rounded-full border border-brand-gold/30 hover:border-brand-gold transition-all text-brand-navy bg-white shadow-sm" data-category="botanical">
                 Botanicals &amp; Florals
             </button>
-            <button onclick="filterGallery('community')" class="filter-btn py-2.5 px-5 rounded-full border border-brand-gold/30 hover:border-brand-gold transition-all text-brand-light bg-brand-navy/60" data-category="community">
+            <button onclick="filterGallery('community')" class="filter-btn py-2.5 px-5 rounded-full border border-brand-gold/30 hover:border-brand-gold transition-all text-brand-navy bg-white shadow-sm" data-category="community">
                 Community &amp; Giving
             </button>
         </div>
@@ -416,6 +415,32 @@
                 note: "An organic birthday cake celebrating custom color palettes and personalized piping."
             },
 { 
+                categories: ["sculpted", "milestone"],
+                src: "images/PXL_20240817_161334611.jpg", 
+                title: "Hand-Sculpted Puppy Celebration Cake",
+                tag: "Character Sculpture",
+                meta: "Occasion: 2nd Birthday Celebration | Flavors: Vanilla Sponge with Buttercream",
+                layer1: "Clean ivory base coat with vibrant primary color accents (red, blue, yellow) and scattered confetti.",
+                layer2: "Hand-molded gum paste character figures and dimensional fondant paw prints.",
+                layer3: "Smooth sugar paste figures contrasted with crunchy rainbow jimmies along the base border.",
+                layer4: "Crowned character arrangement sitting atop the cake, framed by custom logo plaques.",
+                layer5: "Metallic gold fringed party hats sitting atop the hand-sculpted puppy figures.",
+                note: "A sweet family milestone piece highlighting the process of hand-modeling edible gum paste figures to bring beloved childhood characters to life."
+            },
+{ 
+                categories: ["milestone"],
+                src: "images/IMG_2835.jpg", 
+                title: "Chocolate Wafer & Candy Crunch Cake",
+                tag: "High-Friction Texture",
+                meta: "Occasion: 11th Birthday Celebration | Flavors: Devil's Food Sponge with Fudge Buttercream",
+                layer1: "Rich milk chocolate base fully encased in crisp chocolate wafer bars.",
+                layer2: "Structural vertical alignment using chocolate bars to build a rigid, protective outer wall.",
+                layer3: "High-friction crunchy candy-coated chocolates flooding the entire top surface.",
+                layer4: "A dense, contained central pool of bright colors held safely within the chocolate border.",
+                layer5: "Towering gold celebration candles glowing against the dark chocolate perimeter.",
+                note: "A study in high-friction texture and color contrast, pairing a rigid, structural chocolate wafer wall with a bright, chaotic pool of crunchy candies."
+            },
+{ 
                 categories: ["botanical", "milestone"],
                 src: "images/IMG_1706.jpeg", 
                 title: "Strawberry Pistachio Birthday Cake",
@@ -665,6 +690,19 @@
                 note: "An artistic studio experiment in reverse batter painting. Toggle views to see the finished baked and gilded canvas alongside the raw tinted batter piped in reverse directly onto parchment before entering the oven."
             },
 { 
+                categories: ["community"],
+                src: "images/IMG_6589.jpeg", 
+                title: "Milestone Recovery Celebration Cookies",
+                tag: "Celebration of Life",
+                meta: "Occasion: Health Battle Victory Celebration | Hand-Decorated Vanilla Bean Sugar Cookies",
+                layer1: "Soft slate blue and warm ivory royal icing with shimmering gold luster accents.",
+                layer2: "Arching cookie frames with fine script lettering and organic line work.",
+                layer3: "Sparkling white sugar crystals and raised piping relief.",
+                layer4: "Clean plaque framing with dedicated message space celebrating healing.",
+                layer5: "Hand-painted metallic gold luster sealing the dimensional character medallion.",
+                note: "Baked to celebrate a brave young boy who triumphed over a major medical health battle, honoring his resilient spirit with custom cookies."
+            },
+{ 
                 categories: ["milestone", "sculpted"],
                 src: "images/IMG_6666.jpeg", 
                 views: [
@@ -682,19 +720,6 @@
                 note: "Designed for a landmark 50th birthday, combining hand-sculpted dimensional modeling with rich chocolate fudge and roasted pistachio sponge. The process view captures the raw, unpainted sculpture on the studio measurement mat before color emulsions and metallic gold luster were applied."
             },
 { 
-                categories: ["community"],
-                src: "images/IMG_6589.jpeg", 
-                title: "Milestone Recovery Celebration Cookies",
-                tag: "Celebration of Life",
-                meta: "Occasion: Health Battle Victory Celebration | Hand-Decorated Vanilla Bean Sugar Cookies",
-                layer1: "Soft slate blue and warm ivory royal icing with shimmering gold luster accents.",
-                layer2: "Arching cookie frames with fine script lettering and organic line work.",
-                layer3: "Sparkling white sugar crystals and raised piping relief.",
-                layer4: "Clean plaque framing with dedicated message space celebrating healing.",
-                layer5: "Hand-painted metallic gold luster sealing the dimensional character medallion.",
-                note: "Baked to celebrate a brave young boy who triumphed over a major medical health battle, honoring his resilient spirit with custom cookies."
-            },
-{ 
                 categories: ["botanical", "milestone"],
                 src: "images/IMG_6893.jpeg", 
                 title: "Watercolor &amp; Gold Birthday Cake",
@@ -706,32 +731,6 @@
                 layer4: "Scatter distribution of gold leaf guiding focus toward the top celebration candle.",
                 layer5: "Top crest flecked with gold leaf and finished with a glowing celebration candle.",
                 note: "Baked for a birthday celebration, combining gentle pastel watercolor tones with aromatic orange blossom and roasted almond flavors."
-            },
-{ 
-                categories: ["sculpted", "milestone"],
-                src: "images/PXL_20240817_161334611.jpg", 
-                title: "Hand-Sculpted Puppy Celebration Cake",
-                tag: "Character Sculpture",
-                meta: "Occasion: 2nd Birthday Celebration | Flavors: Vanilla Sponge with Buttercream",
-                layer1: "Clean ivory base coat with vibrant primary color accents (red, blue, yellow) and scattered confetti.",
-                layer2: "Hand-molded gum paste character figures and dimensional fondant paw prints.",
-                layer3: "Smooth sugar paste figures contrasted with crunchy rainbow jimmies along the base border.",
-                layer4: "Crowned character arrangement sitting atop the cake, framed by custom logo plaques.",
-                layer5: "Metallic gold fringed party hats sitting atop the hand-sculpted puppy figures.",
-                note: "A sweet family milestone piece highlighting the process of hand-modeling edible gum paste figures to bring beloved childhood characters to life."
-            },
-{ 
-                categories: ["milestone"],
-                src: "images/IMG_2835.jpg", 
-                title: "Chocolate Wafer & Candy Crunch Cake",
-                tag: "High-Friction Texture",
-                meta: "Occasion: 11th Birthday Celebration | Flavors: Devil's Food Sponge with Fudge Buttercream",
-                layer1: "Rich milk chocolate base fully encased in crisp chocolate wafer bars.",
-                layer2: "Structural vertical alignment using chocolate bars to build a rigid, protective outer wall.",
-                layer3: "High-friction crunchy candy-coated chocolates flooding the entire top surface.",
-                layer4: "A dense, contained central pool of bright colors held safely within the chocolate border.",
-                layer5: "Towering gold celebration candles glowing against the dark chocolate perimeter.",
-                note: "A study in high-friction texture and color contrast, pairing a rigid, structural chocolate wafer wall with a bright, chaotic pool of crunchy candies."
             }
         ];
 
@@ -756,7 +755,7 @@
             galleryGrid.innerHTML = '';
             currentFilteredData.forEach((item, index) => {
                 const card = document.createElement('div');
-                card.className = "gallery-item block relative group cursor-pointer bg-brand-card/40 border border-brand-gold/15 rounded-2xl overflow-hidden hover:border-brand-gold/40 transition-all p-3 flex flex-col justify-between";
+                card.className = "gallery-item block relative group cursor-pointer bg-white border border-brand-gold/30 shadow-md rounded-2xl overflow-hidden hover:border-brand-gold/40 transition-all p-3 flex flex-col justify-between";
                 card.onclick = () => openLightbox(index);
 
                 const hasMultipleViews = item.views && item.views.length > 1;
@@ -774,7 +773,7 @@
                             <span class="text-brand-gold text-[10px] font-sans uppercase tracking-widest font-bold truncate">${item.tag}</span>
                             ${viewBadge}
                         </div>
-                        <h3 class="text-white text-sm font-serif font-bold leading-snug line-clamp-2">${item.title}</h3>
+                        <h3 class="text-brand-navy text-sm font-serif font-bold leading-snug line-clamp-2">${item.title}</h3>
                     </div>
                 `;
                 galleryGrid.appendChild(card);
@@ -785,11 +784,11 @@
             const buttons = document.querySelectorAll('.filter-btn');
             buttons.forEach(btn => {
                 if (btn.getAttribute('data-category') === category) {
-                    btn.classList.add('bg-brand-gold', 'text-brand-navy');
-                    btn.classList.remove('bg-brand-navy/60', 'text-brand-light');
+                    btn.classList.add('bg-brand-navy', 'text-white', 'border-brand-navy');
+                    btn.classList.remove('bg-white', 'text-brand-navy', 'border-brand-gold/30', 'hover:border-brand-gold');
                 } else {
-                    btn.classList.remove('bg-brand-gold', 'text-brand-navy');
-                    btn.classList.add('bg-brand-navy/60', 'text-brand-light');
+                    btn.classList.remove('bg-brand-navy', 'text-white', 'border-brand-navy');
+                    btn.classList.add('bg-white', 'text-brand-navy', 'border-brand-gold/30', 'hover:border-brand-gold');
                 }
             });
 
