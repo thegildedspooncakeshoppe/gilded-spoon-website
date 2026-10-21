@@ -33,11 +33,9 @@
                     },
                     fontFamily: {
                         'serif': ['"Fraunces"', 'serif'],
-                        'sans': ['"Inter"', 'sans-serif'],
                         'hand': ['"Homemade Apple"', 'cursive'],
                         'caveat': ['"Caveat"', 'cursive'],
-                        'mono': ['"Xanh Mono"', 'monospace'],
-                        'badge': ['"Plus Jakarta Sans"', 'sans-serif']
+                        'mono': ['"Xanh Mono"', 'monospace']
                     }
                 }
             }
@@ -117,24 +115,24 @@
     </header>
 
     <!-- CATEGORY FILTER TABS -->
-    <section class="py-6 bg-brand-light/95 border-b border-brand-gold/20 sticky top-[73px] z-40 backdrop-blur-md">
-        <div class="max-w-6xl mx-auto px-4 flex flex-wrap justify-center items-center gap-2 sm:gap-3 text-xs uppercase tracking-widest font-badge font-bold">
-            <button onclick="filterGallery('all')" class="filter-btn active py-2.5 px-5 rounded-full border border-brand-oak transition-all text-brand-light bg-brand-oak shadow-sm" data-category="all">
+    <section class="py-6 bg-brand-light/95 border-b border-brand-gold/30 sticky top-[73px] z-40 backdrop-blur-md shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 flex flex-wrap justify-center items-center gap-2.5 sm:gap-3 text-xs uppercase tracking-wider font-sans font-bold">
+            <button onclick="filterGallery('all')" class="filter-btn active py-2.5 px-5 rounded-full border-2 border-brand-gold transition-all text-brand-oak bg-brand-gold shadow-md" data-category="all">
                 All Works
             </button>
-            <button onclick="filterGallery('classic')" class="filter-btn py-2.5 px-5 rounded-full border border-brand-gold/30 hover:border-brand-gold transition-all text-brand-oak bg-white shadow-sm" data-category="classic">
+            <button onclick="filterGallery('classic')" class="filter-btn py-2.5 px-5 rounded-full border-2 border-brand-gold/40 hover:border-brand-gold hover:bg-brand-gold/15 transition-all text-brand-oak bg-white shadow-sm" data-category="classic">
                 Classic &amp; Heritage Bakes
             </button>
-            <button onclick="filterGallery('milestone')" class="filter-btn py-2.5 px-5 rounded-full border border-brand-gold/30 hover:border-brand-gold transition-all text-brand-oak bg-white shadow-sm" data-category="milestone">
+            <button onclick="filterGallery('milestone')" class="filter-btn py-2.5 px-5 rounded-full border-2 border-brand-gold/40 hover:border-brand-gold hover:bg-brand-gold/15 transition-all text-brand-oak bg-white shadow-sm" data-category="milestone">
                 Milestones &amp; Birthdays
             </button>
-            <button onclick="filterGallery('sculpted')" class="filter-btn py-2.5 px-5 rounded-full border border-brand-gold/30 hover:border-brand-gold transition-all text-brand-oak bg-white shadow-sm" data-category="sculpted">
+            <button onclick="filterGallery('sculpted')" class="filter-btn py-2.5 px-5 rounded-full border-2 border-brand-gold/40 hover:border-brand-gold hover:bg-brand-gold/15 transition-all text-brand-oak bg-white shadow-sm" data-category="sculpted">
                 Sculpted &amp; 3D Art
             </button>
-            <button onclick="filterGallery('botanical')" class="filter-btn py-2.5 px-5 rounded-full border border-brand-gold/30 hover:border-brand-gold transition-all text-brand-oak bg-white shadow-sm" data-category="botanical">
+            <button onclick="filterGallery('botanical')" class="filter-btn py-2.5 px-5 rounded-full border-2 border-brand-gold/40 hover:border-brand-gold hover:bg-brand-gold/15 transition-all text-brand-oak bg-white shadow-sm" data-category="botanical">
                 Botanicals &amp; Florals
             </button>
-            <button onclick="filterGallery('community')" class="filter-btn py-2.5 px-5 rounded-full border border-brand-gold/30 hover:border-brand-gold transition-all text-brand-oak bg-white shadow-sm" data-category="community">
+            <button onclick="filterGallery('community')" class="filter-btn py-2.5 px-5 rounded-full border-2 border-brand-gold/40 hover:border-brand-gold hover:bg-brand-gold/15 transition-all text-brand-oak bg-white shadow-sm" data-category="community">
                 Community &amp; Giving
             </button>
         </div>
@@ -171,26 +169,26 @@
                     <div class="p-6 md:p-8 flex flex-col justify-start overflow-y-auto text-left space-y-4">
                         
                         <div>
-                            <span id="lightbox-tag" class="text-[10px] font-badge font-bold tracking-widest text-brand-gold-dark uppercase block mb-1"></span>
+                            <span id="lightbox-tag" class="text-xs font-sans font-bold tracking-wider text-brand-gold-dark uppercase block mb-1"></span>
                             <h2 id="lightbox-title" class="font-serif text-2xl md:text-3xl font-bold text-brand-oak leading-tight"></h2>
-                            <p id="lightbox-meta" class="text-xs font-serif text-brand-dark/80 mt-1"></p>
+                            <p id="lightbox-meta" class="text-xs font-sans text-brand-dark/80 mt-1"></p>
                         </div>
                         
                         <div class="w-12 h-0.5 bg-brand-gold/40"></div>
                         
                         <!-- 5 Layers Structured List -->
-                        <div class="space-y-2 text-xs font-serif text-brand-dark/85 leading-relaxed bg-white/70 p-4 rounded-xl border border-brand-gold/20">
-                            <div><strong class="text-brand-oak block text-[11px]">Layer 1 (Color &amp; Atmosphere):</strong> <span id="layer-1"></span></div>
-                            <div><strong class="text-brand-oak block text-[11px]">Layer 2 (Shape &amp; Movement):</strong> <span id="layer-2"></span></div>
-                            <div><strong class="text-brand-oak block text-[11px]">Layer 3 (Texture &amp; Touch):</strong> <span id="layer-3"></span></div>
-                            <div><strong class="text-brand-oak block text-[11px]">Layer 4 (Strategy &amp; Boundaries):</strong> <span id="layer-4"></span></div>
-                            <div><strong class="text-brand-oak block text-[11px]">Layer 5 (Finishing Ritual):</strong> <span id="layer-5"></span></div>
+                        <div class="space-y-3 text-sm font-sans text-brand-light/95 leading-relaxed bg-brand-oak p-5 rounded-2xl border-2 border-brand-gold/40 shadow-inner">
+                            <div><strong class="text-brand-gold font-sans font-bold block text-xs tracking-wider uppercase mb-0.5">Layer 1 (Color &amp; Atmosphere)</strong> <span id="layer-1"></span></div>
+                            <div><strong class="text-brand-gold font-sans font-bold block text-xs tracking-wider uppercase mb-0.5">Layer 2 (Shape &amp; Movement)</strong> <span id="layer-2"></span></div>
+                            <div><strong class="text-brand-gold font-sans font-bold block text-xs tracking-wider uppercase mb-0.5">Layer 3 (Texture &amp; Touch)</strong> <span id="layer-3"></span></div>
+                            <div><strong class="text-brand-gold font-sans font-bold block text-xs tracking-wider uppercase mb-0.5">Layer 4 (Strategy &amp; Boundaries)</strong> <span id="layer-4"></span></div>
+                            <div><strong class="text-brand-gold font-sans font-bold block text-xs tracking-wider uppercase mb-0.5">Layer 5 (Finishing Ritual)</strong> <span id="layer-5"></span></div>
                         </div>
 
                         <!-- Artisan Background Note -->
                         <div class="border-t border-brand-gold/20 pt-3">
-                            <span class="text-[10px] font-badge font-bold uppercase tracking-wider text-brand-gold-dark block mb-1">Behind The Bake</span>
-                            <p id="lightbox-note" class="text-xs font-serif text-brand-dark/80 italic leading-relaxed"></p>
+                            <span class="text-xs font-sans font-bold uppercase tracking-wider text-brand-gold-dark block mb-1">Behind The Bake</span>
+                            <p id="lightbox-note" class="text-xs font-sans text-brand-dark/80 italic leading-relaxed"></p>
                         </div>
 
                     </div>
@@ -201,7 +199,7 @@
     </main>
 
         <!-- FOOTER -->
-    <footer class="bg-brand-dark text-brand-gray border-t border-brand-gold/20 font-serif text-xs">
+    <footer class="bg-brand-dark text-brand-gray border-t border-brand-gold/20 font-sans text-xs">
         <div class="max-w-2xl mx-auto px-6 py-8">
             <div class="flex flex-col items-center">
                 
@@ -767,20 +765,20 @@
 
                 const hasMultipleViews = item.views && item.views.length > 1;
                 const viewBadge = hasMultipleViews 
-                    ? `<span class="inline-block bg-brand-gold/20 text-brand-gold text-[9px] font-sans font-bold uppercase tracking-widest px-2 py-0.5 rounded-full border border-brand-gold/40 ml-1.5 whitespace-nowrap shrink-0">${item.views.length} Views</span>`
+                    ? `<span class="inline-block bg-brand-gold text-brand-oak text-[10px] font-sans font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full shadow-sm ml-1.5 whitespace-nowrap shrink-0">${item.views.length} Views</span>`
                     : '';
 
                 card.innerHTML = `
-                    <div class="w-full h-64 sm:h-72 flex items-center justify-center overflow-hidden rounded-xl bg-brand-dark/20 shadow-inner border border-brand-gold/20 mb-3 relative p-4 transition-colors group-hover:border-brand-gold/40">
+                    <div class="w-full h-64 sm:h-72 shrink-0 flex items-center justify-center overflow-hidden rounded-xl bg-brand-dark/40 shadow-inner border border-brand-gold/20 mb-3 relative p-4 transition-colors group-hover:border-brand-gold/50">
                         <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.05),transparent)] pointer-events-none"></div>
-                        <img src="${item.src}" alt="${item.title}" class="max-h-full max-w-full object-contain rounded-sm border border-brand-gold/60 p-1.5 bg-brand-dark shadow-[0_10px_20px_rgba(0,0,0,0.6)] transition-transform duration-300 group-hover:scale-95 relative z-10">
+                        <img src="${item.src}" alt="${item.title}" class="max-h-full max-w-full object-contain rounded-sm border border-brand-gold/60 p-1.5 bg-brand-dark shadow-[0_15px_30px_rgba(0,0,0,0.6)] transition-transform duration-300 group-hover:scale-95 relative z-10">
                     </div>
-                    <div class="text-left px-1">
-                        <div class="flex items-center justify-between mb-1 gap-1.5">
-                            <span class="text-brand-gold text-[10px] font-sans text-[11px] uppercase tracking-widest font-bold truncate">${item.tag}</span>
+                    <div class="text-left px-1 mt-auto">
+                        <div class="flex items-center justify-between mb-1.5 gap-1.5">
+                            <span class="text-brand-gold font-sans text-[11px] uppercase tracking-wider font-bold truncate">${item.tag}</span>
                             ${viewBadge}
                         </div>
-                        <h3 class="text-brand-light text-sm font-serif font-bold leading-snug line-clamp-2">${item.title}</h3>
+                        <h3 class="text-brand-light text-sm font-serif font-bold leading-snug line-clamp-2 min-h-[2.5rem]">${item.title}</h3>
                     </div>
                 `;
                 galleryGrid.appendChild(card);
@@ -791,11 +789,9 @@
             const buttons = document.querySelectorAll('.filter-btn');
             buttons.forEach(btn => {
                 if (btn.getAttribute('data-category') === category) {
-                    btn.classList.add('bg-brand-oak', 'text-white', 'border-brand-oak');
-                    btn.classList.remove('bg-white', 'text-brand-oak', 'border-brand-gold/30', 'hover:border-brand-gold');
+                    btn.className = "filter-btn active py-2.5 px-5 rounded-full border-2 border-brand-gold transition-all text-brand-oak bg-brand-gold shadow-md font-bold";
                 } else {
-                    btn.classList.remove('bg-brand-oak', 'text-white', 'border-brand-oak');
-                    btn.classList.add('bg-white', 'text-brand-oak', 'border-brand-gold/30', 'hover:border-brand-gold');
+                    btn.className = "filter-btn py-2.5 px-5 rounded-full border-2 border-brand-gold/40 hover:border-brand-gold hover:bg-brand-gold/15 transition-all text-brand-oak bg-white shadow-sm font-bold";
                 }
             });
 
@@ -849,7 +845,7 @@
                     const btn = document.createElement('button');
                     btn.type = 'button';
                     const isActive = (idx === currentViewIndex);
-                    btn.className = `text-[10px] font-serif font-bold uppercase tracking-wider py-1.5 px-3 rounded-full border transition-all ${
+                    btn.className = `text-[10px] font-sans font-bold uppercase tracking-wider py-1.5 px-3 rounded-full border transition-all ${
                         isActive 
                         ? 'bg-brand-gold text-brand-oak border-brand-gold shadow-sm' 
                         : 'bg-white/80 text-brand-dark/75 border-brand-gold/30 hover:border-brand-gold hover:text-brand-oak'
