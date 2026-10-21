@@ -14,14 +14,16 @@
             theme: {
                 extend: {
                     colors: {
-                        'brand-dark': '#1C161E',
-                        'brand-light': '#F4F1ED',
-                        'brand-gold': '#D4AF37',
+                        'brand-dark': '#2A272A',      /* Soft Charcoal */
+                        'brand-light': '#F4F1ED',     /* Warm Linen / Parchment */
+                        'brand-gold': '#D4AF37',      /* Muted Gold */
                         'brand-gold-hover': '#E2C76A',
                         'brand-gold-dark': '#8C6D18',
                         'brand-gray': '#A09DA6',
-                        'brand-card': '#2A232F',
-                        'brand-clay': '#3B2C27'
+                        'brand-terracotta': '#C17767',/* Terracotta accent */
+                        'brand-blush': '#E8D5D1',     /* Soft Blush */
+                        'brand-oak': '#2A3428',       /* Shadowy, Chalky Dark Green (Ancient Oak) */
+                        'brand-sand': '#E3D8C8'       /* Tan/Sand */
                     },
                     fontFamily: {
                         'serif': ['"Playfair Display"', 'serif'],
@@ -36,7 +38,7 @@
 <body class="font-sans bg-brand-light text-brand-dark antialiased">
 
     <!-- NAVIGATION -->
-    <nav class="sticky top-0 bg-brand-clay/95 backdrop-blur-lg shadow-lg z-50 border-b border-brand-gold/10">
+    <nav class="sticky top-0 bg-brand-oak/95 backdrop-blur-lg shadow-lg z-50 border-b border-brand-gold/10">
         <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
             <a href="index.html" class="text-2xl font-serif font-bold text-brand-gold text-center leading-none">
                 The Gilded Spoon
@@ -47,7 +49,7 @@
                 <a href="workshop.html" class="text-brand-gold font-bold transition">Workshops</a>
                 <a href="flipbook.html" class="text-brand-light hover:text-brand-gold transition">Portfolio</a>
                 <a href="contact.html" class="text-brand-light hover:text-brand-gold transition">Contact</a>
-                <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-clay hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm">
+                <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-oak hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm">
                     Free Guide
                 </a>
             </div>
@@ -57,19 +59,19 @@
                 </button>
             </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden mt-4 px-4 pb-4 bg-brand-clay text-center">
+        <div id="mobile-menu" class="hidden md:hidden mt-4 px-4 pb-4 bg-brand-oak text-center">
             <a href="shoppe.html" class="block py-3 text-brand-light uppercase tracking-widest">Shoppe</a>
             <a href="workshop.html" class="block py-3 text-brand-gold font-bold uppercase tracking-widest">Workshops</a>
             <a href="flipbook.html" class="block py-3 text-brand-light uppercase tracking-widest">Portfolio</a>
             <a href="contact.html" class="block py-3 text-brand-light uppercase tracking-widest">Contact</a>
-            <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-clay hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm mt-2 inline-block">
+            <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-oak hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm mt-2 inline-block">
                 Free Guide
             </a>
         </div>
     </nav>
 
     <!-- HEADER -->
-    <header class="text-center py-16 md:py-20 bg-brand-clay border-b border-brand-gold/10 relative overflow-hidden">
+    <header class="text-center py-16 md:py-20 bg-brand-oak border-b border-brand-gold/10 relative overflow-hidden">
         <div class="max-w-4xl mx-auto px-6 relative z-10">
             <span class="text-brand-gold font-sans font-bold tracking-[0.3em] uppercase text-xs block mb-3">Tactile Studio Gatherings</span>
             <h1 class="font-serif text-4xl md:text-5xl font-bold text-white leading-tight mb-4">A Quiet Place for Busy Minds</h1>
@@ -81,9 +83,9 @@
 
     <!-- SHOPPE NOTICE -->
     <section class="bg-brand-gold/10 border-b border-brand-gold/20 py-3 px-4">
-        <div class="max-w-6xl mx-auto text-center font-sans text-xs text-brand-clay flex flex-col sm:flex-row items-center justify-center gap-2">
+        <div class="max-w-6xl mx-auto text-center font-sans text-xs text-brand-oak flex flex-col sm:flex-row items-center justify-center gap-2">
             <span><strong>Want to experience the method at home?</strong> Explore our DIY studio kits and guided journals in the Shoppe.</span>
-            <a href="shoppe.html" class="underline font-bold hover:text-brand-gold-dark text-brand-clay transition-colors">Visit the Shoppe &rarr;</a>
+            <a href="shoppe.html" class="underline font-bold hover:text-brand-gold-dark text-brand-oak transition-colors">Visit the Shoppe &rarr;</a>
         </div>
     </section>
 
@@ -93,7 +95,7 @@
             <div class="bg-white rounded-3xl border border-brand-gold/30 p-8 sm:p-12 shadow-lg">
                 <div class="max-w-3xl mx-auto text-center mb-8">
                     <span class="text-brand-gold-dark font-sans font-bold tracking-widest uppercase text-xs block mb-2">The Story Behind The Atelier</span>
-                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-clay">What This Experience Is Truly About</h2>
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-oak">What This Experience Is Truly About</h2>
                 </div>
                 <div class="space-y-5 text-brand-dark/85 text-xs sm:text-sm font-sans leading-relaxed max-w-3xl mx-auto">
                     <p>
@@ -102,13 +104,13 @@
                     <p>
                         The world outside demands that we constantly mask our exhaustion, meet tight deadlines, and pretend we aren't feeling everything all at once. Too often, creative classes end up adding to that pressure, turning art into a competition for perfection where you worry about doing it right.
                     </p>
-                    <p class="font-serif font-bold text-brand-clay text-sm sm:text-base">
+                    <p class="font-serif font-bold text-brand-oak text-sm sm:text-base">
                         I created these workshops to be the exact opposite.
                     </p>
                     <p>
                         Looking back across years of my own bakes, I noticed a clear pattern: a method for the madness, and the spark that finally let me put down perfectionism. Decorating was never about spotless execution. It was an art form, a connection, and a personal story unfolding. Accepting my creativity became my way of healing and feeling.
                     </p>
-                    <div class="bg-brand-clay text-brand-light p-6 sm:p-8 rounded-2xl border border-brand-gold/30 my-6 shadow-inner text-center">
+                    <div class="bg-brand-oak text-brand-light p-6 sm:p-8 rounded-2xl border border-brand-gold/30 my-6 shadow-inner text-center">
                         <p class="font-serif italic text-base sm:text-lg text-brand-gold mb-3">
                             "You are not here to bake a pastry test or perform for an audience. You are here to give your mind a predictable, tactile environment where you hold absolute control."
                         </p>
@@ -127,7 +129,7 @@
         <div class="max-w-6xl mx-auto px-6">
             <div class="text-center max-w-3xl mx-auto mb-10 md:mb-12">
                 <span class="text-brand-gold-dark font-sans font-bold tracking-widest uppercase text-xs block mb-2">Our Step-by-Step Storytelling Process</span>
-                <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-clay mb-4">The 5-Layer Sensory Framework</h2>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-oak mb-4">The 5-Layer Sensory Framework</h2>
                 <p class="text-xs md:text-sm text-brand-dark/75 leading-relaxed">
                     Instead of staring at a blank canvas or feeling pressured to copy a sample cake, we walk through five self-guided stages to translate what you feel into physical form:
                 </p>
@@ -136,7 +138,7 @@
             <!-- ORIGIN CALLOUT: THE HEART -->
             <div class="max-w-4xl mx-auto mb-10 bg-brand-light rounded-2xl p-6 border-2 border-brand-gold/30 text-center shadow-sm">
                 <span class="text-[10px] font-sans font-bold uppercase tracking-widest text-brand-gold-dark block mb-1">Starting Baseline</span>
-                <h3 class="font-serif text-xl font-bold text-brand-clay mb-2">The Heart (The Origin)</h3>
+                <h3 class="font-serif text-xl font-bold text-brand-oak mb-2">The Heart (The Origin)</h3>
                 <p class="text-xs text-brand-dark/80 max-w-2xl mx-auto font-sans leading-relaxed">
                     Where are you starting today? Are you tired, anxious, joyful, or overstimulated? We do not judge the feeling; we simply name it. This is your unmasked mark on the map before picking up any tools.
                 </p>
@@ -148,7 +150,7 @@
                 <div class="bg-brand-light p-5 rounded-2xl border border-brand-gold/20 flex flex-col justify-between shadow-sm">
                     <div>
                         <span class="text-[10px] font-sans font-bold uppercase tracking-widest text-brand-gold-dark block mb-2">Layer 1</span>
-                        <h3 class="font-serif text-base md:text-lg font-bold text-brand-clay mb-2">The Invitation</h3>
+                        <h3 class="font-serif text-base md:text-lg font-bold text-brand-oak mb-2">The Invitation</h3>
                         <p class="text-[11px] font-serif italic text-brand-gold-dark mb-2">Color &amp; Atmosphere</p>
                         <p class="text-xs text-brand-dark/80 leading-relaxed font-sans">
                             What signal does your spirit need right now? Choose an earthy cooling palette to hush room noise, or a sunny dopamine pop to break through mental fatigue.
@@ -160,7 +162,7 @@
                 <div class="bg-brand-light p-5 rounded-2xl border border-brand-gold/20 flex flex-col justify-between shadow-sm">
                     <div>
                         <span class="text-[10px] font-sans font-bold uppercase tracking-widest text-brand-gold-dark block mb-2">Layer 2</span>
-                        <h3 class="font-serif text-base md:text-lg font-bold text-brand-clay mb-2">The Memory</h3>
+                        <h3 class="font-serif text-base md:text-lg font-bold text-brand-oak mb-2">The Memory</h3>
                         <p class="text-[11px] font-serif italic text-brand-gold-dark mb-2">Shape &amp; Movement</p>
                         <p class="text-xs text-brand-dark/80 leading-relaxed font-sans">
                             What memory or feeling are you recreating? Use flowing curves for gentle ease, repetitive piped shells for rhythmic anxiety relief, or wild botanical carvings.
@@ -172,7 +174,7 @@
                 <div class="bg-brand-light p-5 rounded-2xl border border-brand-gold/20 flex flex-col justify-between shadow-sm">
                     <div>
                         <span class="text-[10px] font-sans font-bold uppercase tracking-widest text-brand-gold-dark block mb-2">Layer 3</span>
-                        <h3 class="font-serif text-base md:text-lg font-bold text-brand-clay mb-2">The Anchor</h3>
+                        <h3 class="font-serif text-base md:text-lg font-bold text-brand-oak mb-2">The Anchor</h3>
                         <p class="text-[11px] font-serif italic text-brand-gold-dark mb-2">Texture &amp; Touch</p>
                         <p class="text-xs text-brand-dark/80 leading-relaxed font-sans">
                             What physical feel brings you back to your body? Choose a soft velvet cushion to soothe overstimulation, or crisp crystals and sea salt to snap out of brain fog.
@@ -184,7 +186,7 @@
                 <div class="bg-brand-light p-5 rounded-2xl border border-brand-gold/20 flex flex-col justify-between shadow-sm">
                     <div>
                         <span class="text-[10px] font-sans font-bold uppercase tracking-widest text-brand-gold-dark block mb-2">Layer 4</span>
-                        <h3 class="font-serif text-base md:text-lg font-bold text-brand-clay mb-2">The Strategy</h3>
+                        <h3 class="font-serif text-base md:text-lg font-bold text-brand-oak mb-2">The Strategy</h3>
                         <p class="text-[11px] font-serif italic text-brand-gold-dark mb-2">Placement &amp; Reach</p>
                         <p class="text-xs text-brand-dark/80 leading-relaxed font-sans">
                             Where do elements belong based on your social battery? Protect your energy in a centered core, draw protective border frames, or scatter radial blooms outward.
@@ -196,7 +198,7 @@
                 <div class="bg-brand-light p-5 rounded-2xl border border-brand-gold/20 flex flex-col justify-between shadow-sm">
                     <div>
                         <span class="text-[10px] font-sans font-bold uppercase tracking-widest text-brand-gold-dark block mb-2">Layer 5</span>
-                        <h3 class="font-serif text-base md:text-lg font-bold text-brand-clay mb-2">The Magic</h3>
+                        <h3 class="font-serif text-base md:text-lg font-bold text-brand-oak mb-2">The Magic</h3>
                         <p class="text-[11px] font-serif italic text-brand-gold-dark mb-2">The Shift &amp; Final Ritual</p>
                         <p class="text-xs text-brand-dark/80 leading-relaxed font-sans">
                             Take a conscious breath and observe how the heaviness lifted. Add a splatter of gold luster or a delicate blossom to declare your story complete.
@@ -213,7 +215,7 @@
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
             <div class="text-center max-w-2xl mx-auto mb-10 md:mb-12">
                 <span class="text-brand-gold-dark font-sans font-bold tracking-widest uppercase text-xs block mb-2">What You Will Create</span>
-                <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-clay">Two Studio Mediums</h2>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-oak">Two Studio Mediums</h2>
                 <p class="text-xs md:text-sm text-brand-dark/75 mt-2">Choose between a permanent keepsake sculpture or fresh edible cake art.</p>
             </div>
 
@@ -222,12 +224,12 @@
                 <!-- TRACK 1: KEEPSAKE SCULPTURE -->
                 <div class="bg-white rounded-3xl border border-brand-gold/30 p-6 md:p-8 shadow-lg flex flex-col justify-between">
                     <div>
-                        <div class="w-full aspect-[4/3] bg-brand-clay rounded-2xl p-4 flex items-center justify-center border-2 border-brand-gold/40 shadow-inner overflow-hidden mb-5 relative">
+                        <div class="w-full aspect-[4/3] bg-brand-oak rounded-2xl p-4 flex items-center justify-center border-2 border-brand-gold/40 shadow-inner overflow-hidden mb-5 relative">
                             <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.05),transparent)] pointer-events-none"></div>
                             <img src="images/IMG_7606.jpeg" alt="3D Keepsake Cake Sculpture with Comfort Seal" class="max-h-full max-w-full object-contain drop-shadow-[0_10px_18px_rgba(0,0,0,0.5)] rounded-lg">
                         </div>
-                        <span class="inline-block bg-brand-clay text-brand-gold font-sans font-bold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full mb-2">Track A &bull; Permanent Keepsake</span>
-                        <h3 class="font-serif text-2xl font-bold text-brand-clay mb-1">Keepsake Cake Sculptures</h3>
+                        <span class="inline-block bg-brand-oak text-brand-gold font-sans font-bold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full mb-2">Track A &bull; Permanent Keepsake</span>
+                        <h3 class="font-serif text-2xl font-bold text-brand-oak mb-1">Keepsake Cake Sculptures</h3>
                         <p class="text-xs font-serif italic text-brand-gold-dark mb-3">Permanent Tactile Art for Home or Office</p>
                         
                         <p class="text-xs text-brand-dark/80 leading-relaxed font-sans mb-4">
@@ -244,12 +246,12 @@
                 <!-- TRACK 2: THE CAKE CANVAS -->
                 <div class="bg-white rounded-3xl border border-brand-gold/30 p-6 md:p-8 shadow-lg flex flex-col justify-between">
                     <div>
-                        <div class="w-full aspect-[4/3] bg-brand-clay rounded-2xl p-4 flex items-center justify-center border-2 border-brand-gold/40 shadow-inner overflow-hidden mb-5 relative">
+                        <div class="w-full aspect-[4/3] bg-brand-oak rounded-2xl p-4 flex items-center justify-center border-2 border-brand-gold/40 shadow-inner overflow-hidden mb-5 relative">
                             <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.05),transparent)] pointer-events-none"></div>
                             <img src="images/IMG_6660.jpeg" alt="The Cake Canvas Painted Cake with Buttercream" class="max-h-full max-w-full object-contain drop-shadow-[0_10px_18px_rgba(0,0,0,0.5)] rounded-lg">
                         </div>
-                        <span class="inline-block bg-brand-gold text-brand-clay font-sans font-bold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full mb-2">Track B &bull; Fresh &amp; Edible</span>
-                        <h3 class="font-serif text-2xl font-bold text-brand-clay mb-1">The Cake Canvas</h3>
+                        <span class="inline-block bg-brand-gold text-brand-oak font-sans font-bold text-[10px] uppercase tracking-widest px-3 py-1 rounded-full mb-2">Track B &bull; Fresh &amp; Edible</span>
+                        <h3 class="font-serif text-2xl font-bold text-brand-oak mb-1">The Cake Canvas</h3>
                         <p class="text-xs font-serif italic text-brand-gold-dark mb-3">Edible Painting, Textured Piping &amp; Creative Expression</p>
                         
                         <p class="text-xs text-brand-dark/80 leading-relaxed font-sans mb-4">
@@ -268,11 +270,11 @@
             <!-- PAST WORKSHOP BAKES PORTFOLIO CALLOUT -->
             <div class="mt-12 text-center bg-white p-8 sm:p-10 rounded-3xl border border-brand-gold/30 shadow-md max-w-3xl mx-auto">
                 <span class="text-brand-gold-dark font-sans font-bold tracking-widest uppercase text-xs block mb-2">Real Studio Makings</span>
-                <h3 class="font-serif text-2xl md:text-3xl font-bold text-brand-clay mb-2">Curious What Studio Participants Create?</h3>
+                <h3 class="font-serif text-2xl md:text-3xl font-bold text-brand-oak mb-2">Curious What Studio Participants Create?</h3>
                 <p class="text-xs sm:text-sm text-brand-dark/80 font-sans leading-relaxed max-w-xl mx-auto mb-6">
                     Explore our portfolio gallery to see live participant bakes, tactile sculpting studies, and multi-view process breakdowns from past studio sessions.
                 </p>
-                <a href="flipbook.html" class="inline-block bg-brand-clay text-white font-sans text-xs font-bold uppercase tracking-widest py-3.5 px-8 rounded-full hover:bg-brand-gold hover:text-brand-clay transition-all shadow-md">
+                <a href="flipbook.html" class="inline-block bg-brand-oak text-white font-sans text-xs font-bold uppercase tracking-widest py-3.5 px-8 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md">
                     View Workshop Bakes in Portfolio &rarr;
                 </a>
             </div>
@@ -284,13 +286,13 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div class="text-center mb-10 md:mb-12">
                 <span class="text-brand-gold-dark font-sans font-bold tracking-widest uppercase text-xs block mb-2">Ways to Gather</span>
-                <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-clay">Choose Your Workshop</h2>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-oak">Choose Your Workshop</h2>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
                 
                 <!-- TIER 1 -->
-                <div id="tier1" class="bg-brand-clay px-6 py-8 rounded-3xl shadow-lg border border-brand-gold/20 flex flex-col">    
+                <div id="tier1" class="bg-brand-oak px-6 py-8 rounded-3xl shadow-lg border border-brand-gold/20 flex flex-col">    
                     <span class="text-brand-gold font-sans font-bold tracking-widest uppercase text-[10px] block mb-1">Tier 1 &bull; Individual Seats</span>
                     <h3 class="font-serif text-2xl font-bold text-white mb-1">Public Studio Seat</h3>
                     <p class="text-brand-gold font-bold text-xs mb-3">Scheduled Dates &bull; McKinney &amp; DFW Venues</p>
@@ -310,10 +312,10 @@
                     </div>
 
                     <div class="space-y-3 mt-auto pt-2">
-                        <a href="https://square.link/u/hNKitO2s" target="_blank" rel="noopener" class="block text-center bg-brand-gold text-brand-clay font-sans font-bold py-3.5 px-4 rounded-full hover:bg-white transition-all uppercase tracking-widest text-[10px] shadow-sm border border-brand-gold">
+                        <a href="https://square.link/u/hNKitO2s" target="_blank" rel="noopener" class="block text-center bg-brand-gold text-brand-oak font-sans font-bold py-3.5 px-4 rounded-full hover:bg-white transition-all uppercase tracking-widest text-[10px] shadow-sm border border-brand-gold">
                             Reserve Keepsake Sculpture Seat ($85)
                         </a>
-                        <a href="https://square.link/u/qFrG9ghO" target="_blank" rel="noopener" class="block text-center bg-white text-brand-clay font-sans font-bold py-3.5 px-4 rounded-full hover:bg-brand-gold hover:border-brand-gold transition-all uppercase tracking-widest text-[10px] shadow-sm border border-transparent">
+                        <a href="https://square.link/u/qFrG9ghO" target="_blank" rel="noopener" class="block text-center bg-white text-brand-oak font-sans font-bold py-3.5 px-4 rounded-full hover:bg-brand-gold hover:border-brand-gold transition-all uppercase tracking-widest text-[10px] shadow-sm border border-transparent">
                             Reserve Cake Canvas Seat ($85)
                         </a>
                     </div>
@@ -321,14 +323,14 @@
 
                 <!-- TIER 2 (WITH QUICK POPUP MODAL BUTTON) -->
                 <div id="tier2" class="bg-white px-6 py-8 rounded-3xl shadow-lg border-2 border-brand-gold flex flex-col relative">
-                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-gold text-brand-clay text-[9px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-sm whitespace-nowrap">
+                    <div class="absolute -top-3 left-1/2 -translate-x-1/2 bg-brand-gold text-brand-oak text-[9px] font-bold uppercase tracking-widest px-3 py-1 rounded-full shadow-sm whitespace-nowrap">
                         Most Popular for In-Person &amp; Hybrid Teams
                     </div>
 
                     <span class="text-brand-gold-dark font-sans font-bold tracking-widest uppercase text-[10px] block mb-1 mt-1">Tier 2 &bull; Private In-Person &amp; Hybrid</span>
-                    <h3 class="font-serif text-2xl text-brand-clay font-bold mb-1 tracking-tight">Private Local Gathering</h3>
+                    <h3 class="font-serif text-2xl text-brand-oak font-bold mb-1 tracking-tight">Private Local Gathering</h3>
                     <p class="font-sans text-brand-gold-dark font-bold text-xs mb-3">On-Site at Your Office, Home, or Private Venue</p>
-                    <p class="font-sans font-bold text-3xl text-brand-clay mb-1">$135 <span class="text-xs font-normal text-brand-dark/60">/ Seat</span></p>
+                    <p class="font-sans font-bold text-3xl text-brand-oak mb-1">$135 <span class="text-xs font-normal text-brand-dark/60">/ Seat</span></p>
                     <span class="text-[10px] font-sans text-brand-dark/60 mb-4 font-medium">($1,350 Minimum Base &bull; Local Seats + Remote Shipped Kits Count Together)</span>
                     
                     <p class="text-xs text-brand-dark/80 font-sans leading-relaxed mb-4">
@@ -336,19 +338,19 @@
                     </p>
 
                     <div class="bg-brand-light/60 p-4 rounded-xl text-xs font-sans text-brand-dark/90 mb-6 space-y-2.5 border border-brand-gold/10 flex-grow">
-                        <strong class="text-brand-clay font-serif block text-xs">Workshop Details:</strong>
+                        <strong class="text-brand-oak font-serif block text-xs">Workshop Details:</strong>
                         <p class="text-[11px]"><strong>✦ Schedule on Your Time:</strong> Select the exact morning or evening that works best for your group.</p>
                         <p class="text-[11px]"><strong>✦ Your Choice of Medium:</strong> Choose between gourmet edible mini cakes or lasting keepsake sculptures.</p>
                         <p class="text-[11px]"><strong>✦ Hybrid Team Add-On:</strong> Ship matching kits ($145/kit plus $12 flat ground shipping) to remote coworkers so everyone creates together live on camera!</p>
                     </div>
 
-                    <button type="button" onclick="openInquiryModal('Tier 2: Private Local Gathering ($135/seat)')" class="block w-full text-center bg-brand-clay text-white font-sans font-bold py-3.5 px-4 rounded-full hover:bg-brand-gold hover:text-brand-clay transition-all uppercase tracking-widest text-[11px] mt-auto shadow-md">
+                    <button type="button" onclick="openInquiryModal('Tier 2: Private Local Gathering ($135/seat)')" class="block w-full text-center bg-brand-oak text-white font-sans font-bold py-3.5 px-4 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all uppercase tracking-widest text-[11px] mt-auto shadow-md">
                         Interested in Booking? Contact Me!
                     </button>
                 </div>
 
                 <!-- TIER 3 (WITH QUICK POPUP MODAL BUTTON) -->
-                <div id="tier3" class="bg-brand-clay text-white px-6 py-8 rounded-3xl shadow-xl border border-brand-gold/30 flex flex-col relative mt-4 lg:mt-0">
+                <div id="tier3" class="bg-brand-oak text-white px-6 py-8 rounded-3xl shadow-xl border border-brand-gold/30 flex flex-col relative mt-4 lg:mt-0">
                     <span class="text-brand-gold font-sans font-bold tracking-widest uppercase text-[10px] block mb-1">Tier 3 &bull; Remote Virtual Workshop</span>
                     <h3 class="font-serif text-2xl font-bold text-white mb-1 tracking-tight leading-tight">Remote Shipped Workshops</h3>
                     <p class="font-sans text-brand-gold font-bold text-xs mb-3">Delivered Directly to Remote Doors Nationwide</p>
@@ -366,7 +368,7 @@
                         <p class="text-[11px] text-brand-light/90"><strong>✦ Live Virtual Gathering:</strong> 60 to 90 minute calm session guided live step-by-step.</p>
                     </div>
 
-                    <button type="button" onclick="openInquiryModal('Tier 3: Remote Virtual Workshop ($145/seat)')" class="block w-full text-center bg-brand-gold text-brand-clay font-sans font-bold py-3.5 px-4 rounded-full hover:bg-white transition-all uppercase tracking-widest text-[11px] mt-auto shadow-md">
+                    <button type="button" onclick="openInquiryModal('Tier 3: Remote Virtual Workshop ($145/seat)')" class="block w-full text-center bg-brand-gold text-brand-oak font-sans font-bold py-3.5 px-4 rounded-full hover:bg-white transition-all uppercase tracking-widest text-[11px] mt-auto shadow-md">
                         Interested in Booking? Contact Me!
                     </button>
                 </div>
@@ -378,7 +380,7 @@
     <!-- FAQ SECTION -->
     <section class="py-14 bg-brand-light border-t border-brand-gold/10">
         <div class="max-w-4xl mx-auto px-6">
-            <h2 class="font-serif text-3xl text-brand-clay text-center mb-10 font-bold">Frequently Asked Questions</h2>
+            <h2 class="font-serif text-3xl text-brand-oak text-center mb-10 font-bold">Frequently Asked Questions</h2>
             <div class="space-y-4 font-sans">
                 
                 <div class="bg-white p-6 rounded-2xl shadow-sm border border-brand-gold/20">
@@ -448,52 +450,52 @@
     </footer>
 
     <!-- QUICK PRIVATE GATHERING INQUIRY MODAL -->
-    <div id="inquiry-modal" class="fixed inset-0 bg-brand-clay/80 backdrop-blur-md z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+    <div id="inquiry-modal" class="fixed inset-0 bg-brand-oak/80 backdrop-blur-md z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
         <div class="bg-white rounded-3xl border-2 border-brand-gold/40 shadow-2xl max-w-lg w-full p-6 sm:p-8 relative max-h-[90vh] overflow-y-auto text-left">
-            <button type="button" onclick="closeInquiryModal()" class="absolute top-5 right-5 text-brand-dark/40 hover:text-brand-clay text-2xl font-bold focus:outline-none transition-colors" aria-label="Close modal">
+            <button type="button" onclick="closeInquiryModal()" class="absolute top-5 right-5 text-brand-dark/40 hover:text-brand-oak text-2xl font-bold focus:outline-none transition-colors" aria-label="Close modal">
                 &times;
             </button>
 
             <span class="text-brand-gold-dark font-sans font-bold text-[10px] uppercase tracking-widest block mb-1">Direct Studio Inquiry</span>
-            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-brand-clay mb-2">Interested in Booking?</h3>
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-brand-oak mb-2">Interested in Booking?</h3>
             <p class="text-xs sm:text-sm text-brand-dark/75 font-sans mb-5 leading-relaxed">
                 Leave your details below and we will reach out directly to check dates, answer questions, and plan your gathering.
             </p>
 
             <form id="quick-inquiry-form" class="space-y-4" onsubmit="handleQuickInquiry(event)">
                 <div>
-                    <label class="block text-[11px] font-bold uppercase tracking-wider text-brand-clay mb-1.5">Selected Gathering Type</label>
-                    <input type="text" id="modal-tier" name="gathering_type" readonly class="w-full bg-brand-light/70 border border-brand-gold/30 rounded-xl px-4 py-2.5 text-xs text-brand-clay font-semibold focus:outline-none">
+                    <label class="block text-[11px] font-bold uppercase tracking-wider text-brand-oak mb-1.5">Selected Gathering Type</label>
+                    <input type="text" id="modal-tier" name="gathering_type" readonly class="w-full bg-brand-light/70 border border-brand-gold/30 rounded-xl px-4 py-2.5 text-xs text-brand-oak font-semibold focus:outline-none">
                 </div>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
                     <div>
-                        <label for="modal-name" class="block text-[11px] font-bold uppercase tracking-wider text-brand-clay mb-1.5">Your Name *</label>
+                        <label for="modal-name" class="block text-[11px] font-bold uppercase tracking-wider text-brand-oak mb-1.5">Your Name *</label>
                         <input type="text" id="modal-name" name="name" required placeholder="e.g. Eleanor Vance" class="w-full bg-brand-light/40 border border-brand-gold/30 rounded-xl px-3.5 py-2.5 text-xs text-brand-dark focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold">
                     </div>
                     <div>
-                        <label for="modal-email" class="block text-[11px] font-bold uppercase tracking-wider text-brand-clay mb-1.5">Email Address *</label>
+                        <label for="modal-email" class="block text-[11px] font-bold uppercase tracking-wider text-brand-oak mb-1.5">Email Address *</label>
                         <input type="email" id="modal-email" name="email" required placeholder="you@example.com" class="w-full bg-brand-light/40 border border-brand-gold/30 rounded-xl px-3.5 py-2.5 text-xs text-brand-dark focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold">
                     </div>
                 </div>
 
                 <div>
-                    <label for="modal-phone" class="block text-[11px] font-bold uppercase tracking-wider text-brand-clay mb-1.5">Phone Number *</label>
+                    <label for="modal-phone" class="block text-[11px] font-bold uppercase tracking-wider text-brand-oak mb-1.5">Phone Number *</label>
                     <input type="tel" id="modal-phone" name="phone" required placeholder="e.g. (214) 555-0199" class="w-full bg-brand-light/40 border border-brand-gold/30 rounded-xl px-3.5 py-2.5 text-xs text-brand-dark focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold">
                 </div>
 
                 <div>
-                    <label class="block text-[11px] font-bold uppercase tracking-wider text-brand-clay mb-1.5">How would you prefer we contact you? *</label>
+                    <label class="block text-[11px] font-bold uppercase tracking-wider text-brand-oak mb-1.5">How would you prefer we contact you? *</label>
                     <div class="grid grid-cols-3 gap-2.5">
-                        <label class="flex items-center justify-center p-2.5 rounded-xl border border-brand-gold/30 cursor-pointer text-xs font-sans text-brand-dark hover:bg-brand-light transition-colors has-[:checked]:bg-brand-clay has-[:checked]:text-white has-[:checked]:border-brand-clay">
+                        <label class="flex items-center justify-center p-2.5 rounded-xl border border-brand-gold/30 cursor-pointer text-xs font-sans text-brand-dark hover:bg-brand-light transition-colors has-[:checked]:bg-brand-oak has-[:checked]:text-white has-[:checked]:border-brand-oak">
                             <input type="radio" name="preferred_contact" value="Text" checked class="sr-only">
                             <span>Text (Fastest)</span>
                         </label>
-                        <label class="flex items-center justify-center p-2.5 rounded-xl border border-brand-gold/30 cursor-pointer text-xs font-sans text-brand-dark hover:bg-brand-light transition-colors has-[:checked]:bg-brand-clay has-[:checked]:text-white has-[:checked]:border-brand-clay">
+                        <label class="flex items-center justify-center p-2.5 rounded-xl border border-brand-gold/30 cursor-pointer text-xs font-sans text-brand-dark hover:bg-brand-light transition-colors has-[:checked]:bg-brand-oak has-[:checked]:text-white has-[:checked]:border-brand-oak">
                             <input type="radio" name="preferred_contact" value="Phone Call" class="sr-only">
                             <span>Phone Call</span>
                         </label>
-                        <label class="flex items-center justify-center p-2.5 rounded-xl border border-brand-gold/30 cursor-pointer text-xs font-sans text-brand-dark hover:bg-brand-light transition-colors has-[:checked]:bg-brand-clay has-[:checked]:text-white has-[:checked]:border-brand-clay">
+                        <label class="flex items-center justify-center p-2.5 rounded-xl border border-brand-gold/30 cursor-pointer text-xs font-sans text-brand-dark hover:bg-brand-light transition-colors has-[:checked]:bg-brand-oak has-[:checked]:text-white has-[:checked]:border-brand-oak">
                             <input type="radio" name="preferred_contact" value="Email" class="sr-only">
                             <span>Email</span>
                         </label>
@@ -501,12 +503,12 @@
                 </div>
 
                 <div>
-                    <label for="modal-details" class="block text-[11px] font-bold uppercase tracking-wider text-brand-clay mb-1.5">Estimated Group Size &amp; Target Timing (Optional)</label>
+                    <label for="modal-details" class="block text-[11px] font-bold uppercase tracking-wider text-brand-oak mb-1.5">Estimated Group Size &amp; Target Timing (Optional)</label>
                     <input type="text" id="modal-details" name="details" placeholder="e.g. About 12 people, hoping for a Friday in November" class="w-full bg-brand-light/40 border border-brand-gold/30 rounded-xl px-3.5 py-2.5 text-xs text-brand-dark focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold">
                 </div>
 
                 <div class="pt-2">
-                    <button type="submit" class="w-full bg-brand-clay text-white font-sans text-xs font-bold uppercase tracking-widest py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-clay transition-all shadow-md">
+                    <button type="submit" class="w-full bg-brand-oak text-white font-sans text-xs font-bold uppercase tracking-widest py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md">
                         Contact Me About This Gathering!
                     </button>
                 </div>
