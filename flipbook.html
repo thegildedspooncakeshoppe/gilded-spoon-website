@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="p:domain_verify" content="8497c86d445458f17cdce81e920478f2"/>
-    <title>The Studio Gallery content="A gallery of handcrafted celebration cakes, community volunteer bakes, and tactile mixed-media art pieces made by Dimple McKinney in McKinney, Texas.">
+    <title>The Studio Gallery | The Gilded Spoon Shoppe</title>
+    <meta name="description" content="A gallery of handcrafted celebration cakes, community volunteer bakes, and tactile mixed-media art pieces made by Dimple McKinney in McKinney, Texas.">
     <meta name="keywords" content="custom cakes McKinney TX, celebration cakes, birthday cakes, keepsake cake sculpture, artisanal pastry design">
     
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -78,7 +79,7 @@
             <div class="hidden md:flex items-center space-x-6 font-medium text-xs tracking-widest uppercase">
                 <a href="shoppe.html" class="text-brand-light hover:text-brand-gold transition">Shoppe</a>
                 <a href="workshop.html" class="text-brand-light hover:text-brand-gold transition">Workshops</a>
-                <a href="flipbook.html" class="text-brand-gold font-bold transition">Portfolio</a>
+                <a href="flipbook.html" class="text-brand-gold font-bold transition">Gallery</a>
                 <a href="contact.html" class="text-brand-light hover:text-brand-gold transition">Contact</a>
                 <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-oak hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm">
                     Free Guide
@@ -93,7 +94,7 @@
         <div id="mobile-menu" class="hidden md:hidden mt-4 px-4 pb-4 bg-brand-oak text-center">
             <a href="shoppe.html" class="block py-3 text-brand-light uppercase tracking-widest">Shoppe</a>
             <a href="workshop.html" class="block py-3 text-brand-light uppercase tracking-widest">Workshops</a>
-            <a href="flipbook.html" class="block py-3 text-brand-gold font-bold uppercase tracking-widest">Portfolio</a>
+            <a href="flipbook.html" class="block py-3 text-brand-gold font-bold uppercase tracking-widest">Gallery</a>
             <a href="contact.html" class="block py-3 text-brand-light uppercase tracking-widest">Contact</a>
             <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-oak hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm inline-block mt-2">
                 Free Guide
@@ -105,33 +106,33 @@
     <header class="text-center py-16 md:py-20 px-6 bg-brand-oak border-b border-brand-gold/10 relative overflow-hidden">
         <div class="absolute inset-0 opacity-5 bg-texture"></div>
         <div class="max-w-4xl mx-auto px-6 relative z-10">
-            <span class="text-brand-gold font-caveat text-2xl md:text-3xl block mb-2">Celebration Cakes and Studio Works</span>
-            <h1 class="font-serif text-3xl sm:text-4xl md:text-5xl text-brand-sand leading-relaxed tracking-wide mb-4 py-1">The Studio Gallery</h1>
-            <p class="font-serif italic text-base md:text-md text-brand-light/80 leading-relaxed max-w-2xl mx-auto">
+            <span class="text-brand-gold font-caveat text-2xl md:text-3xl block mb-2">Celebration Cakes &amp; Keepsakes</span>
+            <h1 class="font-hand text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-brand-sand leading-relaxed tracking-wide mb-4 py-1">The Studio Gallery</h1>
+            <p class="font-serif italic text-base md:text-lg text-brand-light/80 leading-relaxed max-w-2xl mx-auto">
                 A visual collection of handcrafted celebration cakes, community volunteer bakes, and tactile pieces, documented through our 5-Layer Sensory Framework.
             </p>
         </div>
     </header>
 
     <!-- CATEGORY FILTER TABS -->
-    <section class="py-6 bg-brand-light/95 border-b border-brand-gold/30 sticky top-[73px] z-40 backdrop-blur-md shadow-sm">
-        <div class="max-w-6xl mx-auto px-4 flex flex-wrap justify-center items-center gap-2.5 sm:gap-3 text-xs uppercase tracking-wider font-sans font-bold">
-            <button onclick="filterGallery('all')" class="filter-btn active py-2.5 px-5 rounded-full border-2 border-brand-gold transition-all text-brand-oak bg-brand-gold shadow-md" data-category="all">
+    <section class="py-6 bg-brand-light/95 border-b border-brand-gold/20 sticky top-[73px] z-40 backdrop-blur-md">
+        <div class="max-w-6xl mx-auto px-4 flex flex-wrap justify-center items-center gap-2 sm:gap-3 text-xs uppercase tracking-widest font-mono font-bold">
+            <button onclick="filterGallery('all')" class="filter-btn active py-2.5 px-5 rounded-full border border-brand-oak transition-all text-brand-light bg-brand-oak shadow-sm" data-category="all">
                 All Works
             </button>
-            <button onclick="filterGallery('classic')" class="filter-btn py-2.5 px-5 rounded-full border-2 border-brand-gold/40 hover:border-brand-gold hover:bg-brand-gold/15 transition-all text-brand-oak bg-white shadow-sm" data-category="classic">
+            <button onclick="filterGallery('classic')" class="filter-btn py-2.5 px-5 rounded-full border border-brand-gold/30 hover:border-brand-gold transition-all text-brand-oak bg-white shadow-sm" data-category="classic">
                 Classic &amp; Heritage Bakes
             </button>
-            <button onclick="filterGallery('milestone')" class="filter-btn py-2.5 px-5 rounded-full border-2 border-brand-gold/40 hover:border-brand-gold hover:bg-brand-gold/15 transition-all text-brand-oak bg-white shadow-sm" data-category="milestone">
+            <button onclick="filterGallery('milestone')" class="filter-btn py-2.5 px-5 rounded-full border border-brand-gold/30 hover:border-brand-gold transition-all text-brand-oak bg-white shadow-sm" data-category="milestone">
                 Milestones &amp; Birthdays
             </button>
-            <button onclick="filterGallery('sculpted')" class="filter-btn py-2.5 px-5 rounded-full border-2 border-brand-gold/40 hover:border-brand-gold hover:bg-brand-gold/15 transition-all text-brand-oak bg-white shadow-sm" data-category="sculpted">
+            <button onclick="filterGallery('sculpted')" class="filter-btn py-2.5 px-5 rounded-full border border-brand-gold/30 hover:border-brand-gold transition-all text-brand-oak bg-white shadow-sm" data-category="sculpted">
                 Sculpted &amp; 3D Art
             </button>
-            <button onclick="filterGallery('botanical')" class="filter-btn py-2.5 px-5 rounded-full border-2 border-brand-gold/40 hover:border-brand-gold hover:bg-brand-gold/15 transition-all text-brand-oak bg-white shadow-sm" data-category="botanical">
+            <button onclick="filterGallery('botanical')" class="filter-btn py-2.5 px-5 rounded-full border border-brand-gold/30 hover:border-brand-gold transition-all text-brand-oak bg-white shadow-sm" data-category="botanical">
                 Botanicals &amp; Florals
             </button>
-            <button onclick="filterGallery('community')" class="filter-btn py-2.5 px-5 rounded-full border-2 border-brand-gold/40 hover:border-brand-gold hover:bg-brand-gold/15 transition-all text-brand-oak bg-white shadow-sm" data-category="community">
+            <button onclick="filterGallery('community')" class="filter-btn py-2.5 px-5 rounded-full border border-brand-gold/30 hover:border-brand-gold transition-all text-brand-oak bg-white shadow-sm" data-category="community">
                 Community &amp; Giving
             </button>
         </div>
@@ -168,26 +169,26 @@
                     <div class="p-6 md:p-8 flex flex-col justify-start overflow-y-auto text-left space-y-4">
                         
                         <div>
-                            <span id="lightbox-tag" class="text-xs font-sans font-bold tracking-wider text-brand-gold-dark uppercase block mb-1"></span>
+                            <span id="lightbox-tag" class="text-[10px] font-mono font-bold tracking-widest text-brand-gold-dark uppercase block mb-1"></span>
                             <h2 id="lightbox-title" class="font-serif text-2xl md:text-3xl font-bold text-brand-oak leading-tight"></h2>
-                            <p id="lightbox-meta" class="text-xs font-sans text-brand-dark/80 mt-1"></p>
+                            <p id="lightbox-meta" class="text-xs font-serif text-brand-dark/80 mt-1"></p>
                         </div>
                         
                         <div class="w-12 h-0.5 bg-brand-gold/40"></div>
                         
                         <!-- 5 Layers Structured List -->
-                        <div class="space-y-3 text-sm font-sans text-brand-light/95 leading-relaxed bg-brand-oak p-5 rounded-2xl border-2 border-brand-gold/40 shadow-inner">
-                            <div><strong class="text-brand-gold font-sans font-bold block text-xs tracking-wider uppercase mb-0.5">Layer 1 (Color &amp; Atmosphere)</strong> <span id="layer-1"></span></div>
-                            <div><strong class="text-brand-gold font-sans font-bold block text-xs tracking-wider uppercase mb-0.5">Layer 2 (Shape &amp; Movement)</strong> <span id="layer-2"></span></div>
-                            <div><strong class="text-brand-gold font-sans font-bold block text-xs tracking-wider uppercase mb-0.5">Layer 3 (Texture &amp; Touch)</strong> <span id="layer-3"></span></div>
-                            <div><strong class="text-brand-gold font-sans font-bold block text-xs tracking-wider uppercase mb-0.5">Layer 4 (Strategy &amp; Boundaries)</strong> <span id="layer-4"></span></div>
-                            <div><strong class="text-brand-gold font-sans font-bold block text-xs tracking-wider uppercase mb-0.5">Layer 5 (Finishing Ritual)</strong> <span id="layer-5"></span></div>
+                        <div class="space-y-3 text-sm font-sans text-brand-light/95 leading-relaxed bg-brand-oak p-5 rounded-xl border border-brand-gold/40 shadow-inner">
+                            <div><strong class="text-brand-gold block text-xs tracking-wide uppercase mb-0.5">Layer 1 (Color &amp; Atmosphere)</strong> <span id="layer-1"></span></div>
+                            <div><strong class="text-brand-gold block text-xs tracking-wide uppercase mb-0.5">Layer 2 (Shape &amp; Movement)</strong> <span id="layer-2"></span></div>
+                            <div><strong class="text-brand-gold block text-xs tracking-wide uppercase mb-0.5">Layer 3 (Texture &amp; Touch)</strong> <span id="layer-3"></span></div>
+                            <div><strong class="text-brand-gold block text-xs tracking-wide uppercase mb-0.5">Layer 4 (Strategy &amp; Boundaries)</strong> <span id="layer-4"></span></div>
+                            <div><strong class="text-brand-gold block text-xs tracking-wide uppercase mb-0.5">Layer 5 (Finishing Ritual)</strong> <span id="layer-5"></span></div>
                         </div>
 
                         <!-- Artisan Background Note -->
                         <div class="border-t border-brand-gold/20 pt-3">
-                            <span class="text-xs font-sans font-bold uppercase tracking-wider text-brand-gold-dark block mb-1">Behind The Bake</span>
-                            <p id="lightbox-note" class="text-xs font-sans text-brand-dark/80 italic leading-relaxed"></p>
+                            <span class="text-[10px] font-mono font-bold uppercase tracking-wider text-brand-gold-dark block mb-1">Behind The Bake</span>
+                            <p id="lightbox-note" class="text-xs font-serif text-brand-dark/80 italic leading-relaxed"></p>
                         </div>
 
                     </div>
@@ -764,7 +765,7 @@
 
                 const hasMultipleViews = item.views && item.views.length > 1;
                 const viewBadge = hasMultipleViews 
-                    ? `<span class="inline-block bg-brand-gold text-brand-oak text-[10px] font-sans font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full shadow-sm ml-1.5 whitespace-nowrap shrink-0">${item.views.length} Views</span>`
+                    ? `<span class="inline-block bg-brand-gold/20 text-brand-gold text-[9px] font-sans font-bold uppercase tracking-widest px-2 py-0.5 rounded-full border border-brand-gold/40 ml-1.5 whitespace-nowrap shrink-0">${item.views.length} Views</span>`
                     : '';
 
                 card.innerHTML = `
@@ -774,7 +775,7 @@
                     </div>
                     <div class="text-left px-1 mt-auto">
                         <div class="flex items-center justify-between mb-1.5 gap-1.5">
-                            <span class="text-brand-gold font-sans text-[11px] uppercase tracking-wider font-bold truncate">${item.tag}</span>
+                            <span class="text-brand-gold font-mono text-[10px] uppercase tracking-wider font-bold truncate">${item.tag}</span>
                             ${viewBadge}
                         </div>
                         <h3 class="text-brand-light text-sm font-serif font-bold leading-snug line-clamp-2 min-h-[2.5rem]">${item.title}</h3>
@@ -788,9 +789,11 @@
             const buttons = document.querySelectorAll('.filter-btn');
             buttons.forEach(btn => {
                 if (btn.getAttribute('data-category') === category) {
-                    btn.className = "filter-btn active py-2.5 px-5 rounded-full border-2 border-brand-gold transition-all text-brand-oak bg-brand-gold shadow-md font-bold";
+                    btn.classList.add('bg-brand-gold', 'text-brand-oak', 'border-brand-gold', 'shadow-md', 'transform', 'scale-105');
+                    btn.classList.remove('bg-white', 'border-brand-gold/40', 'hover:border-brand-gold', 'hover:bg-brand-gold/10');
                 } else {
-                    btn.className = "filter-btn py-2.5 px-5 rounded-full border-2 border-brand-gold/40 hover:border-brand-gold hover:bg-brand-gold/15 transition-all text-brand-oak bg-white shadow-sm font-bold";
+                    btn.classList.remove('bg-brand-gold', 'text-brand-oak', 'border-brand-gold', 'shadow-md', 'transform', 'scale-105');
+                    btn.classList.add('bg-white', 'text-brand-oak', 'border-brand-gold/40', 'hover:border-brand-gold', 'hover:bg-brand-gold/10');
                 }
             });
 
@@ -844,7 +847,7 @@
                     const btn = document.createElement('button');
                     btn.type = 'button';
                     const isActive = (idx === currentViewIndex);
-                    btn.className = `text-[10px] font-sans font-bold uppercase tracking-wider py-1.5 px-3 rounded-full border transition-all ${
+                    btn.className = `text-[10px] font-serif font-bold uppercase tracking-wider py-1.5 px-3 rounded-full border transition-all ${
                         isActive 
                         ? 'bg-brand-gold text-brand-oak border-brand-gold shadow-sm' 
                         : 'bg-white/80 text-brand-dark/75 border-brand-gold/30 hover:border-brand-gold hover:text-brand-oak'
