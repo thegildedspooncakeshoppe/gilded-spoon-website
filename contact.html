@@ -132,82 +132,10 @@
 
                     <!-- INQUIRY SUBJECT SELECTOR -->
                     <div>
-                        <label for="subject" class="block text-[11px] font-sans font-bold uppercase tracking-widest text-brand-oak mb-2">Inquiry Type *</label>
-                        <select id="subject" required class="w-full bg-brand-light/50 border border-brand-gold/30 rounded-xl px-4 py-3 text-sm text-brand-dark focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-colors font-sans">
-                            <option value="General Inquiry">General Inquiry or Hello</option>
-                            <option value="Bespoke Celebration Cake or Replica">Bespoke Celebration Cake or Milestone Replica Commission</option>
-                            <option value="Custom Art Piece Commission">Custom Art Piece Commission (2D Canvas or 3D Sculpture)</option>
-                            <option value="Custom Heirloom Recipe Deck">Custom Heirloom Recipe Deck Commission</option>
-                            <option value="Private Group Workshop Inquiry">Private Group Workshop or Team Retreat</option>
-                            <option value="Wholesale & Boutique Stocking">Wholesale &amp; Boutique Retail Stocking</option>
-                        </select>
+                        <label for="subject" class="block text-[10px] font-bold uppercase tracking-wider text-brand-oak mb-1.5">Subject</label>
+                        <input type="text" id="subject" name="subject" placeholder="What is this regarding?" required class="w-full bg-brand-light/60 border border-brand-gold/30 rounded-xl px-4 py-3 text-sm text-brand-dark focus:outline-none focus:border-brand-gold transition-colors">
                     </div>
-
-                    <!-- HELPER 1: CUSTOM ART PIECE CHECKLIST -->
-                    <div id="art-guide" class="hidden bg-brand-oak/5 border border-brand-gold/30 rounded-2xl p-5 text-sm text-brand-dark/80 space-y-2 font-serif">
-                        <div class="flex items-center space-x-2 text-brand-oak font-sans text-[11px] font-bold uppercase tracking-widest">
-                            <svg class="w-4 h-4 text-brand-gold-dark shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            <span>Custom Artwork Checklist</span>
-                        </div>
-                        <p class="leading-relaxed">
-                            To help Dimple understand your space and vision, please share:
-                        </p>
-                        <ul class="list-disc pl-5 space-y-1 text-brand-dark/80">
-                            <li><strong>Format Preference:</strong> 3D sculpted cake keepsake on a gold display drum, or framed 2D floral relief canvas for wall display.</li>
-                            <li><strong>Color Palette &amp; Feeling:</strong> Neutral earth tones, calm greens, sunny yellows, or tones that match your home.</li>
-                            <li><strong>Special Inclusions:</strong> Seasonal florals (dried, pressed, or piped), colored sand art patterns, or specific textured accents.</li>
-                            <li><strong>Timing &amp; Destination:</strong> Target date and city for shipping or local McKinney pickup.</li>
-                        </ul>
-                    </div>
-
-                    <!-- HELPER 2: CUSTOM RECIPE DECK CHECKLIST -->
-                    <div id="recipe-guide" class="hidden bg-brand-oak/5 border border-brand-gold/30 rounded-2xl p-5 text-sm text-brand-dark/80 space-y-2 font-serif">
-                        <div class="flex items-center space-x-2 text-brand-oak font-sans text-[11px] font-bold uppercase tracking-widest">
-                            <svg class="w-4 h-4 text-brand-gold-dark shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            <span>Custom Recipe Deck Checklist</span>
-                        </div>
-                        <p class="leading-relaxed">
-                            To help us translate your favorite recipe into single-step counter cards with zero math:
-                        </p>
-                        <ul class="list-disc pl-5 space-y-1 text-brand-dark/80">
-                            <li><strong>Recipe Name &amp; Origin:</strong> Family heirloom, favorite holiday bake, or personal recipe passed down through generations.</li>
-                            <li><strong>Dietary Adaptations:</strong> Eggless, gluten-free, dairy-free, or specific ingredient replacements needed.</li>
-                            <li><strong>Kitchen Stress Points:</strong> Steps where timing, temperature, or multitasking usually feels overwhelming.</li>
-                        </ul>
-                    </div>
-
-                    <!-- HELPER 3: PRIVATE WORKSHOP / RETREAT CHECKLIST -->
-                    <div id="workshop-guide" class="hidden bg-brand-oak/5 border border-brand-gold/30 rounded-2xl p-5 text-sm text-brand-dark/80 space-y-2 font-serif">
-                        <div class="flex items-center space-x-2 text-brand-oak font-sans text-[11px] font-bold uppercase tracking-widest">
-                            <svg class="w-4 h-4 text-brand-gold-dark shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            <span>Private Group Workshop Checklist</span>
-                        </div>
-                        <p class="leading-relaxed">
-                            For private in-person gatherings, workplace retreats, or virtual team kits:
-                        </p>
-                        <ul class="list-disc pl-5 space-y-1 text-brand-dark/80">
-                            <li><strong>Event Format:</strong> Private Local In-Person, Hybrid (local + remote shipped kits), or 100% Virtual Shipped.</li>
-                            <li><strong>Medium Track:</strong> Keepsake 3D Sculptures (permanent desk display) or Fresh Edible Cake Art (mini cakes with buttercreams).</li>
-                            <li><strong>Estimated Group Size:</strong> Approximate headcount and location (office, private venue, or remote doors).</li>
-                            <li><strong>Preferred Dates:</strong> Desired month, weekday, or weekend timing.</li>
-                        </ul>
-                    </div>
-
-                    <!-- HELPER 4: WHOLESALE CHECKLIST -->
-                    <div id="wholesale-guide" class="hidden bg-brand-oak/5 border border-brand-gold/30 rounded-2xl p-5 text-sm text-brand-dark/80 space-y-2 font-serif">
-                        <div class="flex items-center space-x-2 text-brand-oak font-sans text-[11px] font-bold uppercase tracking-widest">
-                            <svg class="w-4 h-4 text-brand-gold-dark shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-                            <span>Wholesale &amp; Retail Checklist</span>
-                        </div>
-                        <p class="leading-relaxed">
-                            Interested in stocking our guided journals, recipe decks, or studio kits in your shop?
-                        </p>
-                        <ul class="list-disc pl-5 space-y-1 text-brand-dark/80">
-                            <li><strong>Store Information:</strong> Shop name, location (city/state), and online store or social link.</li>
-                            <li><strong>Items of Interest:</strong> Bake to Baseline Guided Journals, The Deconstructed Recipe Decks, or The Keepsake Cake Kits.</li>
-                            <li><strong>Target Quantity &amp; Timeline:</strong> Opening order size or planned shelf launch date.</li>
-                        </ul>
-                    </div>
+                        
 
                     <!-- MESSAGE AREA -->
                     <div>
