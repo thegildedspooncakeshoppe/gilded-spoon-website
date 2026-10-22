@@ -26,11 +26,13 @@
                         'brand-blush': '#E8D5D1',     /* Soft Blush */
                         'brand-oak': '#2A3428',       /* Shadowy, Chalky Dark Green (Ancient Oak) */
                         'brand-sand': '#E3D8C8',      /* Tan/Sand */
-                        'brand-card': '#1E251D'       /* Deep forest overlay for dark cards */
+                        'brand-card': '#1E251D',      /* Deep forest overlay for dark cards */
+                        'brand-cream': '#FAF7F2'      /* Warm Antique Card Cream */
                     },
                     fontFamily: {
                         'serif': ['"Fraunces"', 'serif'],
-                        'caveat': ['"Caveat"', 'cursive']
+                        'sans': ['"Inter"', 'sans-serif'],
+                        'hand': ['"Caveat"', 'cursive']
                     }
                 }
             }
@@ -56,55 +58,55 @@
 </head>
 <body class="font-sans bg-brand-light text-brand-dark antialiased bg-texture select-none">
 
-<!-- STANDARDIZED NAVIGATION -->
-<nav class="sticky top-0 bg-brand-oak/95 backdrop-blur-lg shadow-md z-50 border-b border-brand-gold/10">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-        
-    <a href="index.html" class="flex flex-col items-center text-center leading-none group">
-    <!-- Line 1: Primary Brand Name -->
-    <span class="text-[17px] sm:text-[19px] font-serif font-bold text-brand-gold uppercase tracking-[0.08em] leading-none">
-        THE GILDED SPOON
-    </span>
-    <!-- Line 2: Balanced Subtitle Flanked by Hairline Rules -->
-    <div class="flex items-center justify-center gap-2 w-full mt-1.5">
-        <span class="h-[1px] w-3.5 sm:w-5 bg-brand-gold/45"></span>
-        <span class="text-[8px] sm:text-[9px] font-sans font-medium tracking-[0.2em] text-brand-light/85 uppercase whitespace-nowrap">
-            SHOPPE &amp; ATELIER
-        </span>
-        <span class="h-[1px] w-3.5 sm:w-5 bg-brand-gold/45"></span>
-    </div>
-</a>
+    <!-- STANDARDIZED NAVIGATION (SHOPPE ACTIVE) -->
+    <nav class="sticky top-0 bg-brand-oak/95 backdrop-blur-lg shadow-md z-50 border-b border-brand-gold/10">
+        <div class="max-w-6xl mx-auto px-4 py-3.5 flex justify-between items-center">
+            
+            <!-- ATELIER LOGO (HAIRLINE RULES) -->
+            <a href="index.html" class="flex flex-col items-center text-center leading-none group">
+                <span class="text-[17px] sm:text-[19px] font-serif font-bold text-brand-gold uppercase tracking-[0.08em] leading-none">
+                    THE GILDED SPOON
+                </span>
+                <div class="flex items-center justify-center gap-2 w-full mt-1.5">
+                    <span class="h-[1px] w-3.5 sm:w-5 bg-brand-gold/45"></span>
+                    <span class="text-[8px] sm:text-[9px] font-sans font-medium tracking-[0.2em] text-brand-light/85 uppercase whitespace-nowrap">
+                        SHOPPE &amp; ATELIER
+                    </span>
+                    <span class="h-[1px] w-3.5 sm:w-5 bg-brand-gold/45"></span>
+                </div>
+            </a>
 
-        <!-- Desktop Navigation Links -->
-        <div class="hidden md:flex items-center space-x-6 font-medium text-xs tracking-widest uppercase">
-            <a href="shoppe.html" class="text-brand-light hover:text-brand-gold transition-colors">Shoppe</a>
-            <a href="workshop.html" class="text-brand-light hover:text-brand-gold transition-colors">Workshops</a>
-            <a href="flipbook.html" class="text-brand-light hover:text-brand-gold transition-colors">Portfolio</a>
-            <a href="contact.html" class="text-brand-light hover:text-brand-gold transition-colors">Contact</a>
-            <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-oak hover:bg-brand-sand transition-all px-4 py-2 rounded-full font-bold shadow-sm">
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center space-x-6 font-medium text-xs tracking-widest uppercase">
+                <a href="shoppe.html" class="text-brand-gold font-bold transition-colors">Shoppe</a>
+                <a href="workshop.html" class="text-brand-light hover:text-brand-gold transition-colors">Workshops</a>
+                <a href="flipbook.html" class="text-brand-light hover:text-brand-gold transition-colors">Portfolio</a>
+                <a href="contact.html" class="text-brand-light hover:text-brand-gold transition-colors">Contact</a>
+                <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-oak hover:bg-brand-sand transition-all px-4 py-2 rounded-full font-bold shadow-sm">
+                    Free Guide
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <div class="md:hidden">
+                <button id="hamburger-button" class="text-brand-light focus:outline-none p-1" aria-label="Toggle Navigation">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-brand-gold/10 px-4 pb-4 bg-brand-oak text-center text-xs tracking-widest uppercase">
+            <a href="shoppe.html" class="block py-2.5 text-brand-gold font-bold">Shoppe</a>
+            <a href="workshop.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Workshops</a>
+            <a href="flipbook.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Portfolio</a>
+            <a href="contact.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Contact</a>
+            <a href="/baketobaseline/index.html" class="inline-block bg-brand-gold text-brand-oak hover:bg-brand-sand transition-all px-5 py-2 rounded-full font-bold shadow-sm mt-2">
                 Free Guide
             </a>
         </div>
+    </nav>
 
-        <!-- Mobile Hamburger Button -->
-        <div class="md:hidden">
-            <button id="hamburger-button" class="text-brand-light focus:outline-none p-1" aria-label="Toggle Navigation">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-        </div>
-    </div>
-
-    <!-- Mobile Dropdown Menu -->
-    <div id="mobile-menu" class="hidden md:hidden border-t border-brand-gold/10 px-4 pb-4 bg-brand-oak text-center text-xs tracking-widest uppercase">
-        <a href="shoppe.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Shoppe</a>
-        <a href="workshop.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Workshops</a>
-        <a href="flipbook.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Portfolio</a>
-        <a href="contact.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Contact</a>
-        <a href="/baketobaseline/index.html" class="inline-block bg-brand-gold text-brand-oak hover:bg-brand-sand transition-all px-5 py-2 rounded-full font-bold shadow-sm mt-2">
-            Free Guide
-        </a>
-    </div>
-</nav>
     <!-- HEADER SECTION -->
     <header class="text-center py-16 md:py-20 px-6 bg-brand-oak border-b border-brand-gold/10 relative overflow-hidden">
         <div class="max-w-3xl mx-auto relative z-10">
@@ -138,12 +140,12 @@
     </section>
 
     <!-- UNIFIED 6-PRODUCT BOUTIQUE GRID -->
-    <main class="py-10 md:py-14 bg-brand-light">
+    <main class="py-12 md:py-16 bg-brand-light">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div id="shoppe-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-7 items-stretch">
                 
                 <!-- CARD 1: THE KEEPSAKE CAKE KIT -->
-                <div class="shoppe-card bg-[#FAF7F2] rounded-3xl border-2 border-brand-gold p-5 sm:p-6 shadow-md hover:shadow-xl hover:border-brand-gold-hover transition-all flex flex-col justify-between relative" data-category="kits">
+                <div class="shoppe-card bg-brand-cream rounded-3xl border border-brand-gold/30 p-5 sm:p-6 shadow-md hover:shadow-xl hover:border-brand-gold/60 transition-all flex flex-col justify-between" data-category="kits">
                     <div>
                         <!-- Full-Bleed In-Card Image -->
                         <div class="w-full h-56 sm:h-60 rounded-2xl overflow-hidden border border-brand-gold/30 mb-3.5 relative bg-brand-oak shadow-inner">
@@ -191,7 +193,7 @@
                             <li>✦ Ships nationwide in sturdy protective packaging.</li>
                         </ul>
                         
-                        <a href="https://square.link/u/SzGbYrG0" target="_blank" rel="noopener" class="w-full block text-center bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak hover:shadow-[0_0_15px_rgba(212,175,55,0.3)] transition-all shadow-md">
+                        <a href="https://square.link/u/SzGbYrG0" target="_blank" rel="noopener" class="w-full block text-center bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md">
                             Order Keepsake Kit ($68)
                         </a>
                         <span class="text-[11px] text-brand-dark/60 font-serif italic block text-center mt-2">Choose a 3D cake shape or flat canvas at checkout</span>
@@ -199,7 +201,7 @@
                 </div>
 
                 <!-- CARD 2: THE EDIBLE CAKE CANVAS KIT -->
-                <div class="shoppe-card bg-[#FAF7F2] rounded-3xl border-2 border-brand-gold p-5 sm:p-6 shadow-md hover:shadow-xl hover:border-brand-gold-hover transition-all flex flex-col justify-between relative" data-category="kits">
+                <div class="shoppe-card bg-brand-cream rounded-3xl border border-brand-gold/30 p-5 sm:p-6 shadow-md hover:shadow-xl hover:border-brand-gold/60 transition-all flex flex-col justify-between" data-category="kits">
                     <div>
                         <!-- Full-Bleed In-Card Image -->
                         <div class="w-full h-56 sm:h-60 rounded-2xl overflow-hidden border border-brand-gold/30 mb-3.5 relative bg-brand-oak shadow-inner">
@@ -247,7 +249,7 @@
                             <li>✦ Available for local McKinney pickup &amp; DFW delivery.</li>
                         </ul>
                         
-                        <a href="contact.html?subject=The%20Edible%20Cake%20Canvas%20Kit%20Order" class="w-full block text-center bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak hover:shadow-[0_0_15px_rgba(212,175,55,0.3)] transition-all shadow-md">
+                        <a href="contact.html?subject=The%20Edible%20Cake%20Canvas%20Kit%20Order" class="w-full block text-center bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md">
                             Order Edible Kit ($75)
                         </a>
                         <span class="text-[11px] text-brand-dark/60 font-serif italic block text-center mt-2">Prepared fresh in our McKinney studio kitchen</span>
@@ -255,7 +257,7 @@
                 </div>
 
                 <!-- CARD 3: THE DECONSTRUCTED RECIPE CARD SUITE -->
-                <div class="shoppe-card bg-[#FAF7F2] rounded-3xl border-2 border-brand-gold p-5 sm:p-6 shadow-md hover:shadow-xl hover:border-brand-gold-hover transition-all flex flex-col justify-between relative" data-category="recipes">
+                <div class="shoppe-card bg-brand-cream rounded-3xl border border-brand-gold/30 p-5 sm:p-6 shadow-md hover:shadow-xl hover:border-brand-gold/60 transition-all flex flex-col justify-between" data-category="recipes">
                     <div>
                         <!-- Full-Bleed In-Card Image -->
                         <div class="w-full h-56 sm:h-60 rounded-2xl overflow-hidden border border-brand-gold/25 mb-3.5 relative bg-brand-oak shadow-inner">
@@ -305,17 +307,17 @@
                             <li>✦ Custom hand-drawn artwork for your recipe.</li>
                         </ul>
                         
-                        <a href="https://square.link/u/1VoR2TeL" target="_blank" rel="noopener" class="w-full block text-center bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak hover:shadow-[0_0_15px_rgba(212,175,55,0.3)] transition-all shadow-md">
-                            Order Recipe Suite (From $48)
-                        </a>
+                        <button type="button" onclick="openShoppeModal('The Deconstructed Recipe Suite', 'https://square.link/u/1VoR2TeL', true)" class="w-full block text-center bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md">
+                            Order or Inquire
+                        </button>
                         <span class="text-[11px] text-brand-dark/60 font-serif italic block text-center mt-2">Signature bake or custom family recipe</span>
                     </div>
                 </div>
 
                 <!-- CARD 4: THE GUIDED JOURNAL -->
-                <div class="shoppe-card bg-[#FAF7F2] rounded-3xl border border-brand-gold/30 p-5 sm:p-6 shadow-md hover:shadow-xl hover:border-brand-gold/60 transition-all flex flex-col justify-between" data-category="books">
+                <div class="shoppe-card bg-brand-cream rounded-3xl border border-brand-gold/30 p-5 sm:p-6 shadow-md hover:shadow-xl hover:border-brand-gold/60 transition-all flex flex-col justify-between" data-category="books">
                     <div>
-                        <!-- Full-Bleed In-Card Image (Object-Contain so book title is fully viewable) -->
+                        <!-- Full-Bleed In-Card Image -->
                         <div class="w-full h-56 sm:h-60 rounded-2xl overflow-hidden border border-brand-gold/25 mb-3.5 relative bg-brand-oak shadow-inner">
                             <img id="journal-main-image" src="images/Cover Image.png" alt="Bake to Baseline Guided Journal Cover" class="w-full h-full object-contain transition-opacity duration-300" draggable="false">
                         </div>
@@ -366,15 +368,15 @@
                             <li>✦ Zero pressure: flour smudges, drips, and messy sketches are welcome.</li>
                         </ul>
                         
-                        <a href="https://square.link/u/ZMTDyOFQ" target="_blank" rel="noopener" class="w-full block text-center bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak hover:shadow-[0_0_15px_rgba(212,175,55,0.3)] transition-all shadow-md">
+                        <a href="https://square.link/u/ZMTDyOFQ" target="_blank" rel="noopener" class="w-full block text-center bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md">
                             Order Guided Journal ($40)
                         </a>
                         <span class="text-[11px] text-brand-dark/60 font-serif italic block text-center mt-2">7.44" x 9.66" lay-flat spiral &bull; Ships nationwide</span>
                     </div>
                 </div>
 
-                <!-- CARD 5: WEDDING & MILESTONE KEEPSAKE CAKES (OPTION A) -->
-                <div class="shoppe-card bg-[#FAF7F2] rounded-3xl border border-brand-gold/30 p-5 sm:p-6 shadow-md hover:shadow-xl hover:border-brand-gold/60 transition-all flex flex-col justify-between" data-category="custom">
+                <!-- CARD 5: WEDDING & MILESTONE KEEPSAKE CAKES -->
+                <div class="shoppe-card bg-brand-cream rounded-3xl border border-brand-gold/30 p-5 sm:p-6 shadow-md hover:shadow-xl hover:border-brand-gold/60 transition-all flex flex-col justify-between" data-category="custom">
                     <div>
                         <!-- Full-Bleed In-Card Image -->
                         <div class="w-full h-56 sm:h-60 rounded-2xl overflow-hidden border border-brand-gold/30 mb-3.5 relative bg-brand-oak shadow-inner">
@@ -421,15 +423,15 @@
                             <li>✦ Recreates the actual florals, colors &amp; textures.</li>
                         </ul>
                         
-                        <a href="contact.html?subject=Wedding%20or%20Milestone%20Keepsake%20Cake" class="w-full block text-center bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak hover:shadow-[0_0_15px_rgba(212,175,55,0.3)] transition-all shadow-md">
+                        <button type="button" onclick="openShoppeModal('Wedding & Milestone Keepsake Cakes', null, false)" class="w-full block text-center bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md">
                             Inquire About A Keepsake Cake
-                        </a>
+                        </button>
                         <span class="text-[11px] text-brand-dark/60 font-serif italic block text-center mt-2">Custom commissions welcome nationwide</span>
                     </div>
                 </div>
 
                 <!-- CARD 6: BESPOKE CAKES & STUDIO COMMISSIONS -->
-                <div class="shoppe-card bg-[#FAF7F2] rounded-3xl border border-brand-gold/30 p-5 sm:p-6 shadow-md hover:shadow-xl hover:border-brand-gold/60 transition-all flex flex-col justify-between" data-category="custom">
+                <div class="shoppe-card bg-brand-cream rounded-3xl border border-brand-gold/30 p-5 sm:p-6 shadow-md hover:shadow-xl hover:border-brand-gold/60 transition-all flex flex-col justify-between" data-category="custom">
                     <div>
                         <!-- Full-Bleed In-Card Image -->
                         <div class="w-full h-56 sm:h-60 rounded-2xl overflow-hidden border border-brand-gold/30 mb-3.5 relative bg-brand-oak shadow-inner">
@@ -476,9 +478,9 @@
                             <li>✦ <strong>Permanent Art:</strong> Textured botanical canvases shipped nationwide.</li>
                         </ul>
                         
-                        <a href="contact.html?subject=Bespoke%20Cake%20or%20Studio%20Commission" class="w-full block text-center bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak hover:shadow-[0_0_15px_rgba(212,175,55,0.3)] transition-all shadow-md">
+                        <button type="button" onclick="openShoppeModal('Bespoke Cakes & Studio Art', null, false)" class="w-full block text-center bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md">
                             Inquire for Availability &amp; Dates
-                        </a>
+                        </button>
                         <span class="text-[11px] text-brand-dark/60 font-serif italic block text-center mt-2">Bespoke cakes handcrafted fresh in McKinney, TX</span>
                     </div>
                 </div>
@@ -504,7 +506,7 @@
     <!-- WHOLESALE & RETAIL BAR -->
     <section class="py-12 bg-brand-light border-t border-brand-gold/20">
         <div class="max-w-6xl mx-auto px-4 sm:px-6">
-            <div class="bg-[#FAF7F2] border border-brand-gold/30 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row justify-between items-center gap-6 shadow-sm hover:border-brand-gold/50 transition-all">
+            <div class="bg-brand-cream border border-brand-gold/30 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row justify-between items-center gap-6 shadow-sm hover:border-brand-gold/50 transition-all">
                 <div class="flex items-center space-x-4">
                     <div class="w-12 h-12 rounded-full bg-brand-oak border border-brand-gold/40 flex items-center justify-center shrink-0 shadow-inner">
                         <svg class="w-6 h-6 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
@@ -562,7 +564,73 @@
         </div>
     </footer>
 
-    <!-- REUSABLE SCRIPTS -->
+    <!-- DYNAMIC SHOPPE INQUIRY MODAL -->
+    <div id="shoppe-inquiry-modal" class="fixed inset-0 bg-brand-oak/80 backdrop-blur-md z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="bg-brand-cream rounded-2xl border-2 border-brand-gold/40 shadow-2xl max-w-lg w-full p-6 relative max-h-[90vh] overflow-y-auto text-left">
+            <button type="button" onclick="closeShoppeModal()" class="absolute top-4 right-4 text-brand-dark/40 hover:text-brand-oak text-2xl font-bold focus:outline-none transition-colors" aria-label="Close modal">
+                &times;
+            </button>
+
+            <span class="text-brand-gold-dark font-sans font-bold text-[10px] uppercase tracking-widest block mb-0.5">Product Inquiry</span>
+            <h3 id="modal-title-product" class="font-serif text-xl sm:text-2xl font-bold text-brand-oak mb-1.5">Item Name</h3>
+            
+            <!-- STEP 1: SELECTION VIEW (Only shows if readymade is available) -->
+            <div id="modal-selection-view" class="hidden py-4">
+                <p class="text-xs text-brand-dark/75 font-sans mb-5 leading-relaxed">
+                    Would you like to order our standard signature suite, or inquire about a custom family recipe commission?
+                </p>
+                <div class="space-y-3">
+                    <button id="modal-readymade-btn" type="button" class="w-full flex items-center justify-between bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-4 px-5 rounded-xl hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md border border-brand-gold/30">
+                        <span>Order Standard Edition</span>
+                        <span>&rarr;</span>
+                    </button>
+                    <button id="modal-custom-btn" type="button" class="w-full flex items-center justify-between bg-white text-brand-oak font-sans text-xs font-bold uppercase tracking-wider py-4 px-5 rounded-xl hover:bg-brand-light transition-all shadow-sm border border-brand-gold/40">
+                        <span>Inquire About Custom Design</span>
+                        <span>&rarr;</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- STEP 2: INQUIRY FORM VIEW -->
+            <div id="modal-form-view" class="hidden">
+                <p class="text-xs text-brand-dark/75 font-sans mb-4 mt-2 leading-relaxed">
+                    Leave your details below and we will reach out directly to discuss your custom piece.
+                </p>
+
+                <form id="shoppe-form" class="space-y-3.5" onsubmit="handleShoppeInquiry(event)">
+                    <input type="hidden" id="modal-product-name" name="product_type">
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase tracking-wider text-brand-oak mb-1">Your Name *</label>
+                            <input type="text" name="name" required placeholder="e.g. Eleanor Vance" class="w-full bg-brand-light/60 border border-brand-gold/30 rounded-xl px-3 py-2 text-xs text-brand-dark focus:outline-none focus:border-brand-gold">
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase tracking-wider text-brand-oak mb-1">Email Address *</label>
+                            <input type="email" name="email" required placeholder="you@example.com" class="w-full bg-brand-light/60 border border-brand-gold/30 rounded-xl px-3 py-2 text-xs text-brand-dark focus:outline-none focus:border-brand-gold">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-[10px] font-bold uppercase tracking-wider text-brand-oak mb-1">Phone Number *</label>
+                        <input type="tel" name="phone" required placeholder="e.g. (214) 555-0199" class="w-full bg-brand-light/60 border border-brand-gold/30 rounded-xl px-3 py-2 text-xs text-brand-dark focus:outline-none focus:border-brand-gold">
+                    </div>
+
+                    <div>
+                        <label class="block text-[10px] font-bold uppercase tracking-wider text-brand-oak mb-1">Project Details or Target Date</label>
+                        <input type="text" name="details" placeholder="Tell us a bit about what you have in mind..." class="w-full bg-brand-light/60 border border-brand-gold/30 rounded-xl px-3 py-2 text-xs text-brand-dark focus:outline-none focus:border-brand-gold">
+                    </div>
+
+                    <div class="pt-3">
+                        <button type="submit" class="w-full bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md">
+                            Submit Inquiry
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
     <script>
         // Navigation Mobile Menu
         const hamburgerButton = document.getElementById('hamburger-button');
@@ -596,9 +664,7 @@
         // In-Card Image Swapper
         function swapProductImage(mainImgId, thumbClass, newSrc, clickedThumb) {
             const mainImg = document.getElementById(mainImgId);
-            if (mainImg) {
-                mainImg.src = newSrc;
-            }
+            if (mainImg) mainImg.src = newSrc;
             const thumbs = document.querySelectorAll('.' + thumbClass);
             thumbs.forEach(t => {
                 t.classList.remove('active', 'border-brand-gold');
@@ -608,14 +674,72 @@
             clickedThumb.classList.remove('border-transparent');
         }
 
-        // Image Copy/Save Protection Handlers
+        // --- NEW MODAL LOGIC ---
+        const shoppeModal = document.getElementById('shoppe-inquiry-modal');
+        const selectionView = document.getElementById('modal-selection-view');
+        const formView = document.getElementById('modal-form-view');
+
+        function openShoppeModal(productName, squareLink, hasReadymade) {
+            document.getElementById('modal-product-name').value = productName;
+            document.getElementById('modal-title-product').textContent = productName;
+
+            if (hasReadymade) {
+                selectionView.classList.remove('hidden');
+                formView.classList.add('hidden');
+                
+                document.getElementById('modal-readymade-btn').onclick = () => window.open(squareLink, '_blank');
+                document.getElementById('modal-custom-btn').onclick = () => {
+                    selectionView.classList.add('hidden');
+                    formView.classList.remove('hidden');
+                };
+            } else {
+                selectionView.classList.add('hidden');
+                formView.classList.remove('hidden');
+            }
+
+            shoppeModal.classList.remove('opacity-0', 'pointer-events-none');
+            shoppeModal.classList.add('opacity-100');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeShoppeModal() {
+            if (shoppeModal) {
+                shoppeModal.classList.remove('opacity-100');
+                shoppeModal.classList.add('opacity-0', 'pointer-events-none');
+                document.body.style.overflow = 'auto';
+                document.getElementById('shoppe-form').reset();
+            }
+        }
+
+        function handleShoppeInquiry(event) {
+            event.preventDefault();
+            const form = event.target;
+            const name = form.name.value;
+            const product = form.product_type.value;
+
+            alert('Thank you, ' + name + '! We have received your inquiry for ' + product + '. We will reach out to you shortly.');
+            closeShoppeModal();
+        }
+
+        // Keyboard & Outside Click Closing
+        if (shoppeModal) {
+            shoppeModal.addEventListener('click', (e) => {
+                if (e.target === shoppeModal) closeShoppeModal();
+            });
+        }
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && shoppeModal && !shoppeModal.classList.contains('pointer-events-none')) {
+                closeShoppeModal();
+            }
+        });
+
+        // Image Protection Handlers
         document.addEventListener('contextmenu', (e) => {
             if (e.target.tagName === 'IMG' || e.target.closest('.shoppe-card')) {
                 e.preventDefault();
                 return false;
             }
         });
-
         document.addEventListener('dragstart', (e) => {
             if (e.target.tagName === 'IMG') {
                 e.preventDefault();
