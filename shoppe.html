@@ -50,7 +50,7 @@
             -moz-user-drag: none;
             -o-user-drag: none;
             user-drag: none;
-            -webkit-touch-callout: none; /* Prevents long-press "Save Image" popup on iOS Safari */
+            -webkit-touch-callout: none;
         }
     </style>
 </head>
@@ -142,27 +142,23 @@
                 <!-- CARD 1: THE KEEPSAKE CAKE KIT -->
                 <div class="shoppe-card bg-[#FAF7F2] rounded-3xl border-2 border-brand-gold p-5 sm:p-6 shadow-md hover:shadow-xl hover:border-brand-gold-hover transition-all flex flex-col justify-between relative" data-category="kits">
                     <div>
-                        <!-- Full-Bleed Clickable Main Image -->
-                        <div class="w-full h-56 sm:h-60 rounded-2xl overflow-hidden border border-brand-gold/30 mb-3.5 relative bg-brand-oak cursor-zoom-in group shadow-inner" onclick="openGallery('card-1')">
-                            <img id="keepsake-kit-image" src="images/IMG_7507.jpeg" alt="The Keepsake Cake Kit Full Spread" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" draggable="false">
-                            <div class="absolute bottom-2.5 right-2.5 bg-brand-oak/80 text-brand-sand text-[10px] font-sans px-2.5 py-1 rounded-full backdrop-blur-xs flex items-center gap-1 border border-brand-gold/30 shadow-sm opacity-90 group-hover:opacity-100 transition-opacity pointer-events-none">
-                                <svg class="w-3 h-3 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
-                                <span>Click to enlarge</span>
-                            </div>
+                        <!-- Full-Bleed In-Card Image -->
+                        <div class="w-full h-56 sm:h-60 rounded-2xl overflow-hidden border border-brand-gold/30 mb-3.5 relative bg-brand-oak shadow-inner">
+                            <img id="keepsake-kit-image" src="images/IMG_7507.jpeg" alt="The Keepsake Cake Kit Full Spread" class="w-full h-full object-cover transition-opacity duration-300" draggable="false">
                         </div>
                         
-                        <!-- 4 Clickable Thumbnails -->
+                        <!-- 4 Clickable Thumbnails (Swaps In-Card Main Image) -->
                         <div class="grid grid-cols-4 gap-1.5 w-full mb-3.5">
-                            <button type="button" onclick="swapProductImage('keepsake-kit-image', 'keepsake-thumb', 'images/IMG_7507.jpeg', this, 'card-1', 0)" class="keepsake-thumb active border-2 border-brand-gold rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
+                            <button type="button" onclick="swapProductImage('keepsake-kit-image', 'keepsake-thumb', 'images/IMG_7507.jpeg', this)" class="keepsake-thumb active border-2 border-brand-gold rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
                                 <img src="images/IMG_7507.jpeg" alt="Complete Kit Spread" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
                             </button>
-                            <button type="button" onclick="swapProductImage('keepsake-kit-image', 'keepsake-thumb', 'images/IMG_7494.jpeg', this, 'card-1', 1)" class="keepsake-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
+                            <button type="button" onclick="swapProductImage('keepsake-kit-image', 'keepsake-thumb', 'images/IMG_7494.jpeg', this)" class="keepsake-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
                                 <img src="images/IMG_7494.jpeg" alt="Palette Knives and Guides" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
                             </button>
-                            <button type="button" onclick="swapProductImage('keepsake-kit-image', 'keepsake-thumb', 'images/IMG_7562.jpeg', this, 'card-1', 2)" class="keepsake-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
+                            <button type="button" onclick="swapProductImage('keepsake-kit-image', 'keepsake-thumb', 'images/IMG_7562.jpeg', this)" class="keepsake-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
                                 <img src="images/IMG_7562.jpeg" alt="Mineral Pigments" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
                             </button>
-                            <button type="button" onclick="swapProductImage('keepsake-kit-image', 'keepsake-thumb', 'images/image000000.jpeg', this, 'card-1', 3)" class="keepsake-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
+                            <button type="button" onclick="swapProductImage('keepsake-kit-image', 'keepsake-thumb', 'images/image000000.jpeg', this)" class="keepsake-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
                                 <img src="images/image000000.jpeg" alt="Piping Bags and Palette" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
                             </button>
                         </div>
@@ -202,27 +198,23 @@
                 <!-- CARD 2: THE EDIBLE CAKE CANVAS KIT -->
                 <div class="shoppe-card bg-[#FAF7F2] rounded-3xl border-2 border-brand-gold p-5 sm:p-6 shadow-md hover:shadow-xl hover:border-brand-gold-hover transition-all flex flex-col justify-between relative" data-category="kits">
                     <div>
-                        <!-- Full-Bleed Clickable Main Image -->
-                        <div class="w-full h-56 sm:h-60 rounded-2xl overflow-hidden border border-brand-gold/30 mb-3.5 relative bg-brand-oak cursor-zoom-in group shadow-inner" onclick="openGallery('card-2')">
-                            <img id="edible-kit-image" src="images/IMG_6660.jpeg" alt="The Edible Cake Canvas Kit" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" draggable="false">
-                            <div class="absolute bottom-2.5 right-2.5 bg-brand-oak/80 text-brand-sand text-[10px] font-sans px-2.5 py-1 rounded-full backdrop-blur-xs flex items-center gap-1 border border-brand-gold/30 shadow-sm opacity-90 group-hover:opacity-100 transition-opacity pointer-events-none">
-                                <svg class="w-3 h-3 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
-                                <span>Click to enlarge</span>
-                            </div>
+                        <!-- Full-Bleed In-Card Image -->
+                        <div class="w-full h-56 sm:h-60 rounded-2xl overflow-hidden border border-brand-gold/30 mb-3.5 relative bg-brand-oak shadow-inner">
+                            <img id="edible-kit-image" src="images/IMG_6660.jpeg" alt="The Edible Cake Canvas Kit" class="w-full h-full object-cover transition-opacity duration-300" draggable="false">
                         </div>
                         
-                        <!-- 4 Clickable Thumbnails (Replaced 4th image with Bunny Cake) -->
+                        <!-- 4 Clickable Thumbnails (4th: Bunny Cake) -->
                         <div class="grid grid-cols-4 gap-1.5 w-full mb-3.5">
-                            <button type="button" onclick="swapProductImage('edible-kit-image', 'edible-thumb', 'images/IMG_6660.jpeg', this, 'card-2', 0)" class="edible-thumb active border-2 border-brand-gold rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
+                            <button type="button" onclick="swapProductImage('edible-kit-image', 'edible-thumb', 'images/IMG_6660.jpeg', this)" class="edible-thumb active border-2 border-brand-gold rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
                                 <img src="images/IMG_6660.jpeg" alt="Painted Batter Canvas" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
                             </button>
-                            <button type="button" onclick="swapProductImage('edible-kit-image', 'edible-thumb', 'images/IMG_0422.JPG', this, 'card-2', 1)" class="edible-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
+                            <button type="button" onclick="swapProductImage('edible-kit-image', 'edible-thumb', 'images/IMG_0422.JPG', this)" class="edible-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
                                 <img src="images/IMG_0422.JPG" alt="Peach Blossom Cake" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
                             </button>
-                            <button type="button" onclick="swapProductImage('edible-kit-image', 'edible-thumb', 'images/IMG_0356.jpeg', this, 'card-2', 2)" class="edible-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
+                            <button type="button" onclick="swapProductImage('edible-kit-image', 'edible-thumb', 'images/IMG_0356.jpeg', this)" class="edible-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
                                 <img src="images/IMG_0356.jpeg" alt="Palette Knife Textures" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
                             </button>
-                            <button type="button" onclick="swapProductImage('edible-kit-image', 'edible-thumb', 'images/Bunny Cake.jpg', this, 'card-2', 3)" class="edible-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
+                            <button type="button" onclick="swapProductImage('edible-kit-image', 'edible-thumb', 'images/Bunny Cake.jpg', this)" class="edible-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
                                 <img src="images/Bunny Cake.jpg" alt="Bunny Celebration Cake" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
                             </button>
                         </div>
@@ -262,30 +254,26 @@
                 <!-- CARD 3: THE DECONSTRUCTED RECIPE CARD SUITE -->
                 <div class="shoppe-card bg-[#FAF7F2] rounded-3xl border-2 border-brand-gold p-5 sm:p-6 shadow-md hover:shadow-xl hover:border-brand-gold-hover transition-all flex flex-col justify-between relative" data-category="recipes">
                     <div>
-                        <!-- Full-Bleed Clickable Main Image -->
-                        <div class="w-full h-56 sm:h-60 rounded-2xl overflow-hidden border border-brand-gold/25 mb-3.5 relative bg-brand-oak cursor-zoom-in group shadow-inner" onclick="openGallery('card-3')">
-                            <img id="deck-main-image" src="images/Equipment Deconstructed Recipe Card (Yellow).png" alt="Deconstructed Recipe Card in Hand" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" draggable="false">
-                            <div class="absolute bottom-2.5 right-2.5 bg-brand-oak/80 text-brand-sand text-[10px] font-sans px-2.5 py-1 rounded-full backdrop-blur-xs flex items-center gap-1 border border-brand-gold/30 shadow-sm opacity-90 group-hover:opacity-100 transition-opacity pointer-events-none">
-                                <svg class="w-3 h-3 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
-                                <span>Click to enlarge</span>
-                            </div>
+                        <!-- Full-Bleed In-Card Image -->
+                        <div class="w-full h-56 sm:h-60 rounded-2xl overflow-hidden border border-brand-gold/25 mb-3.5 relative bg-brand-oak shadow-inner">
+                            <img id="deck-main-image" src="images/Equipment Deconstructed Recipe Card (Yellow).png" alt="Deconstructed Recipe Card in Hand" class="w-full h-full object-cover transition-opacity duration-300" draggable="false">
                         </div>
                         
                         <!-- 5 Clickable Thumbnails -->
                         <div class="grid grid-cols-5 gap-1 w-full mb-3.5">
-                            <button type="button" onclick="swapProductImage('deck-main-image', 'deck-thumb', 'images/Equipment Deconstructed Recipe Card (Yellow).png', this, 'card-3', 0)" class="deck-thumb active border-2 border-brand-gold rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
+                            <button type="button" onclick="swapProductImage('deck-main-image', 'deck-thumb', 'images/Equipment Deconstructed Recipe Card (Yellow).png', this)" class="deck-thumb active border-2 border-brand-gold rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
                                 <img src="images/Equipment Deconstructed Recipe Card (Yellow).png" alt="Card in Hand" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
                             </button>
-                            <button type="button" onclick="swapProductImage('deck-main-image', 'deck-thumb', 'images/Equipment & Prep ( Yellow Card).png', this, 'card-3', 1)" class="deck-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
+                            <button type="button" onclick="swapProductImage('deck-main-image', 'deck-thumb', 'images/Equipment & Prep ( Yellow Card).png', this)" class="deck-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
                                 <img src="images/Equipment & Prep ( Yellow Card).png" alt="Yellow Prep Cards" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
                             </button>
-                            <button type="button" onclick="swapProductImage('deck-main-image', 'deck-thumb', 'images/Eggless Adaptation (Green).png', this, 'card-3', 2)" class="deck-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
+                            <button type="button" onclick="swapProductImage('deck-main-image', 'deck-thumb', 'images/Eggless Adaptation (Green).png', this)" class="deck-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
                                 <img src="images/Eggless Adaptation (Green).png" alt="Green Eggless Card" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
                             </button>
-                            <button type="button" onclick="swapProductImage('deck-main-image', 'deck-thumb', 'images/Infusing Flavors ( Mauve).png', this, 'card-3', 3)" class="deck-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
+                            <button type="button" onclick="swapProductImage('deck-main-image', 'deck-thumb', 'images/Infusing Flavors ( Mauve).png', this)" class="deck-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
                                 <img src="images/Infusing Flavors ( Mauve).png" alt="Mauve Infusion Cards" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
                             </button>
-                            <button type="button" onclick="swapProductImage('deck-main-image', 'deck-thumb', 'images/Finishing Touches ( Pink).png', this, 'card-3', 4)" class="deck-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
+                            <button type="button" onclick="swapProductImage('deck-main-image', 'deck-thumb', 'images/Finishing Touches ( Pink).png', this)" class="deck-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
                                 <img src="images/Finishing Touches ( Pink).png" alt="Pink Finishing Card" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
                             </button>
                         </div>
@@ -324,33 +312,29 @@
                 <!-- CARD 4: THE GUIDED JOURNAL -->
                 <div class="shoppe-card bg-[#FAF7F2] rounded-3xl border border-brand-gold/30 p-5 sm:p-6 shadow-md hover:shadow-xl hover:border-brand-gold/60 transition-all flex flex-col justify-between" data-category="books">
                     <div>
-                        <!-- Full-Bleed Clickable Main Image (Object-Contain so book title is fully readable) -->
-                        <div class="w-full h-56 sm:h-60 rounded-2xl overflow-hidden border border-brand-gold/25 mb-3.5 relative bg-brand-oak cursor-zoom-in group shadow-inner" onclick="openGallery('card-4')">
-                            <img id="journal-main-image" src="images/Cover Image.png" alt="Bake to Baseline Guided Journal Cover" class="w-full h-full object-contain transition-transform duration-300 group-hover:scale-105" draggable="false">
-                            <div class="absolute bottom-2.5 right-2.5 bg-brand-oak/80 text-brand-sand text-[10px] font-sans px-2.5 py-1 rounded-full backdrop-blur-xs flex items-center gap-1 border border-brand-gold/30 shadow-sm opacity-90 group-hover:opacity-100 transition-opacity pointer-events-none">
-                                <svg class="w-3 h-3 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
-                                <span>Click to enlarge</span>
-                            </div>
+                        <!-- Full-Bleed In-Card Image (Object-Contain so book title is fully viewable) -->
+                        <div class="w-full h-56 sm:h-60 rounded-2xl overflow-hidden border border-brand-gold/25 mb-3.5 relative bg-brand-oak shadow-inner">
+                            <img id="journal-main-image" src="images/Cover Image.png" alt="Bake to Baseline Guided Journal Cover" class="w-full h-full object-contain transition-opacity duration-300" draggable="false">
                         </div>
                         
                         <!-- 6 Clickable Thumbnails -->
                         <div class="grid grid-cols-6 gap-1 w-full mb-3.5">
-                            <button type="button" onclick="swapProductImage('journal-main-image', 'journal-thumb', 'images/Cover Image.png', this, 'card-4', 0)" class="journal-thumb active border-2 border-brand-gold rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
+                            <button type="button" onclick="swapProductImage('journal-main-image', 'journal-thumb', 'images/Cover Image.png', this)" class="journal-thumb active border-2 border-brand-gold rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
                                 <img src="images/Cover Image.png" alt="Front Cover" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
                             </button>
-                            <button type="button" onclick="swapProductImage('journal-main-image', 'journal-thumb', 'images/OreintationPath.png', this, 'card-4', 1)" class="journal-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
+                            <button type="button" onclick="swapProductImage('journal-main-image', 'journal-thumb', 'images/OreintationPath.png', this)" class="journal-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
                                 <img src="images/OreintationPath.png" alt="Energy Check" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
                             </button>
-                            <button type="button" onclick="swapProductImage('journal-main-image', 'journal-thumb', 'images/18.png', this, 'card-4', 2)" class="journal-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
+                            <button type="button" onclick="swapProductImage('journal-main-image', 'journal-thumb', 'images/18.png', this)" class="journal-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
                                 <img src="images/18.png" alt="Color Regulation" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
                             </button>
-                            <button type="button" onclick="swapProductImage('journal-main-image', 'journal-thumb', 'images/Spread 1.png', this, 'card-4', 3)" class="journal-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
+                            <button type="button" onclick="swapProductImage('journal-main-image', 'journal-thumb', 'images/Spread 1.png', this)" class="journal-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
                                 <img src="images/Spread 1.png" alt="Sensory Board" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
                             </button>
-                            <button type="button" onclick="swapProductImage('journal-main-image', 'journal-thumb', 'images/15.png', this, 'card-4', 4)" class="journal-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
+                            <button type="button" onclick="swapProductImage('journal-main-image', 'journal-thumb', 'images/15.png', this)" class="journal-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
                                 <img src="images/15.png" alt="Blueprint" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
                             </button>
-                            <button type="button" onclick="swapProductImage('journal-main-image', 'journal-thumb', 'images/Highlight Slide New Journal2.png', this, 'card-4', 5)" class="journal-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
+                            <button type="button" onclick="swapProductImage('journal-main-image', 'journal-thumb', 'images/Highlight Slide New Journal2.png', this)" class="journal-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
                                 <img src="images/Highlight Slide New Journal2.png" alt="Map" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
                             </button>
                         </div>
@@ -389,27 +373,23 @@
                 <!-- CARD 5: WEDDING & MILESTONE KEEPSAKE CAKES (OPTION A) -->
                 <div class="shoppe-card bg-[#FAF7F2] rounded-3xl border border-brand-gold/30 p-5 sm:p-6 shadow-md hover:shadow-xl hover:border-brand-gold/60 transition-all flex flex-col justify-between" data-category="custom">
                     <div>
-                        <!-- Full-Bleed Clickable Main Image -->
-                        <div class="w-full h-56 sm:h-60 rounded-2xl overflow-hidden border border-brand-gold/30 mb-3.5 relative bg-brand-oak cursor-zoom-in group shadow-inner" onclick="openGallery('card-5')">
-                            <img id="art-main-image" src="images/IMG_7606.jpeg" alt="Wedding and Milestone Keepsake Cake" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" draggable="false">
-                            <div class="absolute bottom-2.5 right-2.5 bg-brand-oak/80 text-brand-sand text-[10px] font-sans px-2.5 py-1 rounded-full backdrop-blur-xs flex items-center gap-1 border border-brand-gold/30 shadow-sm opacity-90 group-hover:opacity-100 transition-opacity pointer-events-none">
-                                <svg class="w-3 h-3 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
-                                <span>Click to enlarge</span>
-                            </div>
+                        <!-- Full-Bleed In-Card Image -->
+                        <div class="w-full h-56 sm:h-60 rounded-2xl overflow-hidden border border-brand-gold/30 mb-3.5 relative bg-brand-oak shadow-inner">
+                            <img id="art-main-image" src="images/IMG_7606.jpeg" alt="Wedding and Milestone Keepsake Cake" class="w-full h-full object-cover transition-opacity duration-300" draggable="false">
                         </div>
                         
                         <!-- 4 Clickable Thumbnails -->
                         <div class="grid grid-cols-4 gap-1.5 w-full mb-3.5">
-                            <button type="button" onclick="swapProductImage('art-main-image', 'art-thumb', 'images/IMG_7606.jpeg', this, 'card-5', 0)" class="art-thumb active border-2 border-brand-gold rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
+                            <button type="button" onclick="swapProductImage('art-main-image', 'art-thumb', 'images/IMG_7606.jpeg', this)" class="art-thumb active border-2 border-brand-gold rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
                                 <img src="images/IMG_7606.jpeg" alt="3D Terracotta Front View" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
                             </button>
-                            <button type="button" onclick="swapProductImage('art-main-image', 'art-thumb', 'images/IMG_7611.jpeg', this, 'card-5', 1)" class="art-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
+                            <button type="button" onclick="swapProductImage('art-main-image', 'art-thumb', 'images/IMG_7611.jpeg', this)" class="art-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
                                 <img src="images/IMG_7611.jpeg" alt="Angle View with Booklet" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
                             </button>
-                            <button type="button" onclick="swapProductImage('art-main-image', 'art-thumb', 'images/0CF9B74D-5AE8-4A29-9A3F-93E103C86DCD_1_105_c.jpeg', this, 'card-5', 2)" class="art-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
+                            <button type="button" onclick="swapProductImage('art-main-image', 'art-thumb', 'images/0CF9B74D-5AE8-4A29-9A3F-93E103C86DCD_1_105_c.jpeg', this)" class="art-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
                                 <img src="images/0CF9B74D-5AE8-4A29-9A3F-93E103C86DCD_1_105_c.jpeg" alt="2D Solar Pressed Canvas" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
                             </button>
-                            <button type="button" onclick="swapProductImage('art-main-image', 'art-thumb', 'images/IMG_6952.jpeg', this, 'card-5', 3)" class="art-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
+                            <button type="button" onclick="swapProductImage('art-main-image', 'art-thumb', 'images/IMG_6952.jpeg', this)" class="art-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
                                 <img src="images/IMG_6952.jpeg" alt="2D Green Chevron Canvas" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
                             </button>
                         </div>
@@ -448,27 +428,23 @@
                 <!-- CARD 6: BESPOKE CAKES & STUDIO COMMISSIONS -->
                 <div class="shoppe-card bg-[#FAF7F2] rounded-3xl border border-brand-gold/30 p-5 sm:p-6 shadow-md hover:shadow-xl hover:border-brand-gold/60 transition-all flex flex-col justify-between" data-category="custom">
                     <div>
-                        <!-- Full-Bleed Clickable Main Image -->
-                        <div class="w-full h-56 sm:h-60 rounded-2xl overflow-hidden border border-brand-gold/30 mb-3.5 relative bg-brand-oak cursor-zoom-in group shadow-inner" onclick="openGallery('card-6')">
-                            <img id="bespoke-art-image" src="images/Arati's Birthday Cake 40th.jpg" alt="Bespoke Celebration Cake and Studio Art" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" draggable="false">
-                            <div class="absolute bottom-2.5 right-2.5 bg-brand-oak/80 text-brand-sand text-[10px] font-sans px-2.5 py-1 rounded-full backdrop-blur-xs flex items-center gap-1 border border-brand-gold/30 shadow-sm opacity-90 group-hover:opacity-100 transition-opacity pointer-events-none">
-                                <svg class="w-3 h-3 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0zM10 7v6m3-3H7"/></svg>
-                                <span>Click to enlarge</span>
-                            </div>
+                        <!-- Full-Bleed In-Card Image -->
+                        <div class="w-full h-56 sm:h-60 rounded-2xl overflow-hidden border border-brand-gold/30 mb-3.5 relative bg-brand-oak shadow-inner">
+                            <img id="bespoke-art-image" src="images/Arati's Birthday Cake 40th.jpg" alt="Bespoke Celebration Cake and Studio Art" class="w-full h-full object-cover transition-opacity duration-300" draggable="false">
                         </div>
                         
                         <!-- 4 Clickable Thumbnails -->
                         <div class="grid grid-cols-4 gap-1.5 w-full mb-3.5">
-                            <button type="button" onclick="swapProductImage('bespoke-art-image', 'bespoke-thumb', 'images/Arati\'s Birthday Cake 40th.jpg', this, 'card-6', 0)" class="bespoke-thumb active border-2 border-brand-gold rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
+                            <button type="button" onclick="swapProductImage('bespoke-art-image', 'bespoke-thumb', 'images/Arati\'s Birthday Cake 40th.jpg', this)" class="bespoke-thumb active border-2 border-brand-gold rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
                                 <img src="images/Arati's Birthday Cake 40th.jpg" alt="Palette Knife Celebration Cake" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
                             </button>
-                            <button type="button" onclick="swapProductImage('bespoke-art-image', 'bespoke-thumb', 'images/Full Side View Lemon Cake .jpg', this, 'card-6', 1)" class="bespoke-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
+                            <button type="button" onclick="swapProductImage('bespoke-art-image', 'bespoke-thumb', 'images/Full Side View Lemon Cake .jpg', this)" class="bespoke-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
                                 <img src="images/Full Side View Lemon Cake .jpg" alt="Citrus Rosette Crown" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
                             </button>
-                            <button type="button" onclick="swapProductImage('bespoke-art-image', 'bespoke-thumb', 'images/IMG_7611.jpeg', this, 'card-6', 2)" class="bespoke-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
+                            <button type="button" onclick="swapProductImage('bespoke-art-image', 'bespoke-thumb', 'images/IMG_7611.jpeg', this)" class="bespoke-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
                                 <img src="images/IMG_7611.jpeg" alt="Keepsake Sculpture Display" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
                             </button>
-                            <button type="button" onclick="swapProductImage('bespoke-art-image', 'bespoke-thumb', 'images/0CF9B74D-5AE8-4A29-9A3F-93E103C86DCD_1_105_c.jpeg', this, 'card-6', 3)" class="bespoke-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
+                            <button type="button" onclick="swapProductImage('bespoke-art-image', 'bespoke-thumb', 'images/0CF9B74D-5AE8-4A29-9A3F-93E103C86DCD_1_105_c.jpeg', this)" class="bespoke-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
                                 <img src="images/0CF9B74D-5AE8-4A29-9A3F-93E103C86DCD_1_105_c.jpeg" alt="Botanical Wall Canvas" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
                             </button>
                         </div>
@@ -513,10 +489,10 @@
         <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
             <span class="text-brand-gold font-caveat text-2xl md:text-3xl block mb-2">Live Studio Sessions</span>
             <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-sand mb-3 text-balance">Looking to Join an In-Person Workshop?</h2>
-            <p class="text-brand-sand/90 font-sans text-base leading-relaxed max-w-xl mx-auto mb-6">
+            <p class="text-brand-sand/90 font-sans text-sm md:text-base leading-relaxed max-w-xl mx-auto mb-6">
                 Experience our 5-Layer Sensory Method in person. Pull up a chair at our public studio table in McKinney, host an on-site corporate gathering, or book a private celebration.
             </p>
-            <a href="workshop.html" class="inline-block bg-brand-gold text-brand-oak font-sans font-bold py-3.5 px-8 rounded-full hover:bg-brand-sand hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] transition-all uppercase tracking-wider text-xs shadow-md">
+            <a href="workshop.html" class="inline-block bg-brand-gold text-brand-oak font-sans font-bold py-3.5 px-8 rounded-full hover:bg-brand-sand transition-all uppercase tracking-wider text-xs shadow-md">
                 Explore Studio Workshops &rarr;
             </a>
         </div>
@@ -535,7 +511,7 @@
                         <p class="text-xs text-brand-dark/70 font-sans">Stock our tactile journals, studio kits, and single-step recipe decks in your bookstore, gift shop, or wellness boutique.</p>
                     </div>
                 </div>
-                <a href="contact.html?subject=Wholesale%20%26%20Retail" class="shrink-0 bg-brand-oak border border-brand-gold/40 text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-7 rounded-full hover:bg-brand-gold hover:text-brand-oak hover:shadow-[0_0_15px_rgba(212,175,55,0.3)] transition-all shadow-md">Inquire for Wholesale</a>
+                <a href="contact.html?subject=Wholesale%20%26%20Retail" class="shrink-0 bg-brand-oak border border-brand-gold/40 text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-7 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md">Inquire for Wholesale</a>
             </div>
         </div>
     </section>
@@ -583,38 +559,6 @@
         </div>
     </footer>
 
-    <!-- INTERACTIVE LIGHTBOX MODAL (PROTECTED FULL-SCREEN PREVIEW) -->
-    <div id="image-lightbox-modal" class="fixed inset-0 bg-brand-oak/95 backdrop-blur-md z-50 flex items-center justify-center p-4 sm:p-6 opacity-0 pointer-events-none transition-opacity duration-300">
-        
-        <!-- Close Button (Top Right) -->
-        <button type="button" onclick="closeLightbox()" class="absolute top-5 right-5 text-brand-sand hover:text-brand-gold text-3xl font-bold focus:outline-none transition-colors z-50 p-2" aria-label="Close Lightbox">
-            &times;
-        </button>
-
-        <!-- Previous Button (Left Arrow) -->
-        <button type="button" onclick="prevLightboxImage()" class="absolute left-3 sm:left-6 top-1/2 -translate-y-1/2 bg-brand-card/70 hover:bg-brand-gold text-brand-sand hover:text-brand-oak w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-brand-gold/30 flex items-center justify-center transition-all z-50 shadow-lg focus:outline-none" aria-label="Previous image">
-            <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M15 19l-7-7 7-7"/></svg>
-        </button>
-
-        <!-- Next Button (Right Arrow) -->
-        <button type="button" onclick="nextLightboxImage()" class="absolute right-3 sm:right-6 top-1/2 -translate-y-1/2 bg-brand-card/70 hover:bg-brand-gold text-brand-sand hover:text-brand-oak w-10 h-10 sm:w-12 sm:h-12 rounded-full border border-brand-gold/30 flex items-center justify-center transition-all z-50 shadow-lg focus:outline-none" aria-label="Next image">
-            <svg class="w-5 h-5 sm:w-6 sm:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7"/></svg>
-        </button>
-
-        <!-- Main Lightbox Image Container -->
-        <div class="relative max-w-4xl w-full max-h-[85vh] flex flex-col items-center justify-center">
-            <div class="relative max-h-[75vh] w-auto max-w-full rounded-2xl overflow-hidden border-2 border-brand-gold/40 shadow-2xl bg-brand-card flex items-center justify-center select-none">
-                <img id="lightbox-image" src="" alt="Enlarged Studio View" class="max-h-[75vh] max-w-full object-contain pointer-events-none select-none transition-all duration-300" draggable="false">
-            </div>
-            
-            <!-- Caption & Counter Bar -->
-            <div class="mt-4 text-center">
-                <p id="lightbox-caption" class="text-sm font-serif italic text-brand-sand mb-0.5"></p>
-                <span id="lightbox-counter" class="text-[10px] font-sans uppercase tracking-[0.2em] text-brand-gold font-bold"></span>
-            </div>
-        </div>
-    </div>
-
     <!-- REUSABLE SCRIPTS -->
     <script>
         // Navigation Mobile Menu
@@ -646,55 +590,8 @@
             });
         }
 
-        // Gallery Data for All 6 Products
-        const productGalleries = {
-            'card-1': [
-                { src: 'images/IMG_7507.jpeg', alt: 'The Keepsake Cake Kit - Full Spread' },
-                { src: 'images/IMG_7494.jpeg', alt: 'Palette Knives and Guided Mat' },
-                { src: 'images/IMG_7562.jpeg', alt: 'Seasonal Mineral Pigments' },
-                { src: 'images/image000000.jpeg', alt: 'Piping Bags and Palette' }
-            ],
-            'card-2': [
-                { src: 'images/IMG_6660.jpeg', alt: 'The Edible Cake Canvas Kit' },
-                { src: 'images/IMG_0422.JPG', alt: 'Soft Peach Blossom Cake' },
-                { src: 'images/IMG_0356.jpeg', alt: 'Palette Knife Buttercream Textures' },
-                { src: 'images/Bunny Cake.jpg', alt: 'Bunny Celebration Cake' }
-            ],
-            'card-3': [
-                { src: 'images/Equipment Deconstructed Recipe Card (Yellow).png', alt: 'Deconstructed Recipe Card in Hand' },
-                { src: 'images/Equipment & Prep ( Yellow Card).png', alt: 'Equipment & Prep Cards' },
-                { src: 'images/Eggless Adaptation (Green).png', alt: 'Eggless Adaptation Guide' },
-                { src: 'images/Infusing Flavors ( Mauve).png', alt: 'Infusing Flavors Card' },
-                { src: 'images/Finishing Touches ( Pink).png', alt: 'Finishing Touches Details' }
-            ],
-            'card-4': [
-                { src: 'images/Cover Image.png', alt: 'Bake to Baseline Guided Journal Cover' },
-                { src: 'images/OreintationPath.png', alt: 'Orientation & Energy Path' },
-                { src: 'images/18.png', alt: 'Color Regulation Exercises' },
-                { src: 'images/Spread 1.png', alt: 'Tactile Sensory Board' },
-                { src: 'images/15.png', alt: 'Blueprint Page' },
-                { src: 'images/Highlight Slide New Journal2.png', alt: 'Tactile Sketchbook Map' }
-            ],
-            'card-5': [
-                { src: 'images/IMG_7606.jpeg', alt: 'Wedding and Milestone Keepsake Cake' },
-                { src: 'images/IMG_7611.jpeg', alt: 'Angle View with Keepsake Booklet' },
-                { src: 'images/0CF9B74D-5AE8-4A29-9A3F-93E103C86DCD_1_105_c.jpeg', alt: '2D Solar Pressed Botanical Canvas' },
-                { src: 'images/IMG_6952.jpeg', alt: '2D Green Chevron Botanical Canvas' }
-            ],
-            'card-6': [
-                { src: "images/Arati's Birthday Cake 40th.jpg", alt: 'Palette Knife Celebration Cake' },
-                { src: 'images/Full Side View Lemon Cake .jpg', alt: 'Citrus Rosette Crown Cake' },
-                { src: 'images/IMG_7611.jpeg', alt: 'Keepsake Sculpture Display' },
-                { src: 'images/0CF9B74D-5AE8-4A29-9A3F-93E103C86DCD_1_105_c.jpeg', alt: 'Botanical Wall Art Canvas' }
-            ]
-        };
-
-        // Track Current Gallery State for Lightbox
-        let currentCardKey = 'card-1';
-        let currentPhotoIndex = 0;
-
-        // Swap Image on Card AND Update Active Index
-        function swapProductImage(mainImgId, thumbClass, newSrc, clickedThumb, cardKey, photoIndex) {
+        // In-Card Image Swapper
+        function swapProductImage(mainImgId, thumbClass, newSrc, clickedThumb) {
             const mainImg = document.getElementById(mainImgId);
             if (mainImg) {
                 mainImg.src = newSrc;
@@ -706,81 +603,11 @@
             });
             clickedThumb.classList.add('active', 'border-brand-gold');
             clickedThumb.classList.remove('border-transparent');
-            
-            currentCardKey = cardKey;
-            currentPhotoIndex = photoIndex;
-        }
-
-        // Open Lightbox from Main Parent Image
-        function openGallery(cardKey) {
-            currentCardKey = cardKey;
-            updateLightboxContent();
-
-            const modal = document.getElementById('image-lightbox-modal');
-            if (modal) {
-                modal.classList.remove('opacity-0', 'pointer-events-none');
-                modal.classList.add('opacity-100');
-                document.body.style.overflow = 'hidden';
-            }
-        }
-
-        function closeLightbox() {
-            const modal = document.getElementById('image-lightbox-modal');
-            if (modal) {
-                modal.classList.remove('opacity-100');
-                modal.classList.add('opacity-0', 'pointer-events-none');
-                document.body.style.overflow = 'auto';
-            }
-        }
-
-        function prevLightboxImage() {
-            const gallery = productGalleries[currentCardKey];
-            currentPhotoIndex = (currentPhotoIndex - 1 + gallery.length) % gallery.length;
-            updateLightboxContent();
-        }
-
-        function nextLightboxImage() {
-            const gallery = productGalleries[currentCardKey];
-            currentPhotoIndex = (currentPhotoIndex + 1) % gallery.length;
-            updateLightboxContent();
-        }
-
-        function updateLightboxContent() {
-            const gallery = productGalleries[currentCardKey];
-            const item = gallery[currentPhotoIndex];
-            const imgEl = document.getElementById('lightbox-image');
-            const captionEl = document.getElementById('lightbox-caption');
-            const counterEl = document.getElementById('lightbox-counter');
-
-            if (imgEl) {
-                imgEl.src = item.src;
-                imgEl.alt = item.alt;
-            }
-            if (captionEl) captionEl.textContent = item.alt;
-            if (counterEl) counterEl.textContent = `${currentPhotoIndex + 1} of ${gallery.length}`;
-        }
-
-        // Keyboard Navigation (Escape, Left/Right Arrows)
-        document.addEventListener('keydown', (e) => {
-            const modal = document.getElementById('image-lightbox-modal');
-            if (modal && !modal.classList.contains('pointer-events-none')) {
-                if (e.key === 'Escape') closeLightbox();
-                if (e.key === 'ArrowLeft') prevLightboxImage();
-                if (e.key === 'ArrowRight') nextLightboxImage();
-            }
-        });
-
-        // Click outside image to close
-        const lightboxModal = document.getElementById('image-lightbox-modal');
-        if (lightboxModal) {
-            lightboxModal.addEventListener('click', (e) => {
-                if (e.target === lightboxModal) closeLightbox();
-            });
         }
 
         // Image Copy/Save Protection Handlers
         document.addEventListener('contextmenu', (e) => {
-            if (e.target.tagName === 'IMG' || e.target.closest('#image-lightbox-modal') || e.target.closest('.shoppe-card')) {
+            if (e.target.tagName === 'IMG' || e.target.closest('.shoppe-card')) {
                 e.preventDefault();
                 return false;
             }
