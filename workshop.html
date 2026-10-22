@@ -39,44 +39,58 @@
     </script>
     <style>
         .bg-texture { background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png'); }
+
+        /* Comprehensive Image Protection: Disables saving, dragging, and selection */
+        img {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            user-drag: none;
+            -webkit-touch-callout: none;
+        }
     </style>
 </head>
-<body class="font-sans bg-brand-light text-brand-dark antialiased bg-texture">
+<body class="font-sans bg-brand-light text-brand-dark antialiased bg-texture select-none">
 
- <!-- NAVIGATION: workshop.html -->
-<nav class="sticky top-0 bg-brand-oak/95 backdrop-blur-lg shadow-md z-50 border-b border-brand-gold/10">
-    <div class="max-w-6xl mx-auto px-4 py-3.5 flex justify-between items-center">
-        <a href="index.html" class="text-xl sm:text-2xl font-serif font-bold text-brand-gold text-center leading-none">
-            The Gilded Spoon
-            <span class="block text-[10px] font-serif font-light not-italic tracking-[0.3em] text-brand-light mt-1">SHOPPE &amp; ATELIER</span>
-        </a>
-        <div class="hidden md:flex items-center space-x-6 font-medium text-xs tracking-widest uppercase">
-            <a href="shoppe.html" class="text-brand-light hover:text-brand-gold transition-colors">Shoppe</a>
-            <a href="workshop.html" class="text-brand-gold font-bold transition-colors">Workshops</a>
-            <a href="flipbook.html" class="text-brand-light hover:text-brand-gold transition-colors">Portfolio</a>
-            <a href="contact.html" class="text-brand-light hover:text-brand-gold transition-colors">Contact</a>
-            <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-oak hover:bg-brand-sand transition-all px-4 py-2 rounded-full font-bold shadow-sm">
+    <!-- STANDARDIZED NAVIGATION (WORKSHOPS ACTIVE) -->
+    <nav class="sticky top-0 bg-brand-oak/95 backdrop-blur-lg shadow-md z-50 border-b border-brand-gold/10">
+        <div class="max-w-6xl mx-auto px-4 py-3.5 flex justify-between items-center">
+            <a href="index.html" class="text-xl sm:text-2xl font-serif font-bold text-brand-gold text-center leading-none">
+                The Gilded Spoon
+                <span class="block text-[10px] font-serif font-light not-italic tracking-[0.3em] text-brand-light mt-1">SHOPPE &amp; ATELIER</span>
+            </a>
+            <div class="hidden md:flex items-center space-x-6 font-medium text-xs tracking-widest uppercase">
+                <a href="shoppe.html" class="text-brand-light hover:text-brand-gold transition-colors">Shoppe</a>
+                <a href="workshop.html" class="text-brand-gold font-bold transition-colors">Workshops</a>
+                <a href="flipbook.html" class="text-brand-light hover:text-brand-gold transition-colors">Portfolio</a>
+                <a href="contact.html" class="text-brand-light hover:text-brand-gold transition-colors">Contact</a>
+                <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-oak hover:bg-brand-sand transition-all px-4 py-2 rounded-full font-bold shadow-sm">
+                    Free Guide
+                </a>
+            </div>
+            <div class="md:hidden">
+                <button id="hamburger-button" class="text-brand-light focus:outline-none p-1" aria-label="Toggle Navigation">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden border-t border-brand-gold/10 px-4 pb-4 bg-brand-oak text-center text-xs tracking-widest uppercase">
+            <a href="shoppe.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Shoppe</a>
+            <a href="workshop.html" class="block py-2.5 text-brand-gold font-bold">Workshops</a>
+            <a href="flipbook.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Portfolio</a>
+            <a href="contact.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Contact</a>
+            <a href="/baketobaseline/index.html" class="inline-block bg-brand-gold text-brand-oak hover:bg-brand-sand transition-all px-5 py-2 rounded-full font-bold shadow-sm mt-2">
                 Free Guide
             </a>
         </div>
-        <div class="md:hidden">
-            <button id="hamburger-button" class="text-brand-light focus:outline-none p-1" aria-label="Toggle Navigation">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-        </div>
-    </div>
-    <div id="mobile-menu" class="hidden md:hidden border-t border-brand-gold/10 px-4 pb-4 bg-brand-oak text-center text-xs tracking-widest uppercase">
-        <a href="shoppe.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Shoppe</a>
-        <a href="workshop.html" class="block py-2.5 text-brand-gold font-bold">Workshops</a>
-        <a href="flipbook.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Portfolio</a>
-        <a href="contact.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Contact</a>
-        <a href="/baketobaseline/index.html" class="inline-block bg-brand-gold text-brand-oak hover:bg-brand-sand transition-all px-5 py-2 rounded-full font-bold shadow-sm mt-2">
-            Free Guide
-        </a>
-    </div>
-</nav>
+    </nav>
 
-    <!-- HEADER (ANCIENT OAK - MATCHED TO SHOPPE SCALE) -->
+    <!-- HEADER SECTION -->
     <header class="text-center py-16 md:py-20 px-6 bg-brand-oak border-b border-brand-gold/10 relative overflow-hidden">
         <div class="max-w-4xl mx-auto relative z-10">
             <span class="text-brand-gold font-caveat text-2xl md:text-3xl block mb-2">Tactile Studio Gatherings</span>
@@ -88,25 +102,7 @@
             </p>
         </div>
     </header>
-
-   <!-- MODERN LAUNCH GIFT BANNER -->
-<aside aria-label="Special Offer" class="bg-brand-cream border-b border-brand-gold/25 py-2.5 px-4 shadow-xs">
-    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4 text-center">
-        <div class="flex items-center gap-2">
-            <span class="bg-brand-gold/20 text-brand-gold-dark border border-brand-gold/30 font-sans font-bold text-[9px] uppercase tracking-[0.2em] px-2 py-0.5 rounded-full">
-                ✦ Launch Gift
-            </span>
-            <p class="font-sans text-xs text-brand-oak font-medium">
-                The first 50 workshop seats booked include our complimentary $40 <em>Bake to Baseline</em> Guided Journal.
-            </p>
-        </div>
-        <a href="#tiers" class="inline-flex items-center text-[10px] font-sans font-bold uppercase tracking-wider text-brand-oak hover:text-brand-gold-dark underline underline-offset-4 transition-colors">
-            Reserve Seat &darr;
-        </a>
-    </div>
-</aside>
-
-    <!-- SECTION 1: THE PURPOSE OF THE WORKSHOPS (CONTAINED CARD) -->
+    <!-- SECTION 1: THE PURPOSE OF THE WORKSHOPS -->
     <section class="py-12 md:py-14">
         <div class="max-w-5xl mx-auto px-4 sm:px-6">
             <div class="bg-brand-cream rounded-3xl border border-brand-gold/30 p-6 sm:p-10 md:p-12 shadow-sm">
@@ -151,7 +147,7 @@
         </div>
     </section>
 
-    <!-- SECTION 2: THE 5-LAYER SENSORY METHOD (CONTAINED CARD WITH WARM SAND ACCENTS) -->
+    <!-- SECTION 2: THE 5-LAYER SENSORY METHOD -->
     <section class="pb-12 md:pb-14">
         <div class="max-w-5xl mx-auto px-4 sm:px-6">
             <div class="bg-brand-cream rounded-3xl border border-brand-gold/30 p-6 sm:p-10 md:p-12 shadow-sm">
@@ -164,7 +160,7 @@
                     </p>
                 </div>
 
-                <!-- BASELINE BOX: THE HEART (WARM SAND / LINEN INSET) -->
+                <!-- BASELINE BOX: THE HEART -->
                 <div class="max-w-xl mx-auto mb-8 bg-[#EFE9DF] rounded-2xl p-5 sm:p-6 border border-brand-gold/40 text-center shadow-inner">
                     <span class="text-[10px] font-sans font-bold uppercase tracking-widest text-brand-gold-dark block mb-1">Starting Baseline</span>
                     <h3 class="font-serif text-xl sm:text-2xl font-bold text-brand-oak">The Heart</h3>
@@ -238,7 +234,7 @@
         </div>
     </section>
 
-    <!-- SECTION 3: THE COMPLETE WORKSHOP GUIDE (CONTAINED MASTER CARD) -->
+    <!-- SECTION 3: THE COMPLETE WORKSHOP GUIDE -->
     <section class="pb-12 md:pb-16">
         <div class="max-w-5xl mx-auto px-4 sm:px-6">
             
@@ -253,7 +249,7 @@
                     </p>
                 </div>
 
-                <!-- STEP 1: CHOOSE YOUR MEDIUM -->
+                <!-- STEP 1: CHOOSE YOUR MEDIUM (FULL-BLEED FRAMES, NO FULLSCREEN POPUP) -->
                 <div class="mb-10">
                     <div class="flex items-center justify-center gap-2.5 mb-6 text-center">
                         <span class="w-6 h-6 rounded-full bg-brand-oak text-brand-sand font-bold text-xs flex items-center justify-center font-sans shadow-sm">1</span>
@@ -265,8 +261,8 @@
                         <!-- MEDIUM A: KEEPSAKE SCULPTURE -->
                         <div class="bg-brand-light rounded-2xl border border-brand-gold/30 p-4 sm:p-5 flex flex-col justify-between shadow-sm">
                             <div>
-                                <div class="w-full h-52 sm:h-56 bg-brand-oak rounded-xl p-2.5 flex items-center justify-center border border-brand-gold/30 shadow-inner overflow-hidden mb-3 relative">
-                                    <img src="images/IMG_7606.jpeg" alt="3D Keepsake Cake Sculpture with Comfort Seal" class="max-h-full max-w-full object-contain rounded drop-shadow">
+                                <div class="w-full h-52 sm:h-56 rounded-xl overflow-hidden border border-brand-gold/30 mb-3 relative bg-brand-oak shadow-inner">
+                                    <img src="images/IMG_7606.jpeg" alt="3D Keepsake Cake Sculpture with Comfort Seal" class="w-full h-full object-cover" draggable="false">
                                 </div>
                                 
                                 <!-- Slim Micro-Pills -->
@@ -296,8 +292,8 @@
                         <!-- MEDIUM B: EDIBLE CAKE CANVAS -->
                         <div class="bg-brand-light rounded-2xl border border-brand-gold/30 p-4 sm:p-5 flex flex-col justify-between shadow-sm">
                             <div>
-                                <div class="w-full h-52 sm:h-56 bg-brand-oak rounded-xl p-2.5 flex items-center justify-center border border-brand-gold/30 shadow-inner overflow-hidden mb-3 relative">
-                                    <img src="images/IMG_6660.jpeg" alt="The Edible Cake Canvas Painted Cake" class="max-h-full max-w-full object-contain rounded drop-shadow">
+                                <div class="w-full h-52 sm:h-56 rounded-xl overflow-hidden border border-brand-gold/30 mb-3 relative bg-brand-oak shadow-inner">
+                                    <img src="images/IMG_6660.jpeg" alt="The Edible Cake Canvas Painted Cake" class="w-full h-full object-cover" draggable="false">
                                 </div>
                                 
                                 <!-- Slim Micro-Pills -->
@@ -335,8 +331,8 @@
                     </span>
                 </div>
 
-                <!-- STEP 2: CHOOSE YOUR BOOKING FORMAT (BALANCED CONTRAST GRID) -->
-                <div>
+                <!-- STEP 2: CHOOSE YOUR BOOKING FORMAT -->
+                <div id="tiers">
                     <div class="flex items-center justify-center gap-2.5 mb-6 text-center">
                         <span class="w-6 h-6 rounded-full bg-brand-oak text-brand-sand font-bold text-xs flex items-center justify-center font-sans shadow-sm">2</span>
                         <h3 class="font-serif text-xl sm:text-2xl font-bold text-brand-oak">Step 2: Choose Your Booking Format</h3>
@@ -344,7 +340,7 @@
 
                     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
                         
-                        <!-- OPTION 1: PUBLIC SEATS (DEEP OAK CARD) -->
+                        <!-- OPTION 1: PUBLIC SEATS -->
                         <div class="bg-brand-oak text-brand-light p-6 rounded-2xl border border-brand-gold/30 shadow-md flex flex-col justify-between">
                             <div>
                                 <span class="font-sans font-bold text-xs uppercase tracking-wider text-brand-gold block mb-1">Option 1</span>
@@ -378,7 +374,7 @@
                             </div>
                         </div>
 
-                        <!-- OPTION 2: PRIVATE GATHERING (WARM LIGHT CARD - HIGHLIGHTED) -->
+                        <!-- OPTION 2: PRIVATE GATHERING -->
                         <div class="bg-brand-light text-brand-dark p-6 rounded-2xl border-2 border-brand-gold shadow-md flex flex-col justify-between">
                             <div>
                                 <span class="font-sans font-bold text-xs uppercase tracking-wider text-brand-gold-dark block mb-1">Option 2</span>
@@ -412,7 +408,7 @@
                             </div>
                         </div>
 
-                        <!-- OPTION 3: REMOTE SHIPPED WORKSHOPS (DEEP OAK CARD) -->
+                        <!-- OPTION 3: REMOTE SHIPPED WORKSHOPS -->
                         <div class="bg-brand-oak text-brand-light p-6 rounded-2xl border border-brand-gold/30 shadow-md flex flex-col justify-between">
                             <div>
                                 <span class="font-sans font-bold text-xs uppercase tracking-wider text-brand-gold block mb-1">Option 3</span>
@@ -467,89 +463,79 @@
         </div>
     </section>
 
-    <!-- FAQ SECTION (CLEAN CREAM CARDS) -->
-<section class="pb-12 md:pb-16">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6">
-        <h2 class="font-serif text-2xl md:text-3xl text-brand-oak text-center mb-6 font-bold">Frequently Asked Questions</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 font-sans">
-            <div class="bg-brand-cream p-5 rounded-2xl shadow-sm border border-brand-gold/25">
-                <h3 class="font-serif text-base text-brand-gold-dark font-bold mb-1.5">Do I need any cake decorating or art experience?</h3>
-                <p class="text-brand-dark/85 leading-relaxed text-xs">Not at all. In fact, most people who attend have never touched a palette knife or piping bag before. This experience is designed for complete beginners and overstimulated minds. There is no right or wrong way to make your piece, and you cannot ruin it.</p>
-            </div>
-            <div class="bg-brand-cream p-5 rounded-2xl shadow-sm border border-brand-gold/25">
-                <h3 class="font-serif text-base text-brand-gold-dark font-bold mb-1.5">How do hybrid team bookings work?</h3>
-                <p class="text-brand-dark/85 leading-relaxed text-xs">Hybrid bookings are simple. If you book an in-person Private Local Gathering ($135/seat, meeting our 10-seat event minimum), you can add individual shipped kits ($145/kit plus $12 flat ground shipping) for remote colleagues. They receive their keepsake kits at home and join directly into the live video session.</p>
-            </div>
-            <div class="bg-brand-cream p-5 rounded-2xl shadow-sm border border-brand-gold/25">
-                <h3 class="font-serif text-base text-brand-gold-dark font-bold mb-1.5">Difference between Keepsake and Edible Canvas tracks?</h3>
-                <p class="text-brand-dark/85 leading-relaxed text-xs">The <strong>Keepsake Sculpture Track</strong> uses a 3D sculpting form, whipped spackle, palette knives, gemstones, and botanicals to make a permanent desk art piece. <strong>The Edible Canvas Track</strong> uses freshly baked mini cakes, gourmet buttercreams, and edible sugar gems to make a delicious creation to enjoy at home.</p>
-            </div>
-            <div class="bg-brand-cream p-5 rounded-2xl shadow-sm border border-brand-gold/25">
-                <h3 class="font-serif text-base text-brand-gold-dark font-bold mb-1.5">Are shipped virtual corporate kits edible or non-edible?</h3>
-                <p class="text-brand-dark/85 leading-relaxed text-xs">Shipped virtual kits are exclusively non-edible keepsake sculptures. This ensures all materials arrive in clean condition without perishable food risks, giving participants a permanent decorative keepsake for their home or office.</p>
+    <!-- FAQ SECTION (WARM CREAM CARDS) -->
+    <section class="pb-12 md:pb-16">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <h2 class="font-serif text-2xl md:text-3xl text-brand-oak text-center mb-6 font-bold">Frequently Asked Questions</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 font-sans">
+                
+                <div class="bg-brand-cream p-5 rounded-2xl shadow-sm border border-brand-gold/25">
+                    <h3 class="font-serif text-base text-brand-gold-dark font-bold mb-1.5">Do I need any cake decorating or art experience?</h3>
+                    <p class="text-brand-dark/85 leading-relaxed text-xs">Not at all. In fact, most people who attend have never touched a palette knife or piping bag before. This experience is designed for complete beginners and overstimulated minds. There is no right or wrong way to make your piece, and you cannot ruin it.</p>
+                </div>
+
+                <div class="bg-brand-cream p-5 rounded-2xl shadow-sm border border-brand-gold/25">
+                    <h3 class="font-serif text-base text-brand-gold-dark font-bold mb-1.5">How do hybrid team bookings work?</h3>
+                    <p class="text-brand-dark/85 leading-relaxed text-xs">Hybrid bookings are simple. If you book an in-person Private Local Gathering ($135/seat, meeting our 10-seat event minimum), you can add individual shipped kits ($145/kit plus $12 flat ground shipping) for remote colleagues. They receive their keepsake kits at home and join directly into the live video session.</p>
+                </div>
+
+                <div class="bg-brand-cream p-5 rounded-2xl shadow-sm border border-brand-gold/25">
+                    <h3 class="font-serif text-base text-brand-gold-dark font-bold mb-1.5">Difference between Keepsake and Edible Canvas tracks?</h3>
+                    <p class="text-brand-dark/85 leading-relaxed text-xs">The <strong>Keepsake Sculpture Track</strong> uses a 3D sculpting form, whipped spackle, palette knives, gemstones, and botanicals to make a permanent desk art piece. <strong>The Edible Canvas Track</strong> uses freshly baked mini cakes, gourmet buttercreams, and edible sugar gems to make a delicious creation to enjoy at home.</p>
+                </div>
+
+                <div class="bg-brand-cream p-5 rounded-2xl shadow-sm border border-brand-gold/25">
+                    <h3 class="font-serif text-base text-brand-gold-dark font-bold mb-1.5">Are shipped virtual corporate kits edible or non-edible?</h3>
+                    <p class="text-brand-dark/85 leading-relaxed text-xs">Shipped virtual kits are exclusively non-edible keepsake sculptures. This ensures all materials arrive in clean condition without perishable food risks, giving participants a permanent decorative keepsake for their home or office.</p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- PRE-FOOTER GOLD BANNER (BORROWED FROM INDEX.HTML) -->
-<section class="py-12 bg-brand-gold text-brand-oak text-center px-4 relative overflow-hidden border-t border-brand-oak/10">
-    <div class="max-w-3xl mx-auto relative z-10">
-        <span class="text-[10px] font-sans font-bold tracking-[0.2em] text-brand-oak uppercase block mb-1">Free 1-Page Kitchen Anchor</span>
-        <h2 class="font-serif text-xl md:text-2xl font-bold mb-1.5 text-brand-oak">Low-stress baking rituals. Zero pressure.</h2>
-        <p class="mb-5 text-xs md:text-sm font-medium opacity-90 max-w-xl mx-auto">
-            Download your free 1-page Bake to Baseline Cheat Sheet for calm, low-friction creative strategies.
-        </p>
-        <a href="/baketobaseline/index.html" class="inline-block bg-brand-oak text-brand-light font-sans font-bold py-3 px-8 rounded-full hover:bg-brand-dark transition-all shadow-md uppercase tracking-widest text-[10px]">
-            Get Free Guide &rarr;
-        </a>
-    </div>
-</section>
+    <!-- STANDARDIZED FOOTER -->
+    <footer class="bg-brand-dark text-brand-gray border-t border-brand-gold/20 font-sans text-xs">
+        <div class="max-w-2xl mx-auto px-6 py-6">
+            <div class="flex flex-col items-center">
+                
+                <!-- Social Channels -->
+                <div class="flex justify-center space-x-5 mb-5 text-brand-light">
+                    <a href="https://www.instagram.com/thegildedspoonshoppe/" target="_blank" rel="noopener" class="hover:text-brand-gold transition-colors" title="Instagram">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919 4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/dimple.mckinney" target="_blank" rel="noopener" class="hover:text-brand-gold transition-colors" title="Facebook">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.494v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.323-1.325z"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/dimple-mckinney/" target="_blank" rel="noopener" class="hover:text-brand-gold transition-colors" title="LinkedIn">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="https://baketobaseline.substack.com/" target="_blank" rel="noopener" class="hover:text-brand-gold transition-colors" title="Substack">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
+                    </a>
+                </div>
 
-    <!-- FOOTER (COPY & PASTE AT THE BOTTOM OF EVERY PAGE) -->
-<footer class="bg-brand-dark text-brand-gray border-t border-brand-gold/20 font-sans text-xs">
-    <div class="max-w-2xl mx-auto px-6 py-6">
-        <div class="flex flex-col items-center">
-            
-            <!-- 1. Social Channels -->
-            <div class="flex justify-center space-x-5 mb-5 text-brand-light">
-                <a href="https://www.instagram.com/thegildedspoonshoppe/" target="_blank" rel="noopener" class="hover:text-brand-gold transition-colors" title="Instagram">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919 4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg>
-                </a>
-                <a href="https://www.facebook.com/dimple.mckinney" target="_blank" rel="noopener" class="hover:text-brand-gold transition-colors" title="Facebook">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.494v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.323-1.325z"/></svg>
-                </a>
-                <a href="https://www.linkedin.com/in/dimple-mckinney/" target="_blank" rel="noopener" class="hover:text-brand-gold transition-colors" title="LinkedIn">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                </a>
-                <a href="https://baketobaseline.substack.com/" target="_blank" rel="noopener" class="hover:text-brand-gold transition-colors" title="Substack">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
-                </a>
+                <!-- Footer Navigation Row -->
+                <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-4 text-brand-light font-medium text-[9px] uppercase tracking-[0.2em]">
+                    <a href="contact.html" class="hover:text-brand-gold transition-colors">Contact Us</a>
+                    <a href="press.html" class="hover:text-brand-gold transition-colors">Press &amp; Media</a>
+                    <a href="https://baketobaseline.substack.com/" target="_blank" rel="noopener" class="hover:text-brand-gold transition-colors">Bake to Baseline</a>
+                    <a href="partnerships.html" class="hover:text-brand-gold transition-colors">Partnerships</a>
+                    <a href="policies.html" class="hover:text-brand-gold transition-colors">Order Fulfillment &amp; Delivery</a>
+                </div>
+
             </div>
 
-            <!-- 2. FOOTER NAVIGATION ROW (GOES HERE) -->
-            <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-5 text-brand-light font-medium text-[9px] uppercase tracking-[0.2em]">
-                <a href="contact.html" class="hover:text-brand-gold transition-colors">Contact Us</a>
-                <a href="press.html" class="hover:text-brand-gold transition-colors">Press &amp; Media</a>
-                <a href="https://baketobaseline.substack.com/" target="_blank" rel="noopener" class="hover:text-brand-gold transition-colors">Bake to Baseline</a>
-                <a href="partnerships.html" class="hover:text-brand-gold transition-colors">Partnerships</a>
-                <a href="policies.html" class="hover:text-brand-gold transition-colors">Order Fulfillment &amp; Delivery</a>
+            <div class="pt-5 border-t border-brand-gray/10 text-center">
+                <p class="font-serif text-brand-light/30 text-[10px] mb-2">
+                    &copy; 2026 The Gilded Spoon Shoppe | McKinney, Texas
+                </p>
+                <p class="max-w-xl mx-auto font-sans text-[8px] leading-relaxed text-brand-gray/20 italic">
+                    Disclaimer: The Gilded Spoon Shoppe provides sensory design education. It is not a substitute for professional medical advice, diagnosis, or occupational therapy. Edible products are prepared in a home kitchen that handles allergens including wheat, dairy, eggs, soy, and nuts.
+                </p>
             </div>
-
         </div>
+    </footer>
 
-        <!-- 3. Copyright & Legal Disclaimer -->
-        <div class="pt-5 border-t border-brand-gray/10 text-center">
-            <p class="font-serif text-brand-light/30 text-[10px] mb-2">
-                &copy; 2026 The Gilded Spoon Shoppe | McKinney, Texas
-            </p>
-            <p class="max-w-xl mx-auto font-sans text-[8px] leading-relaxed text-brand-gray/20 italic">
-                Disclaimer: The Gilded Spoon Shoppe provides sensory design education. It is not a substitute for professional medical advice, diagnosis, or occupational therapy. Edible products are prepared in a home kitchen that handles allergens including wheat, dairy, eggs, soy, and nuts.
-            </p>
-        </div>
-    </div>
-</footer>
-    <!-- QUICK PRIVATE GATHERING INQUIRY MODAL -->
+    <!-- QUICK PRIVATE GATHERING INQUIRY MODAL (KEPT FOR BOOKING INQUIRIES) -->
     <div id="inquiry-modal" class="fixed inset-0 bg-brand-oak/80 backdrop-blur-md z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
         <div class="bg-brand-cream rounded-2xl border-2 border-brand-gold/40 shadow-2xl max-w-lg w-full p-6 relative max-h-[90vh] overflow-y-auto text-left">
             <button type="button" onclick="closeInquiryModal()" class="absolute top-4 right-4 text-brand-dark/40 hover:text-brand-oak text-2xl font-bold focus:outline-none transition-colors" aria-label="Close modal">
@@ -619,14 +605,16 @@
         </div>
     </div>
 
-    <!-- SCRIPTS -->
+    <!-- REUSABLE SCRIPTS -->
     <script>
+        // Navigation Mobile Menu
         const hamburgerButton = document.getElementById('hamburger-button');
         const mobileMenu = document.getElementById('mobile-menu');
         if (hamburgerButton) {
             hamburgerButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
         }
 
+        // Private Gathering Modal Handlers
         const inquiryModal = document.getElementById('inquiry-modal');
         const modalTierInput = document.getElementById('modal-tier');
 
@@ -651,17 +639,9 @@
 
         if (inquiryModal) {
             inquiryModal.addEventListener('click', (e) => {
-                if (e.target === inquiryModal) {
-                    closeInquiryModal();
-                }
+                if (e.target === inquiryModal) closeInquiryModal();
             });
         }
-
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && inquiryModal && !inquiryModal.classList.contains('pointer-events-none')) {
-                closeInquiryModal();
-            }
-        });
 
         function handleQuickInquiry(event) {
             event.preventDefault();
@@ -674,6 +654,28 @@
             form.reset();
             closeInquiryModal();
         }
+
+        // Global Keyboard Navigation (Esc for Modal)
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && inquiryModal && !inquiryModal.classList.contains('pointer-events-none')) {
+                closeInquiryModal();
+            }
+        });
+
+        // Image Copy/Save Protection Handlers
+        document.addEventListener('contextmenu', (e) => {
+            if (e.target.tagName === 'IMG') {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        document.addEventListener('dragstart', (e) => {
+            if (e.target.tagName === 'IMG') {
+                e.preventDefault();
+                return false;
+            }
+        });
     </script>
 </body>
 </html>
