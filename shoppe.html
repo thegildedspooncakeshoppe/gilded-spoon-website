@@ -9,7 +9,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
      <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..800&family=Homemade+Apple&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Xanh+Mono:ital@0;1&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..800&family=Homemade+Apple&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">  
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -17,7 +17,7 @@
                 extend: {
                     colors: {
                         'brand-dark': '#2A272A',      /* Soft Charcoal */
-                        'brand-light': '#F4F1ED',     /* Warm Linen / Parchment */
+                        'brand-light': '#F4EFE6',     /* Warm Antique Cream / Parchment */
                         'brand-gold': '#D4AF37',      /* Muted Gold */
                         'brand-gold-hover': '#E2C76A',
                         'brand-gold-dark': '#8C6D18',
@@ -31,15 +31,14 @@
                     fontFamily: {
                         'serif': ['"Fraunces"', 'serif'],
                         'hand': ['"Homemade Apple"', 'cursive'],
-                        'caveat': ['"Caveat"', 'cursive'],
-                        'mono': ['"Xanh Mono"', 'monospace']
+                        'caveat': ['"Caveat"', 'cursive']
                     }
                 }
             }
         }
     </script>
 </head>
-<body class="font-sans bg-brand-light text-brand-dark antialiased">
+<body class="font-sans bg-brand-light text-brand-dark antialiased bg-texture">
 
     <!-- NAVIGATION -->
     <nav class="sticky top-0 bg-brand-oak/95 backdrop-blur-lg shadow-lg z-50 border-b border-brand-gold/10">
@@ -53,7 +52,7 @@
                 <a href="workshop.html" class="text-brand-light hover:text-brand-gold transition">Workshops</a>
                 <a href="flipbook.html" class="text-brand-light hover:text-brand-gold transition">Gallery</a>
                 <a href="contact.html" class="text-brand-light hover:text-brand-gold transition">Contact</a>
-                <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-oak hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm">
+                <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-oak hover:bg-brand-sand hover:text-brand-oak hover:shadow-[0_0_15px_rgba(212,175,55,0.35)] transition-all px-4 py-2 rounded-full font-bold shadow-sm">
                     Free Guide
                 </a>
             </div>
@@ -63,12 +62,12 @@
                 </button>
             </div>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden mt-4 px-4 pb-4 bg-brand-oak text-center">
+        <div id="mobile-menu" class="hidden md:hidden mt-4 border-t border-brand-gold/10 px-4 pb-4 bg-brand-oak text-center">
             <a href="shoppe.html" class="block py-3 text-brand-gold font-bold uppercase tracking-widest">Shoppe</a>
             <a href="workshop.html" class="block py-3 text-brand-light uppercase tracking-widest">Workshops</a>
             <a href="flipbook.html" class="block py-3 text-brand-light uppercase tracking-widest">Gallery</a>
             <a href="contact.html" class="block py-3 text-brand-light uppercase tracking-widest">Contact</a>
-            <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-oak hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm inline-block mt-2">
+            <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-oak hover:bg-brand-sand hover:text-brand-oak hover:shadow-[0_0_15px_rgba(212,175,55,0.35)] transition-all px-4 py-2 rounded-full font-bold shadow-sm inline-block mt-2">
                 Free Guide
             </a>
         </div>
@@ -78,7 +77,7 @@
     <header class="text-center py-16 md:py-20 px-6 bg-brand-oak border-b border-brand-gold/10 relative overflow-hidden">
         <div class="max-w-3xl mx-auto relative z-10">
             <span class="text-brand-gold font-caveat text-2xl md:text-3xl block mb-2">Studio Goods &amp; Counter Tools</span>
-           <h1 class="font-serif font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-brand-sand leading-tight tracking-normal mb-4">The Handcrafted Shoppe &amp; Studio</h1>
+            <h1 class="font-serif font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-brand-sand leading-tight tracking-normal mb-4 text-balance">The Handcrafted Shoppe &amp; Studio</h1>
             <p class="font-serif italic text-base md:text-lg text-brand-light/80 leading-relaxed max-w-2xl mx-auto">
                 At-home studio kits, single-step recipe decks, guided journals, and original tactile artworks designed to give your hands a quiet, grounding rhythm without kitchen mess or setup stress.
             </p>
@@ -86,23 +85,23 @@
     </header>
 
     <main class="py-12 md:py-16 bg-brand-light">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
             
             <!-- SECTION 1: AT-HOME STUDIO CAKE KITS (SIDE BY SIDE) -->
             <div class="mb-14 md:mb-18">
                 <div class="text-center max-w-2xl mx-auto mb-10 md:mb-12">
                     <span class="text-brand-gold-dark font-caveat text-2xl md:text-3xl block mb-2">Two Ways to Create at Home</span>
-                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-oak mt-1">Keepsake &amp; Edible Cake Kits</h2>
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-oak mt-1 text-balance">Keepsake &amp; Edible Cake Kits</h2>
                     <p class="text-xs md:text-sm text-brand-dark/75 mt-2">Complete materials, tools, and step-by-step guidance delivered to your door.</p>
                 </div>
 
                 <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
                     
                     <!-- KIT 1: THE KEEPSAKE CAKE KIT -->
-                    <div class="bg-white rounded-3xl border border-brand-gold/25 p-6 md:p-8 shadow-lg hover:shadow-xl transition-all flex flex-col justify-between">
+                    <div class="bg-[#FAF7F2] rounded-3xl border border-brand-gold/30 p-5 sm:p-6 shadow-md hover:shadow-xl hover:border-brand-gold/60 transition-all flex flex-col justify-between">
                         <div>
                             <!-- Proportional Image Bay with Warm Linen Mat -->
-                            <div class="w-full aspect-[4/3] bg-brand-oak rounded-2xl p-4 sm:p-6 flex items-center justify-center border border-brand-gold/30 shadow-inner overflow-hidden mb-3 relative">
+                            <div class="w-full h-56 sm:h-64 bg-brand-oak rounded-2xl p-2.5 sm:p-3 flex items-center justify-center border border-brand-gold/30 shadow-inner overflow-hidden mb-3 relative">
                                 <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.05),transparent)] pointer-events-none"></div>
                                 <img id="keepsake-kit-image" src="images/IMG_7507.jpeg" alt="The Keepsake Cake Kit Full Spread" class="max-h-full max-w-full object-contain rounded-sm border border-brand-gold/60 p-1.5 bg-brand-dark shadow-[0_10px_20px_rgba(0,0,0,0.6)] relative z-10 transition-all duration-300">
                             </div>
@@ -138,24 +137,18 @@
                             <div class="font-serif font-bold text-brand-oak text-xl sm:text-2xl mb-3">$68.00</div>
                             
                             <p class="font-sans text-xs sm:text-sm text-brand-dark/80 leading-relaxed mb-5">
-                                A permanent tactile art piece for your home or sanctuary that never spoils. Pipe whipped tactile medium onto your choice of a 4x6-inch 3D gallery form or a 2D flat canvas panel using palette knives, raw quartz gemstones, pressed botanicals, and six hand-mixed mineral pigments. Includes our proprietary 5-Layer Sensory Blueprint Guide.
+                                Create a permanent tactile art piece for your sanctuary. Using palette knives, mineral pigments, and raw gemstones, you will pipe and sculpt on a 3D form or 2D canvas. Zero baking required.
                             </p>
                         </div>
                         
                         <div>
                             <!-- Specifications Feature Grid -->
-                            <div class="bg-brand-light/70 p-4 rounded-2xl border border-brand-gold/20 mb-5 space-y-2 text-xs font-sans text-brand-dark/90">
-                                <div class="flex items-start">
-                                    <span class="text-brand-gold-dark mr-2 font-sans text-sm">✦</span>
-                                    <span><strong>Permanent Finish:</strong> Hardens to a durable, stone-like decorative finish on a gold presentation drum.</span>
-                                </div>
-                                <div class="flex items-start">
-                                    <span class="text-brand-gold-dark mr-2 font-sans text-sm">✦</span>
-                                    <span><strong>Nationwide Shipping:</strong> Dispatched across the United States in protective, heavy-duty packaging.</span>
-                                </div>
-                            </div>
+                            <ul class="text-xs font-serif text-brand-dark/85 space-y-1.5 mb-5 pb-4 border-b border-brand-gold/15">
+                                <li>✦ Hardens to a durable, permanent finish.</li>
+                                <li>✦ Ships nationwide in protective packaging.</li>
+                            </ul>
                             
-                            <a href="https://square.link/u/SzGbYrG0" target="_blank" rel="noopener" class="w-full block text-center bg-brand-oak text-brand-light font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-colors shadow-md">
+                            <a href="https://square.link/u/SzGbYrG0" target="_blank" rel="noopener" class="w-full block text-center bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak hover:shadow-[0_0_15px_rgba(212,175,55,0.3)] transition-all shadow-md">
                                 Order The Keepsake Cake Kit ($68)
                             </a>
                             <span class="text-[11px] text-brand-dark/60 font-serif italic block text-center mt-2.5">Select your substrate and palette at checkout</span>
@@ -163,10 +156,10 @@
                     </div>
 
                     <!-- KIT 2: THE EDIBLE CAKE CANVAS KIT -->
-                    <div class="bg-white rounded-3xl border border-brand-gold/25 p-6 md:p-8 shadow-lg hover:shadow-xl transition-all flex flex-col justify-between">
+                    <div class="bg-[#FAF7F2] rounded-3xl border border-brand-gold/30 p-5 sm:p-6 shadow-md hover:shadow-xl hover:border-brand-gold/60 transition-all flex flex-col justify-between">
                         <div>
                             <!-- Proportional Image Bay with Warm Linen Mat -->
-                            <div class="w-full aspect-[4/3] bg-brand-oak rounded-2xl p-4 sm:p-6 flex items-center justify-center border border-brand-gold/30 shadow-inner overflow-hidden mb-3 relative">
+                            <div class="w-full h-56 sm:h-64 bg-brand-oak rounded-2xl p-2.5 sm:p-3 flex items-center justify-center border border-brand-gold/30 shadow-inner overflow-hidden mb-3 relative">
                                 <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.05),transparent)] pointer-events-none"></div>
                                 <img id="edible-kit-image" src="images/IMG_6660.jpeg" alt="The Edible Cake Canvas Kit" class="max-h-full max-w-full object-contain rounded-sm border border-brand-gold/60 p-1.5 bg-brand-dark shadow-[0_10px_20px_rgba(0,0,0,0.6)] relative z-10 transition-all duration-300">
                             </div>
@@ -202,24 +195,18 @@
                             <div class="font-serif font-bold text-brand-oak text-xl sm:text-2xl mb-3">$75.00</div>
                             
                             <p class="font-sans text-xs sm:text-sm text-brand-dark/80 leading-relaxed mb-5">
-                                Your cake is your canvas. Explore soothing textures and paint pre-baked gourmet mini cake layers right at your kitchen counter with zero baking mess. Includes fresh scratch cake layers, whipped artisan buttercreams in your choice of palette, paintbrushes, palette knives, edible sugar gems, and our 5-Layer Blueprint Guide.
+                                Your cake is your canvas. Paint and texture freshly baked gourmet mini cakes right at your kitchen counter. Includes artisan buttercreams, paintbrushes, and edible sugar gems with zero baking mess.
                             </p>
                         </div>
                         
                         <div>
                             <!-- Specifications Feature Grid -->
-                            <div class="bg-brand-light/70 p-4 rounded-2xl border border-brand-gold/20 mb-5 space-y-2 text-xs font-sans text-brand-dark/90">
-                                <div class="flex items-start">
-                                    <span class="text-brand-gold-dark mr-2 font-sans text-sm">✦</span>
-                                    <span><strong>Fresh &amp; Edible:</strong> Scratch-baked vanilla or chocolate sponge ready to decorate and slice.</span>
-                                </div>
-                                <div class="flex items-start">
-                                    <span class="text-brand-gold-dark mr-2 font-sans text-sm">✦</span>
-                                    <span><strong>Local Hand-Delivery:</strong> Available exclusively for local McKinney pickup and DFW courier delivery.</span>
-                                </div>
-                            </div>
+                            <ul class="text-xs font-serif text-brand-dark/85 space-y-1.5 mb-5 pb-4 border-b border-brand-gold/15">
+                                <li>✦ Scratch-baked sponge ready to decorate and eat.</li>
+                                <li>✦ Available for local McKinney pickup & DFW delivery.</li>
+                            </ul>
                             
-                            <a href="contact.html?subject=The%20Edible%20Cake%20Canvas%20Kit%20Order" class="w-full block text-center bg-brand-oak text-brand-light font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-colors shadow-md">
+                            <a href="contact.html?subject=The%20Edible%20Cake%20Canvas%20Kit%20Order" class="w-full block text-center bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak hover:shadow-[0_0_15px_rgba(212,175,55,0.3)] transition-all shadow-md">
                                 Order The Edible Canvas Kit ($75)
                             </a>
                             <span class="text-[11px] text-brand-dark/60 font-serif italic block text-center mt-2.5">Prepared fresh in our McKinney studio kitchen</span>
@@ -233,12 +220,12 @@
             <div class="mb-14 md:mb-18">
                 <div class="text-center max-w-2xl mx-auto mb-10 md:mb-12">
                     <span class="text-brand-gold-dark font-caveat text-2xl md:text-3xl block mb-2">Mindful Kitchen Anchors</span>
-                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-oak mt-1">Recipe Card Suites &amp; Books</h2>
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-oak mt-1 text-balance">Recipe Card Suites &amp; Books</h2>
                     <p class="text-xs md:text-sm text-brand-dark/75 mt-2">Tactile guides and zero-math tools designed for calm creation.</p>
                 </div>
 
                 <!-- ITEM 1: THE DECONSTRUCTED RECIPE CARD SUITE -->
-                <div id="recipe-deck" class="bg-white rounded-3xl border border-brand-gold/25 p-6 md:p-10 shadow-lg mb-8 hover:shadow-xl transition-all">
+                <div id="recipe-deck" class="bg-[#FAF7F2] rounded-3xl border border-brand-gold/30 p-5 sm:p-7 md:p-8 shadow-md mb-8 hover:shadow-xl hover:border-brand-gold/60 transition-all">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                         
                         <!-- Left: Details -->
@@ -257,43 +244,26 @@
                             <div class="font-serif font-bold text-brand-oak text-1xl mb-3">Starts at $48.00</div>
                             
                             <p class="font-sans text-xs md:text-sm text-brand-dark/80 leading-relaxed mb-4">
-                                Created specifically for overstimulated minds, ADHD, autism, and anyone who has ever felt defeated by kitchen chaos. Say goodbye to ad-bloated food blogs jumping on greasy phone screens, and stop re-reading dense recipe paragraphs three times just to confirm what comes next. This suite breaks baking down into calm, bite-sized steps so you only focus on what is right in front of you.
+                                Say goodbye to chaotic food blogs and losing your place in dense paragraphs. This suite breaks any recipe—sweet or savory—down into calm, single-step visual cards, letting you focus only on what is right in front of you.
                             </p>
 
                             <!-- Executive Function Highlights -->
-                            <div class="bg-brand-light/70 p-4 rounded-2xl border border-brand-gold/20 mb-4 space-y-2 text-xs font-serif text-brand-dark/90">
-                                <div class="flex items-start">
-                                    <span class="text-brand-gold-dark mr-2 font-sans text-sm">✦</span>
-                                    <span><strong>Single-Step Focus:</strong> Put card #1 on your clear counter easel. Until that step is finished, the rest of the recipe does not exist. No scanning walls of text or losing your place.</span>
-                                </div>
-                                <div class="flex items-start">
-                                    <span class="text-brand-gold-dark mr-2 font-sans text-sm">✦</span>
-                                    <span><strong>Custom Hand-Drawn Visual Cues:</strong> Every card features custom artwork illustrating the exact ingredients, measurements, and tools needed for that specific step for instant visual recognition.</span>
-                                </div>
-                                <div class="flex items-start">
-                                    <span class="text-brand-gold-dark mr-2 font-sans text-sm">✦</span>
-                                    <span><strong>Bonus Zero-Math Conversion Guide:</strong> Included free with every suite. Adapted specifically to this recipe with exact gram weights, so you can measure directly into one bowl without mental math or dirty measuring cups.</span>
-                                </div>
-                                <div class="flex items-start">
-                                    <span class="text-brand-gold-dark mr-2 font-sans text-sm">✦</span>
-                                    <span><strong>Color-Coded Phases:</strong> Yellow setup cards, mauve flavor infusions, green dietary adaptations (including eggless), and pink finishing touches.</span>
-                                </div>
-                                <div class="flex items-start">
-                                    <span class="text-brand-gold-dark mr-2 font-sans text-sm">✦</span>
-                                    <span><strong>Handcrafted Velvet Library Box Upgrade:</strong> Choose our standard presentation sleeve or upgrade to a soft velvet book box personalized with your recipe title on the spine, designed to live upright on your bookshelf alongside beloved literature.</span>
-                                </div>
-                            </div>
+                            <ul class="text-xs font-serif text-brand-dark/85 space-y-2 mb-5 pb-4 border-b border-brand-gold/15">
+                                <li>✦ <strong>Single-Step Focus:</strong> Put card #1 on your counter easel. The rest of the recipe doesn't exist until you are ready.</li>
+                                <li>✦ <strong>Custom Artwork:</strong> Every card features hand-drawn art based on your specific sweet or savory recipe.</li>
+                                <li>✦ <strong>Zero-Math Prep:</strong> Pre-converted gram weights for effortless one-bowl measuring.</li>
+                            </ul>
 
                             <!-- Edition Choices -->
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-5">
-                                <div class="bg-white p-3.5 rounded-xl border border-brand-gold/30 shadow-sm">
+                                <div class="bg-brand-light/60 p-3.5 rounded-xl border border-brand-gold/30 shadow-sm">
                                     <span class="text-[10px] font-sans font-bold uppercase tracking-wider text-brand-gold-dark block mb-1">Option 1 &bull; Signature Suite</span>
                                     <strong class="text-brand-oak font-serif block text-xs mb-1">Lemon Raspberry White Chocolate</strong>
                                     <p class="text-[11px] text-brand-dark/75 leading-relaxed font-sans">
                                         The Gilded Spoon Shoppe signature cake recipe, fully deconstructed with illustrated step cards and converted gram weights.
                                     </p>
                                 </div>
-                                <div class="bg-white p-3.5 rounded-xl border border-brand-gold/30 shadow-sm">
+                                <div class="bg-brand-light/60 p-3.5 rounded-xl border border-brand-gold/30 shadow-sm">
                                     <span class="text-[10px] font-sans font-bold uppercase tracking-wider text-brand-gold-dark block mb-1">Option 2 &bull; Custom Edition</span>
                                     <strong class="text-brand-oak font-serif block text-xs mb-1">Your Personal Recipe</strong>
                                     <p class="text-[11px] text-brand-dark/75 leading-relaxed font-sans">
@@ -303,7 +273,7 @@
                             </div>
                             
                             <div class="flex flex-col sm:flex-row items-center gap-3.5">
-                                <a href="https://square.link/u/1VoR2TeL" target="_blank" rel="noopener" class="w-full sm:w-auto text-center bg-brand-oak text-brand-light font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-8 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-colors shadow-md">
+                                <a href="https://square.link/u/1VoR2TeL" target="_blank" rel="noopener" class="w-full sm:w-auto text-center bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-8 rounded-full hover:bg-brand-gold hover:text-brand-oak hover:shadow-[0_0_15px_rgba(212,175,55,0.3)] transition-all shadow-md">
                                     Order Recipe Card Suite (From $48)
                                 </a>
                                 <span class="text-[11px] text-brand-dark/60 font-serif italic">Select Velvet Library Box or Custom Edition at checkout</span>
@@ -313,7 +283,7 @@
                         <!-- Right: Real Physical Card Photos with 5 Thumbnails -->
                         <div class="lg:col-span-5 flex flex-col items-center w-full max-w-sm sm:max-w-md mx-auto order-1 lg:order-2">
                             
-                            <div class="w-full aspect-[4/5] bg-brand-oak rounded-2xl p-5 flex items-center justify-center border border-brand-gold/25 shadow-inner overflow-hidden mb-3">
+                            <div class="w-full aspect-[4/3] max-w-[340px] sm:max-w-[380px] bg-brand-oak rounded-2xl p-2.5 sm:p-3 flex items-center justify-center border border-brand-gold/25 shadow-inner overflow-hidden mb-3">
                                 <img id="deck-main-image" src="images/Equipment Deconstructed Recipe Card (Yellow).png" alt="Physical Deconstructed Recipe Card in Hand" class="max-h-full max-w-full object-contain rounded-sm border border-brand-gold/60 p-1.5 bg-brand-dark shadow-[0_10px_20px_rgba(0,0,0,0.6)] transition-all duration-300">
                             </div>
                             
@@ -342,12 +312,12 @@
                 </div>
 
                 <!-- ITEM 2: THE GUIDED JOURNAL -->
-                <div id="journal" class="bg-white rounded-3xl border border-brand-gold/25 p-6 md:p-10 shadow-lg hover:shadow-xl transition-all">
+                <div id="journal" class="bg-[#FAF7F2] rounded-3xl border border-brand-gold/30 p-5 sm:p-7 md:p-8 shadow-md hover:shadow-xl hover:border-brand-gold/60 transition-all">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                         
                         <!-- Left: Proportional Warm Linen Mat with 6 Interior Page Thumbnails -->
                         <div class="lg:col-span-5 flex flex-col items-center w-full max-w-sm sm:max-w-md mx-auto">
-                            <div class="w-full aspect-[4/5] bg-brand-oak rounded-2xl p-4 flex items-center justify-center border border-brand-gold/25 shadow-inner overflow-hidden mb-3">
+                            <div class="w-full aspect-[4/3] max-w-[340px] sm:max-w-[380px] bg-brand-oak rounded-2xl p-2.5 sm:p-3 flex items-center justify-center border border-brand-gold/25 shadow-inner overflow-hidden mb-3">
                                 <img id="journal-main-image" src="images/Cover Image.png" alt="Bake to Baseline Guided Journal Cover" class="max-h-full max-w-full object-contain rounded-sm border border-brand-gold/60 p-1.5 bg-brand-dark shadow-[0_10px_20px_rgba(0,0,0,0.6)] transition-all duration-300">
                             </div>
                             
@@ -391,31 +361,18 @@
                             <div class="font-serif font-bold text-brand-oak text-1xl mb-3">$40.00</div>
                             
                             <p class="font-sans text-xs md:text-sm text-brand-dark/80 leading-relaxed mb-4">
-                                Cake is an artistic container for the stories words cannot capture. Whether you need a gentle reset on a drained afternoon or want to celebrate radiant joy, this journal meets you across the full emotional spectrum. Use it as a quiet tabletop sketchbook from your sofa with zero kitchen cleanup, or take it to the counter as a blueprint guide for your real-life bakes.
+                                Whether you need a gentle reset on a drained afternoon or want to celebrate radiant joy, this journal meets you across the emotional spectrum. Use it as a quiet tabletop sketchbook from your sofa, or take it to the counter as a blueprint guide for your real-life bakes.
                             </p>
 
                             <!-- Feature Grid -->
-                            <div class="bg-brand-light/70 p-4 rounded-2xl border border-brand-gold/20 mb-5 space-y-2 text-xs font-serif text-brand-dark/90">
-                                <div class="flex items-start">
-                                    <span class="text-brand-gold-dark mr-2 font-sans text-sm">✦</span>
-                                    <span><strong>Two Operating Paths:</strong> Choose <em>Path A (The Medicine)</em> to soothe overstimulation, task freeze, or social burnout, or select <em>Path B (The Mirror)</em> to capture radiant energy, grounded presence, or portraiture honoring someone you love.</span>
-                                </div>
-                                <div class="flex items-start">
-                                    <span class="text-brand-gold-dark mr-2 font-sans text-sm">✦</span>
-                                    <span><strong>Capacity Check Routing:</strong> Match your energy battery in seconds. Jump to the <em>SOS Reset</em> for zero-spoon low-barrier hacks, the <em>Sensory Pulse Tracker</em> for a steady check-in, or the <em>Sensory Lab</em> for deep creative flow.</span>
-                                </div>
-                                <div class="flex items-start">
-                                    <span class="text-brand-gold-dark mr-2 font-sans text-sm">✦</span>
-                                    <span><strong>The 5-Layer Sensory Directory:</strong> Visual directories for color spectrums, tool gestures (flowing, rhythmic, botanical), tactile anchor textures, spatial boundary layouts, and final sealing rituals.</span>
-                                </div>
-                                <div class="flex items-start">
-                                    <span class="text-brand-gold-dark mr-2 font-sans text-sm">✦</span>
-                                    <span><strong>The Anti-Perfection Mandate &amp; Flour-Stain Clause:</strong> Zero compliance scores, zero streaks, and zero guilt. Vanilla drips, flour dust, and imperfect sketches are celebrated as live proof of being human.</span>
-                                </div>
-                            </div>
+                            <ul class="text-xs font-serif text-brand-dark/85 space-y-2 mb-5 pb-4 border-b border-brand-gold/15">
+                                <li>✦ <strong>Energy Matching:</strong> Jump to the <em>SOS Reset</em> for low-spoon days, or the <em>Sensory Lab</em> for deep creative flow.</li>
+                                <li>✦ <strong>The 5-Layer Directory:</strong> Visual guides for color spectrums, tactile textures, and grounding rituals.</li>
+                                <li>✦ <strong>The Anti-Perfection Mandate:</strong> Zero compliance scores. Flour dust and imperfect sketches are celebrated here.</li>
+                            </ul>
                             
                             <div class="flex flex-col sm:flex-row items-center gap-3.5">
-                                <a href="https://square.link/u/ZMTDyOFQ" target="_blank" rel="noopener" class="w-full sm:w-auto text-center bg-brand-oak text-brand-light font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-8 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-colors shadow-md">
+                                <a href="https://square.link/u/ZMTDyOFQ" target="_blank" rel="noopener" class="w-full sm:w-auto text-center bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-8 rounded-full hover:bg-brand-gold hover:text-brand-oak hover:shadow-[0_0_15px_rgba(212,175,55,0.3)] transition-all shadow-md">
                                     Order Guided Journal ($40)
                                 </a>
                                 <span class="text-[11px] text-brand-dark/60 font-serif italic">7.44" x 9.66" lay-flat twin-wire spiral &bull; Ships nationwide</span>
@@ -430,51 +387,40 @@
             <!-- SECTION 3: ORIGINAL STUDIO ART PIECES -->
             <div class="mb-14 md:mb-18">
                 <div class="text-center max-w-2xl mx-auto mb-10 md:mb-12">
-                    <span class="text-brand-gold-dark font-caveat text-2xl md:text-3xl block mb-2">Direct From The Studio</span>
-                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-oak mt-1">Original Studio Art Pieces</h2>
-                    <p class="text-xs md:text-sm text-brand-dark/75 mt-2">One-of-a-kind tactile pieces handmade by Dimple in McKinney, Texas.</p>
+                    <span class="text-brand-gold-dark font-caveat text-2xl md:text-3xl block mb-2">Freeze Time</span>
+                    <h2 class="font-serif text-3xl md:text-4xl font-bold text-brand-oak mt-1 text-balance">Wedding &amp; Milestone Cake Replicas</h2>
+                    <p class="text-xs md:text-sm text-brand-dark/75 mt-2">A permanent art piece to remember your most cherished celebration.</p>
                 </div>
 
-                <div class="bg-white rounded-3xl border border-brand-gold/25 p-6 md:p-10 shadow-lg hover:shadow-xl transition-all">
+                <div class="bg-[#FAF7F2] rounded-3xl border border-brand-gold/30 p-5 sm:p-7 md:p-8 shadow-md hover:shadow-xl hover:border-brand-gold/60 transition-all">
                     <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
                         
                         <!-- Left: Details -->
                         <div class="lg:col-span-7 flex flex-col justify-center text-left order-2 lg:order-1">
                             <span class="inline-block bg-brand-gold text-brand-oak font-sans font-bold text-xs uppercase tracking-wider px-3.5 py-1.5 rounded-full mb-2.5 self-start shadow-sm">
-                                Studio Original Works
+                                Custom Commissions
                             </span>
                             
                             <h3 class="font-serif text-1xl sm:text-2xl font-bold text-brand-oak mb-1 leading-tight">
-                                Keepsake Sculptures &amp; Textured Canvases
+                                Custom Replicas &amp; Keepsakes
                             </h3>
                             <p class="text-xs font-serif italic text-brand-gold-dark mb-3">
-                                Permanent 3D Display Pieces &amp; Framed 2D Wall Art
+                                Available in 2D Wall Mounts &amp; 3D Tabletop Displays
                             </p>
                             
                             <div class="font-serif font-bold text-brand-oak text-1xl mb-3">Pricing Available Upon Inquiry</div>
                             
                             <p class="font-sans text-xs md:text-sm text-brand-dark/80 leading-relaxed mb-5">
-                                Bring the peaceful aesthetic of tactile cake art into your home permanently. Created using sculpting paste, mineral pigments, pressed botanicals, and raw gemstones, each original work carries our studio seal: <em>Contains 0% bad vibes, 100% comfort.</em>
+                                Turn your wedding or special occasion cake into a permanent art piece. We will recreate a custom 2D or 3D sculpted fake version of your actual celebration cake using sculpting paste and mineral pigments, so you can display it in your home forever.
                             </p>
                             
-                            <!-- Feature Grid -->
-                            <div class="bg-brand-light/70 p-4 rounded-2xl border border-brand-gold/20 mb-5 space-y-2 text-xs font-serif text-brand-dark/90">
-                                <div class="flex items-start">
-                                    <span class="text-brand-gold-dark mr-2 font-sans text-sm">✦</span>
-                                    <span><strong>Dimensional 3D Sculptures:</strong> Tactile display pieces finished on gold cake drums, designed for desks, bookshelves, and entryways.</span>
-                                </div>
-                                <div class="flex items-start">                                    
-                                    <span class="text-brand-gold-dark mr-2 font-sans text-sm">✦</span>
-                                    <span><strong>Framed 2D Textured Canvases:</strong> Palette knife floral reliefs and textured piping mounted on permanent artist panels for wall display.</span>
-                                </div>
-                                <div class="flex items-start">
-                                    <span class="text-brand-gold-dark mr-2 font-sans text-sm">✦</span>
-                                    <span><strong>Custom Color Commissions:</strong> Personalized palettes crafted to complement your living space or office sanctuary.</span>
-                                </div>
-                            </div>
+                            <ul class="text-xs font-serif text-brand-dark/85 space-y-2 mb-5 pb-4 border-b border-brand-gold/15">
+                                <li>✦ <strong>Dimensional 3D Replicas:</strong> Perfect for a glass cloche, bookshelf, or tabletop display. Available in multiple sizes.</li>
+                                <li>✦ <strong>Framed 2D Wall Art:</strong> We capture the piping and floral design of your cake on a permanent artist panel ready for wall mounting.</li>
+                            </ul>
                             
                             <div class="flex flex-col sm:flex-row items-center gap-3.5">
-                                <a href="contact.html?subject=Original%20Art%20Piece%20Inquiry" class="w-full sm:w-auto text-center bg-brand-oak text-brand-light font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-8 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-colors shadow-md">
+                                <a href="contact.html?subject=Original%20Art%20Piece%20Inquiry" class="w-full sm:w-auto text-center bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-8 rounded-full hover:bg-brand-gold hover:text-brand-oak hover:shadow-[0_0_15px_rgba(212,175,55,0.3)] transition-all shadow-md">
                                     Inquire About Available Pieces
                                 </a>
                                 <span class="text-[11px] text-brand-dark/60 font-serif italic">Custom commissions welcome</span>
@@ -484,7 +430,7 @@
                         <!-- Right: Interactive Proportional Art Gallery -->
                         <div class="lg:col-span-5 flex flex-col items-center w-full max-w-sm sm:max-w-md mx-auto order-1 lg:order-2">
                             
-                            <div class="w-full aspect-[4/5] bg-brand-oak rounded-2xl p-6 flex items-center justify-center border border-brand-gold/30 shadow-inner overflow-hidden mb-3 relative">
+                            <div class="w-full aspect-[4/3] max-w-[340px] sm:max-w-[380px] bg-brand-oak rounded-2xl p-2.5 sm:p-3 flex items-center justify-center border border-brand-gold/30 shadow-inner overflow-hidden mb-3 relative">
                                 <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.05),transparent)] pointer-events-none"></div>
                                 <img id="art-main-image" src="images/IMG_7606.jpeg" alt="Original Tactile Art Piece with Comfort Seal" class="max-h-full max-w-full object-contain rounded-sm border border-brand-gold/60 p-1.5 bg-brand-dark shadow-[0_10px_20px_rgba(0,0,0,0.6)] transition-all duration-300">
                             </div>
@@ -515,28 +461,28 @@
             <section id="live-experiences" class="py-14 md:py-16 bg-brand-oak text-brand-sand border-t border-brand-gold/20 rounded-3xl relative overflow-hidden mb-14 shadow-xl">
                 <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
                     <span class="text-brand-gold font-caveat text-2xl md:text-3xl block mb-2">Live Studio Sessions</span>
-                    <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-sand mb-3">Looking to Join an In-Person Workshop?</h2>
+                    <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-sand mb-3 text-balance">Looking to Join an In-Person Workshop?</h2>
                     <p class="text-brand-sand/90 font-sans text-base leading-relaxed max-w-xl mx-auto mb-6">
                         Experience our 5-Layer Sensory Method in person. Pull up a chair at our public studio table in McKinney, host an on-site corporate gathering, or book a private celebration.
                     </p>
-                    <a href="workshop.html" class="w-full sm:w-auto text-center bg-brand-oak text-brand-light font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-8 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-colors shadow-md">
+                    <a href="workshop.html" class="inline-block bg-brand-gold text-brand-oak font-sans font-bold py-3.5 px-8 rounded-full hover:bg-brand-sand hover:shadow-[0_0_20px_rgba(212,175,55,0.4)] transition-all uppercase tracking-wider text-xs shadow-md">
                         Explore Studio Workshops &rarr;
                     </a>
                 </div>
             </section>
 
             <!-- SECTION 5: WHOLESALE & RETAIL BAR -->
-            <section class="bg-white border border-brand-gold/20 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row justify-between items-center gap-6 shadow-sm">
+            <section class="bg-[#FAF7F2] border border-brand-gold/30 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row justify-between items-center gap-6 shadow-md hover:border-brand-gold/50 transition-all">
                 <div class="flex items-center space-x-4">
-                    <div class="w-12 h-12 rounded-full bg-brand-light border border-brand-gold/30 flex items-center justify-center shrink-0">
-                        <svg class="w-6 h-6 text-brand-gold-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+                    <div class="w-12 h-12 rounded-full bg-brand-oak border border-brand-gold/40 flex items-center justify-center shrink-0 shadow-inner">
+                        <svg class="w-6 h-6 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
                     </div>
                     <div>
                         <h4 class="font-serif font-bold text-brand-oak text-lg">Boutique Retail and Wholesale</h4>
                         <p class="text-xs text-brand-dark/70 font-sans">Stock our tactile journals, studio kits, and single-step recipe decks in your bookstore, gift shop, or wellness boutique.</p>
                     </div>
                 </div>
-                <a href="contact.html?subject=Wholesale%20%26%20Retail" class="shrink-0 bg-brand-light border border-brand-oak text-brand-oak font-sans text-xs font-bold uppercase tracking-wider py-3 px-6 rounded-full hover:bg-brand-oak hover:text-brand-light transition-colors">Inquire for Wholesale</a>
+                <a href="contact.html?subject=Wholesale%20%26%20Retail" class="shrink-0 bg-brand-oak border border-brand-gold/40 text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-7 rounded-full hover:bg-brand-gold hover:text-brand-oak hover:shadow-[0_0_15px_rgba(212,175,55,0.3)] transition-all shadow-sm">Inquire for Wholesale</a>
             </section>
 
         </div>
