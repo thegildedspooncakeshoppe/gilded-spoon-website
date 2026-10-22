@@ -6,36 +6,33 @@
     <title>Bake to Baseline | The Gilded Spoon Shoppe</title>
     <meta name="description" content="Map your energy, tune your senses, and bake at your baseline. Download your Sensory-Friendly Bake to Baseline Cheat Sheet from The Gilded Spoon Shoppe &amp; Atelier.">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Great+Vibes&family=Libre+Baskerville:ital@0;1&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..800&family=Homemade+Apple&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Xanh+Mono:ital@0;1&display=swap" rel="stylesheet">  
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        'brand-dark': '#1C161E',
-                        'brand-light': '#F4F1ED',
-                        'brand-gold': '#D4AF37',
+                        'brand-dark': '#2A272A',      /* Soft Charcoal */
+                        'brand-light': '#F4F1ED',     /* Warm Linen / Parchment */
+                        'brand-gold': '#D4AF37',      /* Muted Gold */
                         'brand-gold-hover': '#E2C76A',
+                        'brand-gold-dark': '#8C6D18',
                         'brand-gray': '#A09DA6',
-                        'brand-card': '#2A232F',
-                        'brand-navy': '#0A2342',
-
-                        'brand-sanctuary': '#0A2342',   
-                        'brand-canvas': '#F4F1ED',      
-                        'brand-blueprint': '#1C161E',   
-                        'brand-jolt': '#D4AF37',        
-                        'brand-soul': '#D4AF37',        
-                        'brand-process': '#D4AF37'      
+                        'brand-terracotta': '#C17767',/* Terracotta accent */
+                        'brand-blush': '#E8D5D1',     /* Soft Blush */
+                        'brand-oak': '#2A3428',       /* Shadowy, Chalky Dark Green (Ancient Oak) */
+                        'brand-sand': '#E3D8C8',      /* Tan/Sand */
+                        'brand-card': '#1E251D'       /* Deep forest overlay for dark cards */
                     },
                     fontFamily: {
-                        'serif': ['"Playfair Display"', 'serif'],
-                        'sans': ['"Inter"', 'sans-serif'],
-                        'cursive': ['"Great Vibes"', 'cursive'],
-                        'baskerville': ['"Libre Baskerville"', 'serif'],
-                        'hand': ['"Caveat"', 'cursive'],
-                        'cormorant': ['"Playfair Display"', 'serif'],
-                        'montserrat': ['"Inter"', 'sans-serif']
+                        'serif': ['"Fraunces"', 'serif'],
+                        'hand': ['"Homemade Apple"', 'cursive'],
+                        'caveat': ['"Caveat"', 'cursive'],
+                        'mono': ['"Xanh Mono"', 'monospace'],
+                        'sans': ['"Inter"', 'sans-serif']
                     }
                 }
             }
@@ -45,56 +42,50 @@
 <body class="font-sans bg-brand-light text-brand-dark antialiased">
 
     <!-- NAVIGATION (Subfolder Root-Relative Links) -->
-    <nav class="sticky top-0 bg-brand-navy/95 backdrop-blur-lg shadow-lg z-50 border-b border-brand-gold/10">
+    <nav class="sticky top-0 bg-brand-oak/95 backdrop-blur-lg shadow-lg z-50 border-b border-brand-gold/10">
         <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <!-- Logo points to main index -->
             <a href="/index.html" class="text-2xl font-serif font-bold text-brand-gold text-center leading-none">
                 The Gilded Spoon
                 <span class="block text-xs font-sans font-light not-italic tracking-[0.3em] text-brand-light">SHOPPE &amp; ATELIER</span>
             </a>
             
-            <!-- Desktop Nav Links -->
             <div class="hidden md:flex items-center space-x-6 font-medium text-xs tracking-widest uppercase">
                 <a href="/shoppe.html" class="text-brand-light hover:text-brand-gold transition">Shoppe</a>
                 <a href="/workshop.html" class="text-brand-light hover:text-brand-gold transition">Workshops</a>
-                <a href="/flipbook.html" class="text-brand-light hover:text-brand-gold transition">Portfolio</a>
+                <a href="/flipbook.html" class="text-brand-light hover:text-brand-gold transition">Gallery</a>
                 <a href="/contact.html" class="text-brand-light hover:text-brand-gold transition">Contact</a>
-
-                <!-- CTA SMOOTH-SCROLLS DOWN TO THE OPT-IN FORM -->
-    <a href="#optin-form" class="bg-brand-gold text-brand-navy hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm">
-        Free Guide
-    </a>
-    
+                <a href="#optin-form" class="bg-brand-gold text-brand-oak hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm">
+                    Free Guide
+                </a>
             </div>
             
-            <!-- Mobile Hamburger Button -->
             <div class="md:hidden">
-                <button id="hamburger-button" class="text-white focus:outline-none">
+                <button id="hamburger-button" class="text-brand-light focus:outline-none">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
                 </button>
             </div>
         </div>
 
-        <!-- Mobile Nav Menu -->
-        <div id="mobile-menu" class="hidden md:hidden mt-4 px-4 pb-4 bg-brand-navy text-center">
+        <div id="mobile-menu" class="hidden md:hidden mt-4 border-t border-brand-gold/10 px-4 pb-4 bg-brand-oak text-center">
             <a href="/shoppe.html" class="block py-3 text-brand-light uppercase tracking-widest">Shoppe</a>
             <a href="/workshop.html" class="block py-3 text-brand-light uppercase tracking-widest">Workshops</a>
-            <a href="/flipbook.html" class="block py-3 text-brand-light uppercase tracking-widest">Portfolio</a>
+            <a href="/flipbook.html" class="block py-3 text-brand-light uppercase tracking-widest">Gallery</a>
             <a href="/contact.html" class="block py-3 text-brand-light uppercase tracking-widest">Contact</a>
-            <!-- SOLID FILLED CTA BUTTON -->
-    <a href="#optin-form" class="bg-brand-gold text-brand-navy hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm">
-        Free Guide
-    </a>
+            <a href="#optin-form" class="bg-brand-gold text-brand-oak hover:bg-white transition-colors px-4 py-2 rounded-full font-bold shadow-sm inline-block mt-2">
+                Free Guide
+            </a>
         </div>
     </nav>
 
     <!-- HEADER SECTION -->
-    <header class="text-center py-16 md:py-20 bg-brand-navy border-b border-brand-gold/10 relative overflow-hidden">
+    <header class="text-center py-16 md:py-20 px-6 bg-brand-oak border-b border-brand-gold/10 relative overflow-hidden">
         <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')]"></div>
         <div class="max-w-4xl mx-auto px-6 relative z-10">
-            <span class="block text-xs font-sans font-bold tracking-[0.25em] text-brand-gold uppercase mb-3">5 Layers of Sensory Design • Zero Layers of Masking</span>
-            <h1 class="font-serif text-3xl md:text-5xl font-bold text-white leading-tight mb-4">Map your energy, tune your senses,<br class="hidden md:inline"> and bake at your baseline.</h1>
-            <p class="text-base md:text-lg text-brand-light/90 font-serif italic max-w-2xl mx-auto leading-relaxed">Bring the Bake to Baseline Cheat Sheet to your kitchen—a free 1-page guide for calm, sensory-friendly baking.</p>
+            <span class="text-brand-gold font-caveat text-2xl md:text-3xl block mb-2">Low-Stress Kitchen Anchors</span>
+            <h1 class="font-caveat text-3xl sm:text-4xl md:text-5xl text-brand-sand leading-relaxed tracking-wide mb-4 py-1">Map your energy. <br class="hidden sm:inline">Bake at your baseline.</h1>
+            <p class="font-serif italic text-base md:text-lg text-brand-light/80 max-w-2xl mx-auto leading-relaxed">
+                Bring the Bake to Baseline Cheat Sheet to your kitchen—a free 1-page guide for calm, sensory-friendly baking strategies with zero pressure.
+            </p>
         </div>
     </header>
 
@@ -104,57 +95,56 @@
             
             <!-- 3 FEATURE CARDS -->
             <div class="grid md:grid-cols-3 gap-6 mb-12">
-                <div class="bg-white p-6 rounded-2xl shadow-md border border-brand-gold/20 text-center">
-                    <span class="text-brand-gold font-serif text-lg block mb-1">✦</span>
-                    <h3 class="font-serif text-brand-navy font-bold text-base mb-2">Internal Capacity </h3>
-                    <p class="text-xs text-brand-dark/70 leading-relaxed font-sans">Match your real-time body signals to specific low-friction kitchen strategies.</p>
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-brand-gold/25 text-center">
+                    <span class="text-brand-gold-dark font-sans text-lg block mb-1">✦</span>
+                    <h3 class="font-serif text-brand-oak font-bold text-lg mb-2">Internal Capacity</h3>
+                    <p class="text-xs text-brand-dark/75 leading-relaxed font-sans">Match your real-time body signals to specific low-friction kitchen strategies.</p>
                 </div>
-                <div class="bg-white p-6 rounded-2xl shadow-md border border-brand-gold/20 text-center">
-                    <span class="text-brand-gold font-serif text-lg block mb-1">✦</span>
-                    <h3 class="font-serif text-brand-navy font-bold text-base mb-2">Low-Overwhelm Flow</h3>
-                    <p class="text-xs text-brand-dark/70 leading-relaxed font-sans">Embrace guilt-free pause points and trust sensory cues over strict timers.</p>
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-brand-gold/25 text-center">
+                    <span class="text-brand-gold-dark font-sans text-lg block mb-1">✦</span>
+                    <h3 class="font-serif text-brand-oak font-bold text-lg mb-2">Low-Overwhelm Flow</h3>
+                    <p class="text-xs text-brand-dark/75 leading-relaxed font-sans">Embrace guilt-free pause points and trust sensory cues over strict timers.</p>
                 </div>
-                <div class="bg-white p-6 rounded-2xl shadow-md border border-brand-gold/20 text-center">
-                    <span class="text-brand-gold font-serif text-lg block mb-1">✦</span>
-                    <h3 class="font-serif text-brand-navy font-bold text-base mb-2">Executive Function</h3>
-                    <p class="text-xs text-brand-dark/70 leading-relaxed font-sans">Eliminate dish fatigue and second-guessing with smart counter rules.</p>
+                <div class="bg-white p-6 rounded-2xl shadow-md border border-brand-gold/25 text-center">
+                    <span class="text-brand-gold-dark font-sans text-lg block mb-1">✦</span>
+                    <h3 class="font-serif text-brand-oak font-bold text-lg mb-2">Executive Function</h3>
+                    <p class="text-xs text-brand-dark/75 leading-relaxed font-sans">Eliminate dish fatigue and second-guessing with smart counter rules.</p>
                 </div>
             </div>
 
-            <!-- NATIVE OPT-IN FORM (Replaces Iframe) -->
-            <div class="bg-white p-8 md:p-10 rounded-3xl shadow-xl border border-brand-gold/20">
+            <!-- NATIVE OPT-IN FORM -->
+            <div id="optin-form" class="bg-white p-8 md:p-10 rounded-3xl shadow-xl border border-brand-gold/30 scroll-mt-24">
                 <div class="text-center max-w-xl mx-auto mb-6">
-                    <span class="block text-xs font-bold uppercase tracking-widest text-brand-gold mb-2">Free Instant Download</span>
-                    <h3 class="font-serif text-2xl font-bold text-brand-navy mb-2"> Download Your Bake to Baseline Cheat Sheet</h3>
-                    <p class="text-xs text-brand-dark/70 font-sans">Enter your details below to download your 1-page kitchen anchor instantly plus receive occasional sensory-friendly notes straight from our atelier (1–2 times a month, zero spam).</p>
+                    <span class="inline-block bg-brand-gold text-brand-oak font-sans font-bold text-xs uppercase tracking-wider px-3.5 py-1.5 rounded-full mb-3 shadow-sm">Free Instant Download</span>
+                    <h3 class="font-serif text-2xl sm:text-3xl font-bold text-brand-oak mb-2">Download Your Bake to Baseline Cheat Sheet</h3>
+                    <p class="text-xs sm:text-sm text-brand-dark/75 font-sans leading-relaxed">Enter your details below to download your 1-page kitchen anchor instantly, plus receive quiet, sensory-friendly reflections straight from our studio table (1–2 times a month, zero spam).</p>
                 </div>
 
                 <form action="https://formsubmit.co/contact@thegildedspoonshoppe.com" method="POST" class="max-w-md mx-auto space-y-4">
                     
                     <!-- FormSubmit Configuration -->
-                    <input type="hidden" name="_next" value="https://thegildedspoonshoppe.com/baketobaseline/guide">
-                    <input type="hidden" name="_subject" value="New Bake to Baseline Newsletter Sign up" >
+                    <input type="hidden" name="_next" value="https://thegildedspoonshoppe.com/baketobaseline/guide.html">
+                    <input type="hidden" name="_subject" value="New Bake to Baseline Newsletter Sign up">
                     <input type="hidden" name="_captcha" value="false">
 
                     <div>
-                        <label for="lead-name" class="block text-xs font-bold uppercase tracking-wider text-brand-navy mb-1">Your Name *</label>
-                        <input type="text" id="lead-name" name="name" required class="w-full bg-brand-light/50 border border-brand-gold/30 rounded-xl px-4 py-3 text-sm text-brand-dark focus:outline-none focus:border-brand-gold" placeholder="First Name">
+                        <label for="lead-name" class="block text-xs font-sans font-bold uppercase tracking-wider text-brand-oak mb-1.5">Your Name *</label>
+                        <input type="text" id="lead-name" name="name" required class="w-full bg-brand-light/50 border border-brand-gold/30 rounded-xl px-4 py-3 text-sm text-brand-dark focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold font-sans" placeholder="First Name">
                     </div>
 
                     <div>
-                        <label for="lead-email" class="block text-xs font-bold uppercase tracking-wider text-brand-navy mb-1">Email Address *</label>
-                        <input type="email" id="lead-email" name="email" required class="w-full bg-brand-light/50 border border-brand-gold/30 rounded-xl px-4 py-3 text-sm text-brand-dark focus:outline-none focus:border-brand-gold" placeholder="you@example.com">
+                        <label for="lead-email" class="block text-xs font-sans font-bold uppercase tracking-wider text-brand-oak mb-1.5">Email Address *</label>
+                        <input type="email" id="lead-email" name="email" required class="w-full bg-brand-light/50 border border-brand-gold/30 rounded-xl px-4 py-3 text-sm text-brand-dark focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold font-sans" placeholder="you@example.com">
                     </div>
 
-                    <!-- NEW CUSTOM BUTTON TEXT -->
-        <button type="submit" class="w-full bg-brand-navy text-white font-sans text-xs font-bold uppercase tracking-widest py-4 rounded-full hover:bg-brand-gold hover:text-brand-navy transition-colors shadow-md mt-2">
-            Get My Kitchen Anchor
-        </button>
+                    <button type="submit" class="w-full bg-brand-oak text-brand-light font-sans text-xs font-bold uppercase tracking-wider py-4 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-colors shadow-md mt-2">
+                        Get My Kitchen Anchor
+                    </button>
            
-        <!-- MAILTO UNSUBSCRIBE LINK -->
-        <p class="text-[10px] text-brand-dark/50 text-center italic pt-1">
-    <a href="mailto:contact@thegildedspoonshoppe.com?subject=Unsubscribe&body=Please%20unsubscribe%20my%20email%20address%20from%20future%20atelier%20notes.%20Thank%20you!" class="underline hover:text-brand-gold transition-colors">Unsubscribe anytime</a> with a single click.
-</p>
+                    <!-- MAILTO UNSUBSCRIBE LINK -->
+                    <p class="text-[10px] text-brand-dark/60 text-center italic pt-1 font-serif">
+                        <a href="mailto:contact@thegildedspoonshoppe.com?subject=Unsubscribe&body=Please%20unsubscribe%20my%20email%20address%20from%20future%20atelier%20notes.%20Thank%20you!" class="underline hover:text-brand-gold transition-colors">Unsubscribe anytime</a> with a single click.
+                    </p>
                 </form>
             </div>
 
@@ -167,19 +157,24 @@
             <div class="flex flex-col items-center">
                 
                 <div class="flex justify-center space-x-6 mb-6 text-brand-light">
-                    <a href="https://www.instagram.com/thegildedspoonshoppe/" target="_blank" class="hover:text-brand-gold transition-colors">
+                    <a href="https://www.instagram.com/thegildedspoonshoppe/" target="_blank" rel="noopener" class="hover:text-brand-gold transition-colors" title="Instagram">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919 4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg>
                     </a>
-                    <a href="https://www.facebook.com/dimple.mckinney" target="_blank" class="hover:text-brand-gold transition-colors">
+                    <a href="https://www.facebook.com/dimple.mckinney" target="_blank" rel="noopener" class="hover:text-brand-gold transition-colors" title="Facebook">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.494v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.323-1.325z"/></svg>
                     </a>
-                    <a href="https://www.linkedin.com/in/dimple.mckinney/" target="_blank" class="hover:text-brand-gold transition-colors">
+                    <a href="https://www.linkedin.com/in/dimple-mckinney/" target="_blank" rel="noopener" class="hover:text-brand-gold transition-colors" title="LinkedIn">
                         <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="https://baketobaseline.substack.com/" target="_blank" rel="noopener" class="hover:text-brand-gold transition-colors" title="Substack">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
                     </a>
                 </div>
 
-                <div class="flex flex-row justify-center space-x-8 mb-6 text-brand-light font-medium text-[10px] uppercase tracking-[0.2em]">
+                <div class="flex flex-wrap justify-center gap-x-8 gap-y-3 mb-6 text-brand-light font-medium text-[10px] uppercase tracking-[0.2em]">
                     <a href="/contact.html" class="hover:text-brand-gold transition-colors">Contact Us</a>
+                    <a href="/press.html" class="hover:text-brand-gold transition-colors">Press &amp; Media</a>
+                    <a href="https://baketobaseline.substack.com/" target="_blank" rel="noopener" class="hover:text-brand-gold transition-colors">Bake to Baseline</a>
                     <a href="/partnerships.html" class="hover:text-brand-gold transition-colors">Partnerships</a>
                     <a href="/policies.html" class="hover:text-brand-gold transition-colors">Order Fulfillment &amp; Delivery</a>
                 </div>
@@ -190,8 +185,8 @@
                 <p class="font-serif text-brand-light/30 text-xs mb-3">
                     &copy; 2026 The Gilded Spoon Shoppe | McKinney, Texas
                 </p>
-                <p class="max-w-xl mx-auto font-sans text-[9px] leading-relaxed text-brand-gray/20 italic">
-                    Disclaimer: The Gilded Spoon Shoppe provides sensory design education. It is not a substitute for professional medical advice, diagnosis, or occupational therapy.
+                <p class="max-w-xl mx-auto font-serif text-[9px] leading-relaxed text-brand-gray/20 italic">
+                    Disclaimer: The Gilded Spoon Shoppe provides sensory design education. It is not a substitute for professional medical advice, diagnosis, or occupational therapy. Edible products are prepared in a home kitchen that handles allergens including wheat, dairy, eggs, soy, and nuts.
                 </p>
             </div>
         </div>
