@@ -43,13 +43,19 @@
 </head>
 <body class="font-sans bg-brand-light text-brand-dark antialiased">
 
-    <!-- NAVIGATION: index.html -->
+<!-- STANDARDIZED NAVIGATION -->
 <nav class="sticky top-0 bg-brand-oak/95 backdrop-blur-lg shadow-md z-50 border-b border-brand-gold/10">
-    <div class="max-w-6xl mx-auto px-4 py-3.5 flex justify-between items-center">
-        <a href="index.html" class="text-xl sm:text-2xl font-serif font-bold text-brand-gold text-center leading-none">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
+        
+        <!-- TIGHTENED LOGO -->
+        <a href="index.html" class="inline-block text-xl sm:text-2xl font-serif font-bold text-brand-gold text-center leading-none">
             The Gilded Spoon
-            <span class="block text-[10px] font-serif font-light not-italic tracking-[0.3em] text-brand-light mt-1">SHOPPE &amp; ATELIER</span>
+            <span class="block text-[9px] sm:text-[10px] font-sans font-medium not-italic tracking-[0.25em] text-brand-light/90 uppercase mt-0.5">
+                SHOPPE &amp; ATELIER
+            </span>
         </a>
+
+        <!-- Desktop Navigation Links -->
         <div class="hidden md:flex items-center space-x-6 font-medium text-xs tracking-widest uppercase">
             <a href="shoppe.html" class="text-brand-light hover:text-brand-gold transition-colors">Shoppe</a>
             <a href="workshop.html" class="text-brand-light hover:text-brand-gold transition-colors">Workshops</a>
@@ -59,12 +65,16 @@
                 Free Guide
             </a>
         </div>
+
+        <!-- Mobile Hamburger Button -->
         <div class="md:hidden">
             <button id="hamburger-button" class="text-brand-light focus:outline-none p-1" aria-label="Toggle Navigation">
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
             </button>
         </div>
     </div>
+
+    <!-- Mobile Dropdown Menu -->
     <div id="mobile-menu" class="hidden md:hidden border-t border-brand-gold/10 px-4 pb-4 bg-brand-oak text-center text-xs tracking-widest uppercase">
         <a href="shoppe.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Shoppe</a>
         <a href="workshop.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Workshops</a>
