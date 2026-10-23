@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Designing Resilience | Hands-On Team Workshops &amp; Offsites</title>
-    <meta name="description" content="A hands-on, two-hour creative team workshop. Lower workplace stress, resolve team friction, and give your people a genuine break from screens.">
-    
+    <meta name="p:domain_verify" content="8497c86d445458f17cdce81e920478f2"/>
+    <title>Studio Workshops | The Gilded Spoon Atelier</title>
+    <meta name="description" content="Tactile art and cake decorating workshops in McKinney, Texas. Low-pressure sensory grounding, zero baking experience needed, and zero performance required.">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..800&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Fraunces:opsz,wght@9..144,400..800&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">  
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -22,18 +22,17 @@
                         'brand-gold-hover': '#E2C76A',
                         'brand-gold-dark': '#8C6D18',
                         'brand-gray': '#A09DA6',
-                        'brand-terracotta': '#C17767',
-                        'brand-blush': '#E8D5D1',
-                        'brand-oak': '#2A3428',       /* Deep Oak */
-                        'brand-sand': '#E3D8C8',
-                        'brand-card': '#1E251D',
-                        'brand-cream': '#FAF7F2'
+                        'brand-terracotta': '#C17767',/* Terracotta accent */
+                        'brand-blush': '#E8D5D1',     /* Soft Blush */
+                        'brand-oak': '#2A3428',       /* Shadowy, Chalky Dark Green (Ancient Oak) */
+                        'brand-sand': '#E3D8C8',      /* Tan/Sand */
+                        'brand-card': '#1E251D',      /* Deep forest overlay for dark cards */
+                        'brand-cream': '#FAF7F2'      /* Warm Antique Card Cream */
                     },
                     fontFamily: {
                         'serif': ['"Fraunces"', 'serif'],
                         'sans': ['"Inter"', 'sans-serif'],
-                        'caveat': ['"Caveat"', 'cursive'],
-                        'badge': ['"Plus Jakarta Sans"', 'sans-serif']
+                        'caveat': ['"Caveat"', 'cursive']
                     }
                 }
             }
@@ -58,7 +57,7 @@
 </head>
 <body class="font-sans bg-brand-light text-brand-dark antialiased bg-texture select-none">
 
-    <!-- STANDARDIZED NAVIGATION -->
+    <!-- NAVIGATION -->
     <nav class="sticky top-0 bg-brand-oak/95 backdrop-blur-lg shadow-md z-50 border-b border-brand-gold/10">
         <div class="max-w-6xl mx-auto px-4 py-3.5 flex justify-between items-center">
             
@@ -77,9 +76,9 @@
 
             <div class="hidden md:flex items-center space-x-6 font-medium text-xs tracking-widest uppercase">
                 <a href="shoppe.html" class="text-brand-light hover:text-brand-gold transition-colors">Shoppe</a>
-                <a href="workshop.html" class="text-brand-light hover:text-brand-gold transition-colors">Workshops</a>
-                <a href="corporate.html" class="text-brand-gold font-bold transition-colors">Corporate</a>
-                <a href="flipbook.html" class="text-brand-light hover:text-brand-gold transition-colors">Portfolio</a>
+                <a href="workshop.html" class="text-brand-gold font-bold transition-colors">Workshops</a>
+                <a href="corporate.html" class="text-brand-light hover:text-brand-gold transition-colors">Corporate</a>
+                <a href="flipbook.html" class="text-brand-light hover:text-brand-gold transition-colors">Gallery</a>
                 <a href="contact.html" class="text-brand-light hover:text-brand-gold transition-colors">Contact</a>
                 <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-oak hover:bg-brand-sand transition-all px-4 py-2 rounded-full font-bold shadow-sm">
                     Free Guide
@@ -95,9 +94,9 @@
 
         <div id="mobile-menu" class="hidden md:hidden border-t border-brand-gold/10 px-4 pb-4 bg-brand-oak text-center text-xs tracking-widest uppercase">
             <a href="shoppe.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Shoppe</a>
-            <a href="workshop.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Workshops</a>
-            <a href="corporate.html" class="block py-2.5 text-brand-gold font-bold">Corporate</a>
-            <a href="flipbook.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Portfolio</a>
+            <a href="workshop.html" class="block py-2.5 text-brand-gold font-bold">Workshops</a>
+            <a href="corporate.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Corporate Events</a>
+            <a href="flipbook.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Gallery</a>
             <a href="contact.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Contact</a>
             <a href="/baketobaseline/index.html" class="inline-block bg-brand-gold text-brand-oak hover:bg-brand-sand transition-all px-5 py-2 rounded-full font-bold shadow-sm mt-2">
                 Free Guide
@@ -105,379 +104,392 @@
         </div>
     </nav>
 
-    <!-- EXECUTIVE HERO -->
-    <header class="text-center py-14 md:py-20 px-6 bg-brand-oak border-b border-brand-gold/10 relative overflow-hidden">
+    <!-- HEADER SECTION -->
+    <header class="text-center py-16 md:py-20 px-6 bg-brand-oak border-b border-brand-gold/10 relative overflow-hidden">
         <div class="max-w-4xl mx-auto relative z-10">
-            <span class="text-brand-gold font-caveat text-2xl md:text-3xl block mb-2">
-                Corporate Offsites &amp; Team Wellness
-            </span>
-            
-            <h1 class="font-serif font-bold text-4xl sm:text-5xl lg:text-6xl text-brand-sand leading-tight tracking-normal mb-4">
-                Designing Resilience
-                <span class="block text-2xl sm:text-3xl lg:text-4xl font-normal text-brand-gold mt-2 font-serif italic">
-                    A 2-Hour Hands-On Team Reset
-                </span>
+            <span class="text-brand-gold font-caveat text-2xl md:text-3xl block mb-2">Tactile Studio Gatherings</span>
+            <h1 class="font-serif font-bold text-3xl sm:text-4xl md:text-5xl lg:text-[54px] text-brand-sand leading-tight tracking-normal mb-4 text-balance">
+                A Quiet Place for Busy Minds
             </h1>
-            
-            <p class="font-serif italic text-base md:text-lg text-brand-light/85 leading-relaxed max-w-2xl mx-auto mb-7">
-                Most projects do not fail from bad planning or poor software. They fail because teams get stressed, burnt out, and talk past each other. We give your people a fast, screen-free reset where working with their hands cuts through workplace friction.
+            <p class="font-serif italic text-base md:text-lg text-brand-light/80 leading-relaxed max-w-2xl mx-auto">
+                Step inside an intentional studio space designed to help you drop your shoulders and decompress. Zero performance required, zero baking experience needed, and your nervous system sets the rules.
             </p>
-            
-            <div class="flex flex-col sm:flex-row justify-center gap-4 text-[11px] font-sans font-bold uppercase tracking-wider">
-                <a href="#booking-block" class="bg-brand-gold text-brand-oak py-3 px-8 rounded-full hover:bg-brand-sand transition-all shadow-md text-center">
-                    View Package &amp; Inquire
-                </a>
-                <a href="#side-by-side-overview" class="border border-brand-gold/40 text-brand-sand py-3 px-8 rounded-full hover:bg-brand-card transition-all text-center">
-                    How It Works
-                </a>
-            </div>
         </div>
     </header>
 
-    <main class="py-12 md:py-16 space-y-12 md:space-y-16">
-
-        <!-- SECTION 1: SIDE-BY-SIDE (THE WHY VS. THE WHAT) -->
-        <section id="side-by-side-overview" class="max-w-6xl mx-auto px-4 sm:px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-stretch">
+    <!-- SECTION 1: WAYS TO GATHER -->
+    <section id="tiers" class="py-12 md:py-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            <div class="bg-brand-cream rounded-3xl border border-brand-gold/30 p-6 sm:p-8 lg:p-10 shadow-sm">
                 
-                <!-- LEFT COLUMN: WHY TRADITIONAL TEAM BUILDING MISSES THE MARK -->
-                <div class="bg-brand-cream rounded-3xl border border-brand-gold/30 p-6 sm:p-8 flex flex-col justify-between shadow-sm">
-                    <div>
-                        <span class="text-brand-gold-dark font-caveat text-xl sm:text-2xl block mb-1">The Reality Check</span>
-                        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-oak mb-3">Why Traditional Team Building Misses the Mark</h2>
-                        <p class="text-xs sm:text-sm text-brand-dark/80 font-sans leading-relaxed mb-6">
-                            Nobody wants to sit through another slide presentation on stress management, and forced trust games only make people cringe. When sprint pressure spikes, teams shut down in predictable ways:
-                        </p>
-
-                        <div class="space-y-4 text-xs font-sans text-brand-dark/85">
-                            <div class="bg-brand-light rounded-2xl p-4 border border-brand-gold/25">
-                                <h3 class="font-serif text-sm font-bold text-brand-oak mb-1">✦ Defensive Friction &amp; Missed Targets</h3>
-                                <p class="text-brand-dark/75 leading-relaxed">
-                                    When people feel overwhelmed, feedback turns into quiet friction. Small disagreements cause rework loops, team handoffs stall, and delivery dates slide.
-                                </p>
-                            </div>
-
-                            <div class="bg-brand-light rounded-2xl p-4 border border-brand-gold/25">
-                                <h3 class="font-serif text-sm font-bold text-brand-oak mb-1">✦ Chronic Screen Exhaustion</h3>
-                                <p class="text-brand-dark/75 leading-relaxed">
-                                    Endless messages and back-to-back video calls drain focus. Asking employees to relax by staring at another screen only compounds their mental fatigue.
-                                </p>
-                            </div>
-
-                            <div class="bg-brand-light rounded-2xl p-4 border border-brand-gold/25">
-                                <h3 class="font-serif text-sm font-bold text-brand-oak mb-1">✦ Training People Forget by Monday</h3>
-                                <p class="text-brand-dark/75 leading-relaxed">
-                                    Most corporate seminars fade within 48 hours. Without a physical, sensory shift, employees return to their desks and fall right back into chronic stress patterns.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-6 pt-4 border-t border-brand-gold/20 text-center">
-                        <span class="font-serif italic text-xs text-brand-dark/70">
-                            "The goal isn't more talk about burnout. The goal is giving the brain an actual break."
-                        </span>
-                    </div>
-                </div>
-
-                <!-- RIGHT COLUMN: WHAT TEAMS ACTUALLY DO (THE RESET) -->
-<div class="bg-brand-oak text-brand-light rounded-3xl border border-brand-gold/30 p-6 sm:p-8 flex flex-col justify-between shadow-md">
-    <div>
-        <span class="text-brand-gold font-caveat text-xl sm:text-2xl block mb-1">The Practical Antidote</span>
-        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-sand mb-3">
-            What Teams Actually Do
-            <span class="block text-xl sm:text-2xl font-normal text-brand-gold italic mt-1">
-                (The 2-Hour Reset)
-            </span>
-        </h2>
-        <p class="text-xs sm:text-sm text-brand-light/85 font-sans leading-relaxed mb-6">
-            Your team steps completely away from laptops for two hours. Using artist palette knives, textured sculpting paste, and 3D display blocks, each person sculpts their own permanent keepsake cake art.
-        </p>
-
-        <!-- rest of card content... -->
-
-                        <div class="space-y-4 text-xs font-sans text-brand-sand/90">
-                            <div class="bg-brand-card/80 rounded-2xl p-4 border border-brand-gold/20">
-                                <h3 class="font-serif text-sm font-bold text-brand-gold mb-1">✦ Zero Pastry Tests or Performance Pressure</h3>
-                                <p class="text-brand-light/80 leading-relaxed">
-                                    No baking skills or art experience required. Mixing colors and spreading thick textures naturally lowers physical stress, allowing coworkers to chat openly without awkward icebreakers.
-                                </p>
-                            </div>
-
-                            <div class="bg-brand-card/80 rounded-2xl p-4 border border-brand-gold/20">
-                                <h3 class="font-serif text-sm font-bold text-brand-gold mb-1">✦ A Permanent Desk Anchor</h3>
-                                <p class="text-brand-light/80 leading-relaxed">
-                                    Every employee takes home a solid, sculpted art piece for their office desk. It sits on their workspace as an ongoing physical reminder to pause and stay grounded during crunch times.
-                                </p>
-                            </div>
-
-                            <div class="bg-brand-card/80 rounded-2xl p-4 border border-brand-gold/20">
-                                <h3 class="font-serif text-sm font-bold text-brand-gold mb-1">✦ The 30-Day Project Reflection Journal</h3>
-                                <p class="text-brand-light/80 leading-relaxed">
-                                    Every participant receives our 30-day follow-up journal with short, daily prompts to help people recognize stress triggers before they turn into team conflict.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mt-6 pt-4 border-t border-brand-gold/20 text-center">
-                        <span class="font-serif italic text-xs text-brand-gold">
-                            "When hands are busy, defenses drop, laughter happens, and real connection returns."
-                        </span>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- SECTION 2: SIDE-BY-SIDE (ONE UNIFIED PACKAGE & THE PROPOSAL FORM) -->
-        <section id="booking-block" class="max-w-6xl mx-auto px-4 sm:px-6">
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-stretch">
-                
-                <!-- LEFT COLUMN (7 COLS): ONE CLEAN DELIVERY PACKAGE BOX -->
-                <div class="lg:col-span-6 bg-brand-cream rounded-3xl border-2 border-brand-gold p-6 sm:p-8 flex flex-col justify-between shadow-md">
-                    <div>
-                        <div class="flex items-center justify-between gap-2 mb-2">
-                            <span class="bg-brand-gold/20 text-brand-oak font-sans text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full border border-brand-gold/40">
-                                All-Inclusive Flat Rate
-                            </span>
-                            <span class="text-brand-dark/60 text-xs font-sans">10-person minimum</span>
-                        </div>
-
-                        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-oak mb-1">The 2-Hour Resilience Workshop</h2>
-                        <p class="text-xs font-sans text-brand-dark/70 mb-4">On-Site Office, Nationwide Shipped Virtual, or Hybrid</p>
-
-                        <div class="bg-white rounded-2xl p-5 border border-brand-gold/30 mb-5 shadow-xs">
-                            <div class="flex items-baseline gap-2 mb-1">
-                                <span class="font-serif font-bold text-3xl sm:text-4xl text-brand-oak">$145</span>
-                                <span class="text-xs font-sans text-brand-dark/60">/ participant</span>
-                            </div>
-                            <p class="text-[11px] font-sans text-brand-gold-dark font-semibold">
-                                Flat rate across all formats. Everything included with zero hidden supply fees.
-                            </p>
-                        </div>
-
-                        <div class="space-y-3.5 text-xs font-sans text-brand-dark/85 mb-6">
-                            <strong class="font-serif text-sm font-bold text-brand-oak block">Choose Your Team's Format:</strong>
-                            
-                            <div class="p-3 bg-brand-light/70 rounded-xl border border-brand-gold/20">
-                                <p class="font-bold text-brand-oak text-xs mb-0.5">✦ Local In-Person Offsite (DFW Area)</p>
-                                <p class="text-brand-dark/75 text-[11px] leading-relaxed">
-                                    We come directly to your company office, meeting room, or retreat venue. 100% turnkey: we handle table coverings, toolsets, guided instruction, and all cleanup.
-                                </p>
-                            </div>
-
-                            <div class="p-3 bg-brand-light/70 rounded-xl border border-brand-gold/20">
-                                <p class="font-bold text-brand-oak text-xs mb-0.5">✦ Nationwide Shipped Virtual (Remote Teams)</p>
-                                <p class="text-brand-dark/75 text-[11px] leading-relaxed">
-                                    Complete non-perishable kits shipped directly to individual employee doorsteps across the country ($12 flat shipping per kit). Accompanied by a relaxed, camera-optional video session.
-                                </p>
-                            </div>
-
-                            <div class="p-3 bg-brand-light/70 rounded-xl border border-brand-gold/20">
-                                <p class="font-bold text-brand-oak text-xs mb-0.5">✦ Hybrid Teams Supported</p>
-                                <p class="text-brand-dark/75 text-[11px] leading-relaxed">
-                                    Unite in-person teammates at your headquarters with shipped kits for remote coworkers so everyone creates together at the same time.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div class="bg-white/80 p-3.5 rounded-xl border border-brand-gold/20 text-[11px] font-sans text-brand-dark/80 space-y-1">
-                            <p><strong>Every attendee receives:</strong></p>
-                            <p>✦ Complete sculpting tools, paste, and 3D display form to keep</p>
-                            <p>✦ Finished permanent keepsake sculpture for their desk</p>
-                            <p>✦ The 30-Day Project Reflection Journal</p>
-                        </div>
-                    </div>
-
-                    <div class="mt-6 pt-4 border-t border-brand-gold/20 text-center">
-                        <span class="text-[11px] font-sans text-brand-dark/60">
-                            Corporate invoicing, company cards, ACH, and procurement vendor setup supported.
-                        </span>
-                    </div>
-                </div>
-
-                <!-- RIGHT COLUMN (6 COLS): REQUEST PROPOSAL FORM -->
-                <div id="inquire" class="lg:col-span-6 bg-brand-cream rounded-3xl border-2 border-brand-gold/40 p-6 sm:p-8 flex flex-col justify-between shadow-md">
-                    <div>
-                        <span class="text-brand-gold-dark font-caveat text-2xl block mb-1">Easy Scheduling</span>
-                        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-oak mb-1">Request a Team Proposal</h2>
-                        <p class="text-xs text-brand-dark/75 font-sans mb-5 leading-relaxed">
-                            Share your team size and target timeline. We will send over a custom proposal and confirm date availability within one business day.
-                        </p>
-
-                        <form class="space-y-3.5 font-sans text-xs" onsubmit="handleCorporateInquiry(event)">
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                <div>
-                                    <label class="block font-bold uppercase tracking-wider text-brand-oak text-[10px] mb-1">Your Name *</label>
-                                    <input type="text" name="name" required placeholder="e.g. Sarah Jenkins" class="w-full bg-white border border-brand-gold/30 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-brand-gold">
-                                </div>
-                                <div>
-                                    <label class="block font-bold uppercase tracking-wider text-brand-oak text-[10px] mb-1">Company Name *</label>
-                                    <input type="text" name="company" required placeholder="e.g. Acme Tech" class="w-full bg-white border border-brand-gold/30 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-brand-gold">
-                                </div>
-                            </div>
-
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                <div>
-                                    <label class="block font-bold uppercase tracking-wider text-brand-oak text-[10px] mb-1">Work Email *</label>
-                                    <input type="email" name="email" required placeholder="sarah@company.com" class="w-full bg-white border border-brand-gold/30 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-brand-gold">
-                                </div>
-                                <div>
-                                    <label class="block font-bold uppercase tracking-wider text-brand-oak text-[10px] mb-1">Team Size *</label>
-                                    <select name="team_size" required class="w-full bg-white border border-brand-gold/30 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-brand-gold">
-                                        <option value="">Select participant range</option>
-                                        <option value="10-15">10 to 15 people</option>
-                                        <option value="16-25">16 to 25 people</option>
-                                        <option value="26-50">26 to 50 people</option>
-                                        <option value="50+">50+ people (Multiple Sessions)</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                                <div>
-                                    <label class="block font-bold uppercase tracking-wider text-brand-oak text-[10px] mb-1">Preferred Format *</label>
-                                    <select name="format" required class="w-full bg-white border border-brand-gold/30 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-brand-gold">
-                                        <option value="On-Site Local (DFW)">In-Person at Our Office / Venue (DFW)</option>
-                                        <option value="Nationwide Shipped Virtual">Nationwide Shipped Kits (Remote Team)</option>
-                                        <option value="Hybrid (In-Person + Shipped)">Hybrid (In-Person + Remote Kits)</option>
-                                    </select>
-                                </div>
-                                <div>
-                                    <label class="block font-bold uppercase tracking-wider text-brand-oak text-[10px] mb-1">Target Dates or Month</label>
-                                    <input type="text" name="timing" placeholder="e.g. Next month, Q3 offsite, or exact date" class="w-full bg-white border border-brand-gold/30 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-brand-gold">
-                                </div>
-                            </div>
-
-                            <div>
-                                <label class="block font-bold uppercase tracking-wider text-brand-oak text-[10px] mb-1">Tell Us About Your Team</label>
-                                <textarea name="notes" rows="3" placeholder="What kind of team is this, what is their current workload like, or what are you hoping they get out of this?" class="w-full bg-white border border-brand-gold/30 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-brand-gold resize-none"></textarea>
-                            </div>
-
-                            <div class="pt-2">
-                                <button type="submit" class="w-full bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md">
-                                    Submit Proposal Request &rarr;
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-
-                    <div class="mt-4 text-center">
-                        <span class="text-[9px] text-brand-dark/50 font-serif italic">
-                            Zero sales spam. Just direct coordination from our studio.
-                        </span>
-                    </div>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- SECTION 3: THE 2-HOUR WORKSHOP FLOW -->
-        <section class="max-w-6xl mx-auto px-4 sm:px-6">
-            <div class="bg-brand-cream rounded-3xl border border-brand-gold/30 p-6 sm:p-10 shadow-sm">
-                
-                <div class="text-center max-w-xl mx-auto mb-8">
-                    <span class="text-brand-gold-dark font-caveat text-2xl block mb-1">Tight, Respectful Timing</span>
-                    <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-oak mb-2">The 2-Hour Workshop Flow</h2>
-                    <p class="text-xs text-brand-dark/80 font-sans">
-                        No wasted time. Structured in three clear parts designed for busy schedules:
+                <div class="text-center max-w-2xl mx-auto mb-10">
+                    <span class="text-brand-gold-dark font-caveat text-xl md:text-2xl block mb-1">Plan Your Experience</span>
+                    <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-oak mb-2">Choose How You Want to Gather</h2>
+                    <p class="text-xs sm:text-sm text-brand-dark/80 leading-relaxed font-sans">
+                        All our standard sessions focus on creating permanent keepsake cake art: pieces you tint, pipe, and sculpt to display on your desk or shelf.
                     </p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                <!-- 3 GATHERING CARDS -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-7 items-stretch mb-8">
                     
-                    <div class="bg-white rounded-2xl p-5 border border-brand-gold/30 shadow-xs flex flex-col justify-between">
+                    <!-- OPTION 1: PUBLIC STUDIO SEATS -->
+                    <div class="bg-brand-oak text-brand-light p-6 sm:p-7 rounded-2xl border border-brand-gold/30 shadow-md flex flex-col justify-between">
                         <div>
-                            <span class="text-[10px] font-sans font-bold uppercase tracking-widest text-brand-gold-dark block mb-1">Part 1 &bull; 15 Minutes</span>
-                            <h3 class="font-serif text-base font-bold text-brand-oak mb-2">The Real Talk Kickoff</h3>
-                            <ul class="text-xs text-brand-dark/80 font-sans space-y-2 mb-4 leading-relaxed">
-                                <li>✦ <strong>Setting Down the Tech:</strong> Stepping away from keyboards and acknowledging the current project crunch.</li>
-                                <li>✦ <strong>Meeting the Tools:</strong> Getting comfortable with palette knives, sculpting pastes, and color palettes.</li>
-                                <li>✦ <strong>The Ground Rules:</strong> Zero pastry rules, no perfectionism, and zero forced sharing.</li>
-                            </ul>
+                            <div class="flex items-center gap-2 mb-2.5">
+                                <span class="font-sans font-bold text-[10px] uppercase tracking-widest text-brand-gold">Option 01</span>
+                                <span class="inline-block w-1 h-1 rounded-full bg-brand-gold/40"></span>
+                                <span class="bg-brand-gold/20 text-brand-gold font-sans text-[9px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full border border-brand-gold/30">
+                                    Individuals &amp; Pairs
+                                </span>
+                            </div>
+
+                            <h3 class="font-serif text-xl sm:text-2xl font-bold text-brand-light mb-1">Public Studio Seat</h3>
+                            <p class="text-brand-sand/80 font-sans text-xs mb-3">Scheduled Dates &bull; McKinney &amp; DFW Venues</p>
+                            
+                            <div class="font-serif font-bold text-3xl text-brand-light mb-1">
+                                $85 <span class="text-xs font-normal text-brand-light/60 font-sans tracking-normal">/ Seat</span>
+                            </div>
+                            <p class="text-[11px] font-sans text-brand-gold font-medium mb-4">All Materials Provided &bull; Take Home Your Art</p>
+
+                            <p class="text-xs text-brand-sand/90 font-sans leading-relaxed mb-4">
+                                Reserve a personal seat at an upcoming studio table. Pull up a chair, mix your colors, and sculpt your permanent cake creation alongside others.
+                            </p>
+
+                            <div class="bg-brand-card/70 p-4 rounded-xl border border-brand-gold/15 text-xs font-sans text-brand-sand/90 space-y-2 mb-4">
+                                <strong class="text-brand-gold font-serif block text-xs">Included At Your Seat:</strong>
+                                <p class="leading-relaxed">✦ Complete studio materials, 3D form, palette knives, and paste for use during your 90-minute session</p>
+                                <p class="leading-relaxed">✦ A sturdy window bakery box to carry your finished sculpture home safely</p>
+                                <p class="text-[11px] text-brand-gold/90 pt-2 border-t border-brand-gold/15">
+                                    Note: Tools stay in the studio, but you can add a take-home DIY Studio Kit at checkout for $50 (Save $18).
+                                </p>
+                            </div>
                         </div>
-                        <span class="text-[10px] font-sans font-semibold text-brand-oak/60 uppercase">Settles The Room</span>
+
+                        <div class="pt-2">
+                            <a href="https://square.link/u/hNKitO2s" target="_blank" rel="noopener" class="w-full flex items-center justify-center gap-1.5 bg-brand-gold text-brand-oak font-sans text-[11px] sm:text-xs font-bold uppercase tracking-wider py-3.5 px-4 rounded-full hover:bg-brand-sand transition-all shadow-sm whitespace-nowrap">
+                                <span>Reserve Studio Seat ($85)</span>
+                                <span class="shrink-0">&rarr;</span>
+                            </a>
+                            <p class="text-[10px] text-brand-sand/60 text-center font-sans mt-2">
+                                Select your date at checkout &bull; Instant confirmation
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="bg-white rounded-2xl p-5 border border-brand-gold/30 shadow-xs flex flex-col justify-between">
+                    <!-- OPTION 2: PRIVATE SOCIAL CELEBRATIONS -->
+                    <div class="bg-brand-light text-brand-dark p-6 sm:p-7 rounded-2xl border-2 border-brand-gold shadow-md flex flex-col justify-between">
                         <div>
-                            <span class="text-[10px] font-sans font-bold uppercase tracking-widest text-brand-gold-dark block mb-1">Part 2 &bull; 75 Minutes</span>
-                            <h3 class="font-serif text-base font-bold text-brand-oak mb-2">The Hands-On Build</h3>
-                            <ul class="text-xs text-brand-dark/80 font-sans space-y-2 mb-4 leading-relaxed">
-                                <li>✦ <strong>Mixing &amp; Tinting:</strong> Blending colors that match how people want to feel (calm neutrals, bold brights).</li>
-                                <li>✦ <strong>Piping &amp; Sculpting:</strong> Spreading thick paste onto 3D display blocks using traditional pastry piping techniques.</li>
-                                <li>✦ <strong>Rolling With Mistakes:</strong> Learning to adjust when a texture slips or paste smudges, turning errors into creative choices.</li>
-                            </ul>
+                            <div class="flex items-center gap-2 mb-2.5">
+                                <span class="font-sans font-bold text-[10px] uppercase tracking-widest text-brand-gold-dark">Option 02</span>
+                                <span class="inline-block w-1 h-1 rounded-full bg-brand-gold/50"></span>
+                                <span class="bg-brand-gold/25 text-brand-oak font-sans text-[9px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full">
+                                    Friends &amp; Family
+                                </span>
+                            </div>
+
+                            <h3 class="font-serif text-xl sm:text-2xl font-bold text-brand-oak mb-1">Private Social Celebrations</h3>
+                            <p class="text-brand-dark/70 font-sans text-xs mb-3">In Your Home, Club Room, or DFW Venue</p>
+                            
+                            <div class="font-serif font-bold text-3xl text-brand-oak mb-1">
+                                $135 <span class="text-xs font-normal text-brand-dark/60 font-sans tracking-normal">/ Seat</span>
+                            </div>
+                            <p class="text-[11px] font-sans text-brand-gold-dark font-medium mb-4">10-Seat Minimum &bull; Guests Keep Their Kits</p>
+
+                            <p class="text-xs text-brand-dark/85 font-sans leading-relaxed mb-4">
+                                Designed for milestone birthdays, bridal gatherings, and family celebrations. We bring the full studio setup straight to your living room or rented venue.
+                            </p>
+
+                            <div class="bg-brand-cream p-4 rounded-xl border border-brand-gold/20 text-xs font-sans text-brand-dark/90 space-y-2 mb-4">
+                                <strong class="text-brand-oak font-serif block text-xs">Celebration Experience:</strong>
+                                <p class="leading-relaxed">✦ <strong>100% Turnkey Setup:</strong> We bring all tools, workmats, and table coverings, handling full setup and cleanup so hosts can relax.</p>
+                                <p class="leading-relaxed">✦ <strong>Keep the Kit:</strong> Every guest takes home their complete toolkit alongside their finished sculpture in a display box.</p>
+                                <p class="leading-relaxed">✦ <strong>Flexible Timing:</strong> Book the morning, afternoon, or evening that works best for your group.</p>
+                            </div>
                         </div>
-                        <span class="text-[10px] font-sans font-semibold text-brand-oak/60 uppercase">The Stress Melts Away</span>
+
+                        <div class="pt-2">
+                            <button type="button" onclick="openInquiryModal('Option 02: Private Social Celebration ($135/seat)')" class="w-full flex items-center justify-center gap-1.5 bg-brand-oak text-brand-sand font-sans text-[11px] sm:text-xs font-bold uppercase tracking-wider py-3.5 px-4 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md whitespace-nowrap">
+                                <span>Inquire for Private Gathering</span>
+                                <span class="shrink-0">&rarr;</span>
+                            </button>
+                            <p class="text-[10px] text-brand-dark/50 text-center font-sans mt-2">
+                                Custom dates &amp; private studio setups
+                            </p>
+                        </div>
                     </div>
 
-                    <div class="bg-white rounded-2xl p-5 border border-brand-gold/30 shadow-xs flex flex-col justify-between">
+                    <!-- OPTION 3: CORPORATE TEAM EVENTS ($145 FLAT RATE) -->
+                    <div class="bg-brand-oak text-brand-light p-6 sm:p-7 rounded-2xl border border-brand-gold/30 shadow-md flex flex-col justify-between">
                         <div>
-                            <span class="text-[10px] font-sans font-bold uppercase tracking-widest text-brand-gold-dark block mb-1">Part 3 &bull; 30 Minutes</span>
-                            <h3 class="font-serif text-base font-bold text-brand-oak mb-2">Debrief &amp; Desk Takeaways</h3>
-                            <ul class="text-xs text-brand-dark/80 font-sans space-y-2 mb-4 leading-relaxed">
-                                <li>✦ <strong>Gallery Walk:</strong> Teammates check out each other's work and share easy laughs across tables.</li>
-                                <li>✦ <strong>Workplace Application:</strong> A casual conversation about how our team handles sudden deadline shifts.</li>
-                                <li>✦ <strong>Journal Handout:</strong> Boxing up our permanent art pieces and handing out the 30-day desk reflection books.</li>
-                            </ul>
+                            <div class="flex items-center gap-2 mb-2.5">
+                                <span class="font-sans font-bold text-[10px] uppercase tracking-widest text-brand-gold">Option 03</span>
+                                <span class="inline-block w-1 h-1 rounded-full bg-brand-gold/40"></span>
+                                <span class="bg-brand-gold text-brand-oak font-sans text-[9px] font-bold uppercase tracking-wider px-2.5 py-0.5 rounded-full">
+                                    Corporate &amp; Teams
+                                </span>
+                            </div>
+
+                            <h3 class="font-serif text-xl sm:text-2xl font-bold text-brand-light mb-1">Designing Resilience Workshops</h3>
+                            <p class="text-brand-sand/80 font-sans text-xs mb-3">Corporate Team Events &bull; On-Site, Virtual, or Hybrid</p>
+                            
+                            <div class="font-serif font-bold text-3xl text-brand-light mb-1">
+                                $145 <span class="text-xs font-normal text-brand-light/60 font-sans tracking-normal">/ Seat</span>
+                            </div>
+                            <p class="text-[11px] font-sans text-brand-gold font-medium mb-4">10-Seat Minimum &bull; Nationwide Fulfillment</p>
+
+                            <p class="text-xs text-brand-sand/90 font-sans leading-relaxed mb-4">
+                                A fast 2-hour hands-on reset for busy teams. Working with tactile materials helps colleagues break through project stress, drop defensive posturing, and talk like real human beings. Hosted screen-free at your office or live via Zoom or Google Meet for remote groups.
+                            </p>
+
+                            <div class="bg-brand-card/70 p-4 rounded-xl border border-brand-gold/15 text-xs font-sans text-brand-sand/90 space-y-2 mb-4">
+                                <strong class="text-brand-gold font-serif block text-xs">The Business Impact:</strong>
+                                <p class="leading-relaxed">✦ <strong>Hands-On Reset:</strong> Teams look down from screens to construct permanent 3D keepsake sculptures that calm mental clutter.</p>
+                                <p class="leading-relaxed">✦ <strong>Sustained ROI:</strong> Every attendee keeps their physical desk sculpture and our signature Bake to Baseline Guided Journal.</p>
+                                <p class="leading-relaxed">✦ <strong>On-Site or Shipped:</strong> Hosted on-site at your workplace or shipped directly to remote doors nationwide ($145/seat plus $12 flat shipping; international shipping available upon request).</p>
+                            </div>
                         </div>
-                        <span class="text-[10px] font-sans font-semibold text-brand-oak/60 uppercase">Leaves You Connected</span>
+
+                        <div class="pt-2">
+                            <button type="button" onclick="openInquiryModal('Option 03: Designing Resilience Corporate Workshop ($145/seat)')" class="w-full flex items-center justify-center gap-1.5 bg-brand-gold text-brand-oak font-sans text-[11px] sm:text-xs font-bold uppercase tracking-wider py-3.5 px-4 rounded-full hover:bg-brand-sand transition-all shadow-md whitespace-nowrap">
+                                <span>Inquire for Corporate Event</span>
+                                <span class="shrink-0">&rarr;</span>
+                            </button>
+                            <a href="corporate.html" class="w-full flex items-center justify-center gap-1 text-[10px] font-sans font-semibold text-brand-gold hover:text-brand-sand transition-colors mt-2.5 whitespace-nowrap">
+                                <span>Read Corporate Overview &amp; Business Case</span>
+                                <span class="shrink-0">&rarr;</span>
+                            </a>
+                        </div>
                     </div>
 
+                </div>
+
+                <!-- LOCAL DFW HERITAGE BRIDGE -->
+                <div class="bg-white/95 rounded-2xl p-6 border border-brand-gold/30 shadow-xs">
+                    <div class="flex flex-col md:flex-row items-center justify-between gap-5 text-center md:text-left">
+                        <div class="space-y-1.5 max-w-2xl">
+                            <div class="flex items-center justify-center md:justify-start gap-2">
+                                <span class="bg-brand-gold/20 text-brand-gold-dark font-sans text-[9px] font-bold uppercase tracking-widest px-2.5 py-0.5 rounded-full border border-brand-gold/30">
+                                    Local DFW Culinary Option
+                                </span>
+                            </div>
+                            <h4 class="font-serif font-bold text-lg text-brand-oak">Interested in decorating real cake?</h4>
+                            <p class="text-xs text-brand-dark/80 font-sans leading-relaxed">
+                                Our studio centers on permanent keepsake cake sculptures. These are pieces you design once and keep forever on your desk or shelf. But because this atelier started in the kitchen, we still honor our roots. If you are local to the Dallas-Fort Worth area and want to decorate fresh scratch cake layers with artisan buttercream to slice and share for your private celebration, let us know when reaching out.
+                            </p>
+                        </div>
+                        <a href="contact.html?subject=Local%20DFW%20Edible%20Cake%20Canvas%20Gathering" class="shrink-0 flex items-center justify-center gap-1.5 bg-brand-oak text-brand-sand font-sans text-[11px] sm:text-xs font-bold uppercase tracking-wider py-3 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-sm whitespace-nowrap">
+                            <span>Inquire for Edible Gathering</span>
+                            <span class="shrink-0">&rarr;</span>
+                        </a>
+                    </div>
                 </div>
 
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- SECTION 4: FREQUENTLY ASKED QUESTIONS (NOW THE FINAL SECTION) -->
-        <section class="max-w-6xl mx-auto px-4 sm:px-6">
-            <div class="bg-brand-cream rounded-3xl border border-brand-gold/30 p-6 sm:p-10 shadow-sm">
+    <!-- SECTION 2: WHAT THIS IS ACTUALLY ABOUT -->
+    <section class="pb-12 md:pb-14">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+            <div class="bg-brand-cream rounded-3xl border border-brand-gold/30 p-6 sm:p-10 md:p-12 shadow-sm text-center">
                 
-                <div class="text-center mb-8">
-                    <span class="text-brand-gold-dark font-caveat text-2xl block mb-1">Clear Answers</span>
-                    <h2 class="font-serif text-2xl sm:text-3xl text-brand-oak font-bold">Frequently Asked Questions</h2>
-                </div>
+                <span class="text-brand-gold-dark font-caveat text-xl md:text-2xl block mb-1">Leave Perfectionism at the Door</span>
+                <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-oak mb-6">What This Is Actually About</h2>
                 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-5 font-sans text-xs">
-                    
-                    <div class="bg-white p-5 rounded-2xl border border-brand-gold/20 shadow-xs">
-                        <h3 class="font-serif text-sm font-bold text-brand-oak mb-1.5">Is this just an arts and crafts class?</h3>
-                        <p class="text-brand-dark/80 leading-relaxed">
-                            No. While it is creative and fun, working with your hands is a deliberate break from keyboards. People talk more openly and drop their guard much faster when their hands are busy than they ever do in a typical boardroom meeting.
+                <div class="space-y-4 text-brand-dark/85 text-xs sm:text-sm font-sans leading-relaxed max-w-2xl mx-auto text-left">
+                    <p>
+                        Most creative classes accidentally make you more stressed. You walk in, see a spotless sample cake on display, and spend two hours worrying about whether your piping lines are straight or if you are doing it wrong.
+                    </p>
+                    <p class="font-serif font-bold text-brand-oak text-sm sm:text-base text-center py-1">
+                        We built this table to be the exact opposite.
+                    </p>
+                    <p>
+                        You aren't here to pass a pastry test or perform for an audience. You are here to give your mind a break and work with your hands.
+                    </p>
+                    <p>
+                        When you sit down, there are no templates to copy and no rules about what looks "good." You choose colors based on what your mood needs today. You pick tools that feel comfortable to hold. Whether you are piping borders, spreading paste with a palette knife, or pressing stones and flowers into place, your hands take over.
+                    </p>
+
+                    <!-- Quote Box -->
+                    <div class="bg-brand-oak text-brand-light p-6 sm:p-7 rounded-2xl border border-brand-gold/40 my-6 shadow-md text-center">
+                        <p class="font-serif italic text-base sm:text-lg text-brand-gold mb-2 leading-snug">
+                            "You are not here to bake a pastry test or perform for an audience. You are here to give your mind a break, work with your hands, and decide what feels right to you."
                         </p>
+                        <span class="text-[10px] font-sans uppercase tracking-[0.25em] text-brand-sand/80 font-bold block">
+                            Contains 0% bad vibes, 100% comfort
+                        </span>
                     </div>
 
-                    <div class="bg-white p-5 rounded-2xl border border-brand-gold/20 shadow-xs">
-                        <h3 class="font-serif text-sm font-bold text-brand-oak mb-1.5">How does this help our team day-to-day?</h3>
-                        <p class="text-brand-dark/80 leading-relaxed">
-                            It breaks through burnout before people quit, cuts down passive-aggressive project friction, and leaves people with practical tools to stay calm when deadlines get chaotic.
-                        </p>
-                    </div>
-
-                    <div class="bg-white p-5 rounded-2xl border border-brand-gold/20 shadow-xs">
-                        <h3 class="font-serif text-sm font-bold text-brand-oak mb-1.5">Can our busy team really afford two hours?</h3>
-                        <p class="text-brand-dark/80 leading-relaxed">
-                            A single workplace blowup or employee quitting costs thousands of dollars and weeks of lost momentum. Investing two hours pays for itself immediately in smoother sprints and better communication.
-                        </p>
-                    </div>
-
-                    <div class="bg-white p-5 rounded-2xl border border-brand-gold/20 shadow-xs">
-                        <h3 class="font-serif text-sm font-bold text-brand-oak mb-1.5">Do you support corporate invoicing and POs?</h3>
-                        <p class="text-brand-dark/80 leading-relaxed">
-                            Yes. We provide consolidated invoices, accept ACH and company credit cards, supply W-9 paperwork, and easily register with your procurement system.
-                        </p>
-                    </div>
-
+                    <p>
+                        The noise in your head quiets down. Your shoulders drop. If a line comes out wonky or a flower lands off-center, try to leave it alone and keep moving. Messy happens, nobody is grading your work, and you don't have to fix anything to make it acceptable. Perfectionism stays outside, and for two hours, you don't have to pretend you aren't tired.
+                    </p>
                 </div>
 
             </div>
-        </section>
+        </div>
+    </section>
 
-    </main>
+    <!-- SECTION 3: THE 5-LAYER SENSORY METHOD -->
+    <section class="pb-12 md:pb-16">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+            
+            <div class="bg-brand-cream rounded-3xl border border-brand-gold/30 p-6 sm:p-8 lg:p-10 shadow-sm">
+                
+                <div class="text-center max-w-xl mx-auto mb-8">
+                    <span class="text-brand-gold-dark font-caveat text-xl md:text-2xl block mb-1">Our Storytelling Process</span>
+                    <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-oak mb-2.5">The 5-Layer Sensory Framework</h2>
+                    <p class="text-xs sm:text-sm text-brand-dark/80 leading-relaxed font-sans">
+                        Instead of staring at a blank canvas or feeling pressured to copy a sample, we walk through five self-guided stages to translate what you feel into physical form:
+                    </p>
+                </div>
 
-    <!-- STANDARDIZED FOOTER -->
+                <!-- BASELINE: THE HEART -->
+                <div class="bg-white/95 rounded-2xl p-5 sm:p-6 border border-brand-gold/30 shadow-xs mb-7">
+                    <div class="flex flex-col sm:flex-row items-center sm:items-start gap-4">
+                        <span class="w-10 h-10 rounded-full bg-brand-oak text-brand-gold font-serif font-bold text-sm flex items-center justify-center shrink-0 border border-brand-gold/40 shadow-xs">
+                            ✦
+                        </span>
+                        <div class="flex-1 text-center sm:text-left">
+                            <div class="flex flex-wrap items-center justify-center sm:justify-start gap-2 mb-1">
+                                <span class="text-[9px] font-sans font-bold uppercase tracking-widest text-brand-gold-dark">Starting Baseline</span>
+                                <span class="text-brand-dark/30">&bull;</span>
+                                <h3 class="font-serif text-lg font-bold text-brand-oak">The Heart</h3>
+                                <span class="text-xs font-caveat text-brand-gold-dark bg-brand-light px-2.5 py-0.5 rounded-full border border-brand-gold/25 ml-auto hidden sm:inline-block">
+                                    Feelings &amp; Mood
+                                </span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-brand-dark/85 font-sans leading-relaxed">
+                                Where are you starting today? Are you tired, anxious, joyful, or overstimulated? We do not judge the feeling; we simply name it. This is your unmasked mark on the map before picking up any tools.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 5 CARDS -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 items-stretch mb-7">
+                    
+                    <div class="bg-white/95 rounded-2xl p-5 border border-brand-gold/30 shadow-xs flex flex-col justify-between hover:border-brand-gold hover:shadow-md transition-all">
+                        <div>
+                            <span class="w-8 h-8 rounded-full bg-brand-oak text-brand-sand font-serif font-bold text-xs flex items-center justify-center mb-3 shadow-xs border border-brand-gold/30">
+                                01
+                            </span>
+                            <h4 class="font-serif text-base font-bold text-brand-oak leading-snug">The Invitation</h4>
+                            <p class="text-sm font-caveat text-brand-gold-dark mb-2.5">Color &amp; Mood</p>
+                            <p class="text-[11px] text-brand-dark/80 leading-relaxed font-sans">
+                                What signal does your spirit need right now? Choose an earthy cooling palette to hush room noise, or a sunny dopamine pop to break through mental fatigue.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white/95 rounded-2xl p-5 border border-brand-gold/30 shadow-xs flex flex-col justify-between hover:border-brand-gold hover:shadow-md transition-all">
+                        <div>
+                            <span class="w-8 h-8 rounded-full bg-brand-oak text-brand-sand font-serif font-bold text-xs flex items-center justify-center mb-3 shadow-xs border border-brand-gold/30">
+                                02
+                            </span>
+                            <h4 class="font-serif text-base font-bold text-brand-oak leading-snug">The Memory</h4>
+                            <p class="text-sm font-caveat text-brand-gold-dark mb-2.5">Shape &amp; Rhythm</p>
+                            <p class="text-[11px] text-brand-dark/80 leading-relaxed font-sans">
+                                What memory or feeling are you recreating? Use flowing curves for gentle ease, repetitive piped shells for rhythmic anxiety relief, or wild botanical carvings.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white/95 rounded-2xl p-5 border border-brand-gold/30 shadow-xs flex flex-col justify-between hover:border-brand-gold hover:shadow-md transition-all">
+                        <div>
+                            <span class="w-8 h-8 rounded-full bg-brand-oak text-brand-sand font-serif font-bold text-xs flex items-center justify-center mb-3 shadow-xs border border-brand-gold/30">
+                                03
+                            </span>
+                            <h4 class="font-serif text-base font-bold text-brand-oak leading-snug">The Anchor</h4>
+                            <p class="text-sm font-caveat text-brand-gold-dark mb-2.5">Touch &amp; Texture</p>
+                            <p class="text-[11px] text-brand-dark/80 leading-relaxed font-sans">
+                                What physical feel brings you back to your body? Choose a soft velvet cushion to soothe overstimulation, or crisp mineral textures and sea salt to clear brain fog.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white/95 rounded-2xl p-5 border border-brand-gold/30 shadow-xs flex flex-col justify-between hover:border-brand-gold hover:shadow-md transition-all">
+                        <div>
+                            <span class="w-8 h-8 rounded-full bg-brand-oak text-brand-sand font-serif font-bold text-xs flex items-center justify-center mb-3 shadow-xs border border-brand-gold/30">
+                                04
+                            </span>
+                            <h4 class="font-serif text-base font-bold text-brand-oak leading-snug">The Strategy</h4>
+                            <p class="text-sm font-caveat text-brand-gold-dark mb-2.5">Placement &amp; Space</p>
+                            <p class="text-[11px] text-brand-dark/80 leading-relaxed font-sans">
+                                Where do elements belong based on your social battery? Protect your energy in a centered core, draw protective border frames, or scatter radial blooms outward.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white/95 rounded-2xl p-5 border border-brand-gold/30 shadow-xs flex flex-col justify-between hover:border-brand-gold hover:shadow-md transition-all">
+                        <div>
+                            <span class="w-8 h-8 rounded-full bg-brand-oak text-brand-sand font-serif font-bold text-xs flex items-center justify-center mb-3 shadow-xs border border-brand-gold/30">
+                                05
+                            </span>
+                            <h4 class="font-serif text-base font-bold text-brand-oak leading-snug">The Magic</h4>
+                            <p class="text-sm font-caveat text-brand-gold-dark mb-2.5">The Shift &amp; Ritual</p>
+                            <p class="text-[11px] text-brand-dark/80 leading-relaxed font-sans">
+                                Take a conscious breath and observe how the heaviness lifted. Add a splatter of gold luster or a delicate blossom to declare your story complete.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- GALLERY CALLOUT -->
+                <div class="pt-6 border-t border-brand-gold/20 flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
+                    <div>
+                        <h4 class="font-serif text-base font-bold text-brand-oak mb-0.5">Curious What Studio Participants Create?</h4>
+                        <p class="text-xs text-brand-dark/75 font-sans">
+                            Explore our studio gallery to see live participant bakes and sculpting studies from past sessions.
+                        </p>
+                    </div>
+                    <a href="flipbook.html" class="shrink-0 flex items-center justify-center gap-1.5 bg-brand-oak text-brand-sand font-sans text-[11px] sm:text-xs font-bold uppercase tracking-wider py-3 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-sm whitespace-nowrap">
+                        <span>View Gallery</span>
+                        <span class="shrink-0">&rarr;</span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: FREQUENTLY ASKED QUESTIONS -->
+    <section class="py-16 md:py-20 bg-brand-oak text-brand-sand border-t-2 border-brand-gold/25 relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 relative z-10">
+            
+            <div class="text-center mb-10">
+                <span class="text-brand-gold font-caveat text-2xl md:text-3xl block mb-1">Clear Answers</span>
+                <h2 class="font-serif text-2xl sm:text-3xl md:text-4xl text-brand-sand font-bold">Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 font-sans">
+                
+                <div class="bg-brand-cream text-brand-dark p-6 sm:p-7 rounded-2xl shadow-md border border-brand-gold/30">
+                    <h3 class="font-serif text-base text-brand-gold-dark font-bold mb-2">Do I need any cake decorating or art experience?</h3>
+                    <p class="text-brand-dark/85 leading-relaxed text-xs">Not at all. In fact, most people who attend have never touched a palette knife or piping bag before. This experience is designed for complete beginners and overstimulated minds. There is no right or wrong way to make your piece, and you cannot ruin it.</p>
+                </div>
+
+                <div class="bg-brand-cream text-brand-dark p-6 sm:p-7 rounded-2xl shadow-md border border-brand-gold/30">
+                    <h3 class="font-serif text-base text-brand-gold-dark font-bold mb-2">What materials do we use in the workshop?</h3>
+                    <p class="text-brand-dark/85 leading-relaxed text-xs">Our workshops use 3D display blocks, professional whipped sculpting paste, acrylic color emulsions, artist palette knives, piping bags, raw mineral accents, and dried botanicals to build a permanent keepsake sculpture that dries solid for tabletop display.</p>
+                </div>
+
+                <div class="bg-brand-cream text-brand-dark p-6 sm:p-7 rounded-2xl shadow-md border border-brand-gold/30">
+                    <h3 class="font-serif text-base text-brand-gold-dark font-bold mb-2">Can we do fresh edible mini cakes instead?</h3>
+                    <p class="text-brand-dark/85 leading-relaxed text-xs">Yes! For private social celebrations hosted locally in the Dallas-Fort Worth area, groups can choose to decorate fresh scratch mini cakes with real artisan buttercream instead of permanent sculptures. Just note your preference when submitting your inquiry.</p>
+                </div>
+
+                <div class="bg-brand-cream text-brand-dark p-6 sm:p-7 rounded-2xl shadow-md border border-brand-gold/30">
+                    <h3 class="font-serif text-base text-brand-gold-dark font-bold mb-2">How do corporate workshops support remote teams?</h3>
+                    <p class="text-brand-dark/85 leading-relaxed text-xs">For distributed companies, we ship complete, non-perishable Keepsake Sculpture Kits directly to employee doorsteps nationwide ($145/kit plus $12 flat ground shipping; international shipping available upon request). Remote colleagues join our live session hosted via Zoom or Google Meet, where the camera is optional and the focus is hands-on making rather than staring at presentation slides.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
     <footer class="bg-brand-dark text-brand-gray border-t border-brand-gold/20 font-sans text-xs">
         <div class="max-w-2xl mx-auto px-6 py-6">
             <div class="flex flex-col items-center">
@@ -500,7 +512,7 @@
                 <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-4 text-brand-light font-medium text-[9px] uppercase tracking-[0.2em]">
                     <a href="contact.html" class="hover:text-brand-gold transition-colors">Contact Us</a>
                     <a href="press.html" class="hover:text-brand-gold transition-colors">Press &amp; Media</a>
-                    <a href="corporate.html" class="hover:text-brand-gold transition-colors">Corporate</a>
+                    <a href="corporate.html" class="hover:text-brand-gold transition-colors">Corporate Events</a>
                     <a href="https://baketobaseline.substack.com/" target="_blank" rel="noopener" class="hover:text-brand-gold transition-colors">Bake to Baseline</a>
                     <a href="partnerships.html" class="hover:text-brand-gold transition-colors">Partnerships</a>
                     <a href="policies.html" class="hover:text-brand-gold transition-colors">Order Fulfillment &amp; Delivery</a>
@@ -513,12 +525,84 @@
                     &copy; 2026 The Gilded Spoon Shoppe | McKinney, Texas
                 </p>
                 <p class="max-w-xl mx-auto font-sans text-[8px] leading-relaxed text-brand-gray/20 italic">
-                    Disclaimer: The Gilded Spoon Shoppe provides sensory design education. It is not a substitute for professional medical advice, diagnosis, or occupational therapy.
+                    Disclaimer: The Gilded Spoon Shoppe provides sensory design education. It is not a substitute for professional medical advice, diagnosis, or occupational therapy. Edible products are prepared in a home kitchen that handles allergens including wheat, dairy, eggs, soy, and nuts.
                 </p>
             </div>
         </div>
     </footer>
 
+    <!-- QUICK INQUIRY MODAL -->
+    <div id="inquiry-modal" class="fixed inset-0 bg-brand-oak/80 backdrop-blur-md z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+        <div class="bg-brand-cream rounded-2xl border-2 border-brand-gold/40 shadow-2xl max-w-lg w-full p-6 relative max-h-[90vh] overflow-y-auto text-left">
+            <button type="button" onclick="closeInquiryModal()" class="absolute top-4 right-4 text-brand-dark/40 hover:text-brand-oak text-2xl font-bold focus:outline-none transition-colors" aria-label="Close modal">
+                &times;
+            </button>
+
+            <span class="text-brand-gold-dark font-sans font-bold text-[10px] uppercase tracking-widest block mb-0.5">Direct Studio Inquiry</span>
+            <h3 class="font-serif text-xl sm:text-2xl font-bold text-brand-oak mb-1.5">Interested in Booking?</h3>
+            <p class="text-xs text-brand-dark/75 font-sans mb-4 leading-relaxed">
+                Leave your details below and we will reach out directly to check dates, answer questions, and plan your gathering.
+            </p>
+
+            <form id="quick-inquiry-form" class="space-y-3.5" onsubmit="handleQuickInquiry(event)">
+                <div>
+                    <label class="block text-[10px] font-bold uppercase tracking-wider text-brand-oak mb-1">Selected Gathering Type</label>
+                    <input type="text" id="modal-tier" name="gathering_type" readonly class="w-full bg-brand-light border border-brand-gold/30 rounded-xl px-3.5 py-2 text-xs text-brand-oak font-semibold focus:outline-none">
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label for="modal-name" class="block text-[10px] font-bold uppercase tracking-wider text-brand-oak mb-1">Your Name *</label>
+                        <input type="text" id="modal-name" name="name" required placeholder="e.g. Eleanor Vance" class="w-full bg-brand-light/60 border border-brand-gold/30 rounded-xl px-3 py-2 text-xs text-brand-dark focus:outline-none focus:border-brand-gold">
+                    </div>
+                    <div>
+                        <label for="modal-email" class="block text-[10px] font-bold uppercase tracking-wider text-brand-oak mb-1">Email Address *</label>
+                        <input type="email" id="modal-email" name="email" required placeholder="you@example.com" class="w-full bg-brand-light/60 border border-brand-gold/30 rounded-xl px-3 py-2 text-xs text-brand-dark focus:outline-none focus:border-brand-gold">
+                    </div>
+                </div>
+
+                <div>
+                    <label for="modal-phone" class="block text-[10px] font-bold uppercase tracking-wider text-brand-oak mb-1">Phone Number *</label>
+                    <input type="tel" id="modal-phone" name="phone" required placeholder="e.g. (214) 555-0199" class="w-full bg-brand-light/60 border border-brand-gold/30 rounded-xl px-3 py-2 text-xs text-brand-dark focus:outline-none focus:border-brand-gold">
+                </div>
+
+                <div>
+                    <label class="block text-[10px] font-bold uppercase tracking-wider text-brand-oak mb-1">How would you prefer we contact you? *</label>
+                    <div class="grid grid-cols-3 gap-2">
+                        <label class="flex items-center justify-center p-2 rounded-xl border border-brand-gold/30 cursor-pointer text-[11px] font-sans text-brand-dark hover:bg-brand-light transition-colors has-[:checked]:bg-brand-oak has-[:checked]:text-brand-sand has-[:checked]:border-brand-oak">
+                            <input type="radio" name="preferred_contact" value="Text" checked class="sr-only">
+                            <span>Text (Fastest)</span>
+                        </label>
+                        <label class="flex items-center justify-center p-2 rounded-xl border border-brand-gold/30 cursor-pointer text-[11px] font-sans text-brand-dark hover:bg-brand-light transition-colors has-[:checked]:bg-brand-oak has-[:checked]:text-brand-sand has-[:checked]:border-brand-oak">
+                            <input type="radio" name="preferred_contact" value="Phone Call" class="sr-only">
+                            <span>Phone Call</span>
+                        </label>
+                        <label class="flex items-center justify-center p-2 rounded-xl border border-brand-gold/30 cursor-pointer text-[11px] font-sans text-brand-dark hover:bg-brand-light transition-colors has-[:checked]:bg-brand-oak has-[:checked]:text-brand-sand has-[:checked]:border-brand-oak">
+                            <input type="radio" name="preferred_contact" value="Email" class="sr-only">
+                            <span>Email</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="modal-details" class="block text-[10px] font-bold uppercase tracking-wider text-brand-oak mb-1">Estimated Group Size &amp; Target Timing (Optional)</label>
+                    <input type="text" id="modal-details" name="details" placeholder="e.g. About 12 people, hoping for a Friday in November" class="w-full bg-brand-light/60 border border-brand-gold/30 rounded-xl px-3 py-2 text-xs text-brand-dark focus:outline-none focus:border-brand-gold">
+                </div>
+
+                <div class="pt-2">
+                    <button type="submit" class="w-full flex items-center justify-center gap-1.5 bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md whitespace-nowrap">
+                        <span>Contact Me About This Gathering</span>
+                        <span class="shrink-0">&rarr;</span>
+                    </button>
+                </div>
+                <p class="text-[9px] text-center text-brand-dark/50 font-serif italic">
+                    We respect your time. Zero sales spam, just direct communication from our studio.
+                </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
     <script>
         const hamburgerButton = document.getElementById('hamburger-button');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -526,16 +610,51 @@
             hamburgerButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
         }
 
-        function handleCorporateInquiry(event) {
+        const inquiryModal = document.getElementById('inquiry-modal');
+        const modalTierInput = document.getElementById('modal-tier');
+
+        function openInquiryModal(gatheringType) {
+            if (modalTierInput) {
+                modalTierInput.value = gatheringType;
+            }
+            if (inquiryModal) {
+                inquiryModal.classList.remove('opacity-0', 'pointer-events-none');
+                inquiryModal.classList.add('opacity-100');
+                document.body.style.overflow = 'hidden';
+            }
+        }
+
+        function closeInquiryModal() {
+            if (inquiryModal) {
+                inquiryModal.classList.remove('opacity-100');
+                inquiryModal.classList.add('opacity-0', 'pointer-events-none');
+                document.body.style.overflow = 'auto';
+            }
+        }
+
+        if (inquiryModal) {
+            inquiryModal.addEventListener('click', (e) => {
+                if (e.target === inquiryModal) closeInquiryModal();
+            });
+        }
+
+        function handleQuickInquiry(event) {
             event.preventDefault();
             const form = event.target;
             const name = form.name.value;
-            const company = form.company.value;
-            const format = form.format.value;
+            const preferred = form.preferred_contact.value;
+            const tier = form.gathering_type.value;
 
-            alert('Thank you, ' + name + '! We have received your inquiry for ' + company + ' (' + format + '). A tailored proposal will be sent to your work email shortly.');
+            alert('Thank you, ' + name + '! We have received your inquiry for ' + tier + '. We will reach out to you via ' + preferred + ' shortly.');
             form.reset();
+            closeInquiryModal();
         }
+
+        document.addEventListener('keydown', (e) => {
+            if (inquiryModal && !inquiryModal.classList.contains('pointer-events-none')) {
+                if (e.key === 'Escape') closeInquiryModal();
+            }
+        });
 
         document.addEventListener('contextmenu', (e) => {
             if (e.target.tagName === 'IMG') {
