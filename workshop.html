@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="p:domain_verify" content="8497c86d445458f17cdce81e920478f2"/>
-    <title>The Handcrafted Shoppe | Studio Kits, Original Art &amp; Baking Tools</title>
-    <meta name="description" content="Shop at-home Keepsake Cake Kits, original sculpted cake art, single-step recipe card decks, and guided journals from The Gilded Spoon in McKinney, Texas.">
+    <title>Studio Workshops | The Gilded Spoon Atelier</title>
+    <meta name="description" content="Tactile art and cake decorating workshops in McKinney, Texas. Low pressure sensory grounding, zero baking experience needed, and zero performance required.">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -59,11 +59,11 @@
 </head>
 <body class="font-sans bg-brand-light text-brand-dark antialiased bg-texture select-none">
 
-    <!-- STANDARDIZED NAVIGATION (SHOPPE ACTIVE) -->
+    <!-- STANDARDIZED NAVIGATION (WORKSHOPS ACTIVE) -->
     <nav class="sticky top-0 bg-brand-oak/95 backdrop-blur-lg shadow-md z-50 border-b border-brand-gold/10">
         <div class="max-w-6xl mx-auto px-4 py-3.5 flex justify-between items-center">
             
-            <!-- ATELIER LOGO (HAIRLINE RULES) -->
+            <!-- THE WINNING LOGO LOCKUP -->
             <a href="index.html" class="flex flex-col items-center text-center leading-none group">
                 <span class="text-[17px] sm:text-[19px] font-serif font-bold text-brand-gold uppercase tracking-[0.08em] leading-none">
                     THE GILDED SPOON
@@ -79,8 +79,8 @@
 
             <!-- Desktop Links -->
             <div class="hidden md:flex items-center space-x-6 font-medium text-xs tracking-widest uppercase">
-                <a href="shoppe.html" class="text-brand-gold font-bold transition-colors">Shoppe</a>
-                <a href="workshop.html" class="text-brand-light hover:text-brand-gold transition-colors">Workshops</a>
+                <a href="shoppe.html" class="text-brand-light hover:text-brand-gold transition-colors">Shoppe</a>
+                <a href="workshop.html" class="text-brand-gold font-bold transition-colors">Workshops</a>
                 <a href="flipbook.html" class="text-brand-light hover:text-brand-gold transition-colors">Portfolio</a>
                 <a href="contact.html" class="text-brand-light hover:text-brand-gold transition-colors">Contact</a>
                 <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-oak hover:bg-brand-sand transition-all px-4 py-2 rounded-full font-bold shadow-sm">
@@ -98,8 +98,8 @@
 
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="hidden md:hidden border-t border-brand-gold/10 px-4 pb-4 bg-brand-oak text-center text-xs tracking-widest uppercase">
-            <a href="shoppe.html" class="block py-2.5 text-brand-gold font-bold">Shoppe</a>
-            <a href="workshop.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Workshops</a>
+            <a href="shoppe.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Shoppe</a>
+            <a href="workshop.html" class="block py-2.5 text-brand-gold font-bold">Workshops</a>
             <a href="flipbook.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Portfolio</a>
             <a href="contact.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Contact</a>
             <a href="/baketobaseline/index.html" class="inline-block bg-brand-gold text-brand-oak hover:bg-brand-sand transition-all px-5 py-2 rounded-full font-bold shadow-sm mt-2">
@@ -110,403 +110,450 @@
 
     <!-- HEADER SECTION -->
     <header class="text-center py-16 md:py-20 px-6 bg-brand-oak border-b border-brand-gold/10 relative overflow-hidden">
-        <div class="max-w-3xl mx-auto relative z-10">
-            <span class="text-brand-gold font-caveat text-2xl md:text-3xl block mb-2">Studio Goods &amp; Counter Tools</span>
-            <h1 class="font-serif font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-brand-sand leading-tight tracking-normal mb-4 text-balance">The Handcrafted Shoppe &amp; Studio</h1>
+        <div class="max-w-4xl mx-auto relative z-10">
+            <span class="text-brand-gold font-caveat text-2xl md:text-3xl block mb-2">Tactile Studio Gatherings</span>
+            <h1 class="font-serif font-bold text-3xl sm:text-4xl md:text-5xl lg:text-[54px] text-brand-sand leading-tight tracking-normal mb-4 md:whitespace-nowrap">
+                A Quiet Place for Busy Minds
+            </h1>
             <p class="font-serif italic text-base md:text-lg text-brand-light/80 leading-relaxed max-w-2xl mx-auto">
-                At-home studio kits, single-step recipe decks, guided journals, and custom cake keepsakes designed to give your hands a quiet, grounding rhythm without kitchen mess or setup stress.
+                Step inside an intentional studio space designed to help you drop your shoulders and decompress. In our atelier, there is zero performance required, zero baking experience needed, and your nervous system sets the rules.
             </p>
         </div>
     </header>
 
-    <!-- SHOPPE CATEGORY FILTER BAR (FLUSH STICKY POSITION) -->
-    <section class="py-3 bg-brand-oak/95 border-b border-brand-gold/30 sticky top-[60px] sm:top-[63px] z-40 backdrop-blur-md shadow-md">
-        <div class="max-w-6xl mx-auto px-4 flex flex-wrap justify-center items-center gap-2 text-[9px] sm:text-[10px] uppercase tracking-widest font-sans font-bold">
-            <button onclick="filterShoppe('all')" class="shoppe-filter-btn active py-2 px-4 rounded-full border-2 border-brand-gold transition-all text-brand-oak bg-brand-gold shadow-[0_4px_18px_rgba(212,175,55,0.45)] scale-105" data-category="all">
-                All Goods
-            </button>
-            <button onclick="filterShoppe('kits')" class="shoppe-filter-btn py-2 px-4 rounded-full border border-brand-gold/40 hover:border-brand-gold hover:text-brand-gold transition-all text-brand-sand bg-brand-oak shadow-sm" data-category="kits">
-                Studio Kits
-            </button>
-            <button onclick="filterShoppe('recipes')" class="shoppe-filter-btn py-2 px-4 rounded-full border border-brand-gold/40 hover:border-brand-gold hover:text-brand-gold transition-all text-brand-sand bg-brand-oak shadow-sm" data-category="recipes">
-                Recipe Suites
-            </button>
-            <button onclick="filterShoppe('books')" class="shoppe-filter-btn py-2 px-4 rounded-full border border-brand-gold/40 hover:border-brand-gold hover:text-brand-gold transition-all text-brand-sand bg-brand-oak shadow-sm" data-category="books">
-                Books &amp; Guides
-            </button>
-            <button onclick="filterShoppe('custom')" class="shoppe-filter-btn py-2 px-4 rounded-full border border-brand-gold/40 hover:border-brand-gold hover:text-brand-gold transition-all text-brand-sand bg-brand-oak shadow-sm" data-category="custom">
-                Custom Keepsakes &amp; Inquiries
-            </button>
-        </div>
-    </section>
-
-    <!-- UNIFIED 6-PRODUCT BOUTIQUE GRID -->
-    <main class="py-12 md:py-16 bg-brand-light">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6">
-            <div id="shoppe-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-7 items-stretch">
+    <!-- ============================================================== -->
+    <!-- SECTION 1: PLAN YOUR EXPERIENCE (CONTAINED IN 5XL PLATE)       -->
+    <!-- ============================================================== -->
+    <section class="py-12 md:py-16">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="bg-brand-cream rounded-3xl border border-brand-gold/30 p-6 sm:p-10 md:p-12 shadow-sm">
                 
-                <!-- CARD 1: THE KEEPSAKE CAKE KIT -->
-                <div class="shoppe-card bg-brand-cream rounded-3xl border border-brand-gold/30 p-5 sm:p-6 shadow-md hover:shadow-xl hover:border-brand-gold/60 transition-all flex flex-col justify-between" data-category="kits">
-                    <div>
-                        <div class="w-full h-56 sm:h-60 rounded-2xl overflow-hidden border border-brand-gold/30 mb-3.5 relative bg-brand-oak shadow-inner">
-                            <img id="keepsake-kit-image" src="images/IMG_7507.jpeg" alt="The Keepsake Cake Kit Full Spread" class="w-full h-full object-cover transition-opacity duration-300" draggable="false">
-                        </div>
-                        
-                        <div class="grid grid-cols-4 gap-1.5 w-full mb-3.5">
-                            <button type="button" onclick="swapProductImage('keepsake-kit-image', 'keepsake-thumb', 'images/IMG_7507.jpeg', this)" class="keepsake-thumb active border-2 border-brand-gold rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/IMG_7507.jpeg" alt="Complete Kit Spread" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
-                            </button>
-                            <button type="button" onclick="swapProductImage('keepsake-kit-image', 'keepsake-thumb', 'images/IMG_7494.jpeg', this)" class="keepsake-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/IMG_7494.jpeg" alt="Palette Knives and Guides" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
-                            </button>
-                            <button type="button" onclick="swapProductImage('keepsake-kit-image', 'keepsake-thumb', 'images/IMG_7562.jpeg', this)" class="keepsake-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/IMG_7562.jpeg" alt="Mineral Pigments" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
-                            </button>
-                            <button type="button" onclick="swapProductImage('keepsake-kit-image', 'keepsake-thumb', 'images/image000000.jpeg', this)" class="keepsake-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/image000000.jpeg" alt="Piping Bags and Palette" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
-                            </button>
-                        </div>
-                        
-                        <span class="inline-block bg-brand-gold text-brand-oak font-sans font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full mb-2 self-start shadow-sm">
-                            Create Your Own
-                        </span>
-                        
-                        <h3 class="font-serif text-xl sm:text-2xl font-bold text-brand-oak mb-1 leading-tight text-balance">
-                            The Keepsake Cake Kit
-                        </h3>
-                        <p class="text-xs font-serif italic text-brand-gold-dark mb-2">
-                            Permanent Keepsake Art
-                        </p>
-                        
-                        <div class="font-serif font-bold text-brand-oak text-xl mb-2.5">$68.00</div>
-                        
-                        <p class="font-sans text-xs text-brand-dark/80 leading-relaxed mb-4">
-                            A permanent piece of cake art you keep forever. Tint your sculpting paste with seasonal acrylic colors to pipe, spread, and build textured designs onto a 3D cake form or flat canvas panel. Dries to a durable finish for tabletop or shelf display. Includes sculpting paste, seasonal acrylic colors, dried florals, textured accents, a full tool set, and our guided studio workmat.
-                        </p>
+                <!-- Section Header -->
+                <div class="text-center max-w-xl mx-auto mb-10">
+                    <span class="text-brand-gold-dark font-caveat text-xl md:text-2xl block mb-1">Plan Your Experience</span>
+                    <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-oak mb-2">How Our Workshops Work</h2>
+                    <p class="text-xs sm:text-sm text-brand-dark/80 leading-relaxed font-sans">
+                        First, select your creative medium below. Then choose the gathering option that fits your schedule — whether that is an open studio seat, a private event, or a shipped kit.
+                    </p>
+                </div>
+
+                <!-- STEP 1: CHOOSE YOUR MEDIUM -->
+                <div class="mb-10">
+                    <div class="flex items-center justify-center gap-2.5 mb-6 text-center">
+                        <span class="w-6 h-6 rounded-full bg-brand-oak text-brand-sand font-bold text-xs flex items-center justify-center font-sans shadow-sm">1</span>
+                        <h3 class="font-serif text-xl sm:text-2xl font-bold text-brand-oak">Step 1: Choose Your Creative Medium</h3>
                     </div>
-                    
-                    <div>
-                        <ul class="text-xs font-serif text-brand-dark/85 space-y-1 mb-4 pb-3 border-b border-brand-gold/15">
-                            <li>✦ Dries to a permanent finish you keep forever.</li>
-                            <li>✦ Includes full tool set, acrylic colors &amp; studio workmat.</li>
-                            <li>✦ Ships nationwide in sturdy protective packaging.</li>
-                        </ul>
+
+                    <div class="max-w-3xl mx-auto grid grid-cols-1 sm:grid-cols-2 gap-5 items-stretch">
                         
-                        <a href="https://square.link/u/SzGbYrG0" target="_blank" rel="noopener" class="w-full block text-center bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md">
-                            Order Keepsake Kit ($68)
-                        </a>
-                        <span class="text-[11px] text-brand-dark/60 font-serif italic block text-center mt-2">Choose a 3D cake shape or flat canvas at checkout</span>
+                        <!-- MEDIUM A: KEEPSAKE SCULPTURE -->
+                        <div class="bg-brand-light rounded-2xl border border-brand-gold/30 p-4 sm:p-5 flex flex-col justify-between shadow-sm">
+                            <div>
+                                <div class="w-full h-52 sm:h-56 rounded-xl overflow-hidden border border-brand-gold/30 mb-3 relative bg-brand-oak shadow-inner">
+                                    <img src="images/IMG_7606.jpeg" alt="3D Keepsake Cake Sculpture with Comfort Seal" class="w-full h-full object-cover" draggable="false">
+                                </div>
+                                
+                                <div class="flex flex-wrap items-center gap-1.5 mb-2.5">
+                                    <span class="bg-brand-oak text-brand-sand font-sans font-bold text-[9px] uppercase tracking-wider px-2.5 py-0.5 rounded-full shadow-xs">
+                                        Permanent Keepsake
+                                    </span>
+                                    <span class="bg-brand-cream border border-brand-gold/50 text-brand-gold-dark font-sans font-bold text-[9px] uppercase tracking-wider px-2.5 py-0.5 rounded-full shadow-xs">
+                                        Shipping Available
+                                    </span>
+                                </div>
+
+                                <h4 class="font-serif text-lg sm:text-xl font-bold text-brand-oak mb-0.5">Keepsake Cake Sculptures</h4>
+                                <p class="text-xs font-serif italic text-brand-gold-dark mb-2.5">Permanent Tactile Art for Home or Office</p>
+                                
+                                <p class="text-xs text-brand-dark/85 leading-relaxed font-sans mb-3.5">
+                                    Pipe whipped sculpting paste onto a 4x6-inch 3D sculpting form using palette knives, raw quartz gemstones, and pressed botanicals. Finished on a gold presentation drum with our studio comfort seal, this is a permanent decorative piece for your desk or home that never spoils.
+                                </p>
+                            </div>
+
+                            <div class="text-[11px] text-brand-dark/80 font-sans border-t border-brand-gold/20 pt-3 space-y-1">
+                                <p>✦ <strong>Materials:</strong> Sculpting paste, mineral pigments, quartz gems, dried florals</p>
+                                <p>✦ <strong>Takeaway:</strong> A permanent sculpture that dries solid for lasting display</p>
+                            </div>
+                        </div>
+
+                        <!-- MEDIUM B: EDIBLE CAKE CANVAS -->
+                        <div class="bg-brand-light rounded-2xl border border-brand-gold/30 p-4 sm:p-5 flex flex-col justify-between shadow-sm">
+                            <div>
+                                <div class="w-full h-52 sm:h-56 rounded-xl overflow-hidden border border-brand-gold/30 mb-3 relative bg-brand-oak shadow-inner">
+                                    <img src="images/IMG_6660.jpeg" alt="The Edible Cake Canvas Painted Cake" class="w-full h-full object-cover" draggable="false">
+                                </div>
+                                
+                                <div class="flex flex-wrap items-center gap-1.5 mb-2.5">
+                                    <span class="bg-brand-gold text-brand-oak font-sans font-bold text-[9px] uppercase tracking-wider px-2.5 py-0.5 rounded-full shadow-xs">
+                                        Fresh &amp; Edible
+                                    </span>
+                                    <span class="bg-brand-cream border border-brand-gold/50 text-brand-gold-dark font-sans font-bold text-[9px] uppercase tracking-wider px-2.5 py-0.5 rounded-full shadow-xs">
+                                        Local to DFW
+                                    </span>
+                                </div>
+
+                                <h4 class="font-serif text-lg sm:text-xl font-bold text-brand-oak mb-0.5">The Edible Cake Canvas</h4>
+                                <p class="text-xs font-serif italic text-brand-gold-dark mb-2.5">Edible Painting, Textured Piping &amp; Expression</p>
+                                
+                                <p class="text-xs text-brand-dark/85 leading-relaxed font-sans mb-3.5">
+                                    Your cake is your canvas. There are zero technical pastry tests, rigid piping rules, or perfection pressure here. Using artist paintbrushes, palette knives, specialty piping tips, and whipped artisan buttercreams, explore soothing textures and paint pre-baked mini cake layers however you feel led. Finish with edible gems and take home your boxed creation ready to enjoy.
+                                </p>
+                            </div>
+
+                            <div class="text-[11px] text-brand-dark/80 font-sans border-t border-brand-gold/20 pt-3 space-y-1">
+                                <p>✦ <strong>Materials:</strong> Fresh cake layers, artisan buttercreams, edible sugar gems</p>
+                                <p>✦ <strong>Takeaway:</strong> Boxed edible cake creation packed in an 8-inch window bakery box</p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
-                <!-- CARD 2: THE EDIBLE CAKE CANVAS KIT (NOW DIRECT LINKED TO SQUARE) -->
-                <div class="shoppe-card bg-brand-cream rounded-3xl border border-brand-gold/30 p-5 sm:p-6 shadow-md hover:shadow-xl hover:border-brand-gold/60 transition-all flex flex-col justify-between" data-category="kits">
-                    <div>
-                        <div class="w-full h-56 sm:h-60 rounded-2xl overflow-hidden border border-brand-gold/30 mb-3.5 relative bg-brand-oak shadow-inner">
-                            <img id="edible-kit-image" src="images/IMG_6660.jpeg" alt="The Edible Cake Canvas Kit" class="w-full h-full object-cover transition-opacity duration-300" draggable="false">
-                        </div>
-                        
-                        <div class="grid grid-cols-4 gap-1.5 w-full mb-3.5">
-                            <button type="button" onclick="swapProductImage('edible-kit-image', 'edible-thumb', 'images/IMG_6660.jpeg', this)" class="edible-thumb active border-2 border-brand-gold rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/IMG_6660.jpeg" alt="Painted Batter Canvas" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
-                            </button>
-                            <button type="button" onclick="swapProductImage('edible-kit-image', 'edible-thumb', 'images/IMG_0422.JPG', this)" class="edible-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/IMG_0422.JPG" alt="Peach Blossom Cake" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
-                            </button>
-                            <button type="button" onclick="swapProductImage('edible-kit-image', 'edible-thumb', 'images/IMG_0356.jpeg', this)" class="edible-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/IMG_0356.jpeg" alt="Palette Knife Textures" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
-                            </button>
-                            <button type="button" onclick="swapProductImage('edible-kit-image', 'edible-thumb', 'images/Bunny Cake.jpg', this)" class="edible-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/Bunny Cake.jpg" alt="Bunny Celebration Cake" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
-                            </button>
-                        </div>
-                        
-                        <span class="inline-block bg-brand-gold text-brand-oak font-sans font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full mb-2 self-start shadow-sm">
-                            Create Your Own
-                        </span>
-                        
-                        <h3 class="font-serif text-xl sm:text-2xl font-bold text-brand-oak mb-1 leading-tight text-balance">
-                            The Edible Cake Canvas Kit
-                        </h3>
-                        <p class="text-xs font-serif italic text-brand-gold-dark mb-2">
-                            Fresh Scratch Cake &amp; Buttercreams
-                        </p>
-                        
-                        <div class="font-serif font-bold text-brand-oak text-xl mb-2.5">$75.00</div>
-                        
-                        <p class="font-sans text-xs text-brand-dark/80 leading-relaxed mb-4">
-                            All the fun of decorating a real bakery cake with zero oven mess. We bake the scratch cake layers; you tint the buttercreams to pipe borders, paint designs, and add textured toppings right at your kitchen counter to slice and share. Includes fresh-baked cake layers, artisan buttercreams, seasonal colors, dried florals, textured toppings, a full tool set, and our guided studio workmat.
-                        </p>
-                    </div>
-                    
-                    <div>
-                        <ul class="text-xs font-serif text-brand-dark/85 space-y-1 mb-4 pb-3 border-b border-brand-gold/15">
-                            <li>✦ Real scratch cake ready to decorate, slice, and eat.</li>
-                            <li>✦ Includes full tool set, fresh buttercreams &amp; studio workmat.</li>
-                            <li>✦ Available for local McKinney pickup &amp; DFW delivery.</li>
-                        </ul>
-                        
-                        <a href="https://square.link/u/SzGbYrG0" target="_blank" rel="noopener" class="w-full block text-center bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md">
-                            Order Edible Kit ($75)
-                        </a>
-                        <span class="text-[11px] text-brand-dark/60 font-serif italic block text-center mt-2">Prepared fresh in our McKinney studio kitchen</span>
-                    </div>
+                <!-- CONNECTOR DIVIDER -->
+                <div class="relative py-6 my-2 text-center">
+                    <div class="absolute inset-0 flex items-center"><div class="w-full border-t border-brand-gold/25"></div></div>
+                    <span class="relative bg-brand-cream px-4 text-xs font-bold uppercase tracking-widest text-brand-gold-dark font-sans">
+                        ↓ Next, Choose How You Want to Gather ↓
+                    </span>
                 </div>
 
-                <!-- CARD 3: THE DECONSTRUCTED RECIPE CARD SUITE -->
-                <div class="shoppe-card bg-brand-cream rounded-3xl border border-brand-gold/30 p-5 sm:p-6 shadow-md hover:shadow-xl hover:border-brand-gold/60 transition-all flex flex-col justify-between" data-category="recipes">
-                    <div>
-                        <div class="w-full h-56 sm:h-60 rounded-2xl overflow-hidden border border-brand-gold/25 mb-3.5 relative bg-brand-oak shadow-inner">
-                            <img id="deck-main-image" src="images/Equipment Deconstructed Recipe Card (Yellow).png" alt="Deconstructed Recipe Card in Hand" class="w-full h-full object-cover transition-opacity duration-300" draggable="false">
-                        </div>
-                        
-                        <div class="grid grid-cols-5 gap-1 w-full mb-3.5">
-                            <button type="button" onclick="swapProductImage('deck-main-image', 'deck-thumb', 'images/Equipment Deconstructed Recipe Card (Yellow).png', this)" class="deck-thumb active border-2 border-brand-gold rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/Equipment Deconstructed Recipe Card (Yellow).png" alt="Card in Hand" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
-                            </button>
-                            <button type="button" onclick="swapProductImage('deck-main-image', 'deck-thumb', 'images/Equipment & Prep ( Yellow Card).png', this)" class="deck-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/Equipment & Prep ( Yellow Card).png" alt="Yellow Prep Cards" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
-                            </button>
-                            <button type="button" onclick="swapProductImage('deck-main-image', 'deck-thumb', 'images/Eggless Adaptation (Green).png', this)" class="deck-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/Eggless Adaptation (Green).png" alt="Green Eggless Card" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
-                            </button>
-                            <button type="button" onclick="swapProductImage('deck-main-image', 'deck-thumb', 'images/Infusing Flavors ( Mauve).png', this)" class="deck-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/Infusing Flavors ( Mauve).png" alt="Mauve Infusion Cards" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
-                            </button>
-                            <button type="button" onclick="swapProductImage('deck-main-image', 'deck-thumb', 'images/Finishing Touches ( Pink).png', this)" class="deck-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/Finishing Touches ( Pink).png" alt="Pink Finishing Card" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
-                            </button>
-                        </div>
-                        
-                        <span class="inline-block bg-brand-gold text-brand-oak font-sans font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full mb-2 self-start shadow-sm">
-                            Kitchen Innovation
-                        </span>
-                        
-                        <h3 class="font-serif text-xl sm:text-2xl font-bold text-brand-oak mb-1 leading-tight text-balance">
-                            The Deconstructed Recipe Suite
-                        </h3>
-                        <p class="text-xs font-serif italic text-brand-gold-dark mb-2">
-                            Single-Step Cards &amp; Counter Stand
-                        </p>
-                        
-                        <div class="font-serif font-bold text-brand-oak text-xl mb-2.5">Starts at $48.00</div>
-                        
-                        <p class="font-sans text-xs text-brand-dark/80 leading-relaxed mb-4">
-                            Say goodbye to chaotic food blogs and losing your place in dense paragraphs. This suite breaks any recipe (sweet or savory) down into calm, single-step visual cards with zero math.
-                        </p>
+                <!-- STEP 2: CHOOSE YOUR BOOKING FORMAT -->
+                <div id="tiers">
+                    <div class="flex items-center justify-center gap-2.5 mb-6 text-center">
+                        <span class="w-6 h-6 rounded-full bg-brand-oak text-brand-sand font-bold text-xs flex items-center justify-center font-sans shadow-sm">2</span>
+                        <h3 class="font-serif text-xl sm:text-2xl font-bold text-brand-oak">Step 2: Choose Your Booking Format</h3>
                     </div>
-                    
-                    <div>
-                        <ul class="text-xs font-serif text-brand-dark/85 space-y-1 mb-4 pb-3 border-b border-brand-gold/15">
-                            <li>✦ Single-step focus with easel stand included.</li>
-                            <li>✦ Custom hand-drawn artwork for your recipe.</li>
-                        </ul>
-                        
-                        <button type="button" onclick="openShoppeModal('The Deconstructed Recipe Suite', 'https://square.link/u/1VoR2TeL', true)" class="w-full block text-center bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md">
-                            Order or Inquire
-                        </button>
-                        <span class="text-[11px] text-brand-dark/60 font-serif italic block text-center mt-2">Signature bake or custom family recipe</span>
-                    </div>
-                </div>
 
-                <!-- CARD 4: THE GUIDED JOURNAL -->
-                <div class="shoppe-card bg-brand-cream rounded-3xl border border-brand-gold/30 p-5 sm:p-6 shadow-md hover:shadow-xl hover:border-brand-gold/60 transition-all flex flex-col justify-between" data-category="books">
-                    <div>
-                        <div class="w-full h-56 sm:h-60 rounded-2xl overflow-hidden border border-brand-gold/25 mb-3.5 relative bg-brand-oak shadow-inner">
-                            <img id="journal-main-image" src="images/Cover Image.png" alt="Bake to Baseline Guided Journal Cover" class="w-full h-full object-contain transition-opacity duration-300" draggable="false">
-                        </div>
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
                         
-                        <div class="grid grid-cols-6 gap-1 w-full mb-3.5">
-                            <button type="button" onclick="swapProductImage('journal-main-image', 'journal-thumb', 'images/Cover Image.png', this)" class="journal-thumb active border-2 border-brand-gold rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/Cover Image.png" alt="Front Cover" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
-                            </button>
-                            <button type="button" onclick="swapProductImage('journal-main-image', 'journal-thumb', 'images/OreintationPath.png', this)" class="journal-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/OreintationPath.png" alt="Energy Check" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
-                            </button>
-                            <button type="button" onclick="swapProductImage('journal-main-image', 'journal-thumb', 'images/18.png', this)" class="journal-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/18.png" alt="Color Regulation" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
-                            </button>
-                            <button type="button" onclick="swapProductImage('journal-main-image', 'journal-thumb', 'images/Spread 1.png', this)" class="journal-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/Spread 1.png" alt="Sensory Board" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
-                            </button>
-                            <button type="button" onclick="swapProductImage('journal-main-image', 'journal-thumb', 'images/15.png', this)" class="journal-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/15.png" alt="Blueprint" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
-                            </button>
-                            <button type="button" onclick="swapProductImage('journal-main-image', 'journal-thumb', 'images/Highlight Slide New Journal2.png', this)" class="journal-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/Highlight Slide New Journal2.png" alt="Map" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
-                            </button>
-                        </div>
-                        
-                        <span class="inline-block bg-brand-gold text-brand-oak font-sans font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full mb-2 self-start shadow-sm">
-                            The Studio Journal
-                        </span>
-                        
-                        <h3 class="font-serif text-xl sm:text-2xl font-bold text-brand-oak mb-1 leading-tight text-balance">
-                            Bake to Baseline: The Guided Journal
-                        </h3>
-                        <p class="text-xs font-serif italic text-brand-gold-dark mb-2">
-                            Lay-Flat Twin-Wire Spiral Book
-                        </p>
-                        
-                        <div class="font-serif font-bold text-brand-oak text-xl mb-2.5">$40.00</div>
-                        
-                        <p class="font-sans text-xs text-brand-dark/80 leading-relaxed mb-4">
-                            Whether you need a gentle reset on a tired afternoon or want to celebrate something joyful, this journal is made for good days, hard days, and everything in between. Use it as a quiet sketchbook from your sofa or a step-by-step guide on your kitchen counter.
-                        </p>
-                    </div>
-                    
-                    <div>
-                        <ul class="text-xs font-serif text-brand-dark/85 space-y-1 mb-4 pb-3 border-b border-brand-gold/15">
-                            <li>✦ Projects based on how much energy you have today.</li>
-                            <li>✦ Zero pressure: flour smudges, drips, and messy sketches are welcome.</li>
-                        </ul>
-                        
-                        <a href="https://square.link/u/ZMTDyOFQ" target="_blank" rel="noopener" class="w-full block text-center bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md">
-                            Order Guided Journal ($40)
-                        </a>
-                        <span class="text-[11px] text-brand-dark/60 font-serif italic block text-center mt-2">7.44" x 9.66" lay-flat spiral &bull; Ships nationwide</span>
-                    </div>
-                </div>
+                        <!-- OPTION 1: PUBLIC SEATS -->
+                        <div class="bg-brand-oak text-brand-light p-6 rounded-2xl border border-brand-gold/30 shadow-md flex flex-col justify-between">
+                            <div>
+                                <span class="font-sans font-bold text-xs uppercase tracking-wider text-brand-gold block mb-1">Option 1</span>
+                                <h4 class="font-serif text-xl font-bold text-brand-light mb-0.5">Public Studio Seat</h4>
+                                <p class="text-brand-sand/80 font-sans text-xs mb-2.5">Scheduled Dates &bull; McKinney &amp; DFW Venues</p>
+                                
+                                <div class="font-serif font-bold text-2xl text-brand-light mb-1">
+                                    $85 <span class="text-xs font-normal text-brand-light/60">/ Seat</span>
+                                </div>
+                                <span class="text-[10px] font-sans text-brand-gold block uppercase tracking-wide mb-3">All Tools Provided &bull; Take Home Finished Piece</span>
 
-                <!-- CARD 5: WEDDING & MILESTONE KEEPSAKE CAKES -->
-                <div class="shoppe-card bg-brand-cream rounded-3xl border border-brand-gold/30 p-5 sm:p-6 shadow-md hover:shadow-xl hover:border-brand-gold/60 transition-all flex flex-col justify-between" data-category="custom">
-                    <div>
-                        <div class="w-full h-56 sm:h-60 rounded-2xl overflow-hidden border border-brand-gold/30 mb-3.5 relative bg-brand-oak shadow-inner">
-                            <img id="art-main-image" src="images/IMG_7606.jpeg" alt="Wedding and Milestone Keepsake Cake" class="w-full h-full object-cover transition-opacity duration-300" draggable="false">
-                        </div>
-                        
-                        <div class="grid grid-cols-4 gap-1.5 w-full mb-3.5">
-                            <button type="button" onclick="swapProductImage('art-main-image', 'art-thumb', 'images/IMG_7606.jpeg', this)" class="art-thumb active border-2 border-brand-gold rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/IMG_7606.jpeg" alt="3D Terracotta Front View" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
-                            </button>
-                            <button type="button" onclick="swapProductImage('art-main-image', 'art-thumb', 'images/IMG_7611.jpeg', this)" class="art-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/IMG_7611.jpeg" alt="Angle View with Booklet" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
-                            </button>
-                            <button type="button" onclick="swapProductImage('art-main-image', 'art-thumb', 'images/0CF9B74D-5AE8-4A29-9A3F-93E103C86DCD_1_105_c.jpeg', this)" class="art-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/0CF9B74D-5AE8-4A29-9A3F-93E103C86DCD_1_105_c.jpeg" alt="2D Solar Pressed Canvas" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
-                            </button>
-                            <button type="button" onclick="swapProductImage('art-main-image', 'art-thumb', 'images/IMG_6952.jpeg', this)" class="art-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/IMG_6952.jpeg" alt="2D Green Chevron Canvas" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
-                            </button>
-                        </div>
-                        
-                        <span class="inline-block bg-brand-gold text-brand-oak font-sans font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full mb-2 self-start shadow-sm">
-                            Freeze Time
-                        </span>
-                        
-                        <h3 class="font-serif text-xl sm:text-2xl font-bold text-brand-oak mb-1 leading-tight text-balance">
-                            Wedding &amp; Milestone Keepsake Cakes
-                        </h3>
-                        <p class="text-xs font-serif italic text-brand-gold-dark mb-2">
-                            2D Wall Canvases &amp; 3D Tabletop Displays
-                        </p>
-                        
-                        <div class="font-serif font-bold text-brand-oak text-xl mb-2.5">Pricing Upon Inquiry</div>
-                        
-                        <p class="font-sans text-xs text-brand-dark/80 leading-relaxed mb-4">
-                            Turn your wedding or special celebration cake into a permanent art piece. We sculpt a custom 2D or 3D permanent keepsake of your actual cake using textured sculpting paste to preserve your memory forever.
-                        </p>
-                    </div>
-                    
-                    <div>
-                        <ul class="text-xs font-serif text-brand-dark/85 space-y-1 mb-4 pb-3 border-b border-brand-gold/15">
-                            <li>✦ Available in 2 sizes for tabletop display or wall hanging.</li>
-                            <li>✦ Recreates the actual florals, colors &amp; textures.</li>
-                        </ul>
-                        
-                        <button type="button" onclick="openShoppeModal('Wedding & Milestone Keepsake Cakes', null, false)" class="w-full block text-center bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md">
-                            Inquire About A Keepsake Cake
-                        </button>
-                        <span class="text-[11px] text-brand-dark/60 font-serif italic block text-center mt-2">Custom commissions welcome nationwide</span>
-                    </div>
-                </div>
+                                <p class="text-xs text-brand-sand/90 font-sans leading-relaxed mb-4">
+                                    Reserve a personal seat at an upcoming studio table. Both medium tracks are scheduled across our calendar dates:
+                                </p>
 
-                <!-- CARD 6: BESPOKE CAKES & STUDIO COMMISSIONS -->
-                <div class="shoppe-card bg-brand-cream rounded-3xl border border-brand-gold/30 p-5 sm:p-6 shadow-md hover:shadow-xl hover:border-brand-gold/60 transition-all flex flex-col justify-between" data-category="custom">
-                    <div>
-                        <div class="w-full h-56 sm:h-60 rounded-2xl overflow-hidden border border-brand-gold/30 mb-3.5 relative bg-brand-oak shadow-inner">
-                            <img id="bespoke-art-image" src="images/Arati's Birthday Cake 40th.jpg" alt="Bespoke Celebration Cake and Studio Art" class="w-full h-full object-cover transition-opacity duration-300" draggable="false">
+                                <div class="bg-brand-card/70 p-3.5 rounded-xl border border-brand-gold/15 text-xs font-sans text-brand-sand/90 space-y-2 mb-4">
+                                    <strong class="text-brand-gold font-serif block text-xs">Included At Your Seat:</strong>
+                                    <p class="leading-relaxed">✦ Complete studio materials for your session's medium track</p>
+                                    <p class="leading-relaxed">✦ 8-inch window bakery box to carry home</p>
+                                    <p class="text-[11px] text-brand-gold pt-2 border-t border-brand-gold/15">✦ Add a take-home DIY Studio Kit at checkout for $50 (Save $18)</p>
+                                </div>
+                            </div>
+
+                            <div class="pt-2">
+                                <a href="https://square.link/u/hNKitO2s" target="_blank" rel="noopener" class="block w-full text-center bg-brand-gold text-brand-oak font-sans font-bold uppercase tracking-wider text-xs py-3.5 px-4 rounded-full hover:bg-brand-sand transition-all shadow-sm">
+                                    Reserve Studio Seat ($85)
+                                </a>
+                                <p class="text-[10px] text-brand-sand/60 text-center font-sans mt-2">
+                                    Medium (Keepsake vs. Edible) is determined by the date selected.
+                                </p>
+                            </div>
                         </div>
-                        
-                        <div class="grid grid-cols-4 gap-1.5 w-full mb-3.5">
-                            <button type="button" onclick="swapProductImage('bespoke-art-image', 'bespoke-thumb', 'images/Arati\'s Birthday Cake 40th.jpg', this)" class="bespoke-thumb active border-2 border-brand-gold rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/Arati's Birthday Cake 40th.jpg" alt="Palette Knife Celebration Cake" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
-                            </button>
-                            <button type="button" onclick="swapProductImage('bespoke-art-image', 'bespoke-thumb', 'images/Full Side View Lemon Cake .jpg', this)" class="bespoke-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/Full Side View Lemon Cake .jpg" alt="Citrus Rosette Crown" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
-                            </button>
-                            <button type="button" onclick="swapProductImage('bespoke-art-image', 'bespoke-thumb', 'images/IMG_7611.jpeg', this)" class="bespoke-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/IMG_7611.jpeg" alt="Keepsake Sculpture Display" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
-                            </button>
-                            <button type="button" onclick="swapProductImage('bespoke-art-image', 'bespoke-thumb', 'images/0CF9B74D-5AE8-4A29-9A3F-93E103C86DCD_1_105_c.jpeg', this)" class="bespoke-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/0CF9B74D-5AE8-4A29-9A3F-93E103C86DCD_1_105_c.jpeg" alt="Botanical Wall Canvas" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
-                            </button>
+
+                        <!-- OPTION 2: PRIVATE GATHERING -->
+                        <div class="bg-brand-light text-brand-dark p-6 rounded-2xl border-2 border-brand-gold shadow-md flex flex-col justify-between">
+                            <div>
+                                <span class="font-sans font-bold text-xs uppercase tracking-wider text-brand-gold-dark block mb-1">Option 2</span>
+                                <h4 class="font-serif text-xl font-bold text-brand-oak mb-0.5">Private Local Gathering</h4>
+                                <p class="text-brand-dark/70 font-sans text-xs mb-2.5">On-Site at Your Office, Home, or Venue</p>
+                                
+                                <div class="font-serif font-bold text-2xl text-brand-oak mb-1">
+                                    $135 <span class="text-xs font-normal text-brand-dark/60">/ Seat</span>
+                                </div>
+                                <span class="text-[10px] font-sans text-brand-dark/60 block uppercase tracking-wide mb-3">10-Seat Base Minimum &bull; Hybrid Options Available</span>
+
+                                <p class="text-xs text-brand-dark/85 font-sans leading-relaxed mb-4">
+                                    We bring the entire studio experience directly to your workplace, home, or event space with every tool, medium, and dropcloth ready to go.
+                                </p>
+
+                                <div class="bg-brand-cream p-3.5 rounded-xl border border-brand-gold/20 text-xs font-sans text-brand-dark/90 space-y-2 mb-4">
+                                    <strong class="text-brand-oak font-serif block text-xs">Workshop Details:</strong>
+                                    <p class="leading-relaxed">✦ <strong>Choose Your Medium:</strong> Select Edible Mini Cakes or Keepsake Sculptures</p>
+                                    <p class="leading-relaxed">✦ <strong>Flexible Timing:</strong> Pick the exact day and time for your group</p>
+                                    <p class="leading-relaxed">✦ <strong>Hybrid Add-On:</strong> Ship kits ($145/kit) to remote teammates to join live</p>
+                                </div>
+                            </div>
+
+                            <div class="pt-2">
+                                <button type="button" onclick="openInquiryModal('Tier 2: Private Local Gathering ($135/seat)')" class="block w-full text-center bg-brand-oak text-brand-sand font-sans font-bold uppercase tracking-wider text-xs py-3.5 px-4 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md">
+                                    Inquire About Private Gathering
+                                </button>
+                                <p class="text-[10px] text-brand-dark/50 text-center font-sans mt-2">
+                                    Custom dates and locations arranged directly with our atelier.
+                                </p>
+                            </div>
                         </div>
-                        
-                        <span class="inline-block bg-brand-gold text-brand-oak font-sans font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full mb-2 self-start shadow-sm">
-                            Limited Availability
-                        </span>
-                        
-                        <h3 class="font-serif text-xl sm:text-2xl font-bold text-brand-oak mb-1 leading-tight text-balance">
-                            Bespoke Cakes &amp; Studio Art
-                        </h3>
-                        <p class="text-xs font-serif italic text-brand-gold-dark mb-2">
-                            Fresh Celebration Bakes &amp; Original Sculptures
-                        </p>
-                        
-                        <div class="font-serif font-bold text-brand-oak text-xl mb-2.5">Custom Inquiries</div>
-                        
-                        <p class="font-sans text-xs text-brand-dark/80 leading-relaxed mb-4">
-                            Only a limited number of bespoke celebration cake orders are accepted each month for local gatherings. Inquire to discuss date availability, custom cake flavors, hand-painted florals, and textured sand art design options.
-                        </p>
-                    </div>
-                    
-                    <div>
-                        <ul class="text-xs font-serif text-brand-dark/85 space-y-1 mb-4 pb-3 border-b border-brand-gold/15">
-                            <li>✦ <strong>Celebration Cakes:</strong> Hand-piped florals &amp; sugar sand designs.</li>
-                            <li>✦ <strong>Permanent Art:</strong> Textured botanical canvases shipped nationwide.</li>
-                        </ul>
-                        
-                        <button type="button" onclick="openShoppeModal('Bespoke Cakes & Studio Art', null, false)" class="w-full block text-center bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md">
-                            Inquire for Availability &amp; Dates
-                        </button>
-                        <span class="text-[11px] text-brand-dark/60 font-serif italic block text-center mt-2">Bespoke cakes handcrafted fresh in McKinney, TX</span>
+
+                        <!-- OPTION 3: REMOTE SHIPPED WORKSHOPS -->
+                        <div class="bg-brand-oak text-brand-light p-6 rounded-2xl border border-brand-gold/30 shadow-md flex flex-col justify-between">
+                            <div>
+                                <span class="font-sans font-bold text-xs uppercase tracking-wider text-brand-gold block mb-1">Option 3</span>
+                                <h4 class="font-serif text-xl font-bold text-brand-light mb-0.5">Remote Shipped Workshops</h4>
+                                <p class="text-brand-sand/80 font-sans text-xs mb-2.5">Delivered to Remote Doors Nationwide</p>
+                                
+                                <div class="font-serif font-bold text-2xl text-brand-light mb-1">
+                                    $145 <span class="text-xs font-normal text-brand-light/60">/ Seat</span>
+                                </div>
+                                <span class="text-[10px] font-sans text-brand-gold block uppercase tracking-wide mb-3">10-Kit Base Minimum &bull; $12 Flat Shipping / Kit</span>
+
+                                <p class="text-xs text-brand-sand/90 font-sans leading-relaxed mb-4">
+                                    Complete keepsake cake sculpture kits delivered straight to coworkers' doorsteps nationwide for a relaxed, camera-optional virtual retreat.
+                                </p>
+
+                                <div class="bg-brand-card/70 p-3.5 rounded-xl border border-brand-gold/15 text-xs font-sans text-brand-sand/90 space-y-2 mb-4">
+                                    <strong class="text-brand-gold font-serif block text-xs">Included in Each Kit:</strong>
+                                    <p class="leading-relaxed">✦ Complete non-perishable Keepsake Sculpture Kit</p>
+                                    <p class="leading-relaxed">✦ Individual tracking sent directly to each attendee</p>
+                                    <p class="leading-relaxed">✦ 60 to 90 minute calm session guided live step-by-step</p>
+                                </div>
+                            </div>
+
+                            <div class="pt-2">
+                                <button type="button" onclick="openInquiryModal('Tier 3: Remote Virtual Workshop ($145/seat)')" class="block w-full text-center bg-brand-gold text-brand-oak font-sans font-bold uppercase tracking-wider text-xs py-3.5 px-4 rounded-full hover:bg-brand-sand transition-all shadow-md">
+                                    Inquire About Virtual Workshop
+                                </button>
+                                <p class="text-[10px] text-brand-sand/60 text-center font-sans mt-2">
+                                    Shipped directly nationwide for distributed and remote teams.
+                                </p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
 
             </div>
-        </div>
-    </main>
-
-    <!-- WORKSHOP ATELIER PREVIEW -->
-    <section id="live-experiences" class="py-14 md:py-16 bg-brand-oak text-brand-sand border-t border-brand-gold/20 relative overflow-hidden shadow-xl">
-        <div class="max-w-4xl mx-auto px-6 relative z-10 text-center">
-            <span class="text-brand-gold font-caveat text-2xl md:text-3xl block mb-2">Live Studio Sessions</span>
-            <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-sand mb-3 text-balance">Looking to Join an In-Person Workshop?</h2>
-            <p class="text-brand-sand/90 font-sans text-sm md:text-base leading-relaxed max-w-xl mx-auto mb-6">
-                Experience our 5-Layer Sensory Method in person. Pull up a chair at our public studio table in McKinney, host an on-site corporate gathering, or book a private celebration.
-            </p>
-            <a href="workshop.html" class="inline-block bg-brand-gold text-brand-oak font-sans font-bold py-3.5 px-8 rounded-full hover:bg-brand-sand transition-all uppercase tracking-wider text-xs shadow-md">
-                Explore Studio Workshops &rarr;
-            </a>
         </div>
     </section>
 
-    <!-- WHOLESALE & RETAIL BAR -->
-    <section class="py-12 bg-brand-light border-t border-brand-gold/20">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6">
-            <div class="bg-brand-cream border border-brand-gold/30 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row justify-between items-center gap-6 shadow-sm hover:border-brand-gold/50 transition-all">
-                <div class="flex items-center space-x-4">
-                    <div class="w-12 h-12 rounded-full bg-brand-oak border border-brand-gold/40 flex items-center justify-center shrink-0 shadow-inner">
-                        <svg class="w-6 h-6 text-brand-gold" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path></svg>
+    <!-- ============================================================== -->
+    <!-- SECTION 2: THE PURPOSE OF THE WORKSHOPS (CONTAINED STORY)      -->
+    <!-- ============================================================== -->
+    <section class="pb-12 md:pb-14">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="bg-brand-cream rounded-3xl border border-brand-gold/30 p-6 sm:p-10 md:p-12 shadow-sm">
+                
+                <div class="text-center mb-7">
+                    <span class="text-brand-gold-dark font-caveat text-xl md:text-2xl block mb-1">The Story Behind The Atelier</span>
+                    <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-oak">What This Experience Is Truly About</h2>
+                </div>
+                
+                <div class="space-y-4 text-brand-dark/85 text-xs sm:text-sm font-sans leading-relaxed max-w-2xl mx-auto">
+                    <p>
+                        Baking is chemistry and precision. Exact weights and temperature control matter, but cake design was always something deeper. Yet for years, whenever I turned from the oven to decorating, my mind would become completely overwhelmed, jumping from one question to the next with zero direction.
+                    </p>
+                    <p>
+                        The world outside demands that we constantly mask our exhaustion, meet tight deadlines, and pretend we aren't feeling everything all at once. Too often, creative classes end up adding to that pressure, turning art into a competition for perfection where you worry about doing it right.
+                    </p>
+                    
+                    <p class="font-serif font-bold text-brand-oak text-sm sm:text-base text-center py-1">
+                        I created these workshops to be the exact opposite.
+                    </p>
+                    
+                    <p>
+                        Looking back across years of my own bakes, I noticed a clear pattern: a method for the madness, and the spark that finally let me put down perfectionism. Decorating was never about spotless execution. It was an art form, a connection, and a personal story unfolding. Accepting my creativity became my way of healing and feeling.
+                    </p>
+
+                    <!-- Large Editorial Quote Block -->
+                    <div class="bg-brand-oak text-brand-light p-6 sm:p-8 rounded-2xl border-2 border-brand-gold/40 my-6 shadow-md text-center">
+                        <p class="font-serif italic text-base sm:text-lg md:text-xl text-brand-gold mb-3 leading-snug">
+                            "You are not here to bake a pastry test or perform for an audience. You are here to give your mind a predictable, tactile environment where you hold absolute control."
+                        </p>
+                        <span class="text-[10px] font-sans uppercase tracking-[0.25em] text-brand-sand/80 font-bold block">
+                            Contains 0% bad vibes, 100% comfort
+                        </span>
                     </div>
-                    <div>
-                        <h4 class="font-serif font-bold text-brand-oak text-lg">Boutique Retail and Wholesale</h4>
-                        <p class="text-xs text-brand-dark/70 font-sans">Stock our tactile journals, studio kits, and single-step recipe decks in your bookstore, gift shop, or wellness boutique.</p>
+
+                    <p>
+                        When you sweep a palette knife across whipped medium, squeeze a piping bag, or press raw crystals into wet paste, your focus naturally narrows. The mental chatter quiets down, and your hands take over the work of soothing your nervous system. In this space, messy parts are welcome, perfectionism is left at the door, and your cake becomes a canvas to tell your story honestly.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================== -->
+    <!-- SECTION 3: THE 5-LAYER SENSORY METHOD (CONTAINED 1-LINE TRACK) -->
+    <!-- ============================================================== -->
+    <section class="pb-12 md:pb-16">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            
+            <div class="bg-brand-cream rounded-3xl border border-brand-gold/30 p-6 sm:p-10 md:p-12 shadow-sm">
+                
+                <!-- Section Intro -->
+                <div class="text-center max-w-xl mx-auto mb-8">
+                    <span class="text-brand-gold-dark font-caveat text-xl md:text-2xl block mb-1">Our Storytelling Process</span>
+                    <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-oak mb-2.5">The 5-Layer Sensory Framework</h2>
+                    <p class="text-xs sm:text-sm text-brand-dark/80 leading-relaxed font-sans">
+                        Instead of staring at a blank canvas or feeling pressured to copy a sample cake, we walk through five self-guided stages to translate what you feel into physical form:
+                    </p>
+                </div>
+
+                <!-- BASELINE BOX: THE HEART (FULL UNTRUNCATED COPY) -->
+                <div class="bg-white/90 rounded-2xl p-5 sm:p-6 border border-brand-gold/30 shadow-xs mb-8 flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+                    <div class="flex flex-col md:flex-row items-center gap-3 sm:gap-4">
+                        <span class="w-10 h-10 rounded-full bg-brand-oak text-brand-gold font-serif font-bold text-sm flex items-center justify-center shrink-0 border border-brand-gold/40 shadow-xs">
+                            ✦
+                        </span>
+                        <div>
+                            <div class="flex items-center justify-center md:justify-start gap-2">
+                                <span class="text-[9px] font-sans font-bold uppercase tracking-widest text-brand-gold-dark">Starting Baseline</span>
+                                <span class="text-brand-dark/30">&bull;</span>
+                                <h3 class="font-serif text-lg sm:text-xl font-bold text-brand-oak">The Heart</h3>
+                            </div>
+                            <p class="text-xs sm:text-sm text-brand-dark/85 font-sans leading-relaxed mt-1 max-w-2xl">
+                                Where are you starting today? Are you tired, anxious, joyful, or overstimulated? We do not judge the feeling; we simply name it. This is your unmasked mark on the map before picking up any tools.
+                            </p>
+                        </div>
+                    </div>
+                    <span class="shrink-0 text-xl font-caveat text-brand-gold-dark bg-brand-light px-3.5 py-1 rounded-full border border-brand-gold/25">
+                        Feelings &amp; Mood
+                    </span>
+                </div>
+
+                <!-- 5 CONNECTED LAYERS (ONE UNBROKEN HORIZONTAL LINE WITH FULL UNTRUNCATED COPY) -->
+                <div class="relative">
+                    
+                    <!-- Desktop Connecting Hairline Thread -->
+                    <div class="hidden md:block absolute top-4 left-8 right-8 h-[1px] bg-brand-gold/35 z-0"></div>
+
+                    <!-- 5 Column Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-5 gap-3.5 relative z-10 items-stretch">
+                        
+                        <!-- Layer 1 -->
+                        <div class="bg-white/95 rounded-2xl p-4 border border-brand-gold/30 shadow-xs flex flex-col justify-between hover:border-brand-gold hover:shadow-md transition-all">
+                            <div>
+                                <span class="w-8 h-8 rounded-full bg-brand-oak text-brand-sand font-serif font-bold text-xs flex items-center justify-center mb-3 shadow-xs border border-brand-gold/30">
+                                    01
+                                </span>
+                                <h4 class="font-serif text-sm sm:text-base font-bold text-brand-oak leading-tight">The Invitation</h4>
+                                <p class="text-base font-caveat text-brand-gold-dark mb-2 leading-tight">Color &amp; Environment</p>
+                                <p class="text-[11px] text-brand-dark/80 leading-relaxed font-sans">
+                                    What signal does your spirit need right now? Choose an earthy cooling palette to hush room noise, or a sunny dopamine pop to break through mental fatigue.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Layer 2 -->
+                        <div class="bg-white/95 rounded-2xl p-4 border border-brand-gold/30 shadow-xs flex flex-col justify-between hover:border-brand-gold hover:shadow-md transition-all">
+                            <div>
+                                <span class="w-8 h-8 rounded-full bg-brand-oak text-brand-sand font-serif font-bold text-xs flex items-center justify-center mb-3 shadow-xs border border-brand-gold/30">
+                                    02
+                                </span>
+                                <h4 class="font-serif text-sm sm:text-base font-bold text-brand-oak leading-tight">The Memory</h4>
+                                <p class="text-base font-caveat text-brand-gold-dark mb-2 leading-tight">Shape &amp; Movement</p>
+                                <p class="text-[11px] text-brand-dark/80 leading-relaxed font-sans">
+                                    What memory or feeling are you recreating? Use flowing curves for gentle ease, repetitive piped shells for rhythmic anxiety relief, or wild botanical carvings.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Layer 3 -->
+                        <div class="bg-white/95 rounded-2xl p-4 border border-brand-gold/30 shadow-xs flex flex-col justify-between hover:border-brand-gold hover:shadow-md transition-all">
+                            <div>
+                                <span class="w-8 h-8 rounded-full bg-brand-oak text-brand-sand font-serif font-bold text-xs flex items-center justify-center mb-3 shadow-xs border border-brand-gold/30">
+                                    03
+                                </span>
+                                <h4 class="font-serif text-sm sm:text-base font-bold text-brand-oak leading-tight">The Anchor</h4>
+                                <p class="text-base font-caveat text-brand-gold-dark mb-2 leading-tight">Texture &amp; Touch</p>
+                                <p class="text-[11px] text-brand-dark/80 leading-relaxed font-sans">
+                                    What physical feel brings you back to your body? Choose a soft velvet cushion to soothe overstimulation, or crisp crystals and sea salt to snap out of brain fog.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Layer 4 -->
+                        <div class="bg-white/95 rounded-2xl p-4 border border-brand-gold/30 shadow-xs flex flex-col justify-between hover:border-brand-gold hover:shadow-md transition-all">
+                            <div>
+                                <span class="w-8 h-8 rounded-full bg-brand-oak text-brand-sand font-serif font-bold text-xs flex items-center justify-center mb-3 shadow-xs border border-brand-gold/30">
+                                    04
+                                </span>
+                                <h4 class="font-serif text-sm sm:text-base font-bold text-brand-oak leading-tight">The Strategy</h4>
+                                <p class="text-base font-caveat text-brand-gold-dark mb-2 leading-tight">Placement &amp; Reach</p>
+                                <p class="text-[11px] text-brand-dark/80 leading-relaxed font-sans">
+                                    Where do elements belong based on your social battery? Protect your energy in a centered core, draw protective border frames, or scatter radial blooms outward.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Layer 5 -->
+                        <div class="bg-white/95 rounded-2xl p-4 border border-brand-gold/30 shadow-xs flex flex-col justify-between hover:border-brand-gold hover:shadow-md transition-all">
+                            <div>
+                                <span class="w-8 h-8 rounded-full bg-brand-gold text-brand-oak font-serif font-bold text-xs flex items-center justify-center mb-3 shadow-xs">
+                                    05
+                                </span>
+                                <h4 class="font-serif text-sm sm:text-base font-bold text-brand-oak leading-tight">The Magic</h4>
+                                <p class="text-base font-caveat text-brand-gold-dark mb-2 leading-tight">The Shift &amp; Ritual</p>
+                                <p class="text-[11px] text-brand-dark/80 leading-relaxed font-sans">
+                                    Take a conscious breath and observe how the heaviness lifted. Add a splatter of gold luster or a delicate blossom to declare your story complete.
+                                </p>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-                <a href="contact.html?subject=Wholesale%20%26%20Retail" class="shrink-0 bg-brand-oak border border-brand-gold/40 text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-7 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md">Inquire for Wholesale</a>
+
+                <!-- PORTFOLIO FOOTER CALLOUT -->
+                <div class="mt-8 pt-6 border-t border-brand-gold/20 flex flex-col sm:flex-row items-center justify-between gap-4">
+                    <div class="text-left">
+                        <h4 class="font-serif text-base font-bold text-brand-oak mb-0.5">Curious What Studio Participants Create?</h4>
+                        <p class="text-xs text-brand-dark/75 font-sans">
+                            Explore our studio gallery to see live participant bakes and sculpting studies from past sessions.
+                        </p>
+                    </div>
+                    <a href="flipbook.html" class="shrink-0 bg-brand-oak text-brand-sand font-sans text-[10px] font-bold uppercase tracking-wider py-2.5 px-5 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-sm">
+                        View Portfolio &rarr;
+                    </a>
+                </div>
+
             </div>
+        </div>
+    </section>
+
+    <!-- ============================================================== -->
+    <!-- SECTION 4: FREQUENTLY ASKED QUESTIONS (DEEP OAK GREEN ANCHOR)  -->
+    <!-- ============================================================== -->
+    <section class="py-16 md:py-20 bg-brand-oak text-brand-sand border-t-2 border-brand-gold/25 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 relative z-10">
+            
+            <div class="text-center mb-10">
+                <span class="text-brand-gold font-caveat text-2xl md:text-3xl block mb-1">Clear Answers</span>
+                <h2 class="font-serif text-2xl sm:text-3xl md:text-4xl text-brand-sand font-bold">Frequently Asked Questions</h2>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 font-sans">
+                
+                <div class="bg-brand-cream text-brand-dark p-6 rounded-2xl shadow-md border border-brand-gold/30">
+                    <h3 class="font-serif text-base text-brand-gold-dark font-bold mb-2">Do I need any cake decorating or art experience?</h3>
+                    <p class="text-brand-dark/85 leading-relaxed text-xs">Not at all. In fact, most people who attend have never touched a palette knife or piping bag before. This experience is designed for complete beginners and overstimulated minds. There is no right or wrong way to make your piece, and you cannot ruin it.</p>
+                </div>
+
+                <div class="bg-brand-cream text-brand-dark p-6 rounded-2xl shadow-md border border-brand-gold/30">
+                    <h3 class="font-serif text-base text-brand-gold-dark font-bold mb-2">How do hybrid team bookings work?</h3>
+                    <p class="text-brand-dark/85 leading-relaxed text-xs">Hybrid bookings are simple. If you book an in-person Private Local Gathering ($135/seat, meeting our 10-seat event minimum), you can add individual shipped kits ($145/kit plus $12 flat ground shipping) for remote colleagues. They receive their keepsake kits at home and join directly into the live video session.</p>
+                </div>
+
+                <div class="bg-brand-cream text-brand-dark p-6 rounded-2xl shadow-md border border-brand-gold/30">
+                    <h3 class="font-serif text-base text-brand-gold-dark font-bold mb-2">Difference between Keepsake and Edible Canvas tracks?</h3>
+                    <p class="text-brand-dark/85 leading-relaxed text-xs">The <strong>Keepsake Sculpture Track</strong> uses a 3D sculpting form, whipped spackle, palette knives, gemstones, and botanicals to make a permanent desk art piece. <strong>The Edible Canvas Track</strong> uses freshly baked mini cakes, gourmet buttercreams, and edible sugar gems to make a delicious creation to enjoy at home.</p>
+                </div>
+
+                <div class="bg-brand-cream text-brand-dark p-6 rounded-2xl shadow-md border border-brand-gold/30">
+                    <h3 class="font-serif text-base text-brand-gold-dark font-bold mb-2">Are shipped virtual corporate kits edible or non-edible?</h3>
+                    <p class="text-brand-dark/85 leading-relaxed text-xs">Shipped virtual kits are exclusively non-edible keepsake sculptures. This ensures all materials arrive in clean condition without perishable food risks, giving participants a permanent decorative keepsake for their home or office.</p>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -553,73 +600,77 @@
         </div>
     </footer>
 
-    <!-- DYNAMIC SHOPPE INQUIRY MODAL -->
-    <div id="shoppe-inquiry-modal" class="fixed inset-0 bg-brand-oak/80 backdrop-blur-md z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+    <!-- QUICK PRIVATE GATHERING INQUIRY MODAL -->
+    <div id="inquiry-modal" class="fixed inset-0 bg-brand-oak/80 backdrop-blur-md z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
         <div class="bg-brand-cream rounded-2xl border-2 border-brand-gold/40 shadow-2xl max-w-lg w-full p-6 relative max-h-[90vh] overflow-y-auto text-left">
-            <button type="button" onclick="closeShoppeModal()" class="absolute top-4 right-4 text-brand-dark/40 hover:text-brand-oak text-2xl font-bold focus:outline-none transition-colors" aria-label="Close modal">
+            <button type="button" onclick="closeInquiryModal()" class="absolute top-4 right-4 text-brand-dark/40 hover:text-brand-oak text-2xl font-bold focus:outline-none transition-colors" aria-label="Close modal">
                 &times;
             </button>
 
-            <span class="text-brand-gold-dark font-sans font-bold text-[10px] uppercase tracking-widest block mb-0.5">Product Inquiry</span>
-            <h3 id="modal-title-product" class="font-serif text-xl sm:text-2xl font-bold text-brand-oak mb-1.5">Item Name</h3>
-            
-            <!-- STEP 1: SELECTION VIEW (For items with standard edition) -->
-            <div id="modal-selection-view" class="hidden py-4">
-                <p class="text-xs text-brand-dark/75 font-sans mb-5 leading-relaxed">
-                    Would you like to order our standard signature suite, or inquire about a custom family recipe commission?
-                </p>
-                <div class="space-y-3">
-                    <button id="modal-readymade-btn" type="button" class="w-full flex items-center justify-between bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-4 px-5 rounded-xl hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md border border-brand-gold/30">
-                        <span>Order Standard Edition</span>
-                        <span>&rarr;</span>
-                    </button>
-                    <button id="modal-custom-btn" type="button" class="w-full flex items-center justify-between bg-white text-brand-oak font-sans text-xs font-bold uppercase tracking-wider py-4 px-5 rounded-xl hover:bg-brand-light transition-all shadow-sm border border-brand-gold/40">
-                        <span>Inquire About Custom Design</span>
-                        <span>&rarr;</span>
+            <span class="text-brand-gold-dark font-sans font-bold text-[10px] uppercase tracking-widest block mb-0.5">Direct Studio Inquiry</span>
+            <h3 class="font-serif text-xl sm:text-2xl font-bold text-brand-oak mb-1.5">Interested in Booking?</h3>
+            <p class="text-xs text-brand-dark/75 font-sans mb-4 leading-relaxed">
+                Leave your details below and we will reach out directly to check dates, answer questions, and plan your gathering.
+            </p>
+
+            <form id="quick-inquiry-form" class="space-y-3.5" onsubmit="handleQuickInquiry(event)">
+                <div>
+                    <label class="block text-[10px] font-bold uppercase tracking-wider text-brand-oak mb-1">Selected Gathering Type</label>
+                    <input type="text" id="modal-tier" name="gathering_type" readonly class="w-full bg-brand-light border border-brand-gold/30 rounded-xl px-3.5 py-2 text-xs text-brand-oak font-semibold focus:outline-none">
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                        <label for="modal-name" class="block text-[10px] font-bold uppercase tracking-wider text-brand-oak mb-1">Your Name *</label>
+                        <input type="text" id="modal-name" name="name" required placeholder="e.g. Eleanor Vance" class="w-full bg-brand-light/60 border border-brand-gold/30 rounded-xl px-3 py-2 text-xs text-brand-dark focus:outline-none focus:border-brand-gold">
+                    </div>
+                    <div>
+                        <label for="modal-email" class="block text-[10px] font-bold uppercase tracking-wider text-brand-oak mb-1">Email Address *</label>
+                        <input type="email" id="modal-email" name="email" required placeholder="you@example.com" class="w-full bg-brand-light/60 border border-brand-gold/30 rounded-xl px-3 py-2 text-xs text-brand-dark focus:outline-none focus:border-brand-gold">
+                    </div>
+                </div>
+
+                <div>
+                    <label for="modal-phone" class="block text-[10px] font-bold uppercase tracking-wider text-brand-oak mb-1">Phone Number *</label>
+                    <input type="tel" id="modal-phone" name="phone" required placeholder="e.g. (214) 555-0199" class="w-full bg-brand-light/60 border border-brand-gold/30 rounded-xl px-3 py-2 text-xs text-brand-dark focus:outline-none focus:border-brand-gold">
+                </div>
+
+                <div>
+                    <label class="block text-[10px] font-bold uppercase tracking-wider text-brand-oak mb-1">How would you prefer we contact you? *</label>
+                    <div class="grid grid-cols-3 gap-2">
+                        <label class="flex items-center justify-center p-2 rounded-xl border border-brand-gold/30 cursor-pointer text-[11px] font-sans text-brand-dark hover:bg-brand-light transition-colors has-[:checked]:bg-brand-oak has-[:checked]:text-brand-sand has-[:checked]:border-brand-oak">
+                            <input type="radio" name="preferred_contact" value="Text" checked class="sr-only">
+                            <span>Text (Fastest)</span>
+                        </label>
+                        <label class="flex items-center justify-center p-2 rounded-xl border border-brand-gold/30 cursor-pointer text-[11px] font-sans text-brand-dark hover:bg-brand-light transition-colors has-[:checked]:bg-brand-oak has-[:checked]:text-brand-sand has-[:checked]:border-brand-oak">
+                            <input type="radio" name="preferred_contact" value="Phone Call" class="sr-only">
+                            <span>Phone Call</span>
+                        </label>
+                        <label class="flex items-center justify-center p-2 rounded-xl border border-brand-gold/30 cursor-pointer text-[11px] font-sans text-brand-dark hover:bg-brand-light transition-colors has-[:checked]:bg-brand-oak has-[:checked]:text-brand-sand has-[:checked]:border-brand-oak">
+                            <input type="radio" name="preferred_contact" value="Email" class="sr-only">
+                            <span>Email</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div>
+                    <label for="modal-details" class="block text-[10px] font-bold uppercase tracking-wider text-brand-oak mb-1">Estimated Group Size &amp; Target Timing (Optional)</label>
+                    <input type="text" id="modal-details" name="details" placeholder="e.g. About 12 people, hoping for a Friday in November" class="w-full bg-brand-light/60 border border-brand-gold/30 rounded-xl px-3 py-2 text-xs text-brand-dark focus:outline-none focus:border-brand-gold">
+                </div>
+
+                <div class="pt-2">
+                    <button type="submit" class="w-full bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md">
+                        Contact Me About This Gathering!
                     </button>
                 </div>
-            </div>
-
-            <!-- STEP 2: INQUIRY FORM VIEW -->
-            <div id="modal-form-view" class="hidden">
-                <p class="text-xs text-brand-dark/75 font-sans mb-4 mt-2 leading-relaxed">
-                    Leave your details below and we will reach out directly to discuss your custom piece.
+                <p class="text-[9px] text-center text-brand-dark/50 font-serif italic">
+                    We respect your time. Zero sales spam, just direct communication from our studio.
                 </p>
-
-                <form id="shoppe-form" class="space-y-3.5" onsubmit="handleShoppeInquiry(event)">
-                    <input type="hidden" id="modal-product-name" name="product_type">
-
-                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                        <div>
-                            <label class="block text-[10px] font-bold uppercase tracking-wider text-brand-oak mb-1">Your Name *</label>
-                            <input type="text" name="name" required placeholder="e.g. Eleanor Vance" class="w-full bg-brand-light/60 border border-brand-gold/30 rounded-xl px-3 py-2 text-xs text-brand-dark focus:outline-none focus:border-brand-gold">
-                        </div>
-                        <div>
-                            <label class="block text-[10px] font-bold uppercase tracking-wider text-brand-oak mb-1">Email Address *</label>
-                            <input type="email" name="email" required placeholder="you@example.com" class="w-full bg-brand-light/60 border border-brand-gold/30 rounded-xl px-3 py-2 text-xs text-brand-dark focus:outline-none focus:border-brand-gold">
-                        </div>
-                    </div>
-
-                    <div>
-                        <label class="block text-[10px] font-bold uppercase tracking-wider text-brand-oak mb-1">Phone Number *</label>
-                        <input type="tel" name="phone" required placeholder="e.g. (214) 555-0199" class="w-full bg-brand-light/60 border border-brand-gold/30 rounded-xl px-3 py-2 text-xs text-brand-dark focus:outline-none focus:border-brand-gold">
-                    </div>
-
-                    <div>
-                        <label class="block text-[10px] font-bold uppercase tracking-wider text-brand-oak mb-1">Project Details or Target Date</label>
-                        <input type="text" name="details" placeholder="Tell us a bit about what you have in mind..." class="w-full bg-brand-light/60 border border-brand-gold/30 rounded-xl px-3 py-2 text-xs text-brand-dark focus:outline-none focus:border-brand-gold">
-                    </div>
-
-                    <div class="pt-3">
-                        <button type="submit" class="w-full bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md">
-                            Submit Inquiry
-                        </button>
-                    </div>
-                </form>
-            </div>
+            </form>
         </div>
     </div>
 
+    <!-- REUSABLE SCRIPTS -->
     <script>
         // Navigation Mobile Menu
         const hamburgerButton = document.getElementById('hamburger-button');
@@ -628,107 +679,62 @@
             hamburgerButton.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
         }
 
-        // Product Category Filter
-        function filterShoppe(category) {
-            const buttons = document.querySelectorAll('.shoppe-filter-btn');
-            buttons.forEach(btn => {
-                if (btn.getAttribute('data-category') === category) {
-                    btn.className = "shoppe-filter-btn active py-2 px-4 rounded-full border-2 border-brand-gold transition-all text-brand-oak bg-brand-gold shadow-[0_4px_18px_rgba(212,175,55,0.45)] scale-105";
-                } else {
-                    btn.className = "shoppe-filter-btn py-2 px-4 rounded-full border border-brand-gold/40 hover:border-brand-gold hover:text-brand-gold transition-all text-brand-sand bg-brand-oak shadow-sm";
-                }
-            });
+        // Private Gathering Modal Handlers
+        const inquiryModal = document.getElementById('inquiry-modal');
+        const modalTierInput = document.getElementById('modal-tier');
 
-            const cards = document.querySelectorAll('.shoppe-card');
-            cards.forEach(card => {
-                const cardCat = card.getAttribute('data-category');
-                if (category === 'all' || cardCat === category) {
-                    card.classList.remove('hidden');
-                } else {
-                    card.classList.add('hidden');
-                }
-            });
-        }
-
-        // In-Card Image Swapper
-        function swapProductImage(mainImgId, thumbClass, newSrc, clickedThumb) {
-            const mainImg = document.getElementById(mainImgId);
-            if (mainImg) mainImg.src = newSrc;
-            const thumbs = document.querySelectorAll('.' + thumbClass);
-            thumbs.forEach(t => {
-                t.classList.remove('active', 'border-brand-gold');
-                t.classList.add('border-transparent');
-            });
-            clickedThumb.classList.add('active', 'border-brand-gold');
-            clickedThumb.classList.remove('border-transparent');
-        }
-
-        // Shoppe Modal Logic
-        const shoppeModal = document.getElementById('shoppe-inquiry-modal');
-        const selectionView = document.getElementById('modal-selection-view');
-        const formView = document.getElementById('modal-form-view');
-
-        function openShoppeModal(productName, squareLink, hasReadymade) {
-            document.getElementById('modal-product-name').value = productName;
-            document.getElementById('modal-title-product').textContent = productName;
-
-            if (hasReadymade) {
-                selectionView.classList.remove('hidden');
-                formView.classList.add('hidden');
-                
-                document.getElementById('modal-readymade-btn').onclick = () => window.open(squareLink, '_blank');
-                document.getElementById('modal-custom-btn').onclick = () => {
-                    selectionView.classList.add('hidden');
-                    formView.classList.remove('hidden');
-                };
-            } else {
-                selectionView.classList.add('hidden');
-                formView.classList.remove('hidden');
+        function openInquiryModal(gatheringType) {
+            if (modalTierInput) {
+                modalTierInput.value = gatheringType;
             }
-
-            shoppeModal.classList.remove('opacity-0', 'pointer-events-none');
-            shoppeModal.classList.add('opacity-100');
-            document.body.style.overflow = 'hidden';
+            if (inquiryModal) {
+                inquiryModal.classList.remove('opacity-0', 'pointer-events-none');
+                inquiryModal.classList.add('opacity-100');
+                document.body.style.overflow = 'hidden';
+            }
         }
 
-        function closeShoppeModal() {
-            if (shoppeModal) {
-                shoppeModal.classList.remove('opacity-100');
-                shoppeModal.classList.add('opacity-0', 'pointer-events-none');
+        function closeInquiryModal() {
+            if (inquiryModal) {
+                inquiryModal.classList.remove('opacity-100');
+                inquiryModal.classList.add('opacity-0', 'pointer-events-none');
                 document.body.style.overflow = 'auto';
-                document.getElementById('shoppe-form').reset();
             }
         }
 
-        function handleShoppeInquiry(event) {
+        if (inquiryModal) {
+            inquiryModal.addEventListener('click', (e) => {
+                if (e.target === inquiryModal) closeInquiryModal();
+            });
+        }
+
+        function handleQuickInquiry(event) {
             event.preventDefault();
             const form = event.target;
             const name = form.name.value;
-            const product = form.product_type.value;
+            const preferred = form.preferred_contact.value;
+            const tier = form.gathering_type.value;
 
-            alert('Thank you, ' + name + '! We have received your inquiry for ' + product + '. We will reach out to you shortly.');
-            closeShoppeModal();
+            alert('Thank you, ' + name + '! We have received your inquiry for ' + tier + '. We will reach out to you via ' + preferred + ' shortly.');
+            form.reset();
+            closeInquiryModal();
         }
 
-        // Keyboard & Outside Click Closing
-        if (shoppeModal) {
-            shoppeModal.addEventListener('click', (e) => {
-                if (e.target === shoppeModal) closeShoppeModal();
-            });
-        }
+        // Global Keyboard Navigation (Esc for Modal)
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && shoppeModal && !shoppeModal.classList.contains('pointer-events-none')) {
-                closeShoppeModal();
+            if (inquiryModal && !inquiryModal.classList.contains('pointer-events-none')) {
+                if (e.key === 'Escape') closeInquiryModal();
             }
         });
 
         // Image Copy/Save Protection Handlers
         document.addEventListener('contextmenu', (e) => {
-            if (e.target.tagName === 'IMG' || e.target.closest('.shoppe-card')) {
+            if (e.target.tagName === 'IMG') {
                 e.preventDefault();
                 return false;
             }
         });
+
         document.addEventListener('dragstart', (e) => {
             if (e.target.tagName === 'IMG') {
                 e.preventDefault();
