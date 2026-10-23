@@ -9,7 +9,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Fraunces:ital,opsz,wght@0,9..144,400..800;1,9..144,400..800&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">  
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Fraunces:opsz,wght@9..144,400..800&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">  
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -32,8 +32,7 @@
                     fontFamily: {
                         'serif': ['"Fraunces"', 'serif'],
                         'sans': ['"Inter"', 'sans-serif'],
-                        'caveat': ['"Caveat"', 'cursive'],
-                        'hand': ['"Caveat"', 'cursive']
+                        'caveat': ['"Caveat"', 'cursive']
                     }
                 }
             }
@@ -42,7 +41,7 @@
     <style>
         .bg-texture { background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png'); }
 
-        /* Comprehensive Image Protection: Disables saving, dragging, and selection */
+        /* Comprehensive Image Protection */
         img {
             -webkit-user-select: none;
             -moz-user-select: none;
@@ -63,7 +62,6 @@
     <nav class="sticky top-0 bg-brand-oak/95 backdrop-blur-lg shadow-md z-50 border-b border-brand-gold/10">
         <div class="max-w-6xl mx-auto px-4 py-3.5 flex justify-between items-center">
             
-            <!-- ATELIER LOGO (HAIRLINE RULES) -->
             <a href="index.html" class="flex flex-col items-center text-center leading-none group">
                 <span class="text-[17px] sm:text-[19px] font-serif font-bold text-brand-gold uppercase tracking-[0.08em] leading-none">
                     THE GILDED SPOON
@@ -81,7 +79,8 @@
             <div class="hidden md:flex items-center space-x-6 font-medium text-xs tracking-widest uppercase">
                 <a href="shoppe.html" class="text-brand-gold font-bold transition-colors">Shoppe</a>
                 <a href="workshop.html" class="text-brand-light hover:text-brand-gold transition-colors">Workshops</a>
-                <a href="flipbook.html" class="text-brand-light hover:text-brand-gold transition-colors">Portfolio</a>
+                <a href="corporate.html" class="text-brand-light hover:text-brand-gold transition-colors">Corporate</a>
+                <a href="flipbook.html" class="text-brand-light hover:text-brand-gold transition-colors">Gallery</a>
                 <a href="contact.html" class="text-brand-light hover:text-brand-gold transition-colors">Contact</a>
                 <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-oak hover:bg-brand-sand transition-all px-4 py-2 rounded-full font-bold shadow-sm">
                     Free Guide
@@ -100,7 +99,8 @@
         <div id="mobile-menu" class="hidden md:hidden border-t border-brand-gold/10 px-4 pb-4 bg-brand-oak text-center text-xs tracking-widest uppercase">
             <a href="shoppe.html" class="block py-2.5 text-brand-gold font-bold">Shoppe</a>
             <a href="workshop.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Workshops</a>
-            <a href="flipbook.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Portfolio</a>
+            <a href="corporate.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Corporate Offsites</a>
+            <a href="flipbook.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Gallery</a>
             <a href="contact.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Contact</a>
             <a href="/baketobaseline/index.html" class="inline-block bg-brand-gold text-brand-oak hover:bg-brand-sand transition-all px-5 py-2 rounded-full font-bold shadow-sm mt-2">
                 Free Guide
@@ -114,56 +114,128 @@
             <span class="text-brand-gold font-caveat text-2xl md:text-3xl block mb-2">Studio Goods &amp; Counter Tools</span>
             <h1 class="font-serif font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-brand-sand leading-tight tracking-normal mb-4 text-balance">The Handcrafted Shoppe &amp; Studio</h1>
             <p class="font-serif italic text-base md:text-lg text-brand-light/80 leading-relaxed max-w-2xl mx-auto">
-                At-home studio kits, single-step recipe decks, guided journals, and custom cake replicas designed to give your hands a quiet, grounding rhythm without kitchen mess or setup stress.
+                At-home studio kits, single-step recipe decks, guided journals, and custom keepsake cake art designed to give your hands a quiet, grounding rhythm without kitchen mess or setup stress.
             </p>
         </div>
     </header>
 
-    <!-- SHOPPE CATEGORY FILTER BAR (FLUSH STICKY POSITION) -->
+    <!-- SHOPPE CATEGORY FILTER BAR (FLUSH UNDER HEADER) -->
     <section class="py-3 bg-brand-oak/95 border-b border-brand-gold/30 sticky top-[60px] sm:top-[63px] z-40 backdrop-blur-md shadow-md">
         <div class="max-w-6xl mx-auto px-4 flex flex-wrap justify-center items-center gap-2 text-[9px] sm:text-[10px] uppercase tracking-widest font-sans font-bold">
             <button onclick="filterShoppe('all')" class="shoppe-filter-btn active py-2 px-4 rounded-full border-2 border-brand-gold transition-all text-brand-oak bg-brand-gold shadow-[0_4px_18px_rgba(212,175,55,0.45)] scale-105" data-category="all">
                 All Goods
             </button>
-            <button onclick="filterShoppe('kits')" class="shoppe-filter-btn py-2 px-4 rounded-full border border-brand-gold/40 hover:border-brand-gold hover:text-brand-gold transition-all text-brand-sand bg-brand-oak shadow-sm" data-category="kits">
-                Studio Kits
-            </button>
             <button onclick="filterShoppe('recipes')" class="shoppe-filter-btn py-2 px-4 rounded-full border border-brand-gold/40 hover:border-brand-gold hover:text-brand-gold transition-all text-brand-sand bg-brand-oak shadow-sm" data-category="recipes">
                 Recipe Suites
+            </button>
+            <button onclick="filterShoppe('kits')" class="shoppe-filter-btn py-2 px-4 rounded-full border border-brand-gold/40 hover:border-brand-gold hover:text-brand-gold transition-all text-brand-sand bg-brand-oak shadow-sm" data-category="kits">
+                Studio Kits
             </button>
             <button onclick="filterShoppe('books')" class="shoppe-filter-btn py-2 px-4 rounded-full border border-brand-gold/40 hover:border-brand-gold hover:text-brand-gold transition-all text-brand-sand bg-brand-oak shadow-sm" data-category="books">
                 Books &amp; Guides
             </button>
             <button onclick="filterShoppe('custom')" class="shoppe-filter-btn py-2 px-4 rounded-full border border-brand-gold/40 hover:border-brand-gold hover:text-brand-gold transition-all text-brand-sand bg-brand-oak shadow-sm" data-category="custom">
-                Custom Replicas &amp; Inquiries
+                Custom Keepsakes &amp; Inquiries
             </button>
         </div>
     </section>
 
-    <!-- UNIFIED 6-PRODUCT BOUTIQUE GRID -->
+    <!-- 5-PRODUCT BALANCED GRID (ROW 1: 2+1, ROW 2: 1+1+1) -->
     <main class="py-12 md:py-16 bg-brand-light">
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
             <div id="shoppe-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-7 items-stretch">
                 
-                <!-- CARD 1: THE KEEPSAKE CAKE KIT -->
+                <!-- CARD 1: THE DECONSTRUCTED RECIPE CARD SUITE (FEATURED SPOTLIGHT - 2 COLS) -->
+                <div class="shoppe-card bg-brand-cream rounded-3xl border-2 border-brand-gold/40 p-5 sm:p-7 shadow-md hover:shadow-xl hover:border-brand-gold transition-all flex flex-col md:flex-row gap-6 lg:gap-8 justify-between md:col-span-2 lg:col-span-2" data-category="recipes">
+                    
+                    <!-- Left: Images -->
+                    <div class="w-full md:w-1/2 flex flex-col justify-between">
+                        <div>
+                            <div class="w-full h-64 sm:h-72 rounded-2xl overflow-hidden border border-brand-gold/30 mb-3.5 relative bg-brand-oak shadow-inner">
+                                <img id="deck-main-image" src="images/Equipment Deconstructed Recipe Card (Yellow).png" alt="Deconstructed Recipe Card in Hand" class="w-full h-full object-cover transition-opacity duration-300">
+                            </div>
+                            
+                            <div class="grid grid-cols-5 gap-1.5 w-full">
+                                <button type="button" onclick="swapProductImage('deck-main-image', 'deck-thumb', 'images/Equipment Deconstructed Recipe Card (Yellow).png', this)" class="deck-thumb active border-2 border-brand-gold rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
+                                    <img src="images/Equipment Deconstructed Recipe Card (Yellow).png" alt="Card in Hand" class="w-full h-11 object-cover rounded-md">
+                                </button>
+                                <button type="button" onclick="swapProductImage('deck-main-image', 'deck-thumb', 'images/Equipment & Prep ( Yellow Card).png', this)" class="deck-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
+                                    <img src="images/Equipment & Prep ( Yellow Card).png" alt="Yellow Prep Cards" class="w-full h-11 object-cover rounded-md">
+                                </button>
+                                <button type="button" onclick="swapProductImage('deck-main-image', 'deck-thumb', 'images/Eggless Adaptation (Green).png', this)" class="deck-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
+                                    <img src="images/Eggless Adaptation (Green).png" alt="Green Eggless Card" class="w-full h-11 object-cover rounded-md">
+                                </button>
+                                <button type="button" onclick="swapProductImage('deck-main-image', 'deck-thumb', 'images/Infusing Flavors ( Mauve).png', this)" class="deck-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
+                                    <img src="images/Infusing Flavors ( Mauve).png" alt="Mauve Infusion Cards" class="w-full h-11 object-cover rounded-md">
+                                </button>
+                                <button type="button" onclick="swapProductImage('deck-main-image', 'deck-thumb', 'images/Finishing Touches ( Pink).png', this)" class="deck-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
+                                    <img src="images/Finishing Touches ( Pink).png" alt="Pink Finishing Card" class="w-full h-11 object-cover rounded-md">
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Right: Details & Purchase -->
+                    <div class="w-full md:w-1/2 flex flex-col justify-between">
+                        <div>
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="bg-brand-gold text-brand-oak font-sans font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full shadow-sm">
+                                    Kitchen Innovation
+                                </span>
+                                <span class="text-xs font-serif italic text-brand-gold-dark font-semibold">
+                                    Single-Step Focus
+                                </span>
+                            </div>
+                            
+                            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-brand-oak mb-1 leading-tight">
+                                The Deconstructed Recipe Suite
+                            </h3>
+                            <p class="text-xs font-serif italic text-brand-gold-dark mb-3">
+                                Single-Step Visual Cards &amp; Tabletop Stand
+                            </p>
+                            
+                            <div class="font-serif font-bold text-brand-oak text-2xl mb-3">Starts at $48.00</div>
+                            
+                            <p class="font-sans text-xs sm:text-sm text-brand-dark/80 leading-relaxed mb-4">
+                                Say goodbye to chaotic food blogs and losing your place in dense paragraphs. This suite breaks any recipe (sweet or savory) down into calm, single-step visual cards with zero math. Includes a custom wooden tabletop easel stand.
+                            </p>
+
+                            <ul class="text-xs font-serif text-brand-dark/85 space-y-1.5 mb-5 pb-4 border-b border-brand-gold/15">
+                                <li>✦ Single-step focus with wooden display easel included.</li>
+                                <li>✦ Custom hand-drawn artwork for signature or family heirloom bakes.</li>
+                                <li>✦ Single-bowl gram weights eliminate measuring panic and cleanup.</li>
+                                <li>✦ Ships nationwide in protective packaging.</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <button type="button" onclick="openShoppeModal('The Deconstructed Recipe Suite', 'https://square.link/u/1VoR2TeL', true)" class="w-full block text-center bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md">
+                                Order Signature Suite or Inquire Custom &rarr;
+                            </button>
+                            <span class="text-[11px] text-brand-dark/60 font-serif italic block text-center mt-2">Signature bakes or custom family heirloom recipe decks</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 2: THE KEEPSAKE CAKE KIT (1 COL) -->
                 <div class="shoppe-card bg-brand-cream rounded-3xl border border-brand-gold/30 p-5 sm:p-6 shadow-md hover:shadow-xl hover:border-brand-gold/60 transition-all flex flex-col justify-between" data-category="kits">
                     <div>
                         <div class="w-full h-56 sm:h-60 rounded-2xl overflow-hidden border border-brand-gold/30 mb-3.5 relative bg-brand-oak shadow-inner">
-                            <img id="keepsake-kit-image" src="images/IMG_7507.jpeg" alt="The Keepsake Cake Kit Full Spread" class="w-full h-full object-cover transition-opacity duration-300" draggable="false">
+                            <img id="keepsake-kit-image" src="images/IMG_7507.jpeg" alt="The Keepsake Cake Kit Full Spread" class="w-full h-full object-cover transition-opacity duration-300">
                         </div>
                         
                         <div class="grid grid-cols-4 gap-1.5 w-full mb-3.5">
                             <button type="button" onclick="swapProductImage('keepsake-kit-image', 'keepsake-thumb', 'images/IMG_7507.jpeg', this)" class="keepsake-thumb active border-2 border-brand-gold rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/IMG_7507.jpeg" alt="Complete Kit Spread" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
+                                <img src="images/IMG_7507.jpeg" alt="Complete Kit Spread" class="w-full h-9 sm:h-10 object-cover rounded-md">
                             </button>
                             <button type="button" onclick="swapProductImage('keepsake-kit-image', 'keepsake-thumb', 'images/IMG_7494.jpeg', this)" class="keepsake-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/IMG_7494.jpeg" alt="Palette Knives and Guides" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
+                                <img src="images/IMG_7494.jpeg" alt="Palette Knives and Guides" class="w-full h-9 sm:h-10 object-cover rounded-md">
                             </button>
                             <button type="button" onclick="swapProductImage('keepsake-kit-image', 'keepsake-thumb', 'images/IMG_7562.jpeg', this)" class="keepsake-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/IMG_7562.jpeg" alt="Mineral Pigments" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
+                                <img src="images/IMG_7562.jpeg" alt="Mineral Pigments" class="w-full h-9 sm:h-10 object-cover rounded-md">
                             </button>
                             <button type="button" onclick="swapProductImage('keepsake-kit-image', 'keepsake-thumb', 'images/image000000.jpeg', this)" class="keepsake-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/image000000.jpeg" alt="Piping Bags and Palette" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
+                                <img src="images/image000000.jpeg" alt="Piping Bags and Palette" class="w-full h-9 sm:h-10 object-cover rounded-md">
                             </button>
                         </div>
                         
@@ -181,7 +253,7 @@
                         <div class="font-serif font-bold text-brand-oak text-xl mb-2.5">$68.00</div>
                         
                         <p class="font-sans text-xs text-brand-dark/80 leading-relaxed mb-4">
-                            A permanent piece of cake art you keep forever. Tint your sculpting paste with seasonal acrylic colors to pipe, spread, and build textured designs onto a 3D cake form or flat canvas panel. Dries to a durable finish for tabletop or shelf display. Includes sculpting paste, seasonal acrylic colors, dried florals, textured accents, a full tool set, and our guided studio workmat.
+                            A permanent piece of cake art you keep forever. Tint your sculpting paste with seasonal acrylic colors to pipe, spread, and build textured designs onto a 3D cake form or flat canvas panel. Dries to a durable finish for tabletop or shelf display. Includes full tool set, pigments, dried botanicals, and studio workmat.
                         </p>
                     </div>
                     
@@ -193,147 +265,37 @@
                         </ul>
                         
                         <a href="https://square.link/u/SzGbYrG0" target="_blank" rel="noopener" class="w-full block text-center bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md">
-                            Order Keepsake Kit ($68)
+                            Order Keepsake Kit ($68) &rarr;
                         </a>
-                        <span class="text-[11px] text-brand-dark/60 font-serif italic block text-center mt-2">Choose a 3D cake shape or flat canvas at checkout</span>
+                        <span class="text-[11px] text-brand-dark/60 font-serif italic block text-center mt-2">Choose a 3D cake form or flat canvas at checkout</span>
                     </div>
                 </div>
 
-                <!-- CARD 2: THE EDIBLE CAKE CANVAS KIT (NOW DIRECT LINKED TO SQUARE) -->
-                <div class="shoppe-card bg-brand-cream rounded-3xl border border-brand-gold/30 p-5 sm:p-6 shadow-md hover:shadow-xl hover:border-brand-gold/60 transition-all flex flex-col justify-between" data-category="kits">
-                    <div>
-                        <div class="w-full h-56 sm:h-60 rounded-2xl overflow-hidden border border-brand-gold/30 mb-3.5 relative bg-brand-oak shadow-inner">
-                            <img id="edible-kit-image" src="images/IMG_6660.jpeg" alt="The Edible Cake Canvas Kit" class="w-full h-full object-cover transition-opacity duration-300" draggable="false">
-                        </div>
-                        
-                        <div class="grid grid-cols-4 gap-1.5 w-full mb-3.5">
-                            <button type="button" onclick="swapProductImage('edible-kit-image', 'edible-thumb', 'images/IMG_6660.jpeg', this)" class="edible-thumb active border-2 border-brand-gold rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/IMG_6660.jpeg" alt="Painted Batter Canvas" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
-                            </button>
-                            <button type="button" onclick="swapProductImage('edible-kit-image', 'edible-thumb', 'images/IMG_0422.JPG', this)" class="edible-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/IMG_0422.JPG" alt="Peach Blossom Cake" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
-                            </button>
-                            <button type="button" onclick="swapProductImage('edible-kit-image', 'edible-thumb', 'images/IMG_0356.jpeg', this)" class="edible-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/IMG_0356.jpeg" alt="Palette Knife Textures" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
-                            </button>
-                            <button type="button" onclick="swapProductImage('edible-kit-image', 'edible-thumb', 'images/Bunny Cake.jpg', this)" class="edible-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/Bunny Cake.jpg" alt="Bunny Celebration Cake" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
-                            </button>
-                        </div>
-                        
-                        <span class="inline-block bg-brand-gold text-brand-oak font-sans font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full mb-2 self-start shadow-sm">
-                            Create Your Own
-                        </span>
-                        
-                        <h3 class="font-serif text-xl sm:text-2xl font-bold text-brand-oak mb-1 leading-tight text-balance">
-                            The Edible Cake Canvas Kit
-                        </h3>
-                        <p class="text-xs font-serif italic text-brand-gold-dark mb-2">
-                            Fresh Scratch Cake &amp; Buttercreams
-                        </p>
-                        
-                        <div class="font-serif font-bold text-brand-oak text-xl mb-2.5">$75.00</div>
-                        
-                        <p class="font-sans text-xs text-brand-dark/80 leading-relaxed mb-4">
-                            All the fun of decorating a real bakery cake with zero oven mess. We bake the scratch cake layers; you tint the buttercreams to pipe borders, paint designs, and add textured toppings right at your kitchen counter to slice and share. Includes fresh-baked cake layers, artisan buttercreams, seasonal colors, dried florals, textured toppings, a full tool set, and our guided studio workmat.
-                        </p>
-                    </div>
-                    
-                    <div>
-                        <ul class="text-xs font-serif text-brand-dark/85 space-y-1 mb-4 pb-3 border-b border-brand-gold/15">
-                            <li>✦ Real scratch cake ready to decorate, slice, and eat.</li>
-                            <li>✦ Includes full tool set, fresh buttercreams &amp; studio workmat.</li>
-                            <li>✦ Available for local McKinney pickup &amp; DFW delivery.</li>
-                        </ul>
-                        
-                        <a href="https://square.link/u/SzGbYrG0" target="_blank" rel="noopener" class="w-full block text-center bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md">
-                            Order Edible Kit ($75)
-                        </a>
-                        <span class="text-[11px] text-brand-dark/60 font-serif italic block text-center mt-2">Prepared fresh in our McKinney studio kitchen</span>
-                    </div>
-                </div>
-
-                <!-- CARD 3: THE DECONSTRUCTED RECIPE CARD SUITE -->
-                <div class="shoppe-card bg-brand-cream rounded-3xl border border-brand-gold/30 p-5 sm:p-6 shadow-md hover:shadow-xl hover:border-brand-gold/60 transition-all flex flex-col justify-between" data-category="recipes">
-                    <div>
-                        <div class="w-full h-56 sm:h-60 rounded-2xl overflow-hidden border border-brand-gold/25 mb-3.5 relative bg-brand-oak shadow-inner">
-                            <img id="deck-main-image" src="images/Equipment Deconstructed Recipe Card (Yellow).png" alt="Deconstructed Recipe Card in Hand" class="w-full h-full object-cover transition-opacity duration-300" draggable="false">
-                        </div>
-                        
-                        <div class="grid grid-cols-5 gap-1 w-full mb-3.5">
-                            <button type="button" onclick="swapProductImage('deck-main-image', 'deck-thumb', 'images/Equipment Deconstructed Recipe Card (Yellow).png', this)" class="deck-thumb active border-2 border-brand-gold rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/Equipment Deconstructed Recipe Card (Yellow).png" alt="Card in Hand" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
-                            </button>
-                            <button type="button" onclick="swapProductImage('deck-main-image', 'deck-thumb', 'images/Equipment & Prep ( Yellow Card).png', this)" class="deck-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/Equipment & Prep ( Yellow Card).png" alt="Yellow Prep Cards" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
-                            </button>
-                            <button type="button" onclick="swapProductImage('deck-main-image', 'deck-thumb', 'images/Eggless Adaptation (Green).png', this)" class="deck-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/Eggless Adaptation (Green).png" alt="Green Eggless Card" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
-                            </button>
-                            <button type="button" onclick="swapProductImage('deck-main-image', 'deck-thumb', 'images/Infusing Flavors ( Mauve).png', this)" class="deck-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/Infusing Flavors ( Mauve).png" alt="Mauve Infusion Cards" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
-                            </button>
-                            <button type="button" onclick="swapProductImage('deck-main-image', 'deck-thumb', 'images/Finishing Touches ( Pink).png', this)" class="deck-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/Finishing Touches ( Pink).png" alt="Pink Finishing Card" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
-                            </button>
-                        </div>
-                        
-                        <span class="inline-block bg-brand-gold text-brand-oak font-sans font-bold text-[10px] uppercase tracking-wider px-3 py-1 rounded-full mb-2 self-start shadow-sm">
-                            Kitchen Innovation
-                        </span>
-                        
-                        <h3 class="font-serif text-xl sm:text-2xl font-bold text-brand-oak mb-1 leading-tight text-balance">
-                            The Deconstructed Recipe Suite
-                        </h3>
-                        <p class="text-xs font-serif italic text-brand-gold-dark mb-2">
-                            Single-Step Cards &amp; Counter Stand
-                        </p>
-                        
-                        <div class="font-serif font-bold text-brand-oak text-xl mb-2.5">Starts at $48.00</div>
-                        
-                        <p class="font-sans text-xs text-brand-dark/80 leading-relaxed mb-4">
-                            Say goodbye to chaotic food blogs and losing your place in dense paragraphs. This suite breaks any recipe (sweet or savory) down into calm, single-step visual cards with zero math.
-                        </p>
-                    </div>
-                    
-                    <div>
-                        <ul class="text-xs font-serif text-brand-dark/85 space-y-1 mb-4 pb-3 border-b border-brand-gold/15">
-                            <li>✦ Single-step focus with easel stand included.</li>
-                            <li>✦ Custom hand-drawn artwork for your recipe.</li>
-                        </ul>
-                        
-                        <button type="button" onclick="openShoppeModal('The Deconstructed Recipe Suite', 'https://square.link/u/1VoR2TeL', true)" class="w-full block text-center bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md">
-                            Order or Inquire
-                        </button>
-                        <span class="text-[11px] text-brand-dark/60 font-serif italic block text-center mt-2">Signature bake or custom family recipe</span>
-                    </div>
-                </div>
-
-                <!-- CARD 4: THE GUIDED JOURNAL -->
+                <!-- CARD 3: THE GUIDED JOURNAL (1 COL) -->
                 <div class="shoppe-card bg-brand-cream rounded-3xl border border-brand-gold/30 p-5 sm:p-6 shadow-md hover:shadow-xl hover:border-brand-gold/60 transition-all flex flex-col justify-between" data-category="books">
                     <div>
                         <div class="w-full h-56 sm:h-60 rounded-2xl overflow-hidden border border-brand-gold/25 mb-3.5 relative bg-brand-oak shadow-inner">
-                            <img id="journal-main-image" src="images/Cover Image.png" alt="Bake to Baseline Guided Journal Cover" class="w-full h-full object-contain transition-opacity duration-300" draggable="false">
+                            <img id="journal-main-image" src="images/Cover Image.png" alt="Bake to Baseline Guided Journal Cover" class="w-full h-full object-contain transition-opacity duration-300">
                         </div>
                         
                         <div class="grid grid-cols-6 gap-1 w-full mb-3.5">
                             <button type="button" onclick="swapProductImage('journal-main-image', 'journal-thumb', 'images/Cover Image.png', this)" class="journal-thumb active border-2 border-brand-gold rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/Cover Image.png" alt="Front Cover" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
+                                <img src="images/Cover Image.png" alt="Front Cover" class="w-full h-9 sm:h-10 object-cover rounded-md">
                             </button>
                             <button type="button" onclick="swapProductImage('journal-main-image', 'journal-thumb', 'images/OreintationPath.png', this)" class="journal-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/OreintationPath.png" alt="Energy Check" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
+                                <img src="images/OreintationPath.png" alt="Energy Check" class="w-full h-9 sm:h-10 object-cover rounded-md">
                             </button>
                             <button type="button" onclick="swapProductImage('journal-main-image', 'journal-thumb', 'images/18.png', this)" class="journal-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/18.png" alt="Color Regulation" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
+                                <img src="images/18.png" alt="Color Regulation" class="w-full h-9 sm:h-10 object-cover rounded-md">
                             </button>
                             <button type="button" onclick="swapProductImage('journal-main-image', 'journal-thumb', 'images/Spread 1.png', this)" class="journal-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/Spread 1.png" alt="Sensory Board" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
+                                <img src="images/Spread 1.png" alt="Sensory Board" class="w-full h-9 sm:h-10 object-cover rounded-md">
                             </button>
                             <button type="button" onclick="swapProductImage('journal-main-image', 'journal-thumb', 'images/15.png', this)" class="journal-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/15.png" alt="Blueprint" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
+                                <img src="images/15.png" alt="Blueprint" class="w-full h-9 sm:h-10 object-cover rounded-md">
                             </button>
                             <button type="button" onclick="swapProductImage('journal-main-image', 'journal-thumb', 'images/Highlight Slide New Journal2.png', this)" class="journal-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/Highlight Slide New Journal2.png" alt="Map" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
+                                <img src="images/Highlight Slide New Journal2.png" alt="Map" class="w-full h-9 sm:h-10 object-cover rounded-md">
                             </button>
                         </div>
                         
@@ -359,34 +321,35 @@
                         <ul class="text-xs font-serif text-brand-dark/85 space-y-1 mb-4 pb-3 border-b border-brand-gold/15">
                             <li>✦ Projects based on how much energy you have today.</li>
                             <li>✦ Zero pressure: flour smudges, drips, and messy sketches are welcome.</li>
+                            <li>✦ Ships nationwide in protective packaging.</li>
                         </ul>
                         
                         <a href="https://square.link/u/ZMTDyOFQ" target="_blank" rel="noopener" class="w-full block text-center bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md">
-                            Order Guided Journal ($40)
+                            Order Guided Journal ($40) &rarr;
                         </a>
                         <span class="text-[11px] text-brand-dark/60 font-serif italic block text-center mt-2">7.44" x 9.66" lay-flat spiral &bull; Ships nationwide</span>
                     </div>
                 </div>
 
-                <!-- CARD 5: WEDDING & MILESTONE KEEPSAKE CAKES -->
+                <!-- CARD 4: WEDDING & MILESTONE KEEPSAKE CAKES (1 COL) -->
                 <div class="shoppe-card bg-brand-cream rounded-3xl border border-brand-gold/30 p-5 sm:p-6 shadow-md hover:shadow-xl hover:border-brand-gold/60 transition-all flex flex-col justify-between" data-category="custom">
                     <div>
                         <div class="w-full h-56 sm:h-60 rounded-2xl overflow-hidden border border-brand-gold/30 mb-3.5 relative bg-brand-oak shadow-inner">
-                            <img id="art-main-image" src="images/IMG_7606.jpeg" alt="Wedding and Milestone Keepsake Cake" class="w-full h-full object-cover transition-opacity duration-300" draggable="false">
+                            <img id="art-main-image" src="images/IMG_7606.jpeg" alt="Wedding and Milestone Keepsake Cake" class="w-full h-full object-cover transition-opacity duration-300">
                         </div>
                         
                         <div class="grid grid-cols-4 gap-1.5 w-full mb-3.5">
                             <button type="button" onclick="swapProductImage('art-main-image', 'art-thumb', 'images/IMG_7606.jpeg', this)" class="art-thumb active border-2 border-brand-gold rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/IMG_7606.jpeg" alt="3D Terracotta Front View" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
+                                <img src="images/IMG_7606.jpeg" alt="3D Terracotta Front View" class="w-full h-9 sm:h-10 object-cover rounded-md">
                             </button>
                             <button type="button" onclick="swapProductImage('art-main-image', 'art-thumb', 'images/IMG_7611.jpeg', this)" class="art-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/IMG_7611.jpeg" alt="Angle View with Booklet" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
+                                <img src="images/IMG_7611.jpeg" alt="Angle View with Booklet" class="w-full h-9 sm:h-10 object-cover rounded-md">
                             </button>
                             <button type="button" onclick="swapProductImage('art-main-image', 'art-thumb', 'images/0CF9B74D-5AE8-4A29-9A3F-93E103C86DCD_1_105_c.jpeg', this)" class="art-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/0CF9B74D-5AE8-4A29-9A3F-93E103C86DCD_1_105_c.jpeg" alt="2D Solar Pressed Canvas" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
+                                <img src="images/0CF9B74D-5AE8-4A29-9A3F-93E103C86DCD_1_105_c.jpeg" alt="2D Solar Pressed Canvas" class="w-full h-9 sm:h-10 object-cover rounded-md">
                             </button>
                             <button type="button" onclick="swapProductImage('art-main-image', 'art-thumb', 'images/IMG_6952.jpeg', this)" class="art-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/IMG_6952.jpeg" alt="2D Green Chevron Canvas" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
+                                <img src="images/IMG_6952.jpeg" alt="2D Green Chevron Canvas" class="w-full h-9 sm:h-10 object-cover rounded-md">
                             </button>
                         </div>
                         
@@ -412,34 +375,35 @@
                         <ul class="text-xs font-serif text-brand-dark/85 space-y-1 mb-4 pb-3 border-b border-brand-gold/15">
                             <li>✦ Available in 2 sizes for tabletop display or wall hanging.</li>
                             <li>✦ Recreates the actual florals, colors &amp; textures.</li>
+                            <li>✦ Archival finish that never spoils or fades.</li>
                         </ul>
                         
                         <button type="button" onclick="openShoppeModal('Wedding & Milestone Keepsake Cakes', null, false)" class="w-full block text-center bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md">
-                            Inquire About A Keepsake Cake
+                            Inquire About A Keepsake Cake &rarr;
                         </button>
                         <span class="text-[11px] text-brand-dark/60 font-serif italic block text-center mt-2">Custom commissions welcome nationwide</span>
                     </div>
                 </div>
 
-                <!-- CARD 6: BESPOKE CAKES & STUDIO COMMISSIONS -->
+                <!-- CARD 5: BESPOKE CAKES & STUDIO COMMISSIONS (1 COL) -->
                 <div class="shoppe-card bg-brand-cream rounded-3xl border border-brand-gold/30 p-5 sm:p-6 shadow-md hover:shadow-xl hover:border-brand-gold/60 transition-all flex flex-col justify-between" data-category="custom">
                     <div>
                         <div class="w-full h-56 sm:h-60 rounded-2xl overflow-hidden border border-brand-gold/30 mb-3.5 relative bg-brand-oak shadow-inner">
-                            <img id="bespoke-art-image" src="images/Arati's Birthday Cake 40th.jpg" alt="Bespoke Celebration Cake and Studio Art" class="w-full h-full object-cover transition-opacity duration-300" draggable="false">
+                            <img id="bespoke-art-image" src="images/Arati's Birthday Cake 40th.jpg" alt="Bespoke Celebration Cake and Studio Art" class="w-full h-full object-cover transition-opacity duration-300">
                         </div>
                         
                         <div class="grid grid-cols-4 gap-1.5 w-full mb-3.5">
                             <button type="button" onclick="swapProductImage('bespoke-art-image', 'bespoke-thumb', 'images/Arati\'s Birthday Cake 40th.jpg', this)" class="bespoke-thumb active border-2 border-brand-gold rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/Arati's Birthday Cake 40th.jpg" alt="Palette Knife Celebration Cake" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
+                                <img src="images/Arati's Birthday Cake 40th.jpg" alt="Palette Knife Celebration Cake" class="w-full h-9 sm:h-10 object-cover rounded-md">
                             </button>
                             <button type="button" onclick="swapProductImage('bespoke-art-image', 'bespoke-thumb', 'images/Full Side View Lemon Cake .jpg', this)" class="bespoke-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/Full Side View Lemon Cake .jpg" alt="Citrus Rosette Crown" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
+                                <img src="images/Full Side View Lemon Cake .jpg" alt="Citrus Rosette Crown" class="w-full h-9 sm:h-10 object-cover rounded-md">
                             </button>
                             <button type="button" onclick="swapProductImage('bespoke-art-image', 'bespoke-thumb', 'images/IMG_7611.jpeg', this)" class="bespoke-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/IMG_7611.jpeg" alt="Keepsake Sculpture Display" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
+                                <img src="images/IMG_7611.jpeg" alt="Keepsake Sculpture Display" class="w-full h-9 sm:h-10 object-cover rounded-md">
                             </button>
                             <button type="button" onclick="swapProductImage('bespoke-art-image', 'bespoke-thumb', 'images/0CF9B74D-5AE8-4A29-9A3F-93E103C86DCD_1_105_c.jpeg', this)" class="bespoke-thumb border-2 border-transparent hover:border-brand-gold/50 rounded-xl overflow-hidden bg-brand-oak p-0.5 shadow-sm transition-all focus:outline-none">
-                                <img src="images/0CF9B74D-5AE8-4A29-9A3F-93E103C86DCD_1_105_c.jpeg" alt="Botanical Wall Canvas" class="w-full h-9 sm:h-10 object-cover rounded-md" draggable="false">
+                                <img src="images/0CF9B74D-5AE8-4A29-9A3F-93E103C86DCD_1_105_c.jpeg" alt="Botanical Wall Canvas" class="w-full h-9 sm:h-10 object-cover rounded-md">
                             </button>
                         </div>
                         
@@ -468,13 +432,34 @@
                         </ul>
                         
                         <button type="button" onclick="openShoppeModal('Bespoke Cakes & Studio Art', null, false)" class="w-full block text-center bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md">
-                            Inquire for Availability &amp; Dates
+                            Inquire for Availability &amp; Dates &rarr;
                         </button>
                         <span class="text-[11px] text-brand-dark/60 font-serif italic block text-center mt-2">Bespoke cakes handcrafted fresh in McKinney, TX</span>
                     </div>
                 </div>
 
             </div>
+
+            <!-- LOCAL DFW FRESH EDIBLE KIT BANNER (SYMMETRICAL & UNBOXED) -->
+            <div class="mt-10 bg-brand-cream rounded-3xl p-6 sm:p-8 border border-brand-gold/30 shadow-sm">
+                <div class="flex flex-col md:flex-row items-center justify-between gap-5 text-center md:text-left">
+                    <div class="space-y-1.5 max-w-2xl">
+                        <div class="flex items-center justify-center md:justify-start gap-2">
+                            <span class="bg-brand-gold/20 text-brand-gold-dark font-sans text-[9px] font-bold uppercase tracking-widest px-2.5 py-0.5 rounded-full border border-brand-gold/30">
+                                Local DFW Kitchen Option
+                            </span>
+                        </div>
+                        <h4 class="font-serif font-bold text-lg sm:text-xl text-brand-oak">Want an edible kit for your kitchen counter?</h4>
+                        <p class="text-xs sm:text-sm text-brand-dark/80 font-sans leading-relaxed">
+                            Our shoppe centers on permanent keepsake cake sculptures—pieces you design once and keep forever on your desk or shelf. But because this atelier started in the kitchen, we still honor our roots. If you are local to the Dallas–Fort Worth area and want an at-home kit with fresh scratch cake layers and artisan buttercream for local pickup, let us know when reaching out.
+                        </p>
+                    </div>
+                    <a href="contact.html?subject=Local%20DFW%20Fresh%20Edible%20Kit%20Order" class="shrink-0 bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-sm whitespace-nowrap">
+                        Request Fresh Edible Kit &rarr;
+                    </a>
+                </div>
+            </div>
+
         </div>
     </main>
 
@@ -505,7 +490,7 @@
                         <p class="text-xs text-brand-dark/70 font-sans">Stock our tactile journals, studio kits, and single-step recipe decks in your bookstore, gift shop, or wellness boutique.</p>
                     </div>
                 </div>
-                <a href="contact.html?subject=Wholesale%20%26%20Retail" class="shrink-0 bg-brand-oak border border-brand-gold/40 text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-7 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md">Inquire for Wholesale</a>
+                <a href="contact.html?subject=Wholesale%20%26%20Retail" class="shrink-0 bg-brand-oak border border-brand-gold/40 text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-7 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md">Inquire for Wholesale &rarr;</a>
             </div>
         </div>
     </section>
@@ -515,7 +500,6 @@
         <div class="max-w-2xl mx-auto px-6 py-6">
             <div class="flex flex-col items-center">
                 
-                <!-- Social Channels -->
                 <div class="flex justify-center space-x-5 mb-5 text-brand-light">
                     <a href="https://www.instagram.com/thegildedspoonshoppe/" target="_blank" rel="noopener" class="hover:text-brand-gold transition-colors" title="Instagram">
                         <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919 4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg>
@@ -535,6 +519,7 @@
                 <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-4 text-brand-light font-medium text-[9px] uppercase tracking-[0.2em]">
                     <a href="contact.html" class="hover:text-brand-gold transition-colors">Contact Us</a>
                     <a href="press.html" class="hover:text-brand-gold transition-colors">Press &amp; Media</a>
+                    <a href="corporate.html" class="hover:text-brand-gold transition-colors">Corporate Offsites</a>
                     <a href="https://baketobaseline.substack.com/" target="_blank" rel="noopener" class="hover:text-brand-gold transition-colors">Bake to Baseline</a>
                     <a href="partnerships.html" class="hover:text-brand-gold transition-colors">Partnerships</a>
                     <a href="policies.html" class="hover:text-brand-gold transition-colors">Order Fulfillment &amp; Delivery</a>
@@ -547,7 +532,7 @@
                     &copy; 2026 The Gilded Spoon Shoppe | McKinney, Texas
                 </p>
                 <p class="max-w-xl mx-auto font-sans text-[8px] leading-relaxed text-brand-gray/20 italic">
-                    Disclaimer: The Gilded Spoon Shoppe provides sensory design education. It is not a substitute for professional medical advice, diagnosis, or occupational therapy. Edible products are prepared in a home kitchen that handles allergens including wheat, dairy, eggs, soy, and nuts.
+                    Disclaimer: The Gilded Spoon Shoppe provides sensory design education. It is not a substitute for professional medical advice, diagnosis, or occupational therapy. Edible products are prepared in a home kitchen that handles allergens including wheat, dairy, eggs, soy, and nuts[cite: 16].
                 </p>
             </div>
         </div>
@@ -563,14 +548,14 @@
             <span class="text-brand-gold-dark font-sans font-bold text-[10px] uppercase tracking-widest block mb-0.5">Product Inquiry</span>
             <h3 id="modal-title-product" class="font-serif text-xl sm:text-2xl font-bold text-brand-oak mb-1.5">Item Name</h3>
             
-            <!-- STEP 1: SELECTION VIEW (For items with standard edition) -->
+            <!-- STEP 1: SELECTION VIEW -->
             <div id="modal-selection-view" class="hidden py-4">
                 <p class="text-xs text-brand-dark/75 font-sans mb-5 leading-relaxed">
                     Would you like to order our standard signature suite, or inquire about a custom family recipe commission?
                 </p>
                 <div class="space-y-3">
                     <button id="modal-readymade-btn" type="button" class="w-full flex items-center justify-between bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-4 px-5 rounded-xl hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md border border-brand-gold/30">
-                        <span>Order Standard Edition</span>
+                        <span>Order Standard Edition ($48)</span>
                         <span>&rarr;</span>
                     </button>
                     <button id="modal-custom-btn" type="button" class="w-full flex items-center justify-between bg-white text-brand-oak font-sans text-xs font-bold uppercase tracking-wider py-4 px-5 rounded-xl hover:bg-brand-light transition-all shadow-sm border border-brand-gold/40">
@@ -612,7 +597,7 @@
 
                     <div class="pt-3">
                         <button type="submit" class="w-full bg-brand-oak text-brand-sand font-sans text-xs font-bold uppercase tracking-wider py-3.5 px-6 rounded-full hover:bg-brand-gold hover:text-brand-oak transition-all shadow-md">
-                            Submit Inquiry
+                            Submit Inquiry &rarr;
                         </button>
                     </div>
                 </form>
@@ -620,8 +605,8 @@
         </div>
     </div>
 
+    <!-- SCRIPTS -->
     <script>
-        // Navigation Mobile Menu
         const hamburgerButton = document.getElementById('hamburger-button');
         const mobileMenu = document.getElementById('mobile-menu');
         if (hamburgerButton) {
@@ -710,7 +695,6 @@
             closeShoppeModal();
         }
 
-        // Keyboard & Outside Click Closing
         if (shoppeModal) {
             shoppeModal.addEventListener('click', (e) => {
                 if (e.target === shoppeModal) closeShoppeModal();
@@ -722,7 +706,6 @@
             }
         });
 
-        // Image Copy/Save Protection Handlers
         document.addEventListener('contextmenu', (e) => {
             if (e.target.tagName === 'IMG' || e.target.closest('.shoppe-card')) {
                 e.preventDefault();
