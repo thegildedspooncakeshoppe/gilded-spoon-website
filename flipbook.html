@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="p:domain_verify" content="8497c86d445458f17cdce81e920478f2"/>
-    <title>The Studio Gallery | The Gilded Spoon Shoppe</title>
-    <meta name="description" content="A gallery of handcrafted celebration cakes, community volunteer bakes, and tactile mixed-media art pieces made by Dimple McKinney in McKinney, Texas.">
+    <title>The Studio Gallery | The Gilded Spoon Atelier</title>
+    <meta name="description" content="A gallery of handcrafted celebration cakes, community volunteer bakes, and tactile pieces made by Dimple McKinney in McKinney, Texas.">
     <meta name="keywords" content="custom cakes McKinney TX, celebration cakes, birthday cakes, keepsake cake sculpture, artisanal pastry design">
     
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -32,6 +32,7 @@
                     },
                     fontFamily: {
                         'serif': ['"Fraunces"', 'serif'],
+                        'sans': ['"Inter"', 'sans-serif'],
                         'hand': ['"Homemade Apple"', 'cursive'],
                         'caveat': ['"Caveat"', 'cursive']
                     }
@@ -46,6 +47,20 @@
         .hide-scrollbar::-webkit-scrollbar { display: none; }
         .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
         
+        /* Image Protection */
+        img {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            user-drag: none;
+            -webkit-touch-callout: none;
+        }
+
         .lightbox-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(42, 52, 40, 0.95); display: flex; justify-content: center; align-items: center; z-index: 1000; opacity: 0; visibility: hidden; transition: opacity 0.3s ease; backdrop-filter: blur(10px); }
         .lightbox-overlay.active { opacity: 1; visibility: visible; }
         .lightbox-content { position: relative; width: 92vw; max-width: 1050px; max-height: 90vh; display: flex; justify-content: center; align-items: center; }
@@ -62,75 +77,77 @@
             .lightbox-nav.next { right: -35px; font-size: 2rem; } 
             .lightbox-close { top: -40px; right: 10px; }
         }
-        @media (max-width: 768px) {
+        @media (max-width: 768px) { 
             .lightbox-nav { display: none; }
             .lightbox-content { max-height: 92vh; }
         }
     </style>
 </head>
-<body class="font-sans bg-brand-light text-brand-dark antialiased bg-texture">
+<body class="font-sans bg-brand-light text-brand-dark antialiased bg-texture select-none">
 
- <nav class="sticky top-0 bg-brand-oak/95 backdrop-blur-lg shadow-md z-50 border-b border-brand-gold/10">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-        
-      <a href="index.html" class="flex flex-col items-center text-center leading-none group">
-    <!-- Line 1: Primary Brand Name -->
-    <span class="text-[17px] sm:text-[19px] font-serif font-bold text-brand-gold uppercase tracking-[0.08em] leading-none">
-        THE GILDED SPOON
-    </span>
-    <!-- Line 2: Balanced Subtitle Flanked by Hairline Rules -->
-    <div class="flex items-center justify-center gap-2 w-full mt-1.5">
-        <span class="h-[1px] w-3.5 sm:w-5 bg-brand-gold/45"></span>
-        <span class="text-[8px] sm:text-[9px] font-sans font-medium tracking-[0.2em] text-brand-light/85 uppercase whitespace-nowrap">
-            SHOPPE &amp; ATELIER
-        </span>
-        <span class="h-[1px] w-3.5 sm:w-5 bg-brand-gold/45"></span>
-    </div>
-</a>
-        <!-- Desktop Navigation Links -->
-        <div class="hidden md:flex items-center space-x-6 font-medium text-xs tracking-widest uppercase">
-            <a href="shoppe.html" class="text-brand-light hover:text-brand-gold transition-colors">Shoppe</a>
-            <a href="workshop.html" class="text-brand-light hover:text-brand-gold transition-colors">Workshops</a>
-            <a href="flipbook.html" class="text-brand-light hover:text-brand-gold transition-colors">Portfolio</a>
-            <a href="contact.html" class="text-brand-light hover:text-brand-gold transition-colors">Contact</a>
-            <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-oak hover:bg-brand-sand transition-all px-4 py-2 rounded-full font-bold shadow-sm">
+    <!-- STANDARDIZED NAVIGATION (PORTFOLIO ACTIVE) -->
+    <nav class="sticky top-0 bg-brand-oak/95 backdrop-blur-lg shadow-md z-50 border-b border-brand-gold/10">
+        <div class="max-w-6xl mx-auto px-4 py-3.5 flex justify-between items-center">
+            
+            <!-- THE WINNING LOGO LOCKUP -->
+            <a href="index.html" class="flex flex-col items-center text-center leading-none group">
+                <span class="text-[17px] sm:text-[19px] font-serif font-bold text-brand-gold uppercase tracking-[0.08em] leading-none">
+                    THE GILDED SPOON
+                </span>
+                <div class="flex items-center justify-center gap-2 w-full mt-1.5">
+                    <span class="h-[1px] w-3.5 sm:w-5 bg-brand-gold/45"></span>
+                    <span class="text-[8px] sm:text-[9px] font-sans font-medium tracking-[0.2em] text-brand-light/85 uppercase whitespace-nowrap">
+                        SHOPPE &amp; ATELIER
+                    </span>
+                    <span class="h-[1px] w-3.5 sm:w-5 bg-brand-gold/45"></span>
+                </div>
+            </a>
+
+            <!-- Desktop Navigation Links -->
+            <div class="hidden md:flex items-center space-x-6 font-medium text-xs tracking-widest uppercase">
+                <a href="shoppe.html" class="text-brand-light hover:text-brand-gold transition-colors">Shoppe</a>
+                <a href="workshop.html" class="text-brand-light hover:text-brand-gold transition-colors">Workshops</a>
+                <a href="flipbook.html" class="text-brand-gold font-bold transition-colors">Portfolio</a>
+                <a href="contact.html" class="text-brand-light hover:text-brand-gold transition-colors">Contact</a>
+                <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-oak hover:bg-brand-sand transition-all px-4 py-2 rounded-full font-bold shadow-sm">
+                    Free Guide
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <div class="md:hidden">
+                <button id="hamburger-button" class="text-brand-light focus:outline-none p-1" aria-label="Toggle Navigation">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-brand-gold/10 px-4 pb-4 bg-brand-oak text-center text-xs tracking-widest uppercase">
+            <a href="shoppe.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Shoppe</a>
+            <a href="workshop.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Workshops</a>
+            <a href="flipbook.html" class="block py-2.5 text-brand-gold font-bold">Portfolio</a>
+            <a href="contact.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Contact</a>
+            <a href="/baketobaseline/index.html" class="inline-block bg-brand-gold text-brand-oak hover:bg-brand-sand transition-all px-5 py-2 rounded-full font-bold shadow-sm mt-2">
                 Free Guide
             </a>
         </div>
+    </nav>
 
-        <!-- Mobile Hamburger Button -->
-        <div class="md:hidden">
-            <button id="hamburger-button" class="text-brand-light focus:outline-none p-1" aria-label="Toggle Navigation">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-        </div>
-    </div>
-
-    <!-- Mobile Dropdown Menu -->
-    <div id="mobile-menu" class="hidden md:hidden border-t border-brand-gold/10 px-4 pb-4 bg-brand-oak text-center text-xs tracking-widest uppercase">
-        <a href="shoppe.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Shoppe</a>
-        <a href="workshop.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Workshops</a>
-        <a href="flipbook.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Portfolio</a>
-        <a href="contact.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Contact</a>
-        <a href="/baketobaseline/index.html" class="inline-block bg-brand-gold text-brand-oak hover:bg-brand-sand transition-all px-5 py-2 rounded-full font-bold shadow-sm mt-2">
-            Free Guide
-        </a>
-    </div>
-</nav>
-    <!-- HEADER -->
-    <header class="text-center py-16 md:py-20 px-6 bg-brand-oak border-b border-brand-gold/10 relative overflow-hidden">
+    <!-- HEADER (TIGHTENED PROPORTIONS) -->
+    <header class="text-center pt-14 pb-10 md:pt-16 md:pb-12 px-6 bg-brand-oak border-b border-brand-gold/15 relative overflow-hidden">
         <div class="absolute inset-0 opacity-5 bg-texture"></div>
         <div class="max-w-4xl mx-auto px-6 relative z-10">
             <span class="text-brand-gold font-caveat text-2xl md:text-3xl block mb-2">Celebration Cakes &amp; Keepsakes</span>
-            <h1 class="font-serif font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-brand-sand leading-tight tracking-normal mb-4">The Studio Gallery</h1>
+            <h1 class="font-serif font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-brand-sand leading-tight tracking-normal mb-3">The Studio Gallery</h1>
             <p class="font-serif italic text-base md:text-lg text-brand-light/80 leading-relaxed max-w-2xl mx-auto">
                 A visual collection of handcrafted celebration cakes, community volunteer bakes, and tactile pieces, documented through our 5-Layer Sensory Framework.
             </p>
         </div>
     </header>
 
-    <!-- CATEGORY FILTER TABS -->
-    <section class="py-4 bg-brand-oak/95 border-b border-brand-gold/30 sticky top-[73px] z-40 backdrop-blur-md shadow-lg">
+    <!-- CATEGORY FILTER TABS (SEAMLESS STICKY ALIGNMENT) -->
+    <section class="py-3 bg-brand-oak/95 border-b border-brand-gold/30 sticky top-[60px] sm:top-[63px] z-40 backdrop-blur-md shadow-lg">
         <div class="max-w-6xl mx-auto px-4 flex flex-wrap justify-center items-center gap-2 sm:gap-2.5 text-[9px] sm:text-[10px] uppercase tracking-widest font-sans font-bold">
             <button onclick="filterGallery('all')" class="filter-btn active py-2 px-4 rounded-full border-2 border-brand-gold transition-all text-brand-oak bg-brand-gold shadow-[0_4px_18px_rgba(212,175,55,0.45)] scale-105" data-category="all">
                 All Works
@@ -154,7 +171,7 @@
     </section>
 
     <!-- GALLERY CONTAINER -->
-    <main class="py-16 md:py-20 px-4">
+    <main class="py-14 md:py-20 px-4">
         <div class="max-w-7xl mx-auto">
             <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 md:gap-8"></div>
         </div>
@@ -176,7 +193,7 @@
                         <div class="w-full flex-1 flex items-center justify-center overflow-hidden min-h-0">
                             <img id="lightbox-img" src="" alt="Cake Detail" class="object-contain block mx-auto max-h-full max-w-full rounded-md border border-brand-gold/60 p-2 bg-brand-dark shadow-[0_15px_30px_rgba(0,0,0,0.6)] transition-all duration-300">
                         </div>
-                        <!-- View Toggle Bar (Only displays when multiple angles/process views exist) -->
+                        <!-- View Toggle Bar -->
                         <div id="lightbox-views-bar" class="w-full pt-3 flex flex-wrap justify-center items-center gap-2 empty:hidden z-20"></div>
                     </div>
                     
@@ -187,7 +204,7 @@
                             <span id="lightbox-tag" class="font-caveat text-2xl sm:text-3xl text-brand-gold-dark block mb-1 tracking-normal"></span>
                             <h2 id="lightbox-title" class="font-serif text-xl sm:text-2xl font-bold text-brand-oak leading-tight"></h2>
                             
-                            <!-- Occasion & Flavors with Gold Pills and Info Below -->
+                            <!-- Occasion & Flavors with Gold Pills -->
                             <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 <div>
                                     <span class="inline-block bg-brand-gold text-brand-oak font-sans text-[10px] font-bold uppercase tracking-widest px-3 py-1 rounded-full mb-1.5 shadow-sm">Occasion</span>
@@ -239,49 +256,49 @@
         </div>
     </main>
 
-    <!-- FOOTER (COPY & PASTE AT THE BOTTOM OF EVERY PAGE) -->
-<footer class="bg-brand-dark text-brand-gray border-t border-brand-gold/20 font-sans text-xs">
-    <div class="max-w-2xl mx-auto px-6 py-6">
-        <div class="flex flex-col items-center">
-            
-            <!-- 1. Social Channels -->
-            <div class="flex justify-center space-x-5 mb-5 text-brand-light">
-                <a href="https://www.instagram.com/thegildedspoonshoppe/" target="_blank" rel="noopener" class="hover:text-brand-gold transition-colors" title="Instagram">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919 4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg>
-                </a>
-                <a href="https://www.facebook.com/dimple.mckinney" target="_blank" rel="noopener" class="hover:text-brand-gold transition-colors" title="Facebook">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.494v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.323-1.325z"/></svg>
-                </a>
-                <a href="https://www.linkedin.com/in/dimple-mckinney/" target="_blank" rel="noopener" class="hover:text-brand-gold transition-colors" title="LinkedIn">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
-                </a>
-                <a href="https://baketobaseline.substack.com/" target="_blank" rel="noopener" class="hover:text-brand-gold transition-colors" title="Substack">
-                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
-                </a>
+    <!-- STANDARDIZED FOOTER -->
+    <footer class="bg-brand-dark text-brand-gray border-t border-brand-gold/20 font-sans text-xs">
+        <div class="max-w-2xl mx-auto px-6 py-6">
+            <div class="flex flex-col items-center">
+                
+                <!-- 1. Social Channels -->
+                <div class="flex justify-center space-x-5 mb-5 text-brand-light">
+                    <a href="https://www.instagram.com/thegildedspoonshoppe/" target="_blank" rel="noopener" class="hover:text-brand-gold transition-colors" title="Instagram">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.85s-.011 3.584-.069 4.85c-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07s-3.584-.012-4.85-.07c-3.252-.148-4.771-1.691-4.919-4.919-.058-1.265-.069-1.645-.069-4.85s.011-3.584.069-4.85c.149-3.225 1.664-4.771 4.919 4.919 1.266-.057 1.645-.069 4.85-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948s.014 3.667.072 4.947c.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072s3.667-.014 4.947-.072c4.358-.2 6.78-2.618 6.98-6.98.059-1.281.073-1.689.073-4.948s-.014-3.667-.072-4.947c-.2-4.358-2.618-6.78-6.98-6.98-1.281-.059-1.689-.073-4.948-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg>
+                    </a>
+                    <a href="https://www.facebook.com/dimple.mckinney" target="_blank" rel="noopener" class="hover:text-brand-gold transition-colors" title="Facebook">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.494v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.323-1.325z"/></svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/dimple-mckinney/" target="_blank" rel="noopener" class="hover:text-brand-gold transition-colors" title="LinkedIn">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    </a>
+                    <a href="https://baketobaseline.substack.com/" target="_blank" rel="noopener" class="hover:text-brand-gold transition-colors" title="Substack">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
+                    </a>
+                </div>
+
+                <!-- 2. Footer Navigation Row -->
+                <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-5 text-brand-light font-medium text-[9px] uppercase tracking-[0.2em]">
+                    <a href="contact.html" class="hover:text-brand-gold transition-colors">Contact Us</a>
+                    <a href="press.html" class="hover:text-brand-gold transition-colors">Press &amp; Media</a>
+                    <a href="https://baketobaseline.substack.com/" target="_blank" rel="noopener" class="hover:text-brand-gold transition-colors">Bake to Baseline</a>
+                    <a href="partnerships.html" class="hover:text-brand-gold transition-colors">Partnerships</a>
+                    <a href="policies.html" class="hover:text-brand-gold transition-colors">Order Fulfillment &amp; Delivery</a>
+                </div>
+
             </div>
 
-            <!-- 2. FOOTER NAVIGATION ROW (GOES HERE) -->
-            <div class="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-5 text-brand-light font-medium text-[9px] uppercase tracking-[0.2em]">
-                <a href="contact.html" class="hover:text-brand-gold transition-colors">Contact Us</a>
-                <a href="press.html" class="hover:text-brand-gold transition-colors">Press &amp; Media</a>
-                <a href="https://baketobaseline.substack.com/" target="_blank" rel="noopener" class="hover:text-brand-gold transition-colors">Bake to Baseline</a>
-                <a href="partnerships.html" class="hover:text-brand-gold transition-colors">Partnerships</a>
-                <a href="policies.html" class="hover:text-brand-gold transition-colors">Order Fulfillment &amp; Delivery</a>
+            <!-- 3. Copyright & Legal Disclaimer -->
+            <div class="pt-5 border-t border-brand-gray/10 text-center">
+                <p class="font-serif text-brand-light/30 text-[10px] mb-2">
+                    &copy; 2026 The Gilded Spoon Shoppe | McKinney, Texas
+                </p>
+                <p class="max-w-xl mx-auto font-sans text-[8px] leading-relaxed text-brand-gray/20 italic">
+                    Disclaimer: The Gilded Spoon Shoppe provides sensory design education. It is not a substitute for professional medical advice, diagnosis, or occupational therapy. Edible products are prepared in a home kitchen that handles allergens including wheat, dairy, eggs, soy, and nuts.
+                </p>
             </div>
-
         </div>
-
-        <!-- 3. Copyright & Legal Disclaimer -->
-        <div class="pt-5 border-t border-brand-gray/10 text-center">
-            <p class="font-serif text-brand-light/30 text-[10px] mb-2">
-                &copy; 2026 The Gilded Spoon Shoppe | McKinney, Texas
-            </p>
-            <p class="max-w-xl mx-auto font-sans text-[8px] leading-relaxed text-brand-gray/20 italic">
-                Disclaimer: The Gilded Spoon Shoppe provides sensory design education. It is not a substitute for professional medical advice, diagnosis, or occupational therapy. Edible products are prepared in a home kitchen that handles allergens including wheat, dairy, eggs, soy, and nuts.
-            </p>
-        </div>
-    </div>
-</footer>
+    </footer>
 
     <!-- PORTFOLIO DATA & SCRIPT -->
     <script>
@@ -804,7 +821,7 @@
                 card.innerHTML = `
                     <div class="w-full h-64 sm:h-72 shrink-0 flex items-center justify-center overflow-hidden rounded-xl bg-brand-dark/40 shadow-inner border border-brand-gold/20 mb-3 relative p-4 transition-colors group-hover:border-brand-gold/50">
                         <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(255,255,255,0.05),transparent)] pointer-events-none"></div>
-                        <img src="${item.src}" alt="${item.title}" class="max-h-full max-w-full object-contain rounded-sm border border-brand-gold/60 p-1.5 bg-brand-dark shadow-[0_15px_30px_rgba(0,0,0,0.6)] transition-transform duration-300 group-hover:scale-95 relative z-10">
+                        <img src="${item.src}" alt="${item.title}" class="max-h-full max-w-full object-contain rounded-sm border border-brand-gold/60 p-1.5 bg-brand-dark shadow-[0_15px_30px_rgba(0,0,0,0.6)] transition-transform duration-300 group-hover:scale-95 relative z-10" draggable="false">
                     </div>
                     <div class="text-left px-1 mt-auto">
                         <div class="flex items-center justify-between mb-1.5 gap-1.5">
@@ -927,6 +944,21 @@
             if (e.key === "Escape") closeLightbox();
             if (e.key === "ArrowRight") changeImage(1);
             if (e.key === "ArrowLeft") changeImage(-1);
+        });
+
+        // Image Copy/Save Protection Handlers
+        document.addEventListener('contextmenu', (e) => {
+            if (e.target.tagName === 'IMG') {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+        document.addEventListener('dragstart', (e) => {
+            if (e.target.tagName === 'IMG') {
+                e.preventDefault();
+                return false;
+            }
         });
 
         renderGallery();
