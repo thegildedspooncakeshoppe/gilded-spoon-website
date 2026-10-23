@@ -53,54 +53,54 @@
 </head>
 <body class="font-sans bg-brand-light text-brand-dark antialiased">
 
-<nav class="sticky top-0 bg-brand-oak/95 backdrop-blur-lg shadow-md z-50 border-b border-brand-gold/10">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-        
-      <a href="index.html" class="flex flex-col items-center text-center leading-none group">
-    <!-- Line 1: Primary Brand Name -->
-    <span class="text-[17px] sm:text-[19px] font-serif font-bold text-brand-gold uppercase tracking-[0.08em] leading-none">
-        THE GILDED SPOON
-    </span>
-    <!-- Line 2: Balanced Subtitle Flanked by Hairline Rules -->
-    <div class="flex items-center justify-center gap-2 w-full mt-1.5">
-        <span class="h-[1px] w-3.5 sm:w-5 bg-brand-gold/45"></span>
-        <span class="text-[8px] sm:text-[9px] font-sans font-medium tracking-[0.2em] text-brand-light/85 uppercase whitespace-nowrap">
-            SHOPPE &amp; ATELIER
-        </span>
-        <span class="h-[1px] w-3.5 sm:w-5 bg-brand-gold/45"></span>
-    </div>
-</a>
+<!-- STANDARDIZED CLEAN NAVIGATION -->
+    <nav class="sticky top-0 bg-brand-oak/95 backdrop-blur-lg shadow-md z-50 border-b border-brand-gold/10">
+        <div class="max-w-6xl mx-auto px-4 py-3.5 flex justify-between items-center">
+            
+            <!-- Atelier Logo Lockup -->
+            <a href="index.html" class="flex flex-col items-center text-center leading-none group">
+                <span class="text-[17px] sm:text-[19px] font-serif font-bold text-brand-gold uppercase tracking-[0.08em] leading-none">
+                    THE GILDED SPOON
+                </span>
+                <div class="flex items-center justify-center gap-2 w-full mt-1.5">
+                    <span class="h-[1px] w-3.5 sm:w-5 bg-brand-gold/45"></span>
+                    <span class="text-[8px] sm:text-[9px] font-sans font-medium tracking-[0.2em] text-brand-light/85 uppercase whitespace-nowrap">
+                        SHOPPE &amp; ATELIER
+                    </span>
+                    <span class="h-[1px] w-3.5 sm:w-5 bg-brand-gold/45"></span>
+                </div>
+            </a>
 
-        <!-- Desktop Navigation Links -->
-        <div class="hidden md:flex items-center space-x-6 font-medium text-xs tracking-widest uppercase">
-            <a href="shoppe.html" class="text-brand-light hover:text-brand-gold transition-colors">Shoppe</a>
-            <a href="workshop.html" class="text-brand-light hover:text-brand-gold transition-colors">Workshops</a>
-            <a href="flipbook.html" class="text-brand-light hover:text-brand-gold transition-colors">Portfolio</a>
-            <a href="contact.html" class="text-brand-light hover:text-brand-gold transition-colors">Contact</a>
-            <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-oak hover:bg-brand-sand transition-all px-4 py-2 rounded-full font-bold shadow-sm">
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center space-x-6 font-medium text-xs tracking-widest uppercase">
+                <a href="shoppe.html" class="text-brand-light hover:text-brand-gold transition-colors">Shoppe</a>
+                <a href="workshop.html" class="text-brand-light hover:text-brand-gold transition-colors">Workshops</a>
+                <a href="flipbook.html" class="text-brand-light hover:text-brand-gold transition-colors">Gallery</a>
+                <a href="contact.html" class="text-brand-light hover:text-brand-gold transition-colors">Contact</a>
+                <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-oak hover:bg-brand-sand transition-all px-4 py-2 rounded-full font-bold shadow-sm">
+                    Free Guide
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger Button -->
+            <div class="md:hidden">
+                <button id="hamburger-button" class="text-brand-light focus:outline-none p-1" aria-label="Toggle Navigation">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-brand-gold/10 px-4 pb-4 bg-brand-oak text-center text-xs tracking-widest uppercase">
+            <a href="shoppe.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Shoppe</a>
+            <a href="workshop.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Workshops</a>
+            <a href="flipbook.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Gallery</a>
+            <a href="contact.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Contact</a>
+            <a href="/baketobaseline/index.html" class="inline-block bg-brand-gold text-brand-oak hover:bg-brand-sand transition-all px-5 py-2 rounded-full font-bold shadow-sm mt-2">
                 Free Guide
             </a>
         </div>
-
-        <!-- Mobile Hamburger Button -->
-        <div class="md:hidden">
-            <button id="hamburger-button" class="text-brand-light focus:outline-none p-1" aria-label="Toggle Navigation">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-        </div>
-    </div>
-
-    <!-- Mobile Dropdown Menu -->
-    <div id="mobile-menu" class="hidden md:hidden border-t border-brand-gold/10 px-4 pb-4 bg-brand-oak text-center text-xs tracking-widest uppercase">
-        <a href="shoppe.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Shoppe</a>
-        <a href="workshop.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Workshops</a>
-        <a href="flipbook.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Portfolio</a>
-        <a href="contact.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Contact</a>
-        <a href="/baketobaseline/index.html" class="inline-block bg-brand-gold text-brand-oak hover:bg-brand-sand transition-all px-5 py-2 rounded-full font-bold shadow-sm mt-2">
-            Free Guide
-        </a>
-    </div>
-</nav>
+    </nav>
     <main class="relative overflow-hidden bg-brand-oak">
         <div class="absolute inset-0 opacity-5 bg-texture"></div>
         
