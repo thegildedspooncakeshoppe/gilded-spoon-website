@@ -31,6 +31,7 @@
                     },
                     fontFamily: {
                         'serif': ['"Fraunces"', 'serif'],
+                        'sans': ['"Inter"', 'sans-serif'],
                         'caveat': ['"Caveat"', 'cursive']
                     }
                 }
@@ -57,54 +58,55 @@
 </head>
 <body class="font-sans bg-brand-light text-brand-dark antialiased bg-texture select-none">
 
-<!-- STANDARDIZED NAVIGATION -->
-<nav class="sticky top-0 bg-brand-oak/95 backdrop-blur-lg shadow-md z-50 border-b border-brand-gold/10">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex justify-between items-center">
-        
-     <a href="index.html" class="flex flex-col items-center text-center leading-none group">
-    <!-- Line 1: Primary Brand Name -->
-    <span class="text-[17px] sm:text-[19px] font-serif font-bold text-brand-gold uppercase tracking-[0.08em] leading-none">
-        THE GILDED SPOON
-    </span>
-    <!-- Line 2: Balanced Subtitle Flanked by Hairline Rules -->
-    <div class="flex items-center justify-center gap-2 w-full mt-1.5">
-        <span class="h-[1px] w-3.5 sm:w-5 bg-brand-gold/45"></span>
-        <span class="text-[8px] sm:text-[9px] font-sans font-medium tracking-[0.2em] text-brand-light/85 uppercase whitespace-nowrap">
-            SHOPPE &amp; ATELIER
-        </span>
-        <span class="h-[1px] w-3.5 sm:w-5 bg-brand-gold/45"></span>
-    </div>
-</a>
-        <!-- Desktop Navigation Links -->
-        <div class="hidden md:flex items-center space-x-6 font-medium text-xs tracking-widest uppercase">
-            <a href="shoppe.html" class="text-brand-light hover:text-brand-gold transition-colors">Shoppe</a>
-            <a href="workshop.html" class="text-brand-light hover:text-brand-gold transition-colors">Workshops</a>
-            <a href="flipbook.html" class="text-brand-light hover:text-brand-gold transition-colors">Portfolio</a>
-            <a href="contact.html" class="text-brand-light hover:text-brand-gold transition-colors">Contact</a>
-            <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-oak hover:bg-brand-sand transition-all px-4 py-2 rounded-full font-bold shadow-sm">
+    <!-- STANDARDIZED NAVIGATION (WORKSHOPS ACTIVE) -->
+    <nav class="sticky top-0 bg-brand-oak/95 backdrop-blur-lg shadow-md z-50 border-b border-brand-gold/10">
+        <div class="max-w-6xl mx-auto px-4 py-3.5 flex justify-between items-center">
+            
+            <!-- THE WINNING LOGO LOCKUP -->
+            <a href="index.html" class="flex flex-col items-center text-center leading-none group">
+                <span class="text-[17px] sm:text-[19px] font-serif font-bold text-brand-gold uppercase tracking-[0.08em] leading-none">
+                    THE GILDED SPOON
+                </span>
+                <div class="flex items-center justify-center gap-2 w-full mt-1.5">
+                    <span class="h-[1px] w-3.5 sm:w-5 bg-brand-gold/45"></span>
+                    <span class="text-[8px] sm:text-[9px] font-sans font-medium tracking-[0.2em] text-brand-light/85 uppercase whitespace-nowrap">
+                        SHOPPE &amp; ATELIER
+                    </span>
+                    <span class="h-[1px] w-3.5 sm:w-5 bg-brand-gold/45"></span>
+                </div>
+            </a>
+
+            <!-- Desktop Links -->
+            <div class="hidden md:flex items-center space-x-6 font-medium text-xs tracking-widest uppercase">
+                <a href="shoppe.html" class="text-brand-light hover:text-brand-gold transition-colors">Shoppe</a>
+                <a href="workshop.html" class="text-brand-gold font-bold transition-colors">Workshops</a>
+                <a href="flipbook.html" class="text-brand-light hover:text-brand-gold transition-colors">Portfolio</a>
+                <a href="contact.html" class="text-brand-light hover:text-brand-gold transition-colors">Contact</a>
+                <a href="/baketobaseline/index.html" class="bg-brand-gold text-brand-oak hover:bg-brand-sand transition-all px-4 py-2 rounded-full font-bold shadow-sm">
+                    Free Guide
+                </a>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <div class="md:hidden">
+                <button id="hamburger-button" class="text-brand-light focus:outline-none p-1" aria-label="Toggle Navigation">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden border-t border-brand-gold/10 px-4 pb-4 bg-brand-oak text-center text-xs tracking-widest uppercase">
+            <a href="shoppe.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Shoppe</a>
+            <a href="workshop.html" class="block py-2.5 text-brand-gold font-bold">Workshops</a>
+            <a href="flipbook.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Portfolio</a>
+            <a href="contact.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Contact</a>
+            <a href="/baketobaseline/index.html" class="inline-block bg-brand-gold text-brand-oak hover:bg-brand-sand transition-all px-5 py-2 rounded-full font-bold shadow-sm mt-2">
                 Free Guide
             </a>
         </div>
+    </nav>
 
-        <!-- Mobile Hamburger Button -->
-        <div class="md:hidden">
-            <button id="hamburger-button" class="text-brand-light focus:outline-none p-1" aria-label="Toggle Navigation">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
-            </button>
-        </div>
-    </div>
-
-    <!-- Mobile Dropdown Menu -->
-    <div id="mobile-menu" class="hidden md:hidden border-t border-brand-gold/10 px-4 pb-4 bg-brand-oak text-center text-xs tracking-widest uppercase">
-        <a href="shoppe.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Shoppe</a>
-        <a href="workshop.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Workshops</a>
-        <a href="flipbook.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Portfolio</a>
-        <a href="contact.html" class="block py-2.5 text-brand-light hover:text-brand-gold">Contact</a>
-        <a href="/baketobaseline/index.html" class="inline-block bg-brand-gold text-brand-oak hover:bg-brand-sand transition-all px-5 py-2 rounded-full font-bold shadow-sm mt-2">
-            Free Guide
-        </a>
-    </div>
-</nav>
     <!-- HEADER SECTION -->
     <header class="text-center py-16 md:py-20 px-6 bg-brand-oak border-b border-brand-gold/10 relative overflow-hidden">
         <div class="max-w-4xl mx-auto relative z-10">
@@ -117,140 +119,9 @@
             </p>
         </div>
     </header>
-    <!-- SECTION 1: THE PURPOSE OF THE WORKSHOPS -->
-    <section class="py-12 md:py-14">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6">
-            <div class="bg-brand-cream rounded-3xl border border-brand-gold/30 p-6 sm:p-10 md:p-12 shadow-sm">
-                
-                <div class="text-center mb-7">
-                    <span class="text-brand-gold-dark font-caveat text-xl md:text-2xl block mb-1">The Story Behind The Atelier</span>
-                    <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-oak">What This Experience Is Truly About</h2>
-                </div>
-                
-                <div class="space-y-4 text-brand-dark/85 text-xs sm:text-sm font-sans leading-relaxed max-w-2xl mx-auto">
-                    <p>
-                        Baking is chemistry and precision. Exact weights and temperature control matter, but cake design was always something deeper. Yet for years, whenever I turned from the oven to decorating, my mind would become completely overwhelmed, jumping from one question to the next with zero direction.
-                    </p>
-                    <p>
-                        The world outside demands that we constantly mask our exhaustion, meet tight deadlines, and pretend we aren't feeling everything all at once. Too often, creative classes end up adding to that pressure, turning art into a competition for perfection where you worry about doing it right.
-                    </p>
-                    
-                    <p class="font-serif font-bold text-brand-oak text-sm sm:text-base text-center py-1">
-                        I created these workshops to be the exact opposite.
-                    </p>
-                    
-                    <p>
-                        Looking back across years of my own bakes, I noticed a clear pattern: a method for the madness, and the spark that finally let me put down perfectionism. Decorating was never about spotless execution. It was an art form, a connection, and a personal story unfolding. Accepting my creativity became my way of healing and feeling.
-                    </p>
 
-                    <!-- Large Editorial Quote Block -->
-                    <div class="bg-brand-oak text-brand-light p-6 sm:p-8 rounded-2xl border-2 border-brand-gold/40 my-6 shadow-md text-center">
-                        <p class="font-serif italic text-base sm:text-lg md:text-xl text-brand-gold mb-3 leading-snug">
-                            "You are not here to bake a pastry test or perform for an audience. You are here to give your mind a predictable, tactile environment where you hold absolute control."
-                        </p>
-                        <span class="text-[10px] font-sans uppercase tracking-[0.25em] text-brand-sand/80 font-bold block">
-                            Contains 0% bad vibes, 100% comfort
-                        </span>
-                    </div>
-
-                    <p>
-                        When you sweep a palette knife across whipped medium, squeeze a piping bag, or press raw crystals into wet paste, your focus naturally narrows. The mental chatter quiets down, and your hands take over the work of soothing your nervous system. In this space, messy parts are welcome, perfectionism is left at the door, and your cake becomes a canvas to tell your story honestly.
-                    </p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 2: THE 5-LAYER SENSORY METHOD -->
-    <section class="pb-12 md:pb-14">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6">
-            <div class="bg-brand-cream rounded-3xl border border-brand-gold/30 p-6 sm:p-10 md:p-12 shadow-sm">
-                
-                <div class="text-center max-w-xl mx-auto mb-8">
-                    <span class="text-brand-gold-dark font-caveat text-xl md:text-2xl block mb-1">Our Storytelling Process</span>
-                    <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-oak mb-2.5">The 5-Layer Sensory Framework</h2>
-                    <p class="text-xs sm:text-sm text-brand-dark/80 leading-relaxed font-sans">
-                        Instead of staring at a blank canvas or feeling pressured to copy a sample cake, we walk through five self-guided stages to translate what you feel into physical form:
-                    </p>
-                </div>
-
-                <!-- BASELINE BOX: THE HEART -->
-                <div class="max-w-xl mx-auto mb-8 bg-[#EFE9DF] rounded-2xl p-5 sm:p-6 border border-brand-gold/40 text-center shadow-inner">
-                    <span class="text-[10px] font-sans font-bold uppercase tracking-widest text-brand-gold-dark block mb-1">Starting Baseline</span>
-                    <h3 class="font-serif text-xl sm:text-2xl font-bold text-brand-oak">The Heart</h3>
-                    <p class="text-2xl font-caveat text-brand-gold-dark mb-2 leading-none">Feelings &amp; Mood</p>
-                    <p class="text-xs sm:text-sm text-brand-dark/85 font-sans leading-relaxed">
-                        Where are you starting today? Are you tired, anxious, joyful, or overstimulated? We do not judge the feeling; we simply name it. This is your unmasked mark on the map before picking up any tools.
-                    </p>
-                </div>
-
-                <!-- 5 COMPACT LAYER CARDS -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5">
-                    
-                    <div class="bg-[#F8F5EE] p-4 rounded-xl border border-brand-gold/30 flex flex-col justify-between shadow-xs">
-                        <div>
-                            <span class="text-[10px] font-sans font-bold uppercase tracking-widest text-brand-gold-dark block mb-0.5">Layer 1</span>
-                            <h4 class="font-serif text-base font-bold text-brand-oak leading-tight">The Invitation</h4>
-                            <p class="text-lg font-caveat text-brand-gold-dark mb-1.5 leading-tight">Color &amp; Environment</p>
-                            <p class="text-[11px] text-brand-dark/80 leading-relaxed font-sans">
-                                What signal does your spirit need right now? Choose an earthy cooling palette to hush room noise, or a sunny dopamine pop to break through mental fatigue.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="bg-[#F8F5EE] p-4 rounded-xl border border-brand-gold/30 flex flex-col justify-between shadow-xs">
-                        <div>
-                            <span class="text-[10px] font-sans font-bold uppercase tracking-widest text-brand-gold-dark block mb-0.5">Layer 2</span>
-                            <h4 class="font-serif text-base font-bold text-brand-oak leading-tight">The Memory</h4>
-                            <p class="text-lg font-caveat text-brand-gold-dark mb-1.5 leading-tight">Shape &amp; Movement</p>
-                            <p class="text-[11px] text-brand-dark/80 leading-relaxed font-sans">
-                                What memory or feeling are you recreating? Use flowing curves for gentle ease, repetitive piped shells for rhythmic anxiety relief, or wild botanical carvings.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="bg-[#F8F5EE] p-4 rounded-xl border border-brand-gold/30 flex flex-col justify-between shadow-xs">
-                        <div>
-                            <span class="text-[10px] font-sans font-bold uppercase tracking-widest text-brand-gold-dark block mb-0.5">Layer 3</span>
-                            <h4 class="font-serif text-base font-bold text-brand-oak leading-tight">The Anchor</h4>
-                            <p class="text-lg font-caveat text-brand-gold-dark mb-1.5 leading-tight">Texture &amp; Touch</p>
-                            <p class="text-[11px] text-brand-dark/80 leading-relaxed font-sans">
-                                What physical feel brings you back to your body? Choose a soft velvet cushion to soothe overstimulation, or crisp crystals and sea salt to snap out of brain fog.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="bg-[#F8F5EE] p-4 rounded-xl border border-brand-gold/30 flex flex-col justify-between shadow-xs">
-                        <div>
-                            <span class="text-[10px] font-sans font-bold uppercase tracking-widest text-brand-gold-dark block mb-0.5">Layer 4</span>
-                            <h4 class="font-serif text-base font-bold text-brand-oak leading-tight">The Strategy</h4>
-                            <p class="text-lg font-caveat text-brand-gold-dark mb-1.5 leading-tight">Placement &amp; Reach</p>
-                            <p class="text-[11px] text-brand-dark/80 leading-relaxed font-sans">
-                                Where do elements belong based on your social battery? Protect your energy in a centered core, draw protective border frames, or scatter radial blooms outward.
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="bg-[#F8F5EE] p-4 rounded-xl border border-brand-gold/30 flex flex-col justify-between shadow-xs">
-                        <div>
-                            <span class="text-[10px] font-sans font-bold uppercase tracking-widest text-brand-gold-dark block mb-0.5">Layer 5</span>
-                            <h4 class="font-serif text-base font-bold text-brand-oak leading-tight">The Magic</h4>
-                            <p class="text-lg font-caveat text-brand-gold-dark mb-1.5 leading-tight">The Shift &amp; Ritual</p>
-                            <p class="text-[11px] text-brand-dark/80 leading-relaxed font-sans">
-                                Take a conscious breath and observe how the heaviness lifted. Add a splatter of gold luster or a delicate blossom to declare your story complete.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION 3: THE COMPLETE WORKSHOP GUIDE -->
-    <section class="pb-12 md:pb-16">
+    <!-- SECTION 1: THE COMPLETE WORKSHOP GUIDE (MOVED TO TOP) -->
+    <section class="py-12 md:py-16">
         <div class="max-w-5xl mx-auto px-4 sm:px-6">
             
             <div class="bg-brand-cream rounded-3xl border border-brand-gold/30 p-6 sm:p-10 md:p-12 shadow-sm">
@@ -460,6 +331,138 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: THE PURPOSE OF THE WORKSHOPS (THE STORY) -->
+    <section class="pb-12 md:pb-14">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="bg-brand-cream rounded-3xl border border-brand-gold/30 p-6 sm:p-10 md:p-12 shadow-sm">
+                
+                <div class="text-center mb-7">
+                    <span class="text-brand-gold-dark font-caveat text-xl md:text-2xl block mb-1">The Story Behind The Atelier</span>
+                    <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-oak">What This Experience Is Truly About</h2>
+                </div>
+                
+                <div class="space-y-4 text-brand-dark/85 text-xs sm:text-sm font-sans leading-relaxed max-w-2xl mx-auto">
+                    <p>
+                        Baking is chemistry and precision. Exact weights and temperature control matter, but cake design was always something deeper. Yet for years, whenever I turned from the oven to decorating, my mind would become completely overwhelmed, jumping from one question to the next with zero direction.
+                    </p>
+                    <p>
+                        The world outside demands that we constantly mask our exhaustion, meet tight deadlines, and pretend we aren't feeling everything all at once. Too often, creative classes end up adding to that pressure, turning art into a competition for perfection where you worry about doing it right.
+                    </p>
+                    
+                    <p class="font-serif font-bold text-brand-oak text-sm sm:text-base text-center py-1">
+                        I created these workshops to be the exact opposite.
+                    </p>
+                    
+                    <p>
+                        Looking back across years of my own bakes, I noticed a clear pattern: a method for the madness, and the spark that finally let me put down perfectionism. Decorating was never about spotless execution. It was an art form, a connection, and a personal story unfolding. Accepting my creativity became my way of healing and feeling.
+                    </p>
+
+                    <!-- Large Editorial Quote Block -->
+                    <div class="bg-brand-oak text-brand-light p-6 sm:p-8 rounded-2xl border-2 border-brand-gold/40 my-6 shadow-md text-center">
+                        <p class="font-serif italic text-base sm:text-lg md:text-xl text-brand-gold mb-3 leading-snug">
+                            "You are not here to bake a pastry test or perform for an audience. You are here to give your mind a predictable, tactile environment where you hold absolute control."
+                        </p>
+                        <span class="text-[10px] font-sans uppercase tracking-[0.25em] text-brand-sand/80 font-bold block">
+                            Contains 0% bad vibes, 100% comfort
+                        </span>
+                    </div>
+
+                    <p>
+                        When you sweep a palette knife across whipped medium, squeeze a piping bag, or press raw crystals into wet paste, your focus naturally narrows. The mental chatter quiets down, and your hands take over the work of soothing your nervous system. In this space, messy parts are welcome, perfectionism is left at the door, and your cake becomes a canvas to tell your story honestly.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: THE 5-LAYER SENSORY METHOD -->
+    <section class="pb-12 md:pb-16">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6">
+            <div class="bg-brand-cream rounded-3xl border border-brand-gold/30 p-6 sm:p-10 md:p-12 shadow-sm">
+                
+                <div class="text-center max-w-xl mx-auto mb-8">
+                    <span class="text-brand-gold-dark font-caveat text-xl md:text-2xl block mb-1">Our Storytelling Process</span>
+                    <h2 class="font-serif text-2xl sm:text-3xl font-bold text-brand-oak mb-2.5">The 5-Layer Sensory Framework</h2>
+                    <p class="text-xs sm:text-sm text-brand-dark/80 leading-relaxed font-sans">
+                        Instead of staring at a blank canvas or feeling pressured to copy a sample cake, we walk through five self-guided stages to translate what you feel into physical form:
+                    </p>
+                </div>
+
+                <!-- BASELINE BOX: THE HEART -->
+                <div class="max-w-xl mx-auto mb-8 bg-[#EFE9DF] rounded-2xl p-5 sm:p-6 border border-brand-gold/40 text-center shadow-inner">
+                    <span class="text-[10px] font-sans font-bold uppercase tracking-widest text-brand-gold-dark block mb-1">Starting Baseline</span>
+                    <h3 class="font-serif text-xl sm:text-2xl font-bold text-brand-oak">The Heart</h3>
+                    <p class="text-2xl font-caveat text-brand-gold-dark mb-2 leading-none">Feelings &amp; Mood</p>
+                    <p class="text-xs sm:text-sm text-brand-dark/85 font-sans leading-relaxed">
+                        Where are you starting today? Are you tired, anxious, joyful, or overstimulated? We do not judge the feeling; we simply name it. This is your unmasked mark on the map before picking up any tools.
+                    </p>
+                </div>
+
+                <!-- 5 COMPACT LAYER CARDS -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3.5">
+                    
+                    <div class="bg-[#F8F5EE] p-4 rounded-xl border border-brand-gold/30 flex flex-col justify-between shadow-xs">
+                        <div>
+                            <span class="text-[10px] font-sans font-bold uppercase tracking-widest text-brand-gold-dark block mb-0.5">Layer 1</span>
+                            <h4 class="font-serif text-base font-bold text-brand-oak leading-tight">The Invitation</h4>
+                            <p class="text-lg font-caveat text-brand-gold-dark mb-1.5 leading-tight">Color &amp; Environment</p>
+                            <p class="text-[11px] text-brand-dark/80 leading-relaxed font-sans">
+                                What signal does your spirit need right now? Choose an earthy cooling palette to hush room noise, or a sunny dopamine pop to break through mental fatigue.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#F8F5EE] p-4 rounded-xl border border-brand-gold/30 flex flex-col justify-between shadow-xs">
+                        <div>
+                            <span class="text-[10px] font-sans font-bold uppercase tracking-widest text-brand-gold-dark block mb-0.5">Layer 2</span>
+                            <h4 class="font-serif text-base font-bold text-brand-oak leading-tight">The Memory</h4>
+                            <p class="text-lg font-caveat text-brand-gold-dark mb-1.5 leading-tight">Shape &amp; Movement</p>
+                            <p class="text-[11px] text-brand-dark/80 leading-relaxed font-sans">
+                                What memory or feeling are you recreating? Use flowing curves for gentle ease, repetitive piped shells for rhythmic anxiety relief, or wild botanical carvings.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#F8F5EE] p-4 rounded-xl border border-brand-gold/30 flex flex-col justify-between shadow-xs">
+                        <div>
+                            <span class="text-[10px] font-sans font-bold uppercase tracking-widest text-brand-gold-dark block mb-0.5">Layer 3</span>
+                            <h4 class="font-serif text-base font-bold text-brand-oak leading-tight">The Anchor</h4>
+                            <p class="text-lg font-caveat text-brand-gold-dark mb-1.5 leading-tight">Texture &amp; Touch</p>
+                            <p class="text-[11px] text-brand-dark/80 leading-relaxed font-sans">
+                                What physical feel brings you back to your body? Choose a soft velvet cushion to soothe overstimulation, or crisp crystals and sea salt to snap out of brain fog.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#F8F5EE] p-4 rounded-xl border border-brand-gold/30 flex flex-col justify-between shadow-xs">
+                        <div>
+                            <span class="text-[10px] font-sans font-bold uppercase tracking-widest text-brand-gold-dark block mb-0.5">Layer 4</span>
+                            <h4 class="font-serif text-base font-bold text-brand-oak leading-tight">The Strategy</h4>
+                            <p class="text-lg font-caveat text-brand-gold-dark mb-1.5 leading-tight">Placement &amp; Reach</p>
+                            <p class="text-[11px] text-brand-dark/80 leading-relaxed font-sans">
+                                Where do elements belong based on your social battery? Protect your energy in a centered core, draw protective border frames, or scatter radial blooms outward.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="bg-[#F8F5EE] p-4 rounded-xl border border-brand-gold/30 flex flex-col justify-between shadow-xs">
+                        <div>
+                            <span class="text-[10px] font-sans font-bold uppercase tracking-widest text-brand-gold-dark block mb-0.5">Layer 5</span>
+                            <h4 class="font-serif text-base font-bold text-brand-oak leading-tight">The Magic</h4>
+                            <p class="text-lg font-caveat text-brand-gold-dark mb-1.5 leading-tight">The Shift &amp; Ritual</p>
+                            <p class="text-[11px] text-brand-dark/80 leading-relaxed font-sans">
+                                Take a conscious breath and observe how the heaviness lifted. Add a splatter of gold luster or a delicate blossom to declare your story complete.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
                 <!-- PORTFOLIO FOOTER CALLOUT -->
                 <div class="mt-8 pt-6 border-t border-brand-gold/20 flex flex-col sm:flex-row items-center justify-between gap-4">
                     <div class="text-left">
@@ -474,7 +477,6 @@
                 </div>
 
             </div>
-
         </div>
     </section>
 
@@ -672,8 +674,8 @@
 
         // Global Keyboard Navigation (Esc for Modal)
         document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && inquiryModal && !inquiryModal.classList.contains('pointer-events-none')) {
-                closeInquiryModal();
+            if (inquiryModal && !inquiryModal.classList.contains('pointer-events-none')) {
+                if (e.key === 'Escape') closeInquiryModal();
             }
         });
 
