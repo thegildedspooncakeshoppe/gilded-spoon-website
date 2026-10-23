@@ -203,7 +203,7 @@
     </div>
 </footer>
 
-    <!-- SCRIPT TO PARSE URL QUERY PARAMETERS & TOGGLE HELPER GUIDES -->
+   <!-- ROBUST QUERY PARAMETER HANDLER -->
     <script>
         const hamburgerButton = document.getElementById('hamburger-button');
         const mobileMenu = document.getElementById('mobile-menu');
@@ -216,78 +216,25 @@
             const subjectParam = urlParams.get('subject');
             const detailsParam = urlParams.get('details');
             
-            const subjectSelect = document.getElementById('subject');
+            const subjectInput = document.getElementById('subject');
             const messageInput = document.getElementById('message');
-            
-            const artGuide = document.getElementById('art-guide');
-            const recipeGuide = document.getElementById('recipe-guide');
-            const workshopGuide = document.getElementById('workshop-guide');
-            const wholesaleGuide = document.getElementById('wholesale-guide');
 
-            if (subjectParam && subjectSelect) {
-                const searchLower = decodeURIComponent(subjectParam).toLowerCase().trim();
-                
-                for (let option of subjectSelect.options) {
-                    const optLower = option.value.toLowerCase();
-                    
-                    if (
-                        optLower === searchLower ||
-                        (searchLower.includes('art') && optLower.includes('art')) ||
-                        (searchLower.includes('sculpture') && optLower.includes('art')) ||
-                        (searchLower.includes('cake') && optLower.includes('cake')) ||
-                        (searchLower.includes('replica') && optLower.includes('replica')) ||
-                        (searchLower.includes('recipe') && optLower.includes('recipe')) ||
-                        (searchLower.includes('deck') && optLower.includes('recipe')) ||
-                        (searchLower.includes('heirloom') && optLower.includes('recipe')) ||
-                        (searchLower.includes('tier') && optLower.includes('workshop')) ||
-                        (searchLower.includes('workshop') && optLower.includes('workshop')) ||
-                        (searchLower.includes('proposal') && optLower.includes('workshop')) ||
-                        (searchLower.includes('private') && optLower.includes('workshop')) ||
-                        (searchLower.includes('team') && optLower.includes('workshop')) ||
-                        (searchLower.includes('wholesale') && optLower.includes('wholesale')) ||
-                        (searchLower.includes('retail') && optLower.includes('wholesale'))
-                    ) {
-                        option.selected = true;
-                        break;
-                    }
-                }
+            if (subjectParam && subjectInput) {
+                subjectInput.value = decodeURIComponent(subjectParam).trim();
             }
 
             if (detailsParam && messageInput) {
                 messageInput.placeholder = "Please share details regarding: " + decodeURIComponent(detailsParam) + "...";
             }
-
-            function updateGuideVisibility() {
-                const val = subjectSelect.value.toLowerCase();
-
-                if (val.includes('art') || val.includes('cake') || val.includes('replica')) {
-                    artGuide.classList.remove('hidden');
-                } else {
-                    artGuide.classList.add('hidden');
-                }
-
-                if (val.includes('recipe') || val.includes('heirloom')) {
-                    recipeGuide.classList.remove('hidden');
-                } else {
-                    recipeGuide.classList.add('hidden');
-                }
-
-                if (val.includes('workshop') || val.includes('tier') || val.includes('team')) {
-                    workshopGuide.classList.remove('hidden');
-                } else {
-                    workshopGuide.classList.add('hidden');
-                }
-
-                if (val.includes('wholesale') || val.includes('retail')) {
-                    wholesaleGuide.classList.remove('hidden');
-                } else {
-                    wholesaleGuide.classList.add('hidden');
-                }
-            }
-
-            subjectSelect.addEventListener('change', updateGuideVisibility);
-            updateGuideVisibility();
         });
+
+        function handleContactSubmit(event) {
+            event.preventDefault();
+            const form = event.target;
+            const name = form.name.value;
+            alert('Thank you, ' + name + '! Your message has been received by The Gilded Spoon studio. Dimple will reply shortly.');
+            form.reset();
+        }
     </script>
 </body>
 </html>
