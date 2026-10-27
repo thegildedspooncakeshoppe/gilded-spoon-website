@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Edible Blueprint Builder | The Gilded Spoon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Playfair+Display:ital,wght@0,600;0,800;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-dark': '#1C161E',
+                        'brand-light': '#F4F1ED',
+                        'brand-gold': '#D4AF37',
+                        'brand-gold-hover': '#E2C76A',
+                        'brand-navy': '#0A2342',
+                        'brand-card': '#241E28'
+                    },
+                    fontFamily: {
+                        'serif': ['"Playfair Display"', 'serif'],
+                        'sans': ['"Inter"', 'sans-serif'],
+                        'hand': ['"Caveat"', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-brand-light text-brand-dark antialiased min-h-screen flex flex-col font-sans">
+
+    <!-- Top Navigation Header -->
+    <header class="bg-brand-navy border-b border-brand-gold/20 py-4 px-6 text-center">
+        <a href="index.html" class="inline-block text-xl md:text-2xl font-serif font-bold text-brand-gold tracking-wide">
+            The Gilded Spoon
+            <span class="block text-[10px] font-sans font-light tracking-[0.3em] text-brand-light">ATELIER & SENSORY LAB</span>
+        </a>
+    </header>
+
+    <!-- Main Workspace -->
+    <main class="flex-1 max-w-6xl w-full mx-auto px-4 py-8 md:py-12">
+        <div class="text-center max-w-2xl mx-auto mb-8">
+            <span class="text-xs font-bold uppercase tracking-widest text-brand-gold block mb-2">Somatic Sensory Design</span>
+            <h1 class="font-serif font-bold text-3xl md:text-4xl text-brand-navy mb-2">Build Your Edible Blueprint</h1>
+            <p class="text-xs md:text-sm text-brand-dark/70">Translate your internal weather or honor someone's essence into structured, 5-layer confectionery design.</p>
+        </div>
+
+        <!-- Progress Indicator -->
+        <div class="max-w-3xl mx-auto mb-10">
+            <div class="flex justify-between items-center relative">
+                <div class="absolute top-1/2 left-0 right-0 h-0.5 bg-gray-300 -translate-y-1/2 z-0"></div>
+                <div id="progress-bar-fill" class="absolute top-1/2 left-0 h-0.5 bg-brand-gold -translate-y-1/2 z-0 transition-all duration-300" style="width: 0%;"></div>
+                
+                <button onclick="goToStep(1)" class="step-dot relative z-10 w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs bg-brand-gold text-brand-navy ring-4 ring-brand-light" id="dot-1">0</button>
+                <button onclick="goToStep(2)" class="step-dot relative z-10 w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs bg-gray-200 text-gray-600 ring-4 ring-brand-light" id="dot-2">L1</button>
+                <button onclick="goToStep(3)" class="step-dot relative z-10 w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs bg-gray-200 text-gray-600 ring-4 ring-brand-light" id="dot-3">L2</button>
+                <button onclick="goToStep(4)" class="step-dot relative z-10 w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs bg-gray-200 text-gray-600 ring-4 ring-brand-light" id="dot-4">L3</button>
+                <button onclick="goToStep(5)" class="step-dot relative z-10 w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs bg-gray-200 text-gray-600 ring-4 ring-brand-light" id="dot-5">L4</button>
+                <button onclick="goToStep(6)" class="step-dot relative z-10 w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs bg-gray-200 text-gray-600 ring-4 ring-brand-light" id="dot-6">L5</button>
+                <button onclick="goToStep(7)" class="step-dot relative z-10 w-8 h-8 rounded-full flex items-center justify-center font-bold text-xs bg-gray-200 text-gray-600 ring-4 ring-brand-light" id="dot-7">★</button>
+            </div>
+            <div class="flex justify-between text-[10px] uppercase font-bold tracking-wider text-brand-navy/60 mt-2 px-1">
+                <span>Baseline</span>
+                <span>Color</span>
+                <span>Gesture</span>
+                <span>Anchor</span>
+                <span>Strategy</span>
+                <span>Magic</span>
+                <span>Blueprint</span>
+            </div>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- Left Panel: Interactive Step Questions -->
+            <div class="lg:col-span-7 bg-white rounded-3xl p-6 md:p-8 shadow-md border border-brand-gold/20 min-h-[460px] flex flex-col justify-between">
+                
+                <!-- STEP 1: Baseline & Operating Mode -->
+                <div id="step-1" class="builder-step">
+                    <span class="text-xs font-bold tracking-widest text-brand-gold uppercase block mb-1">Step 0: The Origin</span>
+                    <h2 class="font-serif text-2xl font-bold text-brand-navy mb-4">Choose Your Operating Path</h2>
+                    
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <button type="button" onclick="setMode('medicine')" id="btn-mode-medicine" class="p-4 rounded-2xl border-2 text-left transition-all border-brand-gold bg-brand-navy/5">
+                            <span class="text-xs font-bold uppercase tracking-wider block text-brand-gold mb-1">Path A: The Medicine</span>
+                            <span class="font-serif font-bold text-base block text-brand-navy">Regulation & Healing</span>
+                            <span class="text-xs text-brand-dark/70 block mt-1">"I need to soothe, ground, or reset my nervous system."</span>
+                        </button>
+                        <button type="button" onclick="setMode('mirror')" id="btn-mode-mirror" class="p-4 rounded-2xl border-2 text-left transition-all border-gray-200 hover:border-brand-gold">
+                            <span class="text-xs font-bold uppercase tracking-wider block text-brand-gold mb-1">Path B: The Mirror</span>
+                            <span class="font-serif font-bold text-base block text-brand-navy">Portraiture & Essence</span>
+                            <span class="text-xs text-brand-dark/70 block mt-1">"I want to capture my energy or honor someone else's spirit."</span>
+                        </button>
+                    </div>
+
+                    <!-- Dynamic Baseline Sub-Options -->
+                    <div id="medicine-options">
+                        <label class="block text-xs font-bold uppercase tracking-wider text-brand-navy mb-2">Identify Your Baseline State:</label>
+                        <div class="grid grid-cols-2 gap-3 text-xs">
+                            <button onclick="setBaseline('Overstimulated Chaos', 'Needs quiet, shielded borders & cooling tones')" class="baseline-btn p-3 rounded-xl border border-gray-200 text-left hover:border-brand-gold">
+                                <strong>Overstimulated Chaos</strong><br><span class="text-gray-500 text-[11px]">Loud world, sensory static, racing mind</span>
+                            </button>
+                            <button onclick="setBaseline('Stagnant Inertia', 'Needs dopamine shock, citrus tartness & warm spark')" class="baseline-btn p-3 rounded-xl border border-gray-200 text-left hover:border-brand-gold">
+                                <strong>Stagnant Inertia</strong><br><span class="text-gray-500 text-[11px]">Heavy mental fog, task freeze, low battery</span>
+                            </button>
+                            <button onclick="setBaseline('Masking Fatigue', 'Needs protective shielding & dense weighted grounding')" class="baseline-btn p-3 rounded-xl border border-gray-200 text-left hover:border-brand-gold">
+                                <strong>Masking Fatigue</strong><br><span class="text-gray-500 text-[11px]">Exhausted from performing, raw filters</span>
+                            </button>
+                            <button onclick="setBaseline('Untethered Drift', 'Needs firm physical crunch & earthy sepia weight')" class="baseline-btn p-3 rounded-xl border border-gray-200 text-left hover:border-brand-gold">
+                                <strong>Untethered Drift</strong><br><span class="text-gray-500 text-[11px]">Floating, disconnected from body, looping</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="mirror-options" class="hidden">
+                        <label class="block text-xs font-bold uppercase tracking-wider text-brand-navy mb-2">Identify The Core Energetic Presence:</label>
+                        <div class="grid grid-cols-2 gap-3 text-xs mb-4">
+                            <button onclick="setBaseline('Dynamic / Catalytic', 'High voltage, bold motion, lightning clarity')" class="baseline-btn p-3 rounded-xl border border-gray-200 text-left hover:border-brand-gold">
+                                <strong>Dynamic & Catalytic</strong><br><span class="text-gray-500 text-[11px]">High intensity, commanding, bold, electric</span>
+                            </button>
+                            <button onclick="setBaseline('Grounded & Steady', 'Deep roots, calm presence, dependable pillar')" class="baseline-btn p-3 rounded-xl border border-gray-200 text-left hover:border-brand-gold">
+                                <strong>Grounded & Steady</strong><br><span class="text-gray-500 text-[11px]">Calm anchor, reliable shelter, unshakeable</span>
+                            </button>
+                            <button onclick="setBaseline('Radiant & Expansive', 'Creative wonder, warm celebration, joyful drift')" class="baseline-btn p-3 rounded-xl border border-gray-200 text-left hover:border-brand-gold">
+                                <strong>Radiant & Expansive</strong><br><span class="text-gray-500 text-[11px]">Playful whimsy, infectious warmth, open light</span>
+                            </button>
+                            <button onclick="setBaseline('Serene & Sanctuary', 'Deep rest, quiet wisdom, peaceful refuge')" class="baseline-btn p-3 rounded-xl border border-gray-200 text-left hover:border-brand-gold">
+                                <strong>Serene & Sanctuary</strong><br><span class="text-gray-500 text-[11px]">Quiet waters, gentle restorative ease</span>
+                            </button>
+                        </div>
+                        <div>
+                            <label class="block text-[11px] font-bold uppercase tracking-wider text-brand-navy mb-1">Personal Descriptor (Optional):</label>
+                            <input type="text" id="custom-mirror-tag" oninput="setCustomTag(this.value)" placeholder="e.g., Thunderstorm, Morning Dew, Old Oak, Summer Sun" class="w-full text-xs p-3 rounded-xl border border-gray-200 focus:border-brand-gold focus:outline-none">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- STEP 2: Layer 1 (Color) -->
+                <div id="step-2" class="builder-step hidden">
+                    <span class="text-xs font-bold tracking-widest text-brand-gold uppercase block mb-1">Layer 1: The Invitation</span>
+                    <h2 class="font-serif text-2xl font-bold text-brand-navy mb-2">Set Your 2-Tone Atmosphere</h2>
+                    <p class="text-xs text-brand-dark/70 mb-4">Color is the fastest sensory signal sent directly to your nervous system. Choose your Base and Accent tone duo.</p>
+                    
+                    <div class="grid grid-cols-2 gap-3 text-xs">
+                        <button onclick="setColor('Sanctuary', '#7A9A8B', '#A4C3D2', 'Sage Green & Sky Blue', 'Shields crowded sensory filters; lowers room glare.')" class="color-btn p-3 rounded-xl border border-gray-200 flex items-center space-x-3 text-left hover:border-brand-gold">
+                            <span class="w-6 h-6 rounded-full border border-black/10 flex-shrink-0" style="background: linear-gradient(135deg, #7A9A8B 50%, #A4C3D2 50%);"></span>
+                            <div><strong>Sanctuary</strong><br><span class="text-[11px] text-gray-500">Sage Green & Sky Blue</span></div>
+                        </button>
+                        <button onclick="setColor('Transformation', '#1F2A44', '#2C2B30', 'Deep Indigo & Charcoal', 'Blocks peripheral distraction; builds safe boundaries.')" class="color-btn p-3 rounded-xl border border-gray-200 flex items-center space-x-3 text-left hover:border-brand-gold">
+                            <span class="w-6 h-6 rounded-full border border-black/10 flex-shrink-0" style="background: linear-gradient(135deg, #1F2A44 50%, #2C2B30 50%);"></span>
+                            <div><strong>Transformation</strong><br><span class="text-[11px] text-gray-500">Deep Indigo & Charcoal</span></div>
+                        </button>
+                        <button onclick="setColor('Grounding', '#704214', '#C2B280', 'Sepia & Earth Sand', 'Anchors spinning focus with warm, rooted tones.')" class="color-btn p-3 rounded-xl border border-gray-200 flex items-center space-x-3 text-left hover:border-brand-gold">
+                            <span class="w-6 h-6 rounded-full border border-black/10 flex-shrink-0" style="background: linear-gradient(135deg, #704214 50%, #C2B280 50%);"></span>
+                            <div><strong>Grounding</strong><br><span class="text-[11px] text-gray-500">Sepia & Earth Sand</span></div>
+                        </button>
+                        <button onclick="setColor('Awakener', '#F4D03F', '#D4AF37', 'Lemon Zest & Saffron Gold', 'Triggers dopamine; clears fog and lethargy.')" class="color-btn p-3 rounded-xl border border-gray-200 flex items-center space-x-3 text-left hover:border-brand-gold">
+                            <span class="w-6 h-6 rounded-full border border-black/10 flex-shrink-0" style="background: linear-gradient(135deg, #F4D03F 50%, #D4AF37 50%);"></span>
+                            <div><strong>Awakener</strong><br><span class="text-[11px] text-gray-500">Lemon Zest & Saffron Gold</span></div>
+                        </button>
+                        <button onclick="setColor('Nostalgia', '#C08081', '#E2725B', 'Dusty Rose & Terracotta', 'Bypasses logical defenses through safe memories.')" class="color-btn p-3 rounded-xl border border-gray-200 flex items-center space-x-3 text-left hover:border-brand-gold">
+                            <span class="w-6 h-6 rounded-full border border-black/10 flex-shrink-0" style="background: linear-gradient(135deg, #C08081 50%, #E2725B 50%);"></span>
+                            <div><strong>Nostalgia</strong><br><span class="text-[11px] text-gray-500">Dusty Rose & Terracotta</span></div>
+                        </button>
+                        <button onclick="setColor('Clarity', '#98FF98', '#FFFFFF', 'Crisp Mint & Pure White', 'Resets brain to zero; clean and unburdened.')" class="color-btn p-3 rounded-xl border border-gray-200 flex items-center space-x-3 text-left hover:border-brand-gold">
+                            <span class="w-6 h-6 rounded-full border border-black/10 flex-shrink-0" style="background: linear-gradient(135deg, #98FF98 50%, #FFFFFF 50%);"></span>
+                            <div><strong>Clarity</strong><br><span class="text-[11px] text-gray-500">Crisp Mint & Pure White</span></div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- STEP 3: Layer 2 (Gesture) -->
+                <div id="step-3" class="builder-step hidden">
+                    <span class="text-xs font-bold tracking-widest text-brand-gold uppercase block mb-1">Layer 2: The Memory</span>
+                    <h2 class="font-serif text-2xl font-bold text-brand-navy mb-2">Shape, Tool & Gesture Family</h2>
+                    <p class="text-xs text-brand-dark/70 mb-4">How your hand moves across the cake releases muscle memory. Which movement honors your state?</p>
+                    
+                    <div class="space-y-3 text-xs">
+                        <button onclick="setGesture('Soft & Flowing', 'Round silicone spatula, #1A tip', 'Cloud dollops, gentle waves, seamless ease')" class="gesture-btn w-full p-4 rounded-xl border border-gray-200 text-left hover:border-brand-gold">
+                            <div class="flex justify-between items-center mb-1">
+                                <strong class="text-sm font-serif text-brand-navy">1. Soft & Flowing Family</strong>
+                                <span class="text-[10px] bg-brand-light px-2 py-0.5 rounded text-brand-dark">For Gentleness & Surrender</span>
+                            </div>
+                            <span class="text-gray-600 block">Tools: Palette knives, smooth sponges, rounded spoons. Expression: Rolling waves, seamless clouds, zero hard edges.</span>
+                        </button>
+                        <button onclick="setGesture('Rhythmic & Structured', 'Star tip #1M, serrated comb', 'Repetitive parallel ridges, rosettes, symmetry')" class="gesture-btn w-full p-4 rounded-xl border border-gray-200 text-left hover:border-brand-gold">
+                            <div class="flex justify-between items-center mb-1">
+                                <strong class="text-sm font-serif text-brand-navy">2. Rhythmic & Structured Family</strong>
+                                <span class="text-[10px] bg-brand-light px-2 py-0.5 rounded text-brand-dark">For Predictability & Focus</span>
+                            </div>
+                            <span class="text-gray-600 block">Tools: Open star tips, cake combs, ribbed stampers. Expression: Repetitive shells, crisp parallel ridges, soothing order.</span>
+                        </button>
+                        <button onclick="setGesture('Botanical & Organic', 'Petal tip #104, leaf tip #352', 'Sculpted bark, wild leaves, living textures')" class="gesture-btn w-full p-4 rounded-xl border border-gray-200 text-left hover:border-brand-gold">
+                            <div class="flex justify-between items-center mb-1">
+                                <strong class="text-sm font-serif text-brand-navy">3. Botanical & Organic Family</strong>
+                                <span class="text-[10px] bg-brand-light px-2 py-0.5 rounded text-brand-dark">For Rooted Growth & Nature</span>
+                            </div>
+                            <span class="text-gray-600 block">Tools: Micro sculpting blades, petal tips. Expression: Raw bark texture, wild flora, living organic shapes.</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- STEP 4: Layer 3 (Anchor / Texture) -->
+                <div id="step-4" class="builder-step hidden">
+                    <span class="text-xs font-bold tracking-widest text-brand-gold uppercase block mb-1">Layer 3: The Anchor</span>
+                    <h2 class="font-serif text-2xl font-bold text-brand-navy mb-2">Tactile Landing & Texture Bite</h2>
+                    <p class="text-xs text-brand-dark/70 mb-4">Texture provides direct sensory feedback. Chewing engages jaw muscles to physically disrupt internal static.</p>
+                    
+                    <div class="space-y-3 text-xs">
+                        <button onclick="setTexture('Crisp & Resistant (Grounding Wire)', 'Flaky Maldon sea salt, coarse cocoa nibs, rock toffee shards', 'Engages jaw reflex to physically snap racing thoughts back to zero.')" class="texture-btn w-full p-4 rounded-xl border border-gray-200 text-left hover:border-brand-gold">
+                            <strong class="text-sm font-serif text-brand-navy block mb-1">1. The Grounding Wire (High Resistance)</strong>
+                            <span class="text-gray-600 block mb-1">Materials: Flaky sea salt, coarse cacao nibs, toasted almond slivers, crunch toffee.</span>
+                            <span class="text-[11px] text-brand-gold font-semibold">Somatic Shift: Snaps the brain out of looping overthinking.</span>
+                        </button>
+                        <button onclick="setTexture('Soft & Velvety (The Cushion)', 'Fine cacao powder, ceremonial matcha, powdered sugar dust', 'Zero-friction velvet landing to wrap weary senses in comfort.')" class="texture-btn w-full p-4 rounded-xl border border-gray-200 text-left hover:border-brand-gold">
+                            <strong class="text-sm font-serif text-brand-navy block mb-1">2. The Cushion (Velvet Softness)</strong>
+                            <span class="text-gray-600 block mb-1">Materials: Fine Dutch cocoa dust, powdered confectioner's sugar, silky mousse.</span>
+                            <span class="text-[11px] text-brand-gold font-semibold">Somatic Shift: Provides friction-free softness for raw, exhausted nerves.</span>
+                        </button>
+                        <button onclick="setTexture('Organic & Dimensional (The Nature Link)', 'Dried edible rose petals, shredded toasted coconut, botanical moss', 'Connects fingers and mouth to raw, unmasked elements.')" class="texture-btn w-full p-4 rounded-xl border border-gray-200 text-left hover:border-brand-gold">
+                            <strong class="text-sm font-serif text-brand-navy block mb-1">3. The Nature Link (Dimensional Botanical)</strong>
+                            <span class="text-gray-600 block mb-1">Materials: Dried edible rosebuds, coarse toasted coconut flakes, chamomile blossom.</span>
+                            <span class="text-[11px] text-brand-gold font-semibold">Somatic Shift: Reconnects consciousness to raw, authentic nature.</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- STEP 5: Layer 4 (Strategy & Phrase) -->
+                <div id="step-5" class="builder-step hidden">
+                    <span class="text-xs font-bold tracking-widest text-brand-gold uppercase block mb-1">Layer 4: The Strategy</span>
+                    <h2 class="font-serif text-2xl font-bold text-brand-navy mb-2">Space Boundaries & Phrase Tag</h2>
+                    <p class="text-xs text-brand-dark/70 mb-3">Where you place elements reflects how you allocate personal space and protect energy.</p>
+                    
+                    <div class="grid grid-cols-3 gap-2 text-xs mb-4">
+                        <button onclick="setPlacement('Clustered Inward', 'Elements grouped in tight center; protects low battery and quiet core.')" class="placement-btn p-3 rounded-xl border border-gray-200 text-center hover:border-brand-gold">
+                            <strong>Clustered Inward</strong><br><span class="text-[10px] text-gray-500">Protect the Core</span>
+                        </button>
+                        <button onclick="setPlacement('Shielded Border', 'Elements line outer rim; clear protective perimeter.')" class="placement-btn p-3 rounded-xl border border-gray-200 text-center hover:border-brand-gold">
+                            <strong>Shielded Border</strong><br><span class="text-[10px] text-gray-500">Define Boundaries</span>
+                        </button>
+                        <button onclick="setPlacement('Radiant Spread', 'Elements scatter outward evenly; open, generous reach.')" class="placement-btn p-3 rounded-xl border border-gray-200 text-center hover:border-brand-gold">
+                            <strong>Radiant Spread</strong><br><span class="text-[10px] text-gray-500">Broadcast Joy</span>
+                        </button>
+                    </div>
+
+                    <label class="block text-xs font-bold uppercase tracking-wider text-brand-navy mb-2">Select Your Stamped Anchor Phrase:</label>
+                    <div class="grid grid-cols-2 gap-2 text-[11px]">
+                        <button onclick="setPhrase('Internal weather: Stormy but grounded.')" class="phrase-btn p-2 rounded-lg border border-gray-200 text-left hover:border-brand-gold">"Internal weather: Stormy but grounded."</button>
+                        <button onclick="setPhrase('Low battery. High standards.')" class="phrase-btn p-2 rounded-lg border border-gray-200 text-left hover:border-brand-gold">"Low battery. High standards."</button>
+                        <button onclick="setPhrase('Rooted here. The rest can wait.')" class="phrase-btn p-2 rounded-lg border border-gray-200 text-left hover:border-brand-gold">"Rooted here. The rest can wait."</button>
+                        <button onclick="setPhrase('Bypassing logic, proceeding to comfort.')" class="phrase-btn p-2 rounded-lg border border-gray-200 text-left hover:border-brand-gold">"Bypassing logic, proceeding to comfort."</button>
+                        <button onclick="setPhrase('Reset button: Pressed.')" class="phrase-btn p-2 rounded-lg border border-gray-200 text-left hover:border-brand-gold">"Reset button: Pressed."</button>
+                        <button onclick="setPhrase('Shields up, room noise down.')" class="phrase-btn p-2 rounded-lg border border-gray-200 text-left hover:border-brand-gold">"Shields up, room noise down."</button>
+                    </div>
+                </div>
+
+                <!-- STEP 6: Layer 5 (Magic / Shift) -->
+                <div id="step-6" class="builder-step hidden">
+                    <span class="text-xs font-bold tracking-widest text-brand-gold uppercase block mb-1">Layer 5: The Magic</span>
+                    <h2 class="font-serif text-2xl font-bold text-brand-navy mb-2">The Sealing Gesture</h2>
+                    <p class="text-xs text-brand-dark/70 mb-4">Your final mark integrates the whole experience. Notice the physical release of pressure as you finish.</p>
+                    
+                    <div class="space-y-3 text-xs">
+                        <button onclick="setMagic('The Release (The Unfiltered Flick)', 'Flicking metallic gold extract with a stiff fan brush', 'Surrendering control; releasing perfectionism through wild, honest marks.')" class="magic-btn w-full p-4 rounded-xl border border-gray-200 text-left hover:border-brand-gold">
+                            <strong class="text-sm font-serif text-brand-navy block mb-1">1. The Release (The Flick)</strong>
+                            <span class="text-gray-600 block">Action: Splattering metallic gold extract with a brush. Somatic Target: Surrender control, dissolve perfectionism.</span>
+                        </button>
+                        <button onclick="setMagic('The Glimmer (The Focal Sparkle)', 'Placing a single genuine 24k gold leaf or quiet pearl', 'Capturing quiet dopamine; marking an unspoken personal milestone.')" class="magic-btn w-full p-4 rounded-xl border border-gray-200 text-left hover:border-brand-gold">
+                            <strong class="text-sm font-serif text-brand-navy block mb-1">2. The Glimmer (The Focal Sparkle)</strong>
+                            <span class="text-gray-600 block">Action: Applying a single gold flake with tweezers. Somatic Target: Celebrate a quiet personal victory.</span>
+                        </button>
+                        <button onclick="setMagic('The Veil (The Softening Dusting)', 'Sifting uniform pearl luster or fine cocoa powder across the whole piece', 'Unifying all elements; softening hard borders into quiet peace.')" class="magic-btn w-full p-4 rounded-xl border border-gray-200 text-left hover:border-brand-gold">
+                            <strong class="text-sm font-serif text-brand-navy block mb-1">3. The Veil (The Softening Dusting)</strong>
+                            <span class="text-gray-600 block">Action: Sifting a fine dusting over the top. Somatic Target: Soften sharp edges, invite stillness.</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- STEP 7: Completed Blueprint -->
+                <div id="step-7" class="builder-step hidden">
+                    <div class="text-center py-4">
+                        <span class="text-xs font-bold tracking-widest text-brand-gold uppercase block mb-1">Architecture Complete</span>
+                        <h2 class="font-serif text-3xl font-bold text-brand-navy mb-2">Your Edible Blueprint Is Ready</h2>
+                        <p class="text-xs text-brand-dark/70 mb-6">You have translated an internal state into structured, intentional reality.</p>
+                        
+                        <div class="flex justify-center gap-4">
+                            <button onclick="window.print()" class="bg-brand-navy text-white text-xs font-bold tracking-widest uppercase py-3 px-6 rounded-full hover:bg-brand-gold hover:text-brand-navy transition shadow">
+                                Print / Save Blueprint PDF
+                            </button>
+                            <button onclick="resetBuilder()" class="border border-brand-navy text-brand-navy text-xs font-bold tracking-widest uppercase py-3 px-6 rounded-full hover:bg-brand-light transition">
+                                Design Another Bake
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons (Back & Next) -->
+                <div class="flex justify-between items-center pt-6 mt-6 border-t border-gray-100">
+                    <button id="btn-prev" onclick="prevStep()" class="text-xs uppercase font-bold tracking-wider text-gray-400 hover:text-brand-navy transition disabled:opacity-0" disabled>
+                        &larr; Back
+                    </button>
+                    <button id="btn-next" onclick="nextStep()" class="bg-brand-gold text-brand-navy text-xs font-bold tracking-widest uppercase py-3 px-8 rounded-full hover:bg-brand-gold-hover transition shadow">
+                        Continue &rarr;
+                    </button>
+                </div>
+
+            </div>
+
+            <!-- Right Panel: Live Dynamic Blueprint Card & Cake Diagram -->
+            <div class="lg:col-span-5 bg-brand-navy text-brand-light rounded-3xl p-6 md:p-8 shadow-xl border border-brand-gold/30 sticky top-24">
+                
+                <div class="flex justify-between items-start border-b border-white/10 pb-4 mb-4">
+                    <div>
+                        <span class="text-[10px] font-sans font-bold uppercase tracking-[0.2em] text-brand-gold block">Live Architecture Spec</span>
+                        <h3 id="card-origin-title" class="font-serif font-bold text-xl text-white">Baseline Unassigned</h3>
+                    </div>
+                    <span id="card-mode-badge" class="text-[9px] bg-brand-gold/20 text-brand-gold border border-brand-gold/40 px-2.5 py-1 rounded-full uppercase tracking-widest font-bold">Path A</span>
+                </div>
+
+                <!-- Visual Cake Diagram -->
+                <div class="bg-brand-dark/60 rounded-2xl p-4 border border-white/5 mb-6 flex flex-col items-center justify-center min-h-[160px] relative overflow-hidden">
+                    
+                    <!-- Cake SVG Stack -->
+                    <svg width="220" height="130" viewBox="0 0 220 130" class="drop-shadow-lg">
+                        <!-- Top Accent (L5) -->
+                        <circle id="svg-accent" cx="110" cy="20" r="6" fill="#D4AF37" opacity="0.8"/>
+                        <!-- Top Tier (L4 & L3) -->
+                        <path id="svg-tier-top" d="M 50 35 Q 110 20 170 35 L 170 65 Q 110 80 50 65 Z" fill="#2C2B30" stroke="#D4AF37" stroke-width="1.5" />
+                        <!-- Base Tier (L1 & L2) -->
+                        <path id="svg-tier-base" d="M 30 70 Q 110 50 190 70 L 190 110 Q 110 130 30 110 Z" fill="#7A9A8B" stroke="#D4AF37" stroke-width="1.5" />
+                    </svg>
+
+                    <!-- Stamped Phrase Preview -->
+                    <div id="card-phrase-stamp" class="font-hand text-brand-gold text-sm tracking-wide text-center mt-2 italic">
+                        "Your stamped phrase will appear here"
+                    </div>
+                </div>
+
+                <!-- Layer Spec Breakdown List -->
+                <div class="space-y-2.5 text-xs">
+                    <div class="flex items-center justify-between border-b border-white/5 pb-1.5">
+                        <span class="text-brand-light/50 uppercase text-[10px] tracking-wider">L1: Color Duo</span>
+                        <span id="spec-l1" class="font-medium text-white text-right">Not chosen</span>
+                    </div>
+                    <div class="flex items-center justify-between border-b border-white/5 pb-1.5">
+                        <span class="text-brand-light/50 uppercase text-[10px] tracking-wider">L2: Gesture</span>
+                        <span id="spec-l2" class="font-medium text-white text-right">Not chosen</span>
+                    </div>
+                    <div class="flex items-center justify-between border-b border-white/5 pb-1.5">
+                        <span class="text-brand-light/50 uppercase text-[10px] tracking-wider">L3: Texture Anchor</span>
+                        <span id="spec-l3" class="font-medium text-white text-right">Not chosen</span>
+                    </div>
+                    <div class="flex items-center justify-between border-b border-white/5 pb-1.5">
+                        <span class="text-brand-light/50 uppercase text-[10px] tracking-wider">L4: Placement</span>
+                        <span id="spec-l4" class="font-medium text-white text-right">Not chosen</span>
+                    </div>
+                    <div class="flex items-center justify-between">
+                        <span class="text-brand-light/50 uppercase text-[10px] tracking-wider">L5: The Shift</span>
+                        <span id="spec-l5" class="font-medium text-white text-right">Not chosen</span>
+                    </div>
+                </div>
+
+                <div class="mt-6 pt-4 border-t border-white/10 text-center">
+                    <p class="font-hand text-sm text-brand-light/80 italic">"The magic isn't in the product. It's in the process."</p>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Interactive Script Logic -->
+    <script>
+        let currentStep = 1;
+        const totalSteps = 7;
+
+        // Active State Model
+        const blueprint = {
+            mode: 'medicine',
+            baseline: 'Overstimulated Chaos',
+            baselineRationale: 'Needs quiet, shielded borders & cooling tones',
+            customTag: '',
+            paletteName: 'Sanctuary',
+            baseColor: '#7A9A8B',
+            accentColor: '#A4C3D2',
+            colorDescription: 'Sage Green & Sky Blue',
+            gestureFamily: 'Soft & Flowing',
+            textureName: 'Crisp & Resistant (Grounding Wire)',
+            placement: 'Shielded Border',
+            phrase: 'Internal weather: Stormy but grounded.',
+            magic: 'The Release (The Unfiltered Flick)'
+        };
+
+        function setMode(mode) {
+            blueprint.mode = mode;
+            const btnMed = document.getElementById('btn-mode-medicine');
+            const btnMir = document.getElementById('btn-mode-mirror');
+            const medOpts = document.getElementById('medicine-options');
+            const mirOpts = document.getElementById('mirror-options');
+            const badge = document.getElementById('card-mode-badge');
+
+            if (mode === 'medicine') {
+                btnMed.classList.add('border-brand-gold', 'bg-brand-navy/5');
+                btnMed.classList.remove('border-gray-200');
+                btnMir.classList.remove('border-brand-gold', 'bg-brand-navy/5');
+                btnMir.classList.add('border-gray-200');
+                medOpts.classList.remove('hidden');
+                mirOpts.classList.add('hidden');
+                badge.innerText = 'Path A: Medicine';
+                setBaseline('Overstimulated Chaos', 'Needs quiet borders & cooling tones');
+            } else {
+                btnMir.classList.add('border-brand-gold', 'bg-brand-navy/5');
+                btnMir.classList.remove('border-gray-200');
+                btnMed.classList.remove('border-brand-gold', 'bg-brand-navy/5');
+                btnMed.classList.add('border-gray-200');
+                mirOpts.classList.remove('hidden');
+                medOpts.classList.add('hidden');
+                badge.innerText = 'Path B: Mirror';
+                setBaseline('Dynamic / Catalytic', 'High voltage, bold motion, lightning clarity');
+            }
+        }
+
+        function setBaseline(name, rationale) {
+            blueprint.baseline = name;
+            blueprint.baselineRationale = rationale;
+            updateTitle();
+        }
+
+        function setCustomTag(val) {
+            blueprint.customTag = val;
+            updateTitle();
+        }
+
+        function updateTitle() {
+            const titleElem = document.getElementById('card-origin-title');
+            if (blueprint.mode === 'mirror' && blueprint.customTag.trim().length > 0) {
+                titleElem.innerText = `${blueprint.customTag} (${blueprint.baseline})`;
+            } else {
+                titleElem.innerText = blueprint.baseline;
+            }
+        }
+
+        function setColor(name, base, accent, desc) {
+            blueprint.paletteName = name;
+            blueprint.baseColor = base;
+            blueprint.accentColor = accent;
+            blueprint.colorDescription = desc;
+
+            document.getElementById('spec-l1').innerText = `${name} (${desc})`;
+            document.getElementById('svg-tier-base').setAttribute('fill', base);
+            document.getElementById('svg-tier-top').setAttribute('fill', accent);
+        }
+
+        function setGesture(name, tools, desc) {
+            blueprint.gestureFamily = name;
+            document.getElementById('spec-l2').innerText = name;
+        }
+
+        function setTexture(name, materials, rationale) {
+            blueprint.textureName = name.split(' (')[0];
+            document.getElementById('spec-l3').innerText = blueprint.textureName;
+        }
+
+        function setPlacement(name, desc) {
+            blueprint.placement = name;
+            document.getElementById('spec-l4').innerText = name;
+        }
+
+        function setPhrase(phrase) {
+            blueprint.phrase = phrase;
+            document.getElementById('card-phrase-stamp').innerText = phrase;
+        }
+
+        function setMagic(name, action, rationale) {
+            blueprint.magic = name.split(' (')[0];
+            document.getElementById('spec-l5').innerText = blueprint.magic;
+        }
+
+        function goToStep(step) {
+            if (step < 1 || step > totalSteps) return;
+            document.getElementById(`step-${currentStep}`).classList.add('hidden');
+            document.getElementById(`step-${step}`).classList.remove('hidden');
+
+            document.getElementById(`dot-${currentStep}`).classList.remove('bg-brand-gold', 'text-brand-navy');
+            document.getElementById(`dot-${currentStep}`).classList.add('bg-gray-200', 'text-gray-600');
+
+            document.getElementById(`dot-${step}`).classList.remove('bg-gray-200', 'text-gray-600');
+            document.getElementById(`dot-${step}`).classList.add('bg-brand-gold', 'text-brand-navy');
+
+            currentStep = step;
+
+            const progressPct = ((currentStep - 1) / (totalSteps - 1)) * 100;
+            document.getElementById('progress-bar-fill').style.width = `${progressPct}%`;
+
+            const btnPrev = document.getElementById('btn-prev');
+            const btnNext = document.getElementById('btn-next');
+
+            btnPrev.disabled = currentStep === 1;
+            btnNext.style.display = currentStep === totalSteps ? 'none' : 'inline-block';
+        }
+
+        function nextStep() {
+            goToStep(currentStep + 1);
+        }
+
+        function prevStep() {
+            goToStep(currentStep - 1);
+        }
+
+        function resetBuilder() {
+            goToStep(1);
+        }
+    </script>
+</body>
+</html>
